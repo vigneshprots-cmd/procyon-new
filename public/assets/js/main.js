@@ -135,6 +135,21 @@
     setTimeout(function () { runScan('sf'); }, reduce ? 0 : 900);
   }
 
+  /* ---------- Hero live status: which hub is working right now ---------- */
+  var liveEl = $('[data-live]');
+  function renderLive() {
+    if (!liveEl) return;
+    var now = new Date(), hubs = [['Chennai', 'Asia/Kolkata'], ['Toronto', 'America/Toronto'], ['California', 'America/Los_Angeles']];
+    var on = hubs.filter(function (h) {
+      var o = {};
+      new Intl.DateTimeFormat('en-US', { timeZone: h[1], hour: '2-digit', hour12: false, weekday: 'short' }).formatToParts(now).forEach(function (p) { o[p.type] = p.value; });
+      var hr = +o.hour % 24;
+      return o.weekday !== 'Sat' && o.weekday !== 'Sun' && hr >= 9 && hr < 18;
+    }).map(function (h) { return h[0]; });
+    liveEl.textContent = on.length ? on.join(' and ') + ' team' + (on.length > 1 ? 's' : '') + ' online now' : 'Senior architects reply within 1 business day';
+  }
+  renderLive(); setInterval(renderLive, 60000);
+
   /* ---------- Client ticker: one row, each logo once, recycled as it leaves ---------- */
   var ticker = $('[data-ticker]');
   if (ticker) {
@@ -276,7 +291,7 @@
   var modal = $('#lead-modal'), auditF = $('#lead-form'), scoreF = $('#score-form');
   var SIDE = {
     audit: ['Your free platform audit', ['30 minutes with a senior architect', 'A written fix plan within a week', 'Scope, timeline and a cost range', 'Yours to keep, zero obligation']],
-    score: ['Your platform health score', ['Six quick questions', 'Instant score, no email needed', 'The three fixes that matter most', 'Benchmarked against real audits']],
+    score: ['Your AI readiness check', ['Six questions about your platform', 'Instant result, no email needed', 'The three fixes that unlock AI agents', 'Benchmarked against real audits']],
     'Ranger Fusion ERP': ['Your Ranger Fusion demo', ['A walkthrough on your own use case', 'Sales to finance on one data model', 'A go-live plan in 2 to 4 weeks', 'Zero obligation']],
     'Certified talent': ['Vetted profiles, fast', ['Tell us the role and seniority', 'Certified Salesforce or ServiceNow people', 'US, Canada or India time zones', 'By the seat or as a pod']]
   };
@@ -357,7 +372,7 @@
 
   /* Health score quiz */
   var QUIZ = [
-    { q: 'Which platform are we scoring?', key: 'platform', opts: [['Salesforce'], ['ServiceNow'], ['Both'], ['Something else']] },
+    { q: 'Which platform should we check?', key: 'platform', opts: [['Salesforce'], ['ServiceNow'], ['Both'], ['Something else']] },
     { q: 'Do your teams trust the data in it?', opts: [['Yes, completely', 20], ['Mostly', 12], ['Not really', 4]],
       fix: '<b>Clean the data first.</b> Deduplicate and set ownership rules before adding any AI.' },
     { q: 'How often do people work in spreadsheets alongside it?', opts: [['Rarely', 20], ['Every week', 10], ['Every day', 2]],
@@ -389,7 +404,7 @@
   function renderResult() {
     var total = 0, scored = [];
     QUIZ.forEach(function (item, i) { if (item.fix) { var pts = item.opts[qAns[i]][1]; total += pts; scored.push({ pts: pts, fix: item.fix, i: i }); } });
-    var band = total < 45 ? ['Leaking value', 'var(--red)'] : total < 75 ? ['Stable, not compounding', 'var(--blue-ink)'] : ['Ready to scale AI', 'var(--green-ink)'];
+    var band = total < 45 ? ['Not ready for AI yet', 'var(--red)'] : total < 75 ? ['Partly ready', 'var(--blue-ink)'] : ['Ready to scale AI agents', 'var(--green-ink)'];
     var fixes = scored.slice().sort(function (a, b) { return a.pts - b.pts || a.i - b.i; }).slice(0, 3);
     var platform = QUIZ[0].opts[qAns[0]][0];
     $('.qf__count', scoreF).textContent = 'Your result';
@@ -397,10 +412,10 @@
     $('.qz__back', scoreF).hidden = true;
     stage.innerHTML =
       '<div><div class="qz__result"><div class="ring"><svg viewBox="0 0 120 120"><circle class="ring__track" cx="60" cy="60" r="50"/><circle class="ring__val" cx="60" cy="60" r="50"/></svg><b class="ring__num">0</b></div>' +
-      '<div><span class="scan__k" style="color:var(--muted)">' + platform + ' health score</span><p class="qz__band" style="color:' + band[1] + '">' + band[0] + '</p>' +
+      '<div><span class="scan__k" style="color:var(--muted)">' + platform + ' AI readiness</span><p class="qz__band" style="color:' + band[1] + '">' + band[0] + '</p>' +
       '<p class="qz__bench">In our audits, typical platforms run at 30 to 40% of licensed capability.</p></div></div>' +
       '<ol class="qz__fixes">' + fixes.map(function (f) { return '<li><span>' + f.fix + '</span></li>'; }).join('') + '</ol>' +
-      '<div class="qz__send"><p>Get the full report and a free 30-minute review with an architect.</p>' +
+      '<div class="qz__send"><p>Get the full readiness report and a free 30-minute review with an architect.</p>' +
       '<div class="qf__row"><label><span>First name</span><input name="firstName" autocomplete="given-name" required></label><label><span>Work email</span><input name="email" type="email" autocomplete="email" required></label></div>' +
       '<label><span>Company</span><input name="company" autocomplete="organization" required></label>' +
       '<label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>' +
@@ -428,7 +443,7 @@
       var answers = QUIZ.map(function (item, i) { return item.q + ' ' + item.opts[qAns[i]][0]; }).join(' | ');
       postLead({
         firstName: $('input[name="firstName"]', stage).value, email: $('input[name="email"]', stage).value, company: $('input[name="company"]', stage).value,
-        interest: 'Health score ' + scoreF.dataset.score + '/100 (' + scoreF.dataset.platform + ')',
+        interest: 'AI readiness ' + scoreF.dataset.score + '/100 (' + scoreF.dataset.platform + ')',
         message: '[' + scoreF.dataset.band + '] ' + answers
       }).then(function () {
         track('generate_lead', { flow: 'score', score: scoreF.dataset.score });

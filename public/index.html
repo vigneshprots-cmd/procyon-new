@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=11">
+<link rel="stylesheet" href="/assets/css/styles.css?v=14">
 
 <script type="application/ld+json">
 {
@@ -226,13 +226,13 @@
       <p class="hero__sub">Most enterprises use a third of the platforms they pay for. We re-engineer your customer, service and data systems into one connected engine, then put AI agents to work inside it.</p>
       <div class="hero__ctas">
         <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-track="cta_hero_audit">Get my free platform audit <i aria-hidden="true">&rarr;</i></a>
-        <a class="btn btn--score btn--lg" href="#audit" data-open="score" data-track="cta_hero_score">
-          <svg class="mini-gauge" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 8.5 6"/></svg>
-          Score my platform <small>2 min</small>
+        <a class="btn btn--score btn--lg" href="#audit" data-open="score" data-track="cta_hero_readiness">
+          <svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4z"/></svg>
+          Check AI readiness <small>2 min</small>
         </a>
       </div>
       <ul class="hero__assure">
-        <li>Senior architect, not a sales rep</li>
+        <li class="live" data-live>Senior architects reply within 1 business day</li>
         <li>Written fix plan within a week</li>
         <li>Zero obligation</li>
       </ul>
@@ -337,7 +337,7 @@
         <p>Teams rebuild in spreadsheets what the system already does, because it is faster than asking.</p>
       </article>
     </div>
-    <div class="gap__cta rv"><a class="btn btn--ink" href="#audit" data-open="score" data-track="gap_score">Score my platform in 2 minutes <i aria-hidden="true">&rarr;</i></a><span>Six questions. Instant score. No email needed to see it.</span></div>
+    <div class="gap__cta rv"><a class="btn btn--ink" href="#audit" data-open="score" data-track="gap_readiness">Check your AI readiness in 2 minutes <i aria-hidden="true">&rarr;</i></a><span>Six questions about your platform. Instant result, no email needed to see it.</span></div>
   </div>
 </section>
 
@@ -367,11 +367,13 @@
           <li><a href="/salesforce/org-audit/">Org audit &amp; rescue</a></li>
           <li><a href="/salesforce/managed-services/">Managed services</a></li>
         </ul>
-        <div class="fast">
+        <a class="fast" href="#audit" data-interest="AI agents" data-track="layer_sf">
           <span class="fast__k">Fastest way in</span>
-          <b>Agent Launch Kit</b><span>First Agentforce agents live in under 4 weeks.</span>
-          <a class="btn btn--ink btn--sm" href="#audit" data-interest="AI agents" data-track="layer_sf">Start here</a>
-        </div>
+          <span class="fast__t">&lt; 4 weeks</span>
+          <b>Agent Launch Kit</b>
+          <span class="fast__d">First Agentforce agents live in production, on your data.</span>
+          <span class="fast__go">Plan my first agent <i aria-hidden="true">&rarr;</i></span>
+        </a>
         <a class="arrow-link" href="/salesforce/">Everything we do on Salesforce <i aria-hidden="true">&rarr;</i></a>
       </div>
 
@@ -389,11 +391,13 @@
           <li><a href="/servicenow/now-assist/">Now Assist &amp; AI agents</a></li>
           <li><a href="/servicenow/managed-services/">Managed services</a></li>
         </ul>
-        <div class="fast fast--sn">
+        <a class="fast fast--sn" href="#audit" data-interest="ServiceNow" data-track="layer_sn">
           <span class="fast__k">Fastest way in</span>
-          <b>Tech-debt removal</b><span>Audit, then a structured 8-week clean-up.</span>
-          <a class="btn btn--ink btn--sm" href="#audit" data-interest="ServiceNow" data-track="layer_sn">Start here</a>
-        </div>
+          <span class="fast__t">8 weeks</span>
+          <b>Tech-debt removal</b>
+          <span class="fast__d">Audit first, then a structured clean-up of scripts, CMDB and integrations.</span>
+          <span class="fast__go">Book my instance audit <i aria-hidden="true">&rarr;</i></span>
+        </a>
         <a class="arrow-link" href="/servicenow/">Everything we do on ServiceNow <i aria-hidden="true">&rarr;</i></a>
       </div>
 
@@ -410,11 +414,13 @@
           <li><a href="/ai-data/ai-agents/">OpenAI, Anthropic Claude, Vertex AI</a></li>
           <li><a href="/ai-data/ai-agents/">Human-in-the-loop controls</a></li>
         </ul>
-        <div class="fast fast--ai">
+        <a class="fast fast--ai" href="#audit" data-interest="AI agents" data-track="layer_ai">
           <span class="fast__k">Fastest way in</span>
-          <b>AI readiness session</b><span>90 minutes, free. A ranked list of use cases your data can support today.</span>
-          <a class="btn btn--ink btn--sm" href="#audit" data-interest="AI agents" data-track="layer_ai">Book it</a>
-        </div>
+          <span class="fast__t">90 min, free</span>
+          <b>AI readiness session</b>
+          <span class="fast__d">A ranked list of AI use cases your data can support today.</span>
+          <span class="fast__go">Book my readiness session <i aria-hidden="true">&rarr;</i></span>
+        </a>
         <a class="arrow-link" href="/ai-data/">AI &amp; data services <i aria-hidden="true">&rarr;</i></a>
       </div>
 
@@ -430,11 +436,13 @@
           <li><a href="/ai-data/data-analytics/">Master data &amp; governance</a></li>
           <li><a href="/ai-data/integration/">Event-driven architecture</a></li>
         </ul>
-        <div class="fast fast--in">
+        <a class="fast fast--in" href="#audit" data-interest="Data &amp; integration" data-track="layer_int">
           <span class="fast__k">Fastest way in</span>
-          <b>Integration architecture review</b><span>Map every connection, its owner and its failure points.</span>
-          <a class="btn btn--ink btn--sm" href="#audit" data-interest="Data &amp; integration" data-track="layer_int">Start here</a>
-        </div>
+          <span class="fast__t">Fixed scope</span>
+          <b>Integration architecture review</b>
+          <span class="fast__d">Every connection mapped with its owner, failure points and fix order.</span>
+          <span class="fast__go">Map my integrations <i aria-hidden="true">&rarr;</i></span>
+        </a>
         <a class="arrow-link" href="/ai-data/integration/">Integration services <i aria-hidden="true">&rarr;</i></a>
       </div>
 
@@ -450,11 +458,13 @@
           <li><a href="/salesforce/managed-services/">Managed services</a></li>
           <li><a href="/talent/engagement-models/">Fixed, T&amp;M or outcome-based</a></li>
         </ul>
-        <div class="fast fast--tl">
+        <a class="fast fast--tl" href="#audit" data-interest="Certified talent" data-track="layer_talent">
           <span class="fast__k">Fastest way in</span>
-          <b>Tell us the role</b><span>We send vetted profiles from the US, Canada or India.</span>
-          <a class="btn btn--ink btn--sm" href="#audit" data-interest="Certified talent" data-track="layer_talent">Request profiles</a>
-        </div>
+          <span class="fast__t">US &middot; CA &middot; IN</span>
+          <b>Tell us the role</b>
+          <span class="fast__d">Certified Salesforce or ServiceNow people, vetted by our practice leads.</span>
+          <span class="fast__go">Get vetted profiles <i aria-hidden="true">&rarr;</i></span>
+        </a>
         <a class="arrow-link" href="/talent/">How talent works <i aria-hidden="true">&rarr;</i></a>
       </div>
     </div>
@@ -671,12 +681,12 @@
         </ol>
         <em>Book my audit &rarr;</em>
       </a>
-      <a class="path path--score rv" data-d="2" href="#audit" data-open="score" data-track="cta_close_score">
+      <a class="path path--score rv" data-d="2" href="#audit" data-open="score" data-track="cta_close_readiness">
         <span class="path__k">2 minutes, self-serve</span>
-        <b>Platform health score</b>
-        <span>Six questions. An instant score, the three fixes that matter most, and a benchmark against what we see in audits.</span>
+        <b>AI readiness check</b>
+        <span>Six questions about your Salesforce or ServiceNow platform. An instant readiness level and the three fixes that unlock AI agents.</span>
         <svg class="path__gauge" viewBox="0 0 120 70" aria-hidden="true"><path d="M10 64a50 50 0 0 1 100 0" class="g-track"/><path d="M10 64a50 50 0 0 1 100 0" class="g-val"/></svg>
-        <em>Get my score &rarr;</em>
+        <em>Check my AI readiness &rarr;</em>
       </a>
     </div>
   </div>
@@ -802,6 +812,6 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Book a platform audit <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=11" defer></script>
+<script src="/assets/js/main.js?v=13" defer></script>
 </body>
 </html>
