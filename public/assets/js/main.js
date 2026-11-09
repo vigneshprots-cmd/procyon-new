@@ -78,82 +78,10 @@
   $$('.rv, [data-gantt], [data-sun], [data-meter], .leak').forEach(function (el) { if (io && !reduce) io.observe(el); else el.classList.add('in'); });
   if (!io || reduce) $$('[data-count]').forEach(function (el) { el.textContent = el.getAttribute('data-count'); });
 
-  /* ---------- Hero scan card ---------- */
-  var scan = $('[data-scan]');
-  var SETS = {
-    sf: { name: 'Salesforce', score: 38, idle: 62, state: 'Leaking value', weeks: '8-week sprint', rows: [
-      ['Data quality', '18% duplicate accounts and contacts', 'fix'],
-      ['Automation', '143 legacy workflows and process builders', 'watch'],
-      ['Integrations', '9 point-to-point scripts, no monitoring', 'fix'],
-      ['License use', '34% of seats active in a typical week', 'watch'],
-      ['AI readiness', 'Agents blocked by data quality', 'fix']] },
-    sn: { name: 'ServiceNow', score: 42, idle: 58, state: 'Leaking value', weeks: '8-week clean-up', rows: [
-      ['CMDB health', '41% of CIs stale or orphaned', 'fix'],
-      ['Customizations', '212 scripts on the upgrade path', 'watch'],
-      ['Discovery', 'MID servers: 2 of 5 healthy', 'fix'],
-      ['Module use', '3 of 8 licensed modules live', 'watch'],
-      ['Now Assist readiness', 'Knowledge base 60% outdated', 'fix']] }
-  };
-  if (scan) {
-    var rowsEl = $('.scan__rows', scan), ringVal = $('.ring__val', scan), ringNum = $('.ring__num', scan);
-    var stateEl = $('.scan__state', scan), idleEl = $('.scan__idle-n', scan), weeksEl = $('.scan__weeks', scan), cta = $('[data-scan-cta]', scan);
-    var runId = 0, current = 'sf', userPicked = false, cycleT;
-    var C = 314.16;
-    function setRing(el, numEl, score) { el.style.strokeDashoffset = C * (1 - score / 100); countUp(numEl, score, 1300); }
-    async function runScan(key) {
-      var id = ++runId, set = SETS[key];
-      current = key;
-      clearTimeout(cycleT);
-      scan.classList.remove('is-done');
-      cta.setAttribute('data-interest', set.name);
-      $$('.scan__switch button', scan).forEach(function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-set') === key)); });
-      ringVal.style.strokeDashoffset = C; ringNum.textContent = '0'; idleEl.textContent = '0';
-      stateEl.textContent = 'Scanning ' + set.name + '…';
-      weeksEl.textContent = set.weeks;
-      rowsEl.innerHTML = set.rows.map(function (r) {
-        return '<li class="st-' + r[2] + '"><span class="scan__ico"></span><span class="scan__lbl">' + r[0] + '</span><span class="scan__val">' + r[1] + '</span><span class="scan__tag">' + (r[2] === 'fix' ? 'Fix' : 'Watch') + '</span></li>';
-      }).join('');
-      var lis = $$('li', rowsEl);
-      await wait(450);
-      for (var i = 0; i < lis.length; i++) {
-        if (id !== runId) return;
-        lis[i].classList.add('is-run');
-        await wait(520);
-        if (id !== runId) return;
-        lis[i].classList.remove('is-run'); lis[i].classList.add('is-done');
-      }
-      if (id !== runId) return;
-      setRing(ringVal, ringNum, set.score);
-      countUp(idleEl, set.idle, 1300);
-      stateEl.textContent = set.state;
-      scan.classList.add('is-done');
-      if (!userPicked && !reduce) cycleT = setTimeout(function () { runScan(current === 'sf' ? 'sn' : 'sf'); }, 7000);
-    }
-    $$('.scan__switch button', scan).forEach(function (b) {
-      b.addEventListener('click', function () { userPicked = true; track('scan_switch', { platform: b.textContent }); runScan(b.getAttribute('data-set')); });
-    });
-    setTimeout(function () { runScan('sf'); }, reduce ? 0 : 900);
-  }
-
-  /* ---------- Hero live status: which hub is working right now ---------- */
-  var liveEl = $('[data-live]');
-  function renderLive() {
-    if (!liveEl) return;
-    var now = new Date(), hubs = [['Chennai', 'Asia/Kolkata'], ['Toronto', 'America/Toronto'], ['California', 'America/Los_Angeles']];
-    var on = hubs.filter(function (h) {
-      var o = {};
-      new Intl.DateTimeFormat('en-US', { timeZone: h[1], hour: '2-digit', hour12: false, weekday: 'short' }).formatToParts(now).forEach(function (p) { o[p.type] = p.value; });
-      var hr = +o.hour % 24;
-      return o.weekday !== 'Sat' && o.weekday !== 'Sun' && hr >= 9 && hr < 18;
-    }).map(function (h) { return h[0]; });
-    liveEl.textContent = on.length ? on.join(' and ') + ' team' + (on.length > 1 ? 's' : '') + ' online now' : 'Senior architects reply within 1 business day';
-  }
-  renderLive(); setInterval(renderLive, 60000);
-
   /* ---------- Client ticker: one row, each logo once, recycled as it leaves ---------- */
   var ticker = $('[data-ticker]');
   if (ticker) {
-    var track = $('.ticker__track', ticker), offset = 0, speed = .45, paused = false, inView = true, last = 0;
+    var tTrack = $('.ticker__track', ticker), offset = 0, speed = .45, paused = false, inView = true, last = 0;
     if (reduce) document.documentElement.classList.add('no-ticker');
     else {
       ticker.addEventListener('mouseenter', function () { paused = true; });
@@ -163,9 +91,9 @@
         var dt = last ? Math.min(64, now - last) : 16; last = now;
         if (!paused && inView && !document.hidden) {
           offset -= speed * dt / 16;
-          var first = track.firstElementChild, w = first.getBoundingClientRect().width;
-          if (-offset >= w) { track.appendChild(first); offset += w; }
-          track.style.transform = 'translate3d(' + offset + 'px,0,0)';
+          var first = tTrack.firstElementChild, w = first.getBoundingClientRect().width;
+          if (-offset >= w) { tTrack.appendChild(first); offset += w; }
+          tTrack.style.transform = 'translate3d(' + offset + 'px,0,0)';
         }
         requestAnimationFrame(tick);
       })(performance.now());
@@ -286,6 +214,86 @@
     return bad;
   }
   document.addEventListener('input', function (e) { if (e.target.classList && e.target.classList.contains('is-invalid') && e.target.value.trim()) { e.target.classList.remove('is-invalid'); e.target.removeAttribute('aria-invalid'); } });
+
+  /* ---------- Hero hook: idle-spend calculator ---------- */
+  var calc = $('[data-calc]'), calcSummary = '';
+  var money = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+  if (calc) {
+    var users = $('[data-in="users"]', calc), price = $('[data-in="price"]', calc), idleOut = $('[data-out="idle"]', calc);
+    var shown = 0, raf;
+    var fill = function (el) { el.style.setProperty('--fill', ((el.value - el.min) / (el.max - el.min) * 100) + '%'); };
+    var animateTo = function (target) {
+      cancelAnimationFrame(raf);
+      var from = shown, start = performance.now(), dur = reduce ? 0 : 500;
+      (function step(now) {
+        var p = dur ? Math.min(1, (now - start) / dur) : 1, e = 1 - Math.pow(1 - p, 3);
+        shown = from + (target - from) * e;
+        idleOut.textContent = money(Math.round(shown / 1000) * 1000);
+        if (p < 1) raf = requestAnimationFrame(step);
+      })(start);
+    };
+    var update = function () {
+      fill(users); fill(price);
+      $('[data-out="users"]', calc).textContent = (+users.value).toLocaleString('en-US');
+      $('[data-out="price"]', calc).textContent = '$' + price.value;
+      var idle = users.value * price.value * 12 * 0.65;
+      calcSummary = users.value + ' users x $' + price.value + '/mo, est. idle ' + money(idle) + '/yr';
+      animateTo(idle);
+    };
+    users.addEventListener('input', update); price.addEventListener('input', update);
+    users.addEventListener('change', function () { track('calc_use', { users: users.value, price: price.value }); });
+    update();
+  }
+
+  /* ---------- Hero inline lead form ---------- */
+  var hf = $('#hero-form');
+  if (hf) {
+    var hCur = 1, hStatus = $('.qf__status', hf);
+    var hGo = function (n) {
+      hCur = n;
+      $$('.qf__step', hf).forEach(function (s) { s.classList.toggle('is-on', +s.getAttribute('data-step') === n); });
+      $('.qf__progress span', hf).style.width = (n / 3 * 100) + '%';
+      $('[data-hf-step]', hf).textContent = n;
+      hStatus.textContent = '';
+      if (n === 3) setTimeout(function () { var f = $('input[name="firstName"]', hf); if (f && window.innerWidth > 720) f.focus({ preventScroll: true }); }, 300);
+      track('form_step', { flow: 'hero', step: n });
+    };
+    hGo(1);
+    hf.addEventListener('change', function (e) {
+      if (e.target.name === 'pain' && hCur === 1) setTimeout(function () { hGo(2); }, 220);
+      if (e.target.name === 'interest' && hCur === 2) setTimeout(function () { hGo(3); }, 220);
+    });
+    $$('.qf__back', hf).forEach(function (b) { b.addEventListener('click', function () { hGo(Math.max(1, hCur - 1)); }); });
+    var goBtn = $('[data-calc-go]');
+    if (goBtn) goBtn.addEventListener('click', function () {
+      track('calc_recover', { summary: calcSummary });
+      hf.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+      hf.classList.add('is-pulse');
+      setTimeout(function () { hf.classList.remove('is-pulse'); }, 1400);
+      var first = $('.qf__step.is-on input', hf); if (first) first.focus({ preventScroll: true });
+    });
+    hf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!$('input[name="pain"]:checked', hf)) { hGo(1); return; }
+      if (!$('input[name="interest"]:checked', hf)) { hGo(2); return; }
+      var bad = validate($$('.qf__step[data-step="3"] [required]', hf));
+      if (bad.length) { hStatus.className = 'qf__status err'; hStatus.textContent = 'Please complete the highlighted fields.'; bad[0].focus(); return; }
+      if ($('input[name="website"]', hf).value) return;
+      var btn = $('button[type=submit]', hf); btn.disabled = true;
+      hStatus.className = 'qf__status'; hStatus.textContent = 'Sending...';
+      var d = {}; new FormData(hf).forEach(function (v, k) { d[k] = v; });
+      d.message = '[Pain: ' + d.pain + '] [Calculator: ' + calcSummary + ']';
+      postLead(d).then(function () {
+        track('generate_lead', { flow: 'hero', interest: d.interest, pain: d.pain });
+        hf.classList.add('is-done');
+        hStatus.className = 'qf__status';
+        hStatus.textContent = 'Done, ' + d.firstName + '. A senior architect will reply within one business day.';
+      }).catch(function () {
+        btn.disabled = false; hStatus.className = 'qf__status err';
+        hStatus.textContent = 'Something went wrong. Email sales@procyonts.com and we will reply the same day.';
+      });
+    });
+  }
 
   /* ---------- Modal ---------- */
   var modal = $('#lead-modal'), auditF = $('#lead-form'), scoreF = $('#score-form');

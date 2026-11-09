@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=14">
+<link rel="stylesheet" href="/assets/css/styles.css?v=17">
 
 <script type="application/ld+json">
 {
@@ -223,57 +223,74 @@
         <span class="ln"><span>Run the business.</span></span>
         <span class="ln"><span class="grad-text">Not the software.</span></span>
       </h1>
-      <p class="hero__sub">Most enterprises use a third of the platforms they pay for. We re-engineer your customer, service and data systems into one connected engine, then put AI agents to work inside it.</p>
-      <div class="hero__ctas">
-        <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-track="cta_hero_audit">Get my free platform audit <i aria-hidden="true">&rarr;</i></a>
-        <a class="btn btn--score btn--lg" href="#audit" data-open="score" data-track="cta_hero_readiness">
-          <svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4z"/></svg>
-          Check AI readiness <small>2 min</small>
-        </a>
+      <p class="hero__sub">Most enterprises use a third of the platforms they pay for. We turn the rest into one connected engine, with AI agents doing the work.</p>
+
+      <div class="calc" data-calc>
+        <p class="calc__h">What is your idle software costing you?</p>
+        <div class="calc__row">
+          <label for="calc-users">Licensed users <output data-out="users">500</output></label>
+          <input id="calc-users" type="range" min="50" max="5000" step="50" value="500" data-in="users">
+        </div>
+        <div class="calc__row">
+          <label for="calc-price">Cost per user, per month <output data-out="price">$150</output></label>
+          <input id="calc-price" type="range" min="25" max="500" step="5" value="150" data-in="price">
+        </div>
+        <div class="calc__out">
+          <div>
+            <span class="calc__k">Paid for, but idle</span>
+            <b class="calc__val" data-out="idle">$585,000</b><span class="calc__per">per year</span>
+          </div>
+          <button type="button" class="calc__go" data-calc-go>Recover it <i aria-hidden="true">&rarr;</i></button>
+        </div>
+        <p class="calc__note">Based on the 30 to 40% utilization we typically find in audits.</p>
       </div>
-      <ul class="hero__assure">
-        <li class="live" data-live>Senior architects reply within 1 business day</li>
-        <li>Written fix plan within a week</li>
-        <li>Zero obligation</li>
-      </ul>
     </div>
 
-    <div class="scan" data-scan aria-label="Illustrative platform scan">
-      <div class="scan__bar">
-        <span class="scan__lights" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span class="scan__title">Platform scan <em>Sample</em></span>
-        <div class="scan__switch" role="tablist" aria-label="Platform">
-          <button role="tab" aria-selected="true" data-set="sf">Salesforce</button>
-          <button role="tab" aria-selected="false" data-set="sn">ServiceNow</button>
-        </div>
+    <form class="hf" id="hero-form" action="/api/lead" method="post" novalidate aria-labelledby="hf-title">
+      <div class="hf__head">
+        <p class="hf__k"><span></span>Free platform audit</p>
+        <h2 id="hf-title" class="hf__t">Get a written fix plan in 7 days.</h2>
+        <div class="qf__progress" aria-hidden="true"><span></span></div>
       </div>
 
-      <div class="scan__top">
-        <div class="ring" aria-hidden="true">
-          <svg viewBox="0 0 120 120">
-            <defs><linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BC1E2D"/><stop offset=".55" stop-color="#E05A3A"/><stop offset="1" stop-color="#28A8DE"/></linearGradient></defs>
-            <circle class="ring__track" cx="60" cy="60" r="50"/>
-            <circle class="ring__val" cx="60" cy="60" r="50"/>
-          </svg>
-          <b class="ring__num">0</b>
+      <fieldset class="qf__step is-on" data-step="1">
+        <legend>What is costing you most right now?</legend>
+        <div class="chips chips--grid">
+          <label><input type="radio" name="pain" value="Data nobody trusts" required><span><i>&#9673;</i>Data nobody trusts</span></label>
+          <label><input type="radio" name="pain" value="Upgrades that break things"><span><i>&#9888;</i>Upgrades that break things</span></label>
+          <label><input type="radio" name="pain" value="Manual work and spreadsheets"><span><i>&#9636;</i>Manual work and spreadsheets</span></label>
+          <label><input type="radio" name="pain" value="AI stuck in pilot"><span><i>&#10022;</i>AI stuck in pilot</span></label>
+          <label><input type="radio" name="pain" value="Systems that do not talk"><span><i>&#8644;</i>Systems that do not talk</span></label>
+          <label><input type="radio" name="pain" value="Not enough certified people"><span><i>&#9786;</i>Not enough certified people</span></label>
         </div>
-        <div class="scan__verdict">
-          <span class="scan__k">Health score</span>
-          <b class="scan__state">Scanning&hellip;</b>
-          <span class="scan__idle"><span class="scan__idle-n">0</span>% of licensed capability idle</span>
+      </fieldset>
+
+      <fieldset class="qf__step" data-step="2">
+        <legend>Which platform is it on?</legend>
+        <div class="chips chips--grid">
+          <label><input type="radio" name="interest" value="Salesforce" required><span>Salesforce</span></label>
+          <label><input type="radio" name="interest" value="ServiceNow"><span>ServiceNow</span></label>
+          <label><input type="radio" name="interest" value="Salesforce and ServiceNow"><span>Both</span></label>
+          <label><input type="radio" name="interest" value="Other platform"><span>Something else</span></label>
         </div>
-      </div>
+        <button type="button" class="qf__back">&larr; Back</button>
+      </fieldset>
 
-      <ul class="scan__rows"></ul>
+      <fieldset class="qf__step" data-step="3">
+        <legend>Where should the architect send it?</legend>
+        <div class="qf__row">
+          <label><span>First name</span><input name="firstName" autocomplete="given-name" required></label>
+          <label><span>Company</span><input name="company" autocomplete="organization" required></label>
+        </div>
+        <label><span>Work email</span><input name="email" type="email" autocomplete="email" required></label>
+        <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+        <button class="btn btn--red btn--block btn--lg" type="submit" data-track="hero_form_submit">Get my fix plan <i aria-hidden="true">&rarr;</i></button>
+        <button type="button" class="qf__back">&larr; Back</button>
+      </fieldset>
 
-      <div class="scan__foot">
-        <span class="scan__plan"><i aria-hidden="true"></i><span>Fix plan: <b class="scan__weeks">8-week sprint</b></span></span>
-        <a class="btn btn--red btn--sm" href="#audit" data-open="audit" data-scan-cta data-track="scan_cta">Run this on my platform <i aria-hidden="true">&rarr;</i></a>
-      </div>
-      <p class="scan__note">Illustrative sample. Your audit runs on your real instance.</p>
-
-      <div class="scan__toast" aria-hidden="true"><i></i><span><b>3 quick wins found</b>recoverable in under 30 days</span></div>
-    </div>
+      <p class="qf__status" role="status" aria-live="polite"></p>
+      <p class="hf__foot">Step <b data-hf-step>1</b> of 3 &middot; Reviewed by a senior architect, not a sales rep</p>
+    </form>
   </div>
 </section>
 
@@ -694,6 +711,7 @@
 </main>
 
 <!-- ================= MODAL ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BC1E2D"/><stop offset=".55" stop-color="#39B34A"/><stop offset="1" stop-color="#28A8DE"/></linearGradient></defs></svg>
 <dialog class="modal" id="lead-modal" aria-labelledby="modal-title">
   <div class="modal__shell">
     <aside class="modal__side">
@@ -812,6 +830,6 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Book a platform audit <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=13" defer></script>
+<script src="/assets/js/main.js?v=17" defer></script>
 </body>
 </html>
