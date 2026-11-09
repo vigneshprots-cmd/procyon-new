@@ -135,6 +135,28 @@
     setTimeout(function () { runScan('sf'); }, reduce ? 0 : 900);
   }
 
+  /* ---------- Client ticker: one row, each logo once, recycled as it leaves ---------- */
+  var ticker = $('[data-ticker]');
+  if (ticker) {
+    var track = $('.ticker__track', ticker), offset = 0, speed = .45, paused = false, inView = true, last = 0;
+    if (reduce) document.documentElement.classList.add('no-ticker');
+    else {
+      ticker.addEventListener('mouseenter', function () { paused = true; });
+      ticker.addEventListener('mouseleave', function () { paused = false; });
+      if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { inView = en[0].isIntersecting; }).observe(ticker);
+      (function tick(now) {
+        var dt = last ? Math.min(64, now - last) : 16; last = now;
+        if (!paused && inView && !document.hidden) {
+          offset -= speed * dt / 16;
+          var first = track.firstElementChild, w = first.getBoundingClientRect().width;
+          if (-offset >= w) { track.appendChild(first); offset += w; }
+          track.style.transform = 'translate3d(' + offset + 'px,0,0)';
+        }
+        requestAnimationFrame(tick);
+      })(performance.now());
+    }
+  }
+
   /* ---------- Engine stack ---------- */
   var stack = $('[data-stack]');
   if (stack) {
