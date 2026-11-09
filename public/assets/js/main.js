@@ -235,6 +235,7 @@
       metric.classList.remove('is-swap'); void metric.offsetWidth; metric.classList.add('is-swap');
       setTimeout(function () { capEl.textContent = o.cap; srcEl.textContent = o.src; countUp(numEl, o.pct, 900); }, reduce ? 0 : 200);
       ctaEl.textContent = o.cta;
+      ctaEl.parentNode.setAttribute('data-interest', o.interest);
       if (byUser) { heroTouched = true; clearTimeout(heroCycle); track('hero_outcome', { outcome: o.interest }); }
       else if (!heroTouched && !reduce) {
         void optBtns[i].offsetWidth; optBtns[i].classList.add('is-timing');
@@ -245,41 +246,9 @@
     optBtns.forEach(function (b, k) { b.addEventListener('click', function () { setOutcome(k, true); }); });
     setTimeout(function () { setOutcome(0); }, reduce ? 0 : 700);
 
-    /* Plan request: one field first, details second */
-    var planF = $('#plan-form'), plan2 = $('#plan-form-2'), planStatus = $('.plan__status', heroEl), planNote = $('[data-plan-note]', heroEl), planEmail = '';
-    planF.addEventListener('focusin', function () { heroTouched = true; clearTimeout(heroCycle); optBtns.forEach(function (b) { b.classList.remove('is-timing'); }); });
-    planF.addEventListener('input', function () { planF.classList.remove('is-invalid'); planStatus.textContent = ''; });
-    planF.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var em = $('input[name="email"]', planF).value.trim();
-      if ($('input[name="website"]', planF).value) return;
-      if (!emailOk(em)) { planF.classList.add('is-invalid'); planStatus.className = 'plan__status err'; planStatus.textContent = 'Enter a valid work email.'; return; }
-      var btn = $('button', planF); btn.disabled = true;
-      var o = OUT[outcome];
-      postLead({ email: em, interest: o.interest, message: '[Hero plan request] ' + o.cta }).then(function () {
-        planEmail = em;
-        track('generate_lead', { flow: 'hero_plan', interest: o.interest });
-        planF.hidden = true; planNote.hidden = true; plan2.hidden = false;
-        planStatus.className = 'plan__status'; planStatus.textContent = '';
-        setTimeout(function () { var f = $('input[name="firstName"]', plan2); if (f) f.focus({ preventScroll: true }); }, 200);
-      }).catch(function () {
-        btn.disabled = false; planStatus.className = 'plan__status err';
-        planStatus.textContent = 'Something went wrong. Email sales@procyonts.com and we will reply the same day.';
-      });
-    });
-    plan2.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var bad = validate($$('[required]', plan2));
-      if (bad.length) { bad[0].focus(); return; }
-      var btn = $('button', plan2); btn.disabled = true;
-      var fn = $('input[name="firstName"]', plan2).value, co = $('input[name="company"]', plan2).value;
-      postLead({ email: planEmail, firstName: fn, company: co, interest: OUT[outcome].interest, message: '[Hero plan details] ' + OUT[outcome].cta }).then(function () {
-        track('lead_enriched', { flow: 'hero_plan' });
-        plan2.hidden = true;
-        planStatus.className = 'plan__status ok';
-        planStatus.textContent = 'Thanks, ' + fn + '. Your ' + OUT[outcome].cta.replace('Get my ', '') + ' is with a senior architect. Expect it within a week.';
-      }).catch(function () { btn.disabled = false; });
-    });
+    /* The hero CTA carries the chosen outcome into the pop-up form */
+    var heroCta = $('[data-hero-cta]', heroEl);
+    heroCta.addEventListener('mouseenter', function () { heroTouched = true; clearTimeout(heroCycle); optBtns.forEach(function (b) { b.classList.remove('is-timing'); }); });
   }
 
   if (orbCanvas && orbCanvas.getContext) {
@@ -359,12 +328,12 @@
     $('[data-side-h]', modal).textContent = s[0];
     $('[data-side-list]', modal).innerHTML = s[1].map(function (t) { return '<li>' + t + '</li>'; }).join('');
   }
-  function openModal(mode, interest) {
+  function openModal(mode, interest, fromHero) {
     closeAll(); setMenu(false);
     var isScore = mode === 'score';
     auditF.hidden = isScore; scoreF.hidden = !isScore;
     setSide(isScore ? 'score' : (SIDE[interest] ? interest : 'audit'));
-    if (isScore) quizStart(); else auditStart(interest);
+    if (isScore) quizStart(); else auditStart(interest, fromHero);
     if (typeof modal.showModal === 'function') { if (!modal.open) modal.showModal(); } else modal.setAttribute('open', '');
     document.body.style.overflow = 'hidden';
     track('modal_open', { mode: mode, interest: interest || '' });
@@ -377,7 +346,7 @@
       var t = e.target.closest('[data-open], a[href="#audit"]');
       if (t && !modal.contains(t)) {
         e.preventDefault();
-        openModal(t.getAttribute('data-open') || 'audit', t.getAttribute('data-interest') || '');
+        openModal(t.getAttribute('data-open') || 'audit', t.getAttribute('data-interest') || '', t.hasAttribute('data-hero-cta'));
       }
       var tr = e.target.closest('[data-track]');
       if (tr) track('cta_click', { cta: tr.getAttribute('data-track'), interest: tr.getAttribute('data-interest') || '' });
@@ -385,43 +354,58 @@
     if (location.hash === '#audit') setTimeout(function () { openModal('audit'); }, 400);
   }
 
-  /* Audit flow (3 steps) */
-  var aCur = 1;
-  function aGo(n) {
-    aCur = n;
-    $$('.qf__step', auditF).forEach(function (s) { s.classList.toggle('is-on', +s.getAttribute('data-step') === n); });
-    $('.qf__progress span', auditF).style.width = (n / 3 * 100) + '%';
-    $('.qf__count b', auditF).textContent = n;
-    $('.qf__status', auditF).textContent = '';
-    if (n === 3) setTimeout(function () { var f = auditF.querySelector('input[name="firstName"]'); if (f) f.focus({ preventScroll: true }); }, 300);
-    track('form_step', { flow: 'audit', step: n });
-  }
-  function auditStart(interest) {
+  /* Contact form (single step, B2B fields) */
+  var SERVICE_FOR = {
+    'AI agents': 'Agentforce & AI agents', 'Automation': 'Agentforce & AI agents',
+    'Faster customer service': 'Salesforce consulting & implementation', 'Faster delivery': 'Salesforce consulting & implementation',
+    'Salesforce': 'Salesforce consulting & implementation', 'ServiceNow': 'ServiceNow implementation',
+    'Data & integration': 'Data, integration & MuleSoft', 'Certified talent': 'Staff augmentation', 'Ranger Fusion ERP': 'Ranger Fusion ERP'
+  };
+  var HEAD_FOR = {
+    'AI agents': ['Free 90-day plan', 'Request your AI agent plan'],
+    'Faster customer service': ['Free 90-day plan', 'Request your service plan'],
+    'Automation': ['Free 90-day plan', 'Request your automation plan'],
+    'Faster delivery': ['Free 90-day plan', 'Request your delivery plan'],
+    'Ranger Fusion ERP': ['Ranger Fusion ERP', 'Book your Ranger Fusion demo'],
+    'Certified talent': ['Certified talent', 'Tell us the role you need']
+  };
+  var FREE_MAIL = /@(gmail|googlemail|yahoo|ymail|hotmail|outlook|live|msn|aol|icloud|me|mac|proton|protonmail|gmx|mail|yandex|zoho|rediffmail)\./i;
+  var lfK = auditF ? $('[data-lf-k]', auditF) : null, lfT = auditF ? $('[data-lf-t]', auditF) : null;
+  function auditStart(interest, fromHero) {
     if (auditF.classList.contains('is-done')) { auditF.reset(); auditF.classList.remove('is-done'); $('button[type=submit]', auditF).disabled = false; }
-    var r = interest ? $$('input[name="interest"]', auditF).filter(function (x) { return x.value === interest; })[0] : null;
-    if (r) { r.checked = true; aGo(2); } else aGo(1);
+    $$('.is-invalid', auditF).forEach(function (f) { f.classList.remove('is-invalid'); });
+    $('.qf__status', auditF).textContent = '';
+    var head = (fromHero || interest === 'Ranger Fusion ERP' || interest === 'Certified talent') && HEAD_FOR[interest];
+    lfK.textContent = head ? head[0] : 'Talk to a senior architect';
+    lfT.textContent = head ? head[1] : 'Tell us what you are working on';
+    var svc = SERVICE_FOR[interest];
+    var sel = $('select[name="interest"]', auditF);
+    if (svc) sel.value = svc; else if (!sel.value) sel.value = '';
+    $('input[name="context"]', auditF).value = fromHero ? lfT.textContent : (interest || '');
+    setTimeout(function () { var f = $('input[name="name"]', auditF); if (f && window.innerWidth > 720) f.focus({ preventScroll: true }); }, 350);
   }
   if (auditF) {
-    auditF.addEventListener('change', function (e) {
-      if (e.target.name === 'interest' && aCur === 1) setTimeout(function () { aGo(2); }, 220);
-      if (e.target.name === 'timeline' && aCur === 2) setTimeout(function () { aGo(3); }, 220);
-    });
-    $$('.qf__back', auditF).forEach(function (b) { b.addEventListener('click', function () { aGo(Math.max(1, aCur - 1)); }); });
     auditF.addEventListener('submit', function (e) {
       e.preventDefault();
       var status = $('.qf__status', auditF);
-      if (!auditF.querySelector('input[name="interest"]:checked')) { aGo(1); status.className = 'qf__status err'; status.textContent = 'Pick where the pain is first.'; return; }
-      var bad = validate($$('.qf__step[data-step="3"] [required]', auditF));
+      if ($('input[name="website"]', auditF).value) return;
+      var bad = validate($$('[required]', auditF));
+      var em = $('input[name="email"]', auditF), ph = $('input[name="phone"]', auditF);
+      if (bad.indexOf(em) < 0 && FREE_MAIL.test(em.value)) { em.classList.add('is-invalid'); bad.push(em); status.className = 'qf__status err'; status.textContent = 'Please use your business email address.'; em.focus(); return; }
+      var digits = ph.value.replace(/\D/g, '');
+      if (bad.indexOf(ph) < 0 && (digits.length < 7 || digits.length > 15)) { ph.classList.add('is-invalid'); status.className = 'qf__status err'; status.textContent = 'Please enter a valid phone number.'; ph.focus(); return; }
       if (bad.length) { status.className = 'qf__status err'; status.textContent = 'Please complete the highlighted fields.'; bad[0].focus(); return; }
       var btn = $('button[type=submit]', auditF); btn.disabled = true;
       status.className = 'qf__status'; status.textContent = 'Sending...';
       var d = {}; new FormData(auditF).forEach(function (v, k) { d[k] = v; });
-      d.message = '[Timeline: ' + (d.timeline || 'n/a') + '] ' + (d.message || '');
-      postLead(d).then(function () {
-        track('generate_lead', { flow: 'audit', interest: d.interest, timeline: d.timeline });
+      var parts = d.name.trim().split(/\s+/);
+      var lead = { firstName: parts.shift(), lastName: parts.join(' '), company: d.company, email: d.email, phone: d.phone, interest: d.interest,
+        message: (d.context ? '[' + d.context + '] ' : '') + (d.message || '') };
+      postLead(lead).then(function () {
+        track('generate_lead', { flow: 'contact', interest: d.interest, context: d.context });
         auditF.classList.add('is-done');
         status.className = 'qf__status';
-        status.textContent = 'Got it, ' + d.firstName + '. A senior architect will reply within one business day.';
+        status.textContent = 'Thank you, ' + lead.firstName + '. A senior architect will reply within one business day.';
       }).catch(function () {
         btn.disabled = false; status.className = 'qf__status err';
         status.textContent = 'Something went wrong. Email sales@procyonts.com and we will reply the same day.';
