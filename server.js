@@ -103,7 +103,7 @@ async function forwardLead(lead) {
   if (SF_WEB_TO_LEAD_OID) {
     const body = new URLSearchParams({
       oid: SF_WEB_TO_LEAD_OID, first_name: lead.firstName, last_name: lead.lastName || '(not given)',
-      email: lead.email, company: lead.company, phone: lead.phone, lead_source: 'Website',
+      email: lead.email, company: lead.company || '(not given)', phone: lead.phone, lead_source: 'Website',
       description: `Interest: ${lead.interest}\n\n${lead.message}\n\nPage: ${lead.page}\nUTM: ${lead.utm}`
     });
     jobs.push(fetch('https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8', { method: 'POST', body }));
@@ -132,7 +132,8 @@ function handleLead(req, res) {
       company: clean(d.company, 160), phone: clean(d.phone, 40), interest: clean(d.interest, 60),
       message: clean(d.message, 4000), page: clean(d.page, 120), utm: clean(d.utm, 1000), receivedAt: new Date().toISOString()
     };
-    if (!lead.firstName || !lead.company || !lead.interest || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(lead.email)) {
+    // Email + interest are enough: the hero captures email first, then asks for name and company.
+    if (!lead.interest || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(lead.email)) {
       return send(res, 422, JSON.stringify({ ok: false }), { 'Content-Type': 'application/json' });
     }
     try { await forwardLead(lead); } catch (e) { console.error('[lead] error', e.message); }

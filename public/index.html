@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=17">
+<link rel="stylesheet" href="/assets/css/styles.css?v=21">
 
 <script type="application/ld+json">
 {
@@ -88,8 +88,8 @@
       "@type": "FAQPage", "@id": "https://procyonts.com/#faq",
       "mainEntity": [
         { "@type": "Question", "name": "What does Procyon Technostructure do?", "acceptedAnswer": { "@type": "Answer", "text": "Procyon is a Salesforce and ServiceNow consulting partner. We audit, implement, integrate and run both platforms, connect them to your data and ERP, and deploy AI agents such as Agentforce and Now Assist inside them. We also supply certified Salesforce and ServiceNow talent and build Ranger Fusion, an ERP native to Salesforce." } },
-        { "@type": "Question", "name": "What is a Procyon platform audit?", "acceptedAnswer": { "@type": "Answer", "text": "A structured review of your Salesforce or ServiceNow environment covering data quality, automation sprawl, integration health and license use. You get a written plan with what to fix first, effort, timeline and a cost range. It starts with a free 30-minute call with a senior architect." } },
-        { "@type": "Question", "name": "How fast can AI agents go live?", "acceptedAnswer": { "@type": "Answer", "text": "With Procyon's Agent Launch Kit, first Agentforce agents for lead qualification, case triage or self-service can be in production in under four weeks, provided the underlying data is in reasonable shape. The audit tells you whether it is." } },
+        { "@type": "Question", "name": "What happens after I contact Procyon?", "acceptedAnswer": { "@type": "Answer", "text": "A senior architect replies within one business day, runs a 30-minute call on your platform and goals, then sends a written plan with scope, timeline and a cost range." } },
+        { "@type": "Question", "name": "How fast can AI agents go live?", "acceptedAnswer": { "@type": "Answer", "text": "With Procyon's Agent Launch Kit, first Agentforce agents for lead qualification, case triage or self-service can be in production in under four weeks, provided the underlying data is in reasonable shape." } },
         { "@type": "Question", "name": "Can Procyon take over a failing implementation?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rescue work is a large share of what we do. For ServiceNow, a typical tech-debt removal runs eight weeks. For Salesforce, we stabilize the org first, then rebuild what is blocking adoption." } },
         { "@type": "Question", "name": "Does Procyon provide Salesforce and ServiceNow staff augmentation?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Certified administrators, developers, consultants and architects, individually or as delivery pods, working in US, Canadian or Indian time zones." } },
         { "@type": "Question", "name": "Is Procyon a certified partner?", "acceptedAnswer": { "@type": "Answer", "text": "Procyon is a Salesforce Consulting Partner and a ServiceNow Implementation Partner, certified to ISO 27001 and ISO 9001, with HIPAA-compliant delivery. Founded in 2004, headquartered in Novato, California, with hubs in Toronto and Chennai." } }
@@ -141,8 +141,8 @@
             </ul>
             <a class="dd__feature dd__feature--sn" href="#audit" data-interest="ServiceNow">
               <small>Start here</small>
-              <b>Free platform audit call</b>
-              <span>30 minutes with a senior architect. You leave with a short list of what to fix first.</span>
+              <b>Talk to a ServiceNow architect</b>
+              <span>30 minutes, no sales script. You leave with a short list of what to fix first.</span>
               <em>Book the call &rarr;</em>
             </a>
           </div>
@@ -193,7 +193,7 @@
     </nav>
 
     <div class="hdr__cta">
-      <a class="btn btn--red btn--sm" href="#audit" data-track="cta_header">Book a platform audit</a>
+      <a class="btn btn--red btn--sm" href="#audit" data-track="cta_header">Talk to an architect</a>
       <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
     </div>
   </div>
@@ -206,7 +206,7 @@
       <details><summary>Talent</summary><a href="/talent/staff-augmentation/">Staff augmentation</a><a href="/talent/delivery-pods/">Delivery pods</a><a href="/talent/engagement-models/">How we engage</a></details>
       <details><summary>Work</summary><a href="/work/">Case studies</a><a href="/industries/">Industries</a><a href="/insights/">Insights</a></details>
       <details><summary>Company</summary><a href="/about/">About Procyon</a><a href="/about/certifications/">Partners &amp; certifications</a><a href="/careers/">Careers</a><a href="/contact/">Contact</a></details>
-      <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Book a platform audit</a>
+      <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
     </div>
   </div>
 </header>
@@ -214,83 +214,53 @@
 <main id="main">
 
 <!-- ================= HERO ================= -->
-<section class="hero" aria-labelledby="hero-h">
-  <div class="hero__dots" aria-hidden="true"></div>
+<section class="hero" aria-labelledby="hero-h" data-hero>
   <div class="wrap hero__grid">
     <div class="hero__copy">
-      <p class="pill"><span class="pill__dot"></span>Q1 2027 platform audits now open</p>
+      <p class="pill"><span class="pill__dot"></span>Since 2004 &middot; 200+ enterprise clients</p>
       <h1 id="hero-h" class="hero__h">
         <span class="ln"><span>Run the business.</span></span>
         <span class="ln"><span class="grad-text">Not the software.</span></span>
       </h1>
-      <p class="hero__sub">Most enterprises use a third of the platforms they pay for. We turn the rest into one connected engine, with AI agents doing the work.</p>
+      <p class="hero__sub">Procyon engineers the customer, service and data platforms behind 200+ enterprises, then puts AI agents to work inside them.</p>
 
-      <div class="calc" data-calc>
-        <p class="calc__h">What is your idle software costing you?</p>
-        <div class="calc__row">
-          <label for="calc-users">Licensed users <output data-out="users">500</output></label>
-          <input id="calc-users" type="range" min="50" max="5000" step="50" value="500" data-in="users">
+      <div class="move">
+        <p class="move__q" id="move-q">What do you need to move first?</p>
+        <div class="move__opts" role="radiogroup" aria-labelledby="move-q">
+          <button type="button" role="radio" aria-checked="true" data-o="0"><i></i>Put AI agents to work</button>
+          <button type="button" role="radio" aria-checked="false" data-o="1"><i></i>Answer customers faster</button>
+          <button type="button" role="radio" aria-checked="false" data-o="2"><i></i>Kill the manual busywork</button>
+          <button type="button" role="radio" aria-checked="false" data-o="3"><i></i>Ship programs faster</button>
         </div>
-        <div class="calc__row">
-          <label for="calc-price">Cost per user, per month <output data-out="price">$150</output></label>
-          <input id="calc-price" type="range" min="25" max="500" step="5" value="150" data-in="price">
-        </div>
-        <div class="calc__out">
-          <div>
-            <span class="calc__k">Paid for, but idle</span>
-            <b class="calc__val" data-out="idle">$585,000</b><span class="calc__per">per year</span>
+
+        <form class="plan" id="plan-form" action="/api/lead" method="post" novalidate>
+          <label class="sr" for="plan-email">Work email</label>
+          <input id="plan-email" name="email" type="email" autocomplete="email" placeholder="Work email" required>
+          <button class="btn btn--red" type="submit" data-track="hero_plan_submit"><span data-plan-cta>Get my AI agent plan</span> <i aria-hidden="true">&rarr;</i></button>
+          <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        </form>
+        <p class="plan__note" data-plan-note>A 90-day plan written by a senior architect, in your inbox within a week.</p>
+
+        <form class="plan2" id="plan-form-2" novalidate hidden>
+          <p class="plan2__h"><b>Plan requested.</b> Two more details and the architect can tailor it to you.</p>
+          <div class="plan2__row">
+            <label class="sr" for="plan-name">First name</label><input id="plan-name" name="firstName" autocomplete="given-name" placeholder="First name" required>
+            <label class="sr" for="plan-co">Company</label><input id="plan-co" name="company" autocomplete="organization" placeholder="Company" required>
+            <button class="btn btn--red" type="submit">Tailor my plan <i aria-hidden="true">&rarr;</i></button>
           </div>
-          <button type="button" class="calc__go" data-calc-go>Recover it <i aria-hidden="true">&rarr;</i></button>
-        </div>
-        <p class="calc__note">Based on the 30 to 40% utilization we typically find in audits.</p>
+        </form>
+        <p class="plan__status" role="status" aria-live="polite"></p>
       </div>
     </div>
 
-    <form class="hf" id="hero-form" action="/api/lead" method="post" novalidate aria-labelledby="hf-title">
-      <div class="hf__head">
-        <p class="hf__k"><span></span>Free platform audit</p>
-        <h2 id="hf-title" class="hf__t">Get a written fix plan in 7 days.</h2>
-        <div class="qf__progress" aria-hidden="true"><span></span></div>
+    <div class="orb" aria-hidden="true">
+      <canvas class="orb__canvas"></canvas>
+      <div class="orb__metric">
+        <b class="orb__num"><span data-orb-num>60</span>%</b>
+        <span class="orb__cap" data-orb-cap>of patient requests resolved by AI agents</span>
+        <span class="orb__src" data-orb-src>Regional health system &middot; Agentforce + Data Cloud</span>
       </div>
-
-      <fieldset class="qf__step is-on" data-step="1">
-        <legend>What is costing you most right now?</legend>
-        <div class="chips chips--grid">
-          <label><input type="radio" name="pain" value="Data nobody trusts" required><span><i>&#9673;</i>Data nobody trusts</span></label>
-          <label><input type="radio" name="pain" value="Upgrades that break things"><span><i>&#9888;</i>Upgrades that break things</span></label>
-          <label><input type="radio" name="pain" value="Manual work and spreadsheets"><span><i>&#9636;</i>Manual work and spreadsheets</span></label>
-          <label><input type="radio" name="pain" value="AI stuck in pilot"><span><i>&#10022;</i>AI stuck in pilot</span></label>
-          <label><input type="radio" name="pain" value="Systems that do not talk"><span><i>&#8644;</i>Systems that do not talk</span></label>
-          <label><input type="radio" name="pain" value="Not enough certified people"><span><i>&#9786;</i>Not enough certified people</span></label>
-        </div>
-      </fieldset>
-
-      <fieldset class="qf__step" data-step="2">
-        <legend>Which platform is it on?</legend>
-        <div class="chips chips--grid">
-          <label><input type="radio" name="interest" value="Salesforce" required><span>Salesforce</span></label>
-          <label><input type="radio" name="interest" value="ServiceNow"><span>ServiceNow</span></label>
-          <label><input type="radio" name="interest" value="Salesforce and ServiceNow"><span>Both</span></label>
-          <label><input type="radio" name="interest" value="Other platform"><span>Something else</span></label>
-        </div>
-        <button type="button" class="qf__back">&larr; Back</button>
-      </fieldset>
-
-      <fieldset class="qf__step" data-step="3">
-        <legend>Where should the architect send it?</legend>
-        <div class="qf__row">
-          <label><span>First name</span><input name="firstName" autocomplete="given-name" required></label>
-          <label><span>Company</span><input name="company" autocomplete="organization" required></label>
-        </div>
-        <label><span>Work email</span><input name="email" type="email" autocomplete="email" required></label>
-        <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
-        <button class="btn btn--red btn--block btn--lg" type="submit" data-track="hero_form_submit">Get my fix plan <i aria-hidden="true">&rarr;</i></button>
-        <button type="button" class="qf__back">&larr; Back</button>
-      </fieldset>
-
-      <p class="qf__status" role="status" aria-live="polite"></p>
-      <p class="hf__foot">Step <b data-hf-step>1</b> of 3 &middot; Reviewed by a senior architect, not a sales rep</p>
-    </form>
+    </div>
   </div>
 </section>
 
@@ -568,7 +538,7 @@
       </div>
     </article>
 
-    <div class="proof__cta rv"><p>Want numbers like these on your own platform?</p><a class="btn btn--red" href="#audit" data-open="audit" data-track="proof_cta">Get my free platform audit <i aria-hidden="true">&rarr;</i></a></div>
+    <div class="proof__cta rv"><p>Want numbers like these on your own platform?</p><a class="btn btn--red" href="#audit" data-open="audit" data-track="proof_cta">Talk to an architect <i aria-hidden="true">&rarr;</i></a></div>
 
     <ul class="more">
       <li class="rv" data-d="0"><a href="/work/financial-services-onboarding/"><span>Financial services</span><b>Client onboarding and KYC, automated end to end</b><i aria-hidden="true">&rarr;</i></a></li>
@@ -668,8 +638,8 @@
     <h2 id="faq-h" class="rv">Straight answers.</h2>
     <div class="faq__list">
       <details class="rv" open><summary>What does Procyon actually do?</summary><p class="faq-a">We audit, implement, integrate and run Salesforce and ServiceNow, connect them to your data and ERP, and deploy AI agents such as Agentforce and Now Assist inside them. We also supply certified talent and build Ranger Fusion, an ERP native to Salesforce.</p></details>
-      <details class="rv"><summary>What do I get from a platform audit?</summary><p class="faq-a">A written plan: what is broken, what it costs you, what to fix first, plus effort, timeline and a cost range. It starts with a free 30-minute call with a senior architect.</p></details>
-      <details class="rv"><summary>How fast can AI agents go live?</summary><p class="faq-a">With our Agent Launch Kit, first agents for qualification, case triage or self-service can be in production in under four weeks, if the data underneath is sound. The audit tells you whether it is.</p></details>
+      <details class="rv"><summary>What happens after I reach out?</summary><p class="faq-a">A senior architect replies within one business day, runs a 30-minute call on your platform and goals, then sends a written plan with scope, timeline and a cost range. Yours to keep.</p></details>
+      <details class="rv"><summary>How fast can AI agents go live?</summary><p class="faq-a">With our Agent Launch Kit, first agents for qualification, case triage or self-service can be in production in under four weeks, if the data underneath is sound. The first call tells you whether it is.</p></details>
       <details class="rv"><summary>Can you take over a failing implementation?</summary><p class="faq-a">Yes, rescue is a large share of our work. A typical ServiceNow tech-debt removal runs eight weeks. On Salesforce we stabilize the org first, then rebuild what is blocking adoption.</p></details>
       <details class="rv"><summary>Do you provide Salesforce and ServiceNow people?</summary><p class="faq-a">Yes. Certified admins, developers, consultants and architects, individually or as delivery pods, in US, Canadian or Indian time zones.</p></details>
       <details class="rv"><summary>Are you a certified partner?</summary><p class="faq-a">We are a Salesforce Consulting Partner and a ServiceNow Implementation Partner, certified to ISO 27001 and ISO 9001, with HIPAA-compliant delivery.</p></details>
@@ -689,14 +659,14 @@
     <div class="paths">
       <a class="path path--audit rv" data-d="1" href="#audit" data-open="audit" data-track="cta_close_audit">
         <span class="path__k">30-minute call</span>
-        <b>Free platform audit</b>
-        <span>A senior architect reviews your setup and sends a written fix plan with scope, timeline and cost range.</span>
+        <b>Talk to an architect</b>
+        <span>A senior architect, not a sales rep. You get a written plan with scope, timeline and cost range.</span>
         <ol class="when">
           <li><b>Today</b> you send three answers</li>
           <li><b>1 business day</b> an architect replies</li>
           <li><b>Within a week</b> your written plan</li>
         </ol>
-        <em>Book my audit &rarr;</em>
+        <em>Book my call &rarr;</em>
       </a>
       <a class="path path--score rv" data-d="2" href="#audit" data-open="score" data-track="cta_close_readiness">
         <span class="path__k">2 minutes, self-serve</span>
@@ -716,7 +686,7 @@
   <div class="modal__shell">
     <aside class="modal__side">
       <img src="/favicon.svg" alt="" width="44" height="44">
-      <p class="modal__side-h" data-side-h>Your free platform audit</p>
+      <p class="modal__side-h" data-side-h>Talk to a senior architect</p>
       <ul class="modal__gets" data-side-list>
         <li>30 minutes with a senior architect</li>
         <li>A written fix plan within a week</li>
@@ -733,7 +703,7 @@
       <form class="qf" id="lead-form" data-flow="audit" action="/api/lead" method="post" novalidate>
         <div class="qf__progress" aria-hidden="true"><span></span></div>
         <p class="qf__count" aria-live="polite">Step <b>1</b> of 3</p>
-        <h2 id="modal-title" class="sr">Book a free platform audit</h2>
+        <h2 id="modal-title" class="sr">Talk to a senior architect</h2>
 
         <fieldset class="qf__step is-on" data-step="1">
           <legend>Where is the pain?</legend>
@@ -744,7 +714,7 @@
             <label><input type="radio" name="interest" value="Data &amp; integration"><span>Data &amp; integration</span></label>
             <label><input type="radio" name="interest" value="Certified talent"><span>I need people</span></label>
             <label><input type="radio" name="interest" value="Ranger Fusion ERP"><span>Ranger Fusion ERP</span></label>
-            <label><input type="radio" name="interest" value="Platform audit"><span>Not sure yet</span></label>
+            <label><input type="radio" name="interest" value="Not sure yet"><span>Not sure yet</span></label>
           </div>
         </fieldset>
 
@@ -773,7 +743,7 @@
           <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
           <input type="hidden" name="page" value="home">
           <input type="hidden" name="utm" value="">
-          <button class="btn btn--red btn--block btn--lg" type="submit" data-track="form_submit">Send my audit request <i aria-hidden="true">&rarr;</i></button>
+          <button class="btn btn--red btn--block btn--lg" type="submit" data-track="form_submit">Send to an architect <i aria-hidden="true">&rarr;</i></button>
           <p class="qf__legal">We reply within one business day. See our <a href="/privacy-policy/">Privacy Policy</a>.</p>
           <button type="button" class="qf__back">&larr; Back</button>
         </fieldset>
@@ -828,8 +798,8 @@
   </div>
 </footer>
 
-<a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Book a platform audit <i aria-hidden="true">&rarr;</i></a>
+<a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=17" defer></script>
+<script src="/assets/js/main.js?v=19" defer></script>
 </body>
 </html>

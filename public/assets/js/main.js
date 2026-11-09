@@ -215,90 +215,141 @@
   }
   document.addEventListener('input', function (e) { if (e.target.classList && e.target.classList.contains('is-invalid') && e.target.value.trim()) { e.target.classList.remove('is-invalid'); e.target.removeAttribute('aria-invalid'); } });
 
-  /* ---------- Hero hook: idle-spend calculator ---------- */
-  var calc = $('[data-calc]'), calcSummary = '';
-  var money = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
-  if (calc) {
-    var users = $('[data-in="users"]', calc), price = $('[data-in="price"]', calc), idleOut = $('[data-out="idle"]', calc);
-    var shown = 0, raf;
-    var fill = function (el) { el.style.setProperty('--fill', ((el.value - el.min) / (el.max - el.min) * 100) + '%'); };
-    var animateTo = function (target) {
-      cancelAnimationFrame(raf);
-      var from = shown, start = performance.now(), dur = reduce ? 0 : 500;
-      (function step(now) {
-        var p = dur ? Math.min(1, (now - start) / dur) : 1, e = 1 - Math.pow(1 - p, 3);
-        shown = from + (target - from) * e;
-        idleOut.textContent = money(Math.round(shown / 1000) * 1000);
-        if (p < 1) raf = requestAnimationFrame(step);
-      })(start);
+  /* ---------- Hero: outcome selector + Procyon orb gauge + plan request ---------- */
+  var OUT = [
+    { pct: 60, cap: 'of patient requests resolved by AI agents', src: 'Regional health system · Agentforce + Data Cloud', cta: 'Get my AI agent plan', interest: 'AI agents' },
+    { pct: 50, cap: 'faster patient response time', src: 'Regional health system · Health Cloud', cta: 'Get my service plan', interest: 'Faster customer service' },
+    { pct: 70, cap: 'of high-volume repetitive work automated', src: 'Typical result across Procyon programs', cta: 'Get my automation plan', interest: 'Automation' },
+    { pct: 40, cap: 'faster time to value on 40+ pre-built accelerators', src: 'Typical range 30 to 50% · Procyon delivery', cta: 'Get my delivery plan', interest: 'Faster delivery' }
+  ];
+  var heroEl = $('[data-hero]'), orbCanvas = $('.orb__canvas'), outcome = 0, fillTarget = OUT[0].pct / 100, fillNow = 0;
+  if (heroEl) {
+    var optBtns = $$('.move__opts button', heroEl), metric = $('.orb__metric', heroEl);
+    var numEl = $('[data-orb-num]', heroEl), capEl = $('[data-orb-cap]', heroEl), srcEl = $('[data-orb-src]', heroEl), ctaEl = $('[data-plan-cta]', heroEl);
+    var heroTouched = false, heroCycle;
+    var setOutcome = function (i, byUser) {
+      outcome = i;
+      var o = OUT[i];
+      optBtns.forEach(function (b, k) { b.setAttribute('aria-checked', String(k === i)); b.classList.remove('is-timing'); });
+      fillTarget = o.pct / 100;
+      metric.classList.remove('is-swap'); void metric.offsetWidth; metric.classList.add('is-swap');
+      setTimeout(function () { capEl.textContent = o.cap; srcEl.textContent = o.src; countUp(numEl, o.pct, 900); }, reduce ? 0 : 200);
+      ctaEl.textContent = o.cta;
+      if (byUser) { heroTouched = true; clearTimeout(heroCycle); track('hero_outcome', { outcome: o.interest }); }
+      else if (!heroTouched && !reduce) {
+        void optBtns[i].offsetWidth; optBtns[i].classList.add('is-timing');
+        clearTimeout(heroCycle);
+        heroCycle = setTimeout(function () { if (!heroTouched) setOutcome((i + 1) % OUT.length); }, 5500);
+      }
     };
-    var update = function () {
-      fill(users); fill(price);
-      $('[data-out="users"]', calc).textContent = (+users.value).toLocaleString('en-US');
-      $('[data-out="price"]', calc).textContent = '$' + price.value;
-      var idle = users.value * price.value * 12 * 0.65;
-      calcSummary = users.value + ' users x $' + price.value + '/mo, est. idle ' + money(idle) + '/yr';
-      animateTo(idle);
-    };
-    users.addEventListener('input', update); price.addEventListener('input', update);
-    users.addEventListener('change', function () { track('calc_use', { users: users.value, price: price.value }); });
-    update();
-  }
+    optBtns.forEach(function (b, k) { b.addEventListener('click', function () { setOutcome(k, true); }); });
+    setTimeout(function () { setOutcome(0); }, reduce ? 0 : 700);
 
-  /* ---------- Hero inline lead form ---------- */
-  var hf = $('#hero-form');
-  if (hf) {
-    var hCur = 1, hStatus = $('.qf__status', hf);
-    var hGo = function (n) {
-      hCur = n;
-      $$('.qf__step', hf).forEach(function (s) { s.classList.toggle('is-on', +s.getAttribute('data-step') === n); });
-      $('.qf__progress span', hf).style.width = (n / 3 * 100) + '%';
-      $('[data-hf-step]', hf).textContent = n;
-      hStatus.textContent = '';
-      if (n === 3) setTimeout(function () { var f = $('input[name="firstName"]', hf); if (f && window.innerWidth > 720) f.focus({ preventScroll: true }); }, 300);
-      track('form_step', { flow: 'hero', step: n });
-    };
-    hGo(1);
-    hf.addEventListener('change', function (e) {
-      if (e.target.name === 'pain' && hCur === 1) setTimeout(function () { hGo(2); }, 220);
-      if (e.target.name === 'interest' && hCur === 2) setTimeout(function () { hGo(3); }, 220);
-    });
-    $$('.qf__back', hf).forEach(function (b) { b.addEventListener('click', function () { hGo(Math.max(1, hCur - 1)); }); });
-    var goBtn = $('[data-calc-go]');
-    if (goBtn) goBtn.addEventListener('click', function () {
-      track('calc_recover', { summary: calcSummary });
-      hf.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
-      hf.classList.add('is-pulse');
-      setTimeout(function () { hf.classList.remove('is-pulse'); }, 1400);
-      var first = $('.qf__step.is-on input', hf); if (first) first.focus({ preventScroll: true });
-    });
-    hf.addEventListener('submit', function (e) {
+    /* Plan request: one field first, details second */
+    var planF = $('#plan-form'), plan2 = $('#plan-form-2'), planStatus = $('.plan__status', heroEl), planNote = $('[data-plan-note]', heroEl), planEmail = '';
+    planF.addEventListener('focusin', function () { heroTouched = true; clearTimeout(heroCycle); optBtns.forEach(function (b) { b.classList.remove('is-timing'); }); });
+    planF.addEventListener('input', function () { planF.classList.remove('is-invalid'); planStatus.textContent = ''; });
+    planF.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!$('input[name="pain"]:checked', hf)) { hGo(1); return; }
-      if (!$('input[name="interest"]:checked', hf)) { hGo(2); return; }
-      var bad = validate($$('.qf__step[data-step="3"] [required]', hf));
-      if (bad.length) { hStatus.className = 'qf__status err'; hStatus.textContent = 'Please complete the highlighted fields.'; bad[0].focus(); return; }
-      if ($('input[name="website"]', hf).value) return;
-      var btn = $('button[type=submit]', hf); btn.disabled = true;
-      hStatus.className = 'qf__status'; hStatus.textContent = 'Sending...';
-      var d = {}; new FormData(hf).forEach(function (v, k) { d[k] = v; });
-      d.message = '[Pain: ' + d.pain + '] [Calculator: ' + calcSummary + ']';
-      postLead(d).then(function () {
-        track('generate_lead', { flow: 'hero', interest: d.interest, pain: d.pain });
-        hf.classList.add('is-done');
-        hStatus.className = 'qf__status';
-        hStatus.textContent = 'Done, ' + d.firstName + '. A senior architect will reply within one business day.';
+      var em = $('input[name="email"]', planF).value.trim();
+      if ($('input[name="website"]', planF).value) return;
+      if (!emailOk(em)) { planF.classList.add('is-invalid'); planStatus.className = 'plan__status err'; planStatus.textContent = 'Enter a valid work email.'; return; }
+      var btn = $('button', planF); btn.disabled = true;
+      var o = OUT[outcome];
+      postLead({ email: em, interest: o.interest, message: '[Hero plan request] ' + o.cta }).then(function () {
+        planEmail = em;
+        track('generate_lead', { flow: 'hero_plan', interest: o.interest });
+        planF.hidden = true; planNote.hidden = true; plan2.hidden = false;
+        planStatus.className = 'plan__status'; planStatus.textContent = '';
+        setTimeout(function () { var f = $('input[name="firstName"]', plan2); if (f) f.focus({ preventScroll: true }); }, 200);
       }).catch(function () {
-        btn.disabled = false; hStatus.className = 'qf__status err';
-        hStatus.textContent = 'Something went wrong. Email sales@procyonts.com and we will reply the same day.';
+        btn.disabled = false; planStatus.className = 'plan__status err';
+        planStatus.textContent = 'Something went wrong. Email sales@procyonts.com and we will reply the same day.';
       });
     });
+    plan2.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var bad = validate($$('[required]', plan2));
+      if (bad.length) { bad[0].focus(); return; }
+      var btn = $('button', plan2); btn.disabled = true;
+      var fn = $('input[name="firstName"]', plan2).value, co = $('input[name="company"]', plan2).value;
+      postLead({ email: planEmail, firstName: fn, company: co, interest: OUT[outcome].interest, message: '[Hero plan details] ' + OUT[outcome].cta }).then(function () {
+        track('lead_enriched', { flow: 'hero_plan' });
+        plan2.hidden = true;
+        planStatus.className = 'plan__status ok';
+        planStatus.textContent = 'Thanks, ' + fn + '. Your ' + OUT[outcome].cta.replace('Get my ', '') + ' is with a senior architect. Expect it within a week.';
+      }).catch(function () { btn.disabled = false; });
+    });
+  }
+
+  if (orbCanvas && orbCanvas.getContext) {
+    var octx = orbCanvas.getContext('2d'), OW, OH, odpr, opts = [], orot = .9, omx = 0, oVisible = true;
+    var stops = [[40, 168, 222], [57, 179, 74], [188, 30, 45]];
+    var brandAt = function (t) {
+      t = Math.max(0, Math.min(1, t));
+      var i = t < .5 ? 0 : 1, l = t < .5 ? t * 2 : (t - .5) * 2, a = stops[i], b = stops[i + 1];
+      return [Math.round(a[0] + (b[0] - a[0]) * l), Math.round(a[1] + (b[1] - a[1]) * l), Math.round(a[2] + (b[2] - a[2]) * l)];
+    };
+    (function build() {
+      var LAT = window.innerWidth < 720 ? 22 : 30, LON = window.innerWidth < 720 ? 44 : 60;
+      for (var i = 1; i < LAT; i++) for (var j = 0; j < LON; j++) opts.push([Math.PI * i / LAT, 2 * Math.PI * j / LON]);
+    })();
+    var oResize = function () {
+      odpr = Math.min(window.devicePixelRatio || 1, 2);
+      OW = orbCanvas.clientWidth; OH = orbCanvas.clientHeight;
+      orbCanvas.width = OW * odpr; orbCanvas.height = OH * odpr;
+      octx.setTransform(odpr, 0, 0, odpr, 0, 0);
+    };
+    var oDraw = function (now) {
+      var t = now / 1000;
+      fillNow += (fillTarget - fillNow) * (reduce ? 1 : .045);
+      octx.clearRect(0, 0, OW, OH);
+      var R = Math.min(OW * .4, OH * .45), cx = OW * (OW > 520 ? .56 : .6), cy = OH * .5;
+      var tilt = -.38, ct = Math.cos(tilt), st = Math.sin(tilt), roll = .45 + omx * .08, cr = Math.cos(roll), sr = Math.sin(roll);
+      for (var n = 0; n < opts.length; n++) {
+        var phi = opts[n][0], th = opts[n][1] + orot;
+        var x = Math.sin(phi) * Math.cos(th), y = Math.cos(phi), z = Math.sin(phi) * Math.sin(th);
+        var y2 = y * ct - z * st, z2 = y * st + z * ct;
+        var x2 = x * cr - y2 * sr, y3 = x * sr + y2 * cr;
+        if (z2 < .02) continue;
+        var lit = x2 * .85 + z2 * .55;
+        if (lit < .12) continue;
+        var h = (1 - Math.cos(phi)) / 2;               // 0 at the bottom pole, 1 at the top (stable while spinning)
+        h = 1 - h;
+        var wave = Math.sin(opts[n][1] * 3 + t * 2.2) * .018;
+        var filled = h < fillNow + wave;
+        var edge = Math.abs(h - (fillNow + wave)) < .035;
+        var shape = Math.min(1, (lit - .12) * 3 + .3);
+        var r = (.8 + z2 * 2.4) * (R / 300) * 1.75 * shape;
+        var px = cx + x2 * R, py = cy - y3 * R;
+        if (filled || edge) {
+          var c = brandAt((y + 1) / 2);              // blue at the base, green mid, red at the tip: the logo gradient
+          octx.globalAlpha = Math.min(1, .35 + z2 * .85) * (edge && !filled ? .9 : 1);
+          octx.fillStyle = 'rgb(' + c[0] + ',' + c[1] + ',' + c[2] + ')';
+          if (edge) { r *= 1.35; }
+        } else {
+          octx.globalAlpha = .1 + z2 * .22;
+          octx.fillStyle = '#7A838C';
+        }
+        octx.beginPath();
+        octx.ellipse(px, py, Math.max(.6, r * (.55 + z2 * .45)), Math.max(.6, r), 0, 0, 6.2832);
+        octx.fill();
+      }
+      octx.globalAlpha = 1;
+      if (!reduce) orot += .0018;
+    };
+    var oLoop = function (now) { if (oVisible && !document.hidden) oDraw(now); requestAnimationFrame(oLoop); };
+    oResize();
+    window.addEventListener('resize', oResize);
+    heroEl.addEventListener('mousemove', function (e) { var r = heroEl.getBoundingClientRect(); omx = ((e.clientX - r.left) / r.width - .5) * 2; });
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { oVisible = en[0].isIntersecting; }).observe(orbCanvas);
+    requestAnimationFrame(oLoop);
   }
 
   /* ---------- Modal ---------- */
   var modal = $('#lead-modal'), auditF = $('#lead-form'), scoreF = $('#score-form');
   var SIDE = {
-    audit: ['Your free platform audit', ['30 minutes with a senior architect', 'A written fix plan within a week', 'Scope, timeline and a cost range', 'Yours to keep, zero obligation']],
+    audit: ['Talk to a senior architect', ['30 minutes, no sales script', 'A written plan within a week', 'Scope, timeline and a cost range', 'Yours to keep, zero obligation']],
     score: ['Your AI readiness check', ['Six questions about your platform', 'Instant result, no email needed', 'The three fixes that unlock AI agents', 'Benchmarked against real audits']],
     'Ranger Fusion ERP': ['Your Ranger Fusion demo', ['A walkthrough on your own use case', 'Sales to finance on one data model', 'A go-live plan in 2 to 4 weeks', 'Zero obligation']],
     'Certified talent': ['Vetted profiles, fast', ['Tell us the role and seniority', 'Certified Salesforce or ServiceNow people', 'US, Canada or India time zones', 'By the seat or as a pod']]
