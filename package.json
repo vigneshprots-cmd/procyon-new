@@ -1,0 +1,15 @@
+{
+  "name": "procyon-new",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Procyon Technostructure website: Salesforce and ServiceNow consulting partner.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}
