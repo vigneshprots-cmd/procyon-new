@@ -88,7 +88,7 @@ i { font-style: normal; }
 .arrow-link--inv { color: #fff; }
 .arrow-link--inv:hover { color: var(--blue); }
 
-.grad-text { background: linear-gradient(90deg, var(--blue), var(--green), var(--red), var(--green), var(--blue)); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shimmer 9s linear infinite; }
+.grad-text { background: linear-gradient(90deg, var(--blue), var(--green), #7FD08A, var(--green), var(--blue)); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shimmer 9s linear infinite; }
 @keyframes shimmer { to { background-position: 300% 0; } }
 
 /* ---------- Header ---------- */
