@@ -1,4 +1,4 @@
-/* Procyon Technostructure | site behaviour v4 (no dependencies) */
+/* Procyon Technostructure | site behaviour v5 (no dependencies) */
 (function () {
   'use strict';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -215,25 +215,55 @@
   }
   document.addEventListener('input', function (e) { if (e.target.classList && e.target.classList.contains('is-invalid') && e.target.value.trim()) { e.target.classList.remove('is-invalid'); e.target.removeAttribute('aria-invalid'); } });
 
-  /* ---------- Hero: outcome selector + Procyon orb gauge + plan request ---------- */
+  /* ---------- Hero: outcome selector + client-result card (dot chart) ---------- */
   var OUT = [
-    { pct: 60, cap: 'of patient requests resolved by AI agents', src: 'Regional health system · Agentforce + Data Cloud', cta: 'Get my AI agent plan', interest: 'AI agents' },
-    { pct: 50, cap: 'faster patient response time', src: 'Regional health system · Health Cloud', cta: 'Get my service plan', interest: 'Faster customer service' },
-    { pct: 70, cap: 'of high-volume repetitive work automated', src: 'Typical result across Procyon programs', cta: 'Get my automation plan', interest: 'Automation' },
-    { pct: 40, cap: 'faster time to value on 40+ pre-built accelerators', src: 'Typical range 30 to 50% · Procyon delivery', cta: 'Get my delivery plan', interest: 'Faster delivery' }
+    { pct: 60, cap: 'of patient requests resolved by AI agents', src: 'Regional health system · Agentforce + Data Cloud', cta: 'Get my AI agent plan', interest: 'AI agents',
+      on: 'Resolved by AI agents', off: 'Still needs a person', unit: '1 dot = 1 in 100 requests' },
+    { pct: 50, cap: 'faster patient response time', src: 'Regional health system · Health Cloud', cta: 'Get my service plan', interest: 'Faster customer service',
+      on: 'Waiting time removed', off: 'Waiting time left', unit: '1 dot = 1% of the old wait' },
+    { pct: 70, cap: 'of high-volume repetitive work automated', src: 'Typical result across Procyon programs', cta: 'Get my automation plan', interest: 'Automation',
+      on: 'Automated', off: 'Still manual', unit: '1 dot = 1% of repetitive work' },
+    { pct: 40, cap: 'faster time to value on pre-built accelerators', src: 'Typical range 30 to 50% · Procyon delivery', cta: 'Get my delivery plan', interest: 'Faster delivery',
+      on: 'Time saved', off: 'Delivery time left', unit: '1 dot = 1% of the usual timeline' }
   ];
-  var heroEl = $('[data-hero]'), orbCanvas = $('.orb__canvas'), outcome = 0, fillTarget = OUT[0].pct / 100, fillNow = 0;
+  var heroEl = $('[data-hero]'), outcome = 0;
   if (heroEl) {
-    var optBtns = $$('.move__opts button', heroEl), metric = $('.orb__metric', heroEl);
+    var optBtns = $$('.move__opts button', heroEl), rcard = $('.rcard', heroEl), waffle = $('[data-waffle]', heroEl);
     var numEl = $('[data-orb-num]', heroEl), capEl = $('[data-orb-cap]', heroEl), srcEl = $('[data-orb-src]', heroEl), ctaEl = $('[data-plan-cta]', heroEl);
+    var legOn = $('[data-leg-on]', heroEl), legOff = $('[data-leg-off]', heroEl), legUnit = $('[data-leg-unit]', heroEl);
     var heroTouched = false, heroCycle;
+
+    /* 100 dots, 20 columns x 5 rows, filled column by column from the bottom.
+       Colour runs blue to green to red across the columns, as in the brand palette bar. */
+    var STOPS = [[40, 168, 222], [57, 179, 74], [188, 30, 45]], dots = [];
+    var brandAt = function (t) {
+      var i = t < .5 ? 0 : 1, l = t < .5 ? t * 2 : (t - .5) * 2, a = STOPS[i], b = STOPS[i + 1];
+      return 'rgb(' + Math.round(a[0] + (b[0] - a[0]) * l) + ',' + Math.round(a[1] + (b[1] - a[1]) * l) + ',' + Math.round(a[2] + (b[2] - a[2]) * l) + ')';
+    };
+    for (var k = 0; k < 100; k++) {
+      var d = document.createElement('i'), col = Math.floor(k / 5);
+      d.style.gridColumn = col + 1; d.style.gridRow = 5 - (k % 5);
+      d.style.setProperty('--c', brandAt(col / 19));
+      waffle.appendChild(d); dots.push(d);
+    }
+    var paint = function (pct) {
+      dots.forEach(function (dot, n) {
+        var on = n < pct;
+        dot.style.transitionDelay = reduce ? '0s' : (on ? n * 9 : (99 - n) * 3) + 'ms';
+        dot.classList.toggle('on', on);
+      });
+    };
+
     var setOutcome = function (i, byUser) {
       outcome = i;
       var o = OUT[i];
-      optBtns.forEach(function (b, k) { b.setAttribute('aria-checked', String(k === i)); b.classList.remove('is-timing'); });
-      fillTarget = o.pct / 100;
-      metric.classList.remove('is-swap'); void metric.offsetWidth; metric.classList.add('is-swap');
-      setTimeout(function () { capEl.textContent = o.cap; srcEl.textContent = o.src; countUp(numEl, o.pct, 900); }, reduce ? 0 : 200);
+      optBtns.forEach(function (b, n) { b.setAttribute('aria-checked', String(n === i)); b.classList.remove('is-timing'); });
+      rcard.classList.remove('is-swap'); void rcard.offsetWidth; rcard.classList.add('is-swap');
+      capEl.textContent = o.cap; srcEl.textContent = o.src;
+      legOn.textContent = o.on; legOff.textContent = o.off; legUnit.textContent = o.unit;
+      waffle.setAttribute('aria-label', o.pct + '% ' + o.cap);
+      countUp(numEl, o.pct, 900);
+      paint(o.pct);
       ctaEl.textContent = o.cta;
       ctaEl.parentNode.setAttribute('data-interest', o.interest);
       if (byUser) { heroTouched = true; clearTimeout(heroCycle); track('hero_outcome', { outcome: o.interest }); }
@@ -243,76 +273,12 @@
         heroCycle = setTimeout(function () { if (!heroTouched) setOutcome((i + 1) % OUT.length); }, 5500);
       }
     };
-    optBtns.forEach(function (b, k) { b.addEventListener('click', function () { setOutcome(k, true); }); });
+    optBtns.forEach(function (b, n) { b.addEventListener('click', function () { setOutcome(n, true); }); });
     setTimeout(function () { setOutcome(0); }, reduce ? 0 : 700);
 
     /* The hero CTA carries the chosen outcome into the pop-up form */
     var heroCta = $('[data-hero-cta]', heroEl);
     heroCta.addEventListener('mouseenter', function () { heroTouched = true; clearTimeout(heroCycle); optBtns.forEach(function (b) { b.classList.remove('is-timing'); }); });
-  }
-
-  if (orbCanvas && orbCanvas.getContext) {
-    var octx = orbCanvas.getContext('2d'), OW, OH, odpr, opts = [], orot = .9, omx = 0, oVisible = true;
-    var stops = [[40, 168, 222], [57, 179, 74], [188, 30, 45]];
-    var brandAt = function (t) {
-      t = Math.max(0, Math.min(1, t));
-      var i = t < .5 ? 0 : 1, l = t < .5 ? t * 2 : (t - .5) * 2, a = stops[i], b = stops[i + 1];
-      return [Math.round(a[0] + (b[0] - a[0]) * l), Math.round(a[1] + (b[1] - a[1]) * l), Math.round(a[2] + (b[2] - a[2]) * l)];
-    };
-    (function build() {
-      var LAT = window.innerWidth < 720 ? 22 : 30, LON = window.innerWidth < 720 ? 44 : 60;
-      for (var i = 1; i < LAT; i++) for (var j = 0; j < LON; j++) opts.push([Math.PI * i / LAT, 2 * Math.PI * j / LON]);
-    })();
-    var oResize = function () {
-      odpr = Math.min(window.devicePixelRatio || 1, 2);
-      OW = orbCanvas.clientWidth; OH = orbCanvas.clientHeight;
-      orbCanvas.width = OW * odpr; orbCanvas.height = OH * odpr;
-      octx.setTransform(odpr, 0, 0, odpr, 0, 0);
-    };
-    var oDraw = function (now) {
-      var t = now / 1000;
-      fillNow += (fillTarget - fillNow) * (reduce ? 1 : .045);
-      octx.clearRect(0, 0, OW, OH);
-      var R = Math.min(OW * .4, OH * .45), cx = OW * (OW > 520 ? .56 : .6), cy = OH * .5;
-      var tilt = -.38, ct = Math.cos(tilt), st = Math.sin(tilt), roll = .45 + omx * .08, cr = Math.cos(roll), sr = Math.sin(roll);
-      for (var n = 0; n < opts.length; n++) {
-        var phi = opts[n][0], th = opts[n][1] + orot;
-        var x = Math.sin(phi) * Math.cos(th), y = Math.cos(phi), z = Math.sin(phi) * Math.sin(th);
-        var y2 = y * ct - z * st, z2 = y * st + z * ct;
-        var x2 = x * cr - y2 * sr, y3 = x * sr + y2 * cr;
-        if (z2 < .02) continue;
-        var lit = x2 * .85 + z2 * .55;
-        if (lit < .12) continue;
-        var h = (1 - Math.cos(phi)) / 2;               // 0 at the bottom pole, 1 at the top (stable while spinning)
-        h = 1 - h;
-        var wave = Math.sin(opts[n][1] * 3 + t * 2.2) * .018;
-        var filled = h < fillNow + wave;
-        var edge = Math.abs(h - (fillNow + wave)) < .035;
-        var shape = Math.min(1, (lit - .12) * 3 + .3);
-        var r = (.8 + z2 * 2.4) * (R / 300) * 1.75 * shape;
-        var px = cx + x2 * R, py = cy - y3 * R;
-        if (filled || edge) {
-          var c = brandAt((y + 1) / 2);              // blue at the base, green mid, red at the tip: the logo gradient
-          octx.globalAlpha = Math.min(1, .35 + z2 * .85) * (edge && !filled ? .9 : 1);
-          octx.fillStyle = 'rgb(' + c[0] + ',' + c[1] + ',' + c[2] + ')';
-          if (edge) { r *= 1.35; }
-        } else {
-          octx.globalAlpha = .1 + z2 * .22;
-          octx.fillStyle = '#7A838C';
-        }
-        octx.beginPath();
-        octx.ellipse(px, py, Math.max(.6, r * (.55 + z2 * .45)), Math.max(.6, r), 0, 0, 6.2832);
-        octx.fill();
-      }
-      octx.globalAlpha = 1;
-      if (!reduce) orot += .0018;
-    };
-    var oLoop = function (now) { if (oVisible && !document.hidden) oDraw(now); requestAnimationFrame(oLoop); };
-    oResize();
-    window.addEventListener('resize', oResize);
-    heroEl.addEventListener('mousemove', function (e) { var r = heroEl.getBoundingClientRect(); omx = ((e.clientX - r.left) / r.width - .5) * 2; });
-    if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { oVisible = en[0].isIntersecting; }).observe(orbCanvas);
-    requestAnimationFrame(oLoop);
   }
 
   /* ---------- Modal ---------- */
@@ -359,7 +325,8 @@
     'AI agents': 'Agentforce & AI agents', 'Automation': 'Agentforce & AI agents',
     'Faster customer service': 'Salesforce consulting & implementation', 'Faster delivery': 'Salesforce consulting & implementation',
     'Salesforce': 'Salesforce consulting & implementation', 'ServiceNow': 'ServiceNow implementation',
-    'Data & integration': 'Data, integration & MuleSoft', 'Certified talent': 'Staff augmentation', 'Ranger Fusion ERP': 'Ranger Fusion ERP'
+    'Data & integration': 'Data, integration & MuleSoft', 'Product engineering': 'Product engineering & app support',
+    'Certified talent': 'Staff augmentation', 'Ranger Fusion ERP': 'Ranger Fusion ERP'
   };
   var HEAD_FOR = {
     'AI agents': ['Free 90-day plan', 'Request your AI agent plan'],
@@ -367,7 +334,8 @@
     'Automation': ['Free 90-day plan', 'Request your automation plan'],
     'Faster delivery': ['Free 90-day plan', 'Request your delivery plan'],
     'Ranger Fusion ERP': ['Ranger Fusion ERP', 'Book your Ranger Fusion demo'],
-    'Certified talent': ['Certified talent', 'Tell us the role you need']
+    'Certified talent': ['Certified talent', 'Tell us the role you need'],
+    'Product engineering': ['Product engineering', 'Tell us what you are building']
   };
   var FREE_MAIL = /@(gmail|googlemail|yahoo|ymail|hotmail|outlook|live|msn|aol|icloud|me|mac|proton|protonmail|gmx|mail|yandex|zoho|rediffmail)\./i;
   var lfK = auditF ? $('[data-lf-k]', auditF) : null, lfT = auditF ? $('[data-lf-t]', auditF) : null;
@@ -375,7 +343,7 @@
     if (auditF.classList.contains('is-done')) { auditF.reset(); auditF.classList.remove('is-done'); $('button[type=submit]', auditF).disabled = false; }
     $$('.is-invalid', auditF).forEach(function (f) { f.classList.remove('is-invalid'); });
     $('.qf__status', auditF).textContent = '';
-    var head = (fromHero || interest === 'Ranger Fusion ERP' || interest === 'Certified talent') && HEAD_FOR[interest];
+    var head = (fromHero || interest === 'Ranger Fusion ERP' || interest === 'Certified talent' || interest === 'Product engineering') && HEAD_FOR[interest];
     lfK.textContent = head ? head[0] : 'Talk to a senior architect';
     lfT.textContent = head ? head[1] : 'Tell us what you are working on';
     var svc = SERVICE_FOR[interest];

@@ -26,6 +26,13 @@ Priority: P1 = build next (highest buying intent), P2 = second wave.
 | | Knowledge assistants (RAG) | /ai-data/knowledge-assistants/ | P2 |
 | | Data platforms & analytics | /ai-data/data-analytics/ | P2 |
 | | Integration & APIs (MuleSoft, SAP, Oracle, NetSuite, Workday) | /ai-data/integration/ | P2 |
+| | Product engineering hub (listed under AI & Data in the menu) | /engineering/ | P2 |
+| | Product engineering | /engineering/product-engineering/ | P2 |
+| | Enterprise web & mobility | /engineering/web-mobility/ | P2 |
+| | Application maintenance & support | /engineering/application-support/ | P2 |
+| | Application modernization | /engineering/modernization/ | P3 |
+| | Cloud transformation | /engineering/cloud/ | P3 |
+| | Cybersecurity & compliance | /engineering/security-compliance/ | P3 |
 | **Talent** | Talent hub | /talent/ | P1 |
 | | Staff augmentation | /talent/staff-augmentation/ | P1 |
 | | Delivery pods | /talent/delivery-pods/ | P2 |
@@ -38,7 +45,7 @@ Priority: P1 = build next (highest buying intent), P2 = second wave.
 | | Careers | /careers/ | P2 |
 | | Contact | /contact/ | P1 |
 
-Header CTA on every page: **Book a platform audit** (opens the 3-step audit form).
+Header CTA on every page: **Talk to an architect** (opens the pop-up contact form).
 
 Total: about 32 pages, down from about 80 in v1.
 

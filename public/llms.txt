@@ -1,18 +1,23 @@
 # Procyon Technostructure
 
-> Procyon Technostructure is a Salesforce Consulting Partner and ServiceNow Implementation Partner, founded in 2004 and headquartered in Novato, California, with delivery centers in Toronto, Canada and Chennai, India. 200+ practitioners. ISO 27001 and ISO 9001 certified, HIPAA-compliant delivery.
+> Procyon Technostructure is an enterprise solution delivery organization providing customer-centric, secure solutions. Founded in 2004 and headquartered in Novato, California, with delivery centers in Toronto, Canada and Chennai, India. 200+ architects, engineers and consultants; 200+ enterprise clients. Salesforce Consulting Partner and ServiceNow Implementation Partner. ISO 27001 and ISO 9001:2015 certified, HIPAA-compliant delivery, WBE, NMSDC and SBE certified. Tagline: "Run the business. Not the software."
 
 ## What Procyon does
-- Salesforce consulting, implementation, org health checks and managed services: Sales Cloud, Service Cloud, Field Service, Revenue Cloud and CPQ, Data Cloud, Experience Cloud, Marketing Cloud, Health Cloud, Financial Services Cloud, OmniStudio, MuleSoft, Tableau.
+- Digital transformation: one accountable team across CRM, IT service management, AI, data and custom engineering.
+- Salesforce consulting, implementation, org audits and managed services: Sales Cloud, Service Cloud, Field Service, Revenue Cloud and CPQ, Data Cloud, Experience Cloud, Health Cloud, Financial Services Cloud, MuleSoft, Tableau.
 - Agentforce implementation, including the Agent Launch Kit (first agents in production in under 4 weeks).
-- ServiceNow platform health checks and tech debt removal (8-week remediation), ITSM, ITOM and CMDB, Security Operations, GRC, HR Service Delivery, Customer Service Management, Now Assist and AI agents.
-- Data and AI: agentic AI, RAG knowledge assistants, predictive scoring, LLM integration (OpenAI, Anthropic Claude, Google Vertex AI), data governance and MDM.
-- Integration and cloud: MuleSoft, SAP and ERP integration, API-first architecture, cloud transformation, application modernization, cybersecurity.
-- Salesforce and ServiceNow staff augmentation, dedicated delivery pods, managed services.
-- Ranger Fusion: an ERP built natively on Salesforce (sales, accounting, inventory, procurement, projects, HR).
+- ServiceNow platform audits and tech-debt removal (8-week remediation), ITSM, ITOM and CMDB, Security Operations, GRC, Now Assist and AI agents.
+- AI and data: AI agents, RAG knowledge assistants, predictive scoring, LLM integration (OpenAI, Anthropic Claude, Google Vertex AI), big data and analytics, data governance.
+- Integration: MuleSoft, SAP, Oracle, NetSuite and Workday integration, API-first and event-driven architecture.
+- Product engineering: custom web and mobile applications (enterprise web and mobility), application modernization, application maintenance and support, cloud transformation, cybersecurity and compliance.
+- Talent: certified Salesforce and ServiceNow staff augmentation, dedicated delivery pods, managed services.
+- Ranger Fusion: an ERP built natively on Salesforce (sales, finance, inventory, procurement, projects, HR).
 
 ## Industries
-Healthcare and life sciences, financial services and insurance, public sector, retail and consumer, communications and media, high tech and SaaS, manufacturing, professional services.
+Healthcare and life sciences, financial services, public sector, retail, high tech. Procyon has also incubated two AI healthcare start-ups, Hekma and Akra.
+
+## Values
+Customer first. Transparency and collaboration. Continuous learning and innovation. Celebrating diversity.
 
 ## Contact
 - Email: sales@procyonts.com
