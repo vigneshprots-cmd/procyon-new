@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 27, pages: 1, js: 27 };
+const VERSION = { css: 27, pages: 4, js: 28 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -71,26 +71,26 @@ function cta(o) {
     <div class="cta__copy">
       <h2 id="cta-h" class="rv">${o.h}</h2>
       <p class="rv" data-d="1">${o.p}</p>
-      <p class="cta__direct rv" data-d="2">Prefer to talk now? <a href="tel:+14153828040" data-track="phone_click">+1 415 382 8040</a> <a href="mailto:sales@procyonts.com" data-track="email_click">sales@procyonts.com</a></p>
+      <p class="cta__direct rv" data-d="2">Rather call? <a href="tel:+14153828040" data-track="phone_click">+1 415 382 8040</a> <a href="mailto:sales@procyonts.com" data-track="email_click">sales@procyonts.com</a></p>
     </div>
     <div class="paths">
       <a class="path path--audit rv" data-d="1" href="#audit" data-open="audit" data-interest="${interest}"${title}${kicker} data-track="cta_close_audit">
         <span class="path__k">30-minute call</span>
         <b>${o.pathTitle || 'Talk to an architect'}</b>
-        <span>${o.pathText || 'A senior architect, not a sales rep. You get a written plan with scope, timeline and a cost range.'}</span>
+        <span>${o.pathText || 'A senior architect, not a sales rep. The call ends in a written plan with scope, timeline and a cost range.'}</span>
         <ol class="when">
-          <li><b>Today</b> you send the form</li>
+          <li><b>Today</b> the brief is sent</li>
           <li><b>1 business day</b> an architect replies</li>
-          <li><b>Within a week</b> your written plan</li>
+          <li><b>Within a week</b> the written plan</li>
         </ol>
-        <em>${o.pathCta || 'Book my call'} &rarr;</em>
+        <em>${o.pathCta || 'Book the architect call'} &rarr;</em>
       </a>
       <a class="path path--score rv" data-d="2" href="#audit" data-open="score" data-track="cta_close_readiness">
         <span class="path__k">2 minutes, self-serve</span>
         <b>AI readiness check</b>
-        <span>Six questions about your Salesforce platform. An instant readiness level and the three fixes that unlock AI agents.</span>
+        <span>Six questions about the Salesforce platform. An instant readiness level and the three fixes that unlock AI agents.</span>
         <svg class="path__gauge" viewBox="0 0 120 70" aria-hidden="true"><path d="M10 64a50 50 0 0 1 100 0" class="g-track"/><path d="M10 64a50 50 0 0 1 100 0" class="g-val"/></svg>
-        <em>Check my AI readiness &rarr;</em>
+        <em>Run the readiness check &rarr;</em>
       </a>
     </div>
   </div>
@@ -171,7 +171,7 @@ function crumbsHtml(meta) {
 function render(meta, body) {
   body = body
     .replace(/<!--@crumbs-->/g, crumbsHtml(meta))
-    .replace(/<!--@updated-->/g, `<time class="ph__upd" datetime="${TODAY}">Updated ${new Date(TODAY + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time>`)
+    .replace(/\s*<!--@updated-->/g, '')
     .replace(/<!--@logos-->/g, CHROME.logos.trim())
     .replace(/<!--@case-->/g, CHROME.caseBlock)
     .replace(/<!--@related-->/g, related(meta.slug))

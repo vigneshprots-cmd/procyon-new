@@ -17,9 +17,7 @@
   function onScroll() {
     var y = window.scrollY;
     hdr.classList.toggle('is-scrolled', y > 8);
-    var anyOpen = $('.dd.is-open') || !mnav.hidden;
-    hdr.classList.toggle('is-hidden', y > 400 && y > lastY && !anyOpen);
-    lastY = y;
+    hdr.classList.remove('is-hidden');
     if (sticky && closing) sticky.classList.toggle('is-on', y > 700 && closing.getBoundingClientRect().top > window.innerHeight);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -258,13 +256,13 @@
 
   /* ---------- Hero: outcome selector + client-result card (dot chart) ---------- */
   var OUT = [
-    { pct: 60, cap: 'of patient requests resolved by AI agents', src: 'Regional health system · Agentforce + Data Cloud', cta: 'Get my AI agent plan', interest: 'AI agents',
+    { pct: 60, cap: 'of patient requests resolved by AI agents', src: 'Regional health system · Agentforce + Data Cloud', cta: 'Get the AI agent plan', interest: 'AI agents',
       on: 'Resolved by AI agents', off: 'Still needs a person', unit: '1 dot = 1 in 100 requests' },
-    { pct: 50, cap: 'faster patient response time', src: 'Regional health system · Health Cloud', cta: 'Get my service plan', interest: 'Faster customer service',
+    { pct: 50, cap: 'faster patient response time', src: 'Regional health system · Health Cloud', cta: 'Get the service plan', interest: 'Faster customer service',
       on: 'Waiting time removed', off: 'Waiting time left', unit: '1 dot = 1% of the old wait' },
-    { pct: 70, cap: 'of high-volume repetitive work automated', src: 'Typical result across Procyon programs', cta: 'Get my automation plan', interest: 'Automation',
+    { pct: 70, cap: 'of high-volume repetitive work automated', src: 'Typical result across Procyon programs', cta: 'Get the automation plan', interest: 'Automation',
       on: 'Automated', off: 'Still manual', unit: '1 dot = 1% of repetitive work' },
-    { pct: 40, cap: 'faster time to value on pre-built accelerators', src: 'Typical range 30 to 50% · Procyon delivery', cta: 'Get my delivery plan', interest: 'Faster delivery',
+    { pct: 40, cap: 'faster time to value on pre-built accelerators', src: 'Typical range 30 to 50% · Procyon delivery', cta: 'Get the delivery plan', interest: 'Faster delivery',
       on: 'Time saved', off: 'Delivery time left', unit: '1 dot = 1% of the usual timeline' }
   ];
   var heroEl = $('[data-hero]'), outcome = 0;
@@ -326,8 +324,8 @@
   var modal = $('#lead-modal'), auditF = $('#lead-form'), scoreF = $('#score-form');
   var SIDE = {
     audit: ['Talk to a senior architect', ['30 minutes, no sales script', 'A written plan within a week', 'Scope, timeline and a cost range', 'Yours to keep, zero obligation']],
-    score: ['Your AI readiness check', ['Six questions about your platform', 'Instant result, no email needed', 'The three fixes that unlock AI agents', 'Benchmarked against real audits']],
-    'Ranger Fusion ERP': ['Your Ranger Fusion demo', ['A walkthrough on your own use case', 'Sales to finance on one data model', 'A go-live plan in 2 to 4 weeks', 'Zero obligation']],
+    score: ['AI readiness check', ['Six questions about your platform', 'Instant result, no email needed', 'The three fixes that unlock AI agents', 'Benchmarked against real audits']],
+    'Ranger Fusion ERP': ['Ranger Fusion demo', ['A walkthrough on your own use case', 'Sales to finance on one data model', 'A go-live plan in 2 to 4 weeks', 'Zero obligation']],
     'Certified talent': ['Vetted profiles, fast', ['Tell us the role and seniority', 'Certified Salesforce or ServiceNow people', 'US, Canada or India time zones', 'By the seat or as a pod']]
   };
   function setSide(key) {
@@ -375,13 +373,13 @@
     'Certified talent': 'Staff augmentation', 'Ranger Fusion ERP': 'Ranger Fusion ERP'
   };
   var HEAD_FOR = {
-    'AI agents': ['Free 90-day plan', 'Request your AI agent plan'],
-    'Faster customer service': ['Free 90-day plan', 'Request your service plan'],
-    'Automation': ['Free 90-day plan', 'Request your automation plan'],
-    'Faster delivery': ['Free 90-day plan', 'Request your delivery plan'],
-    'Ranger Fusion ERP': ['Ranger Fusion ERP', 'Book your Ranger Fusion demo'],
-    'Certified talent': ['Certified talent', 'Tell us the role you need'],
-    'Product engineering': ['Product engineering', 'Tell us what you are building']
+    'AI agents': ['Free 90-day plan', 'Request the 90-day AI agent plan'],
+    'Faster customer service': ['Free 90-day plan', 'Request the 90-day service plan'],
+    'Automation': ['Free 90-day plan', 'Request the 90-day automation plan'],
+    'Faster delivery': ['Free 90-day plan', 'Request the 90-day delivery plan'],
+    'Ranger Fusion ERP': ['Ranger Fusion ERP', 'Book a Ranger Fusion demo'],
+    'Certified talent': ['Certified talent', 'Name the role and seniority'],
+    'Product engineering': ['Product engineering', 'Scope the product build']
   };
   var FREE_MAIL = /@(gmail|googlemail|yahoo|ymail|hotmail|outlook|live|msn|aol|icloud|me|mac|proton|protonmail|gmx|mail|yandex|zoho|rediffmail)\./i;
   var lfK = auditF ? $('[data-lf-k]', auditF) : null, lfT = auditF ? $('[data-lf-t]', auditF) : null;
@@ -392,7 +390,7 @@
     $('.qf__status', auditF).textContent = '';
     var head = (fromHero || interest === 'Ranger Fusion ERP' || interest === 'Certified talent' || interest === 'Product engineering') && HEAD_FOR[interest];
     lfK.textContent = opts.kicker || (head ? head[0] : 'Talk to a senior architect');
-    lfT.textContent = opts.title || (head ? head[1] : 'Tell us what you are working on');
+    lfT.textContent = opts.title || (head ? head[1] : 'Brief a senior architect');
     var sel = $('select[name="interest"]', auditF);
     var direct = interest && $$('option', sel).filter(function (o) { return o.text === interest; })[0];
     var svc = direct ? direct.text : SERVICE_FOR[interest];

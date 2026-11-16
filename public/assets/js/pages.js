@@ -92,17 +92,17 @@
     var out = $('[data-plan-out]', root), btn = $('[data-plan-cta]', root), chosen = [];
     multi(root, function (sel) {
       chosen = sel;
-      if (!sel.length) { out.innerHTML = '<b>Pick at least one cloud</b><span>We will show the fastest fixed-scope starting point for it.</span>'; btn.disabled = true; return; }
+      if (!sel.length) { out.innerHTML = '<b>Pick at least one cloud</b><span>The fastest fixed-scope starting point appears here.</span>'; btn.disabled = true; return; }
       btn.disabled = false;
       var lines = sel.map(function (o) { return o.getAttribute('data-plan'); });
-      out.innerHTML = '<b>' + (sel.length === 1 ? 'Your fastest starting point' : 'Your starting points') + '</b><span>' + lines.join('<br>') + '</span>';
+      out.innerHTML = '<b>' + (sel.length === 1 ? 'Fastest starting point' : 'Fastest starting points') + '</b><span>' + lines.join('<br>') + '</span>';
       swap(out);
     });
     btn.addEventListener('click', function () {
       var names = chosen.map(function (o) { return o.getAttribute('data-name'); });
       track('planner_submit', { clouds: names.join(', ') });
       open('Salesforce consulting & implementation', {
-        kicker: 'Implementation & rollout', title: 'Get my rollout plan',
+        kicker: 'Implementation & rollout', title: 'Rollout plan for the selected clouds',
         message: 'Clouds in scope: ' + names.join(', ') + '.\nCurrent CRM or system we are moving from: \nTarget go-live: '
       });
     });
@@ -112,7 +112,7 @@
   $$('[data-symp]').forEach(function (root) {
     var sev = $('.sev', root), btn = $('[data-symp-cta]', root), chosen = [];
     var LEVEL = [
-      ['Pick what you see', '', 'Tick every symptom your team would recognise.'],
+      ['Tick the symptoms', '', 'Tick every symptom the team would recognise.'],
       ['Watch', 'Low risk', 'Early debt. A short health check and a cleanup backlog will keep it from compounding.'],
       ['Fix soon', 'Medium risk', 'Debt is already slowing the business. Plan a fixed-scope cleanup before adding new features or AI.'],
       ['Rescue', 'High risk', 'The org is working against your teams. Stabilize first, then rebuild what blocks adoption.']
@@ -132,7 +132,7 @@
       var level = $('b', sev).textContent;
       track('symptoms_submit', { count: chosen.length, level: level });
       open('Salesforce org audit & rescue', {
-        kicker: 'Org audit & rescue', title: 'Send my symptoms to an architect',
+        kicker: 'Org audit & rescue', title: 'Symptoms to a Salesforce architect',
         message: 'Self-assessed risk: ' + level + '\nSymptoms we see:\n' + list + '\n\nAnything else: '
       });
     });

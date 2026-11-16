@@ -2,8 +2,8 @@
 {
   "slug": "/salesforce/data-cloud/",
   "title": "Salesforce Data Cloud & MuleSoft Integration Services",
-  "description": "Salesforce Data Cloud and MuleSoft integration services. Unify ERP, web, commerce and service data into one real-time customer profile your AI can trust.",
-  "ogTitle": "One real-time customer record across every system you run",
+  "description": "Salesforce Data Cloud and MuleSoft integration services. Unify ERP, web, commerce and service data into one real-time customer profile AI can trust.",
+  "ogTitle": "One real-time customer record across every system",
   "ogDescription": "Data Cloud and MuleSoft integration for SAP, NetSuite, Oracle, Workday, Snowflake and more. Identity resolution, governance and activation, built to feed AI agents.",
   "og": "salesforce-data-cloud",
   "bodyClass": "sf-data",
@@ -30,17 +30,16 @@
       <div class="ph__copy">
         <p class="pill"><span class="pill__dot"></span>Data Cloud &amp; Integration</p>
         <h1 id="ph-h" class="ph__h">One customer. One record. <em>Every system agrees.</em></h1>
-        <p class="ph__lede"><b>Procyon connects Salesforce to the rest of your business.</b> We implement Data Cloud and build MuleSoft and API integrations with SAP, Oracle, NetSuite, Workday and your data warehouse, so sales, service, marketing and AI agents all act on the same real-time customer profile.</p>
+        <p class="ph__lede"><b>Procyon connects Salesforce to the rest of the business.</b> We implement Data Cloud and build MuleSoft and API integrations with SAP, Oracle, NetSuite, Workday and the data warehouse, so sales, service, marketing and AI agents all act on the same real-time customer profile.</p>
         <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud &amp; integration" data-title="Map my data sources" data-track="data_hero">Map my data sources <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#map">Explore the data map</a>
+          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud &amp; integration" data-title="Customer data unification plan" data-track="data_hero">Unify customer data <i aria-hidden="true">&rarr;</i></a>
+          <a class="btn btn--line btn--lg" href="#flows">See what connects</a>
         </div>
-        <!--@updated-->
       </div>
       <div class="ph__w">
         <div class="wcard">
-          <span class="wcard__k">Unified profile</span>
-          <div class="prof__who"><span class="prof__av" aria-hidden="true">NA</span><div><b>Northwind Analytics</b><span>Example account, assembled from five systems</span></div></div>
+          <span class="wcard__k">One account, five systems</span>
+          <div class="prof__who"><span class="prof__av" aria-hidden="true">NA</span><div><b>Northwind Analytics</b><span>Sample profile, as an account owner sees it</span></div></div>
           <ul class="prof__rows">
             <li><i>ERP</i><span>3 open orders, credit limit 82% used</span></li>
             <li><i>Service</i><span>1 priority case, response due in 2 hours</span></li>
@@ -48,98 +47,91 @@
             <li><i>Billing</i><span>Renewal in 41 days, usage up 18%</span></li>
             <li><i>Next step</i><span>Agent drafts an expansion offer for the owner</span></li>
           </ul>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud" data-title="Build our unified customer profile" data-message="Systems we want in one customer profile: " data-track="data_profile_cta" style="margin-top:18px">Build this view for us <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">Illustrative account. Your profile uses your own systems and rules.</p>
+          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud" data-title="Unified customer profile build" data-message="Systems that should feed one customer profile: " data-track="data_profile_cta" style="margin-top:18px">Build this view on live data <i aria-hidden="true">&rarr;</i></a>
+          <p class="wcard__foot">Illustrative account. The real profile uses the client's own systems and rules.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="kf" aria-label="Key facts">
-  <dl class="wrap kf__in">
-    <div><dt>1 profile</dt><dd>per customer, resolved across every connected system</dd></div>
-    <div><dt>3 patterns</dt><dd>real-time API, event streaming and batch, chosen per flow</dd></div>
-    <div><dt>GDPR, CCPA, HIPAA</dt><dd>consent and access controls designed in from the start</dd></div>
-    <div><dt>35%+</dt><dd>higher customer engagement reported after personalization</dd></div>
-  </dl>
-</section>
-
-<section class="sx sx--paper" id="map" aria-labelledby="map-h">
+<section class="kf kf--paper" aria-label="Key facts">
   <div class="wrap">
-    <div class="sx__head">
-      <div><span class="sx__k rv">Data map</span><h2 id="map-h" class="rv">Click a source. <em>See what it unlocks.</em></h2></div>
-      <p class="rv" data-d="1">Each system feeds the unified profile in a different way. Pick one to see what flows in, how it connects and what your teams can do with it.</p>
-    </div>
-    <div data-fmap class="rv">
-      <div class="fmap">
-        <div class="fmap__col">
-          <small>Sources</small>
-          <button class="src" type="button" aria-pressed="true" style="--c:var(--blue)" data-what="Orders, invoices, credit limits and product master." data-how="MuleSoft or native API, near real time for orders, batch for history." data-use="Reps see order status and credit before they quote. Service sees what was shipped."><i></i>SAP or Oracle ERP<small>Orders</small></button>
-          <button class="src" type="button" aria-pressed="false" style="--c:var(--green)" data-what="Subscriptions, billing, payments and renewals." data-how="Event-driven sync for invoices and payments, nightly reconciliation." data-use="Renewal risk and expansion signals appear on the account before the call."><i></i>NetSuite<small>Billing</small></button>
-          <button class="src" type="button" aria-pressed="false" style="--c:#7A8A3A" data-what="Employees, territories, skills and org structure." data-how="Scheduled batch with change detection." data-use="Territories and case routing stay correct when people join, move or leave."><i></i>Workday<small>People</small></button>
-          <button class="src" type="button" aria-pressed="false" style="--c:var(--red)" data-what="Page views, product usage, form fills and campaign touches." data-how="Streaming ingestion through the Data Cloud web and mobile SDKs." data-use="Sales sees buying intent in real time. Marketing triggers journeys on behaviour."><i></i>Web, app and commerce<small>Behaviour</small></button>
-          <button class="src" type="button" aria-pressed="false" style="--c:var(--ink)" data-what="Modelled data, product analytics and finance history." data-how="Zero-copy federation with Snowflake or Databricks, no duplicate pipelines." data-use="AI scoring and agents use the same numbers as your finance and analytics teams."><i></i>Snowflake or Databricks<small>Warehouse</small></button>
-        </div>
-        <div class="fmap__core" aria-hidden="true">
-          <div><img src="/favicon.svg" alt="" width="64" height="64"><b>Unified profile</b><span>Data Cloud</span></div>
-        </div>
-        <div class="fmap__col">
-          <small>Activated in</small>
-          <div class="act"><i></i>Sales Cloud</div>
-          <div class="act"><i></i>Service Cloud</div>
-          <div class="act"><i></i>Marketing Cloud</div>
-          <div class="act"><i></i>Agentforce agents</div>
-          <div class="act"><i></i>Tableau dashboards</div>
-        </div>
-      </div>
-      <div class="fmap__detail" aria-live="polite">
-        <div><small>What flows in</small><p data-d="what"></p></div>
-        <div><small>How it connects</small><p data-d="how"></p></div>
-        <div><small>What your teams can do</small><p data-d="use"></p></div>
-      </div>
+    <div class="kf__card">
+      <dl class="kf__in">
+        <div><dt>Systems integrated</dt><dd><b>12+</b>SAP, Oracle, NetSuite, Workday, Snowflake and more</dd></div>
+        <div><dt>Customer engagement</dt><dd><b>35%+</b>higher after personalization on unified data</dd></div>
+        <div><dt>Operational efficiency</dt><dd><b>40 to 60%</b>gains from automation on connected data</dd></div>
+      </dl>
+      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud &amp; integration" data-title="Customer data unification plan" data-track="data_kf"><small>Free &middot; 30 minutes</small><b>Unify customer data</b><span>Target data map and a phased plan</span><i aria-hidden="true">&rarr;</i></a>
     </div>
   </div>
 </section>
 
-<section class="sx" aria-labelledby="cat-h">
+<section class="sx sx--paper" id="flows" aria-labelledby="flows-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><span class="sx__k rv">Integration catalogue</span><h2 id="cat-h" class="rv">The systems we connect <em>most often.</em></h2></div>
-      <p class="rv" data-d="1">Each one is tagged with the patterns we use for it. Do not see yours? We build custom connectors on MuleSoft and native APIs.</p>
+      <div><h2 id="flows-h" class="rv">What changes for each team <em>once the systems connect.</em></h2><p class="rv" data-d="1">The six integrations built most often. Each row names the system, what people then see in Salesforce, and how the connection works.</p></div>
+      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Integration" data-title="Salesforce integration scope" data-track="flows_head">Scope an integration <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="cat rv">
-      <div><b>SAP</b><span>ERP, orders, materials</span><em class="pat pat--rt">Real-time API</em><em class="pat pat--bt">Batch</em></div>
-      <div><b>Oracle</b><span>ERP and financials</span><em class="pat pat--rt">Real-time API</em><em class="pat pat--bt">Batch</em></div>
-      <div><b>NetSuite</b><span>Billing and finance</span><em class="pat pat--ev">Event</em><em class="pat pat--bt">Batch</em></div>
-      <div><b>Workday</b><span>People and territories</span><em class="pat pat--bt">Batch</em></div>
-      <div><b>MuleSoft</b><span>API-led integration layer</span><em class="pat pat--rt">Real-time API</em><em class="pat pat--ev">Event</em></div>
-      <div><b>Snowflake</b><span>Data warehouse</span><em class="pat pat--rt">Zero-copy</em><em class="pat pat--bt">Batch</em></div>
-      <div><b>Databricks</b><span>Lakehouse and ML</span><em class="pat pat--rt">Zero-copy</em><em class="pat pat--bt">Batch</em></div>
-      <div><b>Tableau</b><span>Analytics and dashboards</span><em class="pat pat--rt">Live</em></div>
-      <div><b>Slack</b><span>Alerts, approvals, agents</span><em class="pat pat--ev">Event</em></div>
-      <div><b>WhatsApp</b><span>Customer messaging</span><em class="pat pat--ev">Event</em></div>
-      <div><b>Okta</b><span>Identity and single sign-on</span><em class="pat pat--rt">Real-time API</em></div>
-      <div><b>CyberArk and Shield</b><span>Privileged access and encryption</span><em class="pat pat--rt">Policy</em></div>
+    <div class="flows rv">
+      <div class="flows__head" aria-hidden="true"><span>System</span><span>What changes in Salesforce</span><span>How it connects</span><span></span></div>
+      <div class="flow">
+        <div class="flow__sys">SAP <span>or</span> Oracle ERP</div>
+        <p><b>Orders, invoices and credit limits on the account.</b> Reps quote without emailing finance first.</p>
+        <small>Real-time API through MuleSoft</small>
+        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="ERP integration" data-title="SAP or Oracle to Salesforce" data-message="Integration: SAP or Oracle ERP to Salesforce.">Scope this <i aria-hidden="true">&rarr;</i></a>
+      </div>
+      <div class="flow">
+        <div class="flow__sys">NetSuite</div>
+        <p><b>Billing, payments and renewal dates beside every opportunity.</b> Renewals get worked months early, not days.</p>
+        <small>Event-driven sync, nightly reconciliation</small>
+        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Billing integration" data-title="NetSuite to Salesforce" data-message="Integration: NetSuite to Salesforce.">Scope this <i aria-hidden="true">&rarr;</i></a>
+      </div>
+      <div class="flow">
+        <div class="flow__sys">Workday</div>
+        <p><b>Territories, skills and reporting lines that update themselves.</b> Case and lead routing stays right when people move.</p>
+        <small>Scheduled batch with change detection</small>
+        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="HR integration" data-title="Workday to Salesforce" data-message="Integration: Workday to Salesforce.">Scope this <i aria-hidden="true">&rarr;</i></a>
+      </div>
+      <div class="flow">
+        <div class="flow__sys">Website, app <span>and</span> commerce</div>
+        <p><b>Product usage and buying intent on the contact, in real time.</b> Sales calls the accounts researching right now.</p>
+        <small>Data Cloud streaming SDKs</small>
+        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Behaviour data" data-title="Web and app data into Data Cloud" data-message="Integration: website, app and commerce data into Data Cloud.">Scope this <i aria-hidden="true">&rarr;</i></a>
+      </div>
+      <div class="flow">
+        <div class="flow__sys">Snowflake <span>or</span> Databricks</div>
+        <p><b>Warehouse figures inside Salesforce without copying data.</b> AI scoring uses the same numbers as finance.</p>
+        <small>Zero-copy federation</small>
+        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Warehouse integration" data-title="Snowflake or Databricks with Data Cloud" data-message="Integration: Snowflake or Databricks with Data Cloud.">Scope this <i aria-hidden="true">&rarr;</i></a>
+      </div>
+      <div class="flow">
+        <div class="flow__sys">Slack <span>and</span> WhatsApp</div>
+        <p><b>Approvals, alerts and customer messages where people already work.</b> Nobody waits for someone to log in.</p>
+        <small>Event-driven messaging</small>
+        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Messaging integration" data-title="Slack and WhatsApp with Salesforce" data-message="Integration: Slack and WhatsApp with Salesforce.">Scope this <i aria-hidden="true">&rarr;</i></a>
+      </div>
     </div>
+    <p class="flows__note rv">Also connected: Tableau dashboards, Okta single sign-on, CyberArk privileged access and Salesforce Shield encryption.</p>
   </div>
 </section>
 
-<section class="sx sx--paper" aria-labelledby="trust-h">
+<section class="sx" aria-labelledby="trust-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><span class="sx__k rv">Data trust</span><h2 id="trust-h" class="rv">AI is only as good <em>as the record behind it.</em></h2></div>
-      <p class="rv" data-d="1">Four checks every Data Cloud program passes before agents or journeys are allowed to act on the data.</p>
+      <div><h2 id="trust-h" class="rv">AI acts on the record, <em>so the record gets fixed first.</em></h2><p class="rv" data-d="1">Four problems every Data Cloud program clears before agents or journeys are allowed to act on the data.</p></div>
+      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data quality" data-title="Customer data quality check" data-track="trust_head">Check data quality <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="trust">
-      <div class="rv"><i></i><b>Duplicates resolved</b><span>Identity rules match people and accounts across systems, with match rates reported.</span></div>
-      <div class="rv" data-d="1"><i></i><b>A golden record</b><span>Clear rules for which system wins for each field, so the profile never contradicts itself.</span></div>
-      <div class="rv" data-d="2"><i></i><b>Lineage you can trace</b><span>Every field shows where it came from and when it last changed.</span></div>
-      <div class="rv" data-d="3"><i></i><b>Consent enforced</b><span>GDPR, CCPA and HIPAA consent and retention applied before data is activated.</span></div>
+    <div class="ba">
+      <div class="rv"><b>Duplicate customers</b><p><small>Before</small>Three accounts for one customer, each with a different owner.</p><p><small>After</small>One resolved profile, with match rates reported.</p></div>
+      <div class="rv" data-d="1"><b>Conflicting fields</b><p><small>Before</small>ERP and CRM disagree on the billing address.</p><p><small>After</small>A golden-record rule decides which system wins, field by field.</p></div>
+      <div class="rv" data-d="2"><b>Untraceable values</b><p><small>Before</small>Nobody can say where a number came from.</p><p><small>After</small>Lineage on every field: source system and last change.</p></div>
+      <div class="rv" data-d="3"><b>Consent gaps</b><p><small>Before</small>Marketing emails people who opted out in another system.</p><p><small>After</small>GDPR, CCPA and HIPAA consent applied before activation.</p></div>
     </div>
     <div class="band rv" style="margin-top:44px">
       <div><b>Data Cloud Onboarding Kit</b><span>Ingestion templates for CRM, web analytics and marketing data, with identity rules ready to tune.</span></div>
-      <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Accelerator" data-title="Request the Data Cloud Onboarding Kit" data-track="data_kit">Request the kit <i aria-hidden="true">&rarr;</i></a>
+      <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Accelerator" data-title="Data Cloud Onboarding Kit" data-track="data_kit">Request the kit <i aria-hidden="true">&rarr;</i></a>
     </div>
   </div>
 </section>
@@ -148,17 +140,17 @@
 
 <section class="faq" id="faq" aria-labelledby="faq-h">
   <div class="wrap faq__in">
-    <h2 id="faq-h" class="rv">Data Cloud and integration, <em>straight answers.</em></h2>
+    <h2 id="faq-h" class="rv">Asked before <em>connecting a single system.</em></h2>
     <div class="faq__list">
-      <details class="rv" open><summary>What does a Salesforce Data Cloud implementation involve?</summary><p class="faq-a">Connecting your data sources, mapping them to the Data Cloud model, setting identity resolution rules to build unified profiles, applying consent and governance, then activating those profiles in Sales, Service, Marketing Cloud and Agentforce.</p></details>
-      <details class="rv"><summary>Do we need MuleSoft to integrate Salesforce with our ERP?</summary><p class="faq-a">Not always. MuleSoft suits many systems and reusable APIs. Simpler flows can use native Salesforce APIs or platform events. We recommend the pattern per integration in the design phase.</p></details>
-      <details class="rv"><summary>Which systems can you integrate with Salesforce?</summary><p class="faq-a">Commonly SAP, Oracle, NetSuite, Workday, Snowflake, Databricks, Tableau, Slack, WhatsApp and Okta, plus custom and legacy systems through MuleSoft or APIs.</p></details>
-      <details class="rv"><summary>Can Data Cloud work with Snowflake without copying data?</summary><p class="faq-a">Yes. Zero-copy federation lets Data Cloud read from Snowflake or Databricks in place, so you avoid duplicate pipelines and keep one source of truth.</p></details>
-      <details class="rv"><summary>How do you handle GDPR, CCPA and HIPAA?</summary><p class="faq-a">Consent, retention and access rules are designed into the data model and enforced before any profile is activated. Healthcare programs add HIPAA controls and Salesforce Shield encryption where required.</p></details>
+      <details class="rv" open><summary>What does a Salesforce Data Cloud implementation involve?</summary><p class="faq-a">Connecting data sources, mapping them to the Data Cloud model, setting identity resolution rules to build unified profiles, applying consent and governance, then activating those profiles in Sales, Service, Marketing Cloud and Agentforce.</p></details>
+      <details class="rv"><summary>Is MuleSoft needed to integrate Salesforce with an ERP?</summary><p class="faq-a">Not always. MuleSoft suits many systems and reusable APIs. Simpler flows can use native Salesforce APIs or platform events. Procyon recommends the connection pattern per integration in the design phase.</p></details>
+      <details class="rv"><summary>Which systems can Procyon integrate with Salesforce?</summary><p class="faq-a">Commonly SAP, Oracle, NetSuite, Workday, Snowflake, Databricks, Tableau, Slack, WhatsApp and Okta, plus custom and legacy systems through MuleSoft or APIs.</p></details>
+      <details class="rv"><summary>Can Data Cloud work with Snowflake without copying data?</summary><p class="faq-a">Yes. Zero-copy federation lets Data Cloud read from Snowflake or Databricks in place, which avoids duplicate pipelines and keeps one source of truth.</p></details>
+      <details class="rv"><summary>How are GDPR, CCPA and HIPAA handled?</summary><p class="faq-a">Consent, retention and access rules are designed into the data model and enforced before any profile is activated. Healthcare programs add HIPAA controls and Salesforce Shield encryption where required.</p></details>
     </div>
   </div>
 </section>
 
 <!--@related-->
 
-<!--@cta {"h": "List your systems. <em>We will draw the map.</em>", "p": "Tell us which systems hold customer data today. An integration architect sends back the target data map, the pattern for each flow and a phased plan.", "interest": "Data, integration & MuleSoft", "kicker": "Data Cloud & integration", "title": "Map my data sources", "pathTitle": "Map my data sources", "pathCta": "Map my data"}-->
+<!--@cta {"h": "Every system. <em>One customer record.</em>", "p": "Share which systems hold customer data today. An integration architect sends back the target data map, the connection for each flow and a phased plan.", "interest": "Data, integration & MuleSoft", "kicker": "Data Cloud & integration", "title": "Customer data unification plan", "pathTitle": "Unify customer data", "pathCta": "Get the data map"}-->
