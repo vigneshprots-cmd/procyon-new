@@ -13,6 +13,15 @@
 - Talent: certified Salesforce and ServiceNow staff augmentation, dedicated delivery pods, managed services.
 - Ranger Fusion: an ERP built natively on Salesforce (sales, finance, inventory, procurement, projects, HR).
 
+## Salesforce pages
+- [Salesforce consulting](https://procyonts.com/salesforce/): implementation, Agentforce, Data Cloud, org rescue and managed services from one certified Salesforce team; 40+ accelerators cut timelines by 30 to 50%.
+- [Salesforce implementation](https://procyonts.com/salesforce/implementation/): fixed-scope starters, Sales Cloud live in 6 weeks and Service Cloud in 8; six-phase delivery with a sign-off at each gate.
+- [Agentforce implementation](https://procyonts.com/salesforce/agentforce/): Agent Launch Kit puts first AI agents into production in under 4 weeks; use-case library and guardrails; 60% of tier-1 queries resolved by agents in a healthcare rollout.
+- [Data Cloud and integration](https://procyonts.com/salesforce/data-cloud/): unified real-time customer profiles; MuleSoft and API integration with SAP, Oracle, NetSuite, Workday, Snowflake and Databricks; GDPR, CCPA and HIPAA governance.
+- [Org audit and rescue](https://procyonts.com/salesforce/org-audit/): 8-area Salesforce org health check and a 30-day stabilization plan for orgs that have drifted.
+- [Salesforce managed services](https://procyonts.com/salesforce/managed-services/): Run, Improve and Scale tiers; release readiness for Spring, Summer and Winter; hubs in Novato, Toronto and Chennai.
+- [Ranger Fusion](https://procyonts.com/ranger-fusion/): native Salesforce ERP for sales, finance, inventory, procurement, projects and HR on one data model; live in 2 to 4 weeks; typical savings of 20 to 60% against a patchwork stack.
+
 ## Industries
 Healthcare and life sciences, financial services, public sector, retail, high tech. Procyon has also incubated two AI healthcare start-ups, Hekma and Akra.
 

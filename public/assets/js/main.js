@@ -198,11 +198,52 @@
     utm = JSON.stringify(stored);
   } catch (err) { /* storage unavailable */ }
 
-  function postLead(data) {
-    data.utm = utm; data.page = 'home';
-    return fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
-      .then(function (r) { if (!r.ok) throw new Error('status ' + r.status); return r.json(); });
+  /* ---------- Form token + optional Turnstile (bot protection) ---------- */
+  var formTok = null, tokPromise = null, cfSite = '', cfToken = '', cfLoading = null;
+  function getToken(force) {
+    if (formTok && !force) return Promise.resolve(formTok);
+    if (tokPromise && !force) return tokPromise;
+    tokPromise = fetch('/api/form-token', { cache: 'no-store', credentials: 'same-origin' })
+      .then(function (r) { return r.json(); })
+      .then(function (j) { formTok = j.t; cfSite = j.site || ''; tokPromise = null; if (cfSite) mountTurnstile(); return formTok; })
+      .catch(function () { tokPromise = null; return null; });
+    return tokPromise;
   }
+  function mountTurnstile() {
+    var slots = $$('.cf-slot').filter(function (s) { return !s.dataset.done && s.offsetParent !== null; });
+    if (!cfSite || !slots.length) return;
+    if (!cfLoading) cfLoading = new Promise(function (ok) {
+      window.ptsCfReady = ok;
+      var s = document.createElement('script');
+      s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=ptsCfReady';
+      s.async = true; document.head.appendChild(s);
+    });
+    cfLoading.then(function () {
+      slots.forEach(function (slot) {
+        slot.dataset.done = '1';
+        window.turnstile.render(slot, { sitekey: cfSite, appearance: 'interaction-only', callback: function (t) { cfToken = t; } });
+      });
+    });
+  }
+  function postLead(data) {
+    data.utm = utm; data.page = location.pathname;
+    var send = function (retry) {
+      return getToken().then(function (t) {
+        data.ft = t; data.cf = cfToken;
+        return fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (j) {
+          formTok = null; cfToken = '';
+          if (r.status === 409 && !retry) return getToken(true).then(function () { return send(true); });
+          if (!r.ok) { var err = new Error(j.message || ''); err.code = j.error || r.status; throw err; }
+          return j;
+        });
+      });
+    };
+    return send(false);
+  }
+  var FAIL = 'Something went wrong. Email sales@procyonts.com and we will reply the same day.';
+  var failMsg = function (err) { return (err && err.message) || FAIL; };
   var emailOk = function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); };
   function validate(fields) {
     var bad = [];
@@ -294,16 +335,20 @@
     $('[data-side-h]', modal).textContent = s[0];
     $('[data-side-list]', modal).innerHTML = s[1].map(function (t) { return '<li>' + t + '</li>'; }).join('');
   }
-  function openModal(mode, interest, fromHero) {
+  function openModal(mode, interest, fromHero, opts) {
+    opts = opts || {};
     closeAll(); setMenu(false);
     var isScore = mode === 'score';
     auditF.hidden = isScore; scoreF.hidden = !isScore;
     setSide(isScore ? 'score' : (SIDE[interest] ? interest : 'audit'));
-    if (isScore) quizStart(); else auditStart(interest, fromHero);
+    if (isScore) quizStart(); else auditStart(interest, fromHero, opts);
     if (typeof modal.showModal === 'function') { if (!modal.open) modal.showModal(); } else modal.setAttribute('open', '');
     document.body.style.overflow = 'hidden';
+    getToken(true).then(mountTurnstile);
     track('modal_open', { mode: mode, interest: interest || '' });
   }
+  /* Page widgets open the form with their own heading and a pre-filled message */
+  window.ptsOpenModal = function (mode, interest, opts) { openModal(mode || 'audit', interest || '', false, opts); };
   function closeModal() { if (modal.open) modal.close(); }
   if (modal) {
     modal.addEventListener('close', function () { document.body.style.overflow = ''; });
@@ -312,7 +357,8 @@
       var t = e.target.closest('[data-open], a[href="#audit"]');
       if (t && !modal.contains(t)) {
         e.preventDefault();
-        openModal(t.getAttribute('data-open') || 'audit', t.getAttribute('data-interest') || '', t.hasAttribute('data-hero-cta'));
+        openModal(t.getAttribute('data-open') || 'audit', t.getAttribute('data-interest') || '', t.hasAttribute('data-hero-cta'),
+          { kicker: t.getAttribute('data-kicker'), title: t.getAttribute('data-title'), message: t.getAttribute('data-message') });
       }
       var tr = e.target.closest('[data-track]');
       if (tr) track('cta_click', { cta: tr.getAttribute('data-track'), interest: tr.getAttribute('data-interest') || '' });
@@ -339,17 +385,20 @@
   };
   var FREE_MAIL = /@(gmail|googlemail|yahoo|ymail|hotmail|outlook|live|msn|aol|icloud|me|mac|proton|protonmail|gmx|mail|yandex|zoho|rediffmail)\./i;
   var lfK = auditF ? $('[data-lf-k]', auditF) : null, lfT = auditF ? $('[data-lf-t]', auditF) : null;
-  function auditStart(interest, fromHero) {
+  function auditStart(interest, fromHero, opts) {
+    opts = opts || {};
     if (auditF.classList.contains('is-done')) { auditF.reset(); auditF.classList.remove('is-done'); $('button[type=submit]', auditF).disabled = false; }
     $$('.is-invalid', auditF).forEach(function (f) { f.classList.remove('is-invalid'); });
     $('.qf__status', auditF).textContent = '';
     var head = (fromHero || interest === 'Ranger Fusion ERP' || interest === 'Certified talent' || interest === 'Product engineering') && HEAD_FOR[interest];
-    lfK.textContent = head ? head[0] : 'Talk to a senior architect';
-    lfT.textContent = head ? head[1] : 'Tell us what you are working on';
-    var svc = SERVICE_FOR[interest];
+    lfK.textContent = opts.kicker || (head ? head[0] : 'Talk to a senior architect');
+    lfT.textContent = opts.title || (head ? head[1] : 'Tell us what you are working on');
     var sel = $('select[name="interest"]', auditF);
+    var direct = interest && $$('option', sel).filter(function (o) { return o.text === interest; })[0];
+    var svc = direct ? direct.text : SERVICE_FOR[interest];
     if (svc) sel.value = svc; else if (!sel.value) sel.value = '';
-    $('input[name="context"]', auditF).value = fromHero ? lfT.textContent : (interest || '');
+    if (opts.message) $('textarea[name="message"]', auditF).value = opts.message;
+    $('input[name="context"]', auditF).value = (fromHero || opts.title) ? lfT.textContent : (interest || '');
     setTimeout(function () { var f = $('input[name="name"]', auditF); if (f && window.innerWidth > 720) f.focus({ preventScroll: true }); }, 350);
   }
   if (auditF) {
@@ -374,9 +423,11 @@
         auditF.classList.add('is-done');
         status.className = 'qf__status';
         status.textContent = 'Thank you, ' + lead.firstName + '. A senior architect will reply within one business day.';
-      }).catch(function () {
+      }).catch(function (err) {
         btn.disabled = false; status.className = 'qf__status err';
-        status.textContent = 'Something went wrong. Email sales@procyonts.com and we will reply the same day.';
+        status.textContent = failMsg(err);
+        if (err && (err.code === 'free-email' || err.code === 'disposable' || err.code === 'no-mx' || err.code === 'email')) { em.classList.add('is-invalid'); em.focus(); }
+        if (err && err.code === 'phone') { ph.classList.add('is-invalid'); ph.focus(); }
       });
     });
   }
@@ -430,7 +481,9 @@
       '<div class="qf__row"><label><span>First name</span><input name="firstName" autocomplete="given-name" required></label><label><span>Work email</span><input name="email" type="email" autocomplete="email" required></label></div>' +
       '<label><span>Company</span><input name="company" autocomplete="organization" required></label>' +
       '<label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>' +
+      '<div class="cf-slot"></div>' +
       '<button class="btn btn--red btn--block" type="submit">Send me the full report <i aria-hidden="true">&rarr;</i></button></div></div>';
+    mountTurnstile();
     var rv = $('.ring__val', stage), rn = $('.ring__num', stage);
     setTimeout(function () { rv.style.strokeDashoffset = 314.16 * (1 - total / 100); countUp(rn, total, 1300); }, 120);
     scoreF.dataset.score = total; scoreF.dataset.band = band[0]; scoreF.dataset.platform = platform;
@@ -447,6 +500,8 @@
       e.preventDefault();
       var status = $('.qf__status', scoreF);
       var bad = validate($$('[required]', stage));
+      var qem = $('input[name="email"]', stage);
+      if (bad.indexOf(qem) < 0 && FREE_MAIL.test(qem.value)) { qem.classList.add('is-invalid'); status.className = 'qf__status err'; status.textContent = 'Please use your business email address.'; qem.focus(); return; }
       if (bad.length) { status.className = 'qf__status err'; status.textContent = 'Please complete the highlighted fields.'; bad[0].focus(); return; }
       if ($('input[name="website"]', stage).value) return;
       var btn = $('button[type=submit]', stage); btn.disabled = true;
@@ -461,9 +516,9 @@
         scoreF.classList.add('is-done');
         status.className = 'qf__status';
         status.textContent = 'Report on its way. An architect will reach out within one business day to walk you through it.';
-      }).catch(function () {
+      }).catch(function (err) {
         btn.disabled = false; status.className = 'qf__status err';
-        status.textContent = 'Something went wrong. Email sales@procyonts.com and we will reply the same day.';
+        status.textContent = failMsg(err);
       });
     });
   }

@@ -1,6 +1,6 @@
 # procyonts.com: Information Architecture (v2, lean)
 
-The home page is built. Every page below is planned; until it exists, its link shows a "page in progress" screen with a contact button.
+The home page and the Salesforce menu (7 pages, marked Live) are built. Salesforce pages are generated with `npm run build` from `src/pages/`. Every other page below is planned; until it exists, its link shows a "page in progress" screen with a contact button.
 The menu is cut to what Procyon actually sells: Salesforce, ServiceNow, AI & data, certified talent, and the Ranger Fusion product.
 Priority: P1 = build next (highest buying intent), P2 = second wave.
 
@@ -8,13 +8,13 @@ Priority: P1 = build next (highest buying intent), P2 = second wave.
 
 | Menu | Page | URL | Priority |
 |---|---|---|---|
-| **Salesforce** | Salesforce hub | /salesforce/ | P1 |
-| | Implementation & rollout (Sales, Service, Revenue, Experience Cloud) | /salesforce/implementation/ | P1 |
-| | Agentforce (Agent Launch Kit) | /salesforce/agentforce/ | P1 |
-| | Data Cloud & integration | /salesforce/data-cloud/ | P2 |
-| | Org audit & rescue | /salesforce/org-audit/ | P1 |
-| | Managed services | /salesforce/managed-services/ | P2 |
-| | Feature card: Ranger Fusion ERP | /ranger-fusion/ | P1 |
+| **Salesforce** | Salesforce hub | /salesforce/ | Live |
+| | Implementation & rollout (Sales, Service, Revenue, Experience Cloud) | /salesforce/implementation/ | Live |
+| | Agentforce (Agent Launch Kit) | /salesforce/agentforce/ | Live |
+| | Data Cloud & integration | /salesforce/data-cloud/ | Live |
+| | Org audit & rescue | /salesforce/org-audit/ | Live |
+| | Managed services | /salesforce/managed-services/ | Live |
+| | Feature card: Ranger Fusion ERP | /ranger-fusion/ | Live |
 | **ServiceNow** | ServiceNow hub | /servicenow/ | P1 |
 | | Platform audit & tech-debt removal | /servicenow/platform-audit/ | P1 |
 | | ITSM, ITOM & CMDB | /servicenow/itsm-itom/ | P1 |

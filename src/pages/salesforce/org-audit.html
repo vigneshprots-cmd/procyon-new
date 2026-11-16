@@ -1,0 +1,151 @@
+<!--meta
+{
+  "slug": "/salesforce/org-audit/",
+  "title": "Salesforce Org Health Check & Implementation Rescue",
+  "description": "Salesforce org health check and implementation rescue. We audit 8 areas, rank every issue by business impact and stabilize a struggling org in 30 days.",
+  "ogTitle": "Is your Salesforce org working against your teams?",
+  "ogDescription": "Tick the symptoms you see and get a risk level in seconds. Then an 8-area org audit and a 30-day rescue plan from certified Salesforce architects.",
+  "og": "salesforce-org-audit",
+  "bodyClass": "sf-audit",
+  "crumbs": [["Salesforce", "/salesforce/"], ["Org audit & rescue", "/salesforce/org-audit/"]],
+  "service": {
+    "name": "Salesforce org health check and rescue",
+    "serviceType": "Salesforce org audit and implementation rescue",
+    "description": "Independent Salesforce org health check across data quality, automation, Apex code, security and sharing, integrations, licences, adoption and release process, followed by a prioritized rescue and stabilization plan.",
+    "catalogName": "Org audit and rescue",
+    "offers": [
+      ["Org health check", "An 8-area audit with every finding ranked by business impact and effort."],
+      ["30-day stabilization", "Fix the highest-impact issues first: failing automation, data quality and access risks."],
+      ["Technical debt cleanup", "Consolidate automation, refactor Apex and retire unused fields, objects and licences."],
+      ["Adoption recovery", "Simplified page layouts, role-based retraining and adoption dashboards."]
+    ]
+  }
+}
+-->
+<section class="ph" aria-labelledby="ph-h">
+  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+  <div class="wrap">
+    <!--@crumbs-->
+    <div class="ph__grid">
+      <div class="ph__copy">
+        <p class="pill"><span class="pill__dot"></span>Org Audit &amp; Rescue</p>
+        <h1 id="ph-h" class="ph__h">Your Salesforce org should speed teams up. <em>Not slow them down.</em></h1>
+        <p class="ph__lede"><b>Procyon audits and rescues Salesforce orgs that have drifted.</b> We check eight areas, from data quality and automation sprawl to security and licences, rank every finding by business impact, then stabilize the org in 30 days before rebuilding anything that blocks adoption.</p>
+        <div class="ph__ctas">
+          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Org audit &amp; rescue" data-title="Book an org health check" data-track="audit_hero">Book an org health check <i aria-hidden="true">&rarr;</i></a>
+          <a class="btn btn--line btn--lg" href="#areas">See the 8 audit areas</a>
+        </div>
+        <!--@updated-->
+      </div>
+      <div class="ph__w">
+        <div class="wcard symp" data-symp>
+          <span class="wcard__k">Symptom check</span>
+          <p class="wcard__t">Which of these does your team say?</p>
+          <div class="symp__list">
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="2" data-name="Reports nobody trusts"><i></i>&ldquo;I don't trust the reports.&rdquo;</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="2" data-name="Users working in spreadsheets outside Salesforce"><i></i>&ldquo;I keep my real pipeline in a spreadsheet.&rdquo;</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="3" data-name="Records slow to save or failing automation"><i></i>&ldquo;Saving a record takes forever, or fails.&rdquo;</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="2" data-name="Duplicate accounts and contacts"><i></i>&ldquo;There are three versions of every account.&rdquo;</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="3" data-name="Nobody knows what the automation does"><i></i>&ldquo;Nobody knows what that flow does.&rdquo;</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="2" data-name="Releases break things"><i></i>&ldquo;Every release breaks something.&rdquo;</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="1" data-name="Paying for unused licences"><i></i>&ldquo;We pay for licences nobody uses.&rdquo;</button>
+          </div>
+          <div class="sev" data-level="0" aria-live="polite">
+            <div class="sev__bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="sev__label"><b>Pick what you see</b><small></small></div>
+            <p>Tick every symptom your team would recognise.</p>
+          </div>
+          <button class="btn btn--red btn--block" type="button" data-symp-cta disabled data-track="audit_symptoms_cta">Send these to an architect <i aria-hidden="true">&rarr;</i></button>
+          <p class="wcard__foot">Your symptoms go straight into the message. An architect replies within one business day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kf" aria-label="Key facts">
+  <dl class="wrap kf__in">
+    <div><dt>8 areas</dt><dd>audited, from data quality to release process</dd></div>
+    <div><dt>30 days</dt><dd>to stabilize the highest-impact issues</dd></div>
+    <div><dt>1 ranked list</dt><dd>every finding scored by business impact and effort</dd></div>
+    <div><dt>15+ years</dt><dd>of Salesforce delivery and rescue work</dd></div>
+  </dl>
+</section>
+
+<section class="sx" id="areas" aria-labelledby="areas-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><span class="sx__k rv">Audit scorecard</span><h2 id="areas-h" class="rv">Eight areas. <em>Every one scored.</em></h2></div>
+      <p class="rv" data-d="1">Each area gets a rating, the evidence behind it and the business cost of leaving it alone.</p>
+    </div>
+    <div class="score8 rv">
+      <div><b>Data quality</b><span>Duplicates, empty key fields, orphaned records and the reports they distort.</span></div>
+      <div><b>Automation sprawl</b><span>Flows, process builders, workflow rules and triggers that collide on the same object.</span></div>
+      <div><b>Apex and code debt</b><span>Test coverage, governor limit risks, hard-coded IDs and dead code.</span></div>
+      <div><b>Security and sharing</b><span>Profiles, permission sets, sharing rules and who can see or export what.</span></div>
+      <div><b>Integrations</b><span>Failing syncs, API limits, duplicate pipelines and undocumented connections.</span></div>
+      <div><b>Licences and cost</b><span>Unused seats, over-provisioned editions and add-ons nobody opened.</span></div>
+      <div><b>Adoption and UX</b><span>Login rates, cluttered page layouts and the workarounds people built.</span></div>
+      <div><b>Release process</b><span>Sandboxes, version control, testing and how changes reach production.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="days-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><span class="sx__k rv">Rescue plan</span><h2 id="days-h" class="rv">The first 30 days <em>of a rescue.</em></h2></div>
+      <p class="rv" data-d="1">Stabilize before rebuilding. Users feel the difference in the first fortnight, and the board sees a plan by day 30.</p>
+    </div>
+    <div class="days">
+      <div class="rv"><small>Days 1 to 5</small><b>Audit</b><span>Org scan, stakeholder interviews and the 8-area scorecard.</span></div>
+      <div class="rv" data-d="1"><small>Days 6 to 10</small><b>Triage</b><span>Every finding ranked by impact and effort. Quick wins agreed.</span></div>
+      <div class="rv" data-d="2"><small>Days 11 to 25</small><b>Stabilize</b><span>Failing automation fixed, access risks closed, worst data cleaned.</span></div>
+      <div class="rv" data-d="3"><small>Days 26 to 30</small><b>Roadmap</b><span>A phased rebuild plan with scope, timeline and cost.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sx" aria-labelledby="rep-h">
+  <div class="wrap report">
+    <div>
+      <span class="sx__k rv">The deliverable</span>
+      <h2 id="rep-h" class="rv">A report your CIO <em>and your admins</em> can both use.</h2>
+      <p class="rv" data-d="1" style="font-size:17px;color:var(--ink-2)">Executives get the business case. Admins get the exact fix list. Both come from the same evidence.</p>
+      <a class="btn btn--red rv" data-d="2" href="#audit" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Org audit &amp; rescue" data-title="Book an org health check" data-track="audit_report_cta">Book an org health check <i aria-hidden="true">&rarr;</i></a>
+    </div>
+    <div class="report__doc rv" data-d="1">
+      <small>Org health report</small>
+      <b>What you receive</b>
+      <ol>
+        <li>Executive summary and overall health rating</li>
+        <li>8-area scorecard with evidence</li>
+        <li>Ranked findings by business impact and effort</li>
+        <li>Security and data exposure risks</li>
+        <li>Licence savings you can act on</li>
+        <li>30-day stabilization backlog</li>
+        <li>Phased rebuild roadmap with a cost range</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!--@logos-->
+
+<section class="faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq__in">
+    <h2 id="faq-h" class="rv">Org audit and rescue, <em>straight answers.</em></h2>
+    <div class="faq__list">
+      <details class="rv" open><summary>What is a Salesforce org health check?</summary><p class="faq-a">An independent review of how your Salesforce org is built and used. Procyon scores eight areas: data quality, automation, Apex code, security and sharing, integrations, licences, adoption and release process, then ranks every finding by business impact.</p></details>
+      <details class="rv"><summary>How long does a Salesforce org audit take?</summary><p class="faq-a">The audit and triage take about two weeks. A full rescue engagement stabilizes the highest-impact issues within 30 days and ends with a phased roadmap for anything that needs rebuilding.</p></details>
+      <details class="rv"><summary>What are the signs a Salesforce implementation has failed?</summary><p class="faq-a">Users keep data in spreadsheets, reports are not trusted, records save slowly or fail, duplicates multiply, nobody can explain the automation, releases break things and licences go unused.</p></details>
+      <details class="rv"><summary>Can you fix an org another partner built?</summary><p class="faq-a">Yes. Most rescue work starts in orgs built by someone else. We document what exists first, stabilize it, and only rebuild what blocks adoption or creates risk.</p></details>
+      <details class="rv"><summary>Should we fix our org before adding Agentforce?</summary><p class="faq-a">Usually yes. AI agents act on your data and automation. Duplicates, unclear ownership and colliding flows make agents unreliable, so the audit flags what must be fixed before AI goes live.</p></details>
+      <details class="rv"><summary>Will the audit find licence savings?</summary><p class="faq-a">Often. The licences and cost area identifies unused seats, over-provisioned editions and add-ons that are not being used, with the savings listed so you can act at renewal.</p></details>
+    </div>
+  </div>
+</section>
+
+<!--@related-->
+
+<!--@cta {"h": "Tell us what hurts. <em>We will find why.</em>", "p": "Describe the symptoms your teams live with. A senior Salesforce architect replies with the likely causes and the shape of a 30-day rescue.", "interest": "Salesforce org audit & rescue", "kicker": "Org audit & rescue", "title": "Book an org health check", "pathTitle": "Book an org health check", "pathCta": "Book my health check"}-->
