@@ -68,7 +68,7 @@
 .kf__in > div:nth-child(2) dt::before { background: var(--green); } .kf__in > div:nth-child(3) dt::before { background: var(--red); }
 .kf dd { margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
 .kf dd b { display: block; margin-bottom: 8px; font: 900 clamp(30px, 3vw, 44px)/1 var(--f-display); letter-spacing: -.04em; color: var(--ink); white-space: nowrap; }
-.kf__cta { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 28px 30px; background: var(--night); color: #fff; text-decoration: none; transition: background .25s; }
+.kf__cta { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 28px 74px 28px 30px; background: var(--night); color: #fff; text-decoration: none; transition: background .25s; }
 .kf__cta::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--grad); }
 .kf__cta small { font: 700 11px/1.3 var(--f-display); letter-spacing: .14em; text-transform: uppercase; color: var(--green); }
 .kf__cta b { font: 800 19px/1.25 var(--f-display); letter-spacing: -.01em; }
