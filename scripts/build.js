@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 27, pages: 5, js: 28 };
+const VERSION = { css: 28, pages: 6, js: 28 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
