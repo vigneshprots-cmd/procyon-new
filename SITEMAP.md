@@ -1,6 +1,6 @@
 # procyonts.com: Information Architecture (v2, lean)
 
-The home page, the Salesforce menu and the Company menu (11 pages, marked Live) are built. Salesforce pages are generated with `npm run build` from `src/pages/`. Every other page below is planned; until it exists, its link shows a "page in progress" screen with a contact button.
+The home page and the Salesforce, Company and Talent menus (14 pages, marked Live) are built. Salesforce pages are generated with `npm run build` from `src/pages/`. Every other page below is planned; until it exists, its link shows a "page in progress" screen with a contact button.
 The menu is cut to what Procyon actually sells: Salesforce, ServiceNow, AI & data, certified talent, and the Ranger Fusion product.
 Priority: P1 = build next (highest buying intent), P2 = second wave.
 
@@ -34,9 +34,9 @@ Priority: P1 = build next (highest buying intent), P2 = second wave.
 | | Cloud transformation | /engineering/cloud/ | P3 |
 | | Cybersecurity & compliance | /engineering/security-compliance/ | P3 |
 | **Talent** | Talent hub | /talent/ | P1 |
-| | Staff augmentation | /talent/staff-augmentation/ | P1 |
-| | Delivery pods | /talent/delivery-pods/ | P2 |
-| | How we engage (fixed, T&M, outcome-based) | /talent/engagement-models/ | P2 |
+| | Staff augmentation | /talent/staff-augmentation/ | Live |
+| | Delivery pods | /talent/delivery-pods/ | Live |
+| | How we engage (fixed, T&M, outcome-based) | /talent/engagement-models/ | Live |
 | **Work** | Case studies (filter by platform and industry) | /work/ | P1 |
 | | Industries hub (Healthcare, Financial services, Public sector, Retail, High tech) | /industries/ + /industries/{name}/ | P2 |
 | | Insights | /insights/ | P2 |

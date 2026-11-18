@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 28, pages: 7, js: 29 };
+const VERSION = { css: 28, pages: 8, js: 29 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -46,12 +46,17 @@ const PAGES = [
   { slug: '/about/', section: 'company', name: 'About Procyon', d: 'Enterprise platform delivery since 2004, from Novato, Toronto and Chennai.' },
   { slug: '/about/certifications/', section: 'company', name: 'Partners & certifications', d: 'Salesforce and ServiceNow partner, ISO 27001, ISO 9001, WBE, NMSDC, SBE.' },
   { slug: '/careers/', section: 'company', name: 'Careers', d: 'Salesforce, ServiceNow, AI and data roles across three hubs.' },
-  { slug: '/contact/', section: 'company', name: 'Contact', d: 'Reach a senior architect within one business day.' }
+  { slug: '/contact/', section: 'company', name: 'Contact', d: 'Reach a senior architect within one business day.' },
+  { slug: '/talent/staff-augmentation/', section: 'talent', name: 'Staff augmentation', d: 'Vetted Salesforce, ServiceNow, data and AI people. Shortlist in 72 hours.' },
+  { slug: '/talent/delivery-pods/', section: 'talent', name: 'Delivery pods', d: 'A cross-functional team with shared accountability for the roadmap.' },
+  { slug: '/talent/engagement-models/', section: 'talent', name: 'Engagement models', d: 'Fixed scope, time and materials, milestone, outcome-based or managed capacity.' }
 ];
 const RAIL = {
   salesforce: { h: 'More from the Salesforce practice', pick: p => !p.section },
-  company: { h: 'More about Procyon', pick: p => p.section === 'company' || p.slug === '/salesforce/' || p.slug === '/ranger-fusion/' }
+  company: { h: 'More about Procyon', pick: p => p.section === 'company' || p.slug === '/salesforce/' || p.slug === '/ranger-fusion/' },
+  talent: { h: 'More ways to add capacity', pick: p => p.section === 'talent' || ['/salesforce/managed-services/', '/about/certifications/', '/contact/'].includes(p.slug) }
 };
+const NAV = { salesforce: ['dd-sf', 'Salesforce'], company: ['dd-co', 'Company'], talent: ['dd-tl', 'Talent'] };
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const strip = (s) => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&middot;/g, '·').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
@@ -107,9 +112,8 @@ function cta(o) {
 }
 
 function header(slug, section) {
-  let h = section === 'company'
-    ? CHROME.header.replace('aria-controls="dd-co">Company</button>', 'aria-controls="dd-co" data-current>Company</button>')
-    : CHROME.header.replace('aria-controls="dd-sf">Salesforce</button>', 'aria-controls="dd-sf" data-current>Salesforce</button>');
+  const [id, label] = NAV[section] || NAV.salesforce;
+  let h = CHROME.header.replace(`aria-controls="${id}">${label}</button>`, `aria-controls="${id}" data-current>${label}</button>`);
   h = h.split(`href="${slug}"`).join(`href="${slug}" aria-current="page"`);
   return h;
 }

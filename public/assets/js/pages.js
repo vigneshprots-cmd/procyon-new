@@ -151,9 +151,39 @@
       track('checklist_submit', { count: chosen.length });
       open(btn.getAttribute('data-interest') || 'Other', {
         kicker: btn.getAttribute('data-kicker') || '', title: btn.getAttribute('data-title') || '',
-        message: (btn.getAttribute('data-prefix') || 'Requested:') + '\n' + list + '\n\nVendor portal or deadline: '
+        message: (btn.getAttribute('data-prefix') || 'Requested:') + '\n' + list + (btn.getAttribute('data-suffix') || '\n\nVendor portal or deadline: ')
       });
     });
+  });
+
+  /* ---------- Engagement model fit finder: three answers, one recommended model ---------- */
+  $$('[data-fit]').forEach(function (root) {
+    var models = {}; try { models = JSON.parse($('[data-fit-models]', root).textContent); } catch (e) { return; }
+    var groups = $$('[data-fitq]', root), rec = $('.rec', root), btn = $('[data-fit-cta]', root);
+    var update = function (byUser) {
+      var score = {}, answers = [];
+      groups.forEach(function (g) {
+        var o = $('.opt[aria-checked="true"]', g); if (!o) return;
+        answers.push(g.getAttribute('data-fitq') + ': ' + o.textContent.trim());
+        (o.getAttribute('data-score') || '').split(',').forEach(function (p) { var kv = p.split(':'); if (kv[0]) score[kv[0]] = (score[kv[0]] || 0) + (+kv[1] || 0); });
+      });
+      var best = Object.keys(models).sort(function (a, b) { return (score[b] || 0) - (score[a] || 0); })[0], m = models[best];
+      $('[data-rec-b]', rec).textContent = m.name;
+      $('[data-rec-s]', rec).textContent = m.why;
+      swap(rec);
+      btn.onclick = function () {
+        track('fit_submit', { model: m.name });
+        open('Other', { kicker: 'Engagement model', title: 'Engagement model recommendation', message: answers.join('\n') + '\nSuggested model: ' + m.name + '\n\nProgram or roles in scope: ' });
+      };
+      if (byUser) track('fit_change', { model: m.name });
+    };
+    groups.forEach(function (g) {
+      var opts = $$('.opt[role="radio"]', g);
+      opts.forEach(function (o) {
+        o.addEventListener('click', function () { opts.forEach(function (x) { x.setAttribute('aria-checked', String(x === o)); }); update(true); });
+      });
+    });
+    update(false);
   });
 
   /* ---------- Careers: send a track choice into the application form ---------- */
