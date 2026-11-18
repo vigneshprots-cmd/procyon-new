@@ -22,6 +22,12 @@
 - [Salesforce managed services](https://procyonts.com/salesforce/managed-services/): Run, Improve and Scale tiers; release readiness for Spring, Summer and Winter; hubs in Novato, Toronto and Chennai.
 - [Ranger Fusion](https://procyonts.com/ranger-fusion/): native Salesforce ERP for sales, finance, inventory, procurement, projects and HR on one data model; live in 2 to 4 weeks; typical savings of 20 to 60% against a patchwork stack.
 
+## Company pages
+- [About Procyon](https://procyonts.com/about/): enterprise information solution delivery organization founded in 2004; 200+ professionals; headquarters in Novato, California, delivery hubs in Toronto and Chennai; customers from Fortune 500s to high-growth start-ups; incubated AI healthcare ventures Hekma (accelerated drug development with a focus on patient equity) and Akra (regulated digital healthcare products, SaMD and SiMD).
+- [Partners and certifications](https://procyonts.com/about/certifications/): Salesforce Consulting Partner, ServiceNow Implementation Partner, ISO 27001, ISO 9001:2015, SOC 2 Type II, HIPAA-compliant delivery, WBENC-certified women's business enterprise, NMSDC and SBE certified.
+- [Careers](https://procyonts.com/careers/): open roles in Chennai (AI Architect with Java background, Full Stack Developer, QA Engineer, Content and Copy Writer) and open applications for Salesforce, ServiceNow, AI and data, product engineering and delivery tracks.
+- [Contact](https://procyonts.com/contact/): sales@procyonts.com, +1 415 382 8040; a senior practice lead replies within one business day; NDA available before discovery; 24/7 global delivery support. Offices: 7250 Redwood Blvd, Suite #211, Novato, CA 94945, USA; 202-1825 Markham Road, Scarborough, ON M1B 4Z9, Canada; RNG Tower, 824/1, Anna Salai, CIT Nagar West, Chennai, Tamil Nadu 600035, India.
+
 ## Industries
 Healthcare and life sciences, financial services, public sector, retail, high tech. Procyon has also incubated two AI healthcare start-ups, Hekma and Akra.
 

@@ -1,6 +1,6 @@
 # procyonts.com: Information Architecture (v2, lean)
 
-The home page and the Salesforce menu (7 pages, marked Live) are built. Salesforce pages are generated with `npm run build` from `src/pages/`. Every other page below is planned; until it exists, its link shows a "page in progress" screen with a contact button.
+The home page, the Salesforce menu and the Company menu (11 pages, marked Live) are built. Salesforce pages are generated with `npm run build` from `src/pages/`. Every other page below is planned; until it exists, its link shows a "page in progress" screen with a contact button.
 The menu is cut to what Procyon actually sells: Salesforce, ServiceNow, AI & data, certified talent, and the Ranger Fusion product.
 Priority: P1 = build next (highest buying intent), P2 = second wave.
 
@@ -40,10 +40,10 @@ Priority: P1 = build next (highest buying intent), P2 = second wave.
 | **Work** | Case studies (filter by platform and industry) | /work/ | P1 |
 | | Industries hub (Healthcare, Financial services, Public sector, Retail, High tech) | /industries/ + /industries/{name}/ | P2 |
 | | Insights | /insights/ | P2 |
-| **Company** | About Procyon | /about/ | P1 |
-| | Partners & certifications | /about/certifications/ | P2 |
-| | Careers | /careers/ | P2 |
-| | Contact | /contact/ | P1 |
+| **Company** | About Procyon | /about/ | Live |
+| | Partners & certifications | /about/certifications/ | Live |
+| | Careers | /careers/ | Live |
+| | Contact | /contact/ | Live |
 
 Header CTA on every page: **Talk to an architect** (opens the pop-up contact form).
 

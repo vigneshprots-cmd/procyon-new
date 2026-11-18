@@ -138,6 +138,86 @@
     });
   });
 
+  /* ---------- Document checklist (certifications page) ---------- */
+  $$('[data-checklist]').forEach(function (root) {
+    var btn = $('[data-check-cta]', root), count = $('[data-check-count]', root), chosen = [];
+    multi(root, function (sel) {
+      chosen = sel;
+      if (count) count.textContent = sel.length ? sel.length + ' of ' + $$('.opt--check', root).length + ' selected' : 'Nothing selected yet';
+      if (btn) btn.disabled = !sel.length;
+    });
+    if (btn) btn.addEventListener('click', function () {
+      var list = chosen.map(function (o) { return '- ' + o.getAttribute('data-name'); }).join('\n');
+      track('checklist_submit', { count: chosen.length });
+      open(btn.getAttribute('data-interest') || 'Other', {
+        kicker: btn.getAttribute('data-kicker') || '', title: btn.getAttribute('data-title') || '',
+        message: (btn.getAttribute('data-prefix') || 'Requested:') + '\n' + list + '\n\nVendor portal or deadline: '
+      });
+    });
+  });
+
+  /* ---------- Careers: send a track choice into the application form ---------- */
+  var applyForm = $('[data-apply]');
+  $$('[data-apply-cta]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (!applyForm) return;
+      e.preventDefault();
+      var v = a.getAttribute('data-interest'), sel = applyForm.querySelector('[name="track"]');
+      if (v && sel) sel.value = v;
+      applyForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(function () { var n = applyForm.querySelector('[name="name"]'); if (n) n.focus({ preventScroll: true }); }, 600);
+      track('apply_cta', { track: v || '' });
+    });
+  });
+
+  /* ---------- Careers application form (POST /api/apply, bot-protected like the lead form) ---------- */
+  if (applyForm) (function (form) {
+    var tok = null, status = $('.qf__status', form), btn = $('[type="submit"]', form);
+    var load = function () { return (window.ptsFreshToken ? window.ptsFreshToken() : Promise.resolve({ t: null, at: Date.now() })).then(function (x) { tok = x; return x; }); };
+    var ripe = function () { var w = 3300 - (Date.now() - (tok ? tok.at : 0)); return new Promise(function (ok) { setTimeout(ok, Math.max(0, w)); }); };
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { io.disconnect(); load(); } }, { rootMargin: '700px' });
+      io.observe(form);
+    } else load();
+    var say = function (cls, msg) { status.className = 'qf__status ' + cls; status.textContent = msg; };
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = function (n) { return form.querySelector('[name="' + n + '"]'); };
+      var bad = ['name', 'email', 'track'].map(f).filter(function (el) {
+        var v = el.value.trim(), ok = v !== '' && (el.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v));
+        el.classList.toggle('is-invalid', !ok); el.setAttribute('aria-invalid', String(!ok)); return !ok;
+      });
+      if (bad.length) { say('err', 'Please complete the highlighted fields.'); bad[0].focus(); return; }
+      var data = { name: f('name').value, email: f('email').value, phone: f('phone').value, track: f('track').value, hub: f('hub').value,
+        profile: f('profile').value, message: f('message').value, website: f('website').value, page: location.pathname };
+      btn.disabled = true; say('', 'Sending...');
+      var send = function (retry) {
+        return (tok && tok.t ? Promise.resolve() : load()).then(ripe).then(function () {
+          data.ft = tok && tok.t; data.cf = window.ptsCfToken ? window.ptsCfToken() : '';
+          tok = null;
+          return fetch('/api/apply', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+        }).then(function (r) {
+          return r.json().catch(function () { return {}; }).then(function (j) {
+            if (r.status === 409 && !retry) return load().then(function () { return send(true); });
+            load(); // tokens are single-use: get the next one ready
+            if (!r.ok) { var err = new Error(j.message || ''); err.code = j.error; throw err; }
+            return j;
+          });
+        });
+      };
+      send(false).then(function () {
+        track('application_submit', { track: data.track });
+        form.classList.add('is-done');
+        say('ok', 'Thank you, ' + data.name.trim().split(' ')[0] + '. The talent team reads every application and replies when there is a match.');
+      }).catch(function (err) {
+        btn.disabled = false;
+        say('err', err.message || 'Something went wrong. Please try again in a minute.');
+        var map = { email: 'email', disposable: 'email', 'no-mx': 'email', phone: 'phone', profile: 'profile' };
+        if (map[err.code]) { var el = f(map[err.code]); el.classList.add('is-invalid'); el.focus(); }
+      });
+    });
+  })(applyForm);
+
   /* ---------- Source map (Data Cloud page) ---------- */
   $$('[data-fmap]').forEach(function (root) {
     var srcs = $$('.src', root), core = $('.fmap__core', root), detail = $('.fmap__detail', root);

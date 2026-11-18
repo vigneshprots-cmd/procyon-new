@@ -197,13 +197,15 @@
   } catch (err) { /* storage unavailable */ }
 
   /* ---------- Form token + optional Turnstile (bot protection) ---------- */
-  var formTok = null, tokPromise = null, cfSite = '', cfToken = '', cfLoading = null;
+  var formTok = null, formTokAt = 0, tokPromise = null, cfSite = '', cfToken = '', cfLoading = null;
+  // The server drops tokens used within 3 s of issue (bots); humans resubmitting fast must wait it out.
+  var ripe = function (t) { var wait = 3300 - (Date.now() - formTokAt); return wait > 0 ? new Promise(function (ok) { setTimeout(function () { ok(t); }, wait); }) : Promise.resolve(t); };
   function getToken(force) {
     if (formTok && !force) return Promise.resolve(formTok);
     if (tokPromise && !force) return tokPromise;
     tokPromise = fetch('/api/form-token', { cache: 'no-store', credentials: 'same-origin' })
       .then(function (r) { return r.json(); })
-      .then(function (j) { formTok = j.t; cfSite = j.site || ''; tokPromise = null; if (cfSite) mountTurnstile(); return formTok; })
+      .then(function (j) { formTok = j.t; formTokAt = Date.now(); cfSite = j.site || ''; tokPromise = null; if (cfSite) mountTurnstile(); return formTok; })
       .catch(function () { tokPromise = null; return null; });
     return tokPromise;
   }
@@ -226,13 +228,14 @@
   function postLead(data) {
     data.utm = utm; data.page = location.pathname;
     var send = function (retry) {
-      return getToken().then(function (t) {
+      return getToken().then(ripe).then(function (t) {
         data.ft = t; data.cf = cfToken;
         return fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
       }).then(function (r) {
         return r.json().catch(function () { return {}; }).then(function (j) {
           formTok = null; cfToken = '';
           if (r.status === 409 && !retry) return getToken(true).then(function () { return send(true); });
+          getToken(true); // single-use token spent: prefetch the next so a corrected resubmission is not dropped
           if (!r.ok) { var err = new Error(j.message || ''); err.code = j.error || r.status; throw err; }
           return j;
         });
@@ -347,6 +350,14 @@
   }
   /* Page widgets open the form with their own heading and a pre-filled message */
   window.ptsOpenModal = function (mode, interest, opts) { openModal(mode || 'audit', interest || '', false, opts); };
+  // Inline forms (careers) get their own single-use token, sharing the Turnstile widget logic.
+  window.ptsFreshToken = function () {
+    return fetch('/api/form-token', { cache: 'no-store', credentials: 'same-origin' })
+      .then(function (r) { return r.json(); })
+      .then(function (j) { cfSite = j.site || cfSite; if (cfSite) mountTurnstile(); return { t: j.t, at: Date.now() }; })
+      .catch(function () { return { t: null, at: Date.now() }; });
+  };
+  window.ptsCfToken = function () { return cfToken; };
   function closeModal() { if (modal.open) modal.close(); }
   if (modal) {
     modal.addEventListener('close', function () { document.body.style.overflow = ''; });

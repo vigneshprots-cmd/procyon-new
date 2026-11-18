@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3000;
 const ROOT = path.join(__dirname, 'public');
 const LEAD_WEBHOOK_URL = process.env.LEAD_WEBHOOK_URL || '';      // e.g. Zapier, Make, HubSpot or Slack webhook
 const SF_WEB_TO_LEAD_OID = process.env.SF_WEB_TO_LEAD_OID || '';  // Salesforce org ID for Web-to-Lead
+const APPLY_WEBHOOK_URL = process.env.APPLY_WEBHOOK_URL || '';    // where job applications go (never Web-to-Lead)
 const CANONICAL_HOST = process.env.CANONICAL_HOST || '';          // e.g. procyonts.com (redirects www + others)
 const FORM_SECRET = process.env.FORM_SECRET || crypto.randomBytes(32).toString('hex'); // signs form tokens
 const TURNSTILE_SITE_KEY = process.env.TURNSTILE_SITE_KEY || '';  // optional Cloudflare Turnstile
@@ -287,6 +288,59 @@ function handleLead(req, res) {
   });
 }
 
+// Job applications: same bot defences as leads, but personal email is allowed
+// and nothing is sent to Salesforce Web-to-Lead (candidates are not sales leads).
+const TRACKS = new Set(['Salesforce', 'ServiceNow', 'AI and data', 'Product engineering', 'Delivery and project management', 'Other',
+  'AI Architect (Java Background with AI Fundamentals)', 'Full Stack Developer (Backend-Focused)', 'QA Engineer (Manual + API Testing)', 'Content & Copy Writer']);
+const HUBS = new Set(['Novato, California', 'Toronto, Canada', 'Chennai, India', 'Open to any hub']);
+function handleApply(req, res) {
+  const ip = clientIp(req);
+  const ua = String(req.headers['user-agent'] || '');
+  const drop = (reason, extra) => { console.log('[spam] apply', reason, JSON.stringify(Object.assign({ ip }, extra || {}))); json(res, 200, { ok: true }); };
+  const reject = (status, error, message) => json(res, status, { ok: false, error, message });
+  if (!ua || ua.length < 10) return reject(400, 'bad-request', '');
+  if (!sameSite(req)) return reject(403, 'bad-origin', '');
+  if (!/application\/json/i.test(String(req.headers['content-type'] || ''))) return reject(415, 'bad-type', '');
+  if (over(ipHits, ip, 5, 10 * 60 * 1000)) return reject(429, 'rate', 'Too many requests. Please try again later.');
+  let raw = '';
+  req.on('data', chunk => { raw += chunk; if (raw.length > 20000) req.destroy(); });
+  req.on('end', async () => {
+    let d;
+    try { d = JSON.parse(raw); } catch (e) { return reject(400, 'bad-request', ''); }
+    if (d.website) return drop('honeypot');
+    const tokenProblem = checkToken(d.ft);
+    if (tokenProblem === 'expired') return reject(409, 'expired', 'Your session timed out. Please submit again.');
+    if (tokenProblem) return drop(tokenProblem);
+    const app = {
+      type: 'application', name: clean(d.name, 120), email: clean(d.email, 160).toLowerCase(), phone: clean(d.phone, 40),
+      track: clean(d.track, 60), hub: clean(d.hub, 60), profile: clean(d.profile, 200), message: clean(d.message, 3000),
+      page: clean(d.page, 160), receivedAt: new Date().toISOString()
+    };
+    if (/https?:|www\.|[<>{}]/i.test(app.name) || /\d{3,}/.test(app.name)) return drop('name-shape', { email: app.email });
+    if ((app.message.match(LINK_RE) || []).length > 2 || SPAM_RE.test(app.message)) return drop('spam-content', { email: app.email });
+    if (!app.name || !TRACKS.has(app.track)) return reject(422, 'missing', 'Please complete the required fields.');
+    if (app.hub && !HUBS.has(app.hub)) return reject(422, 'missing', 'Please choose a hub from the list.');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(app.email)) return reject(422, 'email', 'Please enter a valid email address.');
+    const domain = app.email.split('@')[1];
+    if (DISPOSABLE.has(domain)) return reject(422, 'disposable', 'Please use a permanent email address.');
+    if (app.phone) {
+      const digits = app.phone.replace(/\D/g, '');
+      if (digits.length < 7 || digits.length > 15 || /^(\d)\1+$/.test(digits)) return reject(422, 'phone', 'Please enter a valid phone number.');
+    }
+    if (app.profile && !/^https:\/\/\S+\.\S{2,}/i.test(app.profile)) return reject(422, 'profile', 'Please paste a full https:// link to a LinkedIn profile or portfolio.');
+    if (!(await hasMailServer(domain))) return reject(422, 'no-mx', 'That email domain cannot receive mail. Please check it.');
+    if (!(await turnstileOk(d.cf, ip))) return reject(422, 'captcha', 'Please complete the verification and submit again.');
+    if (over(mailHits, 'apply:' + app.email, 2, 24 * 3600e3)) return drop('email-rate', { email: app.email });
+    try {
+      if (APPLY_WEBHOOK_URL) {
+        const r = await fetch(APPLY_WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(app) });
+        console.log('[apply] received', app.track, r.status);
+      } else console.log('[apply]', JSON.stringify(app));
+    } catch (e) { console.error('[apply] forward failed', e.message); console.log('[apply]', JSON.stringify(app)); }
+    json(res, 200, { ok: true });
+  });
+}
+
 const server = http.createServer((req, res) => {
   const host = (req.headers.host || '').toLowerCase();
   if (CANONICAL_HOST && host && host !== CANONICAL_HOST && !host.endsWith('.railway.app') && !host.startsWith('localhost')) {
@@ -296,6 +350,7 @@ const server = http.createServer((req, res) => {
   if (url === '/healthz') return send(res, 200, 'ok', { 'Content-Type': 'text/plain' });
   if (req.method === 'GET' && url === '/api/form-token') return handleToken(req, res);
   if (req.method === 'POST' && url === '/api/lead') return handleLead(req, res);
+  if (req.method === 'POST' && url === '/api/apply') return handleApply(req, res);
   if (url.startsWith('/api/')) return send(res, 404, 'Not found', { 'Content-Type': 'text/plain' });
   if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, 'Method not allowed', { 'Content-Type': 'text/plain' });
 

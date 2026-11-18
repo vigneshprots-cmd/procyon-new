@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 28, pages: 6, js: 28 };
+const VERSION = { css: 28, pages: 7, js: 29 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -42,18 +42,27 @@ const PAGES = [
   { slug: '/salesforce/data-cloud/', name: 'Data Cloud & integration', d: 'One real-time customer record across ERP, web, apps and service.' },
   { slug: '/salesforce/org-audit/', name: 'Org audit & rescue', d: 'Find the debt, fix the org and win back user trust.' },
   { slug: '/salesforce/managed-services/', name: 'Managed services', d: 'Admin, releases and continuous improvement on retainer.' },
-  { slug: '/ranger-fusion/', name: 'Ranger Fusion ERP', d: 'Finance, inventory, projects and HR native to Salesforce.' }
+  { slug: '/ranger-fusion/', name: 'Ranger Fusion ERP', d: 'Finance, inventory, projects and HR native to Salesforce.' },
+  { slug: '/about/', section: 'company', name: 'About Procyon', d: 'Enterprise platform delivery since 2004, from Novato, Toronto and Chennai.' },
+  { slug: '/about/certifications/', section: 'company', name: 'Partners & certifications', d: 'Salesforce and ServiceNow partner, ISO 27001, ISO 9001, WBE, NMSDC, SBE.' },
+  { slug: '/careers/', section: 'company', name: 'Careers', d: 'Salesforce, ServiceNow, AI and data roles across three hubs.' },
+  { slug: '/contact/', section: 'company', name: 'Contact', d: 'Reach a senior architect within one business day.' }
 ];
+const RAIL = {
+  salesforce: { h: 'More from the Salesforce practice', pick: p => !p.section },
+  company: { h: 'More about Procyon', pick: p => p.section === 'company' || p.slug === '/salesforce/' || p.slug === '/ranger-fusion/' }
+};
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const strip = (s) => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&middot;/g, '·').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
 
-function related(current) {
-  const items = PAGES.filter(p => p.slug !== current).map(p =>
+function related(current, section) {
+  const rail = RAIL[section] || RAIL.salesforce;
+  const items = PAGES.filter(p => p.slug !== current && rail.pick(p)).map(p =>
     `      <li><a href="${p.slug}"><b>${esc(p.name)}</b><span>${esc(p.d)}</span><i aria-hidden="true">&rarr;</i></a></li>`).join('\n');
   return `<section class="rel" aria-labelledby="rel-h">
   <div class="wrap">
-    <h2 id="rel-h" class="rel__h">More from the Salesforce practice</h2>
+    <h2 id="rel-h" class="rel__h">${rail.h}</h2>
     <ul class="rel__list">
 ${items}
     </ul>
@@ -62,7 +71,7 @@ ${items}
 }
 
 function cta(o) {
-  const interest = esc(o.interest || 'Salesforce');
+  const interest = esc(o.interest == null ? 'Salesforce' : o.interest);
   const title = o.title ? ` data-title="${esc(o.title)}"` : '';
   const kicker = o.kicker ? ` data-kicker="${esc(o.kicker)}"` : '';
   return `<section class="cta" id="audit" aria-labelledby="cta-h">
@@ -88,7 +97,7 @@ function cta(o) {
       <a class="path path--score rv" data-d="2" href="#audit" data-open="score" data-track="cta_close_readiness">
         <span class="path__k">2 minutes, self-serve</span>
         <b>AI readiness check</b>
-        <span>Six questions about the Salesforce platform. An instant readiness level and the three fixes that unlock AI agents.</span>
+        <span>Six questions about the ${o.platform || 'Salesforce'} platform. An instant readiness level and the three fixes that unlock AI agents.</span>
         <svg class="path__gauge" viewBox="0 0 120 70" aria-hidden="true"><path d="M10 64a50 50 0 0 1 100 0" class="g-track"/><path d="M10 64a50 50 0 0 1 100 0" class="g-val"/></svg>
         <em>Run the readiness check &rarr;</em>
       </a>
@@ -97,8 +106,10 @@ function cta(o) {
 </section>`;
 }
 
-function header(slug) {
-  let h = CHROME.header.replace('aria-controls="dd-sf">Salesforce</button>', 'aria-controls="dd-sf" data-current>Salesforce</button>');
+function header(slug, section) {
+  let h = section === 'company'
+    ? CHROME.header.replace('aria-controls="dd-co">Company</button>', 'aria-controls="dd-co" data-current>Company</button>')
+    : CHROME.header.replace('aria-controls="dd-sf">Salesforce</button>', 'aria-controls="dd-sf" data-current>Salesforce</button>');
   h = h.split(`href="${slug}"`).join(`href="${slug}" aria-current="page"`);
   return h;
 }
@@ -116,8 +127,8 @@ function schema(meta, body) {
   const crumbs = [['Home', '/']].concat(meta.crumbs || []);
   const graph = [
     {
-      '@type': 'WebPage', '@id': url + '#webpage', url, name: meta.title, description: meta.description,
-      isPartOf: { '@id': SITE + '/#website' }, about: { '@id': url + '#service' }, inLanguage: 'en',
+      '@type': meta.pageType || 'WebPage', '@id': url + '#webpage', url, name: meta.title, description: meta.description,
+      isPartOf: { '@id': SITE + '/#website' }, about: { '@id': meta.service ? url + '#service' : SITE + '/#organization' }, inLanguage: 'en',
       datePublished: meta.published || TODAY, dateModified: TODAY,
       breadcrumb: { '@id': url + '#breadcrumb' },
       primaryImageOfPage: SITE + '/assets/img/og/' + meta.og + '.jpg',
@@ -151,7 +162,7 @@ function schema(meta, body) {
     }
     graph.push(svc);
   }
-  graph.push({ '@type': 'Organization', '@id': SITE + '/#organization', name: 'Procyon Technostructure', url: SITE + '/', logo: SITE + '/assets/img/procyon-logo.svg' });
+  graph.push(Object.assign({ '@type': 'Organization', '@id': SITE + '/#organization', name: 'Procyon Technostructure', url: SITE + '/', logo: SITE + '/assets/img/procyon-logo.svg' }, meta.org || {}));
   const faq = faqFrom(body);
   if (faq.length) {
     graph.push({
@@ -174,7 +185,7 @@ function render(meta, body) {
     .replace(/\s*<!--@updated-->/g, '')
     .replace(/<!--@logos-->/g, CHROME.logos.trim())
     .replace(/<!--@case-->/g, CHROME.caseBlock)
-    .replace(/<!--@related-->/g, related(meta.slug))
+    .replace(/<!--@related-->/g, related(meta.slug, meta.section))
     .replace(/<!--@cta (\{[\s\S]*?\})-->/g, (_, j) => cta(JSON.parse(j)));
   const url = SITE + meta.slug;
   const ogImg = SITE + '/assets/img/og/' + meta.og + '.jpg';
@@ -224,7 +235,7 @@ ${schema(meta, body)}
 <body class="pg pg--${meta.bodyClass || 'svc'}">
 <a class="skip" href="#main">Skip to content</a>
 
-${header(meta.slug)}
+${header(meta.slug, meta.section)}
 
 <main id="main">
 ${body.trim()}
