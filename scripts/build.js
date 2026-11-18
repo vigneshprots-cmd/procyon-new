@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 29, pages: 14, js: 29 };
+const VERSION = { css: 29, pages: 15, js: 29 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -58,6 +58,7 @@ const PAGES = [
   { slug: '/enterprise/servicenow/managed-services', section: 'servicenow', name: 'ServiceNow managed services', d: 'A run team for the instance, without the hiring.' },
   { slug: '/services/cloud', section: 'ai', name: 'Cloud transformation', d: 'AWS, Azure and Google Cloud migration, platform and FinOps.' },
   { slug: '/services/cybersecurity', section: 'ai', name: 'Cybersecurity & compliance', d: 'SOC in a Box, continuous GRC and security assessments.' },
+  { slug: '/services/government', section: 'ai', name: 'Government solutions', d: 'FedRAMP-aligned modernization and cleared talent for agencies.' },
   { slug: '/blog', section: 'insights', name: 'Blog', d: 'Field notes and frameworks from Procyon practice leaders.' },
   { slug: '/case-studies', section: 'insights', name: 'Case studies', d: 'Outcomes delivered for global clients, with the stack behind them.' },
   { slug: '/insights/events', section: 'insights', name: 'Events', d: 'Meet Procyon at conferences and summits.' },

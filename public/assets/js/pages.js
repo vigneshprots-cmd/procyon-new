@@ -117,6 +117,8 @@
       ['Fix soon', 'Medium risk', 'Debt is already slowing the business. Plan a fixed-scope cleanup before adding new features or AI.'],
       ['Rescue', 'High risk', 'The org is working against your teams. Stabilize first, then rebuild what blocks adoption.']
     ];
+    // Pages can supply their own wording: data-l1 / data-l2 / data-l3 = "Label|Risk|Advice"
+    [1, 2, 3].forEach(function (n) { var v = root.getAttribute('data-l' + n); if (v) LEVEL[n] = v.split('|'); });
     multi(root, function (sel) {
       chosen = sel;
       var score = sel.reduce(function (s, o) { return s + (+o.getAttribute('data-w') || 1); }, 0);

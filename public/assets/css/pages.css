@@ -384,6 +384,9 @@
 .steps4 div::before { content: counter(st); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; margin-bottom: 16px; font: 600 14px/1 var(--f-display); background: var(--green); color: var(--ink); }
 .steps4 b { display: block; font: 600 17px/1.3 var(--f-display); margin-bottom: 8px; }
 .steps4 span { font-size: 14px; color: var(--night-text); }
+.steps4--3 { grid-template-columns: repeat(3, 1fr); }
+.steps4--3 div::before { display: none; }
+.certs--in { margin-top: 40px; background: var(--night-2); border: 1px solid var(--night-line); }
 
 /* ---------- Ranger Fusion ---------- */
 .ph .orbit__ring i { color: var(--ink); }

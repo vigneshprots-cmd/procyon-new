@@ -5,7 +5,7 @@
  "title": "Cybersecurity & Compliance Services | SOC, GRC, SecOps",
  "description": "24x7 SOC in a Box, continuous GRC, security assessments and ServiceNow SecOps for HIPAA, SOC 2, ISO 27001 and NIST. Tool costs passed through at zero markup.",
  "ogTitle": "Always monitored. Always audit-ready.",
- "ogDescription": "Managed detection and response at roughly one-fifth the cost of a comparable enterprise SOC stack, continuous compliance and practitioner-led assessments.",
+ "ogDescription": "Score the exposure in a minute, then get managed detection and response at roughly one-fifth the cost of a comparable enterprise SOC stack.",
  "og": "engineering",
  "bodyClass": "svc-cyber",
  "crumbs": [
@@ -21,10 +21,14 @@
  "service": {
   "name": "Cybersecurity and compliance services",
   "serviceType": "Managed security and compliance",
-  "audience": "Mid-market and regulated enterprises",
+  "audience": "Mid-market, regulated and public-sector organizations",
   "description": "Managed detection and response (SOC in a Box), continuous GRC (CISO Genie), security advisory and assessments, identity, data and cloud security, and ServiceNow Security Operations.",
   "catalogName": "Security offers",
   "offers": [
+   [
+    "Complimentary security exploration",
+    "A two-hour, no-cost review of the environment, tools and concerns."
+   ],
    [
     "SOC in a Box",
     "24x7 managed detection and response across cloud, on-premises and hybrid, with fixed pricing."
@@ -49,26 +53,31 @@
       <div class="ph__copy">
         <p class="pill"><span class="pill__dot"></span>Cybersecurity &amp; compliance</p>
         <h1 id="ph-h" class="ph__h">Always monitored. <em>Always audit-ready.</em></h1>
-        <p class="ph__lede"><b>Procyon runs 24x7 detection and response, continuous compliance and security assessments</b> for regulated and mid-market organizations. Practitioners deliver the core work directly, a vetted partner ecosystem adds specialist scale, and every third-party tool cost is passed through at zero markup.</p>
+        <p class="ph__lede"><b>Procyon runs 24x7 detection and response, continuous compliance and security assessments</b> for regulated, mid-market and public-sector organizations. Practitioners who have delivered for the AOC, NIH and the VA do the core work, and every third-party tool cost is passed through at zero markup.</p>
         <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Other" data-kicker="Cybersecurity" data-title="Complimentary security exploration (2 hours)" data-message="Environment and tools today: &#10;Biggest security concern: ">Book a free 2-hour exploration <i aria-hidden="true">&rarr;</i></a>
+          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Cybersecurity &amp; compliance" data-kicker="Cybersecurity" data-title="Free 2-hour security exploration" data-message="Environment and tools today: &#10;Biggest security concern: ">Book a free 2-hour exploration <i aria-hidden="true">&rarr;</i></a>
           <a class="btn btn--line btn--lg" href="#offers">See the offers</a>
         </div>
       </div>
       <div class="ph__w">
-        <div class="wcard" data-picker="cyber">
-          <span class="wcard__k">Start here</span>
-          <p class="wcard__t">What needs fixing first?</p>
-          <div class="opt-list" role="radiogroup" aria-label="What needs fixing first?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="SOC in a Box" data-s="24x7 managed detection and response, onboarded in 2 to 3 weeks with asset-based pricing." data-cta="Get SOC in a Box pricing" data-interest="Other" data-kicker="SOC in a Box" data-title="SOC in a Box pricing"><i></i>No one watching alerts at night</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="CISO Genie" data-s="Controls mapped continuously to HIPAA, SOC 2, ISO 27001, NIST CSF and PCI DSS, with evidence collected automatically." data-cta="See continuous GRC" data-interest="Other" data-kicker="CISO Genie" data-title="Continuous GRC demo"><i></i>Every audit is a scramble</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Vulnerability management" data-s="Scanning, pen testing and patch priorities tied to real asset risk." data-href="/enterprise/servicenow/security-risk" data-link="See ServiceNow Vulnerability Response" data-cta="Fix the vulnerability backlog" data-interest="Other" data-kicker="Vulnerability management" data-title="Vulnerability management review"><i></i>A vulnerability backlog that grows</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Identity and access" data-s="Identity governance, SSO, passwordless and privileged access, reviewed and tightened." data-cta="Review identity and access" data-interest="Other" data-kicker="Identity and access" data-title="Identity and access review"><i></i>Too many people can access too much</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Advisory and assessments" data-s="An honest, tool-agnostic posture review with a prioritized remediation plan." data-cta="Book an assessment" data-interest="Other" data-kicker="Security assessment" data-title="Security posture assessment"><i></i>No clear picture of the posture</button>
+        <div class="wcard symp" data-symp data-interest="Cybersecurity &amp; compliance" data-kicker="Exposure check" data-title="Security exposure results" data-l1="Watch|Lower exposure|A few gaps. An assessment now keeps them from becoming an incident." data-l2="Act soon|Elevated exposure|Several gaps attackers routinely use. Close identity and monitoring gaps first." data-l3="Urgent|High exposure|The organization would likely miss an active breach. Start 24x7 monitoring and an assessment now.">
+          <span class="wcard__k">One-minute exposure check</span>
+          <p class="wcard__t">Which of these are true today?</p>
+          <div class="symp__list">
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="3" data-name="No one watches security alerts 24x7"><i></i>No one watches alerts at night or weekends</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="2" data-name="Critical patches take longer than 30 days"><i></i>Critical patches take more than 30 days</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="3" data-name="MFA is not enforced everywhere"><i></i>MFA is not enforced everywhere</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="2" data-name="Former staff may still have access"><i></i>Former staff may still have access</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="1" data-name="Audit evidence is gathered by hand"><i></i>Audit evidence is gathered by hand</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-w="2" data-name="Incident response plan not tested in the last year"><i></i>No tested incident response plan</button>
           </div>
-          <div class="rec" aria-live="polite"><b data-rec-b>SOC in a Box</b><span data-rec-s>24x7 managed detection and response, onboarded in 2 to 3 weeks with asset-based pricing.</span><a class="arrow-link" data-rec-a href="/enterprise/servicenow/security-risk" hidden>See ServiceNow Vulnerability Response <i aria-hidden="true">&rarr;</i></a></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta>Get SOC in a Box pricing <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">Federal-agency and regulated-industry practitioners, not checklists.</p>
+          <div class="sev" data-level="0" aria-live="polite">
+            <div class="sev__bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="sev__label"><b>Tick the statements</b><small></small></div>
+            <p>Tick every statement that is true today.</p>
+          </div>
+          <button class="btn btn--red btn--block" type="button" data-symp-cta disabled>Send results to a security lead <i aria-hidden="true">&rarr;</i></button>
+          <p class="wcard__foot">Answers stay private and go straight into the brief.</p>
         </div>
       </div>
     </div>
@@ -80,10 +89,10 @@
     <div class="kf__card">
       <dl class="kf__in">
         <div><dt>Average breach cost</dt><dd><b>$4.88M</b>up 10% year on year (IBM 2024)</dd></div>
-        <div><dt>Time to contain</dt><dd><b>277 days</b>average to identify and contain a breach (IBM 2024)</dd></div>
-        <div><dt>Human element</dt><dd><b>68%</b>of breaches involve phishing or credential abuse (Verizon 2024)</dd></div>
+        <div><dt>Time to contain</dt><dd><b>277 days</b>to identify and contain a breach (IBM 2024)</dd></div>
+        <div><dt>Exploit window</dt><dd><b>9 days</b>for critical CVEs, against 60+ days to patch (Qualys)</dd></div>
       </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Other" data-kicker="Cybersecurity" data-title="Complimentary security exploration (2 hours)"><small>Free &middot; 2 hours</small><b>Book a security exploration</b><span>No pitch, no obligation</span><i aria-hidden="true">&rarr;</i></a>
+      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Cybersecurity &amp; compliance" data-kicker="Cybersecurity" data-title="Free 2-hour security exploration"><small>Free &middot; 2 hours</small><b>Book a security exploration</b><span>No pitch, no obligation</span><i aria-hidden="true">&rarr;</i></a>
     </div>
   </div>
 </section>
@@ -95,29 +104,51 @@
     </div>
     <div class="tiers">
       <div class="tier rv">
-        <small>Posture reviews</small><b>Advisory</b><span>An honest look at where the organization stands, before deciding where to go.</span>
+        <small>Posture reviews</small><b>Advisory</b><span>An honest, tool-agnostic look at where the organization stands.</span>
         <ul class="ticks"><li>SecOps health assessment</li><li>Cloud and IAM architecture review</li><li>Prioritized remediation plan with owners</li><li>Often the on-ramp to a managed service</li></ul>
-        <a class="btn btn--line" href="#audit" data-open="audit" data-interest="Other" data-kicker="Security assessment" data-title="Security posture assessment">Book an assessment <i aria-hidden="true">&rarr;</i></a>
+        <a class="btn btn--line" href="#audit" data-open="audit" data-interest="Cybersecurity &amp; compliance" data-kicker="Security assessment" data-title="Security posture assessment">Book an assessment <i aria-hidden="true">&rarr;</i></a>
       </div>
       <div class="tier tier--hi rv" data-d="1">
         <small>Managed detection and response</small><b>SOC in a Box</b><span>24x7 detection and response across cloud, on-premises and hybrid, with fixed pricing.</span>
         <ul class="ticks"><li>Unified telemetry from cloud, endpoints, servers and apps</li><li>AI-assisted triage that auto-remediates known patterns</li><li>24x7 analysts who confirm, block and isolate</li><li>2 to 3 week onboarding, asset-based pricing</li></ul>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="SOC in a Box" data-title="SOC in a Box pricing">Get SOC in a Box pricing <i aria-hidden="true">&rarr;</i></a>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Cybersecurity &amp; compliance" data-kicker="SOC in a Box" data-title="SOC in a Box pricing" data-message="Number of endpoints and servers: &#10;Clouds in use: ">Get SOC in a Box pricing <i aria-hidden="true">&rarr;</i></a>
       </div>
       <div class="tier rv" data-d="2">
         <small>Continuous GRC</small><b>CISO Genie</b><span>Always audit-ready, instead of annual compliance sprints.</span>
         <ul class="ticks"><li>Controls mapped to HIPAA, SOC 2, ISO 27001, NIST CSF and PCI DSS</li><li>Evidence collected in the background</li><li>A real-time risk register with owners</li><li>Threats from the SOC flow into compliance records</li></ul>
-        <a class="btn btn--line" href="#audit" data-open="audit" data-interest="Other" data-kicker="CISO Genie" data-title="Continuous GRC demo">See continuous GRC <i aria-hidden="true">&rarr;</i></a>
+        <a class="btn btn--line" href="#audit" data-open="audit" data-interest="Cybersecurity &amp; compliance" data-kicker="CISO Genie" data-title="Continuous GRC demo" data-message="Frameworks in scope: &#10;Next audit date: ">See continuous GRC <i aria-hidden="true">&rarr;</i></a>
       </div>
     </div>
     <p class="refs rv">SOC in a Box costs roughly one-fifth of a comparable enterprise SOC stack, platform and 24x7 service included.</p>
   </div>
 </section>
 
-<section class="sx" aria-labelledby="caps-h">
+<section class="sx" aria-labelledby="exp-h">
+  <div class="wrap report">
+    <div>
+      <span class="sx__k rv">The first step</span>
+      <h2 id="exp-h" class="rv">Two hours, zero cost, <em>a clear security picture.</em></h2>
+      <p class="rv" data-d="1" style="font-size:17px;color:var(--ink-2)">A practitioner walks through the environment, the tools and the worry with the team. Hard questions, no pitch and no obligation. The notes stay with the client either way.</p>
+      <a class="btn btn--red rv" data-d="2" href="#audit" data-open="audit" data-interest="Cybersecurity &amp; compliance" data-kicker="Cybersecurity" data-title="Free 2-hour security exploration" data-message="Environment and tools today: &#10;Biggest security concern: ">Book the free exploration <i aria-hidden="true">&rarr;</i></a>
+    </div>
+    <div class="report__doc rv" data-d="1">
+      <small>Complimentary exploration</small>
+      <b>What the session covers</b>
+      <ol>
+        <li>Environment, tools and how they are actually used</li>
+        <li>The incidents, audits or concerns behind the call</li>
+        <li>Gaps attackers would likely use first</li>
+        <li>Quick wins that need no new tools</li>
+        <li>Whether an assessment, SOC or GRC fits, and what it would cost</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="caps-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="caps-h" class="rv">Delivered directly, <em>not subcontracted.</em></h2><p class="rv" data-d="1">Practitioner-led work by Procyon engineers, with one accountable partner managing any specialist ecosystem.</p></div>
+      <div><h2 id="caps-h" class="rv">Delivered directly, <em>not subcontracted.</em></h2><p class="rv" data-d="1">Practitioner-led work by Procyon engineers, with one accountable partner managing any specialist ecosystem. Pick the gap.</p></div>
     </div>
     <div class="xpl rv" data-tabs>
     <div class="xpl__tabs" role="tablist" aria-label="Security capabilities">
@@ -135,7 +166,7 @@
         <div class="xpl__fig"><b>9 days</b><span>Exploit window for critical CVEs, against 60+ days to patch (Qualys)</span></div>
         
         <div class="xpl__stack"><span>Tenable</span><span>Qualys</span><span>Rapid7</span><span>Zscaler</span><span>Prisma</span><span>Fortinet</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Infrastructure security" data-title="Infrastructure and cloud security review">Review infrastructure security <i aria-hidden="true">&rarr;</i></a>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Cybersecurity &amp; compliance" data-kicker="Infrastructure security" data-title="Infrastructure and cloud security review">Review infrastructure security <i aria-hidden="true">&rarr;</i></a>
       </div>
     </div>
     <div class="xpl__panel" role="tabpanel" id="cyx-p1" aria-labelledby="cyx-t1" hidden>
@@ -146,7 +177,7 @@
         
         
         <div class="xpl__stack"><span>Varonis</span><span>Purview</span><span>AWS Macie</span><span>Prisma Cloud</span><span>Netskope</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Data security" data-title="Data security review">Map sensitive data <i aria-hidden="true">&rarr;</i></a>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Cybersecurity &amp; compliance" data-kicker="Data security" data-title="Data security review">Map sensitive data <i aria-hidden="true">&rarr;</i></a>
       </div>
     </div>
     <div class="xpl__panel" role="tabpanel" id="cyx-p2" aria-labelledby="cyx-t2" hidden>
@@ -157,7 +188,7 @@
         <div class="xpl__fig"><b>68%</b><span>Of breaches involve the human element (Verizon 2024)</span></div>
         
         <div class="xpl__stack"><span>SailPoint</span><span>Okta</span><span>CyberArk</span><span>BeyondTrust</span><span>Delinea</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Identity and access" data-title="Identity and access review">Review identity and access <i aria-hidden="true">&rarr;</i></a>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Cybersecurity &amp; compliance" data-kicker="Identity and access" data-title="Identity and access review">Review identity and access <i aria-hidden="true">&rarr;</i></a>
       </div>
     </div>
     <div class="xpl__panel" role="tabpanel" id="cyx-p3" aria-labelledby="cyx-t3" hidden>
@@ -168,7 +199,7 @@
         
         
         <div class="xpl__stack"><span>ServiceNow GRC</span><span>Archer</span><span>OneTrust</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="GRC and risk" data-title="GRC and audit readiness review">Get audit-ready <i aria-hidden="true">&rarr;</i></a>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Cybersecurity &amp; compliance" data-kicker="GRC and risk" data-title="GRC and audit readiness review">Get audit-ready <i aria-hidden="true">&rarr;</i></a>
       </div>
     </div>
     <div class="xpl__panel" role="tabpanel" id="cyx-p4" aria-labelledby="cyx-t4" hidden>
@@ -179,10 +210,24 @@
         
         <div class="xpl__how"><small>One accountable partner</small><p>Procyon manages the specialist ecosystem, so there is one contract and one owner.</p></div>
         <div class="xpl__stack"><span>Splunk</span><span>Sentinel</span><span>QRadar</span><span>MITRE ATT&amp;CK</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Managed SOC" data-title="Managed SOC scope">Plan SOC coverage <i aria-hidden="true">&rarr;</i></a>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Cybersecurity &amp; compliance" data-kicker="Managed SOC" data-title="Managed SOC scope">Plan SOC coverage <i aria-hidden="true">&rarr;</i></a>
       </div>
     </div>
   </div>
+  </div>
+</section>
+
+<section class="sx" aria-labelledby="proof-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><h2 id="proof-h" class="rv">Security and compliance <em>proven under federal scrutiny.</em></h2><p class="rv" data-d="1">The same practitioners, documentation and testing standards serve commercial and public-sector clients.</p></div>
+      <a class="sx__go rv" href="/services/government">Government solutions <i aria-hidden="true">&rarr;</i></a>
+    </div>
+    <div class="ba ba--3">
+      <div class="rv"><b>NIH, NIAAA</b><small>Federal clinical research</small><p><small>Problem</small>Clinical data captured on paper with no audit trail.</p><p><small>Result</small><em class="ba__fig">Audit-ready from go-live</em>Full audit trails and federal compliance alignment.</p></div>
+      <div class="rv" data-d="1"><b>Administrative Office of the Courts</b><small>Statewide judicial system</small><p><small>Problem</small>Integration failures creating DOJ compliance risk.</p><p><small>Result</small><em class="ba__fig">60% fewer failures</em>Stabilized integrations and automated, governed submissions.</p></div>
+      <div class="rv" data-d="2"><b>Procyon itself</b><small>Certified delivery</small><p><small>Standard</small>The controls clients ask of their vendors.</p><p><small>Held</small><em class="ba__fig">ISO 27001 &middot; SOC 2</em>ISO 27001, ISO 9001:2015, SOC 2 Type II and HIPAA-compliant delivery.</p></div>
+    </div>
   </div>
 </section>
 
@@ -205,14 +250,15 @@
     <h2 id="faq-h" class="rv">Asked before <em>a security engagement.</em></h2>
     <div class="faq__list">
       <details class="rv" open><summary>What is SOC in a Box?</summary><p class="faq-a">A 24x7 managed detection and response service across cloud, on-premises and hybrid environments: unified telemetry, AI-assisted triage and analysts who confirm severity, block IPs and isolate endpoints. It onboards in 2 to 3 weeks with asset-based pricing.</p></details>
+      <details class="rv"><summary>How much does SOC in a Box cost compared with building a SOC?</summary><p class="faq-a">Roughly one-fifth of the cost of a comparable enterprise SOC stack, with the platform and 24x7 service included and pricing based on the assets covered.</p></details>
       <details class="rv"><summary>How does continuous compliance work?</summary><p class="faq-a">Controls are mapped continuously to HIPAA, SOC 2, ISO 27001, NIST CSF and PCI DSS, evidence is collected automatically, and failed controls are flagged, assigned and tracked to remediation.</p></details>
       <details class="rv"><summary>Is Procyon a reseller of security tools?</summary><p class="faq-a">No. Third-party tool costs are passed through at zero markup. Fees cover expertise, not margin on software.</p></details>
-      <details class="rv"><summary>What does the first conversation involve?</summary><p class="faq-a">A complimentary two-hour exploration of the environment, the pain points and the tools in place. There is no pitch and no obligation.</p></details>
-      <details class="rv"><summary>Does Procyon work with ServiceNow Security Operations?</summary><p class="faq-a">Yes. Vulnerability Response, Security Incident Response, continuous compliance and GRC are implemented on ServiceNow and integrated with CrowdStrike, Splunk, Sentinel, Tenable, Qualys and Rapid7.</p></details>
+      <details class="rv"><summary>What does the free first session involve?</summary><p class="faq-a">A complimentary two-hour exploration of the environment, the concerns and the tools in place, ending with the likely gaps, quick wins and whether an assessment, SOC or GRC service fits. There is no pitch and no obligation.</p></details>
+      <details class="rv"><summary>Does Procyon secure public-sector environments?</summary><p class="faq-a">Yes. Zero Trust, continuous monitoring and RMF-aligned work is delivered for public-sector clients, with FedRAMP-aligned delivery on AWS GovCloud and Azure Government.</p></details>
     </div>
   </div>
 </section>
 
 <!--@related-->
 
-<!--@cta {"h": "Two hours, no pitch. <em>A clear security picture.</em>", "p": "Walk an expert through the environment, the tools and the worry. The session ends with the honest view and, if needed, a scoping plan.", "interest": "Other", "kicker": "Cybersecurity", "title": "Complimentary security exploration (2 hours)", "pathTitle": "Book a free security exploration", "pathText": "Two hours with a security practitioner. No pitch, no obligation, and the notes stay with the client.", "pathCta": "Book the exploration", "platform": "Salesforce or ServiceNow"}-->
+<!--@cta {"h": "Two hours, no pitch. <em>A clear security picture.</em>", "p": "Walk a security practitioner through the environment, the tools and the worry. The session ends with the honest view and, if needed, a scoping plan.", "interest": "Cybersecurity & compliance", "kicker": "Cybersecurity", "title": "Free 2-hour security exploration", "pathTitle": "Book a free security exploration", "pathText": "Two hours with a security practitioner. No pitch, no obligation, and the notes stay with the client.", "pathCta": "Book the exploration", "platform": "Salesforce or ServiceNow"}-->
