@@ -15,7 +15,43 @@ const PARTS = path.join(ROOT, 'src', 'pages', '_partials');
 const TODAY = new Date().toISOString().slice(0, 10);
 const load = (f) => JSON.parse(fs.readFileSync(path.join(DATA, f), 'utf8'));
 fs.rmSync(GEN, { recursive: true, force: true });
-const blog = load('blog.json'), cases = load('case-studies.json').map(c => Object.assign(c, { title: String(c.title).replace(/s+d{1,3}$/, '') })), events = load('events.json'), jobs = load('jobs.json');
+const blog = load('blog.json'), cases = load('case-studies.json').map(c => Object.assign(c, { title: String(c.title).replace(/\s+\d{1,3}$/, '') })), events = load('events.json'), jobs = load('jobs.json');
+
+// Editorial overrides on top of the CMS: author renames and event series order/dates.
+const OVR = fs.existsSync(path.join(DATA, 'overrides.json')) ? load('overrides.json') : { authors: {}, series: [] };
+const SERIES = new Map();
+for (const p of blog) if (OVR.authors[p.author]) p.author = OVR.authors[p.author];
+for (const s of OVR.series) s.posts.forEach(([slug, date], i) => {
+  const p = blog.find(x => x.slug === slug);
+  if (!p) return;
+  p.published_at = date; p.updated_at = date;
+  SERIES.set(slug, { s, i });
+});
+blog.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+const seriesOf = (slug) => SERIES.get(slug);
+const seriesBox = (p) => {
+  const m = seriesOf(p.slug); if (!m) return '';
+  const { s, i } = m, list = s.posts.map(([slug]) => blog.find(x => x.slug === slug)).filter(Boolean);
+  return `<nav class="series" aria-label="${esc(s.name)}">
+        <p class="series__k"><b>${esc(s.name)}</b><span>Part ${i + 1} of ${list.length}</span></p>
+        <ol>${list.map((x, j) => j === i ? `<li aria-current="page"><span>${esc(x.title)}</span></li>` : `<li><a href="/blog/${x.slug}">${esc(x.title)}</a></li>`).join('')}</ol>
+        <p class="series__ev"><a href="${s.event}">${esc(s.eventLabel)} <i aria-hidden="true">&rarr;</i></a></p>
+      </nav>`;
+};
+const evSeries = (e) => {
+  const s = OVR.series.find(x => x.event === '/insights/events/' + e.slug); if (!s) return '';
+  const list = s.posts.map(([slug]) => blog.find(x => x.slug === slug)).filter(Boolean);
+  return `<section class="sx sx--paper" aria-labelledby="ser-h"><div class="wrap">
+  <div class="sx__head"><div><h2 id="ser-h" class="rv">The ${esc(s.name.replace(/ series$/, ''))} series, <em>in reading order.</em></h2><p class="rv" data-d="1">From preparation to the takeaways, ${list.length} articles in the order they were published.</p></div><a class="sx__go rv" href="/blog/${list[0].slug}">Start with part 1 <i aria-hidden="true">&rarr;</i></a></div>
+  <ol class="ev-series">${list.map((p, i) => `<li class="rv"><a href="/blog/${p.slug}"><small>Part ${i + 1} &middot; <time datetime="${day(p.published_at)}">${fmt(p.published_at)}</time></small><b>${esc(p.title)}</b><span>${esc(clip(p.excerpt, 130))}</span></a></li>`).join('')}</ol>
+</div></section>`;
+};
+const seriesNext = (p) => {
+  const m = seriesOf(p.slug); if (!m) return '';
+  const { s, i } = m, list = s.posts.map(([slug]) => blog.find(x => x.slug === slug)).filter(Boolean);
+  const prev = list[i - 1], next = list[i + 1];
+  return `<div class="series-nav">${prev ? `<a class="series-nav__prev" href="/blog/${prev.slug}"><small>&larr; Part ${i}</small><b>${esc(prev.title)}</b></a>` : '<span></span>'}${next ? `<a class="series-nav__next" href="/blog/${next.slug}"><small>Part ${i + 2} &rarr;</small><b>${esc(next.title)}</b></a>` : ''}</div>`;
+};
 
 const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -140,7 +176,10 @@ ${cta({ h: 'Read enough? <em>Talk to the author.</em>', p: 'Every article comes 
 
 for (const p of blog) {
   const { html, toc } = cleanBody(p.body_html);
-  const related = blog.filter(x => x.slug !== p.slug && x.category.trim() === p.category.trim()).concat(blog.filter(x => x.slug !== p.slug && x.category.trim() !== p.category.trim())).slice(0, 3);
+  const sm = seriesOf(p.slug);
+  const inSeries = sm ? sm.s.posts.map(([slug]) => slug) : [];
+  const seriesRel = sm ? inSeries.slice(sm.i + 1).concat(inSeries.slice(0, sm.i).reverse()).map(slug => blog.find(x => x.slug === slug)).filter(Boolean) : [];
+  const related = [...new Set(seriesRel.concat(blog.filter(x => x.slug !== p.slug && x.category.trim() === p.category.trim()), blog.filter(x => x.slug !== p.slug && x.category.trim() !== p.category.trim())))].slice(0, 3);
   const ctaLabel = p.cta_label && !PRONOUN.test(p.cta_label) ? p.cta_label : 'Talk to a senior architect';
   const ctaHref = p.cta_url && !/^\/contact/.test(p.cta_url) ? p.cta_url : '#audit';
   const ctaAttrs = ctaHref === '#audit' ? ` data-open="audit" data-interest="" data-kicker="${esc(p.category.trim())}" data-title="Brief a senior architect" data-message="Read: ${esc(p.title)}.&#10;Current situation: "` : '';
@@ -172,8 +211,10 @@ ${p.image ? `<div class="post__cover"><div class="wrap"><img src="${p.image.src}
   <div class="wrap post__grid">
     <article class="post__body" data-readbody>
       ${tocHtml ? `<details class="toc-m"><summary>On this page</summary>${tocHtml.replace(' data-toc', '')}</details>` : ''}
+      ${seriesBox(p)}
 ${html}
       ${(p.tags || []).length ? `<p class="post__tags">${p.tags.map(t => `<span>${esc(t)}</span>`).join('')}</p>` : ''}
+      ${seriesNext(p)}
     </article>
     <aside class="post__side">
       <div class="post__sticky">
@@ -417,6 +458,8 @@ ${agenda.length ? `<section class="sx" aria-labelledby="ag-h"><div class="wrap">
   <div class="sx__head"><div><h2 id="ag-h" class="rv">The plan <em>for the week.</em></h2></div></div>
   <div class="days days--${Math.min(agenda.length, 4)}">${agenda.map((a, i) => `<div class="rv"${i ? ` data-d="${Math.min(i, 3)}"` : ''}><small>${esc(a.day)}</small><span>${a.items.map(esc).join('<br>')}</span></div>`).join('')}</div>
 </div></section>` : ''}
+
+${evSeries(e)}
 
 ${faqHtml(e.faqs, 'Before <em>booking a session.</em>')}
 

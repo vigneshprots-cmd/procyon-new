@@ -1,0 +1,33 @@
+{
+ "_note": "Applied by scripts/build-insights.js on top of the CMS sync, so a re-sync never undoes these. Series posts are dated in reading order: pre-event guides first, the takeaways post last, after the event.",
+ "authors": { "Srinath": "Vignesh" },
+ "series": [
+  {
+   "name": "Dreamforce 2026 series",
+   "event": "/insights/events/dreamforce-2026",
+   "eventLabel": "Dreamforce 2026, Sept 15 to 17, San Francisco",
+   "posts": [
+    ["dreamforce-2026-guide", "2026-08-18T09:00:00+00:00"],
+    ["dreamforce-2026-sessions-guide", "2026-08-25T09:00:00+00:00"],
+    ["agentforce-at-dreamforce-2026", "2026-09-01T09:00:00+00:00"],
+    ["dreamforce-2026-roi", "2026-09-04T09:00:00+00:00"],
+    ["meet-procyon-at-dreamforce-2026", "2026-09-08T09:00:00+00:00"],
+    ["dreamforce-2026-key-takeaways", "2026-09-21T09:00:00+00:00"]
+   ]
+  },
+  {
+   "name": "NMSDC 2026 series",
+   "event": "/insights/events/nmsdc-annual-conference-exchange-2026",
+   "eventLabel": "NMSDC 2026, Oct 25 to 28, Los Angeles",
+   "posts": [
+    ["nmsdc-2026-certified-mbe-partner-shortlist", "2026-10-01T09:00:00+00:00"],
+    ["supplier-diversity-salesforce-certified-mbe-partner", "2026-10-05T09:00:00+00:00"],
+    ["servicenow-certified-mbe-delivery-partner", "2026-10-08T09:00:00+00:00"],
+    ["cloud-modernization-certified-mbe-partner-2026", "2026-10-12T09:00:00+00:00"],
+    ["supplier-diversity-roi-certified-mbe-data-partner", "2026-10-15T09:00:00+00:00"],
+    ["agentforce-certified-mbe-partner-enterprise-ai", "2026-10-19T09:00:00+00:00"],
+    ["nmsdc-2026-key-takeaways", "2026-10-30T09:00:00+00:00"]
+   ]
+  }
+ ]
+}
