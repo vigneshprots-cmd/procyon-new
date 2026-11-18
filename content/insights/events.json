@@ -1,0 +1,210 @@
+[
+ {
+  "slug": "nmsdc-annual-conference-exchange-2026",
+  "title": "NMSDC Annual Conference & Exchange 2026",
+  "subtitle": "A certified MBE partner for enterprise Salesforce, Cloud, Data and AI delivery",
+  "date_text": "Oct 25-28, 2026",
+  "start_date": "2026-10-25",
+  "end_date": "2026-10-28",
+  "location": "Los Angeles, CA",
+  "venue": "Los Angeles Convention Center",
+  "event_type": "Conference",
+  "category": "Others",
+  "excerpt": "Procyon, a certified minority business enterprise, is attending the 2026 NMSDC Annual Conference & Exchange in Los Angeles to connect with corporate buyers and supplier-diversity leaders seeking a proven enterprise technology partner.",
+  "description": "The NMSDC Annual Conference & Exchange is the country's premier forum connecting certified minority business enterprises with the corporations that want to buy from them. Procyon Technostructure is a certified MBE, and we are attending to meet the supplier-diversity and procurement leaders who need enterprise technology delivered without compromise.\n\nFor more than 20 years, Procyon has delivered enterprise transformation across Salesforce, ServiceNow, SAP, Cloud, Data, and AI for 75+ global clients and 200+ projects, backed by three global delivery centers and ISO 27001 and SOC 2 Type II certified delivery. Partnering with Procyon lets corporations advance their supplier-diversity commitments while working with a team that delivers at enterprise scale.\n\nIn Los Angeles, we want to meet corporate buyers, Tier 1 prime contractors, and supplier-diversity program leaders exploring diverse technology partners for Salesforce and Agentforce, cloud and data modernization, enterprise integration, and managed services. Let us talk about where a certified MBE partner can strengthen both your delivery outcomes and your supplier-diversity goals.",
+  "highlights": [
+   "Certified MBE with 20+ years of enterprise delivery",
+   "Salesforce, ServiceNow, SAP, Cloud, Data and AI under one partner",
+   "200+ enterprise projects for 75+ global clients",
+   "3 global delivery centers with a senior US and offshore blend",
+   "ISO 27001 and SOC 2 Type II certified delivery",
+   "A partner that advances your supplier-diversity goals"
+  ],
+  "why_meet": [
+   "You need to meet supplier-diversity goals without compromising delivery quality",
+   "You are sourcing a certified MBE for Salesforce or Agentforce programs",
+   "You want cloud, data, or AI modernization from a diverse partner",
+   "You need enterprise integration or managed services at enterprise scale",
+   "You are a Tier 1 prime seeking a qualified diverse subcontractor",
+   "You want a candid second opinion on a transformation already in flight"
+  ],
+  "services": [
+   {
+    "href": "/enterprise/salesforce",
+    "name": "Salesforce Implementation & Managed Services",
+    "description": "End-to-end Salesforce delivery and managed operations"
+   },
+   {
+    "href": "/services/ai-ml",
+    "name": "Agentforce & AI Copilots",
+    "description": "Agentic AI and copilots built on your trusted data"
+   },
+   {
+    "href": "/services/cloud",
+    "name": "Cloud Transformation",
+    "description": "Scalable cloud architecture and modernization"
+   },
+   {
+    "href": "/services/data-analytics",
+    "name": "Data Strategy & Analytics",
+    "description": "Unified data, analytics, and reporting"
+   },
+   {
+    "href": "/solutions/enterprise-integration",
+    "name": "Enterprise Integration",
+    "description": "Connect Salesforce, SAP, and the wider enterprise estate"
+   }
+  ],
+  "products": [],
+  "agenda": [],
+  "stats": [],
+  "audience": "Chief Procurement Officers, Supplier Diversity Leaders, Corporate Buyers, Tier 1 Prime Contractors, VP IT, Enterprise Technology Sourcing",
+  "event_url": "https://nmsdc.org/events/annual-conference-and-exchange/",
+  "seo_title": "Meet Procyon at NMSDC 2026 | Certified MBE Partner",
+  "seo_description": "Procyon, a certified MBE, is at the 2026 NMSDC Annual Conference & Exchange in Los Angeles. Connect with us on Salesforce, Cloud, Data and AI.",
+  "faqs": [],
+  "updated_at": "2026-10-29T09:41:49.587041+00:00"
+ },
+ {
+  "slug": "dreamforce-2026",
+  "title": "Dreamforce 2026",
+  "subtitle": "The world's largest AI + CRM event - meet Procyon's Salesforce leadership 1:1",
+  "date_text": "Sept 15 to 17, 2026",
+  "start_date": "2026-09-15",
+  "end_date": "2026-09-17",
+  "location": "San Francisco, CA",
+  "venue": "Moscone Center",
+  "event_type": "Conference",
+  "category": "Salesforce",
+  "excerpt": "Join Procyon's Salesforce practice at Dreamforce 2026 for private strategy sessions on Agentforce 360, Data Cloud, Service Cloud, MuleSoft and enterprise AI walk away with a working plan, not a pitch.",
+  "description": "Dreamforce is where 180,000+ trailblazers, executives and Salesforce leaders converge to shape the next chapter of AI-powered customer experience. Procyon's senior Salesforce architects and delivery leaders will be on the ground across all three days,  available for private, working-session-style meetings with enterprise leaders who are actively evaluating Agentforce, Data Cloud, or the next phase of their Salesforce roadmap. We are not exhibiting. We come to listen, whiteboard and walk away with a plan you can act on the following week - no booth demos, no swag lines, no fluff.",
+  "highlights": [
+   "1:1 strategy sessions with Procyon's Salesforce practice lead",
+   "Live Agentforce 360 architecture walkthrough tailored to your data",
+   "Data Cloud + Customer 360 activation roadmap",
+   "MuleSoft & integration modernization clinic",
+   "Service Cloud + AI copilot ROI modeling",
+   "Post-event 30-day acceleration plan, delivered free"
+  ],
+  "why_meet": [
+   "You're piloting Agentforce and want a proven rollout blueprint",
+   "You need Data Cloud unified with your existing Salesforce estate",
+   "You're rethinking Service Cloud with AI copilots and case deflection",
+   "You want to modernize MuleSoft flows or replatform legacy integrations",
+   "You're looking for a delivery partner with senior US + offshore blend",
+   "You need a candid second opinion on a Salesforce implementation in flight"
+  ],
+  "services": [
+   {
+    "href": "/enterprise/salesforce",
+    "name": "Salesforce Implementation & Managed Services",
+    "description": "Sales, Service, Experience, Marketing and Revenue Cloud, implemented, integrated, and run."
+   },
+   {
+    "href": "/services/ai-ml",
+    "name": "Agentforce & AI Copilots",
+    "description": "Design, deploy and govern Salesforce Agentforce agents in production."
+   },
+   {
+    "href": "/solutions/digital-transformation",
+    "name": "Data Cloud & Customer 360",
+    "description": "Unify data, activate segments and power AI use cases end-to-end."
+   },
+   {
+    "href": "/solutions/enterprise-integration",
+    "name": "MuleSoft & Integration",
+    "description": "API-led connectivity, event streaming and legacy modernization."
+   },
+   {
+    "href": "/services/data-analytics",
+    "name": "CRM Analytics & Reporting",
+    "description": "Executive dashboards, revenue intelligence and forecasting."
+   },
+   {
+    "href": "/services/managed-it-services",
+    "name": "Managed Salesforce Operations",
+    "description": "24×7 admin, release management, SLA-backed support."
+   }
+  ],
+  "products": [
+   {
+    "name": "Agentforce 360",
+    "description": "Autonomous AI agents for sales, service and marketing, built on your trusted data."
+   },
+   {
+    "name": "Data Cloud",
+    "description": "The real-time customer data foundation for AI and personalization at scale."
+   },
+   {
+    "name": "Sales Cloud + Revenue Cloud",
+    "description": "Modern selling, CPQ and revenue lifecycle management."
+   },
+   {
+    "name": "Service Cloud + Service AI",
+    "description": "AI-first case deflection, agent copilots and field service."
+   },
+   {
+    "name": "Marketing Cloud + Personalization",
+    "description": "Journey orchestration, personalization and Data Cloud-powered campaigns."
+   },
+   {
+    "name": "MuleSoft Anypoint",
+    "description": "API management, integration and iPaaS for enterprise-scale connectivity."
+   },
+   {
+    "name": "Ranger Fusion",
+    "description": "Ranger Fusion is Procyon’s Salesforce-native ERP solution that unifies HR, Finance, Projects, Talent, and business operations in one connected platform. It helps organizations streamline workflows, automate processes, improve visibility, and drive smarter, more efficient growth."
+   }
+  ],
+  "agenda": [
+   {
+    "day": "Day 1, Tuesday, Sept 15",
+    "items": [
+     "Morning: Keynote analysis briefing (private)",
+     "Afternoon: Private 1:1 strategy sessions",
+     "Evening: Executive dinner (invite-only, limited seats)"
+    ]
+   },
+   {
+    "day": "Day 2, Wednesday, Sept 16",
+    "items": [
+     "Agentforce deep-dive working sessions",
+     "Data Cloud architecture whiteboarding",
+     "Client roundtable: AI in Service Cloud"
+    ]
+   },
+   {
+    "day": "Day 3, Thursday, Sept 17",
+    "items": [
+     "Roadmap acceleration workshops",
+     "Executive networking meetups",
+     "Post-event 30-day plan handoff"
+    ]
+   }
+  ],
+  "stats": [
+   {
+    "label": "Global attendees",
+    "value": "180K+"
+   },
+   {
+    "label": "Sessions",
+    "value": "1,500+"
+   },
+   {
+    "label": "Days of AI + CRM",
+    "value": "3"
+   },
+   {
+    "label": "Private meetings only",
+    "value": "1:1"
+   }
+  ],
+  "audience": "CIOs, CTOs, VP Sales, VP Service, Chief Digital Officers, Salesforce Program Owners and Enterprise Architects",
+  "event_url": "https://www.salesforce.com/dreamforce/",
+  "seo_title": "Join Procyon at Dreamforce: Unlocking AI-Native Services",
+  "seo_description": "Meet Procyon at Dreamforce 2026, Sept 15 to 17 in San Francisco. Discuss Salesforce, Agentforce, Data 360, AI and integrations. Book your 1:1 meeting.",
+  "faqs": [],
+  "updated_at": "2026-10-14T11:05:16.148252+00:00"
+ }
+]

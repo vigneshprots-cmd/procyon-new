@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "node scripts/build.js"
+    "build": "node scripts/build-insights.js && node scripts/build.js",
+    "sync-insights": "node scripts/sync-insights.js"
   },
   "engines": {
     "node": ">=18"

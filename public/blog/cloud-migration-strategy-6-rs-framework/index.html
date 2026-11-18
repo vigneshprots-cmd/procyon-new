@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloud Migration Strategy: The 6 R's Framework Guide</title>
+<meta name="description" content="A practical guide to the 6 R's of cloud migration - rehost, replatform, refactor and more - so US enterprises pick the right path per workload.">
+<link rel="canonical" href="https://procyonts.com/blog/cloud-migration-strategy-6-rs-framework">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0B0D10">
+
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-08-25">
+<meta property="article:section" content="Cloud">
+<meta property="og:site_name" content="Procyon Technostructure">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Cloud Migration Strategy: The 6 R's Framework for US Enterprises">
+<meta property="og:description" content="Not every workload should move to the cloud the same way. The 6 R's framework helps you decide, application by application, what to do and why.">
+<meta property="og:url" content="https://procyonts.com/blog/cloud-migration-strategy-6-rs-framework">
+<meta property="og:image" content="https://procyonts.com/assets/img/og/insights/cloud-migration-strategy-6-rs-framework.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cloud Migration Strategy: The 6 R's Framework for US Enterprises">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@procyon_ts">
+<meta name="twitter:title" content="Cloud Migration Strategy: The 6 R's Framework for US Enterprises">
+<meta name="twitter:description" content="Not every workload should move to the cloud the same way. The 6 R's framework helps you decide, application by application, what to do and why.">
+<meta name="twitter:image" content="https://procyonts.com/assets/img/og/insights/cloud-migration-strategy-6-rs-framework.jpg">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css?v=28">
+<link rel="stylesheet" href="/assets/css/pages.css?v=10">
+<link rel="stylesheet" href="/assets/css/insights.css?v=10">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://procyonts.com/blog/cloud-migration-strategy-6-rs-framework#webpage",
+      "url": "https://procyonts.com/blog/cloud-migration-strategy-6-rs-framework",
+      "name": "Cloud Migration Strategy: The 6 R's Framework Guide",
+      "description": "A practical guide to the 6 R's of cloud migration - rehost, replatform, refactor and more - so US enterprises pick the right path per workload.",
+      "isPartOf": {
+        "@id": "https://procyonts.com/#website"
+      },
+      "about": {
+        "@id": "https://procyonts.com/#organization"
+      },
+      "inLanguage": "en",
+      "datePublished": "2026-08-25",
+      "dateModified": "2026-08-25",
+      "breadcrumb": {
+        "@id": "https://procyonts.com/blog/cloud-migration-strategy-6-rs-framework#breadcrumb"
+      },
+      "primaryImageOfPage": "https://procyonts.com/assets/img/og/insights/cloud-migration-strategy-6-rs-framework.jpg",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".ph__lede",
+          ".faq-a"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://procyonts.com/blog/cloud-migration-strategy-6-rs-framework#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://procyonts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://procyonts.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cloud Migration Strategy: The 6 R's Framework",
+          "item": "https://procyonts.com/blog/cloud-migration-strategy-6-rs-framework"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://procyonts.com/blog/cloud-migration-strategy-6-rs-framework#article",
+      "headline": "Cloud Migration Strategy: The 6 R's Framework for US Enterprises",
+      "description": "A practical guide to the 6 R's of cloud migration - rehost, replatform, refactor and more - so US enterprises pick the right path per workload.",
+      "image": "https://procyonts.com/assets/img/og/insights/cloud-migration-strategy-6-rs-framework.jpg",
+      "datePublished": "2026-08-25",
+      "dateModified": "2026-08-25",
+      "articleSection": "Cloud",
+      "keywords": "cloud migration, 6 R's, application modernization, rehost, refactor, cloud strategy",
+      "wordCount": 670,
+      "author": {
+        "@type": "Person",
+        "name": "John"
+      },
+      "publisher": {
+        "@id": "https://procyonts.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://procyonts.com/blog/cloud-migration-strategy-6-rs-framework#webpage"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://procyonts.com/#organization",
+      "name": "Procyon Technostructure",
+      "url": "https://procyonts.com/",
+      "logo": "https://procyonts.com/assets/img/procyon-logo.svg"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://procyonts.com/blog/cloud-migration-strategy-6-rs-framework#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "On this pageOn this pageWhy 'Lift and Shift Everything' Fails QuietlyThe 6 R's, ExplainedHow to Assign an R to Each WorkloadSequencing the ProgramWant an application-by-application migration plan?Move to the cloud with a plan, not a headline The fastest way to a disappointing cloud program is to treat migration as a single decision. 'We are moving to the cloud' is not a strategy - it is a headline. The real work is deciding, application by application, how each workload should move, and being honest that some of them should not move at all yet. The 6 R's framework is the industry-standard way to make those calls consistently across a portfolio. Here is how each option works, when to use it, and how to avoid the trap of lifting and shifting everything and calling it transformation. * { box-sizing: border-box; } body { margin: 0; padding: 12px 16px; font-family: Arial, Helvetica, sans-serif; background: #ffffff; } .why-approach-matters { width: 100%; padding: 20px 21px 19px; border: 1px solid #45d9a2; border-radius: 13px; background-color: #effcf7; color: #000000; font-size: 16px; line-height: 1.7; } .approach-title { margin: 0 0 8px 0; padding: 0; color: #000000; font-size: 16px; font-weight: 700; line-height: 1.3; letter-spacing: 0.5px; } .approach-content { margin: 0; padding: 0; color: #000000; font-size: 16px; font-weight: 400; line-height: 1.7; } .approach-content strong { color: #000000; font-weight: 700; } .approach-content a { color: #008568; font-size: 16px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; } .approach-content a:hover { color: #008568; } WHY THE APPROACH MATTERS MuleSoft's 2026 benchmark shows 86% of leaders still fighting integration complexity - much of it created when workloads move to the cloud without a plan. A workload that was inefficient on-premises is simply inefficient in the cloud, now with a monthly bill attached. The 6 R's exist so you can be deliberate. Source: MuleSoft 2026 Why 'Lift and Shift Everything' Fails Quietly Rehosting an entire estate to the cloud is fast, and it feels like progress. But as a whole-portfolio strategy it delivers a data center in someone else's building. Lift and shift is a legitimate tactic for parts of a portfolio; applied to everything, it just relocates your inefficiency. The 6 R's exist so you can decide deliberately instead. * { box-sizing: border-box; } body { margin: 0; padding: 18px 48px; font-family: Arial, Helvetica, sans-serif; background: #ffffff; color: #000000; } .six-rs { width: 100%; } .six-rs-title { display: inline-block; margin: 0 0 28px 0; padding-bottom: 10px; color: #ffffff; font-size: 24px; font-weight: 700; line-height: 1.2; border-bottom: 3px solid #10b981; } .six-r-card { display: flex; width: 100%; margin-bottom: 13px; padding: 17px 22px 16px 20px; border: 1px solid #dfe3e8; border-left: 5px solid #10b981; border-radius: 12px; background: #ffffff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); } .six-r-number { flex: 0 0 34px; width: 34px; height: 34px; margin: 0 16px 0 0; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #10b981; color: #ffffff; font-size: 15px; font-weight: 700; line-height: 1; } .six-r-content { flex: 1; min-width: 0; } .six-r-heading { margin: 3px 0 7px 0; color: #002b68; font-size: 15px; font-weight: 700; line-height: 1.4; } .six-r-text { margin: 0; color: #425a78; font-size: 14px; font-weight: 400; line-height: 1.75; } .six-r-card:last-child { margin-bottom: 0; } The 6 R's, Explained 1 Rehost (lift and shift) Move the workload as-is. Fast and low-risk. Best for stable applications, tight timelines, or a first step you will optimize later. 2 Replatform (lift and reshape) Make targeted improvements during the move - a managed database, autoscaling, container packaging - without a full rewrite. Best when small changes unlock outsized operational gains. 3 Refactor (re-architect) Rebuild the application to be cloud-native. Highest effort, highest payoff. Reserve it for high-value, high-change applications where scalability is a genuine differentiator. 4 Repurchase (move to SaaS) Replace a custom or legacy application with a commercial subscription product. Best for commodity functions where a mature SaaS option does the job better. 5 Retire (decommission) Turn it off. Most portfolios carry applications no one truly uses. Migration is the perfect moment to find and retire them. 6 Retain (keep for now) Some workloads should stay on-premises due to compliance, latency, or dependencies. Retaining deliberately is a decision; retaining by neglect is not. How to Assign an R to Each Workload Workload profileUsual best fitStable, commodity, low changeRehost or RepurchaseOperationally painful but valuableReplatformStrategic, differentiating, high changeRefactorRedundant or unusedRetireCompliance or latency boundRetain (revisit later) Migration rarely stands alone - it usually sits inside a broader modernization effort. See how it connects to our enterprise application modernization approach and our cloud transformation services. * { box-sizing: border-box; } body { margin: 0; padding: 10px 12px; font-family: Arial, Helvetica, sans-serif; background: #ffffff; } .portfolio-assessment { width: 100%; padding: 20px 20px 18px; border-left: 5px solid #2563eb; border-radius: 12px; background-color: #eff6ff; color: #000000; font-size: 16px; line-height: 1.7; } .assessment-title { margin: 0 0 8px 0; padding: 0; color: #000000; font-size: 16px; font-weight: 700; line-height: 1.3; letter-spacing: 0.5px; } .assessment-text { margin: 0; padding: 0; color: #000000; font-size: 16px; font-weight: 400; line-height: 1.7; } .assessment-text strong { color: #000000; font-weight: 700; } START WITH A PORTFOLIO ASSESSMENT You cannot assign the 6 R's from intuition. Score every application on business value, technical complexity, and constraints such as compliance and dependencies. The assessment is what turns 'move to the cloud' into a defensible, sequenced plan. Sequencing the Program Assess the portfolio and assign an R to every workload.Start with quick, low-risk wins (rehost and retire) to build momentum and free capacity.Replatform the operationally painful workloads next for fast operational relief.Refactor the strategic few deliberately, with clear success metrics.Establish landing-zone governance early - security, identity, and monitoring - so growth stays controlled. * { box-sizing: border-box; } body { margin: 0; padding: 12px 18px; font-family: Arial, Helvetica, sans-serif; background: #ffffff; } .common-mistake { width: 100%; padding: 20px 22px 18px; border-left: 5px solid #f59e0b; border-radius: 12px; background-color: #fffbeb; color: #000000; font-size: 16px; line-height: 1.7; } .mistake-title { margin: 0 0 8px 0; padding: 0; color: #000000; font-size: 16px; font-weight: 700; line-height: 1.3; letter-spacing: 0.5px; } .mistake-text { margin: 0; padding: 0; color: #000000; font-size: 16px; font-weight: 400; line-height: 1.7; } THE MOST COMMON MISTAKE Teams refactor the wrong applications first - usually the ones the loudest engineer finds interesting, not the ones the business depends on. Let the portfolio assessment, not enthusiasm, drive sequence. * { box-sizing: border-box; } body { margin: 0; padding: 6px 18px; font-family: Arial, Helvetica, sans-serif; background: #ffffff; color: #000000; } .cloud-cta { width: 100%; padding: 28px 30px 30px; border: 1px solid #45d9a2; border-radius: 15px; background: linear-gradient(135deg, #effcf7 0%, #d8f8e9 100%); } .cloud-title { margin: 0 0 10px 0; color: #007a63; font-size: 18px; font-weight: 700; line-height: 1.4; } .cloud-text { margin: 0 0 19px 0; color: #000000; font-size: 16px; font-weight: 400; line-height: 1.75; max-width: 760px; } .cloud-button { display: inline-block; padding: 15px 28px; border-radius: 30px; background: #10b981; color: #ffffff; font-size: 15px; font-weight: 700; line-height: 1.2; text-decoration: none; box-shadow: 0 7px 14px rgba(16, 185, 129, 0.25); } .cloud-button:hover { background: #0ea574; color: #ffffff; } Want an application-by-application migration plan? Our cloud team runs a portfolio assessment that assigns the right R to every workload and sequences the program around real business value. Explore Cloud Transformation Related Articles Enterprise application modernization SAP S/4HANA migration: greenfield vs brownfield Headless Salesforce: API-first architecture Our cloud practice Move to the cloud with a plan, not a headline Get a workload-level migration strategy sequenced around business value and risk. Explore Cloud Transformation See Our Case Studies cloud migration6 R'sapplication modernizationrehostrefactorcloud strategy On this pageWhy 'Lift and Shift Everything' Fails QuietlyThe 6 R's, ExplainedHow to Assign an R to Each WorkloadSequencing the ProgramWant an application-by-application migration plan?Move to the cloud with a plan, not a headline Cloud Apply this to the actual platform. A senior architect replies within one business day. Talk to a senior architect &rarr; ShareLinkedInXEmail Questions this article answers. What are the 6 R's of cloud migration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rehost (lift and shift), replatform (lift and reshape), refactor (re-architect), repurchase (move to SaaS), retire (decommission), and retain (keep on-premises for now). Each workload is assigned one strategy based on its value, complexity, and constraints."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is lift and shift a good cloud migration strategy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rehosting is fast and low-risk and is the right call for many workloads. But rehosting everything leaves cloud-native benefits on the table. The strongest strategies mix rehosting with selective replatforming and refactoring where the payoff is real."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I decide which strategy to use for each application?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with a portfolio assessment that scores each workload on business value, technical complexity, and constraints such as compliance and dependencies. High-value, high-change applications justify refactoring; stable commodity workloads favor rehosting or repurchasing; low-value applications are candidates to retire."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="pg pg--ins-post">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="hdr" id="top">
+  <div class="wrap hdr__in">
+    <a class="brand" href="/" aria-label="Procyon Technostructure home">
+      <img src="/assets/img/procyon-logo.svg" alt="Procyon Technostructure" width="176" height="48">
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-sf">Salesforce</button>
+          <div class="dd__panel dd__panel--wide" id="dd-sf">
+            <ul class="dd__links">
+              <li><a href="/enterprise/salesforce/implementation"><b>Implementation &amp; rollout</b><span>Sales, Service, Revenue and Experience Cloud, right the first time.</span></a></li>
+              <li><a href="/enterprise/salesforce/agentforce"><b>Agentforce</b><span>AI agents working in production in under 4 weeks.</span></a></li>
+              <li><a href="/enterprise/salesforce/data-cloud"><b>Data Cloud &amp; integration</b><span>One real-time customer record across every system.</span></a></li>
+              <li><a href="/enterprise/salesforce/org-audit"><b>Org audit &amp; rescue</b><span>Find the debt, fix the org, win back user trust.</span></a></li>
+              <li><a href="/enterprise/salesforce/managed-services"><b>Managed services</b><span>Admin, releases and continuous improvement on retainer.</span></a></li>
+            </ul>
+            <a class="dd__feature" href="/products/ranger-fusion">
+              <small>Our product</small>
+              <b>Ranger Fusion ERP</b>
+              <span>Finance, inventory, projects and HR, native to Salesforce. Live in 2 to 4 weeks.</span>
+              <em>See the product &rarr;</em>
+            </a>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-sn">ServiceNow</button>
+          <div class="dd__panel dd__panel--wide" id="dd-sn">
+            <ul class="dd__links">
+              <li><a href="/enterprise/servicenow/platform-audit"><b>Platform audit &amp; tech-debt removal</b><span>From cluttered instance to clean platform in 8 weeks.</span></a></li>
+              <li><a href="/enterprise/servicenow/itsm-itom"><b>ITSM, ITOM &amp; CMDB</b><span>Incident, change and asset on data you can trust.</span></a></li>
+              <li><a href="/enterprise/servicenow/security-risk"><b>Security &amp; risk</b><span>SecOps and GRC for HIPAA, NIST and FedRAMP.</span></a></li>
+              <li><a href="/enterprise/servicenow/now-assist"><b>Now Assist &amp; AI agents</b><span>Generative AI and agents, governed from day one.</span></a></li>
+              <li><a href="/enterprise/servicenow/managed-services"><b>Managed services</b><span>A run team for your instance, without the hiring.</span></a></li>
+            </ul>
+            <a class="dd__feature dd__feature--sn" href="#audit" data-interest="ServiceNow">
+              <small>Start here</small>
+              <b>Talk to a ServiceNow architect</b>
+              <span>30 minutes, no sales script. You leave with a short list of what to fix first.</span>
+              <em>Book the call &rarr;</em>
+            </a>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-ai">AI &amp; Data</button>
+          <div class="dd__panel" id="dd-ai">
+            <ul class="dd__links">
+              <li><a href="/services/ai-ml"><b>AI agents &amp; automation</b><span>Agents that act across CRM, ITSM and back office.</span></a></li>
+              <li><a href="/ai-data/knowledge-assistants"><b>Knowledge assistants</b><span>Answers grounded in your own documents and data.</span></a></li>
+              <li><a href="/services/data-analytics"><b>Data platforms &amp; analytics</b><span>Snowflake, Databricks and Tableau, wired to decisions.</span></a></li>
+              <li><a href="/solutions/enterprise-integration"><b>Integration &amp; APIs</b><span>MuleSoft, SAP, Oracle, NetSuite and Workday, in sync.</span></a></li>
+              <li><a href="/solutions/enterprise-application-modernization"><b>Product engineering</b><span>Web, mobile, modernization and application support.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-tl">Talent</button>
+          <div class="dd__panel" id="dd-tl">
+            <ul class="dd__links">
+              <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
+              <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-in" data-current>Insights</button>
+          <div class="dd__panel" id="dd-in">
+            <ul class="dd__links">
+              <li><a href="/blog"><b>Blog</b><span>Field notes and frameworks from our practice leaders.</span></a></li>
+              <li><a href="/case-studies"><b>Case Studies</b><span>Outcomes delivered for global clients.</span></a></li>
+              <li><a href="/insights/events"><b>Events</b><span>Meet Procyon at conferences and summits.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-co">Company</button>
+          <div class="dd__panel dd__panel--sm" id="dd-co">
+            <ul class="dd__links dd__links--plain">
+              <li><a href="/about">About Procyon</a></li>
+              <li><a href="/about/certifications">Partners &amp; certifications</a></li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hdr__cta">
+      <a class="btn btn--red btn--sm" href="#audit" data-track="cta_header">Talk to an architect</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+    </div>
+  </div>
+
+  <div class="mnav" id="mnav" hidden>
+    <div class="wrap mnav__in">
+      <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
+      <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
+      <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
+      <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
+      <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="ph ph--post" aria-labelledby="ph-h">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog">Blog</a></li><li aria-current="page">Cloud Migration Strategy: The 6 R's Framework</li></ol></nav>
+    <div class="post__head">
+      <p class="pill"><span class="pill__dot"></span>Cloud</p>
+      <h1 id="ph-h" class="ph__h">Cloud Migration Strategy: The 6 R's Framework for US Enterprises</h1>
+      <p class="ph__lede">Not every workload should move to the cloud the same way. The 6 R's framework helps you decide, application by application, what to do and why.</p>
+      <p class="post__by"><b>John</b><time datetime="2026-08-25">Aug 25, 2026</time><span>3 min read</span></p>
+    </div>
+  </div>
+</section>
+<div class="post__cover"><div class="wrap"><img src="/assets/img/insights/blog/cloud-migration-strategy-6-rs-framework.webp" alt="Cloud Migration Strategy: The 6 R's Framework for US Enterprises" width="1200" height="675" decoding="async" fetchpriority="high"></div></div>
+<div class="readbar" aria-hidden="true"><i></i></div>
+<section class="post" aria-label="Article">
+  <div class="wrap post__grid">
+    <article class="post__body" data-readbody>
+      <details class="toc-m"><summary>On this page</summary><nav class="toc" aria-label="On this page"><b>On this page</b><ol><li><a href="#why-lift-and-shift-everything-fails-quietly">Why 'Lift and Shift Everything' Fails Quietly</a></li><li><a href="#the-6-r-s-explained">The 6 R's, Explained</a></li><li><a href="#how-to-assign-an-r-to-each-workload">How to Assign an R to Each Workload</a></li><li><a href="#sequencing-the-program">Sequencing the Program</a></li><li><a href="#want-an-application-by-application-migration-plan">Want an application-by-application migration plan?</a></li><li><a href="#move-to-the-cloud-with-a-plan-not-a-headline">Move to the cloud with a plan, not a headline</a></li></ol></nav></details>
+<p>The fastest way to a disappointing cloud program is to treat migration as a single decision. 'We are moving to the cloud' is not a strategy - it is a headline. The real work is deciding, application by application, how each workload should move, and being honest that some of them should not move at all yet. The 6 R's framework is the industry-standard way to make those calls consistently across a portfolio. Here is how each option works, when to use it, and how to avoid the trap of lifting and shifting everything and calling it transformation.</p>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 12px 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+    }
+
+    .why-approach-matters {
+      width: 100%;
+      padding: 20px 21px 19px;
+      border: 1px solid #45d9a2;
+      border-radius: 13px;
+      background-color: #effcf7;
+      color: #000000;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .approach-title {
+      margin: 0 0 8px 0;
+      padding: 0;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.5px;
+    }
+
+    .approach-content {
+      margin: 0;
+      padding: 0;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .approach-content strong {
+      color: #000000;
+      font-weight: 700;
+    }
+
+    .approach-content a {
+      color: #008568;
+      font-size: 16px;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    .approach-content a:hover {
+      color: #008568;
+    }
+  </style>
+
+<div class="why-approach-matters">
+
+    <div class="approach-title">
+      WHY THE APPROACH MATTERS
+    </div>
+
+    <p class="approach-content">
+      MuleSoft's 2026 benchmark shows
+      <strong>86% of leaders still fighting integration complexity</strong>
+      - much of it created when workloads move to the cloud without a plan.
+      A workload that was inefficient on-premises is simply inefficient in the
+      cloud, now with a monthly bill attached. The 6 R's exist so you can be
+      deliberate.
+      <a href="https://blogs.mulesoft.com/agentic-perspectives/connectivity-benchmark-report/" rel="nofollow" target="_blank" rel="noopener">Source: MuleSoft 2026</a>
+    </p>
+
+  </div>
+
+<h2 id="why-lift-and-shift-everything-fails-quietly"><strong>Why 'Lift and Shift Everything' Fails Quietly</strong></h2>
+
+<p>Rehosting an entire estate to the cloud is fast, and it feels like progress. But as a whole-portfolio strategy it delivers a data center in someone else's building. Lift and shift is a legitimate tactic for parts of a portfolio; applied to everything, it just relocates your inefficiency. The 6 R's exist so you can decide deliberately instead.</p>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 18px 48px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .six-rs {
+      width: 100%;
+    }
+
+    .six-rs-title {
+      display: inline-block;
+      margin: 0 0 28px 0;
+      padding-bottom: 10px;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.2;
+      border-bottom: 3px solid #10b981;
+    }
+
+    .six-r-card {
+      display: flex;
+      width: 100%;
+      margin-bottom: 13px;
+      padding: 17px 22px 16px 20px;
+      border: 1px solid #dfe3e8;
+      border-left: 5px solid #10b981;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
+
+    .six-r-number {
+      flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      margin: 0 16px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #10b981;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .six-r-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .six-r-heading {
+      margin: 3px 0 7px 0;
+      color: #002b68;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .six-r-text {
+      margin: 0;
+      color: #425a78;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.75;
+    }
+
+    .six-r-card:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+
+<div class="six-rs">
+
+    <h2 class="six-rs-title" id="the-6-r-s-explained">
+      The 6 R's, Explained
+    </h2>
+
+    <div class="six-r-card">
+      <div class="six-r-number">1</div>
+      <div class="six-r-content">
+        <div class="six-r-heading">Rehost (lift and shift)</div>
+        <p class="six-r-text">
+          Move the workload as-is. Fast and low-risk. Best for stable applications,
+          tight timelines, or a first step you will optimize later.
+        </p>
+      </div>
+    </div>
+
+    <div class="six-r-card">
+      <div class="six-r-number">2</div>
+      <div class="six-r-content">
+        <div class="six-r-heading">Replatform (lift and reshape)</div>
+        <p class="six-r-text">
+          Make targeted improvements during the move - a managed database,
+          autoscaling, container packaging - without a full rewrite. Best when
+          small changes unlock outsized operational gains.
+        </p>
+      </div>
+    </div>
+
+    <div class="six-r-card">
+      <div class="six-r-number">3</div>
+      <div class="six-r-content">
+        <div class="six-r-heading">Refactor (re-architect)</div>
+        <p class="six-r-text">
+          Rebuild the application to be cloud-native. Highest effort, highest
+          payoff. Reserve it for high-value, high-change applications where
+          scalability is a genuine differentiator.
+        </p>
+      </div>
+    </div>
+
+    <div class="six-r-card">
+      <div class="six-r-number">4</div>
+      <div class="six-r-content">
+        <div class="six-r-heading">Repurchase (move to SaaS)</div>
+        <p class="six-r-text">
+          Replace a custom or legacy application with a commercial subscription
+          product. Best for commodity functions where a mature SaaS option does
+          the job better.
+        </p>
+      </div>
+    </div>
+
+    <div class="six-r-card">
+      <div class="six-r-number">5</div>
+      <div class="six-r-content">
+        <div class="six-r-heading">Retire (decommission)</div>
+        <p class="six-r-text">
+          Turn it off. Most portfolios carry applications no one truly uses.
+          Migration is the perfect moment to find and retire them.
+        </p>
+      </div>
+    </div>
+
+    <div class="six-r-card">
+      <div class="six-r-number">6</div>
+      <div class="six-r-content">
+        <div class="six-r-heading">Retain (keep for now)</div>
+        <p class="six-r-text">
+          Some workloads should stay on-premises due to compliance, latency,
+          or dependencies. Retaining deliberately is a decision; retaining by
+          neglect is not.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+<h2 id="how-to-assign-an-r-to-each-workload"><strong>How to Assign an R to Each Workload</strong></h2>
+
+<table class="blog-table" style="min-width: 50px;"><colgroup><col style="min-width: 25px;"><col style="min-width: 25px;"></colgroup><tbody><tr><th colspan="1" rowspan="1" style="text-align: left;"><p>Workload profile</p></th><th colspan="1" rowspan="1" style="text-align: left;"><p>Usual best fit</p></th></tr><tr><td colspan="1" rowspan="1"><p>Stable, commodity, low change</p></td><td colspan="1" rowspan="1"><p>Rehost or Repurchase</p></td></tr><tr><td colspan="1" rowspan="1"><p>Operationally painful but valuable</p></td><td colspan="1" rowspan="1"><p>Replatform</p></td></tr><tr><td colspan="1" rowspan="1"><p>Strategic, differentiating, high change</p></td><td colspan="1" rowspan="1"><p>Refactor</p></td></tr><tr><td colspan="1" rowspan="1"><p>Redundant or unused</p></td><td colspan="1" rowspan="1"><p>Retire</p></td></tr><tr><td colspan="1" rowspan="1"><p>Compliance or latency bound</p></td><td colspan="1" rowspan="1"><p>Retain (revisit later)</p></td></tr></tbody></table>
+
+<p>Migration rarely stands alone - it usually sits inside a broader modernization effort. See how it connects to our <a target="_blank" rel="dofollow" class="text-teal underline" href="/solutions/enterprise-application-modernization">enterprise application modernization</a> approach and our <a target="_blank" rel="dofollow" class="text-teal underline" href="/services/cloud">cloud transformation services</a>.</p>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 10px 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+    }
+
+    .portfolio-assessment {
+      width: 100%;
+      padding: 20px 20px 18px;
+      border-left: 5px solid #2563eb;
+      border-radius: 12px;
+      background-color: #eff6ff;
+      color: #000000;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .assessment-title {
+      margin: 0 0 8px 0;
+      padding: 0;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.5px;
+    }
+
+    .assessment-text {
+      margin: 0;
+      padding: 0;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .assessment-text strong {
+      color: #000000;
+      font-weight: 700;
+    }
+  </style>
+
+<div class="portfolio-assessment">
+
+    <div class="assessment-title">
+      START WITH A PORTFOLIO ASSESSMENT
+    </div>
+
+    <p class="assessment-text">
+      You cannot assign the 6 R's from intuition. Score every application on
+      business value, technical complexity, and constraints such as compliance
+      and dependencies. The assessment is what turns 'move to the cloud' into
+      a defensible, sequenced plan.
+    </p>
+
+  </div>
+
+<h2 id="sequencing-the-program"><strong>Sequencing the Program</strong></h2>
+
+<ol><li><p><strong>Assess the portfolio</strong> and assign an R to every workload.</p></li><li><p><strong>Start with quick, low-risk wins</strong> (rehost and retire) to build momentum and free capacity.</p></li><li><p><strong>Replatform the operationally painful</strong> workloads next for fast operational relief.</p></li><li><p><strong>Refactor the strategic few</strong> deliberately, with clear success metrics.</p></li><li><p><strong>Establish landing-zone governance early</strong> - security, identity, and monitoring - so growth stays controlled.</p></li></ol>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 12px 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+    }
+
+    .common-mistake {
+      width: 100%;
+      padding: 20px 22px 18px;
+      border-left: 5px solid #f59e0b;
+      border-radius: 12px;
+      background-color: #fffbeb;
+      color: #000000;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .mistake-title {
+      margin: 0 0 8px 0;
+      padding: 0;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.5px;
+    }
+
+    .mistake-text {
+      margin: 0;
+      padding: 0;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+  </style>
+
+<div class="common-mistake">
+
+    <div class="mistake-title">
+      THE MOST COMMON MISTAKE
+    </div>
+
+    <p class="mistake-text">
+      Teams refactor the wrong applications first - usually the ones the
+      loudest engineer finds interesting, not the ones the business depends
+      on. Let the portfolio assessment, not enthusiasm, drive sequence.
+    </p>
+
+  </div>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 6px 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .cloud-cta {
+      width: 100%;
+      padding: 28px 30px 30px;
+      border: 1px solid #45d9a2;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #effcf7 0%, #d8f8e9 100%);
+    }
+
+    .cloud-title {
+      margin: 0 0 10px 0;
+      color: #007a63;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .cloud-text {
+      margin: 0 0 19px 0;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.75;
+      max-width: 760px;
+    }
+
+    .cloud-button {
+      display: inline-block;
+      padding: 15px 28px;
+      border-radius: 30px;
+      background: #10b981;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-decoration: none;
+      box-shadow: 0 7px 14px rgba(16, 185, 129, 0.25);
+    }
+
+    .cloud-button:hover {
+      background: #0ea574;
+      color: #ffffff;
+    }
+  </style>
+
+<div class="cloud-cta" style="margin-top: 40px;">
+
+    <h2 class="cloud-title" id="want-an-application-by-application-migration-plan">
+      Want an application-by-application migration plan?
+    </h2>
+
+    <p class="cloud-text">
+      Our cloud team runs a portfolio assessment that assigns the right R to
+      every workload and sequences the program around real business value.
+    </p>
+
+    <a class="cloud-button" href="/services/cloud">
+      Explore Cloud Transformation
+    </a>
+
+</div>
+
+<div style="
+  width: 100%;
+  max-width: 772px;
+  margin: 32px auto 0;
+  padding: 24px 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: #f7f8fa;
+">
+
+  <div style="
+    margin: 0 0 14px 0;
+    color: #082b61;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 700;
+  ">
+    Related Articles
+  </div>
+
+  <ul style="
+    margin: 0;
+    padding-left: 20px;
+    color: #082b61;
+    font-size: 15px;
+    line-height: 1.8;
+  ">
+
+    <li>
+      <a href="/solutions/enterprise-application-modernization" style="color: #008b8b; text-decoration: underline;">
+        Enterprise application modernization
+      </a>
+    </li>
+
+    <li>
+      <a href="/blog/sap-s4hana-migration-greenfield-vs-brownfield" style="color: #008b8b; text-decoration: underline;">
+        SAP S/4HANA migration: greenfield vs brownfield
+      </a>
+    </li>
+
+    <li>
+      <a href="/blog/headless-salesforce-api-first-architecture" style="color: #008b8b; text-decoration: underline;">
+        Headless Salesforce: API-first architecture
+      </a>
+    </li>
+
+    <li>
+      <a href="/services/cloud" style="color: #008b8b; text-decoration: underline;">
+        Our cloud practice
+      </a>
+    </li>
+
+  </ul>
+
+</div>
+
+<div style="
+  width: 100%;
+  margin: 55px 0 40px 0;
+  padding: 48px 30px 46px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #087f5b 0%, #10b981 100%);
+  text-align: center;
+  box-sizing: border-box;
+">
+
+  <h2 style="
+    margin: 0 0 26px 0;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 700;
+  " id="move-to-the-cloud-with-a-plan-not-a-headline">
+    Move to the cloud with a plan, not a headline
+  </h2>
+
+  <p style="
+    margin: 0 auto 26px auto;
+    max-width: 650px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.65;
+  ">
+    Get a workload-level migration strategy sequenced around business value and risk.
+  </p>
+
+  <!-- BUTTONS -->
+  <div style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  ">
+
+    <!-- DOFOLLOW -->
+    <a href="/services/cloud" style="
+      display: inline-block;
+      padding: 15px 29px;
+      border-radius: 30px;
+      background: #ffffff;
+      color: #007d5a;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 700;
+      text-decoration: none;
+    ">
+      Explore Cloud Transformation
+    </a>
+
+    <!-- DOFOLLOW -->
+    <a href="/case-studies" style="
+      display: inline-block;
+      padding: 15px 29px;
+      border: 2px solid rgba(255,255,255,0.75);
+      border-radius: 30px;
+      background: transparent;
+      color: #ffffff;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 700;
+      text-decoration: none;
+    ">
+      See Our Case Studies
+    </a>
+
+  </div>
+
+</div>
+      <p class="post__tags"><span>cloud migration</span><span>6 R's</span><span>application modernization</span><span>rehost</span><span>refactor</span><span>cloud strategy</span></p>
+    </article>
+    <aside class="post__side">
+      <div class="post__sticky">
+        <nav class="toc" aria-label="On this page" data-toc><b>On this page</b><ol><li><a href="#why-lift-and-shift-everything-fails-quietly">Why 'Lift and Shift Everything' Fails Quietly</a></li><li><a href="#the-6-r-s-explained">The 6 R's, Explained</a></li><li><a href="#how-to-assign-an-r-to-each-workload">How to Assign an R to Each Workload</a></li><li><a href="#sequencing-the-program">Sequencing the Program</a></li><li><a href="#want-an-application-by-application-migration-plan">Want an application-by-application migration plan?</a></li><li><a href="#move-to-the-cloud-with-a-plan-not-a-headline">Move to the cloud with a plan, not a headline</a></li></ol></nav>
+        <div class="post__cta">
+          <small>Cloud</small>
+          <b>Apply this to the actual platform.</b>
+          <span>A senior architect replies within one business day.</span>
+          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-interest="" data-kicker="Cloud" data-title="Brief a senior architect" data-message="Read: Cloud Migration Strategy: The 6 R's Framework for US Enterprises.&#10;Current situation: " data-track="post_side_cta">Talk to a senior architect <i aria-hidden="true">&rarr;</i></a>
+        </div>
+        <p class="post__share"><span>Share</span><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fprocyonts.com%2Fblog%2Fcloud-migration-strategy-6-rs-framework" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/intent/post?url=https%3A%2F%2Fprocyonts.com%2Fblog%2Fcloud-migration-strategy-6-rs-framework" target="_blank" rel="noopener">X</a><a href="mailto:?subject=Cloud%20Migration%20Strategy%3A%20The%206%20R's%20Framework%20for%20US%20Enterprises&amp;body=https%3A%2F%2Fprocyonts.com%2Fblog%2Fcloud-migration-strategy-6-rs-framework">Email</a></p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq__in">
+    <h2 id="faq-h" class="rv">Questions this article <em>answers.</em></h2>
+    <div class="faq__list">
+      <details class="rv" open><summary>What are the 6 R's of cloud migration?</summary><p class="faq-a">Rehost (lift and shift), replatform (lift and reshape), refactor (re-architect), repurchase (move to SaaS), retire (decommission), and retain (keep on-premises for now). Each workload is assigned one strategy based on its value, complexity, and constraints.</p></details>
+      <details class="rv"><summary>Is lift and shift a good cloud migration strategy?</summary><p class="faq-a">Rehosting is fast and low-risk and is the right call for many workloads. But rehosting everything leaves cloud-native benefits on the table. The strongest strategies mix rehosting with selective replatforming and refactoring where the payoff is real.</p></details>
+      <details class="rv"><summary>How do I decide which strategy to use for each application?</summary><p class="faq-a">Start with a portfolio assessment that scores each workload on business value, technical complexity, and constraints such as compliance and dependencies. High-value, high-change applications justify refactoring; stable commodity workloads favor rehosting or repurchasing; low-value applications are candidates to retire.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="more-h">
+  <div class="wrap">
+    <div class="sx__head"><div><h2 id="more-h" class="rv">Read next.</h2></div><a class="sx__go rv" href="/blog">All articles <i aria-hidden="true">&rarr;</i></a></div>
+    <div class="ins-cards">
+      <a class="ins-card rv" href="/blog/cloud-modernization-certified-mbe-partner-2026"><img src="/assets/img/insights/blog/cloud-modernization-certified-mbe-partner-2026.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"><span>Cloud &middot; 3 min read</span><b>The Procurement Leader's 2026 Guide to Cloud Modernization With a Diverse Partner</b></a>
+      <a class="ins-card rv" href="/blog/meet-procyon-at-dreamforce-2026"><img src="/assets/img/insights/blog/meet-procyon-at-dreamforce-2026.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"><span>Dreamforce &middot; 2 min read</span><b>Meet Procyon at Dreamforce 2026: Private 1:1 Salesforce Strategy Sessions</b></a>
+      <a class="ins-card rv" href="/blog/nmsdc-2026-key-takeaways"><img src="/assets/img/insights/blog/nmsdc-2026-key-takeaways.webp" alt="" width="1200" height="675" loading="lazy" decoding="async"><span>Supplier Diversity &middot; 10 min read</span><b>NMSDC 2026 Key Takeaways: 6 Lessons From Los Angeles Every Supplier Diversity Leader Should Know</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="audit" aria-labelledby="cta-h">
+  <img class="cta__mark" src="/favicon.svg" alt="" width="760" height="760" loading="lazy" aria-hidden="true">
+  <div class="wrap cta__in">
+    <div class="cta__copy">
+      <h2 id="cta-h" class="rv">Turn the idea into <em>a written plan.</em></h2>
+      <p class="rv" data-d="1">A senior architect reviews the platform and the goal, then sends scope, timeline and a cost range. Free, and it stays with the client.</p>
+      <p class="cta__direct rv" data-d="2">Rather call? <a href="tel:+14153828040" data-track="phone_click">+1 415 382 8040</a> <a href="mailto:sales@procyonts.com" data-track="email_click">sales@procyonts.com</a></p>
+    </div>
+    <div class="paths">
+      <a class="path path--audit rv" data-d="1" href="#audit" data-open="audit" data-interest="" data-title="Brief a senior architect" data-kicker="From the blog" data-track="cta_close_audit">
+        <span class="path__k">30-minute call</span>
+        <b>Talk to an architect</b>
+        <span>A senior architect, not a sales rep. The call ends in a written plan with scope, timeline and a cost range.</span>
+        <ol class="when">
+          <li><b>Today</b> the brief is sent</li>
+          <li><b>1 business day</b> an architect replies</li>
+          <li><b>Within a week</b> the written plan</li>
+        </ol>
+        <em>Book the architect call &rarr;</em>
+      </a>
+      <a class="path path--score rv" data-d="2" href="#audit" data-open="score" data-track="cta_close_readiness">
+        <span class="path__k">2 minutes, self-serve</span>
+        <b>AI readiness check</b>
+        <span>Six questions about the Salesforce or ServiceNow platform. An instant readiness level and the three fixes that unlock AI agents.</span>
+        <svg class="path__gauge" viewBox="0 0 120 70" aria-hidden="true"><path d="M10 64a50 50 0 0 1 100 0" class="g-track"/><path d="M10 64a50 50 0 0 1 100 0" class="g-val"/></svg>
+        <em>Run the readiness check &rarr;</em>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= MODAL ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BC1E2D"/><stop offset=".55" stop-color="#39B34A"/><stop offset="1" stop-color="#28A8DE"/></linearGradient></defs></svg>
+<dialog class="modal" id="lead-modal" aria-labelledby="modal-title">
+  <div class="modal__shell">
+    <aside class="modal__side">
+      <img src="/favicon.svg" alt="" width="44" height="44">
+      <p class="modal__side-h" data-side-h>Talk to a senior architect</p>
+      <ul class="modal__gets" data-side-list>
+        <li>30 minutes with a senior architect</li>
+        <li>A written fix plan within a week</li>
+        <li>Scope, timeline and a cost range</li>
+        <li>Yours to keep, zero obligation</li>
+      </ul>
+      <p class="modal__side-foot">Salesforce Consulting Partner<br>ServiceNow Implementation Partner<br>ISO 27001 &middot; ISO 9001</p>
+    </aside>
+
+    <div class="modal__main">
+      <button class="modal__x" type="button" aria-label="Close" data-close>&times;</button>
+
+      <!-- CONTACT FORM -->
+      <form class="qf lf" id="lead-form" data-flow="audit" action="/api/lead" method="post" novalidate>
+        <p class="lf__k" data-lf-k>Talk to a senior architect</p>
+        <h2 id="modal-title" class="lf__t" data-lf-t>Brief a senior architect</h2>
+
+        <div class="lf__grid">
+          <label><span>Full name <em>*</em></span><input name="name" autocomplete="name" placeholder="Jane Smith" required></label>
+          <label><span>Company name <em>*</em></span><input name="company" autocomplete="organization" placeholder="Acme Corp" required></label>
+          <label><span>Business email <em>*</em></span><input name="email" type="email" autocomplete="email" placeholder="jane@acme.com" required data-business></label>
+          <label><span>Phone number <em>*</em></span><input name="phone" type="tel" autocomplete="tel" placeholder="+1 415 555 0100" required data-phone></label>
+          <label class="lf__full"><span>Service you need <em>*</em></span>
+            <select name="interest" required>
+              <option value="">Select a service</option>
+              <option>Salesforce consulting &amp; implementation</option>
+              <option>Agentforce &amp; AI agents</option>
+              <option>Salesforce org audit &amp; rescue</option>
+              <option>ServiceNow implementation</option>
+              <option>ServiceNow tech-debt removal</option>
+              <option>Data, integration &amp; MuleSoft</option>
+              <option>Product engineering &amp; app support</option>
+              <option>Managed services</option>
+              <option>Staff augmentation</option>
+              <option>Ranger Fusion ERP</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="lf__full"><span>Message</span><textarea name="message" rows="4" placeholder="Tell us about your goals, timeline and current platform."></textarea></label>
+        </div>
+        <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+        <input type="hidden" name="context" value="">
+        <div class="cf-slot"></div>
+        <button class="btn btn--red btn--block btn--lg" type="submit" data-track="form_submit">Submit <i aria-hidden="true">&rarr;</i></button>
+        <p class="qf__legal">A senior architect replies within one business day. We never share your details. <a href="/privacy">Privacy Policy</a></p>
+        <p class="qf__status" role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- SCORE FLOW -->
+      <form class="qz" id="score-form" data-flow="score" novalidate hidden>
+        <div class="qf__progress" aria-hidden="true"><span></span></div>
+        <p class="qf__count" aria-live="polite">Question <b>1</b> of 6</p>
+        <div class="qz__stage"></div>
+        <button type="button" class="qf__back qz__back" hidden>&larr; Back</button>
+        <p class="qf__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <img src="/assets/img/procyon-logo.svg" alt="Procyon Technostructure" width="200" height="55" loading="lazy">
+        <p>Run the business. Not the software.</p>
+        <span>Enterprise solution delivery for digital transformation, AI and data. Since 2004.</span>
+      </div>
+      <nav class="ftr__cols" aria-label="Footer">
+        <div><p>Salesforce</p><a href="/enterprise/salesforce/implementation">Implementation</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a></div>
+        <div><p>ServiceNow</p><a href="/enterprise/servicenow/platform-audit">Platform audit</a><a href="/enterprise/servicenow/itsm-itom">ITSM &amp; ITOM</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist</a><a href="/enterprise/servicenow/managed-services">Managed services</a></div>
+        <div><p>AI, Data &amp; Build</p><a href="/services/ai-ml">AI agents</a><a href="/solutions/enterprise-integration">Integration</a><a href="/services/data-analytics">Data &amp; analytics</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/staff-augmentation">Staff augmentation</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></div>
+        <div><p>Company &amp; Insights</p><a href="/about">About</a><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a><a href="/careers">Careers</a><a href="/contact">Contact</a></div>
+      </nav>
+    </div>
+    <div class="ftr__mid">
+      <address><b>Novato, CA</b>7250 Redwood Blvd, Suite #211<br>Novato, CA 94945, USA</address>
+      <address><b>Toronto, ON</b>202-1825 Markham Road<br>Scarborough, ON M1B 4Z9, Canada</address>
+      <address><b>Chennai, TN</b>RNG Tower, 824/1, Anna Salai<br>Chennai 600035, India</address>
+      <address><b>Talk to us</b><a href="tel:+14153828040">+1 415 382 8040</a><br><a href="mailto:sales@procyonts.com">sales@procyonts.com</a></address>
+    </div>
+    <div class="ftr__bot">
+      <p>&copy; 2026 Procyon Technostructure. Salesforce and ServiceNow are trademarks of their respective owners.</p>
+      <ul class="legal"><li><a href="/privacy">Privacy</a></li><li><a href="/terms">Terms</a></li><li><a href="/cookies">Cookies</a></li><li><a href="/accessibility">Accessibility</a></li></ul>
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/company/procyonts/" rel="noopener" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.150-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4z"/></svg></a></li>
+        <li><a href="https://x.com/procyon_ts" rel="noopener" target="_blank" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.470 21H2.4l7.17-8.2L2 3h6.33l4.37 5.78zm-1.08 16.2h1.7L7.4 4.73H5.58z"/></svg></a></li>
+        <li><a href="https://www.youtube.com/@ProcyonTechnostructure" rel="noopener" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.02V8.98L15.5 12z"/></svg></a></li>
+        <li><a href="https://www.facebook.com/ProcyonTSOfficial/" rel="noopener" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.25-1.5 1.55-1.5h1.65V3.45A22 22 0 0 0 14.3 3.3c-2.4 0-4.05 1.47-4.05 4.15v2.35H7.5V13h2.75v8z"/></svg></a></li>
+        <li><a href="https://www.instagram.com/procyonts/" rel="noopener" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.3A4.7 4.7 0 1 0 16.7 12 4.7 4.7 0 0 0 12 7.3zm0 7.75A3.05 3.05 0 1 1 15.05 12 3.05 3.05 0 0 1 12 15.05zM17 5.9a1.1 1.1 0 1 0 1.1 1.1A1.1 1.1 0 0 0 17 5.9zM21.9 7.9a5.4 5.4 0 0 0-1.5-3.8 5.4 5.4 0 0 0-3.8-1.5C15.1 2.5 8.9 2.5 7.4 2.6a5.4 5.4 0 0 0-3.8 1.5A5.4 5.4 0 0 0 2.1 7.9c-.1 1.5-.1 6.7 0 8.2a5.4 5.4 0 0 0 1.5 3.8 5.4 5.4 0 0 0 3.8 1.5c1.5.1 7.7.1 9.2 0a5.4 5.4 0 0 0 3.8-1.5 5.4 5.4 0 0 0 1.5-3.8c.1-1.5.1-6.7 0-8.2zM19.8 18a3.1 3.1 0 0 1-1.75 1.75c-1.2.48-4.070.37-5.4.37s-4.2.1-5.4-.37A3.1 3.1 0 0 1 5.5 18c-.48-1.2-.37-4.07-.37-5.4s-.1-4.2.37-5.4A3.1 3.1 0 0 1 7.25 5.45c1.2-.48 4.07-.37 5.4-.37s4.2-.1 5.4.37A3.1 3.1 0 0 1 19.8 7.2c.48 1.2.37 4.07.37 5.4s.11 4.2-.37 5.4z"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
+
+<script src="/assets/js/main.js?v=29" defer></script>
+<script src="/assets/js/pages.js?v=10" defer></script>
+</body>
+</html>

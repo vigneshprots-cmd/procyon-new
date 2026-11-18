@@ -16,6 +16,7 @@ const LEAD_WEBHOOK_URL = process.env.LEAD_WEBHOOK_URL || '';      // e.g. Zapier
 const SF_WEB_TO_LEAD_OID = process.env.SF_WEB_TO_LEAD_OID || '';  // Salesforce org ID for Web-to-Lead
 const APPLY_WEBHOOK_URL = process.env.APPLY_WEBHOOK_URL || '';    // where job applications go (never Web-to-Lead)
 const CANONICAL_HOST = process.env.CANONICAL_HOST || '';          // e.g. procyonts.com (redirects www + others)
+const REDIRECTS = (() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, 'redirects.json'), 'utf8')); } catch (e) { return {}; } })();
 const FORM_SECRET = process.env.FORM_SECRET || crypto.randomBytes(32).toString('hex'); // signs form tokens
 const TURNSTILE_SITE_KEY = process.env.TURNSTILE_SITE_KEY || '';  // optional Cloudflare Turnstile
 const TURNSTILE_SECRET = process.env.TURNSTILE_SECRET || '';
@@ -290,8 +291,8 @@ function handleLead(req, res) {
 
 // Job applications: same bot defences as leads, but personal email is allowed
 // and nothing is sent to Salesforce Web-to-Lead (candidates are not sales leads).
-const TRACKS = new Set(['Salesforce', 'ServiceNow', 'AI and data', 'Product engineering', 'Delivery and project management', 'Other',
-  'AI Architect (Java Background with AI Fundamentals)', 'Full Stack Developer (Backend-Focused)', 'QA Engineer (Manual + API Testing)', 'Content & Copy Writer']);
+const TRACKS = new Set(['Salesforce', 'ServiceNow', 'AI and data', 'Product engineering', 'Delivery and project management', 'Other']
+  .concat((() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, 'content', 'insights', 'job-titles.json'), 'utf8')); } catch (e) { return []; } })()));
 const HUBS = new Set(['Novato, California', 'Toronto, Canada', 'Chennai, India', 'Open to any hub']);
 function handleApply(req, res) {
   const ip = clientIp(req);
@@ -353,6 +354,12 @@ const server = http.createServer((req, res) => {
   if (req.method === 'POST' && url === '/api/apply') return handleApply(req, res);
   if (url.startsWith('/api/')) return send(res, 404, 'Not found', { 'Content-Type': 'text/plain' });
   if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, 'Method not allowed', { 'Content-Type': 'text/plain' });
+
+  // Live procyonts.com URLs have no trailing slash; old and retired URLs 301 to their new home.
+  const qs = req.url.includes('?') ? req.url.slice(req.url.indexOf('?')) : '';
+  const bare = url.length > 1 ? url.replace(/\/+$/, '') : url;
+  if (REDIRECTS[bare]) return send(res, 301, '', { Location: REDIRECTS[bare] + qs });
+  if (bare !== url && resolveFile(bare)) return send(res, 301, '', { Location: bare + qs });
 
   const file = resolveFile(req.url);
   if (file) return serveFile(req, res, file, 200);

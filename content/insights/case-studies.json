@@ -1,0 +1,392 @@
+[
+ {
+  "slug": "senior-care-digital-health-platform",
+  "title": "Reinventing in-home senior care for a US digital health platform 34",
+  "client": "US Digital Health Platform (Senior Care)",
+  "industry": "Healthcare",
+  "platform": "Salesforce + MuleSoft + Web/Mobile",
+  "region": "United States (20+ states)",
+  "duration": "Multi-phase program",
+  "excerpt": "A US-based digital health platform revolutionizing elder care by connecting families with trusted, background-checked in-home caregivers, Procyon delivered the Salesforce + MuleSoft + web & mobile stack behind it.",
+  "outcomes": [
+   {
+    "label": "Savings vs traditional care",
+    "value": "50%"
+   },
+   {
+    "label": "Families served",
+    "value": "1,500+"
+   },
+   {
+    "label": "US states covered",
+    "value": "20+"
+   },
+   {
+    "label": "Care model",
+    "value": "Transparent"
+   }
+  ],
+  "challenge": [
+   "Families struggled to find trusted, background-checked in-home caregivers for elderly relatives.",
+   "Traditional senior care models were expensive and opaque, with limited flexibility for families and caregivers.",
+   "Caregiver onboarding, scheduling and family communication were fragmented across multiple disconnected tools."
+  ],
+  "approach": [
+   {
+    "title": "Salesforce core",
+    "detail": "Built the platform of record for caregivers, families and care plans on Salesforce, with workflows for vetting, onboarding and matching."
+   },
+   {
+    "title": "MuleSoft integration",
+    "detail": "Integrated background-check, payments and scheduling systems through a MuleSoft API layer so every channel speaks the same language."
+   },
+   {
+    "title": "Web & mobile experiences",
+    "detail": "Delivered consumer-grade web and mobile apps for families and caregivers, with transparent pricing and flexible-hours scheduling."
+   },
+   {
+    "title": "Operational visibility",
+    "detail": "Stood up dashboards giving the operations team a single view of demand, caregiver utilization and family satisfaction across all states."
+   }
+  ],
+  "results": [
+   "Enabled 50% savings over traditional care models.",
+   "Increased caregiver satisfaction through transparent pay and flexible hours.",
+   "Improved family trust and engagement with a secure, all-in-one management platform.",
+   "Helped 1,500+ families access quality senior care with minimal friction."
+  ],
+  "stack": [
+   "Salesforce",
+   "MuleSoft",
+   "Web",
+   "Mobile"
+  ],
+  "quote": {
+   "role": "",
+   "text": "",
+   "author": ""
+  },
+  "is_featured": true,
+  "sort_order": 1,
+  "seo_title": null,
+  "seo_description": null,
+  "published_at": "2026-07-16T11:38:15.615+00:00",
+  "updated_at": "2026-07-16T11:38:15.746886+00:00",
+  "categories": [
+   "Salesforce",
+   "Healthcare",
+   "Cloud & Integration"
+  ],
+  "image": {
+   "src": "/assets/img/insights/case-studies/senior-care-digital-health-platform.webp",
+   "og": "/assets/img/og/insights/senior-care-digital-health-platform.jpg"
+  }
+ },
+ {
+  "slug": "genesys-salesforce-partner-onboarding",
+  "title": "Genesys: modernizing global partner onboarding on Salesforce",
+  "client": "Genesys",
+  "industry": "Hi-Tech / Cloud CX",
+  "platform": "Salesforce (Lightning)",
+  "region": "Global",
+  "duration": "Multi-quarter program",
+  "excerpt": "Genesys, a global leader in cloud-based customer experience and contact center solutions, engaged Procyon Technostructure to modernize its Salesforce environment and transform partner onboarding for internal users and external partners.",
+  "outcomes": [
+   {
+    "label": "Faster partner onboarding",
+    "value": "30%+"
+   },
+   {
+    "label": "Interface",
+    "value": "Lightning"
+   },
+   {
+    "label": "Partner experience",
+    "value": "Self-service"
+   },
+   {
+    "label": "Foundation",
+    "value": "Scalable"
+   }
+  ],
+  "challenge": [
+   "The existing Salesforce partner onboarding flow was dated, manual, and inconsistent across regions.",
+   "Internal users and external partners lacked a collaborative, intuitive workspace for joint deals and enablement.",
+   "Reporting on partner engagement and pipeline health was limited and not real-time."
+  ],
+  "approach": [
+   {
+    "title": "Process re-imagination",
+    "detail": "Re-imagined the end-to-end partner onboarding journey with automation and streamlined approvals."
+   },
+   {
+    "title": "Lightning migration",
+    "detail": "Modernized the Salesforce experience on the Lightning UI for both internal users and external partners."
+   },
+   {
+    "title": "Self-service & collaboration",
+    "detail": "Introduced self-service tools and real-time collaboration capabilities for partners across the global network."
+   },
+   {
+    "title": "Operational insight",
+    "detail": "Built data-driven dashboards and KPIs to give leadership visibility into partner activity and pipeline."
+   }
+  ],
+  "results": [
+   "30%+ faster partner onboarding through automation and streamlined workflows.",
+   "Higher user satisfaction with a modern Lightning interface.",
+   "Enhanced partner engagement via self-service tools and real-time collaboration.",
+   "Improved operational visibility with data-driven dashboards and KPIs.",
+   "Secure, scalable foundation supporting Genesys's expanding global partner network."
+  ],
+  "stack": [
+   "Salesforce Sales Cloud",
+   "Lightning",
+   "Experience Cloud",
+   "Analytics"
+  ],
+  "quote": null,
+  "is_featured": true,
+  "sort_order": 2,
+  "seo_title": null,
+  "seo_description": null,
+  "published_at": null,
+  "updated_at": "2026-07-16T11:32:42.377151+00:00",
+  "categories": [
+   "Salesforce"
+  ],
+  "image": {
+   "src": "/assets/img/insights/case-studies/genesys-salesforce-partner-onboarding.webp",
+   "og": "/assets/img/og/insights/genesys-salesforce-partner-onboarding.jpg"
+  }
+ },
+ {
+  "slug": "autodesk-salesforce-service-cloud",
+  "title": "Salesforce Service Cloud replaces Siebel at a $5B 3D software leader",
+  "client": "Global 3D & Animation Software Leader",
+  "industry": "Software (Architecture, Engineering, Construction, M&E)",
+  "platform": "Salesforce Service Cloud",
+  "region": "Global",
+  "duration": "Enterprise rollout",
+  "excerpt": "A leading industry leader in 3D and animation software for architecture, engineering, construction, manufacturing and M&E, with $5B in annual revenue, replaced its Siebel Service Request call-centre application with Salesforce Service Cloud.",
+  "outcomes": [
+   {
+    "label": "Annual revenue",
+    "value": "$5B"
+   },
+   {
+    "label": "Legacy retired",
+    "value": "Siebel"
+   },
+   {
+    "label": "New platform",
+    "value": "Salesforce"
+   },
+   {
+    "label": "Channel",
+    "value": "Call centre"
+   }
+  ],
+  "challenge": [
+   "The client was using a Siebel Service Request call-centre application that was costly to maintain and slow to evolve.",
+   "Service agents lacked a modern, unified workspace and 360° view of the customer.",
+   "The business needed a scalable foundation aligned with the global Salesforce roadmap."
+  ],
+  "approach": [
+   {
+    "title": "Service Cloud blueprint",
+    "detail": "Designed a Service Cloud target state mapped to existing Siebel SR processes, with a clean re-cut where it made sense."
+   },
+   {
+    "title": "Agent experience",
+    "detail": "Reimagined the call-centre agent console for faster case capture, routing and resolution."
+   },
+   {
+    "title": "Data & telephony",
+    "detail": "Migrated service request data and integrated telephony and core systems into the Salesforce platform."
+   },
+   {
+    "title": "Global rollout",
+    "detail": "Coordinated a phased global cutover with adoption support for the contact-centre organization."
+   }
+  ],
+  "results": [
+   "Successfully replaced the legacy Siebel call-centre application with Salesforce Service Cloud.",
+   "Modernized the agent experience and case-handling workflows.",
+   "Established a scalable, upgrade-safe foundation aligned with the customer's global Salesforce strategy."
+  ],
+  "stack": [
+   "Salesforce Service Cloud",
+   "CTI",
+   "Data Migration"
+  ],
+  "quote": null,
+  "is_featured": true,
+  "sort_order": 3,
+  "seo_title": null,
+  "seo_description": null,
+  "published_at": null,
+  "updated_at": "2026-07-16T11:32:42.377151+00:00",
+  "categories": [
+   "Salesforce"
+  ],
+  "image": {
+   "src": "/assets/img/insights/case-studies/autodesk-salesforce-service-cloud.webp",
+   "og": "/assets/img/og/insights/autodesk-salesforce-service-cloud.jpg"
+  }
+ },
+ {
+  "slug": "global-security-storage-crm-consolidation",
+  "title": "Consolidating 38 CRMs into one Salesforce Service Cloud for 5,000+ agents",
+  "client": "Global Security, Storage & Systems Management Leader",
+  "industry": "Enterprise Technology",
+  "platform": "Salesforce Service Cloud",
+  "region": "Global",
+  "duration": "Multi-year rollout",
+  "excerpt": "A global provider of security, storage, and systems management solutions with over $5B in revenue rolled out Salesforce.com Service Cloud as the single enterprise customer-service application for over 5,000 agents and vendors worldwide.",
+  "outcomes": [
+   {
+    "label": "Annual revenue",
+    "value": "$5B+"
+   },
+   {
+    "label": "Legacy systems retired",
+    "value": "38"
+   },
+   {
+    "label": "Agents & vendors",
+    "value": "5,000+"
+   },
+   {
+    "label": "Footprint",
+    "value": "Global"
+   }
+  ],
+  "challenge": [
+   "The CRM landscape included over 38 enterprise home-grown and vendor systems.",
+   "Decentralized processes made it impossible to give agents a single view of the customer.",
+   "Inbound and outbound calling required CTI integration across a fragmented estate."
+  ],
+  "approach": [
+   {
+    "title": "Single global CRM",
+    "detail": "Standardized on Salesforce Service Cloud as the enterprise customer-service application for the entire global organization."
+   },
+   {
+    "title": "Process unification",
+    "detail": "Re-engineered decentralized service processes into a single global model, with regional variation only where regulation required it."
+   },
+   {
+    "title": "CTI integration",
+    "detail": "Integrated computer telephony for inbound and outbound calling so agents could work end-to-end from the Salesforce console."
+   },
+   {
+    "title": "Reporting & insights",
+    "detail": "Built enhanced reporting capabilities for service operations leadership to manage the global agent and vendor network."
+   }
+  ],
+  "results": [
+   "All customer service agents across the globe were brought onto one CRM system, increasing visibility, marketability and enabling efficient up-selling and cross-selling.",
+   "Enhanced reporting capabilities for global service operations.",
+   "Global rollout of Salesforce Service Cloud as the enterprise customer-service application for over 5,000 agents and vendors."
+  ],
+  "stack": [
+   "Salesforce Service Cloud",
+   "CTI",
+   "Integration",
+   "Analytics"
+  ],
+  "quote": null,
+  "is_featured": false,
+  "sort_order": 4,
+  "seo_title": null,
+  "seo_description": null,
+  "published_at": null,
+  "updated_at": "2026-07-16T11:32:42.377151+00:00",
+  "categories": [
+   "Salesforce",
+   "Cloud & Integration"
+  ],
+  "image": {
+   "src": "/assets/img/insights/case-studies/global-security-storage-crm-consolidation.webp",
+   "og": "/assets/img/og/insights/global-security-storage-crm-consolidation.jpg"
+  }
+ },
+ {
+  "slug": "computer-peripherals-fund-claims-crm",
+  "title": "Fund and claims management on Salesforce for a $4.5B peripherals manufacturer",
+  "client": "Leading Computer Peripherals Manufacturer",
+  "industry": "Hi-Tech Manufacturing",
+  "platform": "Salesforce (custom apps) + Oracle integration",
+  "region": "Global",
+  "duration": "Enterprise program",
+  "excerpt": "A leading computer peripherals manufacturer with ~$4.5B in annual revenue had no fund-tracking system for promotions and campaigns. Procyon built a custom Salesforce-based platform to create projects and activities, allocate funds through multi-step approvals, and automate claim processing.",
+  "outcomes": [
+   {
+    "label": "Annual revenue",
+    "value": "$4.5B"
+   },
+   {
+    "label": "Fund visibility",
+    "value": "Enterprise-wide"
+   },
+   {
+    "label": "Claims processing",
+    "value": "Automated"
+   },
+   {
+    "label": "ERP integration",
+    "value": "Oracle"
+   }
+  ],
+  "challenge": [
+   "Business had no fund-tracking system for promotions and campaigning.",
+   "Sales and marketing users needed to create projects and activities and assign funds routed through multiple approvals.",
+   "Claim processing was heavily manual, with intervention required across the workflow."
+  ],
+  "approach": [
+   {
+    "title": "Custom project & fund app",
+    "detail": "Built a custom Salesforce interface to create projects and activities and assign funds, with dynamic approvals and fund-availability checking."
+   },
+   {
+    "title": "Claims automation",
+    "detail": "Automated claim processing end-to-end and synchronized data with Oracle systems for accrual management."
+   },
+   {
+    "title": "Finance + commercial alignment",
+    "detail": "Gave finance users the ability to create funds and trace utilization, and enabled sales and marketing to allocate funds to specific activities."
+   },
+   {
+    "title": "Open & integrated system",
+    "detail": "Delivered an open system to manage funds for promotion and campaigning activities, claims and accruals across the enterprise."
+   }
+  ],
+  "results": [
+   "Fund data visibility across the enterprise.",
+   "Finance users can create funds and trace fund utilization.",
+   "Sales and marketing users can create projects and activities with allocated funds.",
+   "Open system to manage funds on promotion and campaigning activities, with claims processing integrated to Oracle for accrual processing."
+  ],
+  "stack": [
+   "Salesforce",
+   "Custom Apps",
+   "Oracle Integration"
+  ],
+  "quote": null,
+  "is_featured": false,
+  "sort_order": 5,
+  "seo_title": null,
+  "seo_description": null,
+  "published_at": null,
+  "updated_at": "2026-07-16T11:32:42.377151+00:00",
+  "categories": [
+   "Salesforce",
+   "Cloud & Integration"
+  ],
+  "image": {
+   "src": "/assets/img/insights/case-studies/computer-peripherals-fund-claims-crm.webp",
+   "og": "/assets/img/og/insights/computer-peripherals-fund-claims-crm.jpg"
+  }
+ }
+]

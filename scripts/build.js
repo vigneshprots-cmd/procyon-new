@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 28, pages: 9, js: 29 };
+const VERSION = { css: 28, pages: 10, js: 29 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -36,37 +36,43 @@ const CHROME = {
 
 // Short descriptions used by the "related" rail and llms.txt
 const PAGES = [
-  { slug: '/salesforce/', name: 'Salesforce consulting', d: 'Implement, fix, extend and run Salesforce with one accountable team.' },
-  { slug: '/salesforce/implementation/', name: 'Implementation & rollout', d: 'Sales, Service, Revenue and Experience Cloud live in 6 to 8 weeks.' },
-  { slug: '/salesforce/agentforce/', name: 'Agentforce', d: 'First AI agents in production in under 4 weeks, on your own data.' },
-  { slug: '/salesforce/data-cloud/', name: 'Data Cloud & integration', d: 'One real-time customer record across ERP, web, apps and service.' },
-  { slug: '/salesforce/org-audit/', name: 'Org audit & rescue', d: 'Find the debt, fix the org and win back user trust.' },
-  { slug: '/salesforce/managed-services/', name: 'Managed services', d: 'Admin, releases and continuous improvement on retainer.' },
-  { slug: '/ranger-fusion/', name: 'Ranger Fusion ERP', d: 'Finance, inventory, projects and HR native to Salesforce.' },
-  { slug: '/about/', section: 'company', name: 'About Procyon', d: 'Enterprise platform delivery since 2004, from Novato, Toronto and Chennai.' },
-  { slug: '/about/certifications/', section: 'company', name: 'Partners & certifications', d: 'Salesforce and ServiceNow partner, ISO 27001, ISO 9001, WBE, NMSDC, SBE.' },
-  { slug: '/careers/', section: 'company', name: 'Careers', d: 'Salesforce, ServiceNow, AI and data roles across three hubs.' },
-  { slug: '/contact/', section: 'company', name: 'Contact', d: 'Reach a senior architect within one business day.' },
-  { slug: '/talent/staff-augmentation/', section: 'talent', name: 'Staff augmentation', d: 'Vetted Salesforce, ServiceNow, data and AI people. Shortlist in 72 hours.' },
-  { slug: '/talent/delivery-pods/', section: 'talent', name: 'Delivery pods', d: 'A cross-functional team with shared accountability for the roadmap.' },
-  { slug: '/talent/engagement-models/', section: 'talent', name: 'Engagement models', d: 'Fixed scope, time and materials, milestone, outcome-based or managed capacity.' },
-  { slug: '/ai-data/', section: 'ai', name: 'AI & data services', d: 'Agentic AI, knowledge, data and integration for regulated enterprises.' },
-  { slug: '/ai-data/ai-agents/', section: 'ai', name: 'AI agents & automation', d: 'Multi-agent AI and workflow automation, live in production.' },
-  { slug: '/ai-data/knowledge-assistants/', section: 'ai', name: 'Knowledge assistants', d: 'Answers from company documents, with the source attached.' },
-  { slug: '/ai-data/data-analytics/', section: 'ai', name: 'Data platforms & analytics', d: 'Snowflake, Databricks and governed BI. One set of numbers.' },
-  { slug: '/ai-data/integration/', section: 'ai', name: 'Integration & APIs', d: 'MuleSoft, events and APIs that keep every system in sync.' },
-  { slug: '/engineering/', section: 'ai', name: 'Product engineering', d: 'Custom products, modernization, cloud and application support.' }
+  { slug: '/enterprise/salesforce', name: 'Salesforce consulting', d: 'Implement, fix, extend and run Salesforce with one accountable team.' },
+  { slug: '/enterprise/salesforce/implementation', name: 'Implementation & rollout', d: 'Sales, Service, Revenue and Experience Cloud live in 6 to 8 weeks.' },
+  { slug: '/enterprise/salesforce/agentforce', name: 'Agentforce', d: 'First AI agents in production in under 4 weeks, on your own data.' },
+  { slug: '/enterprise/salesforce/data-cloud', name: 'Data Cloud & integration', d: 'One real-time customer record across ERP, web, apps and service.' },
+  { slug: '/enterprise/salesforce/org-audit', name: 'Org audit & rescue', d: 'Find the debt, fix the org and win back user trust.' },
+  { slug: '/enterprise/salesforce/managed-services', name: 'Managed services', d: 'Admin, releases and continuous improvement on retainer.' },
+  { slug: '/products/ranger-fusion', name: 'Ranger Fusion ERP', d: 'Finance, inventory, projects and HR native to Salesforce.' },
+  { slug: '/about', section: 'company', name: 'About Procyon', d: 'Enterprise platform delivery since 2004, from Novato, Toronto and Chennai.' },
+  { slug: '/about/certifications', section: 'company', name: 'Partners & certifications', d: 'Salesforce and ServiceNow partner, ISO 27001, ISO 9001, WBE, NMSDC, SBE.' },
+  { slug: '/careers', section: 'company', name: 'Careers', d: 'Salesforce, ServiceNow, AI and data roles across three hubs.' },
+  { slug: '/contact', section: 'company', name: 'Contact', d: 'Reach a senior architect within one business day.' },
+  { slug: '/services/staff-augmentation', section: 'talent', name: 'Staff augmentation', d: 'Vetted Salesforce, ServiceNow, data and AI people. Shortlist in 72 hours.' },
+  { slug: '/talent/delivery-pods', section: 'talent', name: 'Delivery pods', d: 'A cross-functional team with shared accountability for the roadmap.' },
+  { slug: '/talent/engagement-models', section: 'talent', name: 'Engagement models', d: 'Fixed scope, time and materials, milestone, outcome-based or managed capacity.' },
+  { slug: '/blog', section: 'insights', name: 'Blog', d: 'Field notes and frameworks from Procyon practice leaders.' },
+  { slug: '/case-studies', section: 'insights', name: 'Case studies', d: 'Outcomes delivered for global clients, with the stack behind them.' },
+  { slug: '/insights/events', section: 'insights', name: 'Events', d: 'Meet Procyon at conferences and summits.' },
+  { slug: '/ai-data', section: 'ai', name: 'AI & data services', d: 'Agentic AI, knowledge, data and integration for regulated enterprises.' },
+  { slug: '/services/ai-ml', section: 'ai', name: 'AI agents & automation', d: 'Multi-agent AI and workflow automation, live in production.' },
+  { slug: '/ai-data/knowledge-assistants', section: 'ai', name: 'Knowledge assistants', d: 'Answers from company documents, with the source attached.' },
+  { slug: '/services/data-analytics', section: 'ai', name: 'Data platforms & analytics', d: 'Snowflake, Databricks and governed BI. One set of numbers.' },
+  { slug: '/solutions/enterprise-integration', section: 'ai', name: 'Integration & APIs', d: 'MuleSoft, events and APIs that keep every system in sync.' },
+  { slug: '/solutions/enterprise-application-modernization', section: 'ai', name: 'Product engineering', d: 'Custom products, modernization, cloud and application support.' }
 ];
 const RAIL = {
   salesforce: { h: 'More from the Salesforce practice', pick: p => !p.section },
-  company: { h: 'More about Procyon', pick: p => p.section === 'company' || p.slug === '/salesforce/' || p.slug === '/ranger-fusion/' },
-  ai: { h: 'More from AI, data and engineering', pick: p => p.section === 'ai' || ['/salesforce/agentforce/', '/salesforce/data-cloud/'].includes(p.slug) },
-  talent: { h: 'More ways to add capacity', pick: p => p.section === 'talent' || ['/salesforce/managed-services/', '/about/certifications/', '/contact/'].includes(p.slug) }
+  company: { h: 'More about Procyon', pick: p => p.section === 'company' || p.slug === '/enterprise/salesforce' || p.slug === '/products/ranger-fusion' },
+  insights: { h: 'More from Procyon', pick: p => p.section === 'insights' || ['/enterprise/salesforce', '/services/ai-ml', '/contact'].includes(p.slug) },
+  ai: { h: 'More from AI, data and engineering', pick: p => p.section === 'ai' || ['/enterprise/salesforce/agentforce', '/enterprise/salesforce/data-cloud'].includes(p.slug) },
+  talent: { h: 'More ways to add capacity', pick: p => p.section === 'talent' || ['/enterprise/salesforce/managed-services', '/about/certifications', '/contact'].includes(p.slug) }
 };
-const NAV = { ai: ['dd-ai', 'AI &amp; Data'], salesforce: ['dd-sf', 'Salesforce'], company: ['dd-co', 'Company'], talent: ['dd-tl', 'Talent'] };
+const NAV = { ai: ['dd-ai', 'AI &amp; Data'], salesforce: ['dd-sf', 'Salesforce'], company: ['dd-co', 'Company'], insights: ['dd-in', 'Insights'], talent: ['dd-tl', 'Talent'] };
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const strip = (s) => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&middot;/g, '·').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
+
+function ogUrl(meta) { return SITE + (meta.ogImage || '/assets/img/og/' + meta.og + '.jpg'); }
 
 function related(current, section) {
   const rail = RAIL[section] || RAIL.salesforce;
@@ -140,9 +146,9 @@ function schema(meta, body) {
     {
       '@type': meta.pageType || 'WebPage', '@id': url + '#webpage', url, name: meta.title, description: meta.description,
       isPartOf: { '@id': SITE + '/#website' }, about: { '@id': meta.service ? url + '#service' : SITE + '/#organization' }, inLanguage: 'en',
-      datePublished: meta.published || TODAY, dateModified: TODAY,
+      datePublished: meta.published || TODAY, dateModified: meta.modified || TODAY,
       breadcrumb: { '@id': url + '#breadcrumb' },
-      primaryImageOfPage: SITE + '/assets/img/og/' + meta.og + '.jpg',
+      primaryImageOfPage: ogUrl(meta),
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.ph__lede', '.faq-a'] }
     },
     {
@@ -173,6 +179,33 @@ function schema(meta, body) {
     }
     graph.push(svc);
   }
+  const ORG = { '@id': SITE + '/#organization' };
+  if (meta.article) {
+    const a = meta.article;
+    graph.push({ '@type': 'BlogPosting', '@id': url + '#article', headline: a.headline, description: meta.description, image: ogUrl(meta),
+      datePublished: meta.published, dateModified: meta.modified || meta.published, articleSection: a.section, keywords: a.keywords,
+      wordCount: a.words, author: { '@type': 'Person', name: a.author }, publisher: ORG, mainEntityOfPage: { '@id': url + '#webpage' }, inLanguage: 'en' });
+  }
+  if (meta.caseStudy) {
+    const c = meta.caseStudy;
+    graph.push({ '@type': 'Article', '@id': url + '#article', headline: c.headline, description: meta.description, image: ogUrl(meta),
+      articleSection: 'Case study', about: [{ '@type': 'Organization', name: c.client }].concat((c.stack || []).map(x => ({ '@type': 'Thing', name: x }))),
+      datePublished: meta.published, dateModified: meta.modified || meta.published, author: ORG, publisher: ORG, mainEntityOfPage: { '@id': url + '#webpage' } });
+  }
+  if (meta.event) {
+    const e = meta.event;
+    graph.push({ '@type': 'Event', '@id': url + '#event', name: e.name, description: meta.description, startDate: e.start, endDate: e.end,
+      eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      location: { '@type': 'Place', name: e.venue || e.location, address: e.location }, image: ogUrl(meta),
+      organizer: { '@type': 'Organization', name: e.organizer, url: e.organizerUrl }, performer: ORG, url });
+  }
+  if (meta.job) {
+    const j = meta.job;
+    graph.push({ '@type': 'JobPosting', '@id': url + '#job', title: j.title, description: j.html, datePosted: j.posted, employmentType: j.type,
+      hiringOrganization: { '@type': 'Organization', name: 'Procyon Technostructure', sameAs: SITE + '/', logo: SITE + '/assets/img/procyon-logo.svg' },
+      jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', streetAddress: 'RNG Tower, 824/1, Anna Salai, CIT Nagar West', addressLocality: 'Chennai', addressRegion: 'Tamil Nadu', postalCode: '600035', addressCountry: 'IN' } },
+      experienceRequirements: j.experience, occupationalCategory: j.department, directApply: true, url });
+  }
   graph.push(Object.assign({ '@type': 'Organization', '@id': SITE + '/#organization', name: 'Procyon Technostructure', url: SITE + '/', logo: SITE + '/assets/img/procyon-logo.svg' }, meta.org || {}));
   const faq = faqFrom(body);
   if (faq.length) {
@@ -192,6 +225,7 @@ function crumbsHtml(meta) {
 
 function render(meta, body) {
   body = body
+    .replace(/<!--@include ([w/.-]+)-->/g, (_, f) => fs.readFileSync(path.join(ROOT, 'src', f), 'utf8'))
     .replace(/<!--@crumbs-->/g, crumbsHtml(meta))
     .replace(/\s*<!--@updated-->/g, '')
     .replace(/<!--@logos-->/g, CHROME.logos.trim())
@@ -199,7 +233,7 @@ function render(meta, body) {
     .replace(/<!--@related-->/g, related(meta.slug, meta.section))
     .replace(/<!--@cta (\{[\s\S]*?\})-->/g, (_, j) => cta(JSON.parse(j)));
   const url = SITE + meta.slug;
-  const ogImg = SITE + '/assets/img/og/' + meta.og + '.jpg';
+  const ogImg = ogUrl(meta);
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -211,7 +245,9 @@ function render(meta, body) {
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#0B0D10">
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="${meta.article ? 'article' : 'website'}">${meta.article ? `
+<meta property="article:published_time" content="${meta.published}">
+<meta property="article:section" content="${esc(meta.article.section || '')}">` : ''}
 <meta property="og:site_name" content="Procyon Technostructure">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="${esc(meta.ogTitle || meta.title)}">
@@ -237,7 +273,8 @@ function render(meta, body) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
 <link rel="stylesheet" href="/assets/css/styles.css?v=${VERSION.css}">
-<link rel="stylesheet" href="/assets/css/pages.css?v=${VERSION.pages}">
+<link rel="stylesheet" href="/assets/css/pages.css?v=${VERSION.pages}">${meta.insights ? `
+<link rel="stylesheet" href="/assets/css/insights.css?v=${VERSION.pages}">` : ''}
 
 <script type="application/ld+json">
 ${schema(meta, body)}
@@ -269,7 +306,8 @@ function walk(dir) {
 }
 
 let built = 0;
-for (const file of walk(SRC).filter(f => f.endsWith('.html'))) {
+const urls = [{ loc: SITE + '/', lastmod: TODAY, pr: '1.0' }];
+for (const file of walk(SRC).filter(f => f.endsWith('.html') && !f.includes(path.sep + '_partials' + path.sep))) {
   const src = fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
   const m = src.match(/^<!--meta\s*([\s\S]*?)-->\n?/);
   if (!m) throw new Error('missing meta block: ' + file);
@@ -279,7 +317,12 @@ for (const file of walk(SRC).filter(f => f.endsWith('.html'))) {
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, render(meta, body));
   built++;
+  const depth = meta.slug.split('/').length - 1;
+  urls.push({ loc: SITE + meta.slug, lastmod: meta.modified || TODAY, pr: meta.section === 'insights' && depth > 1 ? '0.6' : depth <= 1 ? '0.9' : depth === 2 ? '0.8' : '0.7' });
   console.log('built', meta.slug);
 }
-console.log(built + ' pages');
+urls.sort((a, b) => a.loc.localeCompare(b.loc));
+const urlXml = urls.map(u => `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${u.lastmod}</lastmod>\n    <priority>${u.pr}</priority>\n  </url>`).join('\n');
+fs.writeFileSync(path.join(PUB, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlXml}\n</urlset>\n`);
+console.log(built + ' pages, sitemap with ' + urls.length + ' URLs');
 module.exports = { PAGES };

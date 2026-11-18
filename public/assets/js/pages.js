@@ -248,6 +248,24 @@
     });
   })(applyForm);
 
+  /* ---------- Articles: reading progress + current section in the table of contents ---------- */
+  var readBody = $('[data-readbody]'), bar = $('.readbar i'), toc = $('[data-toc]');
+  if (readBody) {
+    var heads = $$('h2[id]', readBody), links = toc ? $$('a', toc) : [];
+    var onRead = function () {
+      var r = readBody.getBoundingClientRect(), vh = window.innerHeight;
+      if (bar) bar.style.width = Math.max(0, Math.min(100, (vh * 0.35 - r.top) / Math.max(1, r.height - vh * 0.5) * 100)) + '%';
+      if (links.length) {
+        var cur = null;
+        heads.forEach(function (h) { if (h.getBoundingClientRect().top < 140) cur = h.id; });
+        links.forEach(function (a) { a.classList.toggle('is-on', a.getAttribute('href') === '#' + cur); });
+      }
+    };
+    window.addEventListener('scroll', onRead, { passive: true });
+    window.addEventListener('resize', onRead);
+    onRead();
+  }
+
   /* ---------- Source map (Data Cloud page) ---------- */
   $$('[data-fmap]').forEach(function (root) {
     var srcs = $$('.src', root), core = $('.fmap__core', root), detail = $('.fmap__detail', root);

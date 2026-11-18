@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salesforce, ServiceNow &amp; Enterprise AI Insights | Blog</title>
+<meta name="description" content="Field notes and frameworks from Procyon practice leaders on Agentforce, Salesforce, ServiceNow, cloud, data, supplier diversity and enterprise AI.">
+<link rel="canonical" href="https://procyonts.com/blog">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0B0D10">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Procyon Technostructure">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Field notes from the people who do the work">
+<meta property="og:description" content="Implementation guides, rescue playbooks and AI frameworks from the Salesforce, ServiceNow and data practices at Procyon.">
+<meta property="og:url" content="https://procyonts.com/blog">
+<meta property="og:image" content="https://procyonts.com/assets/img/og/blog.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Field notes from the people who do the work">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@procyon_ts">
+<meta name="twitter:title" content="Field notes from the people who do the work">
+<meta name="twitter:description" content="Implementation guides, rescue playbooks and AI frameworks from the Salesforce, ServiceNow and data practices at Procyon.">
+<meta name="twitter:image" content="https://procyonts.com/assets/img/og/blog.jpg">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css?v=28">
+<link rel="stylesheet" href="/assets/css/pages.css?v=10">
+<link rel="stylesheet" href="/assets/css/insights.css?v=10">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://procyonts.com/blog#webpage",
+      "url": "https://procyonts.com/blog",
+      "name": "Salesforce, ServiceNow & Enterprise AI Insights | Blog",
+      "description": "Field notes and frameworks from Procyon practice leaders on Agentforce, Salesforce, ServiceNow, cloud, data, supplier diversity and enterprise AI.",
+      "isPartOf": {
+        "@id": "https://procyonts.com/#website"
+      },
+      "about": {
+        "@id": "https://procyonts.com/#organization"
+      },
+      "inLanguage": "en",
+      "datePublished": "2026-11-18",
+      "dateModified": "2026-11-18",
+      "breadcrumb": {
+        "@id": "https://procyonts.com/blog#breadcrumb"
+      },
+      "primaryImageOfPage": "https://procyonts.com/assets/img/og/blog.jpg",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".ph__lede",
+          ".faq-a"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://procyonts.com/blog#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://procyonts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://procyonts.com/blog"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://procyonts.com/#organization",
+      "name": "Procyon Technostructure",
+      "url": "https://procyonts.com/",
+      "logo": "https://procyonts.com/assets/img/procyon-logo.svg"
+    }
+  ]
+}
+</script>
+</head>
+<body class="pg pg--ins-blog">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="hdr" id="top">
+  <div class="wrap hdr__in">
+    <a class="brand" href="/" aria-label="Procyon Technostructure home">
+      <img src="/assets/img/procyon-logo.svg" alt="Procyon Technostructure" width="176" height="48">
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-sf">Salesforce</button>
+          <div class="dd__panel dd__panel--wide" id="dd-sf">
+            <ul class="dd__links">
+              <li><a href="/enterprise/salesforce/implementation"><b>Implementation &amp; rollout</b><span>Sales, Service, Revenue and Experience Cloud, right the first time.</span></a></li>
+              <li><a href="/enterprise/salesforce/agentforce"><b>Agentforce</b><span>AI agents working in production in under 4 weeks.</span></a></li>
+              <li><a href="/enterprise/salesforce/data-cloud"><b>Data Cloud &amp; integration</b><span>One real-time customer record across every system.</span></a></li>
+              <li><a href="/enterprise/salesforce/org-audit"><b>Org audit &amp; rescue</b><span>Find the debt, fix the org, win back user trust.</span></a></li>
+              <li><a href="/enterprise/salesforce/managed-services"><b>Managed services</b><span>Admin, releases and continuous improvement on retainer.</span></a></li>
+            </ul>
+            <a class="dd__feature" href="/products/ranger-fusion">
+              <small>Our product</small>
+              <b>Ranger Fusion ERP</b>
+              <span>Finance, inventory, projects and HR, native to Salesforce. Live in 2 to 4 weeks.</span>
+              <em>See the product &rarr;</em>
+            </a>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-sn">ServiceNow</button>
+          <div class="dd__panel dd__panel--wide" id="dd-sn">
+            <ul class="dd__links">
+              <li><a href="/enterprise/servicenow/platform-audit"><b>Platform audit &amp; tech-debt removal</b><span>From cluttered instance to clean platform in 8 weeks.</span></a></li>
+              <li><a href="/enterprise/servicenow/itsm-itom"><b>ITSM, ITOM &amp; CMDB</b><span>Incident, change and asset on data you can trust.</span></a></li>
+              <li><a href="/enterprise/servicenow/security-risk"><b>Security &amp; risk</b><span>SecOps and GRC for HIPAA, NIST and FedRAMP.</span></a></li>
+              <li><a href="/enterprise/servicenow/now-assist"><b>Now Assist &amp; AI agents</b><span>Generative AI and agents, governed from day one.</span></a></li>
+              <li><a href="/enterprise/servicenow/managed-services"><b>Managed services</b><span>A run team for your instance, without the hiring.</span></a></li>
+            </ul>
+            <a class="dd__feature dd__feature--sn" href="#audit" data-interest="ServiceNow">
+              <small>Start here</small>
+              <b>Talk to a ServiceNow architect</b>
+              <span>30 minutes, no sales script. You leave with a short list of what to fix first.</span>
+              <em>Book the call &rarr;</em>
+            </a>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-ai">AI &amp; Data</button>
+          <div class="dd__panel" id="dd-ai">
+            <ul class="dd__links">
+              <li><a href="/services/ai-ml"><b>AI agents &amp; automation</b><span>Agents that act across CRM, ITSM and back office.</span></a></li>
+              <li><a href="/ai-data/knowledge-assistants"><b>Knowledge assistants</b><span>Answers grounded in your own documents and data.</span></a></li>
+              <li><a href="/services/data-analytics"><b>Data platforms &amp; analytics</b><span>Snowflake, Databricks and Tableau, wired to decisions.</span></a></li>
+              <li><a href="/solutions/enterprise-integration"><b>Integration &amp; APIs</b><span>MuleSoft, SAP, Oracle, NetSuite and Workday, in sync.</span></a></li>
+              <li><a href="/solutions/enterprise-application-modernization"><b>Product engineering</b><span>Web, mobile, modernization and application support.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-tl">Talent</button>
+          <div class="dd__panel" id="dd-tl">
+            <ul class="dd__links">
+              <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
+              <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-in" data-current>Insights</button>
+          <div class="dd__panel" id="dd-in">
+            <ul class="dd__links">
+              <li><a href="/blog" aria-current="page"><b>Blog</b><span>Field notes and frameworks from our practice leaders.</span></a></li>
+              <li><a href="/case-studies"><b>Case Studies</b><span>Outcomes delivered for global clients.</span></a></li>
+              <li><a href="/insights/events"><b>Events</b><span>Meet Procyon at conferences and summits.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-co">Company</button>
+          <div class="dd__panel dd__panel--sm" id="dd-co">
+            <ul class="dd__links dd__links--plain">
+              <li><a href="/about">About Procyon</a></li>
+              <li><a href="/about/certifications">Partners &amp; certifications</a></li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hdr__cta">
+      <a class="btn btn--red btn--sm" href="#audit" data-track="cta_header">Talk to an architect</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+    </div>
+  </div>
+
+  <div class="mnav" id="mnav" hidden>
+    <div class="wrap mnav__in">
+      <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
+      <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
+      <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Insights</summary><a href="/blog" aria-current="page">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
+      <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
+      <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="ph ph--ins" aria-labelledby="ph-h">
+  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Blog</li></ol></nav>
+    <div class="ph__grid">
+      <div class="ph__copy">
+        <p class="pill"><span class="pill__dot"></span>Blog</p>
+        <h1 id="ph-h" class="ph__h">Field notes from the people <em>who do the work.</em></h1>
+        <p class="ph__lede"><b>Frameworks, playbooks and lessons from Procyon's Salesforce, ServiceNow, data and AI practices.</b> Written by the architects who run the audits, rollouts and rescues, for the leaders who have to make the call.</p>
+      </div>
+      <div class="ph__w">
+        <a class="feat" href="/blog/meet-procyon-at-dreamforce-2026">
+          <img src="/assets/img/insights/blog/meet-procyon-at-dreamforce-2026.webp" alt="" width="1200" height="675" decoding="async">
+          <span class="feat__k">Latest &middot; Dreamforce</span>
+          <b>Meet Procyon at Dreamforce 2026: Private 1:1 Salesforce Strategy Sessions</b>
+          <span>No booth. No pitch. Private working sessions with senior Salesforce architects - and a free 30-day plan. Here is how to book.</span>
+          <em>Read the article &rarr;</em>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sx sx--paper ins" aria-labelledby="list-h">
+  <div class="wrap">
+    <h2 id="list-h" class="visually-hidden">All articles</h2>
+    <div class="uc__bar ins__bar" data-filter="ins-list">
+      <span>Topic</span>
+      <button class="chipf" type="button" data-f="all" aria-pressed="true">All <small>33</small></button>
+      <button class="chipf" type="button" data-f="dreamforce" aria-pressed="false">Dreamforce <small>6</small></button>
+      <button class="chipf" type="button" data-f="supplier-diversity" aria-pressed="false">Supplier Diversity <small>3</small></button>
+      <button class="chipf" type="button" data-f="ai-and-machine-learning" aria-pressed="false">AI &amp; Machine Learning <small>2</small></button>
+      <button class="chipf" type="button" data-f="data-and-analytics" aria-pressed="false">Data &amp; Analytics <small>1</small></button>
+      <button class="chipf" type="button" data-f="cloud" aria-pressed="false">Cloud <small>2</small></button>
+      <button class="chipf" type="button" data-f="servicenow" aria-pressed="false">ServiceNow <small>2</small></button>
+      <button class="chipf" type="button" data-f="revenue-cloud" aria-pressed="false">Revenue Cloud <small>1</small></button>
+      <button class="chipf" type="button" data-f="salesforce-consulting" aria-pressed="false">Salesforce Consulting <small>7</small></button>
+      <button class="chipf" type="button" data-f="architecture" aria-pressed="false">Architecture <small>1</small></button>
+      <button class="chipf" type="button" data-f="agentforce" aria-pressed="false">Agentforce <small>4</small></button>
+      <button class="chipf" type="button" data-f="cybersecurity" aria-pressed="false">Cybersecurity <small>1</small></button>
+      <button class="chipf" type="button" data-f="sap" aria-pressed="false">SAP <small>1</small></button>
+      <button class="chipf" type="button" data-f="ai-agents" aria-pressed="false">AI Agents <small>2</small></button>
+    </div>
+    <div class="ins-list" id="ins-list">
+      <a class="ins-row rv" data-team="dreamforce" href="/blog/meet-procyon-at-dreamforce-2026">
+        <img class="ins-row__img" src="/assets/img/insights/blog/meet-procyon-at-dreamforce-2026.webp" alt="" width="1200" height="675" loading="eager" decoding="async">
+        <span class="ins-row__meta"><b>Dreamforce</b><time datetime="2026-11-05">Nov 5, 2026</time><span>2 min read</span></span>
+        <span class="ins-row__t">Meet Procyon at Dreamforce 2026: Private 1:1 Salesforce Strategy Sessions</span>
+        <span class="ins-row__d">No booth. No pitch. Private working sessions with senior Salesforce architects - and a free 30-day plan. Here is how to book.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="supplier-diversity" href="/blog/nmsdc-2026-key-takeaways">
+        <img class="ins-row__img" src="/assets/img/insights/blog/nmsdc-2026-key-takeaways.webp" alt="" width="1200" height="675" loading="eager" decoding="async">
+        <span class="ins-row__meta"><b>Supplier Diversity</b><time datetime="2026-10-30">Oct 30, 2026</time><span>10 min read</span></span>
+        <span class="ins-row__t">NMSDC 2026 Key Takeaways: 6 Lessons From Los Angeles Every Supplier Diversity Leader Should Know</span>
+        <span class="ins-row__d">Our NMSDC 2026 recap from Los Angeles: what was on the official agenda, six takeaways on certification, partnerships, AI and capital, and the people who made the week.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="ai-and-machine-learning" href="/blog/agentforce-certified-mbe-partner-enterprise-ai">
+        <img class="ins-row__img" src="/assets/img/insights/blog/agentforce-certified-mbe-partner-enterprise-ai.webp" alt="" width="1200" height="675" loading="eager" decoding="async">
+        <span class="ins-row__meta"><b>AI &amp; Machine Learning</b><time datetime="2026-10-16">Oct 16, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">Agentforce Without Compromise: Sourcing Enterprise AI From a Certified MBE Partner</span>
+        <span class="ins-row__d">You can advance supplier-diversity goals and deploy enterprise AI at the same time. Here is how a certified MBE Agentforce partner delivers both.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="data-and-analytics" href="/blog/supplier-diversity-roi-certified-mbe-data-partner">
+        <img class="ins-row__img" src="/assets/img/insights/blog/supplier-diversity-roi-certified-mbe-data-partner.webp" alt="" width="1200" height="675" loading="eager" decoding="async">
+        <span class="ins-row__meta"><b>Data &amp; Analytics</b><time datetime="2026-10-16">Oct 16, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">Proving Supplier Diversity ROI: What to Ask a Certified MBE Data and Analytics Partner</span>
+        <span class="ins-row__d">Supplier diversity programs live or die on the data behind them. Here is what to ask a certified MBE data partner to prove ROI you can defend.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="cloud" href="/blog/cloud-modernization-certified-mbe-partner-2026">
+        <img class="ins-row__img" src="/assets/img/insights/blog/cloud-modernization-certified-mbe-partner-2026.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Cloud</b><time datetime="2026-10-16">Oct 16, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">The Procurement Leader's 2026 Guide to Cloud Modernization With a Diverse Partner</span>
+        <span class="ins-row__d">Cloud modernization is a large, recurring budget, which makes it ideal for defensible diverse spend. Here is how to source it from a certified MBE partner.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="servicenow" href="/blog/servicenow-certified-mbe-delivery-partner">
+        <img class="ins-row__img" src="/assets/img/insights/blog/servicenow-certified-mbe-delivery-partner.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>ServiceNow</b><time datetime="2026-10-16">Oct 16, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">ServiceNow at Scale: Why Enterprises Choose Certified MBE Delivery Partners</span>
+        <span class="ins-row__d">ServiceNow programs are large, recurring, and ideal for defensible diverse spend. Here is why enterprises choose certified MBE delivery partners.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="supplier-diversity" href="/blog/nmsdc-2026-certified-mbe-partner-shortlist">
+        <img class="ins-row__img" src="/assets/img/insights/blog/nmsdc-2026-certified-mbe-partner-shortlist.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Supplier Diversity</b><time datetime="2026-10-16">Oct 16, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">Your NMSDC 2026 Partner Shortlist: 7 Questions to Ask Before Los Angeles</span>
+        <span class="ins-row__d">NMSDC 2026 is where corporate buyers meet certified MBEs. Use these 7 questions to shortlist the right technology partner before you land in Los Angeles.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="supplier-diversity" href="/blog/supplier-diversity-salesforce-certified-mbe-partner">
+        <img class="ins-row__img" src="/assets/img/insights/blog/supplier-diversity-salesforce-certified-mbe-partner.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Supplier Diversity</b><time datetime="2026-10-16">Oct 16, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">Supplier Diversity Meets Salesforce: How a Certified MBE Partner Helps You Hit Tier 1 and Tier 2 Goals</span>
+        <span class="ins-row__d">Hitting Tier 1 and Tier 2 diversity goals without slowing enterprise delivery is possible. Here is how a certified MBE Salesforce partner makes it work.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="dreamforce" href="/blog/dreamforce-2026-key-takeaways">
+        <img class="ins-row__img" src="/assets/img/insights/blog/dreamforce-2026-key-takeaways.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Dreamforce</b><time datetime="2026-09-28">Sep 28, 2026</time><span>10 min read</span></span>
+        <span class="ins-row__t">Dreamforce 2026 Key Takeaways: Seven Agentforce Agents, AIForce &amp; What Enterprises Do Next</span>
+        <span class="ins-row__d">Seven named agents, a runtime that holds a goal for weeks, and Salesforce data pushed well beyond its own interface. Here is what Dreamforce 2026 actually announced.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="revenue-cloud" href="/blog/cpq-to-revenue-cloud-migration">
+        <img class="ins-row__img" src="/assets/img/insights/blog/cpq-to-revenue-cloud-migration.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Revenue Cloud</b><time datetime="2026-08-27">Aug 27, 2026</time><span>1 min read</span></span>
+        <span class="ins-row__t">CPQ to Revenue Cloud Migration: What to Expect</span>
+        <span class="ins-row__d">Salesforce CPQ went end of sale in 2025. Moving to Revenue Cloud is not an upgrade - it is a reimplementation, and planning matters.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="salesforce-consulting" href="/blog/salesforce-technical-debt-patterns">
+        <img class="ins-row__img" src="/assets/img/insights/blog/salesforce-technical-debt-patterns.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Salesforce Consulting</b><time datetime="2026-08-27">Aug 27, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">Top 5 Salesforce Technical Debt Patterns and How to Fix Them</span>
+        <span class="ins-row__d">Salesforce technical debt rarely announces itself. It shows up as slower releases, brittle automation, and a team afraid to touch production. Slug (URL): /blog/ Focus.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="salesforce-consulting" href="/blog/salesforce-org-health-check">
+        <img class="ins-row__img" src="/assets/img/insights/blog/salesforce-org-health-check.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Salesforce Consulting</b><time datetime="2026-08-27">Aug 27, 2026</time><span>2 min read</span></span>
+        <span class="ins-row__t">Salesforce Org Health Check: 10 Signs You Need an Expert Review</span>
+        <span class="ins-row__d">Your org rarely tells you it is in trouble. These ten signs do. Here is when a Salesforce health check pays for itself.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="architecture" href="/blog/headless-salesforce-api-first-architecture">
+        <img class="ins-row__img" src="/assets/img/insights/blog/headless-salesforce-api-first-architecture.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Architecture</b><time datetime="2026-08-27">Aug 27, 2026</time><span>2 min read</span></span>
+        <span class="ins-row__t">Headless Salesforce: The API-First Architecture CIOs Need</span>
+        <span class="ins-row__d">Your customers meet your brand in a dozen places Salesforce does not render. API-first architecture is how the platform keeps up.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="salesforce-consulting" href="/blog/first-90-days-salesforce-partner">
+        <img class="ins-row__img" src="/assets/img/insights/blog/first-90-days-salesforce-partner.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Salesforce Consulting</b><time datetime="2026-08-26">Aug 26, 2026</time><span>1 min read</span></span>
+        <span class="ins-row__t">Your First 90 Days With a Salesforce Partner: What Great Delivery Looks Like</span>
+        <span class="ins-row__d">The first 90 days tell you whether you hired a partner or a vendor. Here is what great delivery actually looks like.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="dreamforce" href="/blog/dreamforce-2026-roi">
+        <img class="ins-row__img" src="/assets/img/insights/blog/dreamforce-2026-roi.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Dreamforce</b><time datetime="2026-08-26">Aug 26, 2026</time><span>2 min read</span></span>
+        <span class="ins-row__t">How to Get Real ROI From Dreamforce 2026: Before, During, and After</span>
+        <span class="ins-row__d">Attending Dreamforce is easy. Getting a return on it is a discipline. Here is the before/during/after playbook.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="cloud" href="/blog/cloud-migration-strategy-6-rs-framework">
+        <img class="ins-row__img" src="/assets/img/insights/blog/cloud-migration-strategy-6-rs-framework.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Cloud</b><time datetime="2026-08-25">Aug 25, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">Cloud Migration Strategy: The 6 R's Framework for US Enterprises</span>
+        <span class="ins-row__d">Not every workload should move to the cloud the same way. The 6 R's framework helps you decide, application by application, what to do and why.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="agentforce" href="/blog/what-is-agentforce">
+        <img class="ins-row__img" src="/assets/img/insights/blog/what-is-agentforce.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Agentforce</b><time datetime="2026-08-25">Aug 25, 2026</time><span>2 min read</span></span>
+        <span class="ins-row__t">What Is Agentforce? A Plain-English Guide to Salesforce AI Agents</span>
+        <span class="ins-row__d">Agentforce is Salesforce's platform for AI agents that take real actions. Here is what it is, how it differs from a chatbot, and where it delivers value.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="agentforce" href="/blog/agentforce-mid-market">
+        <img class="ins-row__img" src="/assets/img/insights/blog/agentforce-mid-market.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Agentforce</b><time datetime="2026-08-25">Aug 25, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">Why Agentforce Changes Everything for Mid-Market Companies</span>
+        <span class="ins-row__d">For years, advanced automation belonged to enterprises with big budgets. Agentforce quietly rewrites that rule for mid-market companies.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="dreamforce" href="/blog/agentforce-at-dreamforce-2026">
+        <img class="ins-row__img" src="/assets/img/insights/blog/agentforce-at-dreamforce-2026.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Dreamforce</b><time datetime="2026-08-25">Aug 25, 2026</time><span>2 min read</span></span>
+        <span class="ins-row__t">Agentforce at Dreamforce 2026: What to Look For and What to Ask</span>
+        <span class="ins-row__d">Agentforce will be everywhere at Dreamforce 2026. Here is how to see past the demo and ask the questions that matter.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="dreamforce" href="/blog/dreamforce-2026-sessions-guide">
+        <img class="ins-row__img" src="/assets/img/insights/blog/dreamforce-2026-sessions-guide.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Dreamforce</b><time datetime="2026-08-25">Aug 25, 2026</time><span>2 min read</span></span>
+        <span class="ins-row__t">Dreamforce 2026 Sessions Worth Your Time (and How to Plan Your 3 Days)</span>
+        <span class="ins-row__d">With 1,500+ sessions, the risk at Dreamforce is doing a lot and learning little. Here is how to plan three days that move your roadmap.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="dreamforce" href="/blog/dreamforce-2026-guide">
+        <img class="ins-row__img" src="/assets/img/insights/blog/dreamforce-2026-guide.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Dreamforce</b><time datetime="2026-08-25">Aug 25, 2026</time><span>2 min read</span></span>
+        <span class="ins-row__t">Dreamforce 2026: The Complete Guide for Enterprise IT Leaders</span>
+        <span class="ins-row__d">Dreamforce 2026 runs Sept 15-17 at Moscone Center. Here is the complete guide for IT leaders who want value, not just a lanyard.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="salesforce-consulting" href="/blog/salesforce-ai-business-case-a-practical-roi-framework">
+        <img class="ins-row__img" src="/assets/img/insights/blog/salesforce-ai-business-case-a-practical-roi-framework.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Salesforce Consulting</b><time datetime="2026-08-25">Aug 25, 2026</time><span>2 min read</span></span>
+        <span class="ins-row__t">Salesforce AI Business Case: A Practical ROI Framework</span>
+        <span class="ins-row__d">Leadership will not fund a demo. This framework turns Salesforce AI ambition into a business case a CFO can approve.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="salesforce-consulting" href="/blog/salesforce-for-mid-market-buyers-guide">
+        <img class="ins-row__img" src="/assets/img/insights/blog/salesforce-for-mid-market-buyers-guide.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Salesforce Consulting</b><time datetime="2026-08-25">Aug 25, 2026</time><span>2 min read</span></span>
+        <span class="ins-row__t">Salesforce for Mid-Market: A 2026 Buyer's Guide to Clouds and AI</span>
+        <span class="ins-row__d">Mid-market teams often buy too much Salesforce and use too little. This guide helps you buy what you will actually use.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="salesforce-consulting" href="/blog/procyon-salesforce-accelerators-time-to-value">
+        <img class="ins-row__img" src="/assets/img/insights/blog/procyon-salesforce-accelerators-time-to-value.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Salesforce Consulting</b><time datetime="2026-08-25">Aug 25, 2026</time><span>1 min read</span></span>
+        <span class="ins-row__t">How Procyon's Accelerators Cut Salesforce Time-to-Value by 50%</span>
+        <span class="ins-row__d">Most Salesforce delays are not technical - they are re-inventing what has already been solved. Accelerators remove that tax.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="servicenow" href="/blog/servicenow-itsm-rollout-guide">
+        <img class="ins-row__img" src="/assets/img/insights/blog/servicenow-itsm-rollout-guide.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>ServiceNow</b><time datetime="2026-08-24">Aug 24, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">ServiceNow Done Right: A Practical ITSM Rollout Guide for Enterprises</span>
+        <span class="ins-row__d">ServiceNow succeeds or fails on discipline, not features. Here's how to roll out ITSM cleanly and expand into enterprise workflow without the sprawl.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="ai-and-machine-learning" href="/blog/enterprise-ai-use-case-prioritization">
+        <img class="ins-row__img" src="/assets/img/insights/blog/enterprise-ai-use-case-prioritization.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>AI &amp; Machine Learning</b><time datetime="2026-08-24">Aug 24, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">Enterprise AI Beyond the Pilot: How to Prioritize Use Cases That Pay Off</span>
+        <span class="ins-row__d">Most enterprises don't have an AI idea problem. They have a prioritization problem. Here's how to pick the use cases that actually pay off.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="cybersecurity" href="/blog/cybersecurity-audit-readiness-guide">
+        <img class="ins-row__img" src="/assets/img/insights/blog/cybersecurity-audit-readiness-guide.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Cybersecurity</b><time datetime="2026-08-24">Aug 24, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">Cybersecurity Audit Readiness: What US Businesses Must Prepare for SOC 2 and ISO 27001</span>
+        <span class="ins-row__d">An audit doesn't fail on audit day. It fails months earlier, in the controls you didn't operate. Here's how to be genuinely audit-ready.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="sap" href="/blog/sap-s4hana-migration-greenfield-vs-brownfield">
+        <img class="ins-row__img" src="/assets/img/insights/blog/sap-s4hana-migration-greenfield-vs-brownfield.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>SAP</b><time datetime="2026-08-24">Aug 24, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">SAP S/4HANA Migration: Greenfield vs Brownfield vs Selective - How to Choose</span>
+        <span class="ins-row__d">The hardest S/4HANA decision comes before the project starts: how you migrate. Here's how to choose greenfield, brownfield, or selective with confidence.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="agentforce" href="/blog/agentforce-pilot-to-production-90-day-roadmap">
+        <img class="ins-row__img" src="/assets/img/insights/blog/agentforce-pilot-to-production-90-day-roadmap.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Agentforce</b><time datetime="2026-08-24">Aug 24, 2026</time><span>3 min read</span></span>
+        <span class="ins-row__t">From Agentforce Pilot to Production: A 90-Day Roadmap for Enterprise IT Leaders</span>
+        <span class="ins-row__d">Launching the pilot is easy. Escaping &quot;pilot purgatory&quot; is where projects die. Here's the 90-day path from Agentforce pilot to production.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="salesforce-consulting" href="/blog/choosing-a-salesforce-implementation-partner">
+        <img class="ins-row__img" src="/assets/img/insights/blog/choosing-a-salesforce-implementation-partner.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Salesforce Consulting</b><time datetime="2026-08-24">Aug 24, 2026</time><span>5 min read</span></span>
+        <span class="ins-row__t">How to Choose a Salesforce Implementation Partner: 15 Questions Most Agencies Hope You Never Ask</span>
+        <span class="ins-row__d">The right partner reveals themselves in how they answer hard questions - not in their pitch deck. Here are the 15 questions to ask before you sign.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="ai-agents" href="/blog/build-vs-buy-ai-agents-salesforce">
+        <img class="ins-row__img" src="/assets/img/insights/blog/build-vs-buy-ai-agents-salesforce.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>AI Agents</b><time datetime="2026-08-24">Aug 24, 2026</time><span>2 min read</span></span>
+        <span class="ins-row__t">Build vs. Buy AI Agents on Salesforce: A CIO's Decision Framework</span>
+        <span class="ins-row__d">&quot;Build or buy&quot; is the wrong question. The real one is how much of each - here's a clear framework to decide for your Salesforce use case.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="ai-agents" href="/blog/enterprise-agent-readiness-checklist">
+        <img class="ins-row__img" src="/assets/img/insights/blog/enterprise-agent-readiness-checklist.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>AI Agents</b><time datetime="2026-08-24">Aug 24, 2026</time><span>4 min read</span></span>
+        <span class="ins-row__t">The Enterprise Agent-Readiness Checklist: 12 Things to Fix Before You Deploy AI Agents on Salesforce</span>
+        <span class="ins-row__d">Readiness isn't a setting you switch on. Score your Salesforce org against these 12 checks before you let an AI agent take real actions.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+      <a class="ins-row rv" data-team="agentforce" href="/blog/agentforce-implementation-guide">
+        <img class="ins-row__img" src="/assets/img/insights/blog/agentforce-implementation-guide.webp" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <span class="ins-row__meta"><b>Agentforce</b><time datetime="2026-08-24">Aug 24, 2026</time><span>4 min read</span></span>
+        <span class="ins-row__t">Agentforce Implementation Guide: Realistic Timelines and the Pitfalls No One Warns You About</span>
+        <span class="ins-row__d">Every Agentforce demo looks flawless, until your real org shows up. Here's what implementation actually takes, and the 5 pitfalls that quietly stall it.</span>
+        <i aria-hidden="true">&rarr;</i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="audit" aria-labelledby="cta-h">
+  <img class="cta__mark" src="/favicon.svg" alt="" width="760" height="760" loading="lazy" aria-hidden="true">
+  <div class="wrap cta__in">
+    <div class="cta__copy">
+      <h2 id="cta-h" class="rv">Read enough? <em>Talk to the author.</em></h2>
+      <p class="rv" data-d="1">Every article comes from a live practice. A senior architect can apply it to the actual platform, then send a written plan with scope, timeline and a cost range.</p>
+      <p class="cta__direct rv" data-d="2">Rather call? <a href="tel:+14153828040" data-track="phone_click">+1 415 382 8040</a> <a href="mailto:sales@procyonts.com" data-track="email_click">sales@procyonts.com</a></p>
+    </div>
+    <div class="paths">
+      <a class="path path--audit rv" data-d="1" href="#audit" data-open="audit" data-interest="" data-title="Brief a senior architect" data-kicker="From the blog" data-track="cta_close_audit">
+        <span class="path__k">30-minute call</span>
+        <b>Talk to an architect</b>
+        <span>A senior architect, not a sales rep. The call ends in a written plan with scope, timeline and a cost range.</span>
+        <ol class="when">
+          <li><b>Today</b> the brief is sent</li>
+          <li><b>1 business day</b> an architect replies</li>
+          <li><b>Within a week</b> the written plan</li>
+        </ol>
+        <em>Book the architect call &rarr;</em>
+      </a>
+      <a class="path path--score rv" data-d="2" href="#audit" data-open="score" data-track="cta_close_readiness">
+        <span class="path__k">2 minutes, self-serve</span>
+        <b>AI readiness check</b>
+        <span>Six questions about the Salesforce or ServiceNow platform. An instant readiness level and the three fixes that unlock AI agents.</span>
+        <svg class="path__gauge" viewBox="0 0 120 70" aria-hidden="true"><path d="M10 64a50 50 0 0 1 100 0" class="g-track"/><path d="M10 64a50 50 0 0 1 100 0" class="g-val"/></svg>
+        <em>Run the readiness check &rarr;</em>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= MODAL ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BC1E2D"/><stop offset=".55" stop-color="#39B34A"/><stop offset="1" stop-color="#28A8DE"/></linearGradient></defs></svg>
+<dialog class="modal" id="lead-modal" aria-labelledby="modal-title">
+  <div class="modal__shell">
+    <aside class="modal__side">
+      <img src="/favicon.svg" alt="" width="44" height="44">
+      <p class="modal__side-h" data-side-h>Talk to a senior architect</p>
+      <ul class="modal__gets" data-side-list>
+        <li>30 minutes with a senior architect</li>
+        <li>A written fix plan within a week</li>
+        <li>Scope, timeline and a cost range</li>
+        <li>Yours to keep, zero obligation</li>
+      </ul>
+      <p class="modal__side-foot">Salesforce Consulting Partner<br>ServiceNow Implementation Partner<br>ISO 27001 &middot; ISO 9001</p>
+    </aside>
+
+    <div class="modal__main">
+      <button class="modal__x" type="button" aria-label="Close" data-close>&times;</button>
+
+      <!-- CONTACT FORM -->
+      <form class="qf lf" id="lead-form" data-flow="audit" action="/api/lead" method="post" novalidate>
+        <p class="lf__k" data-lf-k>Talk to a senior architect</p>
+        <h2 id="modal-title" class="lf__t" data-lf-t>Brief a senior architect</h2>
+
+        <div class="lf__grid">
+          <label><span>Full name <em>*</em></span><input name="name" autocomplete="name" placeholder="Jane Smith" required></label>
+          <label><span>Company name <em>*</em></span><input name="company" autocomplete="organization" placeholder="Acme Corp" required></label>
+          <label><span>Business email <em>*</em></span><input name="email" type="email" autocomplete="email" placeholder="jane@acme.com" required data-business></label>
+          <label><span>Phone number <em>*</em></span><input name="phone" type="tel" autocomplete="tel" placeholder="+1 415 555 0100" required data-phone></label>
+          <label class="lf__full"><span>Service you need <em>*</em></span>
+            <select name="interest" required>
+              <option value="">Select a service</option>
+              <option>Salesforce consulting &amp; implementation</option>
+              <option>Agentforce &amp; AI agents</option>
+              <option>Salesforce org audit &amp; rescue</option>
+              <option>ServiceNow implementation</option>
+              <option>ServiceNow tech-debt removal</option>
+              <option>Data, integration &amp; MuleSoft</option>
+              <option>Product engineering &amp; app support</option>
+              <option>Managed services</option>
+              <option>Staff augmentation</option>
+              <option>Ranger Fusion ERP</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="lf__full"><span>Message</span><textarea name="message" rows="4" placeholder="Tell us about your goals, timeline and current platform."></textarea></label>
+        </div>
+        <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+        <input type="hidden" name="context" value="">
+        <div class="cf-slot"></div>
+        <button class="btn btn--red btn--block btn--lg" type="submit" data-track="form_submit">Submit <i aria-hidden="true">&rarr;</i></button>
+        <p class="qf__legal">A senior architect replies within one business day. We never share your details. <a href="/privacy">Privacy Policy</a></p>
+        <p class="qf__status" role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- SCORE FLOW -->
+      <form class="qz" id="score-form" data-flow="score" novalidate hidden>
+        <div class="qf__progress" aria-hidden="true"><span></span></div>
+        <p class="qf__count" aria-live="polite">Question <b>1</b> of 6</p>
+        <div class="qz__stage"></div>
+        <button type="button" class="qf__back qz__back" hidden>&larr; Back</button>
+        <p class="qf__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <img src="/assets/img/procyon-logo.svg" alt="Procyon Technostructure" width="200" height="55" loading="lazy">
+        <p>Run the business. Not the software.</p>
+        <span>Enterprise solution delivery for digital transformation, AI and data. Since 2004.</span>
+      </div>
+      <nav class="ftr__cols" aria-label="Footer">
+        <div><p>Salesforce</p><a href="/enterprise/salesforce/implementation">Implementation</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a></div>
+        <div><p>ServiceNow</p><a href="/enterprise/servicenow/platform-audit">Platform audit</a><a href="/enterprise/servicenow/itsm-itom">ITSM &amp; ITOM</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist</a><a href="/enterprise/servicenow/managed-services">Managed services</a></div>
+        <div><p>AI, Data &amp; Build</p><a href="/services/ai-ml">AI agents</a><a href="/solutions/enterprise-integration">Integration</a><a href="/services/data-analytics">Data &amp; analytics</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/staff-augmentation">Staff augmentation</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></div>
+        <div><p>Company &amp; Insights</p><a href="/about">About</a><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a><a href="/careers">Careers</a><a href="/contact">Contact</a></div>
+      </nav>
+    </div>
+    <div class="ftr__mid">
+      <address><b>Novato, CA</b>7250 Redwood Blvd, Suite #211<br>Novato, CA 94945, USA</address>
+      <address><b>Toronto, ON</b>202-1825 Markham Road<br>Scarborough, ON M1B 4Z9, Canada</address>
+      <address><b>Chennai, TN</b>RNG Tower, 824/1, Anna Salai<br>Chennai 600035, India</address>
+      <address><b>Talk to us</b><a href="tel:+14153828040">+1 415 382 8040</a><br><a href="mailto:sales@procyonts.com">sales@procyonts.com</a></address>
+    </div>
+    <div class="ftr__bot">
+      <p>&copy; 2026 Procyon Technostructure. Salesforce and ServiceNow are trademarks of their respective owners.</p>
+      <ul class="legal"><li><a href="/privacy">Privacy</a></li><li><a href="/terms">Terms</a></li><li><a href="/cookies">Cookies</a></li><li><a href="/accessibility">Accessibility</a></li></ul>
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/company/procyonts/" rel="noopener" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.150-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4z"/></svg></a></li>
+        <li><a href="https://x.com/procyon_ts" rel="noopener" target="_blank" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.470 21H2.4l7.17-8.2L2 3h6.33l4.37 5.78zm-1.08 16.2h1.7L7.4 4.73H5.58z"/></svg></a></li>
+        <li><a href="https://www.youtube.com/@ProcyonTechnostructure" rel="noopener" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.02V8.98L15.5 12z"/></svg></a></li>
+        <li><a href="https://www.facebook.com/ProcyonTSOfficial/" rel="noopener" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.25-1.5 1.55-1.5h1.65V3.45A22 22 0 0 0 14.3 3.3c-2.4 0-4.05 1.47-4.05 4.15v2.35H7.5V13h2.75v8z"/></svg></a></li>
+        <li><a href="https://www.instagram.com/procyonts/" rel="noopener" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.3A4.7 4.7 0 1 0 16.7 12 4.7 4.7 0 0 0 12 7.3zm0 7.75A3.05 3.05 0 1 1 15.05 12 3.05 3.05 0 0 1 12 15.05zM17 5.9a1.1 1.1 0 1 0 1.1 1.1A1.1 1.1 0 0 0 17 5.9zM21.9 7.9a5.4 5.4 0 0 0-1.5-3.8 5.4 5.4 0 0 0-3.8-1.5C15.1 2.5 8.9 2.5 7.4 2.6a5.4 5.4 0 0 0-3.8 1.5A5.4 5.4 0 0 0 2.1 7.9c-.1 1.5-.1 6.7 0 8.2a5.4 5.4 0 0 0 1.5 3.8 5.4 5.4 0 0 0 3.8 1.5c1.5.1 7.7.1 9.2 0a5.4 5.4 0 0 0 3.8-1.5 5.4 5.4 0 0 0 1.5-3.8c.1-1.5.1-6.7 0-8.2zM19.8 18a3.1 3.1 0 0 1-1.75 1.75c-1.2.48-4.070.37-5.4.37s-4.2.1-5.4-.37A3.1 3.1 0 0 1 5.5 18c-.48-1.2-.37-4.07-.37-5.4s-.1-4.2.37-5.4A3.1 3.1 0 0 1 7.25 5.45c1.2-.48 4.07-.37 5.4-.37s4.2-.1 5.4.37A3.1 3.1 0 0 1 19.8 7.2c.48 1.2.37 4.07.37 5.4s.11 4.2-.37 5.4z"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
+
+<script src="/assets/js/main.js?v=29" defer></script>
+<script src="/assets/js/pages.js?v=10" defer></script>
+</body>
+</html>
