@@ -75,17 +75,84 @@
 <section class="sx sx--paper" id="build" aria-labelledby="build-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="build-h" class="rv">Six capabilities, <em>one production pipeline.</em></h2><p class="rv" data-d="1">What gets built, and the tools it is built with. Tool choice follows the existing stack, not vendor preference.</p></div>
+      <div><h2 id="build-h" class="rv">Pick the problem. <em>See the agent that solves it.</em></h2><p class="rv" data-d="1">Six situations enterprise teams bring to the first call, what gets built for each, and the result it produced. Tools follow the existing stack, not vendor preference.</p></div>
     </div>
-    <div class="flows rv">
-      <div class="flows__head" aria-hidden="true"><span>Capability</span><span>What it does</span><span>Built with</span><span></span></div>
-      <div class="flow"><div class="flow__sys">Multi-agent orchestration</div><p><b>Coordinated agent networks for multi-step workflows across systems and data.</b> Human review where the process requires it.</p><small>LangGraph, CrewAI, AutoGen, Bedrock Agents, Azure AI Agent Service</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Multi-agent orchestration" data-title="Multi-agent orchestration scope">Scope <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">AI workflow automation</div><p><b>Intake, triage, approval, routing and resolution, end to end.</b> Agents reason and act on business rules.</p><small>n8n, MuleSoft, ServiceNow Flow Designer, Salesforce Flow</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Workflow automation" data-title="Workflow automation scope">Scope <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Enterprise AI governance</div><p><b>Policy enforcement, model monitoring, access controls and audit trails.</b> In the first architecture, not retrofitted.</p><small>ServiceNow AI Control Tower, Bedrock Guardrails, Azure AI Content Safety, Weights &amp; Biases</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI governance" data-title="AI governance review">Scope <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Model integration and AI Ops</div><p><b>LLM integration, fine-tuning, RAG and prompt engineering on enterprise data.</b> Observability catches model degradation early.</p><small>Bedrock, Azure OpenAI, Vertex AI, LlamaIndex, Pinecone, pgvector, MLflow</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Model integration" data-title="Model integration scope">Scope <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Agentic pipeline design</div><p><b>From trigger to resolution: event detection, reasoning, tool calls and outcome logging.</b> Deployed in the client environment.</p><small>LangGraph, n8n, AWS Step Functions, Azure Durable Functions</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Agentic pipelines" data-title="Agentic pipeline scope">Scope <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">ServiceNow AI Control Tower</div><p><b>One view of every AI agent on ServiceNow:</b> token use, performance, security posture, escalation controls and cost.</p><small>AI Control Tower, Now Assist, CMDB, IntegrationHub</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="ServiceNow AI" data-title="ServiceNow AI Control Tower scope">Scope <i aria-hidden="true">&rarr;</i></a></div>
+    <div class="xpl rv" data-tabs>
+    <div class="xpl__tabs" role="tablist" aria-label="Agentic AI capabilities">
+      <button type="button" role="tab" id="agx-t0" aria-controls="agx-p0" aria-selected="true"><b>Multi-agent orchestration</b><small>One request touches five systems and three teams</small></button>
+      <button type="button" role="tab" id="agx-t1" aria-controls="agx-p1" aria-selected="false" tabindex="-1"><b>AI workflow automation</b><small>Approvals stuck in inboxes and spreadsheets</small></button>
+      <button type="button" role="tab" id="agx-t2" aria-controls="agx-p2" aria-selected="false" tabindex="-1"><b>Enterprise AI governance</b><small>Risk and legal will not sign off on AI</small></button>
+      <button type="button" role="tab" id="agx-t3" aria-controls="agx-p3" aria-selected="false" tabindex="-1"><b>Model integration and AI Ops</b><small>The model works in the demo, not on real data</small></button>
+      <button type="button" role="tab" id="agx-t4" aria-controls="agx-p4" aria-selected="false" tabindex="-1"><b>Agentic pipeline design</b><small>Every AI project is built differently</small></button>
+      <button type="button" role="tab" id="agx-t5" aria-controls="agx-p5" aria-selected="false" tabindex="-1"><b>ServiceNow AI Control Tower</b><small>Agents everywhere, no one view of them</small></button>
     </div>
+    <div class="xpl__panel" role="tabpanel" id="agx-p0" aria-labelledby="agx-t0">
+      <p class="xpl__pain"><small>The situation</small>A single customer or patient request crosses CRM, ERP, document stores and a human approver. Every handoff adds a day and a chance to drop the ball.</p>
+      <h3>A coordinated set of agents that carries the request from intake to resolution.</h3>
+      <ul class="xpl__gets"><li>Specialist agents split the work: one reads, one checks policy, one updates the systems</li><li>A person reviews only the steps the process says must be reviewed</li><li>Every hop is logged, so audit can replay exactly what happened</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>4 hrs to 12 min</b><span>Clinical intake time in a live healthcare deployment</span></div>
+        
+        <div class="xpl__stack"><span>LangGraph</span><span>CrewAI</span><span>AutoGen</span><span>Bedrock Agents</span><span>Azure AI Agent Service</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Multi-agent orchestration" data-title="Multi-agent workflow review" data-message="Workflow that crosses several systems: ">Map the multi-step workflow <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="agx-p1" aria-labelledby="agx-t1" hidden>
+      <p class="xpl__pain"><small>The situation</small>Intake, triage and approvals still run on email, spreadsheets and tickets. Cycle times are long, and nobody can see where work is stuck.</p>
+      <h3>Intake, triage, approval and routing that run on business rules, not inboxes.</h3>
+      <ul class="xpl__gets"><li>Agents read the request, apply the rules and route it to the right owner</li><li>Exceptions go to people with the context already attached</li><li>Process owners see cycle time and bottlenecks in real time</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>60%</b><span>Average cycle-time reduction on automated workflows</span></div>
+        
+        <div class="xpl__stack"><span>Salesforce Flow</span><span>ServiceNow Flow Designer</span><span>MuleSoft</span><span>n8n</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Workflow automation" data-title="Workflow automation scope" data-message="Workflow to automate first: ">Automate the first workflow <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="agx-p2" aria-labelledby="agx-t2" hidden>
+      <p class="xpl__pain"><small>The situation</small>Pilots stall at the security review. Nobody can show who an agent acts as, what data it saw or why it made a decision.</p>
+      <h3>Governance an auditor can read: policy, monitoring and an audit trail from day one.</h3>
+      <ul class="xpl__gets"><li>Access controls so an agent sees only what the requesting user can see</li><li>Model monitoring with alerts on drift, cost and unsafe output</li><li>A full audit trail for every prompt, decision and handover</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>Zero</b><span>Compliance gaps at audit for NIH NIAAA clinical data governance</span></div>
+        
+        <div class="xpl__stack"><span>ServiceNow AI Control Tower</span><span>Bedrock Guardrails</span><span>Azure AI Content Safety</span><span>Weights &amp; Biases</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI governance" data-title="AI governance review">Get the governance review <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="agx-p3" aria-labelledby="agx-t3" hidden>
+      <p class="xpl__pain"><small>The situation</small>A model that impressed in the lab gives vague or wrong answers once it meets enterprise data, and nobody notices until a customer does.</p>
+      <h3>Models grounded in enterprise data, with monitoring that catches decay early.</h3>
+      <ul class="xpl__gets"><li>Retrieval, fine-tuning and prompt design tuned on the client's own content</li><li>Evaluation sets that measure accuracy before every release</li><li>Observability that flags degradation before users feel it</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>Bedrock</span><span>Azure OpenAI</span><span>Vertex AI</span><span>LlamaIndex</span><span>Pinecone</span><span>pgvector</span><span>MLflow</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Model integration" data-title="Model integration review">Review the model in production <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="agx-p4" aria-labelledby="agx-t4" hidden>
+      <p class="xpl__pain"><small>The situation</small>Each team builds its own AI plumbing, so every new use case starts from scratch and none of them share monitoring or controls.</p>
+      <h3>One reusable pipeline from trigger to resolution, deployed in the client environment.</h3>
+      <ul class="xpl__gets"><li>Event detection, reasoning, tool calls and outcome logging as reusable building blocks</li><li>Human-in-the-loop steps wherever the process requires them</li><li>New use cases ship on the same controls instead of new code</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>LangGraph</span><span>n8n</span><span>AWS Step Functions</span><span>Azure Durable Functions</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Agentic pipelines" data-title="Agentic pipeline design">Design the AI pipeline <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="agx-p5" aria-labelledby="agx-t5" hidden>
+      <p class="xpl__pain"><small>The situation</small>AI agents are appearing across the ServiceNow estate faster than anyone can track their cost, permissions or performance.</p>
+      <h3>One view of every AI agent on ServiceNow: usage, cost, security and escalation.</h3>
+      <ul class="xpl__gets"><li>Token use and cost by agent and by team</li><li>Performance and security posture in one dashboard</li><li>Escalation controls that pause an agent before it causes harm</li></ul>
+      <div class="xpl__side">
+        
+        <div class="xpl__how"><small>Delivered in production</small><p>Implemented live on ServiceNow AI Control Tower, not a slide.</p></div>
+        <div class="xpl__stack"><span>AI Control Tower</span><span>Now Assist</span><span>CMDB</span><span>IntegrationHub</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="ServiceNow AI" data-title="ServiceNow AI Control Tower scope">Set up AI Control Tower <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 

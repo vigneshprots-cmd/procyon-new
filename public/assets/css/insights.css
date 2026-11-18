@@ -111,14 +111,17 @@
 .case-row:hover > i { transform: translateX(6px); }
 
 /* Outcomes band (case studies, events) */
-.outc { position: relative; z-index: 2; margin-top: -48px; }
+.outc { position: relative; z-index: 2; padding-top: 28px; }
 .outc__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); border-radius: 18px; overflow: hidden; background: #fff; border: 1px solid var(--line); box-shadow: 0 40px 80px -48px rgba(11,13,16,.55); }
 .outc__list li { padding: 26px 26px 24px; }
 .outc__list li + li { border-left: 1px solid var(--line); }
 .outc__list b { display: block; font: 700 clamp(28px, 2.8vw, 40px)/1 var(--f-display); letter-spacing: -.035em; color: var(--ink); }
 .outc__list li:nth-child(4n+1) b { color: var(--blue-ink); } .outc__list li:nth-child(4n+2) b { color: var(--green-ink); } .outc__list li:nth-child(4n+3) b { color: var(--red); }
 .outc__list span { display: block; margin-top: 10px; font-size: 14px; color: var(--muted); }
-.ph:has(+ .outc) { padding-bottom: 136px; }
+@supports selector(:has(+ *)) {
+  .outc { padding-top: 0; margin-top: -48px; }
+  .ph:has(+ .outc) { padding-bottom: 136px; }
+}
 
 /* Story split: situation and result */
 .story { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 64px; align-items: start; }
@@ -209,3 +212,11 @@
   .hdr, .readbar, .post__side, .cta, .rel, footer, .sticky-cta { display: none !important; }
   .post__grid { grid-template-columns: 1fr; }
 }
+
+/* Embedded article blocks from the live CMS: never wider than the column */
+.post__body { overflow-wrap: break-word; }
+.post__body a[class*="button"], .post__body a[class*="btn"], .post__body [class*="cta"] a { max-width: 100%; box-sizing: border-box; white-space: normal !important; overflow-wrap: anywhere; }
+.post__body div[style], .post__body section { box-sizing: border-box; max-width: 100% !important; }
+.post__body pre, .post__body code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.post__body a[class*="button"], .post__body a[class*="btn"] { min-width: 0 !important; width: auto !important; }
+.post__body [class*="buttons"] > * { min-width: 0 !important; max-width: 100%; }

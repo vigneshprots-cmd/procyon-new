@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ServiceNow SecOps &amp; GRC for HIPAA, NIST and FedRAMP</title>
+<meta name="description" content="ServiceNow Security Operations and GRC: vulnerability response, security incident orchestration and continuous compliance for HIPAA, NIST, FedRAMP and SOC 2.">
+<link rel="canonical" href="https://procyonts.com/enterprise/servicenow/security-risk">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0B0D10">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Procyon Technostructure">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Security alerts routed with context. Audits ready on demand.">
+<meta property="og:description" content="ServiceNow vulnerability response, SOC incident orchestration, continuous compliance and GRC, integrated with CrowdStrike, Splunk, Sentinel, Qualys and Tenable.">
+<meta property="og:url" content="https://procyonts.com/enterprise/servicenow/security-risk">
+<meta property="og:image" content="https://procyonts.com/assets/img/og/servicenow.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Security alerts routed with context. Audits ready on demand.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@procyon_ts">
+<meta name="twitter:title" content="Security alerts routed with context. Audits ready on demand.">
+<meta name="twitter:description" content="ServiceNow vulnerability response, SOC incident orchestration, continuous compliance and GRC, integrated with CrowdStrike, Splunk, Sentinel, Qualys and Tenable.">
+<meta name="twitter:image" content="https://procyonts.com/assets/img/og/servicenow.jpg">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css?v=29">
+<link rel="stylesheet" href="/assets/css/pages.css?v=14">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://procyonts.com/enterprise/servicenow/security-risk#webpage",
+      "url": "https://procyonts.com/enterprise/servicenow/security-risk",
+      "name": "ServiceNow SecOps & GRC for HIPAA, NIST and FedRAMP",
+      "description": "ServiceNow Security Operations and GRC: vulnerability response, security incident orchestration and continuous compliance for HIPAA, NIST, FedRAMP and SOC 2.",
+      "isPartOf": {
+        "@id": "https://procyonts.com/#website"
+      },
+      "about": {
+        "@id": "https://procyonts.com/enterprise/servicenow/security-risk#service"
+      },
+      "inLanguage": "en",
+      "datePublished": "2026-11-18",
+      "dateModified": "2026-11-18",
+      "breadcrumb": {
+        "@id": "https://procyonts.com/enterprise/servicenow/security-risk#breadcrumb"
+      },
+      "primaryImageOfPage": "https://procyonts.com/assets/img/og/servicenow.jpg",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".ph__lede",
+          ".faq-a"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://procyonts.com/enterprise/servicenow/security-risk#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://procyonts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ServiceNow",
+          "item": "https://procyonts.com/enterprise/servicenow"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Security & risk",
+          "item": "https://procyonts.com/enterprise/servicenow/security-risk"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://procyonts.com/enterprise/servicenow/security-risk#service",
+      "name": "ServiceNow Security Operations and GRC",
+      "serviceType": "Security operations and GRC implementation",
+      "description": "ServiceNow Vulnerability Response, Security Incident Response, continuous compliance, integrated risk and vendor risk, and AI Control Tower, integrated with the security tool stack.",
+      "url": "https://procyonts.com/enterprise/servicenow/security-risk",
+      "provider": {
+        "@id": "https://procyonts.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "CISOs, security operations and compliance leaders"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Security and risk modules",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vulnerability Response",
+              "description": "Vulnerabilities prioritized against the CMDB with a risk priority model."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Security Incident Response",
+              "description": "SOC incident orchestration with automated escalation."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Continuous compliance",
+              "description": "Controls tested continuously with evidence collected automatically."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Integrated risk and vendor risk",
+              "description": "One view of enterprise and third-party risk."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://procyonts.com/#organization",
+      "name": "Procyon Technostructure",
+      "url": "https://procyonts.com/",
+      "logo": "https://procyonts.com/assets/img/procyon-logo.svg"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://procyonts.com/enterprise/servicenow/security-risk#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does ServiceNow Security Operations include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vulnerability Response with a risk priority model, Security Incident Response for SOC orchestration, and continuous compliance, all on the same CMDB as IT operations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which security tools does it integrate with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Commonly CrowdStrike Falcon, Splunk, Microsoft Sentinel, Tenable, Qualys, Rapid7, Okta and Palo Alto XSOAR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which compliance frameworks are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Controls and audit workflows are built for HIPAA, NIST, FedRAMP, SOC 2 and Judicial Council standards, among others."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Procyon offer managed security services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Beyond ServiceNow, Procyon offers SOC in a Box for 24x7 managed detection and response, continuous GRC and security assessments."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="pg pg--sn-sec">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="hdr" id="top">
+  <div class="wrap hdr__in">
+    <a class="brand" href="/" aria-label="Procyon Technostructure home">
+      <img src="/assets/img/procyon-logo.svg" alt="Procyon Technostructure" width="176" height="48">
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-sf">Salesforce</button>
+          <div class="dd__panel dd__panel--wide" id="dd-sf">
+            <ul class="dd__links">
+              <li><a href="/enterprise/salesforce/implementation"><b>Implementation &amp; rollout</b><span>Sales, Service, Revenue and Experience Cloud, right the first time.</span></a></li>
+              <li><a href="/enterprise/salesforce/agentforce"><b>Agentforce</b><span>AI agents working in production in under 4 weeks.</span></a></li>
+              <li><a href="/enterprise/salesforce/data-cloud"><b>Data Cloud &amp; integration</b><span>One real-time customer record across every system.</span></a></li>
+              <li><a href="/enterprise/salesforce/org-audit"><b>Org audit &amp; rescue</b><span>Find the debt, fix the org, win back user trust.</span></a></li>
+              <li><a href="/enterprise/salesforce/managed-services"><b>Managed services</b><span>Admin, releases and continuous improvement on retainer.</span></a></li>
+            </ul>
+            <a class="dd__feature" href="/products/ranger-fusion">
+              <small>Our product</small>
+              <b>Ranger Fusion ERP</b>
+              <span>Finance, inventory, projects and HR, native to Salesforce. Live in 2 to 4 weeks.</span>
+              <em>See the product &rarr;</em>
+            </a>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-sn" data-current>ServiceNow</button>
+          <div class="dd__panel dd__panel--wide" id="dd-sn">
+            <ul class="dd__links">
+              <li><a href="/enterprise/servicenow/platform-audit"><b>Platform audit &amp; tech-debt removal</b><span>From cluttered instance to clean platform in 8 weeks.</span></a></li>
+              <li><a href="/enterprise/servicenow/itsm-itom"><b>ITSM, ITOM &amp; CMDB</b><span>Incident, change and asset on data you can trust.</span></a></li>
+              <li><a href="/enterprise/servicenow/security-risk" aria-current="page"><b>Security &amp; risk</b><span>SecOps and GRC for HIPAA, NIST and FedRAMP.</span></a></li>
+              <li><a href="/enterprise/servicenow/now-assist"><b>Now Assist &amp; AI agents</b><span>Generative AI and agents, governed from day one.</span></a></li>
+              <li><a href="/enterprise/servicenow/managed-services"><b>Managed services</b><span>A run team for your instance, without the hiring.</span></a></li>
+            </ul>
+            <a class="dd__feature dd__feature--sn" href="#audit" data-interest="ServiceNow">
+              <small>Start here</small>
+              <b>Talk to a ServiceNow architect</b>
+              <span>30 minutes, no sales script. You leave with a short list of what to fix first.</span>
+              <em>Book the call &rarr;</em>
+            </a>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-ai">AI &amp; Data</button>
+          <div class="dd__panel" id="dd-ai">
+            <ul class="dd__links">
+              <li><a href="/services/ai-ml"><b>AI agents &amp; automation</b><span>Agents that act across CRM, ITSM and back office.</span></a></li>
+              <li><a href="/ai-data/knowledge-assistants"><b>Knowledge assistants</b><span>Answers grounded in your own documents and data.</span></a></li>
+              <li><a href="/services/data-analytics"><b>Data platforms &amp; analytics</b><span>Snowflake, Databricks and Tableau, wired to decisions.</span></a></li>
+              <li><a href="/solutions/enterprise-integration"><b>Integration &amp; APIs</b><span>MuleSoft, SAP, Oracle, NetSuite and Workday, in sync.</span></a></li>
+              <li><a href="/solutions/enterprise-application-modernization"><b>Product engineering</b><span>Web, mobile, modernization and application support.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-tl">Talent</button>
+          <div class="dd__panel" id="dd-tl">
+            <ul class="dd__links">
+              <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
+              <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-in">Insights</button>
+          <div class="dd__panel" id="dd-in">
+            <ul class="dd__links">
+              <li><a href="/blog"><b>Blog</b><span>Field notes and frameworks from our practice leaders.</span></a></li>
+              <li><a href="/case-studies"><b>Case Studies</b><span>Outcomes delivered for global clients.</span></a></li>
+              <li><a href="/insights/events"><b>Events</b><span>Meet Procyon at conferences and summits.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-co">Company</button>
+          <div class="dd__panel dd__panel--sm" id="dd-co">
+            <ul class="dd__links dd__links--plain">
+              <li><a href="/about">About Procyon</a></li>
+              <li><a href="/about/certifications">Partners &amp; certifications</a></li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hdr__cta">
+      <a class="btn btn--red btn--sm" href="#audit" data-track="cta_header">Talk to an architect</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+    </div>
+  </div>
+
+  <div class="mnav" id="mnav" hidden>
+    <div class="wrap mnav__in">
+      <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
+      <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk" aria-current="page">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
+      <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
+      <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
+      <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="ph" aria-labelledby="ph-h">
+  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/enterprise/servicenow">ServiceNow</a></li><li aria-current="page">Security &amp; risk</li></ol></nav>
+    <div class="ph__grid">
+      <div class="ph__copy">
+        <p class="pill"><span class="pill__dot"></span>Security &amp; risk</p>
+        <h1 id="ph-h" class="ph__h">Security alerts with context. <em>Audits ready on demand.</em></h1>
+        <p class="ph__lede"><b>Procyon implements ServiceNow Security Operations and GRC</b> for organizations that answer to HIPAA, NIST, FedRAMP and SOC 2. Vulnerabilities are prioritized against the CMDB, incidents route to the right analysts with context attached, and compliance evidence is collected continuously instead of in quarterly scrambles.</p>
+        <div class="ph__ctas">
+          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Security &amp; risk" data-title="SecOps and GRC scope">Scope SecOps and GRC <i aria-hidden="true">&rarr;</i></a>
+          <a class="btn btn--line btn--lg" href="#modules">See the modules</a>
+        </div>
+      </div>
+      <div class="ph__w">
+        <div class="wcard" data-picker="sec">
+          <span class="wcard__k">Start here</span>
+          <p class="wcard__t">What keeps the security team up at night?</p>
+          <div class="opt-list" role="radiogroup" aria-label="What keeps the security team up at night?">
+            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Vulnerability Response" data-s="Patch backlogs prioritized by real asset risk, correlated with the CMDB." data-cta="Scope Vulnerability Response" data-interest="ServiceNow implementation" data-kicker="Vulnerability Response" data-title="Vulnerability Response scope"><i></i>A patch backlog that never shrinks</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Security Incident Response" data-s="Alerts triaged and escalated automatically, so mean time to respond falls." data-cta="Scope incident orchestration" data-interest="ServiceNow implementation" data-kicker="Security Incident Response" data-title="SOC incident orchestration scope"><i></i>Alerts triaged by hand, slowly</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Continuous compliance" data-s="Controls tested continuously and evidence collected in the background." data-cta="Scope continuous compliance" data-interest="ServiceNow implementation" data-kicker="Continuous compliance" data-title="Continuous compliance scope"><i></i>Quarterly evidence scrambles</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Integrated risk" data-s="Enterprise, policy and vendor risk in one posture view." data-cta="Scope integrated risk" data-interest="ServiceNow implementation" data-kicker="Integrated risk" data-title="Integrated risk scope"><i></i>Risk spread across spreadsheets</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="AI Control Tower" data-s="AI spend, shadow AI and security controls governed in one place." data-href="/enterprise/servicenow/now-assist" data-link="See Now Assist and AI" data-cta="Govern AI on ServiceNow" data-interest="ServiceNow implementation" data-kicker="AI Control Tower" data-title="AI Control Tower scope"><i></i>AI spreading with no oversight</button>
+          </div>
+          <div class="rec" aria-live="polite"><b data-rec-b>Vulnerability Response</b><span data-rec-s>Patch backlogs prioritized by real asset risk, correlated with the CMDB.</span><a class="arrow-link" data-rec-a href="/enterprise/servicenow/now-assist" hidden>See Now Assist and AI <i aria-hidden="true">&rarr;</i></a></div>
+          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta>Scope Vulnerability Response <i aria-hidden="true">&rarr;</i></a>
+          <p class="wcard__foot">Integrates with CrowdStrike, Splunk, Sentinel, Qualys, Rapid7, Tenable, Okta and XSOAR.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kf kf--paper" aria-label="Key facts">
+  <div class="wrap">
+    <div class="kf__card">
+      <dl class="kf__in">
+        <div><dt>Exploit window</dt><dd><b>9 days</b>for critical CVEs, against 60+ days to patch (Qualys)</dd></div>
+        <div><dt>Response time</dt><dd><b>60%</b>MTTR reduction achievable with automated SecOps (ServiceNow)</dd></div>
+        <div><dt>Tools in use</dt><dd><b>30%</b>of security tool capability actually used (Gartner)</dd></div>
+      </dl>
+      <a class="kf__cta" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Security &amp; risk" data-title="SecOps and GRC scope"><small>Free &middot; 30 minutes</small><b>Scope SecOps and GRC</b><span>Modules, integrations and a cost range</span><i aria-hidden="true">&rarr;</i></a>
+    </div>
+  </div>
+</section>
+
+<section class="sx sx--paper" id="modules" aria-labelledby="mod-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><h2 id="mod-h" class="rv">Five security problems, <em>one operations posture.</em></h2><p class="rv" data-d="1">Pick the problem that costs the security team the most hours today.</p></div>
+    </div>
+    <div class="xpl rv" data-tabs>
+    <div class="xpl__tabs" role="tablist" aria-label="Security and risk modules">
+      <button type="button" role="tab" id="scx-t0" aria-controls="scx-p0" aria-selected="true"><b>Vulnerability Response</b><small>Patch chaos with no priorities</small></button>
+      <button type="button" role="tab" id="scx-t1" aria-controls="scx-p1" aria-selected="false" tabindex="-1"><b>SOC incident orchestration</b><small>Siloed triage, manual escalation</small></button>
+      <button type="button" role="tab" id="scx-t2" aria-controls="scx-p2" aria-selected="false" tabindex="-1"><b>Continuous compliance</b><small>Audit fatigue every quarter</small></button>
+      <button type="button" role="tab" id="scx-t3" aria-controls="scx-p3" aria-selected="false" tabindex="-1"><b>Integrated and vendor risk</b><small>No single view of risk</small></button>
+      <button type="button" role="tab" id="scx-t4" aria-controls="scx-p4" aria-selected="false" tabindex="-1"><b>AI Control Tower</b><small>Shadow AI and unknown AI spend</small></button>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="scx-p0" aria-labelledby="scx-t0">
+      <p class="xpl__pain"><small>The situation</small>Scanners report thousands of vulnerabilities, nobody knows which assets matter, and critical CVEs stay open for months.</p>
+      <h3>Vulnerabilities ranked by real asset risk and routed to the owner.</h3>
+      <ul class="xpl__gets"><li>Scanner findings correlated with the CMDB</li><li>A risk priority model that ranks what to patch first</li><li>Remediation tasks assigned to the asset owner automatically</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>9 days</b><span>Exploit window for critical CVEs, against 60+ days to patch (Qualys)</span></div>
+        
+        <div class="xpl__stack"><span>VR module</span><span>Risk Priority Model</span><span>Qualys</span><span>Rapid7</span><span>Tenable</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Vulnerability Response" data-title="Vulnerability Response scope">Fix the patch backlog <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="scx-p1" aria-labelledby="scx-t1" hidden>
+      <p class="xpl__pain"><small>The situation</small>Alerts arrive from many tools, analysts triage them by hand, and escalations travel by email while mean time to respond climbs.</p>
+      <h3>Security incidents triaged, enriched and escalated automatically.</h3>
+      <ul class="xpl__gets"><li>Alerts from CrowdStrike, Splunk and Sentinel in one queue</li><li>Playbooks that enrich and route incidents</li><li>Escalation and containment steps tracked to closure</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>60%</b><span>MTTR reduction achievable with automated SecOps (ServiceNow)</span></div>
+        
+        <div class="xpl__stack"><span>Security Incident Response</span><span>CrowdStrike</span><span>Splunk</span><span>Sentinel</span><span>Palo Alto XSOAR</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Security Incident Response" data-title="SOC incident orchestration scope">Orchestrate the SOC <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="scx-p2" aria-labelledby="scx-t2" hidden>
+      <p class="xpl__pain"><small>The situation</small>Every quarter the team stops to collect evidence, and controls drift between audits without anyone noticing.</p>
+      <h3>Controls tested continuously and evidence collected in the background.</h3>
+      <ul class="xpl__gets"><li>Controls mapped to HIPAA, NIST, FedRAMP, SOC 2 and Judicial Council standards</li><li>Evidence collected automatically from connected systems</li><li>Control failures assigned and tracked to remediation</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>100%</b><span>Audit-ready from day one for NIH NIAAA</span></div>
+        
+        <div class="xpl__stack"><span>Policy &amp; Compliance</span><span>Audit Management</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Continuous compliance" data-title="Continuous compliance scope">End the evidence scramble <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="scx-p3" aria-labelledby="scx-t3" hidden>
+      <p class="xpl__pain"><small>The situation</small>Enterprise risk, policy exceptions and vendor risk live in separate spreadsheets, so leadership never sees one posture.</p>
+      <h3>Enterprise, policy and third-party risk in one register.</h3>
+      <ul class="xpl__gets"><li>A single risk register with owners and scores</li><li>Vendor risk assessments that run on a schedule</li><li>Board-ready reporting on posture and trend</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>Integrated Risk</span><span>Vendor Risk</span><span>Policy</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Integrated risk" data-title="Integrated risk scope">Unify risk <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="scx-p4" aria-labelledby="scx-t4" hidden>
+      <p class="xpl__pain"><small>The situation</small>AI agents and tools are appearing faster than security can review them, with no view of spend, access or return.</p>
+      <h3>AI spend, security controls and governance in one place.</h3>
+      <ul class="xpl__gets"><li>Every AI agent inventoried with its access and cost</li><li>Security controls applied before agents go live</li><li>Return on AI spend visible to leadership</li></ul>
+      <div class="xpl__side">
+        
+        <div class="xpl__how"><small>Delivered in production</small><p>AI Control Tower implemented live, not as a pilot.</p></div>
+        <div class="xpl__stack"><span>AI Control Tower</span><span>FinOps</span><span>AI governance</span></div>
+        <a class="btn btn--red" href="/enterprise/servicenow/now-assist">Govern AI on ServiceNow <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="sx" aria-labelledby="vs-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><h2 id="vs-h" class="rv">The quarterly scramble, <em>or a posture that is always current.</em></h2></div>
+      <a class="sx__go rv" href="/services/cybersecurity">Broader cybersecurity services <i aria-hidden="true">&rarr;</i></a>
+    </div>
+    <div class="vs">
+      <div class="vs__them rv">
+        <small>Today</small>
+        <div class="vs__stack"><span>Scanners</span><span>SIEM</span><span>Tickets</span><span>Spreadsheets</span><span>Email</span><span>Audit binders</span></div>
+        <ul><li>Vulnerabilities ranked by severity, not by asset risk</li><li>Incidents escalated by email</li><li>Evidence gathered by hand every quarter</li><li>Risk spread across spreadsheets</li></ul>
+      </div>
+      <div class="vs__us rv" data-d="1">
+        <small>With ServiceNow SecOps and GRC</small>
+        <div class="vs__one">One security operations posture on the same CMDB as IT</div>
+        <ul><li>Patching ordered by real business risk</li><li>Incidents orchestrated with playbooks</li><li>Evidence collected continuously</li><li>One risk register leadership can read</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq__in">
+    <h2 id="faq-h" class="rv">Asked by CISOs <em>before a SecOps rollout.</em></h2>
+    <div class="faq__list">
+      <details class="rv" open><summary>What does ServiceNow Security Operations include?</summary><p class="faq-a">Vulnerability Response with a risk priority model, Security Incident Response for SOC orchestration, and continuous compliance, all on the same CMDB as IT operations.</p></details>
+      <details class="rv"><summary>Which security tools does it integrate with?</summary><p class="faq-a">Commonly CrowdStrike Falcon, Splunk, Microsoft Sentinel, Tenable, Qualys, Rapid7, Okta and Palo Alto XSOAR.</p></details>
+      <details class="rv"><summary>Which compliance frameworks are supported?</summary><p class="faq-a">Controls and audit workflows are built for HIPAA, NIST, FedRAMP, SOC 2 and Judicial Council standards, among others.</p></details>
+      <details class="rv"><summary>Does Procyon offer managed security services?</summary><p class="faq-a">Yes. Beyond ServiceNow, Procyon offers SOC in a Box for 24x7 managed detection and response, continuous GRC and security assessments.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="rel" aria-labelledby="rel-h">
+  <div class="wrap">
+    <h2 id="rel-h" class="rel__h">More from the ServiceNow practice</h2>
+    <ul class="rel__list">
+      <li><a href="/about/certifications"><b>Partners &amp; certifications</b><span>Salesforce and ServiceNow partner, ISO 27001, ISO 9001, WBE, NMSDC, SBE.</span><i aria-hidden="true">&rarr;</i></a></li>
+      <li><a href="/enterprise/servicenow"><b>ServiceNow practice</b><span>Health check first, then ITSM, SecOps, GRC and Now Assist on a fixed SOW.</span><i aria-hidden="true">&rarr;</i></a></li>
+      <li><a href="/enterprise/servicenow/platform-audit"><b>Platform audit &amp; tech-debt removal</b><span>From cluttered instance to clean platform in 8 weeks.</span><i aria-hidden="true">&rarr;</i></a></li>
+      <li><a href="/enterprise/servicenow/itsm-itom"><b>ITSM, ITOM &amp; CMDB</b><span>Incident, change and asset on data the team trusts.</span><i aria-hidden="true">&rarr;</i></a></li>
+      <li><a href="/enterprise/servicenow/now-assist"><b>Now Assist &amp; AI agents</b><span>Generative AI and agents, governed from day one.</span><i aria-hidden="true">&rarr;</i></a></li>
+      <li><a href="/enterprise/servicenow/managed-services"><b>ServiceNow managed services</b><span>A run team for the instance, without the hiring.</span><i aria-hidden="true">&rarr;</i></a></li>
+      <li><a href="/services/cybersecurity"><b>Cybersecurity &amp; compliance</b><span>SOC in a Box, continuous GRC and security assessments.</span><i aria-hidden="true">&rarr;</i></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta" id="audit" aria-labelledby="cta-h">
+  <img class="cta__mark" src="/favicon.svg" alt="" width="760" height="760" loading="lazy" aria-hidden="true">
+  <div class="wrap cta__in">
+    <div class="cta__copy">
+      <h2 id="cta-h" class="rv">One security posture, <em>always audit-ready.</em></h2>
+      <p class="rv" data-d="1">Share the tools, frameworks and the problem costing the most hours. A ServiceNow security architect replies with the modules, integrations and a cost range.</p>
+      <p class="cta__direct rv" data-d="2">Rather call? <a href="tel:+14153828040" data-track="phone_click">+1 415 382 8040</a> <a href="mailto:sales@procyonts.com" data-track="email_click">sales@procyonts.com</a></p>
+    </div>
+    <div class="paths">
+      <a class="path path--audit rv" data-d="1" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-title="SecOps and GRC scope" data-kicker="Security &amp;amp; risk" data-track="cta_close_audit">
+        <span class="path__k">30-minute call</span>
+        <b>Scope SecOps and GRC</b>
+        <span>A senior architect, not a sales rep. The call ends in a written plan with scope, timeline and a cost range.</span>
+        <ol class="when">
+          <li><b>Today</b> the brief is sent</li>
+          <li><b>1 business day</b> an architect replies</li>
+          <li><b>Within a week</b> the written plan</li>
+        </ol>
+        <em>Scope the program &rarr;</em>
+      </a>
+      <a class="path path--score rv" data-d="2" href="#audit" data-open="score" data-track="cta_close_readiness">
+        <span class="path__k">2 minutes, self-serve</span>
+        <b>AI readiness check</b>
+        <span>Six questions about the ServiceNow platform. An instant readiness level and the three fixes that unlock AI agents.</span>
+        <svg class="path__gauge" viewBox="0 0 120 70" aria-hidden="true"><path d="M10 64a50 50 0 0 1 100 0" class="g-track"/><path d="M10 64a50 50 0 0 1 100 0" class="g-val"/></svg>
+        <em>Run the readiness check &rarr;</em>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= MODAL ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BC1E2D"/><stop offset=".55" stop-color="#39B34A"/><stop offset="1" stop-color="#28A8DE"/></linearGradient></defs></svg>
+<dialog class="modal" id="lead-modal" aria-labelledby="modal-title">
+  <div class="modal__shell">
+    <aside class="modal__side">
+      <img src="/favicon.svg" alt="" width="44" height="44">
+      <p class="modal__side-h" data-side-h>Talk to a senior architect</p>
+      <ul class="modal__gets" data-side-list>
+        <li>30 minutes with a senior architect</li>
+        <li>A written fix plan within a week</li>
+        <li>Scope, timeline and a cost range</li>
+        <li>Yours to keep, zero obligation</li>
+      </ul>
+      <p class="modal__side-foot">Salesforce Consulting Partner<br>ServiceNow Implementation Partner<br>ISO 27001 &middot; ISO 9001</p>
+    </aside>
+
+    <div class="modal__main">
+      <button class="modal__x" type="button" aria-label="Close" data-close>&times;</button>
+
+      <!-- CONTACT FORM -->
+      <form class="qf lf" id="lead-form" data-flow="audit" action="/api/lead" method="post" novalidate>
+        <p class="lf__k" data-lf-k>Talk to a senior architect</p>
+        <h2 id="modal-title" class="lf__t" data-lf-t>Brief a senior architect</h2>
+
+        <div class="lf__grid">
+          <label><span>Full name <em>*</em></span><input name="name" autocomplete="name" placeholder="Jane Smith" required></label>
+          <label><span>Company name <em>*</em></span><input name="company" autocomplete="organization" placeholder="Acme Corp" required></label>
+          <label><span>Business email <em>*</em></span><input name="email" type="email" autocomplete="email" placeholder="jane@acme.com" required data-business></label>
+          <label><span>Phone number <em>*</em></span><input name="phone" type="tel" autocomplete="tel" placeholder="+1 415 555 0100" required data-phone></label>
+          <label class="lf__full"><span>Service you need <em>*</em></span>
+            <select name="interest" required>
+              <option value="">Select a service</option>
+              <option>Salesforce consulting &amp; implementation</option>
+              <option>Agentforce &amp; AI agents</option>
+              <option>Salesforce org audit &amp; rescue</option>
+              <option>ServiceNow implementation</option>
+              <option>ServiceNow tech-debt removal</option>
+              <option>Data, integration &amp; MuleSoft</option>
+              <option>Product engineering &amp; app support</option>
+              <option>Managed services</option>
+              <option>Staff augmentation</option>
+              <option>Ranger Fusion ERP</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="lf__full"><span>Message</span><textarea name="message" rows="4" placeholder="Tell us about your goals, timeline and current platform."></textarea></label>
+        </div>
+        <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+        <input type="hidden" name="context" value="">
+        <div class="cf-slot"></div>
+        <button class="btn btn--red btn--block btn--lg" type="submit" data-track="form_submit">Submit <i aria-hidden="true">&rarr;</i></button>
+        <p class="qf__legal">A senior architect replies within one business day. We never share your details. <a href="/privacy">Privacy Policy</a></p>
+        <p class="qf__status" role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- SCORE FLOW -->
+      <form class="qz" id="score-form" data-flow="score" novalidate hidden>
+        <div class="qf__progress" aria-hidden="true"><span></span></div>
+        <p class="qf__count" aria-live="polite">Question <b>1</b> of 6</p>
+        <div class="qz__stage"></div>
+        <button type="button" class="qf__back qz__back" hidden>&larr; Back</button>
+        <p class="qf__status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <img src="/assets/img/procyon-logo.svg" alt="Procyon Technostructure" width="200" height="55" loading="lazy">
+        <p>Run the business. Not the software.</p>
+        <span>Enterprise solution delivery for digital transformation, AI and data. Since 2004.</span>
+      </div>
+      <nav class="ftr__cols" aria-label="Footer">
+        <div><p>Salesforce</p><a href="/enterprise/salesforce/implementation">Implementation</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a></div>
+        <div><p>ServiceNow</p><a href="/enterprise/servicenow/platform-audit">Platform audit</a><a href="/enterprise/servicenow/itsm-itom">ITSM &amp; ITOM</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist</a><a href="/enterprise/servicenow/managed-services">Managed services</a></div>
+        <div><p>AI, Data &amp; Build</p><a href="/services/ai-ml">AI agents</a><a href="/solutions/enterprise-integration">Integration</a><a href="/services/data-analytics">Data &amp; analytics</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/staff-augmentation">Staff augmentation</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></div>
+        <div><p>Company &amp; Insights</p><a href="/about">About</a><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a><a href="/careers">Careers</a><a href="/contact">Contact</a></div>
+      </nav>
+    </div>
+    <div class="ftr__mid">
+      <address><b>Novato, CA</b>7250 Redwood Blvd, Suite #211<br>Novato, CA 94945, USA</address>
+      <address><b>Toronto, ON</b>202-1825 Markham Road<br>Scarborough, ON M1B 4Z9, Canada</address>
+      <address><b>Chennai, TN</b>RNG Tower, 824/1, Anna Salai<br>Chennai 600035, India</address>
+      <address><b>Talk to us</b><a href="tel:+14153828040">+1 415 382 8040</a><br><a href="mailto:sales@procyonts.com">sales@procyonts.com</a></address>
+    </div>
+    <div class="ftr__bot">
+      <p>&copy; 2026 Procyon Technostructure. Salesforce and ServiceNow are trademarks of their respective owners.</p>
+      <ul class="legal"><li><a href="/privacy">Privacy</a></li><li><a href="/terms">Terms</a></li><li><a href="/cookies">Cookies</a></li><li><a href="/accessibility">Accessibility</a></li></ul>
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/company/procyonts/" rel="noopener" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.150-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4z"/></svg></a></li>
+        <li><a href="https://x.com/procyon_ts" rel="noopener" target="_blank" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.470 21H2.4l7.17-8.2L2 3h6.33l4.37 5.78zm-1.08 16.2h1.7L7.4 4.73H5.58z"/></svg></a></li>
+        <li><a href="https://www.youtube.com/@ProcyonTechnostructure" rel="noopener" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.02V8.98L15.5 12z"/></svg></a></li>
+        <li><a href="https://www.facebook.com/ProcyonTSOfficial/" rel="noopener" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.25-1.5 1.55-1.5h1.65V3.45A22 22 0 0 0 14.3 3.3c-2.4 0-4.05 1.47-4.05 4.15v2.35H7.5V13h2.75v8z"/></svg></a></li>
+        <li><a href="https://www.instagram.com/procyonts/" rel="noopener" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.3A4.7 4.7 0 1 0 16.7 12 4.7 4.7 0 0 0 12 7.3zm0 7.75A3.05 3.05 0 1 1 15.05 12 3.05 3.05 0 0 1 12 15.05zM17 5.9a1.1 1.1 0 1 0 1.1 1.1A1.1 1.1 0 0 0 17 5.9zM21.9 7.9a5.4 5.4 0 0 0-1.5-3.8 5.4 5.4 0 0 0-3.8-1.5C15.1 2.5 8.9 2.5 7.4 2.6a5.4 5.4 0 0 0-3.8 1.5A5.4 5.4 0 0 0 2.1 7.9c-.1 1.5-.1 6.7 0 8.2a5.4 5.4 0 0 0 1.5 3.8 5.4 5.4 0 0 0 3.8 1.5c1.5.1 7.7.1 9.2 0a5.4 5.4 0 0 0 3.8-1.5 5.4 5.4 0 0 0 1.5-3.8c.1-1.5.1-6.7 0-8.2zM19.8 18a3.1 3.1 0 0 1-1.75 1.75c-1.2.48-4.070.37-5.4.37s-4.2.1-5.4-.37A3.1 3.1 0 0 1 5.5 18c-.48-1.2-.37-4.07-.37-5.4s-.1-4.2.37-5.4A3.1 3.1 0 0 1 7.25 5.45c1.2-.48 4.07-.37 5.4-.37s4.2-.1 5.4.37A3.1 3.1 0 0 1 19.8 7.2c.48 1.2.37 4.07.37 5.4s.11 4.2-.37 5.4z"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
+
+<script src="/assets/js/main.js?v=29" defer></script>
+<script src="/assets/js/pages.js?v=14" defer></script>
+</body>
+</html>

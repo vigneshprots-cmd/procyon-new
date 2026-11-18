@@ -1,6 +1,6 @@
 # procyonts.com: Information Architecture (v2, lean)
 
-The home page and the Salesforce, AI & Data, Talent and Company menus (20 pages, marked Live) are built. Salesforce pages are generated with `npm run build` from `src/pages/`. Every other page below is planned; until it exists, its link shows a "page in progress" screen with a contact button.
+All menus are built (82 pages plus home). URLs follow the live procyonts.com slugs without trailing slashes; old paths 301 via redirects.json. Insights pages are generated from content/insights (npm run sync-insights, then npm run build). Salesforce pages are generated with `npm run build` from `src/pages/`. Every other page below is planned; until it exists, its link shows a "page in progress" screen with a contact button.
 The menu is cut to what Procyon actually sells: Salesforce, ServiceNow, AI & data, certified talent, and the Ranger Fusion product.
 Priority: P1 = build next (highest buying intent), P2 = second wave.
 
@@ -15,12 +15,12 @@ Priority: P1 = build next (highest buying intent), P2 = second wave.
 | | Org audit & rescue | /salesforce/org-audit/ | Live |
 | | Managed services | /salesforce/managed-services/ | Live |
 | | Feature card: Ranger Fusion ERP | /ranger-fusion/ | Live |
-| **ServiceNow** | ServiceNow hub | /servicenow/ | P1 |
-| | Platform audit & tech-debt removal | /servicenow/platform-audit/ | P1 |
-| | ITSM, ITOM & CMDB | /servicenow/itsm-itom/ | P1 |
-| | Security & risk (SecOps, GRC) | /servicenow/security-risk/ | P2 |
-| | Now Assist & AI agents | /servicenow/now-assist/ | P2 |
-| | Managed services | /servicenow/managed-services/ | P2 |
+| **ServiceNow** | ServiceNow hub | /servicenow/ | Live |
+| | Platform audit & tech-debt removal | /servicenow/platform-audit/ | Live |
+| | ITSM, ITOM & CMDB | /servicenow/itsm-itom/ | Live |
+| | Security & risk (SecOps, GRC) | /servicenow/security-risk/ | Live |
+| | Now Assist & AI agents | /servicenow/now-assist/ | Live |
+| | Managed services | /servicenow/managed-services/ | Live |
 | **AI & Data** | AI & data hub | /ai-data/ | Live |
 | | AI agents & automation | /ai-data/ai-agents/ | Live |
 | | Knowledge assistants (RAG) | /ai-data/knowledge-assistants/ | Live |

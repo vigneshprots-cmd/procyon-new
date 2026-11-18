@@ -125,17 +125,84 @@
 <section class="sx sx--paper" aria-labelledby="ind-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="ind-h" class="rv">Where AI is already working, <em>industry by industry.</em></h2><p class="rv" data-d="1">The workflows running in production today, and the standard each one is built to.</p></div>
+      <div><h2 id="ind-h" class="rv">Pick the industry. <em>See what is already in production.</em></h2><p class="rv" data-d="1">Six regulated industries, the workflow that hurts most in each, and the result AI has already delivered there.</p></div>
     </div>
-    <div class="flows rv">
-      <div class="flows__head" aria-hidden="true"><span>Industry</span><span>AI in production</span><span>Built to</span><span></span></div>
-      <div class="flow"><div class="flow__sys">Healthcare</div><p><b>Clinical intake, triage routing, prior authorization and trial data.</b></p><small>HIPAA-compliant architecture</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Healthcare AI" data-title="Healthcare AI scope" data-message="Industry: healthcare.&#10;Workflow: ">Discuss <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Government and public sector</div><p><b>Compliance workflows, statewide document processing and automated reporting.</b></p><small>FedRAMP-aligned delivery</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Public sector AI" data-title="Public sector AI scope" data-message="Industry: government.&#10;Workflow: ">Discuss <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Pharma and life sciences</div><p><b>Regulatory submissions, protocol deviation detection and audit evidence.</b></p><small>FDA and EMA-regulated programs</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Life sciences AI" data-title="Life sciences AI scope" data-message="Industry: pharma and life sciences.&#10;Workflow: ">Discuss <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Financial services</div><p><b>Fraud orchestration, risk automation, regulatory reporting agents and case management.</b></p><small>SOC 2 and ISO 27001 controls</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Financial services AI" data-title="Financial services AI scope" data-message="Industry: financial services.&#10;Workflow: ">Discuss <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Utilities and energy</div><p><b>Operational intelligence, predictive asset management and outage response.</b></p><small>Real-time operational data</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Utilities AI" data-title="Utilities AI scope" data-message="Industry: utilities and energy.&#10;Workflow: ">Discuss <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Nonprofit and education</div><p><b>Grant management, program intake and reporting agents for lean back offices.</b></p><small>Right-sized budgets</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Nonprofit AI" data-title="Nonprofit and education AI scope" data-message="Industry: nonprofit or education.&#10;Workflow: ">Discuss <i aria-hidden="true">&rarr;</i></a></div>
+    <div class="xpl rv" data-tabs>
+    <div class="xpl__tabs" role="tablist" aria-label="Industries">
+      <button type="button" role="tab" id="ind-t0" aria-controls="ind-p0" aria-selected="true"><b>Healthcare</b><small>Clinical staff buried in intake and paperwork</small></button>
+      <button type="button" role="tab" id="ind-t1" aria-controls="ind-p1" aria-selected="false" tabindex="-1"><b>Government and public sector</b><small>Statewide reporting assembled by hand</small></button>
+      <button type="button" role="tab" id="ind-t2" aria-controls="ind-p2" aria-selected="false" tabindex="-1"><b>Pharma and life sciences</b><small>Regulatory evidence gathered under deadline</small></button>
+      <button type="button" role="tab" id="ind-t3" aria-controls="ind-p3" aria-selected="false" tabindex="-1"><b>Financial services</b><small>Fraud and risk reviews never catch up</small></button>
+      <button type="button" role="tab" id="ind-t4" aria-controls="ind-p4" aria-selected="false" tabindex="-1"><b>Utilities and energy</b><small>Operations blind across dozens of systems</small></button>
+      <button type="button" role="tab" id="ind-t5" aria-controls="ind-p5" aria-selected="false" tabindex="-1"><b>Nonprofit and education</b><small>Lean teams drowning in grant admin</small></button>
     </div>
+    <div class="xpl__panel" role="tabpanel" id="ind-p0" aria-labelledby="ind-t0">
+      <p class="xpl__pain"><small>Where it hurts</small>Referrals, prior authorizations and intake forms consume hours of clinical time that should go to patients.</p>
+      <h3>Clinical intake, triage routing and prior authorization, automated on HIPAA-compliant architecture.</h3>
+      <ul class="xpl__gets"><li>Intake and triage handled by agents, with clinicians reviewing exceptions</li><li>Trial and research data captured with a full audit trail</li><li>Patient queries answered from approved clinical knowledge</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>90%</b><span>Less clinical intake processing time</span></div>
+        
+        <div class="xpl__stack"><span>HIPAA</span><span>Health Cloud</span><span>Bedrock</span><span>Azure OpenAI</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Healthcare AI" data-title="Healthcare AI scope" data-message="Industry: healthcare.&#10;Workflow: ">Discuss a healthcare program <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="ind-p1" aria-labelledby="ind-t1" hidden>
+      <p class="xpl__pain"><small>Where it hurts</small>Submissions and compliance reports are compiled manually across many systems, and one missed field means a rejected filing.</p>
+      <h3>Compliance workflows, document processing and reporting that agencies can audit.</h3>
+      <ul class="xpl__gets"><li>Automated submission pipelines with error detection before filing</li><li>Real-time compliance reporting across agency systems</li><li>US-cleared delivery teams and FedRAMP-aligned practices</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>60%</b><span>Fewer submission failures for a statewide judicial system</span></div>
+        
+        <div class="xpl__stack"><span>FedRAMP-aligned</span><span>ServiceNow</span><span>MuleSoft</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Public sector AI" data-title="Public sector AI scope" data-message="Industry: government.&#10;Workflow: ">Discuss a public sector program <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="ind-p2" aria-labelledby="ind-t2" hidden>
+      <p class="xpl__pain"><small>Where it hurts</small>Submissions, protocol deviations and audit evidence are pulled together by hand, close to every regulatory deadline.</p>
+      <h3>Regulatory submissions, deviation detection and audit evidence for FDA and EMA programs.</h3>
+      <ul class="xpl__gets"><li>Protocol deviations flagged as they happen</li><li>Audit evidence collected automatically and kept traceable</li><li>SOPs and submission history searchable in seconds</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>Federal audit-ready</b><span>Clinical data governance for NIH NIAAA</span></div>
+        
+        <div class="xpl__stack"><span>FDA-aligned</span><span>EMA</span><span>RAG</span><span>Azure OpenAI</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Life sciences AI" data-title="Life sciences AI scope" data-message="Industry: pharma and life sciences.&#10;Workflow: ">Discuss a life sciences program <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="ind-p3" aria-labelledby="ind-t3" hidden>
+      <p class="xpl__pain"><small>Where it hurts</small>Fraud alerts, risk reviews and regulatory reports pile up faster than analysts can clear them.</p>
+      <h3>Fraud orchestration, risk automation and reporting agents with full case management.</h3>
+      <ul class="xpl__gets"><li>Alerts triaged and enriched before an analyst opens them</li><li>Regulatory reports assembled from source systems automatically</li><li>Every decision logged for model risk and audit teams</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>SOC 2</span><span>ISO 27001</span><span>Financial Services Cloud</span><span>Snowflake</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Financial services AI" data-title="Financial services AI scope" data-message="Industry: financial services.&#10;Workflow: ">Discuss a financial services program <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="ind-p4" aria-labelledby="ind-t4" hidden>
+      <p class="xpl__pain"><small>Where it hurts</small>Grid, asset and outage data sits in separate systems, so operators react to problems instead of seeing them coming.</p>
+      <h3>Operational intelligence, predictive asset management and faster outage response.</h3>
+      <ul class="xpl__gets"><li>Real-time feeder alerts across operational systems</li><li>Load forecasting pipelines running in production</li><li>Asset data synchronized so maintenance is planned, not reactive</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>10+</b><span>Utility systems unified for Glendale Water &amp; Power</span></div>
+        
+        <div class="xpl__stack"><span>Forecasting</span><span>Event streaming</span><span>Data platform</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Utilities AI" data-title="Utilities AI scope" data-message="Industry: utilities and energy.&#10;Workflow: ">Discuss a utilities program <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="ind-p5" aria-labelledby="ind-t5" hidden>
+      <p class="xpl__pain"><small>Where it hurts</small>Small back-office teams spend their week on grant tracking, program intake and funder reports instead of the mission.</p>
+      <h3>Grant management, program intake and reporting agents sized for lean back offices.</h3>
+      <ul class="xpl__gets"><li>Program intake that routes itself</li><li>Funder reports drafted from live program data</li><li>Budgets sized for nonprofit and education organizations</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>Salesforce Nonprofit</span><span>Experience Cloud</span><span>Agents</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Nonprofit AI" data-title="Nonprofit and education AI scope" data-message="Industry: nonprofit or education.&#10;Workflow: ">Discuss a nonprofit program <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 

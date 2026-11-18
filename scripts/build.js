@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 28, pages: 10, js: 29 };
+const VERSION = { css: 29, pages: 14, js: 29 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -50,6 +50,14 @@ const PAGES = [
   { slug: '/services/staff-augmentation', section: 'talent', name: 'Staff augmentation', d: 'Vetted Salesforce, ServiceNow, data and AI people. Shortlist in 72 hours.' },
   { slug: '/talent/delivery-pods', section: 'talent', name: 'Delivery pods', d: 'A cross-functional team with shared accountability for the roadmap.' },
   { slug: '/talent/engagement-models', section: 'talent', name: 'Engagement models', d: 'Fixed scope, time and materials, milestone, outcome-based or managed capacity.' },
+  { slug: '/enterprise/servicenow', section: 'servicenow', name: 'ServiceNow practice', d: 'Health check first, then ITSM, SecOps, GRC and Now Assist on a fixed SOW.' },
+  { slug: '/enterprise/servicenow/platform-audit', section: 'servicenow', name: 'Platform audit & tech-debt removal', d: 'From cluttered instance to clean platform in 8 weeks.' },
+  { slug: '/enterprise/servicenow/itsm-itom', section: 'servicenow', name: 'ITSM, ITOM & CMDB', d: 'Incident, change and asset on data the team trusts.' },
+  { slug: '/enterprise/servicenow/security-risk', section: 'servicenow', name: 'Security & risk', d: 'SecOps and GRC for HIPAA, NIST and FedRAMP.' },
+  { slug: '/enterprise/servicenow/now-assist', section: 'servicenow', name: 'Now Assist & AI agents', d: 'Generative AI and agents, governed from day one.' },
+  { slug: '/enterprise/servicenow/managed-services', section: 'servicenow', name: 'ServiceNow managed services', d: 'A run team for the instance, without the hiring.' },
+  { slug: '/services/cloud', section: 'ai', name: 'Cloud transformation', d: 'AWS, Azure and Google Cloud migration, platform and FinOps.' },
+  { slug: '/services/cybersecurity', section: 'ai', name: 'Cybersecurity & compliance', d: 'SOC in a Box, continuous GRC and security assessments.' },
   { slug: '/blog', section: 'insights', name: 'Blog', d: 'Field notes and frameworks from Procyon practice leaders.' },
   { slug: '/case-studies', section: 'insights', name: 'Case studies', d: 'Outcomes delivered for global clients, with the stack behind them.' },
   { slug: '/insights/events', section: 'insights', name: 'Events', d: 'Meet Procyon at conferences and summits.' },
@@ -63,11 +71,12 @@ const PAGES = [
 const RAIL = {
   salesforce: { h: 'More from the Salesforce practice', pick: p => !p.section },
   company: { h: 'More about Procyon', pick: p => p.section === 'company' || p.slug === '/enterprise/salesforce' || p.slug === '/products/ranger-fusion' },
+  servicenow: { h: 'More from the ServiceNow practice', pick: p => p.section === 'servicenow' || ['/services/cybersecurity', '/about/certifications'].includes(p.slug) },
   insights: { h: 'More from Procyon', pick: p => p.section === 'insights' || ['/enterprise/salesforce', '/services/ai-ml', '/contact'].includes(p.slug) },
   ai: { h: 'More from AI, data and engineering', pick: p => p.section === 'ai' || ['/enterprise/salesforce/agentforce', '/enterprise/salesforce/data-cloud'].includes(p.slug) },
   talent: { h: 'More ways to add capacity', pick: p => p.section === 'talent' || ['/enterprise/salesforce/managed-services', '/about/certifications', '/contact'].includes(p.slug) }
 };
-const NAV = { ai: ['dd-ai', 'AI &amp; Data'], salesforce: ['dd-sf', 'Salesforce'], company: ['dd-co', 'Company'], insights: ['dd-in', 'Insights'], talent: ['dd-tl', 'Talent'] };
+const NAV = { servicenow: ['dd-sn', 'ServiceNow'], ai: ['dd-ai', 'AI &amp; Data'], salesforce: ['dd-sf', 'Salesforce'], company: ['dd-co', 'Company'], insights: ['dd-in', 'Insights'], talent: ['dd-tl', 'Talent'] };
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const strip = (s) => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&middot;/g, '·').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
@@ -305,6 +314,15 @@ function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(dir, e.name)) : [path.join(dir, e.name)]);
 }
 
+// OneDrive and antivirus can briefly lock a file; retry instead of failing the whole build.
+function writeRetry(file, data) {
+  for (let i = 0; ; i++) {
+    try { return fs.writeFileSync(file, data); } catch (e) {
+      if (i >= 8) throw e;
+      const t = Date.now(); while (Date.now() - t < 400 * (i + 1)) { /* wait */ }
+    }
+  }
+}
 let built = 0;
 const urls = [{ loc: SITE + '/', lastmod: TODAY, pr: '1.0' }];
 for (const file of walk(SRC).filter(f => f.endsWith('.html') && !f.includes(path.sep + '_partials' + path.sep))) {
@@ -315,7 +333,7 @@ for (const file of walk(SRC).filter(f => f.endsWith('.html') && !f.includes(path
   const body = src.slice(m[0].length);
   const out = path.join(PUB, meta.slug, 'index.html');
   fs.mkdirSync(path.dirname(out), { recursive: true });
-  fs.writeFileSync(out, render(meta, body));
+  writeRetry(out, render(meta, body));
   built++;
   const depth = meta.slug.split('/').length - 1;
   urls.push({ loc: SITE + meta.slug, lastmod: meta.modified || TODAY, pr: meta.section === 'insights' && depth > 1 ? '0.6' : depth <= 1 ? '0.9' : depth === 2 ? '0.8' : '0.7' });

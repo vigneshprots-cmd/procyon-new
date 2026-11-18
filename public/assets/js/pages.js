@@ -131,8 +131,8 @@
       var list = chosen.map(function (o) { return '- ' + o.getAttribute('data-name'); }).join('\n');
       var level = $('b', sev).textContent;
       track('symptoms_submit', { count: chosen.length, level: level });
-      open('Salesforce org audit & rescue', {
-        kicker: 'Org audit & rescue', title: 'Symptoms to a Salesforce architect',
+      open(root.getAttribute('data-interest') || 'Salesforce org audit & rescue', {
+        kicker: root.getAttribute('data-kicker') || 'Org audit & rescue', title: root.getAttribute('data-title') || 'Symptoms to a Salesforce architect',
         message: 'Self-assessed risk: ' + level + '\nSymptoms we see:\n' + list + '\n\nAnything else: '
       });
     });

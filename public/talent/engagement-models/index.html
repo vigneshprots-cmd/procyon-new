@@ -34,8 +34,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=28">
-<link rel="stylesheet" href="/assets/css/pages.css?v=10">
+<link rel="stylesheet" href="/assets/css/styles.css?v=29">
+<link rel="stylesheet" href="/assets/css/pages.css?v=14">
 
 <script type="application/ld+json">
 {
@@ -413,16 +413,72 @@
 <section class="sx sx--paper" id="compare" aria-labelledby="cmp-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="cmp-h" class="rv">Five models, <em>side by side.</em></h2><p class="rv" data-d="1">How each one is priced and governed, and the situation it suits. Any model works with staff augmentation, delivery pods or a project team.</p></div>
+      <div><h2 id="cmp-h" class="rv">Five ways to contract. <em>Start from the situation.</em></h2><p class="rv" data-d="1">Pick the model to see when it fits, how it is priced and how it is governed. Any model works with staff augmentation, delivery pods or a project team.</p></div>
     </div>
-    <div class="flows rv">
-      <div class="flows__head" aria-hidden="true"><span>Model</span><span>How it is priced and governed</span><span>Best when</span><span></span></div>
-      <div class="flow"><div class="flow__sys">Fixed scope</div><p><b>One price for defined deliverables and a timeline.</b> Change requests handle anything outside the written scope.</p><small>The outcome is clear, such as a cloud rollout or an accelerator</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Engagement model" data-title="Fixed-scope proposal" data-message="Model: fixed scope.&#10;Scope: ">Choose <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Time and materials</div><p><b>Billed on time used, at agreed role rates.</b> The client steers priorities week to week.</p><small>Scope is still evolving, or AI use cases are being explored</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Engagement model" data-title="Time and materials proposal" data-message="Model: time and materials.&#10;Roles and duration: ">Choose <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Milestone-based</div><p><b>Payments released as each phase deliverable is signed off.</b> Six phase gates, from discovery to optimization.</p><small>Budget certainty matters, but detail will settle as the program runs</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Engagement model" data-title="Milestone-based proposal" data-message="Model: milestone-based.&#10;Program: ">Choose <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Outcome-based</div><p><b>Part of the fee tied to an agreed business KPI.</b> Baseline measured first, then shared stakes in the result.</p><small>One metric matters most, such as response time or win rate</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Engagement model" data-title="Outcome-based proposal" data-message="Model: outcome-based.&#10;KPI to move: ">Choose <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Managed capacity</div><p><b>A pod or squad on recurring terms, with shared accountability.</b> Quarterly business reviews and a flex layer that scales in two weeks.</p><small>An ongoing roadmap or a live platform to run</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Engagement model" data-title="Managed capacity proposal" data-message="Model: managed capacity.&#10;Roadmap or platform: ">Choose <i aria-hidden="true">&rarr;</i></a></div>
+    <div class="xpl rv" data-tabs>
+    <div class="xpl__tabs" role="tablist" aria-label="Engagement models">
+      <button type="button" role="tab" id="emx-t0" aria-controls="emx-p0" aria-selected="true"><b>Fixed scope</b><small>Budget certainty for a clear outcome</small></button>
+      <button type="button" role="tab" id="emx-t1" aria-controls="emx-p1" aria-selected="false" tabindex="-1"><b>Time and materials</b><small>Flexibility while scope is still moving</small></button>
+      <button type="button" role="tab" id="emx-t2" aria-controls="emx-p2" aria-selected="false" tabindex="-1"><b>Milestone-based</b><small>Certainty, with room for detail to settle</small></button>
+      <button type="button" role="tab" id="emx-t3" aria-controls="emx-p3" aria-selected="false" tabindex="-1"><b>Outcome-based</b><small>Paying for the result, not the effort</small></button>
+      <button type="button" role="tab" id="emx-t4" aria-controls="emx-p4" aria-selected="false" tabindex="-1"><b>Managed capacity</b><small>An ongoing roadmap or a live platform</small></button>
     </div>
+    <div class="xpl__panel" role="tabpanel" id="emx-p0" aria-labelledby="emx-t0">
+      <p class="xpl__pain"><small>Best when</small>The outcome is clear, such as a cloud rollout or an accelerator, and finance needs one number before signing.</p>
+      <h3>One price for defined deliverables and a timeline.</h3>
+      <ul class="xpl__gets"><li>Written scope, deliverables and acceptance criteria</li><li>Change requests for anything outside the scope</li><li>Milestone sign-off before each payment where agreed</li></ul>
+      <div class="xpl__side">
+        
+        <div class="xpl__how"><small>How it is governed</small><p>Scope document, phase gates and change control.</p></div>
+        
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Engagement model" data-title="Fixed-scope proposal" data-message="Model: fixed scope.&#10;Scope: ">Get a fixed-scope proposal <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="emx-p1" aria-labelledby="emx-t1" hidden>
+      <p class="xpl__pain"><small>Best when</small>The roadmap will change, or AI use cases are still being explored, and locking scope now would mean paying for change requests.</p>
+      <h3>Billed on time used, at agreed role rates, with priorities steered week to week.</h3>
+      <ul class="xpl__gets"><li>Agreed rates per role, onshore, nearshore or offshore</li><li>Weekly priorities set by the client owner</li><li>Capacity added or released within two weeks</li></ul>
+      <div class="xpl__side">
+        
+        <div class="xpl__how"><small>How it is governed</small><p>Timesheets, weekly backlog review and monthly reporting.</p></div>
+        
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Engagement model" data-title="Time and materials proposal" data-message="Model: time and materials.&#10;Roles and duration: ">Get a time and materials proposal <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="emx-p2" aria-labelledby="emx-t2" hidden>
+      <p class="xpl__pain"><small>Best when</small>The budget must be fixed, but some detail will only become clear once the program is running.</p>
+      <h3>Payments released as each phase deliverable is signed off.</h3>
+      <ul class="xpl__gets"><li>Six phase gates, from discovery to optimization</li><li>Payment tied to a signed deliverable, not elapsed time</li><li>Detail refined inside each phase without reopening the contract</li></ul>
+      <div class="xpl__side">
+        
+        <div class="xpl__how"><small>How it is governed</small><p>Phase gates with signed deliverables.</p></div>
+        
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Engagement model" data-title="Milestone-based proposal" data-message="Model: milestone-based.&#10;Program: ">Get a milestone-based proposal <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="emx-p3" aria-labelledby="emx-t3" hidden>
+      <p class="xpl__pain"><small>Best when</small>One business metric matters most, such as service response time or win rate, and leadership wants the partner to share the risk.</p>
+      <h3>Part of the fee tied to an agreed business KPI.</h3>
+      <ul class="xpl__gets"><li>The KPI baseline measured before work starts</li><li>Shared stakes in moving the number</li><li>Reporting both sides agree on</li></ul>
+      <div class="xpl__side">
+        
+        <div class="xpl__how"><small>How it is governed</small><p>Baseline, target and an agreed measurement method.</p></div>
+        
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Engagement model" data-title="Outcome-based proposal" data-message="Model: outcome-based.&#10;KPI to move: ">Discuss an outcome-based contract <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="emx-p4" aria-labelledby="emx-t4" hidden>
+      <p class="xpl__pain"><small>Best when</small>The work never really ends: a roadmap that keeps growing, or a live platform that has to keep improving every month.</p>
+      <h3>A pod or squad on recurring terms, with shared accountability for outcomes.</h3>
+      <ul class="xpl__gets"><li>A steady core team plus a flex layer</li><li>Quarterly business reviews on outcomes and performance</li><li>Scale up or down within two weeks</li></ul>
+      <div class="xpl__side">
+        
+        <div class="xpl__how"><small>How it is governed</small><p>Quarterly business reviews and a monthly capacity check.</p></div>
+        
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Engagement model" data-title="Managed capacity proposal" data-message="Model: managed capacity.&#10;Roadmap or platform: ">Get a managed capacity proposal <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 
@@ -640,6 +696,6 @@
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
 <script src="/assets/js/main.js?v=29" defer></script>
-<script src="/assets/js/pages.js?v=10" defer></script>
+<script src="/assets/js/pages.js?v=14" defer></script>
 </body>
 </html>

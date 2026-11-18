@@ -622,7 +622,7 @@ i { font-style: normal; }
 .ftr__mid a:hover { color: var(--red); }
 .ftr__bot { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px; padding-top: 28px; color: var(--muted); font-size: 13.5px; }
 .ftr__bot p { margin: 0; flex: 1 1 380px; }
-.legal, .social { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
+.legal, .social { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .legal a { color: var(--muted); text-decoration: none; }
 .legal a:hover { color: var(--ink); }
 .social { gap: 8px; }

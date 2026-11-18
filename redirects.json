@@ -46,5 +46,17 @@
   "/industries/financial-services": "/ai-data",
   "/industries/public-sector": "/ai-data",
   "/industries/retail": "/ai-data",
-  "/industries/high-tech": "/ai-data"
+  "/industries/high-tech": "/ai-data",
+  "/events": "/insights/events",
+  "/events/dreamforce-2026": "/insights/events/dreamforce-2026",
+  "/events/dreamforce-2026/book": "/insights/events/dreamforce-2026",
+  "/events/nmsdc-annual-conference-exchange-2026": "/insights/events/nmsdc-annual-conference-exchange-2026",
+  "/blog/agentforce-enterprise-playbook": "/blog/agentforce-implementation-guide",
+  "/blog/agentforce-enterprise-playbook-2026": "/blog/agentforce-implementation-guide",
+  "/blog/salesforce-ai-business-case-roi": "/blog/salesforce-ai-business-case-a-practical-roi-framework",
+  "/blog/sap-rise-vs-grow-decision-framework": "/blog/sap-s4hana-migration-greenfield-vs-brownfield",
+  "/blog/servicenow-clean-core-guide": "/enterprise/servicenow/platform-audit",
+  "/case-studies/global-bank-salesforce-agentforce-rollout": "/case-studies",
+  "/case-studies/cpg-leader-sap-s4hana-greenfield": "/case-studies",
+  "/case-studies/fortune-500-servicenow-tco-reduction": "/case-studies"
 }

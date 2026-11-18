@@ -311,6 +311,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://procyonts.com/enterprise/servicenow</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://procyonts.com/enterprise/servicenow/itsm-itom</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://procyonts.com/enterprise/servicenow/managed-services</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://procyonts.com/enterprise/servicenow/now-assist</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://procyonts.com/enterprise/servicenow/platform-audit</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://procyonts.com/enterprise/servicenow/security-risk</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://procyonts.com/insights/events</loc>
     <lastmod>2026-11-18</lastmod>
     <priority>0.6</priority>
@@ -337,6 +367,16 @@
   </url>
   <url>
     <loc>https://procyonts.com/services/ai-ml</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://procyonts.com/services/cloud</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://procyonts.com/services/cybersecurity</loc>
     <lastmod>2026-11-18</lastmod>
     <priority>0.8</priority>
   </url>

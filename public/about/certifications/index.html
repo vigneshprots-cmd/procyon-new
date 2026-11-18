@@ -34,8 +34,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=28">
-<link rel="stylesheet" href="/assets/css/pages.css?v=10">
+<link rel="stylesheet" href="/assets/css/styles.css?v=29">
+<link rel="stylesheet" href="/assets/css/pages.css?v=14">
 
 <script type="application/ld+json">
 {
@@ -366,20 +366,96 @@
 <section class="sx sx--paper" id="register" aria-labelledby="reg-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="reg-h" class="rv">The credential register, <em>and what each one covers.</em></h2><p class="rv" data-d="1">Each credential, the team it matters to, and what it changes for a buyer.</p></div>
+      <div><h2 id="reg-h" class="rv">The question procurement asks, <em>and the credential that answers it.</em></h2><p class="rv" data-d="1">Pick a credential to see who asks for it, what it proves and the document that goes in the vendor file.</p></div>
     </div>
-    <div class="flows rv">
-      <div class="flows__head" aria-hidden="true"><span>Credential</span><span>What it means for the buyer</span><span>Matters to</span><span></span></div>
-      <div class="flow"><div class="flow__sys">Salesforce Consulting Partner</div><p><b>Certified Salesforce consultants on the program.</b> Administrator, Platform Developer, Sales, Service, Revenue, Data Cloud and Einstein AI certifications in the team.</p><small>CRM and IT owners</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="Salesforce partner verification" data-message="Requested: Salesforce partner verification.">Request <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">ServiceNow Implementation Partner</div><p><b>Implementation by a recognised ServiceNow partner.</b> ITSM, ITOM, CMDB, Security Operations and GRC programs.</p><small>IT operations and risk</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="ServiceNow partner verification" data-message="Requested: ServiceNow partner verification.">Request <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">ISO 27001</div><p><b>An audited information security management system.</b> Shortens security reviews and vendor risk assessments.</p><small>Security and vendor risk</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="ISO 27001 certificate" data-message="Requested: ISO 27001 certificate.">Request <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">SOC 2 Type II</div><p><b>Independent assurance that security controls work over time.</b> Answers most vendor security questionnaires before they are sent.</p><small>Security and vendor risk</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="SOC 2 Type II report" data-message="Requested: SOC 2 Type II report.">Request <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">ISO 9001:2015</div><p><b>A certified quality management system.</b> Delivery runs on documented, repeatable processes.</p><small>Procurement and PMO</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="ISO 9001:2015 certificate" data-message="Requested: ISO 9001:2015 certificate.">Request <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">HIPAA-compliant delivery</div><p><b>Delivery practices built for protected health information.</b> Fits healthcare and life sciences programs, with Salesforce Shield where required.</p><small>Healthcare compliance</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="HIPAA compliance documentation" data-message="Requested: HIPAA compliance documentation.">Request <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">WBENC</div><p><b>Certified women's business enterprise, through WBENC.</b> Spend can count toward supplier diversity programs.</p><small>Supplier diversity</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="WBENC certificate" data-message="Requested: WBENC certificate.">Request <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">NMSDC</div><p><b>Certified through the National Minority Supplier Development Council.</b> Supports minority supplier spend goals.</p><small>Supplier diversity</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="NMSDC certificate" data-message="Requested: NMSDC certificate.">Request <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">SBE</div><p><b>Certified small business enterprise.</b> Relevant where small business participation goals or set-asides apply.</p><small>Public sector buyers</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="SBE certificate" data-message="Requested: SBE certificate.">Request <i aria-hidden="true">&rarr;</i></a></div>
+    <div class="xpl rv" data-tabs>
+    <div class="xpl__tabs" role="tablist" aria-label="Credentials">
+      <button type="button" role="tab" id="crx-t0" aria-controls="crx-p0" aria-selected="true"><b>Salesforce Consulting Partner</b><small>Asked by CRM and IT owners</small></button>
+      <button type="button" role="tab" id="crx-t1" aria-controls="crx-p1" aria-selected="false" tabindex="-1"><b>ServiceNow Implementation Partner</b><small>Asked by IT operations and risk</small></button>
+      <button type="button" role="tab" id="crx-t2" aria-controls="crx-p2" aria-selected="false" tabindex="-1"><b>ISO 27001</b><small>Asked by security and vendor risk</small></button>
+      <button type="button" role="tab" id="crx-t3" aria-controls="crx-p3" aria-selected="false" tabindex="-1"><b>SOC 2 Type II</b><small>Asked by security and vendor risk</small></button>
+      <button type="button" role="tab" id="crx-t4" aria-controls="crx-p4" aria-selected="false" tabindex="-1"><b>ISO 9001:2015</b><small>Asked by procurement and the PMO</small></button>
+      <button type="button" role="tab" id="crx-t5" aria-controls="crx-p5" aria-selected="false" tabindex="-1"><b>HIPAA-compliant delivery</b><small>Asked by healthcare compliance</small></button>
+      <button type="button" role="tab" id="crx-t6" aria-controls="crx-p6" aria-selected="false" tabindex="-1"><b>WBENC, NMSDC and SBE</b><small>Asked by supplier diversity teams</small></button>
     </div>
+    <div class="xpl__panel" role="tabpanel" id="crx-p0" aria-labelledby="crx-t0">
+      <p class="xpl__pain"><small>The question procurement asks</small>Will certified Salesforce people actually work on the program, or just appear in the proposal?</p>
+      <h3>Certified Salesforce consultants on the program, not only in the pitch.</h3>
+      <ul class="xpl__gets"><li>Administrator, Platform Developer, Sales and Service Cloud Consultant certifications in the team</li><li>Revenue Cloud, Data Cloud and Einstein AI certifications for advanced clouds</li><li>Partner status that procurement can verify</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>Sales Cloud</span><span>Service Cloud</span><span>Data Cloud</span><span>Agentforce</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="Salesforce partner verification" data-message="Requested: Salesforce partner verification.">Request Salesforce partner verification <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="crx-p1" aria-labelledby="crx-t1" hidden>
+      <p class="xpl__pain"><small>The question procurement asks</small>Has this partner implemented ServiceNow at enterprise scale, or only configured it?</p>
+      <h3>Implementation by a recognised ServiceNow partner, across ITSM, ITOM, CMDB, SecOps and GRC.</h3>
+      <ul class="xpl__gets"><li>Implementations and tech-debt removal on enterprise instances</li><li>Now Assist and AI Control Tower delivered in production</li><li>Partner status that procurement can verify</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>ITSM</span><span>ITOM</span><span>CMDB</span><span>SecOps</span><span>GRC</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="ServiceNow partner verification" data-message="Requested: ServiceNow partner verification.">Request ServiceNow partner verification <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="crx-p2" aria-labelledby="crx-t2" hidden>
+      <p class="xpl__pain"><small>The question procurement asks</small>Is the partner's information security managed and audited, or only described in a questionnaire?</p>
+      <h3>An audited information security management system behind every engagement.</h3>
+      <ul class="xpl__gets"><li>Shortens vendor security reviews and risk assessments</li><li>Controls covering access, assets, suppliers and incidents</li><li>Certificate available for the vendor file</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>ISMS</span><span>Access control</span><span>Incident management</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="ISO 27001 certificate" data-message="Requested: ISO 27001 certificate.">Request ISO 27001 certificate <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="crx-p3" aria-labelledby="crx-t3" hidden>
+      <p class="xpl__pain"><small>The question procurement asks</small>Do the security controls hold up over time, or only on the day of the audit?</p>
+      <h3>Independent assurance that security controls operate effectively over time.</h3>
+      <ul class="xpl__gets"><li>Answers most vendor security questionnaires before they are sent</li><li>Covers the controls that protect client data in delivery</li><li>Report shared on request</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>Security</span><span>Availability</span><span>Confidentiality</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="SOC 2 Type II report" data-message="Requested: SOC 2 Type II report.">Request SOC 2 Type II report <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="crx-p4" aria-labelledby="crx-t4" hidden>
+      <p class="xpl__pain"><small>The question procurement asks</small>Will delivery quality depend on which people get assigned, or on a repeatable process?</p>
+      <h3>A certified quality management system that makes delivery repeatable.</h3>
+      <ul class="xpl__gets"><li>Documented delivery processes with sign-off at each phase</li><li>Corrective actions tracked when something goes wrong</li><li>Certificate available for the vendor file</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>QMS</span><span>Phase gates</span><span>Continuous improvement</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="ISO 9001:2015 certificate" data-message="Requested: ISO 9001:2015 certificate.">Request ISO 9001:2015 certificate <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="crx-p5" aria-labelledby="crx-t5" hidden>
+      <p class="xpl__pain"><small>The question procurement asks</small>Can this team handle protected health information without creating a compliance exposure?</p>
+      <h3>Delivery practices built for protected health information.</h3>
+      <ul class="xpl__gets"><li>HIPAA-compliant handling of PHI in build and support</li><li>Salesforce Shield encryption where a program requires it</li><li>Proven on healthcare and life sciences programs</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>HIPAA</span><span>Health Cloud</span><span>Shield</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="HIPAA compliance documentation" data-message="Requested: HIPAA compliance documentation.">Request HIPAA compliance documentation <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="crx-p6" aria-labelledby="crx-t6" hidden>
+      <p class="xpl__pain"><small>The question procurement asks</small>Can enterprise platform spend also count toward supplier diversity goals?</p>
+      <h3>A WBENC-certified women's business enterprise, NMSDC-certified and SBE-certified.</h3>
+      <ul class="xpl__gets"><li>Qualifying spend counts toward supplier diversity programs</li><li>Certificates ready for spend reporting</li><li>Relevant where small business participation goals or set-asides apply</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>WBENC</span><span>NMSDC</span><span>SBE</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="Supplier diversity certificates (WBENC, NMSDC, SBE)" data-message="Requested: Supplier diversity certificates (WBENC, NMSDC, SBE).">Request Supplier diversity certificates (WBENC, NMSDC, SBE) <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 
@@ -592,6 +668,6 @@
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
 <script src="/assets/js/main.js?v=29" defer></script>
-<script src="/assets/js/pages.js?v=10" defer></script>
+<script src="/assets/js/pages.js?v=14" defer></script>
 </body>
 </html>

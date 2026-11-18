@@ -34,8 +34,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=28">
-<link rel="stylesheet" href="/assets/css/pages.css?v=10">
+<link rel="stylesheet" href="/assets/css/styles.css?v=29">
+<link rel="stylesheet" href="/assets/css/pages.css?v=14">
 
 <script type="application/ld+json">
 {
@@ -428,18 +428,85 @@
 <section class="sx" aria-labelledby="build-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="build-h" class="rv">Six integration capabilities, <em>platform-neutral.</em></h2><p class="rv" data-d="1">Tool choice follows the existing estate, skills, security needs and cost model, not vendor preference.</p></div>
+      <div><h2 id="build-h" class="rv">Name the integration pain. <em>See what fixes it.</em></h2><p class="rv" data-d="1">Six problems integration and architecture leaders bring to the first call. Tool choice follows the existing estate, skills, security needs and cost model, not vendor preference.</p></div>
       <a class="sx__go rv" href="/enterprise/salesforce/data-cloud">Salesforce and Data Cloud integration <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="flows rv">
-      <div class="flows__head" aria-hidden="true"><span>Capability</span><span>What it delivers</span><span>Built with</span><span></span></div>
-      <div class="flow"><div class="flow__sys">API strategy and design</div><p><b>API-first design, OpenAPI standards and developer portals,</b> so teams find and reuse what exists.</p><small>OpenAPI, developer portals</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="API strategy" data-title="API strategy scope">Scope <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">iPaaS and ESB</div><p><b>An integration platform implemented and run,</b> with reusable connectors for every core system.</p><small>MuleSoft, Boomi, Workato, Azure and AWS integration</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="iPaaS" data-title="iPaaS implementation scope">Scope <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Event-driven architecture</div><p><b>Real-time business events</b> such as orders, payments and status changes, published once and consumed everywhere.</p><small>Kafka, EventBridge, Pub/Sub</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Event-driven architecture" data-title="Event-driven architecture scope">Scope <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">B2B and EDI</div><p><b>Trading partner onboarding at scale,</b> including legacy mainframes and EDI partners.</p><small>EDI, AS2, SFTP</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="B2B and EDI" data-title="B2B and EDI integration scope">Scope <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">Data integration</div><p><b>ETL and ELT, change data capture and reverse-ETL</b> between operational and analytical systems.</p><small>ETL, ELT, CDC, reverse-ETL</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data integration" data-title="Data integration scope">Scope <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="flow"><div class="flow__sys">API management</div><p><b>Security, throttling and observability</b> for every API in production.</p><small>Gateways, policies, monitoring</small><a class="arrow-link" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="API management" data-title="API management scope">Scope <i aria-hidden="true">&rarr;</i></a></div>
+    <div class="xpl rv" data-tabs>
+    <div class="xpl__tabs" role="tablist" aria-label="Integration capabilities">
+      <button type="button" role="tab" id="inx-t0" aria-controls="inx-p0" aria-selected="true"><b>API strategy and design</b><small>Every team builds the same connector again</small></button>
+      <button type="button" role="tab" id="inx-t1" aria-controls="inx-p1" aria-selected="false" tabindex="-1"><b>iPaaS and ESB</b><small>New systems take months to connect</small></button>
+      <button type="button" role="tab" id="inx-t2" aria-controls="inx-p2" aria-selected="false" tabindex="-1"><b>Event-driven architecture</b><small>Systems learn about changes hours late</small></button>
+      <button type="button" role="tab" id="inx-t3" aria-controls="inx-p3" aria-selected="false" tabindex="-1"><b>B2B and EDI</b><small>Trading partners onboarded by hand</small></button>
+      <button type="button" role="tab" id="inx-t4" aria-controls="inx-p4" aria-selected="false" tabindex="-1"><b>Data integration</b><small>CRM and analytics disagree on the customer</small></button>
+      <button type="button" role="tab" id="inx-t5" aria-controls="inx-p5" aria-selected="false" tabindex="-1"><b>API management</b><small>Nobody knows which APIs are failing</small></button>
     </div>
+    <div class="xpl__panel" role="tabpanel" id="inx-p0" aria-labelledby="inx-t0">
+      <p class="xpl__pain"><small>The situation</small>Five teams have built five versions of the customer API. None are documented, so the sixth team builds its own.</p>
+      <h3>APIs designed once, documented and found before anyone builds another.</h3>
+      <ul class="xpl__gets"><li>API-first design on OpenAPI standards</li><li>A developer portal where teams find and reuse what exists</li><li>Versioning rules so changes stop breaking consumers</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>OpenAPI</span><span>Developer portal</span><span>API standards</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="API strategy" data-title="API strategy scope">Design the API layer <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="inx-p1" aria-labelledby="inx-t1" hidden>
+      <p class="xpl__pain"><small>The situation</small>Every acquisition or new SaaS tool means months of custom integration work before anyone can use it with the core systems.</p>
+      <h3>An integration platform with reusable connectors for every core system.</h3>
+      <ul class="xpl__gets"><li>MuleSoft, Boomi or Workato chosen to fit the estate and skills</li><li>Reusable system and process APIs for CRM, ERP and ITSM</li><li>New systems plugged in without re-platforming</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>70%</b><span>Faster partner onboarding with reusable APIs</span></div>
+        
+        <div class="xpl__stack"><span>MuleSoft</span><span>Boomi</span><span>Workato</span><span>Azure Integration Services</span><span>AWS AppFlow</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="iPaaS" data-title="iPaaS implementation scope">Choose the integration platform <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="inx-p2" aria-labelledby="inx-t2" hidden>
+      <p class="xpl__pain"><small>The situation</small>An order, payment or status change reaches the other systems on a nightly batch, so customers hear about it before the account team does.</p>
+      <h3>Business events published once and acted on everywhere, in real time.</h3>
+      <ul class="xpl__gets"><li>Orders, payments and status changes streamed as events</li><li>Each system subscribes to what it needs, nothing more</li><li>Retries and dead-letter handling so nothing is lost silently</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>Kafka</span><span>EventBridge</span><span>Pub/Sub</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Event-driven architecture" data-title="Event-driven architecture scope">Move to real-time events <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="inx-p3" aria-labelledby="inx-t3" hidden>
+      <p class="xpl__pain"><small>The situation</small>Each new supplier or customer needs custom EDI mapping and file transfers, so partner onboarding takes weeks and fails quietly.</p>
+      <h3>Trading partners onboarded at scale, with legacy and mainframe systems wrapped in APIs.</h3>
+      <ul class="xpl__gets"><li>EDI, AS2 and SFTP flows built on reusable templates</li><li>Partner onboarding measured in days, not weeks</li><li>Legacy systems exposed through APIs instead of file drops</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>EDI</span><span>AS2</span><span>SFTP</span><span>Mainframe APIs</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="B2B and EDI" data-title="B2B and EDI integration scope">Speed up partner onboarding <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="inx-p4" aria-labelledby="inx-t4" hidden>
+      <p class="xpl__pain"><small>The situation</small>Operational systems and the warehouse each hold a different version of the customer, and someone reconciles them by hand every month.</p>
+      <h3>Data moving both ways between operational and analytical systems, automatically.</h3>
+      <ul class="xpl__gets"><li>ETL and ELT into the warehouse, with change data capture</li><li>Reverse-ETL that pushes trusted insights back into CRM</li><li>Reconciliation reports that prove the numbers match</li></ul>
+      <div class="xpl__side">
+        
+        
+        <div class="xpl__stack"><span>ETL</span><span>ELT</span><span>CDC</span><span>Reverse-ETL</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data integration" data-title="Data integration scope">Connect operations and analytics <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+    <div class="xpl__panel" role="tabpanel" id="inx-p5" aria-labelledby="inx-t5" hidden>
+      <p class="xpl__pain"><small>The situation</small>APIs fail or slow down in production and the first alert is a customer complaint. Security reviews have no inventory to start from.</p>
+      <h3>Every API secured, throttled and observed in production.</h3>
+      <ul class="xpl__gets"><li>Gateways with authentication, throttling and policies</li><li>Monitoring and alerts per API and per consumer</li><li>An inventory security and audit teams can use</li></ul>
+      <div class="xpl__side">
+        <div class="xpl__fig"><b>500+</b><span>APIs built and run in production</span></div>
+        
+        <div class="xpl__stack"><span>API gateways</span><span>Policies</span><span>Monitoring</span></div>
+        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="API management" data-title="API management scope">Get API observability <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 
@@ -524,6 +591,8 @@
     <ul class="rel__list">
       <li><a href="/enterprise/salesforce/agentforce"><b>Agentforce</b><span>First AI agents in production in under 4 weeks, on your own data.</span><i aria-hidden="true">&rarr;</i></a></li>
       <li><a href="/enterprise/salesforce/data-cloud"><b>Data Cloud &amp; integration</b><span>One real-time customer record across ERP, web, apps and service.</span><i aria-hidden="true">&rarr;</i></a></li>
+      <li><a href="/services/cloud"><b>Cloud transformation</b><span>AWS, Azure and Google Cloud migration, platform and FinOps.</span><i aria-hidden="true">&rarr;</i></a></li>
+      <li><a href="/services/cybersecurity"><b>Cybersecurity &amp; compliance</b><span>SOC in a Box, continuous GRC and security assessments.</span><i aria-hidden="true">&rarr;</i></a></li>
       <li><a href="/ai-data"><b>AI &amp; data services</b><span>Agentic AI, knowledge, data and integration for regulated enterprises.</span><i aria-hidden="true">&rarr;</i></a></li>
       <li><a href="/services/ai-ml"><b>AI agents &amp; automation</b><span>Multi-agent AI and workflow automation, live in production.</span><i aria-hidden="true">&rarr;</i></a></li>
       <li><a href="/ai-data/knowledge-assistants"><b>Knowledge assistants</b><span>Answers from company documents, with the source attached.</span><i aria-hidden="true">&rarr;</i></a></li>
@@ -672,6 +741,6 @@
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
 <script src="/assets/js/main.js?v=29" defer></script>
-<script src="/assets/js/pages.js?v=10" defer></script>
+<script src="/assets/js/pages.js?v=14" defer></script>
 </body>
 </html>
