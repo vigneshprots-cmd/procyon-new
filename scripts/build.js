@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 28, pages: 8, js: 29 };
+const VERSION = { css: 28, pages: 9, js: 29 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -49,14 +49,21 @@ const PAGES = [
   { slug: '/contact/', section: 'company', name: 'Contact', d: 'Reach a senior architect within one business day.' },
   { slug: '/talent/staff-augmentation/', section: 'talent', name: 'Staff augmentation', d: 'Vetted Salesforce, ServiceNow, data and AI people. Shortlist in 72 hours.' },
   { slug: '/talent/delivery-pods/', section: 'talent', name: 'Delivery pods', d: 'A cross-functional team with shared accountability for the roadmap.' },
-  { slug: '/talent/engagement-models/', section: 'talent', name: 'Engagement models', d: 'Fixed scope, time and materials, milestone, outcome-based or managed capacity.' }
+  { slug: '/talent/engagement-models/', section: 'talent', name: 'Engagement models', d: 'Fixed scope, time and materials, milestone, outcome-based or managed capacity.' },
+  { slug: '/ai-data/', section: 'ai', name: 'AI & data services', d: 'Agentic AI, knowledge, data and integration for regulated enterprises.' },
+  { slug: '/ai-data/ai-agents/', section: 'ai', name: 'AI agents & automation', d: 'Multi-agent AI and workflow automation, live in production.' },
+  { slug: '/ai-data/knowledge-assistants/', section: 'ai', name: 'Knowledge assistants', d: 'Answers from company documents, with the source attached.' },
+  { slug: '/ai-data/data-analytics/', section: 'ai', name: 'Data platforms & analytics', d: 'Snowflake, Databricks and governed BI. One set of numbers.' },
+  { slug: '/ai-data/integration/', section: 'ai', name: 'Integration & APIs', d: 'MuleSoft, events and APIs that keep every system in sync.' },
+  { slug: '/engineering/', section: 'ai', name: 'Product engineering', d: 'Custom products, modernization, cloud and application support.' }
 ];
 const RAIL = {
   salesforce: { h: 'More from the Salesforce practice', pick: p => !p.section },
   company: { h: 'More about Procyon', pick: p => p.section === 'company' || p.slug === '/salesforce/' || p.slug === '/ranger-fusion/' },
+  ai: { h: 'More from AI, data and engineering', pick: p => p.section === 'ai' || ['/salesforce/agentforce/', '/salesforce/data-cloud/'].includes(p.slug) },
   talent: { h: 'More ways to add capacity', pick: p => p.section === 'talent' || ['/salesforce/managed-services/', '/about/certifications/', '/contact/'].includes(p.slug) }
 };
-const NAV = { salesforce: ['dd-sf', 'Salesforce'], company: ['dd-co', 'Company'], talent: ['dd-tl', 'Talent'] };
+const NAV = { ai: ['dd-ai', 'AI &amp; Data'], salesforce: ['dd-sf', 'Salesforce'], company: ['dd-co', 'Company'], talent: ['dd-tl', 'Talent'] };
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const strip = (s) => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&middot;/g, '·').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();

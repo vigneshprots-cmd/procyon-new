@@ -1,6 +1,6 @@
 # procyonts.com: Information Architecture (v2, lean)
 
-The home page and the Salesforce, Company and Talent menus (14 pages, marked Live) are built. Salesforce pages are generated with `npm run build` from `src/pages/`. Every other page below is planned; until it exists, its link shows a "page in progress" screen with a contact button.
+The home page and the Salesforce, AI & Data, Talent and Company menus (20 pages, marked Live) are built. Salesforce pages are generated with `npm run build` from `src/pages/`. Every other page below is planned; until it exists, its link shows a "page in progress" screen with a contact button.
 The menu is cut to what Procyon actually sells: Salesforce, ServiceNow, AI & data, certified talent, and the Ranger Fusion product.
 Priority: P1 = build next (highest buying intent), P2 = second wave.
 
@@ -21,12 +21,12 @@ Priority: P1 = build next (highest buying intent), P2 = second wave.
 | | Security & risk (SecOps, GRC) | /servicenow/security-risk/ | P2 |
 | | Now Assist & AI agents | /servicenow/now-assist/ | P2 |
 | | Managed services | /servicenow/managed-services/ | P2 |
-| **AI & Data** | AI & data hub | /ai-data/ | P2 |
-| | AI agents & automation | /ai-data/ai-agents/ | P1 |
-| | Knowledge assistants (RAG) | /ai-data/knowledge-assistants/ | P2 |
-| | Data platforms & analytics | /ai-data/data-analytics/ | P2 |
-| | Integration & APIs (MuleSoft, SAP, Oracle, NetSuite, Workday) | /ai-data/integration/ | P2 |
-| | Product engineering hub (listed under AI & Data in the menu) | /engineering/ | P2 |
+| **AI & Data** | AI & data hub | /ai-data/ | Live |
+| | AI agents & automation | /ai-data/ai-agents/ | Live |
+| | Knowledge assistants (RAG) | /ai-data/knowledge-assistants/ | Live |
+| | Data platforms & analytics | /ai-data/data-analytics/ | Live |
+| | Integration & APIs (MuleSoft, SAP, Oracle, NetSuite, Workday) | /ai-data/integration/ | Live |
+| | Product engineering hub (listed under AI & Data in the menu) | /engineering/ | Live |
 | | Product engineering | /engineering/product-engineering/ | P2 |
 | | Enterprise web & mobility | /engineering/web-mobility/ | P2 |
 | | Application maintenance & support | /engineering/application-support/ | P2 |

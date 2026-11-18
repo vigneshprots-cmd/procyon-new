@@ -567,3 +567,13 @@
 .tier .arrow-link { margin-top: auto; align-self: flex-start; font-size: 13.5px; }
 .tier--hi .arrow-link { color: #fff; }
 @media (max-width: 720px) { .fitq .opt-list { grid-template-columns: 1fr; } }
+
+/* AI & Data: proof cards and reference line */
+.ba--3 { grid-template-columns: repeat(3, 1fr); }
+.ba .ba__fig { display: block; margin-bottom: 4px; font: 700 26px/1.1 var(--f-display); letter-spacing: -.02em; font-style: normal; color: var(--green-ink); }
+.ba > div > small { padding: 0 22px; margin-top: -6px; margin-bottom: 12px; font: 600 11px/1.3 var(--f-display); letter-spacing: .12em; text-transform: uppercase; color: var(--grey); }
+.refs { margin: 22px 0 0; font-size: 14px; color: var(--muted); }
+.refs b { color: var(--ink); font-weight: 600; }
+.score8--plain div { padding-top: 22px; }
+@media (max-width: 1080px) { .ba--3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 720px) { .ba--3 { grid-template-columns: 1fr; } }

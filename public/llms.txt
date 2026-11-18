@@ -22,6 +22,14 @@
 - [Salesforce managed services](https://procyonts.com/salesforce/managed-services/): Run, Improve and Scale tiers; release readiness for Spring, Summer and Winter; hubs in Novato, Toronto and Chennai.
 - [Ranger Fusion](https://procyonts.com/ranger-fusion/): native Salesforce ERP for sales, finance, inventory, procurement, projects and HR on one data model; live in 2 to 4 weeks; typical savings of 20 to 60% against a patchwork stack.
 
+## AI and data pages
+- [AI and data services](https://procyonts.com/ai-data/): agentic AI, knowledge assistants, data platforms, integration and product engineering for regulated enterprises, in production on AWS, Azure, GCP, Salesforce, ServiceNow and SAP. Client results: AOC statewide judicial system (60% fewer submission failures), NIH NIAAA clinical research (federal audit-ready), City of Glendale Water & Power (10+ systems unified, 15-day MW forecasting pipeline).
+- [AI agents and automation](https://procyonts.com/ai-data/ai-agents/): multi-agent orchestration and workflow automation with governance built in; clinical intake from 4 hours to 12 minutes; compliance evidence 3x faster; LangGraph, CrewAI, Bedrock Agents, Azure AI Agent Service, ServiceNow AI Control Tower.
+- [Knowledge assistants](https://procyonts.com/ai-data/knowledge-assistants/): retrieval-augmented assistants answering from SharePoint, Salesforce Knowledge, ServiceNow and PDFs with citations and permission-aware retrieval; Enterprise RAG Starter.
+- [Data platforms and analytics](https://procyonts.com/ai-data/data-analytics/): Snowflake, Databricks, BigQuery and Synapse; Tableau, Power BI and Looker on a governed semantic layer; 100+ data platforms delivered.
+- [Integration and APIs](https://procyonts.com/ai-data/integration/): MuleSoft, Boomi, Workato, Kafka and EventBridge; SAP, Oracle, NetSuite and Workday integration; B2B and EDI; 500+ APIs in production.
+- [Product engineering](https://procyonts.com/engineering/): custom web and mobile products, application modernization (rehost, replatform, refactor, repurchase, retire, retain), cloud transformation on AWS, Azure and GCP, application support.
+
 ## Talent pages
 - [Staff augmentation](https://procyonts.com/talent/staff-augmentation/): pre-vetted Salesforce, ServiceNow, SAP, Workday, Oracle, cloud, data, AI, engineering and project leadership talent by the seat; 1,500+ vetted consultants; shortlist within 72 hours for most roles; onboarded in 7 to 14 days; technical screen, scenario interview, communication assessment and reference checks; no-questions-asked replacement guarantee; US-cleared talent for public sector; onshore US, nearshore Canada, offshore India.
 - [Delivery pods](https://procyonts.com/talent/delivery-pods/): cross-functional Salesforce, ServiceNow, AI and data, product engineering and run pods with shared accountability; scale up or down within two weeks.
