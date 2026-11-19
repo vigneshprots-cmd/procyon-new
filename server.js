@@ -373,12 +373,45 @@ function handleApply(req, res) {
   });
 }
 
+
+/* =====================================================================
+   AI bot policy (owner decision): answer engines that cite and link the
+   site are allowed; model-training crawlers and bulk scrapers are refused
+   at the server, not just in robots.txt. No bot of any kind may submit
+   the lead or application forms.
+   ===================================================================== */
+const TRAINING_BOTS = /GPTBot|ClaudeBot|anthropic-ai|CCBot|Google-Extended|Applebot-Extended|Bytespider|meta-externalagent|Meta-ExternalFetcher|FacebookBot|Amazonbot|cohere-ai|cohere-training-data-crawler|Diffbot|Omgili|AI2Bot|Ai2Bot-Dolma|ImagesiftBot|Timpibot|PanguBot|img2dataset|Webzio-Extended|Kangaroo Bot|VelenPublicWebCrawler|ISSCyberRiskCrawler|Sidetrade|Scrapy|python-requests|python-urllib|aiohttp|Go-http-client|okhttp|libwww-perl|HTTrack|wget|MJ12bot|DataForSeoBot|SemrushBot-BA|magpie-crawler/i;
+// Anything that declares itself automated: never allowed to post a form.
+const AUTOMATED = /bot\b|crawl|spider|slurp|fetch|scrape|headless|phantomjs|puppeteer|playwright|selenium|webdriver|chatgpt|openai|claude|anthropic|perplexity|gemini|copilot|operator|agent\b|curl\/|wget|python|java\/|node-fetch|axios|undici|postman|insomnia/i;
+function refuseTraining(req, res, url) {
+  const ua = String(req.headers['user-agent'] || '');
+  if (url !== '/robots.txt' && TRAINING_BOTS.test(ua)) {
+    send(res, 403, 'Automated collection of this site for model training is not permitted. See /robots.txt.', { 'Content-Type': 'text/plain', 'X-Robots-Tag': 'noai, noimageai' });
+    return true;
+  }
+  return false;
+}
+function automatedPost(req) {
+  const ua = String(req.headers['user-agent'] || '');
+  if (AUTOMATED.test(ua)) return 'automated-ua';
+  // Real browsers always send these on a fetch() from the page; scripted clients usually do not.
+  if (!req.headers['accept-language']) return 'no-accept-language';
+  const site = req.headers['sec-fetch-site'];
+  if (site && site !== 'same-origin') return 'cross-site-fetch';
+  return '';
+}
+
 const server = http.createServer((req, res) => {
   const host = (req.headers.host || '').toLowerCase();
   if (CANONICAL_HOST && host && host !== CANONICAL_HOST && !host.endsWith('.railway.app') && !host.startsWith('localhost')) {
     return send(res, 301, '', { Location: `https://${CANONICAL_HOST}${req.url}` });
   }
   const url = req.url.split('?')[0];
+  if (refuseTraining(req, res, url)) return;
+  if (req.method === 'POST' && url.startsWith('/api/')) {
+    const why = automatedPost(req);
+    if (why) { console.log('[spam] automated post', why, url); return json(res, 200, { ok: true }); }
+  }
   if (url === '/healthz') return send(res, 200, 'ok', { 'Content-Type': 'text/plain' });
   if (req.method === 'GET' && url === '/api/form-token') return handleToken(req, res);
   if (req.method === 'POST' && url === '/api/lead') return handleLead(req, res);
