@@ -82,7 +82,15 @@ const NAV = { servicenow: ['dd-sn', 'ServiceNow'], ai: ['dd-ai', 'AI &amp; Data'
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const strip = (s) => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&middot;/g, '·').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
 
-function ogUrl(meta) { return SITE + (meta.ogImage || '/assets/img/og/' + meta.og + '.jpg'); }
+// Social image: an explicit meta.ogImage, else the page's own image from scripts/og-images.js
+// (/assets/img/og/<slug-with-dashes>.jpg), else the section image, else the home image.
+const OG_DIR = '/assets/img/og/';
+const onDisk = (p) => fs.existsSync(path.join(PUB, p));
+function ogUrl(meta) {
+  if (meta.ogImage) return SITE + meta.ogImage;
+  const own = OG_DIR + (meta.slug === '/' ? 'home' : meta.slug.replace(/^\/+|\/+$/g, '').replace(/\//g, '-')) + '.jpg';
+  return SITE + ([own, OG_DIR + meta.og + '.jpg'].find(onDisk) || OG_DIR + 'home.jpg');
+}
 
 function related(current, section) {
   const rail = RAIL[section] || RAIL.salesforce;
