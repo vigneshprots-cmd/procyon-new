@@ -19,7 +19,7 @@ export async function render(main) {
   ]), chips, h('div.toolbar', h('div.toolbar__search', icon('search', 15), search), filters, countEl), content);
   content.append(skeletonRows(8, 5));
 
-  const jobTitle = (id) => (S.jobs.find(j => j.id === id) || {}).title || 'Unknown role';
+  const jobTitle = (id) => (S.jobs.find(j => j.id === id) || {}).title || (id ? 'Unknown role' : 'Open application');
   async function load() {
     try {
       const [apps, jobs, notes] = await Promise.all([

@@ -73,7 +73,7 @@ Environment variables (all optional):
 
 ## Needs a database or platform change later
 
-- **Leads from the new site**: `POST /api/lead` forwards to the webhook or Salesforce Web-to-Lead and does not insert into Supabase `leads`, so new-site enquiries do not appear in this CRM. Fix: have the server call the `submit-lead` Edge Function (or insert with a restricted policy). Same for `/api/apply` and `job_applications`.
+- **Website forms (done)**: `POST /api/lead` saves to `leads` through the `submit-lead` Edge Function (direct insert as fallback), and `POST /api/apply` saves to `job_applications`, linked to the job by page slug or matching track title (open applications have no job and show as "Open application"). Webhook and Web-to-Lead still run alongside; if a CRM write fails the full record is kept in the server logs. New-site applications have no resume file, only a LinkedIn or portfolio link.
 - **UTM fields**: leads have no UTM columns; the console parses them from `page_url`. Add `utm_source`, `utm_medium`, `utm_campaign` (and capture them at submit) for reliable reporting.
 - **Meeting request notes**: there is no notes table for `event_meeting_requests`. Suggested: `event_meeting_request_notes (id, request_id, author_id, author_name, type, content, created_at)` with the same RLS as leads.
 - **Shared saved views**: saved lead views live in each browser. A `crm_saved_views` table would let the team share them.

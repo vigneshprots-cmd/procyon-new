@@ -234,6 +234,37 @@ async function saveLeadToCrm(lead) {
   return 'insert';
 }
 
+// Careers applications land in job_applications, linked to the job the candidate applied from
+// (the job page slug, or a track that matches a job title), the same table the admin's Applications view reads.
+let jobCache = { at: 0, rows: [] };
+const normTitle = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+async function findJobId(app) {
+  if (Date.now() - jobCache.at > 10 * 60 * 1000) {
+    try {
+      const r = await fetch(SUPABASE_URL + '/rest/v1/jobs?select=id,slug,title', { headers: { apikey: SUPABASE_KEY, Authorization: 'Bearer ' + SUPABASE_KEY } });
+      if (r.ok) jobCache = { at: Date.now(), rows: await r.json() };
+    } catch (e) { /* keep the previous list */ }
+  }
+  const slug = (String(app.page || '').match(/^\/careers\/([a-z0-9-]+)$/) || [])[1];
+  const hit = (slug && jobCache.rows.find(j => j.slug === slug)) || (app.track && jobCache.rows.find(j => normTitle(j.title) === normTitle(app.track)));
+  return hit ? hit.id : null;
+}
+async function saveApplicationToCrm(app) {
+  const profile = app.profile || '';
+  const isLinkedIn = /linkedin\.com/i.test(profile);
+  const row = {
+    job_id: await findJobId(app), full_name: app.name, email: app.email, phone: app.phone || '',
+    location: app.hub || null, current_company: null, current_title: null, years_experience: null,
+    linkedin_url: isLinkedIn ? profile : null, portfolio_url: profile && !isLinkedIn ? profile : null,
+    cover_letter: [app.message, 'Track: ' + (app.track || 'not given'), 'Applied from: https://procyonts.com' + (app.page || '/careers')].filter(Boolean).join('\n\n'),
+    resume_path: '', status: 'new'
+  };
+  const headers = { apikey: SUPABASE_KEY, Authorization: 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' };
+  const r = await fetch(SUPABASE_URL + '/rest/v1/job_applications', { method: 'POST', headers, body: JSON.stringify(row) });
+  if (!r.ok) throw new Error('job_applications insert ' + r.status + ' ' + (await r.text()).slice(0, 200));
+  return row.job_id ? 'job ' + row.job_id : 'open application';
+}
+
 async function forwardLead(lead) {
   const jobs = [saveLeadToCrm(lead).then(via => console.log('[lead] saved to CRM via', via))];
   if (LEAD_WEBHOOK_URL) {
@@ -364,12 +395,12 @@ function handleApply(req, res) {
     if (!(await hasMailServer(domain))) return reject(422, 'no-mx', 'That email domain cannot receive mail. Please check it.');
     if (!(await turnstileOk(d.cf, ip))) return reject(422, 'captcha', 'Please complete the verification and submit again.');
     if (over(mailHits, 'apply:' + app.email, 2, 24 * 3600e3)) return drop('email-rate', { email: app.email });
-    try {
-      if (APPLY_WEBHOOK_URL) {
-        const r = await fetch(APPLY_WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(app) });
-        console.log('[apply] received', app.track, r.status);
-      } else console.log('[apply]', JSON.stringify(app));
-    } catch (e) { console.error('[apply] forward failed', e.message); console.log('[apply]', JSON.stringify(app)); }
+    const jobs = [saveApplicationToCrm(app).then(via => console.log('[apply] saved to CRM', via))];
+    if (APPLY_WEBHOOK_URL) jobs.push(fetch(APPLY_WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(app) }).then(r => console.log('[apply] webhook', r.status)));
+    const results = await Promise.allSettled(jobs);
+    results.forEach(r => { if (r.status === 'rejected') console.error('[apply] forward failed:', r.reason && r.reason.message); });
+    // If the CRM write failed, keep the full application in the platform logs so it is never lost.
+    if (results[0].status === 'rejected') console.log('[apply]', JSON.stringify(app));
     json(res, 200, { ok: true });
   });
 }
