@@ -1,23 +1,32 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /admin
 
 # AI and answer engines are welcome to read and cite this site.
 User-agent: GPTBot
 Allow: /
+Disallow: /admin
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /admin
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /admin
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /admin
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin
 User-agent: Google-Extended
 Allow: /
+Disallow: /admin
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /admin
 
 Sitemap: https://procyonts.com/sitemap.xml

@@ -9,6 +9,7 @@ const path = require('path');
 const zlib = require('zlib');
 const crypto = require('crypto');
 const dns = require('dns').promises;
+const adminApi = require('./server/admin-api'); // /admin console + /api/admin/* (noindex, own CSP)
 
 const PORT = process.env.PORT || 3000;
 const ROOT = path.join(__dirname, 'public');
@@ -349,6 +350,7 @@ const server = http.createServer((req, res) => {
   }
   const url = req.url.split('?')[0];
   if (url === '/healthz') return send(res, 200, 'ok', { 'Content-Type': 'text/plain' });
+  if (adminApi.handle(req, res, url)) return;
   if (req.method === 'GET' && url === '/api/form-token') return handleToken(req, res);
   if (req.method === 'POST' && url === '/api/lead') return handleLead(req, res);
   if (req.method === 'POST' && url === '/api/apply') return handleApply(req, res);
