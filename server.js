@@ -41,8 +41,8 @@ const SECURITY = {
     "default-src 'self'",
     // sha256 = the one-line "js" class bootstrap in every page <head>
     "script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://www.googletagmanager.com https://snap.licdn.com" + CF,
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    "font-src 'self' https://fonts.gstatic.com",
+    "style-src 'self' 'unsafe-inline'",
+    "font-src 'self'",
     "img-src 'self' data: https:",
     "connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://px.ads.linkedin.com" + CF,
     "frame-src 'self'" + CF,
@@ -72,27 +72,39 @@ function resolveFile(urlPath) {
   return null;
 }
 
+// Compressed bodies are cached in memory per file + mtime, so repeat requests cost no CPU.
+const zcache = new Map();
+function cacheControl(req, file) {
+  const f = file.split(path.sep).join('/');
+  if (f.endsWith('.html')) return 'no-cache';
+  if (/[?&]v=/.test(req.url) || f.includes('/assets/fonts/')) return 'public, max-age=31536000, immutable';
+  if (f.includes('/assets/')) return 'public, max-age=2592000';
+  return 'public, max-age=604800';
+}
 function serveFile(req, res, file, status) {
   const ext = path.extname(file).toLowerCase();
   const type = TYPES[ext] || 'application/octet-stream';
-  const isHtml = ext === '.html';
-  const headers = {
-    'Content-Type': type,
-    'Cache-Control': isHtml ? 'no-cache' : (/\/assets\//.test(file.replace(/\\/g, '/')) ? 'public, max-age=604800' : 'public, max-age=86400'),
-    'Vary': 'Accept-Encoding'
-  };
-  const accept = req.headers['accept-encoding'] || '';
-  fs.readFile(file, (err, buf) => {
-    if (err) return send(res, 500, 'Server error', { 'Content-Type': 'text/plain' });
-    if (COMPRESSIBLE.test(ext) && /\bgzip\b/.test(accept) && buf.length > 1024) {
-      zlib.gzip(buf, (e, gz) => {
+  const headers = { 'Content-Type': type, 'Cache-Control': cacheControl(req, file), 'Vary': 'Accept-Encoding' };
+  const accept = String(req.headers['accept-encoding'] || '');
+  const enc = /\bbr\b/.test(accept) ? 'br' : (/\bgzip\b/.test(accept) ? 'gzip' : '');
+  fs.stat(file, (se, st) => {
+    if (se) return send(res, 500, 'Server error', { 'Content-Type': 'text/plain' });
+    const key = file + '|' + st.mtimeMs + '|' + enc;
+    const hit = enc && zcache.get(key);
+    if (hit) { headers['Content-Encoding'] = enc; return send(res, status, req.method === 'HEAD' ? '' : hit, headers); }
+    fs.readFile(file, (err, buf) => {
+      if (err) return send(res, 500, 'Server error', { 'Content-Type': 'text/plain' });
+      if (!enc || !COMPRESSIBLE.test(ext) || buf.length <= 1024) return send(res, status, req.method === 'HEAD' ? '' : buf, headers);
+      const done = (e, z) => {
         if (e) return send(res, status, req.method === 'HEAD' ? '' : buf, headers);
-        headers['Content-Encoding'] = 'gzip';
-        send(res, status, req.method === 'HEAD' ? '' : gz, headers);
-      });
-    } else {
-      send(res, status, req.method === 'HEAD' ? '' : buf, headers);
-    }
+        if (zcache.size > 600) zcache.clear();
+        zcache.set(key, z);
+        headers['Content-Encoding'] = enc;
+        send(res, status, req.method === 'HEAD' ? '' : z, headers);
+      };
+      if (enc === 'br') zlib.brotliCompress(buf, { params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 9, [zlib.constants.BROTLI_PARAM_SIZE_HINT]: buf.length } }, done);
+      else zlib.gzip(buf, { level: 9 }, done);
+    });
   });
 }
 
