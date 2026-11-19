@@ -257,3 +257,8 @@
 .ev-series li:last-child a { background: var(--night); border-color: var(--night); color: #fff; }
 .ev-series li:last-child span { color: var(--night-text); }
 .ev-series li:last-child small { color: var(--green); }
+
+/* Phones: the topic filter is a swipe row; fade the right edge so it reads as scrollable */
+@media (max-width: 720px) {
+  .ins__bar { -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
+}

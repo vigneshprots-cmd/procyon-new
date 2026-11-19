@@ -725,3 +725,9 @@ section.card.ecard + section.card.ecard { margin-top: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Touch screens: comfortable tap targets for small text buttons */
+@media (pointer: coarse) {
+  .linkbtn { min-height: 40px; }
+  .input__btn { width: 40px; height: 38px; }
+}

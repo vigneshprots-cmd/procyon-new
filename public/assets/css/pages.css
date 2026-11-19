@@ -7,7 +7,7 @@
 
 /* ---------- Page hero ---------- */
 .ph { position: relative; background: var(--night); color: #fff; overflow: hidden; padding: 34px 0 88px; }
-.ph::before { content: ""; position: absolute; inset: 0; background:
+.ph::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; inset: 0; background:
   radial-gradient(45% 60% at 80% 40%, rgba(40,168,222,.14), transparent 70%),
   radial-gradient(30% 40% at 95% 90%, rgba(188,30,45,.12), transparent 70%),
   radial-gradient(30% 40% at 55% 100%, rgba(57,179,74,.08), transparent 70%); pointer-events: none; }
@@ -665,7 +665,7 @@
 .art__ring circle { fill: none; stroke-width: 10; }
 .art__ring .t { stroke: #EDF0F3; }
 .art__ring .v { stroke: var(--c); stroke-linecap: round; stroke-dasharray: 289; stroke-dashoffset: calc(289 * (1 - var(--v))); animation: art-ring 1.6s .35s var(--ease) both; }
-.art__ring b { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; font: 700 30px/1 var(--f-display); letter-spacing: -.04em; }
+.art__ring b { position: absolute; top: 0; right: 0; bottom: 0; left: 0; inset: 0; display: grid; place-content: center; text-align: center; font: 700 30px/1 var(--f-display); letter-spacing: -.04em; }
 .art__ring b small { display: block; margin-top: 4px; font: 500 10.5px/1 var(--f-body); letter-spacing: 0; color: var(--muted); }
 .art__sum b { display: block; font: 600 16px/1.3 var(--f-display); }
 .art__sum span { display: block; margin-top: 4px; font-size: 13px; line-height: 1.45; color: var(--muted); }

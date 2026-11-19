@@ -343,7 +343,7 @@
     auditF.hidden = isScore; scoreF.hidden = !isScore;
     setSide(isScore ? 'score' : (SIDE[interest] ? interest : 'audit'));
     if (isScore) quizStart(); else auditStart(interest, fromHero, opts);
-    if (typeof modal.showModal === 'function') { if (!modal.open) modal.showModal(); } else modal.setAttribute('open', '');
+    if (typeof modal.showModal === 'function') { if (!modal.open) modal.showModal(); } else { modal.setAttribute('open', ''); modal.classList.add('is-fallback'); }
     document.body.style.overflow = 'hidden';
     getToken(true).then(mountTurnstile);
     track('modal_open', { mode: mode, interest: interest || '' });
@@ -358,7 +358,15 @@
       .catch(function () { return { t: null, at: Date.now() }; });
   };
   window.ptsCfToken = function () { return cfToken; };
-  function closeModal() { if (modal.open) modal.close(); }
+  function closeModal() {
+    if (typeof modal.close === 'function') { if (modal.open) modal.close(); return; }
+    // Browsers without <dialog> (iOS before 15.4): close by hand and fire the same event.
+    if (!modal.hasAttribute('open')) return;
+    modal.removeAttribute('open'); modal.classList.remove('is-fallback');
+    var ev; try { ev = new Event('close'); } catch (x) { ev = document.createEvent('Event'); ev.initEvent('close', false, false); }
+    modal.dispatchEvent(ev);
+  }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal && modal.classList.contains('is-fallback')) closeModal(); });
   if (modal) {
     modal.addEventListener('close', function () { document.body.style.overflow = ''; });
     modal.addEventListener('click', function (e) { if (e.target === modal || e.target.closest('[data-close]')) closeModal(); });
@@ -531,4 +539,17 @@
       });
     });
   }
+})();
+
+/* Promo bar: dismiss once per announcement (keyed by its last update), remembered in this browser. */
+(function () {
+  var bar = document.querySelector('[data-promo]');
+  if (!bar) return;
+  var key = 'pts-promo-x', id = bar.getAttribute('data-promo');
+  try { if (localStorage.getItem(key) === id) { bar.classList.add('is-gone'); return; } } catch (e) { /* storage blocked */ }
+  var x = bar.querySelector('.promo__x');
+  if (x) x.addEventListener('click', function () {
+    bar.classList.add('is-gone');
+    try { localStorage.setItem(key, id); } catch (e) { /* storage blocked */ }
+  });
 })();

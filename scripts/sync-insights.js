@@ -14,7 +14,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'content', 'insights');
 const IMG = path.join(ROOT, 'public', 'assets', 'img', 'insights');
-const OG = path.join(ROOT, 'public', 'assets', 'img', 'og', 'insights');
+
 const API = 'https://ozuqrpwhywdmcjohkxll.supabase.co/rest/v1';
 const KEY = 'sb_publishable_EC_AFs10_QT8zoh0z_jepA_xrSmVBeo';
 const LIVE = 'https://procyonts.com';
@@ -78,9 +78,9 @@ async function image(url, type, slug) {
 }
 async function convert(url, type, slug) {
   if (!url) return null;
+  // Share images are made per page by scripts/og-images.js, so only the on-page cover is needed here.
   const web = path.join(IMG, type, slug + '.webp');
-  const og = path.join(OG, slug + '.jpg');
-  if (fs.existsSync(web) && fs.existsSync(og)) return { src: `/assets/img/insights/${type}/${slug}.webp`, og: `/assets/img/og/insights/${slug}.jpg` };
+  if (fs.existsSync(web)) return { src: `/assets/img/insights/${type}/${slug}.webp` };
   if (!sharp) return null;
   const src = url.startsWith('http') ? url : LIVE + url;
   if (!/^https:\/\/(ozuqrpwhywdmcjohkxll\.supabase\.co|procyonts\.com)\//.test(src)) return null; // first-party images only
@@ -88,10 +88,8 @@ async function convert(url, type, slug) {
   if (!r.ok) { console.warn('image failed', src, r.status); return null; }
   const buf = Buffer.from(await r.arrayBuffer());
   fs.mkdirSync(path.dirname(web), { recursive: true });
-  fs.mkdirSync(OG, { recursive: true });
   await sharp(buf).resize(1200, 675, { fit: 'cover' }).webp({ quality: 74 }).toFile(web);
-  await sharp(buf).resize(1200, 630, { fit: 'cover' }).jpeg({ quality: 80 }).toFile(og);
-  return { src: `/assets/img/insights/${type}/${slug}.webp`, og: `/assets/img/og/insights/${slug}.jpg` };
+  return { src: `/assets/img/insights/${type}/${slug}.webp` };
 }
 
 (async () => {
@@ -123,6 +121,12 @@ async function convert(url, type, slug) {
   const jobs = await get('jobs', 'select=*&is_published=eq.true&order=created_at.desc');
   fs.writeFileSync(path.join(OUT, 'jobs.json'), JSON.stringify(jobs.map(j => tidy(pick(j, ['slug', 'title', 'department', 'location', 'employment_type',
     'experience_level', 'short_description', 'full_description', 'responsibilities', 'requirements', 'nice_to_have', 'is_open', 'created_at', 'updated_at']))), null, 1));
+
+  // Site-wide promo bar (admin > Promo bar). Baked into every page at build time.
+  try {
+    const promo = (await get('site_promo', 'id=eq.1&select=*'))[0] || { enabled: false };
+    fs.writeFileSync(path.join(OUT, 'promo.json'), JSON.stringify(tidy(pick(promo, ['enabled', 'message', 'cta_label', 'cta_url', 'animation', 'bg_from', 'bg_to', 'text_color', 'updated_at'])), null, 1));
+  } catch (e) { console.warn('promo bar not synced:', e.message); }
 
   console.log(`synced ${blog.length} posts, ${cs.length} case studies, ${events.length} events, ${jobs.length} jobs`);
 })().catch(e => { console.error(e); process.exit(1); });

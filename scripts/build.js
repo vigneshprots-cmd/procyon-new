@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 32, pages: 18, js: 29 };
+const VERSION = { css: 38, pages: 19, js: 30 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -33,6 +33,25 @@ const CHROME = {
   logos: cut('<!-- ================= CLIENTS', '<!-- ================= THE GAP'),
   caseBlock: cut('<article class="case rv" data-case>', '</article>', true)
 };
+
+
+// ---------- Promo bar (admin > Promo bar, synced to content/insights/promo.json) ----------
+const REDIRECT_MAP = (() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'redirects.json'), 'utf8')); } catch (e) { return {}; } })();
+function promoBar() {
+  let p;
+  try { p = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'content', 'insights', 'promo.json'), 'utf8')); } catch (e) { return ''; }
+  if (!p || !p.enabled || !p.message) return '';
+  const hex = (v, d) => /^#[0-9a-f]{3,8}$/i.test(String(v || '')) ? v : d;
+  let href = String(p.cta_url || '').trim();
+  if (href.startsWith('/')) href = REDIRECT_MAP[href.replace(/\/+$/, '')] || href;
+  else if (!/^https:\/\//i.test(href)) href = '';
+  const e = (x) => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const id = e(String(p.updated_at || p.message).slice(0, 40));
+  return `<div class="promo${p.animation === 'marquee' ? ' promo--marquee' : ''}" data-promo="${id}" style="--pf:${hex(p.bg_from, '#0B0D10')};--pt:${hex(p.bg_to, '#13161A')};--pc:${hex(p.text_color, '#FFFFFF')}" role="region" aria-label="Announcement">
+  <div class="wrap promo__in"><p class="promo__msg"><span>${e(p.message)}</span></p>${href && p.cta_label ? `<a class="promo__cta" href="${e(href)}" data-track="promo_bar">${e(p.cta_label)} <i aria-hidden="true">&rarr;</i></a>` : ''}<button class="promo__x" type="button" aria-label="Dismiss announcement">&times;</button></div>
+</div>`;
+}
+const PROMO = promoBar();
 
 // Short descriptions used by the "related" rail and llms.txt
 const PAGES = [
@@ -298,7 +317,7 @@ ${schema(meta, body)}
 </head>
 <body class="pg pg--${meta.bodyClass || 'svc'}">
 <a class="skip" href="#main">Skip to content</a>
-
+${PROMO}
 ${header(meta.slug, meta.section)}
 
 <main id="main">
@@ -345,6 +364,14 @@ for (const file of walk(SRC).filter(f => f.endsWith('.html') && !f.includes(path
   const depth = meta.slug.split('/').length - 1;
   urls.push({ loc: SITE + meta.slug, lastmod: meta.modified || TODAY, pr: meta.section === 'insights' && depth > 1 ? '0.6' : depth <= 1 ? '0.9' : depth === 2 ? '0.8' : '0.7' });
   console.log('built', meta.slug);
+}
+{
+  const hp = path.join(PUB, 'index.html');
+  let h = fs.readFileSync(hp, 'utf8');
+  const block = '<!--promo-->' + (PROMO ? '\n' + PROMO + '\n' : '') + '<!--/promo-->';
+  h = /<!--promo-->[\s\S]*?<!--\/promo-->/.test(h) ? h.replace(/<!--promo-->[\s\S]*?<!--\/promo-->/, block)
+    : h.replace('<a class="skip" href="#main">Skip to content</a>', '<a class="skip" href="#main">Skip to content</a>\n' + block);
+  writeRetry(hp, h);
 }
 urls.sort((a, b) => a.loc.localeCompare(b.loc));
 const urlXml = urls.map(u => `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${u.lastmod}</lastmod>\n    <priority>${u.pr}</priority>\n  </url>`).join('\n');

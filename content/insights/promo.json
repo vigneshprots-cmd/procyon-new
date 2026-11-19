@@ -1,0 +1,11 @@
+{
+ "enabled": false,
+ "message": "Meet Procyon at NMSDC Annual Conference & Exchange 2026",
+ "cta_label": "Book a Meeting",
+ "cta_url": "/events/nmsdc-annual-conference-exchange-2026",
+ "animation": "marquee",
+ "bg_from": "#0f072f",
+ "bg_to": "#047857",
+ "text_color": "#FFFFFF",
+ "updated_at": "2026-10-29T09:41:12.030758+00:00"
+}
