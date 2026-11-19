@@ -34,8 +34,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=30">
-<link rel="stylesheet" href="/assets/css/pages.css?v=16">
+<link rel="stylesheet" href="/assets/css/styles.css?v=31">
+<link rel="stylesheet" href="/assets/css/pages.css?v=17">
 
 <script type="application/ld+json">
 {
@@ -54,8 +54,8 @@
         "@id": "https://procyonts.com/enterprise/servicenow/security-risk#service"
       },
       "inLanguage": "en",
-      "datePublished": "2026-11-18",
-      "dateModified": "2026-11-18",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
       "breadcrumb": {
         "@id": "https://procyonts.com/enterprise/servicenow/security-risk#breadcrumb"
       },
@@ -360,21 +360,15 @@
         </div>
       </div>
       <div class="ph__w">
-        <div class="wcard" data-picker="sec">
-          <span class="wcard__k">Start here</span>
-          <p class="wcard__t">What keeps the security team up at night?</p>
-          <div class="opt-list" role="radiogroup" aria-label="What keeps the security team up at night?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Vulnerability Response" data-s="Patch backlogs prioritized by real asset risk, correlated with the CMDB." data-cta="Scope Vulnerability Response" data-interest="ServiceNow implementation" data-kicker="Vulnerability Response" data-title="Vulnerability Response scope"><i></i>A patch backlog that never shrinks</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Security Incident Response" data-s="Alerts triaged and escalated automatically, so mean time to respond falls." data-cta="Scope incident orchestration" data-interest="ServiceNow implementation" data-kicker="Security Incident Response" data-title="SOC incident orchestration scope"><i></i>Alerts triaged by hand, slowly</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Continuous compliance" data-s="Controls tested continuously and evidence collected in the background." data-cta="Scope continuous compliance" data-interest="ServiceNow implementation" data-kicker="Continuous compliance" data-title="Continuous compliance scope"><i></i>Quarterly evidence scrambles</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Integrated risk" data-s="Enterprise, policy and vendor risk in one posture view." data-cta="Scope integrated risk" data-interest="ServiceNow implementation" data-kicker="Integrated risk" data-title="Integrated risk scope"><i></i>Risk spread across spreadsheets</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="AI Control Tower" data-s="AI spend, shadow AI and security controls governed in one place." data-href="/enterprise/servicenow/now-assist" data-link="See Now Assist and AI" data-cta="Govern AI on ServiceNow" data-interest="ServiceNow implementation" data-kicker="AI Control Tower" data-title="AI Control Tower scope"><i></i>AI spreading with no oversight</button>
-          </div>
-          <div class="rec" aria-live="polite"><b data-rec-b>Vulnerability Response</b><span data-rec-s>Patch backlogs prioritized by real asset risk, correlated with the CMDB.</span><a class="arrow-link" data-rec-a href="/enterprise/servicenow/now-assist" hidden>See Now Assist and AI <i aria-hidden="true">&rarr;</i></a></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta>Scope Vulnerability Response <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">Integrates with CrowdStrike, Splunk, Sentinel, Qualys, Rapid7, Tenable, Okta and XSOAR.</p>
+      <figure class="art art--feed" aria-label="Sample deliverable: Security operations queue">
+        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Security operations queue</b><span class="art__meta"><span class="live">Live view</span></span></figcaption>
+        <div class="art__body">
+        <div class="art__kpis"><div><b>14</b><small>CIs matched to a critical CVE</small></div><div><b>9 min</b><small>to triage a phishing report</small></div><div><b>92%</b><small>controls tested on schedule</small></div></div>
+        <ul class="art__feed"><li style="--i:0"><i aria-hidden="true">VR</i><div><b>Critical CVE matched to 14 servers</b><span>Owners notified with patch window</span></div><span class="chip chip--b">Routed</span></li><li style="--i:1"><i aria-hidden="true">PH</i><div><b>Phishing report triaged automatically</b><span>Sender blocked, users notified</span></div><span class="chip chip--g">Resolved</span></li><li style="--i:2"><i aria-hidden="true">GRC</i><div><b>Access review control failed</b><span>Issue opened with owner</span></div><span class="chip chip--r">Urgent</span></li><li style="--i:3"><i aria-hidden="true">TP</i><div><b>Vendor risk assessment due</b><span>Questionnaire sent</span></div><span class="chip chip--n">Queued</span></li></ul>
         </div>
-      </div>
+        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Security &amp; risk" data-title="SecOps and GRC scope" data-track="hero_artifact_cta">Brief a SecOps lead <i aria-hidden="true">&rarr;</i></a></div>
+      </figure>
+    </div>
     </div>
   </div>
 </section>
@@ -391,6 +385,34 @@
     </div>
   </div>
 </section>
+
+<section class="sx tool" aria-labelledby="tool-h">
+  <div class="wrap tool__in">
+    <div class="tool__copy">
+      <span class="sx__k rv">Start here</span>
+      <h2 id="tool-h" class="rv">What keeps the security team <em>up at night?</em></h2>
+      <p class="rv" data-d="1">Pick the closest worry. The recommended starting point and the brief adjust to it.</p>
+      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
+    </div>
+    <div class="tool__w rv" data-d="1">
+      <div class="wcard" data-picker="sec">
+          <span class="wcard__k">Start here</span>
+          <p class="wcard__t">What keeps the security team up at night?</p>
+          <div class="opt-list" role="radiogroup" aria-label="What keeps the security team up at night?">
+            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Vulnerability Response" data-s="Patch backlogs prioritized by real asset risk, correlated with the CMDB." data-cta="Scope Vulnerability Response" data-interest="ServiceNow implementation" data-kicker="Vulnerability Response" data-title="Vulnerability Response scope"><i></i>A patch backlog that never shrinks</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Security Incident Response" data-s="Alerts triaged and escalated automatically, so mean time to respond falls." data-cta="Scope incident orchestration" data-interest="ServiceNow implementation" data-kicker="Security Incident Response" data-title="SOC incident orchestration scope"><i></i>Alerts triaged by hand, slowly</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Continuous compliance" data-s="Controls tested continuously and evidence collected in the background." data-cta="Scope continuous compliance" data-interest="ServiceNow implementation" data-kicker="Continuous compliance" data-title="Continuous compliance scope"><i></i>Quarterly evidence scrambles</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Integrated risk" data-s="Enterprise, policy and vendor risk in one posture view." data-cta="Scope integrated risk" data-interest="ServiceNow implementation" data-kicker="Integrated risk" data-title="Integrated risk scope"><i></i>Risk spread across spreadsheets</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="AI Control Tower" data-s="AI spend, shadow AI and security controls governed in one place." data-href="/enterprise/servicenow/now-assist" data-link="See Now Assist and AI" data-cta="Govern AI on ServiceNow" data-interest="ServiceNow implementation" data-kicker="AI Control Tower" data-title="AI Control Tower scope"><i></i>AI spreading with no oversight</button>
+          </div>
+          <div class="rec" aria-live="polite"><b data-rec-b>Vulnerability Response</b><span data-rec-s>Patch backlogs prioritized by real asset risk, correlated with the CMDB.</span><a class="arrow-link" data-rec-a href="/enterprise/servicenow/now-assist" hidden>See Now Assist and AI <i aria-hidden="true">&rarr;</i></a></div>
+          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta>Scope Vulnerability Response <i aria-hidden="true">&rarr;</i></a>
+          <p class="wcard__foot">Integrates with CrowdStrike, Splunk, Sentinel, Qualys, Rapid7, Tenable, Okta and XSOAR.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="sx sx--paper" id="modules" aria-labelledby="mod-h">
   <div class="wrap">
@@ -653,6 +675,6 @@
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
 <script src="/assets/js/main.js?v=29" defer></script>
-<script src="/assets/js/pages.js?v=16" defer></script>
+<script src="/assets/js/pages.js?v=17" defer></script>
 </body>
 </html>

@@ -34,8 +34,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=30">
-<link rel="stylesheet" href="/assets/css/pages.css?v=16">
+<link rel="stylesheet" href="/assets/css/styles.css?v=31">
+<link rel="stylesheet" href="/assets/css/pages.css?v=17">
 
 <script type="application/ld+json">
 {
@@ -54,8 +54,8 @@
         "@id": "https://procyonts.com/enterprise/salesforce/org-audit#service"
       },
       "inLanguage": "en",
-      "datePublished": "2026-11-18",
-      "dateModified": "2026-11-18",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
       "breadcrumb": {
         "@id": "https://procyonts.com/enterprise/salesforce/org-audit#breadcrumb"
       },
@@ -376,7 +376,48 @@
         </div>
       </div>
       <div class="ph__w">
-        <div class="wcard symp" data-symp>
+      <figure class="art art--report" aria-label="Sample deliverable: Org audit scorecard">
+        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Org audit scorecard</b><span class="art__meta">Sample findings</span></figcaption>
+        <div class="art__body">
+        <div class="art__top">
+          <div class="art__ring" style="--v:0.54;--c:var(--red)"><svg viewBox="0 0 104 104" aria-hidden="true"><circle class="t" cx="52" cy="52" r="46"/><circle class="v" cx="52" cy="52" r="46"/></svg><b><span data-count="54">54</span><small>org health</small></b></div>
+          <div class="art__sum"><b>Slowing teams down</b><span>Most of the drag comes from conflicting automation and permissions nobody owns.</span></div>
+        </div>
+        <p class="art__sec">Where the score is lost</p>
+        <ul class="art__bars"><li style="--i:0;--w:82%;--bc:var(--red)"><span>Automation conflicts</span><em>27 found</em><i></i></li><li style="--i:1;--w:64%;--bc:var(--red)"><span>Security and access</span><em>41 risky grants</em><i></i></li><li style="--i:2;--w:52%;--bc:var(--blue)"><span>Data quality</span><em>18% duplicates</em><i></i></li><li style="--i:3;--w:71%;--bc:var(--green)"><span>Release readiness</span><em>71% coverage</em><i></i></li></ul>
+        <p class="art__sec">Top findings</p>
+        <ul class="art__finds"><li style="--i:0"><span class="chip chip--r">Critical</span><span>Validation rules block 1 in 6 case closures</span></li><li style="--i:1"><span class="chip chip--r">High</span><span>Page layouts load 140+ fields for agents</span></li><li style="--i:2"><span class="chip chip--g">Quick win</span><span>Merge 3 overlapping lead assignment rules</span></li></ul>
+        </div>
+        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Org audit &amp; rescue" data-title="Salesforce org health check" data-track="hero_artifact_cta">Request the org audit <i aria-hidden="true">&rarr;</i></a></div>
+      </figure>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="kf" aria-label="Key facts">
+  <div class="wrap">
+    <div class="kf__card">
+      <dl class="kf__in">
+        <div><dt>Areas audited</dt><dd><b>8</b>data, automation, code, security, integrations, licences, adoption, releases</dd></div>
+        <div><dt>Time to stabilize</dt><dd><b>30 days</b>highest-impact issues fixed first</dd></div>
+        <div><dt>Salesforce delivery</dt><dd><b>15+ years</b>of implementation and rescue work</dd></div>
+      </dl>
+      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Org audit &amp; rescue" data-title="Salesforce org health check" data-track="kf_cta"><small>Free &middot; 30 minutes</small><b>Book an org health check</b><span>Likely causes and a 30-day rescue outline</span><i aria-hidden="true">&rarr;</i></a>
+    </div>
+  </div>
+</section>
+
+<section class="sx tool" aria-labelledby="tool-h">
+  <div class="wrap tool__in">
+    <div class="tool__copy">
+      <span class="sx__k rv">Symptom check</span>
+      <h2 id="tool-h" class="rv">What the team says <em>is the symptom.</em></h2>
+      <p class="rv" data-d="1">Tick what sounds familiar. The risk level and the matching fixes go straight into the audit brief.</p>
+      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
+    </div>
+    <div class="tool__w rv" data-d="1">
+      <div class="wcard symp" data-symp>
           <span class="wcard__k">Symptom check</span>
           <p class="wcard__t">Which of these does the team say?</p>
           <div class="symp__list">
@@ -396,23 +437,10 @@
           <button class="btn btn--red btn--block" type="button" data-symp-cta disabled data-track="audit_symptoms_cta">Send these to an architect <i aria-hidden="true">&rarr;</i></button>
           <p class="wcard__foot">The ticked symptoms go straight into the brief. An architect replies within one business day.</p>
         </div>
-      </div>
     </div>
   </div>
 </section>
 
-<section class="kf" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Areas audited</dt><dd><b>8</b>data, automation, code, security, integrations, licences, adoption, releases</dd></div>
-        <div><dt>Time to stabilize</dt><dd><b>30 days</b>highest-impact issues fixed first</dd></div>
-        <div><dt>Salesforce delivery</dt><dd><b>15+ years</b>of implementation and rescue work</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Org audit &amp; rescue" data-title="Salesforce org health check" data-track="kf_cta"><small>Free &middot; 30 minutes</small><b>Book an org health check</b><span>Likely causes and a 30-day rescue outline</span><i aria-hidden="true">&rarr;</i></a>
-    </div>
-  </div>
-</section>
 
 <section class="sx" id="areas" aria-labelledby="areas-h">
   <div class="wrap">
@@ -668,6 +696,6 @@
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
 <script src="/assets/js/main.js?v=29" defer></script>
-<script src="/assets/js/pages.js?v=16" defer></script>
+<script src="/assets/js/pages.js?v=17" defer></script>
 </body>
 </html>

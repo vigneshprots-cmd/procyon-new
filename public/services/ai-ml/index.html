@@ -34,8 +34,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=30">
-<link rel="stylesheet" href="/assets/css/pages.css?v=16">
+<link rel="stylesheet" href="/assets/css/styles.css?v=31">
+<link rel="stylesheet" href="/assets/css/pages.css?v=17">
 
 <script type="application/ld+json">
 {
@@ -54,8 +54,8 @@
         "@id": "https://procyonts.com/services/ai-ml#service"
       },
       "inLanguage": "en",
-      "datePublished": "2026-11-18",
-      "dateModified": "2026-11-18",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
       "breadcrumb": {
         "@id": "https://procyonts.com/services/ai-ml#breadcrumb"
       },
@@ -376,21 +376,15 @@
         </div>
       </div>
       <div class="ph__w">
-        <div class="wcard" data-picker="workflow">
-          <span class="wcard__k">Workflow picker</span>
-          <p class="wcard__t">Which workflow drains the team most?</p>
-          <div class="opt-list" role="radiogroup" aria-label="Which workflow drains the team most?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Clinical intake: 4 hours to 12 minutes" data-s="Agents handle clinical intake and triage routing, with clinicians reviewing exceptions. Live in healthcare today." data-cta="Scope intake automation" data-interest="Agentforce &amp; AI agents" data-kicker="Intake automation" data-title="Intake automation scope" data-message="Workflow: intake and triage.&#10;Volume per month: "><i></i>Intake and triage</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Compliance evidence: 3x faster" data-s="Evidence that took two weeks of manual collection is generated automatically, with an audit trail for every item." data-cta="Scope compliance automation" data-interest="Agentforce &amp; AI agents" data-kicker="Compliance automation" data-title="Compliance automation scope" data-message="Workflow: compliance evidence and reporting.&#10;Framework (HIPAA, FedRAMP, SOX or other): "><i></i>Compliance evidence and reporting</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Approvals without the escalation chain" data-s="Procurement approvals that needed three escalations resolve on business rules, with people deciding only the exceptions." data-cta="Scope approval automation" data-interest="Agentforce &amp; AI agents" data-kicker="Approval automation" data-title="Approval automation scope" data-message="Workflow: approvals (procurement, finance or other).&#10;Systems involved: "><i></i>Approvals and procurement</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Case resolution on autopilot" data-s="Agents classify, route and draft resolutions for service and IT cases, handing low-confidence cases to people untouched." data-cta="Scope case automation" data-interest="Agentforce &amp; AI agents" data-kicker="Case automation" data-title="Case automation scope" data-message="Workflow: service or IT case resolution.&#10;Platform (Salesforce, ServiceNow or other): "><i></i>Service and IT cases</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Documents processed at scale" data-s="Statewide document processing and reporting, with intelligent error detection before anything is submitted." data-cta="Scope document automation" data-interest="Agentforce &amp; AI agents" data-kicker="Document automation" data-title="Document automation scope" data-message="Workflow: document processing and submissions.&#10;Document types and volume: "><i></i>Document processing</button>
-          </div>
-          <div class="rec" aria-live="polite"><b data-rec-b>Clinical intake: 4 hours to 12 minutes</b><span data-rec-s>Agents handle clinical intake and triage routing, with clinicians reviewing exceptions. Live in healthcare today.</span></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta data-track="agents_picker_cta">Scope intake automation <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">Architecture, tools and timeline for the actual stack. No generic demos.</p>
+      <figure class="art art--feed" aria-label="Sample deliverable: Agent activity log">
+        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Agent activity log</b><span class="art__meta"><span class="live">Live view</span></span></figcaption>
+        <div class="art__body">
+        <div class="art__kpis"><div><b>1,284</b><small>cases handled today</small></div><div><b>64%</b><small>resolved without a person</small></div><div><b>0</b><small>actions outside guardrails</small></div></div>
+        <ul class="art__feed"><li style="--i:0"><i aria-hidden="true">SV</i><div><b>Order status case answered</b><span>Customer service agent</span></div><span class="chip chip--g">Resolved</span></li><li style="--i:1"><i aria-hidden="true">SL</i><div><b>Web lead enriched and booked</b><span>Sales development agent</span></div><span class="chip chip--g">Booked</span></li><li style="--i:2"><i aria-hidden="true">IT</i><div><b>Laptop request fulfilled</b><span>IT service agent</span></div><span class="chip chip--g">Done</span></li><li style="--i:3"><i aria-hidden="true">!</i><div><b>Contract change request</b><span>Needs legal review</span></div><span class="chip chip--r">Escalated</span></li></ul>
         </div>
-      </div>
+        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI agents" data-title="Free AI discovery session" data-message="Highest-friction workflow: &#10;Systems it touches: " data-track="hero_artifact_cta">Map the first agent <i aria-hidden="true">&rarr;</i></a></div>
+      </figure>
+    </div>
     </div>
   </div>
 </section>
@@ -407,6 +401,34 @@
     </div>
   </div>
 </section>
+
+<section class="sx tool" aria-labelledby="tool-h">
+  <div class="wrap tool__in">
+    <div class="tool__copy">
+      <span class="sx__k rv">Workflow picker</span>
+      <h2 id="tool-h" class="rv">Which workflow drains <em>the team most?</em></h2>
+      <p class="rv" data-d="1">Pick the workflow. The agent design and the expected effort come back on the spot.</p>
+      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
+    </div>
+    <div class="tool__w rv" data-d="1">
+      <div class="wcard" data-picker="workflow">
+          <span class="wcard__k">Workflow picker</span>
+          <p class="wcard__t">Which workflow drains the team most?</p>
+          <div class="opt-list" role="radiogroup" aria-label="Which workflow drains the team most?">
+            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Clinical intake: 4 hours to 12 minutes" data-s="Agents handle clinical intake and triage routing, with clinicians reviewing exceptions. Live in healthcare today." data-cta="Scope intake automation" data-interest="Agentforce &amp; AI agents" data-kicker="Intake automation" data-title="Intake automation scope" data-message="Workflow: intake and triage.&#10;Volume per month: "><i></i>Intake and triage</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Compliance evidence: 3x faster" data-s="Evidence that took two weeks of manual collection is generated automatically, with an audit trail for every item." data-cta="Scope compliance automation" data-interest="Agentforce &amp; AI agents" data-kicker="Compliance automation" data-title="Compliance automation scope" data-message="Workflow: compliance evidence and reporting.&#10;Framework (HIPAA, FedRAMP, SOX or other): "><i></i>Compliance evidence and reporting</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Approvals without the escalation chain" data-s="Procurement approvals that needed three escalations resolve on business rules, with people deciding only the exceptions." data-cta="Scope approval automation" data-interest="Agentforce &amp; AI agents" data-kicker="Approval automation" data-title="Approval automation scope" data-message="Workflow: approvals (procurement, finance or other).&#10;Systems involved: "><i></i>Approvals and procurement</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Case resolution on autopilot" data-s="Agents classify, route and draft resolutions for service and IT cases, handing low-confidence cases to people untouched." data-cta="Scope case automation" data-interest="Agentforce &amp; AI agents" data-kicker="Case automation" data-title="Case automation scope" data-message="Workflow: service or IT case resolution.&#10;Platform (Salesforce, ServiceNow or other): "><i></i>Service and IT cases</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Documents processed at scale" data-s="Statewide document processing and reporting, with intelligent error detection before anything is submitted." data-cta="Scope document automation" data-interest="Agentforce &amp; AI agents" data-kicker="Document automation" data-title="Document automation scope" data-message="Workflow: document processing and submissions.&#10;Document types and volume: "><i></i>Document processing</button>
+          </div>
+          <div class="rec" aria-live="polite"><b data-rec-b>Clinical intake: 4 hours to 12 minutes</b><span data-rec-s>Agents handle clinical intake and triage routing, with clinicians reviewing exceptions. Live in healthcare today.</span></div>
+          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta data-track="agents_picker_cta">Scope intake automation <i aria-hidden="true">&rarr;</i></a>
+          <p class="wcard__foot">Architecture, tools and timeline for the actual stack. No generic demos.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="sx sx--paper" id="build" aria-labelledby="build-h">
   <div class="wrap">
@@ -743,6 +765,6 @@
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
 <script src="/assets/js/main.js?v=29" defer></script>
-<script src="/assets/js/pages.js?v=16" defer></script>
+<script src="/assets/js/pages.js?v=17" defer></script>
 </body>
 </html>

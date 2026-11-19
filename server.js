@@ -199,8 +199,30 @@ function clientIp(req) {
 }
 const clean = (v, n) => String(v == null ? '' : v).replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, n);
 
+// Every lead lands in the Supabase CRM the admin panel reads (same path the old site used:
+// the submit-lead Edge Function, falling back to a direct insert allowed by RLS).
+const SUPABASE_URL = 'https://ozuqrpwhywdmcjohkxll.supabase.co';
+const SUPABASE_KEY = process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EC_AFs10_QT8zoh0z_jepA_xrSmVBeo';
+async function saveLeadToCrm(lead) {
+  const row = {
+    first_name: lead.firstName, last_name: lead.lastName || '', email: lead.email, phone: lead.phone || '',
+    company: lead.company || '', requirement: lead.interest || '',
+    message: [lead.message, lead.utm ? 'UTM: ' + lead.utm : ''].filter(Boolean).join('\n\n'),
+    source: ('web:' + (lead.page || '/')).slice(0, 120), page_url: 'https://procyonts.com' + (lead.page || '/')
+  };
+  const headers = { apikey: SUPABASE_KEY, Authorization: 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' };
+  try {
+    const r = await fetch(SUPABASE_URL + '/functions/v1/submit-lead', { method: 'POST', headers, body: JSON.stringify(row) });
+    if (r.ok) return 'edge';
+    console.warn('[lead] submit-lead returned', r.status);
+  } catch (e) { console.warn('[lead] submit-lead unreachable:', e.message); }
+  const r2 = await fetch(SUPABASE_URL + '/rest/v1/leads', { method: 'POST', headers: Object.assign({ Prefer: 'return=minimal' }, headers), body: JSON.stringify(row) });
+  if (!r2.ok) throw new Error('leads insert ' + r2.status + ' ' + (await r2.text()).slice(0, 200));
+  return 'insert';
+}
+
 async function forwardLead(lead) {
-  const jobs = [];
+  const jobs = [saveLeadToCrm(lead).then(via => console.log('[lead] saved to CRM via', via))];
   if (LEAD_WEBHOOK_URL) {
     jobs.push(fetch(LEAD_WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead) }));
   }
@@ -212,13 +234,10 @@ async function forwardLead(lead) {
     });
     jobs.push(fetch('https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8', { method: 'POST', body }));
   }
-  if (!jobs.length) {
-    // No destination configured yet: keep the lead in the platform logs so it is not lost.
-    console.log('[lead]', JSON.stringify(lead));
-    return;
-  }
   const results = await Promise.allSettled(jobs);
   results.forEach(r => { if (r.status === 'rejected') console.error('[lead] forward failed:', r.reason && r.reason.message); });
+  // If the CRM write failed, keep the full lead in the platform logs so it is never lost.
+  if (results[0].status === 'rejected') console.log('[lead]', JSON.stringify(lead));
   console.log('[lead] received', lead.interest, new Date().toISOString());
 }
 

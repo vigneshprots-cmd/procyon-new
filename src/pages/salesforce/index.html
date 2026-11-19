@@ -40,21 +40,21 @@
         </div>
       </div>
       <div class="ph__w">
-        <div class="wcard" data-picker="stage">
-          <span class="wcard__k">Start here</span>
-          <p class="wcard__t">Where does the Salesforce org stand today?</p>
-          <div class="opt-list" role="radiogroup" aria-label="Where does the Salesforce org stand today?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Implementation &amp; rollout" data-s="Fixed-scope starters: Sales Cloud live in 6 weeks, Service Cloud in 8." data-href="/enterprise/salesforce/implementation" data-link="See the rollout plan" data-cta="Get a rollout plan" data-interest="Salesforce consulting &amp; implementation" data-kicker="Implementation &amp; rollout" data-title="Salesforce rollout plan"><i></i>New to Salesforce, or adding a cloud</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Org audit &amp; rescue" data-s="Find the technical debt, fix the org and win back user trust." data-href="/enterprise/salesforce/org-audit" data-link="Run the symptom check" data-cta="Book an org health check" data-interest="Salesforce org audit &amp; rescue" data-kicker="Org audit &amp; rescue" data-title="Salesforce org health check"><i></i>Live, but slow and messy</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Agentforce" data-s="First AI agents live in under 4 weeks, grounded in company data." data-href="/enterprise/salesforce/agentforce" data-link="Browse agent use cases" data-cta="Launch the first agent" data-interest="Agentforce &amp; AI agents" data-kicker="Agentforce" data-title="First Agentforce agent plan"><i></i>Ready to put AI agents to work</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Data Cloud &amp; integration" data-s="One real-time customer record across ERP, web, apps and service." data-href="/enterprise/salesforce/data-cloud" data-link="See the integration table" data-cta="Unify customer data" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud &amp; integration" data-title="Customer data unification plan"><i></i>Customer data spread across systems</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Managed services" data-s="Admin, releases and continuous improvement on one retainer." data-href="/enterprise/salesforce/managed-services" data-link="Compare the tiers" data-cta="Get a managed services quote" data-interest="Managed services" data-kicker="Managed services" data-title="Salesforce managed services quote"><i></i>Need a team to run it</button>
-          </div>
-          <div class="rec"><b data-rec-b>Implementation &amp; rollout</b><span data-rec-s>Fixed-scope starters: Sales Cloud live in 6 weeks, Service Cloud in 8.</span><a class="arrow-link" data-rec-a href="/enterprise/salesforce/implementation">See the rollout plan <i aria-hidden="true">&rarr;</i></a></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta data-track="sf_hub_picker_cta">Get a rollout plan <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">A senior Salesforce architect replies within one business day.</p>
+      <figure class="art art--report" aria-label="Sample deliverable: Salesforce org health report">
+        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Salesforce org health report</b><span class="art__meta">Week 1 deliverable</span></figcaption>
+        <div class="art__body">
+        <div class="art__top">
+          <div class="art__ring" style="--v:0.61;--c:var(--blue)"><svg viewBox="0 0 104 104" aria-hidden="true"><circle class="t" cx="52" cy="52" r="46"/><circle class="v" cx="52" cy="52" r="46"/></svg><b><span data-count="61">61</span><small>org health</small></b></div>
+          <div class="art__sum"><b>Fixable in one quarter</b><span>Debt sits in automation, access and data quality. Licences are over-provisioned.</span></div>
         </div>
-      </div>
+        <p class="art__sec">Where the score is lost</p>
+        <ul class="art__bars"><li style="--i:0;--w:78%;--bc:var(--red)"><span>Automation overlap on Case</span><em>64 flows and triggers</em><i></i></li><li style="--i:1;--w:55%;--bc:var(--blue)"><span>Duplicate accounts</span><em>18%</em><i></i></li><li style="--i:2;--w:42%;--bc:var(--blue)"><span>Unused licences</span><em>22%</em><i></i></li><li style="--i:3;--w:71%;--bc:var(--green)"><span>Apex test coverage</span><em>71%</em><i></i></li></ul>
+        <p class="art__sec">Top findings</p>
+        <ul class="art__finds"><li style="--i:0"><span class="chip chip--r">High</span><span>Three processes write Opportunity Stage in a loop</span></li><li style="--i:1"><span class="chip chip--b">Medium</span><span>41 users hold Modify All Data</span></li><li style="--i:2"><span class="chip chip--g">Quick win</span><span>Retire 9 dormant apps and 120 stale reports</span></li></ul>
+        </div>
+        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Salesforce consulting" data-title="Talk to a Salesforce architect" data-track="hero_artifact_cta">Request the org health report <i aria-hidden="true">&rarr;</i></a></div>
+      </figure>
+    </div>
     </div>
   </div>
 </section>
@@ -71,6 +71,34 @@
     </div>
   </div>
 </section>
+
+<section class="sx tool" aria-labelledby="tool-h">
+  <div class="wrap tool__in">
+    <div class="tool__copy">
+      <span class="sx__k rv">Start here</span>
+      <h2 id="tool-h" class="rv">Where does the Salesforce org stand <em>today?</em></h2>
+      <p class="rv" data-d="1">Pick the situation closest to the org. The recommendation and the brief adjust to it.</p>
+      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
+    </div>
+    <div class="tool__w rv" data-d="1">
+      <div class="wcard" data-picker="stage">
+          <span class="wcard__k">Start here</span>
+          <p class="wcard__t">Where does the Salesforce org stand today?</p>
+          <div class="opt-list" role="radiogroup" aria-label="Where does the Salesforce org stand today?">
+            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Implementation &amp; rollout" data-s="Fixed-scope starters: Sales Cloud live in 6 weeks, Service Cloud in 8." data-href="/enterprise/salesforce/implementation" data-link="See the rollout plan" data-cta="Get a rollout plan" data-interest="Salesforce consulting &amp; implementation" data-kicker="Implementation &amp; rollout" data-title="Salesforce rollout plan"><i></i>New to Salesforce, or adding a cloud</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Org audit &amp; rescue" data-s="Find the technical debt, fix the org and win back user trust." data-href="/enterprise/salesforce/org-audit" data-link="Run the symptom check" data-cta="Book an org health check" data-interest="Salesforce org audit &amp; rescue" data-kicker="Org audit &amp; rescue" data-title="Salesforce org health check"><i></i>Live, but slow and messy</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Agentforce" data-s="First AI agents live in under 4 weeks, grounded in company data." data-href="/enterprise/salesforce/agentforce" data-link="Browse agent use cases" data-cta="Launch the first agent" data-interest="Agentforce &amp; AI agents" data-kicker="Agentforce" data-title="First Agentforce agent plan"><i></i>Ready to put AI agents to work</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Data Cloud &amp; integration" data-s="One real-time customer record across ERP, web, apps and service." data-href="/enterprise/salesforce/data-cloud" data-link="See the integration table" data-cta="Unify customer data" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud &amp; integration" data-title="Customer data unification plan"><i></i>Customer data spread across systems</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Managed services" data-s="Admin, releases and continuous improvement on one retainer." data-href="/enterprise/salesforce/managed-services" data-link="Compare the tiers" data-cta="Get a managed services quote" data-interest="Managed services" data-kicker="Managed services" data-title="Salesforce managed services quote"><i></i>Need a team to run it</button>
+          </div>
+          <div class="rec"><b data-rec-b>Implementation &amp; rollout</b><span data-rec-s>Fixed-scope starters: Sales Cloud live in 6 weeks, Service Cloud in 8.</span><a class="arrow-link" data-rec-a href="/enterprise/salesforce/implementation">See the rollout plan <i aria-hidden="true">&rarr;</i></a></div>
+          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta data-track="sf_hub_picker_cta">Get a rollout plan <i aria-hidden="true">&rarr;</i></a>
+          <p class="wcard__foot">A senior Salesforce architect replies within one business day.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
 
 <!--@logos-->
 

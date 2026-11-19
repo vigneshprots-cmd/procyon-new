@@ -284,3 +284,31 @@
     show(srcs[0], false);
   });
 })();
+
+/* Count-up for real numbers: hero artifact scores and proof-bar figures.
+   The final value is already in the HTML, so no-JS, crawlers and reduced motion see it as is. */
+(function () {
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var els = [].slice.call(document.querySelectorAll('[data-count], .kf dd > b'));
+  if (!els.length || !('IntersectionObserver' in window)) return;
+  function run(el) {
+    var txt = el.textContent, m = txt.match(/^([^0-9]*)([0-9][0-9,]*\.?[0-9]*)(.*)$/);
+    if (!m) return;
+    var pre = m[1], raw = m[2], post = m[3], target = parseFloat(raw.replace(/,/g, '')), dec = (raw.split('.')[1] || '').length, comma = raw.indexOf(',') > -1;
+    if (!isFinite(target) || target === 0) return;
+    var t0 = null, dur = target > 999 ? 1400 : 1100;
+    el.style.minWidth = el.offsetWidth + 'px';
+    function fmt(v) { var s = v.toFixed(dec); return comma ? s.replace(/\B(?=(\d{3})+(?!\d))/g, ',') : s; }
+    function step(t) {
+      if (!t0) t0 = t;
+      var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + fmt(target * e) + post;
+      if (p < 1) requestAnimationFrame(step); else { el.textContent = txt; el.style.minWidth = ''; }
+    }
+    requestAnimationFrame(step);
+  }
+  var io = new IntersectionObserver(function (en) {
+    en.forEach(function (x) { if (x.isIntersecting) { io.unobserve(x.target); run(x.target); } });
+  }, { threshold: .6 });
+  els.forEach(function (el) { io.observe(el); });
+})();

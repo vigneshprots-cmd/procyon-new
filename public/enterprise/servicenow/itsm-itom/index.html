@@ -34,8 +34,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=30">
-<link rel="stylesheet" href="/assets/css/pages.css?v=16">
+<link rel="stylesheet" href="/assets/css/styles.css?v=31">
+<link rel="stylesheet" href="/assets/css/pages.css?v=17">
 
 <script type="application/ld+json">
 {
@@ -54,8 +54,8 @@
         "@id": "https://procyonts.com/enterprise/servicenow/itsm-itom#service"
       },
       "inLanguage": "en",
-      "datePublished": "2026-11-18",
-      "dateModified": "2026-11-18",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
       "breadcrumb": {
         "@id": "https://procyonts.com/enterprise/servicenow/itsm-itom#breadcrumb"
       },
@@ -360,23 +360,15 @@
         </div>
       </div>
       <div class="ph__w">
-        <div class="wcard" data-checklist>
-          <span class="wcard__k">Scope builder</span>
-          <p class="wcard__t">Which ITSM and ITOM modules are in scope?</p>
-          <div class="symp__list">
-            <button class="opt opt--check" type="button" aria-pressed="true" data-name="Incident and problem management"><i></i>Incident and problem</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Change management"><i></i>Change management</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Service catalog, Service Portal and Virtual Agent"><i></i>Catalog, portal and Virtual Agent</button>
-            <button class="opt opt--check" type="button" aria-pressed="true" data-name="Discovery and CMDB"><i></i>Discovery and CMDB</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Service Graph and IntegrationHub"><i></i>Service Graph and IntegrationHub</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Event management and AIOps"><i></i>Event management (ITOM)</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="IT asset management"><i></i>IT asset management</button>
-          </div>
-          <span class="chk__count" data-check-count aria-live="polite">2 of 7 selected</span>
-          <button class="btn btn--red btn--block" type="button" data-check-cta data-interest="ServiceNow implementation" data-kicker="ITSM, ITOM &amp; CMDB" data-title="ITSM and CMDB scope" data-prefix="Modules in scope:" data-suffix="&#10;&#10;Users and agents: &#10;Current ServiceNow version or other tool: ">Scope these modules <i aria-hidden="true">&rarr;</i></button>
-          <p class="wcard__foot">The ticked modules go straight into the brief.</p>
+      <figure class="art art--feed" aria-label="Sample deliverable: Service desk queue">
+        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Service desk queue</b><span class="art__meta"><span class="live">Live view</span></span></figcaption>
+        <div class="art__body">
+        <div class="art__kpis"><div><b>94%</b><small>P2 SLAs met</small></div><div><b>212 to 1</b><small>alerts grouped into incidents</small></div><div><b>87%</b><small>CMDB CIs with an owner</small></div></div>
+        <ul class="art__feed"><li style="--i:0"><i aria-hidden="true">INC</i><div><b>Email outage: 212 alerts, 1 incident</b><span>Event correlation</span></div><span class="chip chip--b">Correlated</span></li><li style="--i:1"><i aria-hidden="true">CHG</i><div><b>Firewall change scored low risk</b><span>Auto risk assessment</span></div><span class="chip chip--g">Approved</span></li><li style="--i:2"><i aria-hidden="true">CI</i><div><b>Orphan server matched to its owner</b><span>Discovery and service mapping</span></div><span class="chip chip--g">Fixed</span></li><li style="--i:3"><i aria-hidden="true">P1</i><div><b>VPN outage paged to network on-call</b><span>Major incident workflow</span></div><span class="chip chip--r">Escalated</span></li></ul>
         </div>
-      </div>
+        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="ITSM, ITOM &amp; CMDB" data-title="ITSM and CMDB scope" data-track="hero_artifact_cta">Scope ITSM and ITOM <i aria-hidden="true">&rarr;</i></a></div>
+      </figure>
+    </div>
     </div>
   </div>
 </section>
@@ -393,6 +385,36 @@
     </div>
   </div>
 </section>
+
+<section class="sx tool" aria-labelledby="tool-h">
+  <div class="wrap tool__in">
+    <div class="tool__copy">
+      <span class="sx__k rv">Scope builder</span>
+      <h2 id="tool-h" class="rv">Which modules are <em>in scope?</em></h2>
+      <p class="rv" data-d="1">Tick the modules. The scope, the sequence and a first estimate go straight into the brief.</p>
+      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
+    </div>
+    <div class="tool__w rv" data-d="1">
+      <div class="wcard" data-checklist>
+          <span class="wcard__k">Scope builder</span>
+          <p class="wcard__t">Which ITSM and ITOM modules are in scope?</p>
+          <div class="symp__list">
+            <button class="opt opt--check" type="button" aria-pressed="true" data-name="Incident and problem management"><i></i>Incident and problem</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Change management"><i></i>Change management</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Service catalog, Service Portal and Virtual Agent"><i></i>Catalog, portal and Virtual Agent</button>
+            <button class="opt opt--check" type="button" aria-pressed="true" data-name="Discovery and CMDB"><i></i>Discovery and CMDB</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Service Graph and IntegrationHub"><i></i>Service Graph and IntegrationHub</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Event management and AIOps"><i></i>Event management (ITOM)</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="IT asset management"><i></i>IT asset management</button>
+          </div>
+          <span class="chk__count" data-check-count aria-live="polite">2 of 7 selected</span>
+          <button class="btn btn--red btn--block" type="button" data-check-cta data-interest="ServiceNow implementation" data-kicker="ITSM, ITOM &amp; CMDB" data-title="ITSM and CMDB scope" data-prefix="Modules in scope:" data-suffix="&#10;&#10;Users and agents: &#10;Current ServiceNow version or other tool: ">Scope these modules <i aria-hidden="true">&rarr;</i></button>
+          <p class="wcard__foot">The ticked modules go straight into the brief.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="sx sx--paper" id="modules" aria-labelledby="mod-h">
   <div class="wrap">
@@ -661,6 +683,6 @@
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
 <script src="/assets/js/main.js?v=29" defer></script>
-<script src="/assets/js/pages.js?v=16" defer></script>
+<script src="/assets/js/pages.js?v=17" defer></script>
 </body>
 </html>

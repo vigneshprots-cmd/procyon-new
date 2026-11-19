@@ -34,8 +34,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=30">
-<link rel="stylesheet" href="/assets/css/pages.css?v=16">
+<link rel="stylesheet" href="/assets/css/styles.css?v=31">
+<link rel="stylesheet" href="/assets/css/pages.css?v=17">
 
 <script type="application/ld+json">
 {
@@ -54,8 +54,8 @@
         "@id": "https://procyonts.com/services/data-analytics#service"
       },
       "inLanguage": "en",
-      "datePublished": "2026-11-18",
-      "dateModified": "2026-11-18",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
       "breadcrumb": {
         "@id": "https://procyonts.com/services/data-analytics#breadcrumb"
       },
@@ -384,22 +384,21 @@
         </div>
       </div>
       <div class="ph__w">
-        <div class="wcard" data-checklist>
-          <span class="wcard__k">Data symptom check</span>
-          <p class="wcard__t">Which of these sounds familiar?</p>
-          <div class="symp__list">
-            <button class="opt opt--check" type="button" aria-pressed="true" data-name="Every team reports different KPIs"><i></i>Every team reports different KPIs</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="New dashboards or metrics take weeks"><i></i>A new dashboard takes weeks</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Operational, analytical and SaaS data are disconnected"><i></i>CRM, ERP and SaaS data live apart</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Privacy, lineage and access are not under control"><i></i>Lineage and access are unclear</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="The AI team cannot get clean data"><i></i>AI projects stall on data quality</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Warehouse or BI costs keep rising"><i></i>Warehouse and BI costs keep rising</button>
-          </div>
-          <span class="chk__count" data-check-count aria-live="polite">1 of 6 selected</span>
-          <button class="btn btn--red btn--block" type="button" data-check-cta data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment" data-prefix="Data symptoms we see:" data-suffix="&#10;&#10;Current platform and BI tools: &#10;Decision the data should support: " data-track="data_symp_cta">Send these to a data architect <i aria-hidden="true">&rarr;</i></button>
-          <p class="wcard__foot">The ticked symptoms go straight into the brief.</p>
+      <figure class="art art--report" aria-label="Sample deliverable: Data trust scorecard">
+        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Data trust scorecard</b><span class="art__meta">Sample review</span></figcaption>
+        <div class="art__body">
+        <div class="art__top">
+          <div class="art__ring" style="--v:0.62;--c:var(--blue)"><svg viewBox="0 0 104 104" aria-hidden="true"><circle class="t" cx="52" cy="52" r="46"/><circle class="v" cx="52" cy="52" r="46"/></svg><b><span data-count="62">62</span><small>trust</small></b></div>
+          <div class="art__sum"><b>One revenue number, 4 definitions</b><span>Sales, Finance and the board each read a different figure.</span></div>
         </div>
-      </div>
+        <p class="art__sec">Where the score is lost</p>
+        <ul class="art__bars"><li style="--i:0;--w:50%;--bc:var(--red)"><span>Metric definitions that agree</span><em>2 of 4</em><i></i></li><li style="--i:1;--w:40%;--bc:var(--red)"><span>Pipeline data freshness</span><em>26 hours</em><i></i></li><li style="--i:2;--w:66%;--bc:var(--blue)"><span>Duplicate customers</span><em>11%</em><i></i></li><li style="--i:3;--w:58%;--bc:var(--green)"><span>Dashboards in active use</span><em>58%</em><i></i></li></ul>
+        <p class="art__sec">Top findings</p>
+        <ul class="art__finds"><li style="--i:0"><span class="chip chip--r">High</span><span>Bookings counted twice across two pipelines</span></li><li style="--i:1"><span class="chip chip--b">Medium</span><span>No owner for the customer master</span></li><li style="--i:2"><span class="chip chip--g">Quick win</span><span>Retire 46 dashboards nobody opened in 90 days</span></li></ul>
+        </div>
+        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment" data-message="Current data platform and BI tools: &#10;Decision the data should support: " data-track="hero_artifact_cta">Request the data trust review <i aria-hidden="true">&rarr;</i></a></div>
+      </figure>
+    </div>
     </div>
   </div>
 </section>
@@ -416,6 +415,35 @@
     </div>
   </div>
 </section>
+
+<section class="sx tool" aria-labelledby="tool-h">
+  <div class="wrap tool__in">
+    <div class="tool__copy">
+      <span class="sx__k rv">Data symptom check</span>
+      <h2 id="tool-h" class="rv">Which of these <em>sounds familiar?</em></h2>
+      <p class="rv" data-d="1">Tick the symptoms. The likely cause and the first fix go straight into the brief.</p>
+      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
+    </div>
+    <div class="tool__w rv" data-d="1">
+      <div class="wcard" data-checklist>
+          <span class="wcard__k">Data symptom check</span>
+          <p class="wcard__t">Which of these sounds familiar?</p>
+          <div class="symp__list">
+            <button class="opt opt--check" type="button" aria-pressed="true" data-name="Every team reports different KPIs"><i></i>Every team reports different KPIs</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="New dashboards or metrics take weeks"><i></i>A new dashboard takes weeks</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Operational, analytical and SaaS data are disconnected"><i></i>CRM, ERP and SaaS data live apart</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Privacy, lineage and access are not under control"><i></i>Lineage and access are unclear</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="The AI team cannot get clean data"><i></i>AI projects stall on data quality</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Warehouse or BI costs keep rising"><i></i>Warehouse and BI costs keep rising</button>
+          </div>
+          <span class="chk__count" data-check-count aria-live="polite">1 of 6 selected</span>
+          <button class="btn btn--red btn--block" type="button" data-check-cta data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment" data-prefix="Data symptoms we see:" data-suffix="&#10;&#10;Current platform and BI tools: &#10;Decision the data should support: " data-track="data_symp_cta">Send these to a data architect <i aria-hidden="true">&rarr;</i></button>
+          <p class="wcard__foot">The ticked symptoms go straight into the brief.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="sx sx--paper" id="build" aria-labelledby="build-h">
   <div class="wrap">
@@ -737,6 +765,6 @@
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
 <script src="/assets/js/main.js?v=29" defer></script>
-<script src="/assets/js/pages.js?v=16" defer></script>
+<script src="/assets/js/pages.js?v=17" defer></script>
 </body>
 </html>

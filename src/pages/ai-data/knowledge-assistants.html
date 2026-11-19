@@ -39,20 +39,15 @@
         </div>
       </div>
       <div class="ph__w">
-        <div class="wcard" data-picker="asker">
-          <span class="wcard__k">Who is asking?</span>
-          <p class="wcard__t">A sample answer, as each audience sees it.</p>
-          <div class="opt-list" role="radiogroup" aria-label="Who is asking?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="&ldquo;How many days of carry-over leave are allowed?&rdquo;" data-s="Up to the limit in section 4.2 of the leave policy, approved by the line manager. Source: HR Policy Handbook, SharePoint, updated last quarter." data-cta="Build the employee assistant" data-interest="Agentforce &amp; AI agents" data-kicker="Employee assistant" data-title="Employee knowledge assistant scope" data-message="Assistant: employee help desk.&#10;Document sources (SharePoint, Confluence, PDFs): "><i></i>An employee, in Slack or Teams</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="&ldquo;Customer says the device will not pair after the update.&rdquo;" data-s="Draft reply with the three reset steps from knowledge article KB-1182, plus a link to the fix in the latest release note. Sent by the agent, not the AI." data-cta="Build agent assist" data-interest="Agentforce &amp; AI agents" data-kicker="Agent assist" data-title="Agent assist scope" data-message="Assistant: service agent assist.&#10;Platform (Salesforce, ServiceNow or other): "><i></i>A service agent, in the console</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="&ldquo;Where is my order and can I change the address?&rdquo;" data-s="Order status from the order system, the address policy from approved knowledge, and a one-click handover to a person if the change needs approval." data-cta="Build the self-service assistant" data-interest="Agentforce &amp; AI agents" data-kicker="Customer self-service" data-title="Customer self-service assistant scope" data-message="Assistant: customer self-service.&#10;Channel (portal, WhatsApp, web): "><i></i>A customer, on the portal or WhatsApp</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="&ldquo;Which SOP covers a protocol deviation at site level?&rdquo;" data-s="The governing SOP and section, with the deviation form linked. Only documents the user is cleared to see are searched." data-cta="Build the compliance assistant" data-interest="Agentforce &amp; AI agents" data-kicker="Regulated documents" data-title="Regulated document assistant scope" data-message="Assistant: regulated documents (SOPs, protocols, submissions).&#10;Framework (FDA, HIPAA or other): "><i></i>A quality or compliance lead</button>
-          </div>
-          <div class="rec" aria-live="polite"><b data-rec-b>&ldquo;How many days of carry-over leave are allowed?&rdquo;</b><span data-rec-s>Up to the limit in section 4.2 of the leave policy, approved by the line manager. Source: HR Policy Handbook, SharePoint, updated last quarter.</span></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta data-track="rag_picker_cta">Build the employee assistant <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">Illustrative answers. The real assistant uses the client's own documents.</p>
+      <figure class="art art--feed" aria-label="Sample deliverable: Knowledge assistant, recent answers">
+        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Knowledge assistant, recent answers</b><span class="art__meta"><span class="live">Live view</span></span></figcaption>
+        <div class="art__body">
+        <div class="art__kpis"><div><b>2.1 s</b><small>median answer time</small></div><div><b>100%</b><small>answers cite a source</small></div><div><b>0</b><small>answers outside access rights</small></div></div>
+        <ul class="art__feed"><li style="--i:0"><i aria-hidden="true">Q</i><div><b>Parental leave policy for Canada?</b><span>HR Policy 4.2, page 7</span></div><span class="chip chip--b">Cited</span></li><li style="--i:1"><i aria-hidden="true">Q</i><div><b>Warranty terms for model X200?</b><span>Product guide, section 3</span></div><span class="chip chip--b">Cited</span></li><li style="--i:2"><i aria-hidden="true">Q</i><div><b>Steps to reset SSO for a contractor?</b><span>IT runbook 12</span></div><span class="chip chip--b">Cited</span></li><li style="--i:3"><i aria-hidden="true">Q</i><div><b>Salary bands for 2027?</b><span>Restricted for this role</span></div><span class="chip chip--r">Escalated</span></li></ul>
         </div>
-      </div>
+        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Knowledge assistants" data-title="Knowledge assistant scope" data-message="Who will ask the questions: &#10;Where the documents live: " data-track="hero_artifact_cta">Scope a knowledge assistant <i aria-hidden="true">&rarr;</i></a></div>
+      </figure>
+    </div>
     </div>
   </div>
 </section>
@@ -69,6 +64,33 @@
     </div>
   </div>
 </section>
+
+<section class="sx tool" aria-labelledby="tool-h">
+  <div class="wrap tool__in">
+    <div class="tool__copy">
+      <span class="sx__k rv">Who is asking?</span>
+      <h2 id="tool-h" class="rv">One question, <em>three audiences.</em></h2>
+      <p class="rv" data-d="1">Switch the audience to see how the same assistant answers each one, within its access rights.</p>
+      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
+    </div>
+    <div class="tool__w rv" data-d="1">
+      <div class="wcard" data-picker="asker">
+          <span class="wcard__k">Who is asking?</span>
+          <p class="wcard__t">A sample answer, as each audience sees it.</p>
+          <div class="opt-list" role="radiogroup" aria-label="Who is asking?">
+            <button class="opt" type="button" role="radio" aria-checked="true" data-b="&ldquo;How many days of carry-over leave are allowed?&rdquo;" data-s="Up to the limit in section 4.2 of the leave policy, approved by the line manager. Source: HR Policy Handbook, SharePoint, updated last quarter." data-cta="Build the employee assistant" data-interest="Agentforce &amp; AI agents" data-kicker="Employee assistant" data-title="Employee knowledge assistant scope" data-message="Assistant: employee help desk.&#10;Document sources (SharePoint, Confluence, PDFs): "><i></i>An employee, in Slack or Teams</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="&ldquo;Customer says the device will not pair after the update.&rdquo;" data-s="Draft reply with the three reset steps from knowledge article KB-1182, plus a link to the fix in the latest release note. Sent by the agent, not the AI." data-cta="Build agent assist" data-interest="Agentforce &amp; AI agents" data-kicker="Agent assist" data-title="Agent assist scope" data-message="Assistant: service agent assist.&#10;Platform (Salesforce, ServiceNow or other): "><i></i>A service agent, in the console</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="&ldquo;Where is my order and can I change the address?&rdquo;" data-s="Order status from the order system, the address policy from approved knowledge, and a one-click handover to a person if the change needs approval." data-cta="Build the self-service assistant" data-interest="Agentforce &amp; AI agents" data-kicker="Customer self-service" data-title="Customer self-service assistant scope" data-message="Assistant: customer self-service.&#10;Channel (portal, WhatsApp, web): "><i></i>A customer, on the portal or WhatsApp</button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-b="&ldquo;Which SOP covers a protocol deviation at site level?&rdquo;" data-s="The governing SOP and section, with the deviation form linked. Only documents the user is cleared to see are searched." data-cta="Build the compliance assistant" data-interest="Agentforce &amp; AI agents" data-kicker="Regulated documents" data-title="Regulated document assistant scope" data-message="Assistant: regulated documents (SOPs, protocols, submissions).&#10;Framework (FDA, HIPAA or other): "><i></i>A quality or compliance lead</button>
+          </div>
+          <div class="rec" aria-live="polite"><b data-rec-b>&ldquo;How many days of carry-over leave are allowed?&rdquo;</b><span data-rec-s>Up to the limit in section 4.2 of the leave policy, approved by the line manager. Source: HR Policy Handbook, SharePoint, updated last quarter.</span></div>
+          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta data-track="rag_picker_cta">Build the employee assistant <i aria-hidden="true">&rarr;</i></a>
+          <p class="wcard__foot">Illustrative answers. The real assistant uses the client's own documents.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="sx sx--paper" id="uses" aria-labelledby="uses-h">
   <div class="wrap">

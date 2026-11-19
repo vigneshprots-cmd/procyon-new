@@ -34,8 +34,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/styles.css?v=30">
-<link rel="stylesheet" href="/assets/css/pages.css?v=16">
+<link rel="stylesheet" href="/assets/css/styles.css?v=31">
+<link rel="stylesheet" href="/assets/css/pages.css?v=17">
 
 <script type="application/ld+json">
 {
@@ -54,8 +54,8 @@
         "@id": "https://procyonts.com/solutions/enterprise-integration#service"
       },
       "inLanguage": "en",
-      "datePublished": "2026-11-18",
-      "dateModified": "2026-11-18",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
       "breadcrumb": {
         "@id": "https://procyonts.com/solutions/enterprise-integration#breadcrumb"
       },
@@ -384,23 +384,15 @@
         </div>
       </div>
       <div class="ph__w">
-        <div class="wcard" data-checklist>
-          <span class="wcard__k">Integration map</span>
-          <p class="wcard__t">Which systems need to talk?</p>
-          <div class="symp__list">
-            <button class="opt opt--check" type="button" aria-pressed="true" data-name="Salesforce"><i></i>Salesforce</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="ServiceNow"><i></i>ServiceNow</button>
-            <button class="opt opt--check" type="button" aria-pressed="true" data-name="SAP or Oracle ERP"><i></i>SAP or Oracle ERP</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="NetSuite"><i></i>NetSuite</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Workday"><i></i>Workday</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Snowflake or Databricks"><i></i>Snowflake or Databricks</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Legacy mainframe or EDI trading partners"><i></i>Legacy mainframe or EDI partners</button>
-          </div>
-          <span class="chk__count" data-check-count aria-live="polite">2 of 7 selected</span>
-          <button class="btn btn--red btn--block" type="button" data-check-cta data-interest="Data, integration &amp; MuleSoft" data-kicker="Integration" data-title="Integration architecture review" data-prefix="Systems to connect:" data-suffix="&#10;&#10;Current integration tool (MuleSoft, Boomi, custom or none): &#10;Biggest pain today: " data-track="int_map_cta">Map these integrations <i aria-hidden="true">&rarr;</i></button>
-          <p class="wcard__foot">Every connection mapped with its owner, failure points and fix order.</p>
+      <figure class="art art--feed" aria-label="Sample deliverable: Integration monitor">
+        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Integration monitor</b><span class="art__meta"><span class="live">Live view</span></span></figcaption>
+        <div class="art__body">
+        <div class="art__kpis"><div><b>14</b><small>systems connected</small></div><div><b>99.7%</b><small>syncs succeed first time</small></div><div><b>0</b><small>records re-keyed by hand</small></div></div>
+        <ul class="art__feed"><li style="--i:0"><i aria-hidden="true">SAP</i><div><b>Sales order synced to Salesforce</b><span>1.2 seconds</span></div><span class="chip chip--g">Synced</span></li><li style="--i:1"><i aria-hidden="true">NS</i><div><b>Invoice posted to NetSuite</b><span>From billing event</span></div><span class="chip chip--g">Synced</span></li><li style="--i:2"><i aria-hidden="true">WD</i><div><b>Workday timeout, retried</b><span>Succeeded on retry 1</span></div><span class="chip chip--g">Retried</span></li><li style="--i:3"><i aria-hidden="true">API</i><div><b>Schema change detected upstream</b><span>Owner alerted before failure</span></div><span class="chip chip--b">Routed</span></li></ul>
         </div>
-      </div>
+        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Integration" data-title="Integration architecture review" data-message="Systems to connect: &#10;Biggest integration pain: " data-track="hero_artifact_cta">Map the integration <i aria-hidden="true">&rarr;</i></a></div>
+      </figure>
+    </div>
     </div>
   </div>
 </section>
@@ -417,6 +409,36 @@
     </div>
   </div>
 </section>
+
+<section class="sx tool" aria-labelledby="tool-h">
+  <div class="wrap tool__in">
+    <div class="tool__copy">
+      <span class="sx__k rv">Integration map</span>
+      <h2 id="tool-h" class="rv">Which systems need <em>to talk?</em></h2>
+      <p class="rv" data-d="1">Tick the systems. The integration map and the pattern for each link go straight into the brief.</p>
+      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
+    </div>
+    <div class="tool__w rv" data-d="1">
+      <div class="wcard" data-checklist>
+          <span class="wcard__k">Integration map</span>
+          <p class="wcard__t">Which systems need to talk?</p>
+          <div class="symp__list">
+            <button class="opt opt--check" type="button" aria-pressed="true" data-name="Salesforce"><i></i>Salesforce</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="ServiceNow"><i></i>ServiceNow</button>
+            <button class="opt opt--check" type="button" aria-pressed="true" data-name="SAP or Oracle ERP"><i></i>SAP or Oracle ERP</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="NetSuite"><i></i>NetSuite</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Workday"><i></i>Workday</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Snowflake or Databricks"><i></i>Snowflake or Databricks</button>
+            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Legacy mainframe or EDI trading partners"><i></i>Legacy mainframe or EDI partners</button>
+          </div>
+          <span class="chk__count" data-check-count aria-live="polite">2 of 7 selected</span>
+          <button class="btn btn--red btn--block" type="button" data-check-cta data-interest="Data, integration &amp; MuleSoft" data-kicker="Integration" data-title="Integration architecture review" data-prefix="Systems to connect:" data-suffix="&#10;&#10;Current integration tool (MuleSoft, Boomi, custom or none): &#10;Biggest pain today: " data-track="int_map_cta">Map these integrations <i aria-hidden="true">&rarr;</i></button>
+          <p class="wcard__foot">Every connection mapped with its owner, failure points and fix order.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="sx sx--paper" id="compare" aria-labelledby="vs-h">
   <div class="wrap">
@@ -767,6 +789,6 @@
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
 <script src="/assets/js/main.js?v=29" defer></script>
-<script src="/assets/js/pages.js?v=16" defer></script>
+<script src="/assets/js/pages.js?v=17" defer></script>
 </body>
 </html>
