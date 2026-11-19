@@ -189,7 +189,7 @@ for (const p of blog) {
     slug: '/blog/' + p.slug, section: 'insights', insights: true,
     title: TITLE_FIX[p.slug] || title60(p.seo_title || p.title), description: desc(p.seo_description, p.excerpt),
     ogTitle: clip(p.title, 95).replace(/\.$/, ''), ogDescription: desc(p.excerpt, p.seo_description),
-    ogImage: p.image ? p.image.og : '/assets/img/og/blog.jpg', bodyClass: 'ins-post',
+    og: 'blog', bodyClass: 'ins-post', // social image: /assets/img/og/blog-<slug>.jpg from scripts/og-images.js
     published: day(p.published_at), modified: day(p.updated_at || p.published_at),
     crumbs: [['Blog', '/blog'], [clip(p.title, 48).replace(/\.$/, ''), '/blog/' + p.slug]],
     article: { headline: clip(p.title, 110), section: p.category.trim(), keywords: (p.tags || []).join(', '), author: p.author || 'Procyon Technostructure', words: words(html) }
@@ -291,7 +291,7 @@ for (const c of cases) {
     slug: '/case-studies/' + c.slug, section: 'insights', insights: true,
     title: title60(c.seo_title || c.title), description: desc(c.seo_description, c.excerpt),
     ogTitle: clip(c.title, 95).replace(/\.$/, ''), ogDescription: desc(c.excerpt, c.seo_description),
-    ogImage: c.image ? c.image.og : '/assets/img/og/case-studies.jpg', bodyClass: 'ins-case',
+    og: 'case-studies', bodyClass: 'ins-case', // social image: /assets/img/og/case-studies-<slug>.jpg
     published: day(c.published_at || c.updated_at || TODAY), modified: day(c.updated_at || c.published_at || TODAY),
     crumbs: [['Case studies', '/case-studies'], [clip(c.client, 48).replace(/\.$/, ''), '/case-studies/' + c.slug]],
     caseStudy: { headline: clip(c.title, 110), client: c.client, stack: c.stack || [] }
