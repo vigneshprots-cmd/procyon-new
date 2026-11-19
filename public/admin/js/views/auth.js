@@ -52,7 +52,7 @@ function signIn(root, onSignedIn, resetMode = false) {
     form,
     h('button.linkbtn', { type: 'button', onclick: () => signIn(root, onSignedIn, !resetMode) }, resetMode ? '← Back to sign in' : 'Forgot password?'),
     h('p.authcard__note', icon('lock', 13), 'Access is by invitation only. Your existing admin account works here.'),
-    isDemo() || !/^(localhost|127\.0\.0\.1)$|\.up\.railway\.app$/.test(location.hostname) ? null : h('p.authcard__note', h('a', { href: '/admin?demo=admin' }, 'Explore with sample data instead'))));
+    isDemo() || !/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? null : h('p.authcard__note', h('a', { href: '/admin?demo=admin' }, 'Explore with sample data instead'))));
   setTimeout(() => email.focus(), 30);
 }
 
