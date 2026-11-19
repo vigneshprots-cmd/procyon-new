@@ -4,7 +4,7 @@
   "title": "Meet Procyon at Dreamforce 2026: Private 1:1 Salesforce Strategy Sessions",
   "excerpt": "No booth. No pitch. Private working sessions with senior Salesforce architects - and a free 30-day plan. Here is how to book.",
   "category": "Dreamforce",
-  "author": "Srinath",
+  "author": "Vignesh",
   "author_role": null,
   "read_time": "2 min read",
   "reading_minutes": 3,
@@ -15,8 +15,8 @@
    "Agentforce",
    "1:1 sessions"
   ],
-  "published_at": "2026-11-05T13:31:54.921+00:00",
-  "updated_at": "2026-11-05T13:31:56.849652+00:00",
+  "published_at": "2026-11-18T11:01:14.775+00:00",
+  "updated_at": "2026-11-18T11:01:15.616635+00:00",
   "seo_title": "Meet Procyon at Dreamforce 2026 | Private 1:1 Sessions",
   "seo_description": "Meet Procyon's senior Salesforce architects at Dreamforce 2026 for private 1:1 strategy sessions on Agentforce, Data Cloud, and enterprise AI. Book your slot.",
   "focus_keyword": "meet Procyon at Dreamforce 2026",
@@ -105,7 +105,128 @@
   "image": {
    "src": "/assets/img/insights/blog/nmsdc-2026-key-takeaways.webp",
    "og": "/assets/img/og/insights/nmsdc-2026-key-takeaways.jpg"
-  }
+  },
+  "format": "gallery",
+  "gallery": [
+   {
+    "id": "g-1793272681556-0-y1b6a77z7t",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272679983-xdipv6s8q6.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272679983-xdipv6s8q6.jpg",
+    "alt": "NMSDC 2026 letters on the exhibit hall floor at the Los Angeles Convention Center",
+    "caption": "The NMSDC letters on the expo floor at the Los Angeles Convention Center",
+    "group": "The conference",
+    "sortOrder": 0
+   },
+   {
+    "id": "g-1793272704653-0-mzmbme6rwy",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272703947-v9kwndhmtpl.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272703947-v9kwndhmtpl.jpg",
+    "alt": "Procyon Technostructure team at the NMSDC 2026 welcome entrance in Los Angeles",
+    "caption": "Badges on and ready for four packed days at NMSDC 2026",
+    "group": "The conference",
+    "sortOrder": 1
+   },
+   {
+    "id": "g-1793272705312-1-23cf99m28po",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272704653-zsi1a78skh.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272704653-zsi1a78skh.jpg",
+    "alt": "Procyon team at the NMSDC 2026 California Kickoff and Welcome Reception wall",
+    "caption": "Stopping by the California Kickoff and Welcome Reception wall",
+    "group": "The conference",
+    "sortOrder": 2
+   },
+   {
+    "id": "g-1793272706087-2-3w0znf4sou9",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272705312-s7xsci3vkh9.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272705312-s7xsci3vkh9.jpg",
+    "alt": "Procyon team at the NMSDC 2026 Welcome Reception at the California Science Center",
+    "caption": "Under the aircraft at the Welcome Reception, hosted at the California Science Center",
+    "group": "The conference",
+    "sortOrder": 3
+   },
+   {
+    "id": "g-1793272707771-3-1spvdk38zft",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272706087-zzw3cgdf2ka.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272706087-zzw3cgdf2ka.jpg",
+    "alt": "Golden living statue greeting guests at the NMSDC 2026 reception",
+    "caption": "A golden living statue made the reception one to remember",
+    "group": "The conference",
+    "sortOrder": 4
+   },
+   {
+    "id": "g-1793272708371-4-o0fpkrh2scp",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272707771-l78vhkeqpc.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272707771-l78vhkeqpc.jpg",
+    "alt": "Procyon team in front of the NMSDC 2026 drive growth for shared prosperity signage",
+    "caption": "Drive growth for shared prosperity: the message that set the tone for the week",
+    "group": "The conference",
+    "sortOrder": 5
+   },
+   {
+    "id": "g-1793272709409-5-fxva2t1lpfp",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272708372-vn9zhflaot.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272708372-vn9zhflaot.jpg",
+    "alt": "Procyon Technostructure team outside the Los Angeles Convention Center at NMSDC 2026",
+    "caption": "The Procyon team outside the Los Angeles Convention Center",
+    "group": "The conference",
+    "sortOrder": 6
+   },
+   {
+    "id": "g-1793272710172-6-7eibv5bm8ta",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272709409-glbpctd835.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272709409-glbpctd835.jpg",
+    "alt": "The Pitch Room Spark Sessions stage at NMSDC 2026",
+    "caption": "The Pitch Room, home of the Spark Sessions and the EYE Pitch Competition",
+    "group": "The conference",
+    "sortOrder": 7
+   },
+   {
+    "id": "g-1793272710840-7-7ilkzo5c8i",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272710173-w0iackhym0p.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272710173-w0iackhym0p.jpg",
+    "alt": "Procyon team with the Power of Partnership Impact Lab speakers at NMSDC 2026",
+    "caption": "With the speakers after Power of Partnership, one of the most practical sessions of the week",
+    "group": "The conference",
+    "sortOrder": 8
+   },
+   {
+    "id": "g-1793272727108-0-kogszpy26md",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272726457-edidjqq0jer.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272726457-edidjqq0jer.jpg",
+    "alt": "Procyon team with Ranjani Mohana of R Mo Global Diversity Solutions at NMSDC 2026",
+    "caption": "With Ranjani Mohana of R Mo Global Diversity Solutions, the go-to expert for MBE, DBE and SBA certification",
+    "group": "The connections",
+    "sortOrder": 9
+   },
+   {
+    "id": "g-1793272727786-1-2shlsf2hsa5",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272727108-lub92dy3tt.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272727108-lub92dy3tt.jpg",
+    "alt": "Procyon team with Ann Ramakumaran, Founder and CEO of Ampcus Inc., at NMSDC 2026",
+    "caption": "Meeting Ann Ramakumaran, Founder and CEO of Ampcus Inc.",
+    "group": "The connections",
+    "sortOrder": 10
+   },
+   {
+    "id": "g-1793272728470-2-gix8g6k72an",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272727786-1o1gtclup4b.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272727786-1o1gtclup4b.jpg",
+    "alt": "Procyon team with the Knock Design team at NMSDC 2026",
+    "caption": "A hallway hello with the Knock Design team that turned into a great conversation",
+    "group": "The connections",
+    "sortOrder": 11
+   },
+   {
+    "id": "g-1793272729169-3-czsecog5ykv",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272728470-o7sxuextys.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1793272728470-o7sxuextys.jpg",
+    "alt": "Networking on the NMSDC 2026 exhibit hall floor in Los Angeles",
+    "caption": "New connections on the exhibit hall floor, where many of the best conversations happened",
+    "group": "The connections",
+    "sortOrder": 12
+   }
+  ],
+  "galleryAnchors": {}
  },
  {
   "slug": "agentforce-certified-mbe-partner-enterprise-ai",
@@ -393,7 +514,722 @@
   "image": {
    "src": "/assets/img/insights/blog/dreamforce-2026-key-takeaways.webp",
    "og": "/assets/img/og/insights/dreamforce-2026-key-takeaways.jpg"
-  }
+  },
+  "format": "gallery",
+  "gallery": [
+   {
+    "id": "g-1790591564169-30-6yrojlzvzck",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591563732-ftx5w2smas6.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591563732-ftx5w2smas6.jpg",
+    "alt": "Team Welcome to Dreamforce Banner",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 0
+   },
+   {
+    "id": "g-1790591551595-3-d08vtisql25",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591550691-rj2vvqddoz.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591550691-rj2vvqddoz.jpg",
+    "alt": "Dreamforce Arch Arrival",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 1
+   },
+   {
+    "id": "g-1790591549557-1-ebznpq3im2k",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591549075-rpeameescs.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591549075-rpeameescs.jpg",
+    "alt": "Trailblazer 20th Anniversary",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 2
+   },
+   {
+    "id": "g-1790591549075-0-1tuct4j5mdz",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591548343-1ym99q1r4i9.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591548343-1ym99q1r4i9.jpg",
+    "alt": "Team with Partners",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 3
+   },
+   {
+    "id": "g-1790591550691-2-230l7nizkur",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591549557-4wcyjqej8jg.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591549557-4wcyjqej8jg.jpg",
+    "alt": "Agentforce Costumes Group",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 4
+   },
+   {
+    "id": "g-1790591552039-4-m3w0eal5ekr",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591551596-lvz4jk8lyej.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591551596-lvz4jk8lyej.jpg",
+    "alt": "Keynote Audience",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 5
+   },
+   {
+    "id": "g-1790591552503-5-3qw18p1m3rn",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591552039-klrp818iofi.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591552039-klrp818iofi.jpg",
+    "alt": "Keynote Fireside Conversation",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 6
+   },
+   {
+    "id": "g-1790591552960-6-4buuie5nr42",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591552503-ticsmknrll.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591552503-ticsmknrll.jpg",
+    "alt": "Keynote Stage Greeting",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 7
+   },
+   {
+    "id": "g-1790591553820-8-yenef5kbm5",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591553370-2rvcvaj4nsr.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591553370-2rvcvaj4nsr.jpg",
+    "alt": "Become an Agentic Enterprise Screen",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 8
+   },
+   {
+    "id": "g-1790591554707-10-6m9acjf002i",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591554278-cf9tom273n.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591554278-cf9tom273n.jpg",
+    "alt": "Keynote Anthropic on Stage",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 9
+   },
+   {
+    "id": "g-1790591555276-11-s4j4ugkn9cm",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591554707-dlmtyj4o2pc.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591554707-dlmtyj4o2pc.jpg",
+    "alt": "Keynote Anthropic Enterprise",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 10
+   },
+   {
+    "id": "g-1790591555803-12-tmwz45337g",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591555276-ltk8j000q8.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591555276-ltk8j000q8.jpg",
+    "alt": "AIforce Lounge Interior",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 11
+   },
+   {
+    "id": "g-1790591556222-13-r9xdzhyid78",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591555803-gqalxhsxn46.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591555803-gqalxhsxn46.jpg",
+    "alt": "Community Cove Entrance",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 12
+   },
+   {
+    "id": "g-1790591556662-14-x2iomeioew",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591556222-1t0kxccpfk8.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591556222-1t0kxccpfk8.jpg",
+    "alt": "DF26 Welcome Desk",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 13
+   },
+   {
+    "id": "g-1790591557093-15-v91fiowk1nc",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591556662-td58k2l491.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591556662-td58k2l491.jpg",
+    "alt": "Keynote Agentforce Digital Workforce",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 14
+   },
+   {
+    "id": "g-1790591557507-16-rsheiroxmef",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591557094-j7huce23io.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591557094-j7huce23io.jpg",
+    "alt": "Keynote Agentic Revolution Platform",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 15
+   },
+   {
+    "id": "g-1790591557955-17-45d7v9hony4",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591557507-2c2ice8k3br.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591557507-2c2ice8k3br.jpg",
+    "alt": "Keynote AIforce Live Interface",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 16
+   },
+   {
+    "id": "g-1790591558360-18-bfyongltf5",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591557955-rdan8v2ltbh.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591557955-rdan8v2ltbh.jpg",
+    "alt": "Keynote Data 360",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 17
+   },
+   {
+    "id": "g-1790591558829-19-k70h6vqasks",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591558360-qnn9ysyc5dc.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591558360-qnn9ysyc5dc.jpg",
+    "alt": "Keynote Enterprise Intelligence Stack",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 18
+   },
+   {
+    "id": "g-1790591559276-20-lpxkjafmqrg",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591558830-ksy9fvolbfs.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591558830-ksy9fvolbfs.jpg",
+    "alt": "Keynote Fin Joins Agentforce",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 19
+   },
+   {
+    "id": "g-1790591559786-21-zosg95atke",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591559276-eq29dmd9p8.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591559276-eq29dmd9p8.jpg",
+    "alt": "Keynote Hey AIforce",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 20
+   },
+   {
+    "id": "g-1790591560195-22-zwax3gzdct",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591559786-oi3reoascc7.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591559786-oi3reoascc7.jpg",
+    "alt": "Keynote Interface Revolution",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 21
+   },
+   {
+    "id": "g-1790591560891-23-rfjyzpzztx",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591560195-9cd8n2hf6sf.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591560195-9cd8n2hf6sf.jpg",
+    "alt": "Keynote Introducing Claudeforce",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 22
+   },
+   {
+    "id": "g-1790591561294-24-nees10z4c3",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591560891-otp4jgx123.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591560891-otp4jgx123.jpg",
+    "alt": "Keynote Platform Architecture",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 23
+   },
+   {
+    "id": "g-1790591561745-25-yvdj6bqsuwp",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591561294-z7wy6xkwmmh.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591561294-z7wy6xkwmmh.jpg",
+    "alt": "Keynote Powered by Metadata",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 24
+   },
+   {
+    "id": "g-1790591562194-26-dw39a7wvpg",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591561745-pc0kwuxtxv9.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591561745-pc0kwuxtxv9.jpg",
+    "alt": "Keynote Pricing and Packaging",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 25
+   },
+   {
+    "id": "g-1790591562869-27-ph2mpmpgg39",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591562194-nkx6jzo7usq.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591562194-nkx6jzo7usq.jpg",
+    "alt": "Keynote Salesforce Relevance",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 26
+   },
+   {
+    "id": "g-1790591563304-28-wsia24agmcq",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591562869-m6793dmemtp.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591562869-m6793dmemtp.jpg",
+    "alt": "Keynote Ten Years of Enterprise AI",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 27
+   },
+   {
+    "id": "g-1790591563732-29-c760ruw258p",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591563304-v8snbbsii2c.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591563304-v8snbbsii2c.jpg",
+    "alt": "Main Keynote Hall",
+    "caption": "",
+    "group": "Day 1",
+    "sortOrder": 28
+   },
+   {
+    "id": "g-1790591587955-26-6dup2nao587",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591587501-fcc0oam3n18.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591587501-fcc0oam3n18.jpg",
+    "alt": "FIDE Grandmaster Garden",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 29
+   },
+   {
+    "id": "g-1790591582859-15-ck2e3roed3",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591582418-gwm1389qqjp.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591582418-gwm1389qqjp.jpg",
+    "alt": "Group on Stage",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 30
+   },
+   {
+    "id": "g-1790591575362-0-be428vdsh7c",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591574813-9xme5hgr9qh.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591574813-9xme5hgr9qh.jpg",
+    "alt": "Booth Demo Conversation",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 31
+   },
+   {
+    "id": "g-1790591579810-9-rawtwhol5ne",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591579367-m6vb4r4hvi.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591579367-m6vb4r4hvi.jpg",
+    "alt": "Team at Oracle Park",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 32
+   },
+   {
+    "id": "g-1790591577168-3-k5mtxugysw",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591576753-as7gadjkg4.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591576753-as7gadjkg4.jpg",
+    "alt": "Dreamfest Headline Performance",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 33
+   },
+   {
+    "id": "g-1790591577607-4-xdsjqdeqfm",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591577168-6oebh3s7bfp.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591577168-6oebh3s7bfp.jpg",
+    "alt": "Dreamfest Light Beam",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 34
+   },
+   {
+    "id": "g-1790591576053-1-i06jwp7gfg",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591575362-y4e7jagb8fl.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591575362-y4e7jagb8fl.jpg",
+    "alt": "Dreamfest Crowd",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 35
+   },
+   {
+    "id": "g-1790591578035-5-9pr6vh9zekk",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591577607-4wj8akolvzp.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591577607-4wj8akolvzp.jpg",
+    "alt": "Dreamfest Main Stage",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 36
+   },
+   {
+    "id": "g-1790591576753-2-8zb5ougiova",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591576054-1czjl6thto1.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591576054-1czjl6thto1.jpg",
+    "alt": "Dreamfest Drone Show Astro",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 37
+   },
+   {
+    "id": "g-1790591578879-7-0zz301c10gm",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591578471-6766mlclhsb.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591578471-6766mlclhsb.jpg",
+    "alt": "Oracle Park Sign",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 38
+   },
+   {
+    "id": "g-1790591578470-6-hs3kiwbjr8i",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591578035-vl2kdl6wyhl.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591578035-vl2kdl6wyhl.jpg",
+    "alt": "Dreamfest Music Note Sculpture",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 39
+   },
+   {
+    "id": "g-1790591579367-8-p2fk38po9y",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591578879-t3a5zjnwvbj.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591578879-t3a5zjnwvbj.jpg",
+    "alt": "Oracle Park Tower Night",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 40
+   },
+   {
+    "id": "g-1790591580510-10-4ln3i7xgreu",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591579810-5d861lo62df.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591579810-5d861lo62df.jpg",
+    "alt": "Oracle Park Arrival",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 41
+   },
+   {
+    "id": "g-1790591580966-11-sl95tn27jam",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591580510-z3mnvfkra7j.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591580510-z3mnvfkra7j.jpg",
+    "alt": "Oracle Park Entrance",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 42
+   },
+   {
+    "id": "g-1790591581502-12-g4zx3a3v3e",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591580967-wm4lr2lytkn.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591580967-wm4lr2lytkn.jpg",
+    "alt": "Team Selfie Expo",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 43
+   },
+   {
+    "id": "g-1790591581952-13-ikgmxzrgh6",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591581502-21spkyzvx3g.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591581502-21spkyzvx3g.jpg",
+    "alt": "CRM Event Platform Booth",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 44
+   },
+   {
+    "id": "g-1790591582418-14-7yfz4be2v8x",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591581952-wllu4hsgqqb.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591581952-wllu4hsgqqb.jpg",
+    "alt": "Japan Partner Booth",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 45
+   },
+   {
+    "id": "g-1790591583286-16-ezll3xlu6lv",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591582859-8fqxf833ynm.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591582859-8fqxf833ynm.jpg",
+    "alt": "Networking Portrait",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 46
+   },
+   {
+    "id": "g-1790591583763-17-q4aece5h26",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591583286-bfzaj543sq.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591583286-bfzaj543sq.jpg",
+    "alt": "Partner Conversation",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 47
+   },
+   {
+    "id": "g-1790591584197-18-3a0zh3y9skt",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591583763-bwfmthqtj16.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591583763-bwfmthqtj16.jpg",
+    "alt": "Healthcare Session Speaker",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 48
+   },
+   {
+    "id": "g-1790591584682-19-8dc4dt0zql7",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591584197-2gjfka3jggc.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591584197-2gjfka3jggc.jpg",
+    "alt": "Healthcare Session Stage",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 49
+   },
+   {
+    "id": "g-1790591585161-20-87gomad7dst",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591584683-x6fkqhglqth.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591584683-x6fkqhglqth.jpg",
+    "alt": "Agentic Government Keynote",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 50
+   },
+   {
+    "id": "g-1790591585636-21-rsiahj98bqh",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591585162-av74ck3i8mq.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591585162-av74ck3i8mq.jpg",
+    "alt": "Dreamforce Arch Street",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 51
+   },
+   {
+    "id": "g-1790591586096-22-63tauqiftor",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591585636-uftver0xzg.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591585636-uftver0xzg.jpg",
+    "alt": "With Marc Benioff",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 52
+   },
+   {
+    "id": "g-1790591587501-25-zjg0gbfxvn",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591587054-o6an41addim.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591587054-o6an41addim.jpg",
+    "alt": "Dreamforce Arch",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 53
+   },
+   {
+    "id": "g-1790591586618-23-vwov27rn0p",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591586096-bw9lg6klqyk.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591586096-bw9lg6klqyk.jpg",
+    "alt": "Outdoor Conversation",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 54
+   },
+   {
+    "id": "g-1790591587054-24-10mb0bvzhme9",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591586618-vqjesenqyhs.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591586618-vqjesenqyhs.jpg",
+    "alt": "Chess at Grandmaster Garden",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 55
+   },
+   {
+    "id": "g-1790591588386-27-xdx5jllafv",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591587955-k8i423ln8li.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591587955-k8i423ln8li.jpg",
+    "alt": "Moscone Atrium",
+    "caption": "",
+    "group": "Day 2",
+    "sortOrder": 56
+   },
+   {
+    "id": "g-1790591598590-0-e4jnb8nbc45",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591598112-3wm8acf78uc.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591598112-3wm8acf78uc.jpg",
+    "alt": "Dreamforce Astro Building Banner",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 57
+   },
+   {
+    "id": "g-1790591599005-1-bqj73o8gzi",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591598590-i0tlivedm1h.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591598590-i0tlivedm1h.jpg",
+    "alt": "Hey AI Expo Arch",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 58
+   },
+   {
+    "id": "g-1790591599441-2-quu31mpnozf",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591599005-fr6ftgemoda.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591599005-fr6ftgemoda.jpg",
+    "alt": "Get Your Data Right Expo",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 59
+   },
+   {
+    "id": "g-1790591599877-3-9j8rrr5navp",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591599441-167yi9jsujs.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591599441-167yi9jsujs.jpg",
+    "alt": "Hanging Character Installation",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 60
+   },
+   {
+    "id": "g-1790591600310-4-lw7wa1b4fgl",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591599877-nv88yelz98q.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591599877-nv88yelz98q.jpg",
+    "alt": "AIforce Moscone Exterior",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 61
+   },
+   {
+    "id": "g-1790591600756-5-t132ygrfql",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591600310-zknmw93expi.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591600310-zknmw93expi.jpg",
+    "alt": "DJ Booth",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 62
+   },
+   {
+    "id": "g-1790591601198-6-0lmnv6xcrk7d",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591600756-7bkm16iofg6.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591600756-7bkm16iofg6.jpg",
+    "alt": "AIforce Lobby Astro",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 63
+   },
+   {
+    "id": "g-1790591601629-7-qi587rpmxp9",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591601198-03j7twkki262.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591601198-03j7twkki262.jpg",
+    "alt": "Slack Keynote Stage",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 64
+   },
+   {
+    "id": "g-1790591602042-8-qngktg2umza",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591601629-xn7tu92wt2.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591601629-xn7tu92wt2.jpg",
+    "alt": "Slackforce Surfaces Demo",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 65
+   },
+   {
+    "id": "g-1790591602486-9-21hdgntxlux",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591602042-gtb004r5ura.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591602042-gtb004r5ura.jpg",
+    "alt": "Slackforce Surfaces Booth",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 66
+   },
+   {
+    "id": "g-1790591602901-10-qi6l47f4cqq",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591602486-n9gssieh85j.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591602486-n9gssieh85j.jpg",
+    "alt": "Astro Mascot",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 67
+   },
+   {
+    "id": "g-1790591603323-11-l21j1ic75q",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591602902-dgn10mq0hi.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591602902-dgn10mq0hi.jpg",
+    "alt": "Astro Topiary",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 68
+   },
+   {
+    "id": "g-1790591603797-12-ghbqfsu7uao",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591603323-zos3a9dl5go.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591603323-zos3a9dl5go.jpg",
+    "alt": "Community Mural Painting",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 69
+   },
+   {
+    "id": "g-1790591604218-13-drbjs4rf8bi",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591603797-4k2qbvkeuj2.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591603797-4k2qbvkeuj2.jpg",
+    "alt": "Community Mural Phoenix",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 70
+   },
+   {
+    "id": "g-1790591604623-14-2e4h5p2mxan",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591604218-qel3798wz6h.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591604218-qel3798wz6h.jpg",
+    "alt": "Dreamforce Arch Crowd",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 71
+   },
+   {
+    "id": "g-1790591605021-15-5ibukwv99dv",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591604623-te13co7trt.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591604623-te13co7trt.jpg",
+    "alt": "Dreamforce Topiary Fog",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 72
+   },
+   {
+    "id": "g-1790591605492-16-s7cz7qcnjop",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591605021-by4df70jkyr.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591605021-by4df70jkyr.jpg",
+    "alt": "Potting Station",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 73
+   },
+   {
+    "id": "g-1790591605919-17-1wursk6u4nd",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591605492-ygisbroe9ti.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591605492-ygisbroe9ti.jpg",
+    "alt": "Yerba Buena Street",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 74
+   },
+   {
+    "id": "g-1790591606355-18-ldo33maujm",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591605919-3p3w9rfbhg5.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591605919-3p3w9rfbhg5.jpg",
+    "alt": "AIforce Moscone Selfie",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 75
+   },
+   {
+    "id": "g-1790591606757-19-46tajjgidcy",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591606355-z3zkr38nkp.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591606355-z3zkr38nkp.jpg",
+    "alt": "Planting Activity",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 76
+   },
+   {
+    "id": "g-1790591607213-20-pwboyt4sbyo",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591606757-6e2sd9rl1kt.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591606757-6e2sd9rl1kt.jpg",
+    "alt": "Team at Dreamforce Park",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 77
+   },
+   {
+    "id": "g-1790591607651-21-nnxlgs9dcea",
+    "url": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591607213-tdi8z7j14ue.jpg",
+    "fullUrl": "https://ozuqrpwhywdmcjohkxll.supabase.co/storage/v1/object/public/blog-media/gallery/1790591607213-tdi8z7j14ue.jpg",
+    "alt": "Team on the Lawn",
+    "caption": "",
+    "group": "Day 3",
+    "sortOrder": 78
+   }
+  ],
+  "galleryAnchors": {}
  },
  {
   "slug": "cpq-to-revenue-cloud-migration",

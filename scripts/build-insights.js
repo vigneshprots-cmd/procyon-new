@@ -111,6 +111,75 @@ function cleanBody(html) {
   return { html: h, toc };
 }
 
+// ---------- Gallery-format posts: photo strips placed under the section they illustrate ----------
+// Same placement rules as the CMS front end: a group goes under the first H2 that starts with the
+// group name or matches its anchor pattern (content.galleryAnchors), else the built-in Day 1/2/3
+// patterns; groups that match no heading follow the article. Assets: /assets/css/gallery.css, /assets/js/gallery.js.
+const GALLERY_DEFAULT_ANCHORS = { 'Day 1': /actually announced|announcement|day 1/i, 'Day 2': /demos to numbers|evidence|proof|day 2/i, 'Day 3': /governance|sprawl|day 3/i };
+const VOID = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr']);
+function topLevelH2(html) {
+  const at = [];
+  let depth = 0, m;
+  const re = /<!--[\s\S]*?-->|<(\/?)([a-zA-Z][\w-]*)\b[^>]*?(\/?)>/g;
+  while ((m = re.exec(html))) {
+    if (!m[2]) continue;
+    const tag = m[2].toLowerCase();
+    if (m[1]) { depth = Math.max(0, depth - 1); continue; }
+    if (tag === 'h2' && depth === 0) at.push(m.index);
+    if (!VOID.has(tag) && !m[3]) depth++;
+  }
+  return at;
+}
+const reSafe = (s) => { try { return s ? new RegExp(s, 'i') : null; } catch (e) { return null; } };
+const galleryStrip = (group, items) => {
+  const many = items.length > 8 ? ' data-pg-collapse="8"' : '';
+  return `<section class="pgal" data-pg aria-label="${esc(group)} in pictures"${many}>
+  <div class="pgal__head"><b>${esc(group)} in pictures</b><span>${items.length} ${items.some(x => x.isVideo) ? 'photos and videos' : 'photos'}. Select one to enlarge.</span></div>
+  <ul class="pgal__grid" role="list">
+${items.map((x, i) => {
+    const thumb = x.isVideo ? (x.poster || '') : x.url;
+    const media = thumb
+      ? `<img src="${esc(thumb)}" alt="${esc(x.alt)}" loading="lazy" decoding="async" width="640" height="480">`
+      : `<video src="${esc(x.url)}#t=0.1" preload="metadata" muted playsinline aria-label="${esc(x.alt)}"></video>`;
+    return `    <li><a class="pgal__tile" href="${esc(x.fullUrl || x.url)}" data-pg-item${x.isVideo ? ' data-video' : ''}${x.poster ? ` data-poster="${esc(x.poster)}"` : ''} data-alt="${esc(x.alt)}" data-caption="${esc(x.caption)}" aria-label="Open ${x.isVideo ? 'video' : 'photo'} ${i + 1} of ${items.length}${x.alt ? ': ' + esc(x.alt) : ''}">${media}${x.isVideo ? '<span class="pgal__play" aria-hidden="true"></span>' : ''}${x.caption ? `<span class="pgal__cap">${esc(x.caption)}</span>` : ''}</a></li>`;
+  }).join('\n')}
+  </ul>
+</section>`;
+};
+function withGallery(html, p) {
+  const groups = new Map();
+  for (const x of p.gallery || []) {
+    const g = String(x.group || 'Day 1').trim() || 'Day 1';
+    if (!groups.has(g)) groups.set(g, []);
+    groups.get(g).push(x);
+  }
+  if (!groups.size) return html;
+  groups.forEach(list => list.sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0)));
+  const anchors = p.galleryAnchors || {};
+  const used = new Set();
+  const match = (heading) => {
+    for (const g of groups.keys()) {
+      if (used.has(g)) continue;
+      const byName = new RegExp('^\\s*' + g.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+') + '\\b', 'i');
+      const byAnchor = reSafe(anchors[g]);
+      if (byName.test(heading) || (byAnchor && byAnchor.test(heading)) || (GALLERY_DEFAULT_ANCHORS[g] && GALLERY_DEFAULT_ANCHORS[g].test(heading))) { used.add(g); return g; }
+    }
+    return null;
+  };
+  const cuts = topLevelH2(html);
+  const parts = [];
+  if (!cuts.length || cuts[0] > 0) parts.push(html.slice(0, cuts.length ? cuts[0] : html.length));
+  cuts.forEach((start, i) => {
+    const chunk = html.slice(start, cuts[i + 1] === undefined ? html.length : cuts[i + 1]);
+    const heading = (chunk.match(/<h2[^>]*>([\s\S]*?)<\/h2>/i) || [])[1] || '';
+    const g = match(heading.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').trim());
+    parts.push(chunk + (g ? '\n' + galleryStrip(g, groups.get(g)) + '\n' : ''));
+  });
+  for (const [g, list] of groups) if (!used.has(g)) parts.push('\n' + galleryStrip(g, list) + '\n');
+  return parts.join('');
+}
+const GALLERY_ASSETS = { css: '<link rel="stylesheet" href="/assets/css/gallery.css?v=2">', js: '<script src="/assets/js/gallery.js?v=2" defer></script>' };
+
 const cta = (o) => `<!--@cta ${JSON.stringify(o)}-->`;
 const ctaBlog = cta({ h: 'Turn the idea into <em>a written plan.</em>', p: 'A senior architect reviews the platform and the goal, then sends scope, timeline and a cost range. Free, and it stays with the client.', interest: '', kicker: 'From the blog', title: 'Brief a senior architect', pathTitle: 'Talk to an architect', pathCta: 'Book the architect call', platform: 'Salesforce or ServiceNow' });
 
@@ -175,7 +244,9 @@ ${cta({ h: 'Read enough? <em>Talk to the author.</em>', p: 'Every article comes 
 `);
 
 for (const p of blog) {
-  const { html, toc } = cleanBody(p.body_html);
+  const { html: cleaned, toc } = cleanBody(p.body_html);
+  const html = p.format === 'gallery' && (p.gallery || []).length ? withGallery(cleaned, p) : cleaned;
+  const hasGallery = html.includes(' data-pg');
   const sm = seriesOf(p.slug);
   const inSeries = sm ? sm.s.posts.map(([slug]) => slug) : [];
   const seriesRel = sm ? inSeries.slice(sm.i + 1).concat(inSeries.slice(0, sm.i).reverse()).map(slug => blog.find(x => x.slug === slug)).filter(Boolean) : [];
@@ -212,6 +283,7 @@ ${p.image ? `<div class="post__cover"><div class="wrap"><img src="${p.image.src}
     <article class="post__body" data-readbody>
       ${tocHtml ? `<details class="toc-m"><summary>On this page</summary>${tocHtml.replace(' data-toc', '')}</details>` : ''}
       ${seriesBox(p)}
+${hasGallery ? GALLERY_ASSETS.css : ''}
 ${html}
       ${(p.tags || []).length ? `<p class="post__tags">${p.tags.map(t => `<span>${esc(t)}</span>`).join('')}</p>` : ''}
       ${seriesNext(p)}
@@ -243,6 +315,7 @@ ${related.map(r => `      <a class="ins-card rv" href="/blog/${r.slug}">${r.imag
 </section>
 
 ${ctaBlog}
+${hasGallery ? GALLERY_ASSETS.js : ''}
 `);
 }
 
