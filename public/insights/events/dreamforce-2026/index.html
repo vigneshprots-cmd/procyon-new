@@ -32,9 +32,10 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
-<link rel="stylesheet" href="/assets/css/insights.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
+<link rel="stylesheet" href="/assets/css/insights.css?v=22">
 
 <script type="application/ld+json">
 {
@@ -216,7 +217,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -255,7 +256,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -264,33 +265,30 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx hx--case" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/insights/events">Events</a></li><li aria-current="page">Dreamforce 2026</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Conference &middot; Took place</p>
-        <h1 id="ph-h" class="ph__h">Dreamforce 2026</h1>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Conference &middot; Took place</p>
+        <h1 id="ph-h" class="hx__h">Dreamforce 2026</h1>
         <p class="ph__lede"><b>The world's largest AI + CRM event - meet Procyon's Salesforce leadership 1:1</b> Join Procyon's Salesforce practice at Dreamforce 2026 for private strategy sessions on Agentforce 360, Data Cloud, Service Cloud, MuleSoft and enterprise AI walk away with a working plan, not a pitch.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Other" data-kicker="Dreamforce 2026" data-title="Book a follow-up session" data-message="Event: Dreamforce 2026.&#10;Topic to follow up on: " data-track="event_hero">Book a follow-up session <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="https://www.salesforce.com/dreamforce/" target="_blank" rel="noopener">Official event site</a>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Other" data-kicker="Dreamforce 2026" data-title="Book a follow-up session" data-message="Event: Dreamforce 2026.&#10;Topic to follow up on: " data-track="event_hero">Book a follow-up session <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="https://www.salesforce.com/dreamforce/" target="_blank" rel="noopener">Official event site <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-        <div class="wcard">
-          <span class="wcard__k">Event details</span>
-          <dl class="dossier">
+      <aside class="brief" aria-label="Event details">
+          <p class="brief__k">Event details</p>
+          <dl>
             <div><dt>Dates</dt><dd>Sept 15 to 17, 2026</dd></div>
             <div><dt>Location</dt><dd>San Francisco, CA</dd></div>
             <div><dt>Venue</dt><dd>Moscone Center</dd></div>
             <div><dt>Who meets</dt><dd>CIOs, CTOs, VP Sales, VP Service, Chief Digital Officers, Salesforce Program Owners and Enterprise Architects</dd></div>
           </dl>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-interest="Other" data-kicker="Dreamforce 2026" data-title="Book a follow-up session" data-message="Event: Dreamforce 2026.&#10;Topic to follow up on: " data-track="event_card">Book a follow-up session <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">The event has passed. Sessions continue online.</p>
-        </div>
-      </div>
+          <a class="brief__go" href="#audit" data-open="audit" data-interest="Other" data-kicker="Dreamforce 2026" data-title="Book a follow-up session" data-message="Event: Dreamforce 2026.&#10;Topic to follow up on: " data-track="event_card">Book a follow-up session <i aria-hidden="true">&rarr;</i></a>
+          <p class="brief__d">The event has passed. Sessions continue online.</p>
+      </aside>
     </div>
   </div>
 </section>
@@ -461,7 +459,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

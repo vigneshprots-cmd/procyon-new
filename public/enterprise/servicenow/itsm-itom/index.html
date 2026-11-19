@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -295,7 +296,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -334,7 +335,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom" aria-current="page">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -343,173 +344,149 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/enterprise/servicenow">ServiceNow</a></li><li aria-current="page">ITSM, ITOM &amp; CMDB</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>ITSM, ITOM &amp; CMDB</p>
-        <h1 id="ph-h" class="ph__h">Incident, change and asset <em>on data the desk trusts.</em></h1>
-        <p class="ph__lede"><b>Procyon implements ServiceNow ITSM and ITOM CMDB-first.</b> Discovery and Service Graph keep configuration data current, so incidents trace to the right service, changes show their real impact and asset records match what is actually running.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="ITSM, ITOM &amp; CMDB" data-title="ITSM and CMDB scope">Scope ITSM and CMDB <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#modules">See the modules</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">ITSM, ITOM &amp; CMDB</p>
+        <h1 id="ph-h" class="hx__h">Change approvals are only as good <em>as the CMDB.</em></h1>
+        <p class="ph__lede"><b>Procyon implements ServiceNow ITSM and ITOM CMDB-first.</b> Discovery and Service Mapping keep configuration data current, so incidents route to the right support group, changes show their real impact before approval, and alerts arrive as one incident against one service. For a statewide judicial system, root cause analysis became 40 to 50% faster.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="ITSM, ITOM &amp; CMDB" data-title="ITSM and CMDB scope" data-track="sn_itsm_hero">Scope ITSM and CMDB <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#modules">See what gets built <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-      <figure class="art art--feed" aria-label="Sample deliverable: Service desk queue">
-        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Service desk queue</b><span class="art__meta"><span class="live">Live view</span></span></figcaption>
-        <div class="art__body">
-        <div class="art__kpis"><div><b>94%</b><small>P2 SLAs met</small></div><div><b>212 to 1</b><small>alerts grouped into incidents</small></div><div><b>87%</b><small>CMDB CIs with an owner</small></div></div>
-        <ul class="art__feed"><li style="--i:0"><i aria-hidden="true">INC</i><div><b>Email outage: 212 alerts, 1 incident</b><span>Event correlation</span></div><span class="chip chip--b">Correlated</span></li><li style="--i:1"><i aria-hidden="true">CHG</i><div><b>Firewall change scored low risk</b><span>Auto risk assessment</span></div><span class="chip chip--g">Approved</span></li><li style="--i:2"><i aria-hidden="true">CI</i><div><b>Orphan server matched to its owner</b><span>Discovery and service mapping</span></div><span class="chip chip--g">Fixed</span></li><li style="--i:3"><i aria-hidden="true">P1</i><div><b>VPN outage paged to network on-call</b><span>Major incident workflow</span></div><span class="chip chip--r">Escalated</span></li></ul>
-        </div>
-        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="ITSM, ITOM &amp; CMDB" data-title="ITSM and CMDB scope" data-track="hero_artifact_cta">Scope ITSM and ITOM <i aria-hidden="true">&rarr;</i></a></div>
-      </figure>
+      <aside class="brief" aria-labelledby="brief-h">
+        <p class="brief__k">The first engagement</p>
+        <p class="brief__t" id="brief-h">CMDB and process health check</p>
+        <p class="brief__d">The platform health check, pointed at the data and process design that ITSM and ITOM depend on.</p>
+        <dl>
+          <div><dt>Length</dt><dd>2 to 3 weeks</dd></div>
+          <div><dt>Looks at</dt><dd>CMDB Health scores, CSDM alignment, Discovery coverage, incident categories and change models</dd></div>
+          <div><dt>You end with</dt><dd>A target CMDB model, process gaps ranked by impact, and a rollout scope with a cost range</dd></div>
+          <div><dt>Commercials</dt><dd>Fixed scope, then a fixed SOW for the rollout</dd></div>
+        </dl>
+        <a class="brief__go" href="#audit" data-open="audit" data-interest="ServiceNow tech-debt removal" data-kicker="Discovery and CMDB" data-title="CMDB clean-up scope">Scope the CMDB review <i aria-hidden="true">&rarr;</i></a>
+      </aside>
     </div>
-    </div>
+    <dl class="hx__facts">
+      <div><dt>Root cause analysis</dt><dd>40 to 50% faster<span>For a statewide judicial system</span></dd></div>
+      <div><dt>Integration failures</dt><dd>60% fewer<span>After integrations were stabilized</span></dd></div>
+      <div><dt>Systems unified</dt><dd>10+ on one platform<span>For City of Glendale Water &amp; Power</span></dd></div>
+      <div><dt>First step</dt><dd>2 to 3 weeks<span>CMDB and process health check</span></dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Root cause analysis</dt><dd><b>40 to 50%</b>faster for a statewide judicial system</dd></div>
-        <div><dt>Integration failures</dt><dd><b>60%</b>fewer after integrations were stabilized</dd></div>
-        <div><dt>Systems unified</dt><dd><b>10+</b>on one platform for Glendale Water &amp; Power</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="ITSM, ITOM &amp; CMDB" data-title="ITSM and CMDB scope"><small>Free &middot; 30 minutes</small><b>Scope ITSM and CMDB</b><span>Modules, data and a cost range</span><i aria-hidden="true">&rarr;</i></a>
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">Most service desks have a data problem, <em>not a tool problem.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">When ITSM disappoints, the instinct is to redesign the forms or buy the next module. The cause is usually underneath: CIs that are duplicated or stale, services that were never modelled, and process designs copied from the tool the organization left.</p>
+      <p class="rv">Incident routing, change risk, event correlation and Now Assist all read the same CMDB. Fix it once and every one of them improves. Skip it and each new module inherits the errors.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>Changes approved blind</h3><p>The change advisory board reviews every change because nobody trusts the impact analysis. Routine work queues for a weekly meeting, and the risky change still gets through.<small>First move: <b>change models with risk-based approval and a standard change catalog</b></small></p></li>
+        <li class="rv"><h3>Incidents routed by guesswork</h3><p>Assignment depends on a category the caller picked, not the service affected. Tickets bounce between groups, and repeat incidents never become problem records.<small>First move: <b>route on the affected service and its support group</b></small></p></li>
+        <li class="rv"><h3>Alert storms</h3><p>Monitoring tools send thousands of events with no CI attached. Operations cannot tell which alerts threaten a business service, so major incidents are declared late.<small>First move: <b>bind alerts to CIs, then correlate by service</b></small></p></li>
+        <li class="rv"><h3>A CMDB loaded, never maintained</h3><p>A one-time import filled the CMDB at go-live. Nothing keeps it current, so it drifts from reality within months.<small>First move: <b>Discovery schedules and an owner for every CI class</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
-
-<section class="sx tool" aria-labelledby="tool-h">
-  <div class="wrap tool__in">
-    <div class="tool__copy">
-      <span class="sx__k rv">Scope builder</span>
-      <h2 id="tool-h" class="rv">Which modules are <em>in scope?</em></h2>
-      <p class="rv" data-d="1">Tick the modules. The scope, the sequence and a first estimate go straight into the brief.</p>
-      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
-    </div>
-    <div class="tool__w rv" data-d="1">
-      <div class="wcard" data-checklist>
-          <span class="wcard__k">Scope builder</span>
-          <p class="wcard__t">Which ITSM and ITOM modules are in scope?</p>
-          <div class="symp__list">
-            <button class="opt opt--check" type="button" aria-pressed="true" data-name="Incident and problem management"><i></i>Incident and problem</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Change management"><i></i>Change management</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Service catalog, Service Portal and Virtual Agent"><i></i>Catalog, portal and Virtual Agent</button>
-            <button class="opt opt--check" type="button" aria-pressed="true" data-name="Discovery and CMDB"><i></i>Discovery and CMDB</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Service Graph and IntegrationHub"><i></i>Service Graph and IntegrationHub</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Event management and AIOps"><i></i>Event management (ITOM)</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="IT asset management"><i></i>IT asset management</button>
-          </div>
-          <span class="chk__count" data-check-count aria-live="polite">2 of 7 selected</span>
-          <button class="btn btn--red btn--block" type="button" data-check-cta data-interest="ServiceNow implementation" data-kicker="ITSM, ITOM &amp; CMDB" data-title="ITSM and CMDB scope" data-prefix="Modules in scope:" data-suffix="&#10;&#10;Users and agents: &#10;Current ServiceNow version or other tool: ">Scope these modules <i aria-hidden="true">&rarr;</i></button>
-          <p class="wcard__foot">The ticked modules go straight into the brief.</p>
-        </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="sx sx--paper" id="modules" aria-labelledby="mod-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="mod-h" class="rv">Where IT loses time today, <em>and the module that wins it back.</em></h2><p class="rv" data-d="1">Pick the problem the service desk raises most often.</p></div>
+      <div><p class="k3 rv">What gets built</p><h2 id="mod-h" class="rv">Six processes, <em>designed around how IT actually works.</em></h2><p class="rv" data-d="1">Each one is configured from the out-of-box design first, then changed only where the organization has a real reason to differ.</p></div>
     </div>
-    <div class="xpl rv" data-tabs>
-    <div class="xpl__tabs" role="tablist" aria-label="ITSM and ITOM modules">
-      <button type="button" role="tab" id="itx-t0" aria-controls="itx-p0" aria-selected="true"><b>Incident and problem</b><small>The same incident comes back every week</small></button>
-      <button type="button" role="tab" id="itx-t1" aria-controls="itx-p1" aria-selected="false" tabindex="-1"><b>Change management</b><small>Changes approved without knowing the impact</small></button>
-      <button type="button" role="tab" id="itx-t2" aria-controls="itx-p2" aria-selected="false" tabindex="-1"><b>Request and self-service</b><small>Simple requests flood the service desk</small></button>
-      <button type="button" role="tab" id="itx-t3" aria-controls="itx-p3" aria-selected="false" tabindex="-1"><b>Discovery and CMDB</b><small>The CMDB is wrong half the time</small></button>
-      <button type="button" role="tab" id="itx-t4" aria-controls="itx-p4" aria-selected="false" tabindex="-1"><b>Service mapping and integration</b><small>Nobody can see what depends on what</small></button>
-      <button type="button" role="tab" id="itx-t5" aria-controls="itx-p5" aria-selected="false" tabindex="-1"><b>Event management (ITOM)</b><small>Alert storms nobody can read</small></button>
+    <div class="sit">
+      <article class="rv"><small>Restore service</small><h3>Incident &amp; major incident</h3><p>Priority from impact and urgency on the affected service, assignment to its support group, and a major incident process with a named manager and stakeholder updates.</p><p class="sit__do"><b>Starts with</b>The last quarter's P1s and how each was handled</p></article>
+      <article class="rv" data-d="1"><small>Stop repeats</small><h3>Problem management</h3><p>Repeat incidents linked to one problem record, known errors published to the desk, and root cause tracked to the CI that caused it.</p><p class="sit__do"><b>Starts with</b>The ten incidents that keep coming back</p></article>
+      <article class="rv" data-d="2"><small>Change safely</small><h3>Change &amp; release</h3><p>Standard, normal and emergency change models, risk-based approvals, impact pulled from the CMDB, and a change calendar with blackout windows the business can see.</p><p class="sit__do"><b>Starts with</b>Which changes the board could pre-approve today</p></article>
+      <article class="rv"><small>Deflect demand</small><h3>Request &amp; self-service</h3><p>A service catalog rebuilt around the requests people actually make, Service Portal or Employee Center they can navigate, and Virtual Agent for routine asks.</p><p class="sit__do"><b>Starts with</b>Retiring catalog items nobody has ordered in a year</p></article>
+      <article class="rv" data-d="1"><small>Know the estate</small><h3>Discovery, Service Mapping &amp; CMDB</h3><p>MID Servers and Discovery schedules for on-premises and cloud, Service Graph connectors for other sources, service maps for the business services that matter, all modelled to CSDM.</p><p class="sit__do"><b>Starts with</b>The five business services that cause the most outages</p></article>
+      <article class="rv" data-d="2"><small>See it first</small><h3>Event management</h3><p>Alerts from existing monitoring tools deduplicated, bound to CIs and correlated by service, with incidents raised automatically only where there is real impact.</p><p class="sit__do"><b>Starts with</b>A week of raw alerts and where they come from</p></article>
     </div>
-    <div class="xpl__panel" role="tabpanel" id="itx-p0" aria-labelledby="itx-t0">
-      <p class="xpl__pain"><small>The situation</small>Agents fix symptoms, nobody owns the root cause, and the same incidents return every week.</p>
-      <h3>Incidents resolved faster, with root cause tracked to the configuration item.</h3>
-      <ul class="xpl__gets"><li>Assignment and priority driven by the affected service</li><li>Problem records that link repeat incidents to one cause</li><li>Now Assist summaries so agents start with context</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>40 to 50%</b><span>Faster root cause analysis for a statewide judicial system</span></div>
-        
-        <div class="xpl__stack"><span>Incident</span><span>Problem</span><span>Now Assist</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Incident and problem" data-title="Incident and problem scope">Fix incident and problem <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="itx-p1" aria-labelledby="itx-t1" hidden>
-      <p class="xpl__pain"><small>The situation</small>Change boards approve requests without seeing which services depend on the change, so outages follow routine releases.</p>
-      <h3>Risk-scored changes that show their real impact before approval.</h3>
-      <ul class="xpl__gets"><li>Impact pulled from the CMDB and Service Graph</li><li>Standard changes automated, risky ones escalated</li><li>Change calendar visible to the whole business</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>Change</span><span>CMDB</span><span>Service Graph</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Change management" data-title="Change management scope">Fix change management <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="itx-p2" aria-labelledby="itx-t2" hidden>
-      <p class="xpl__pain"><small>The situation</small>Password resets and access requests consume the desk, because the portal is hard to use and the catalog is out of date.</p>
-      <h3>A catalog and portal people use, and a Virtual Agent that deflects routine requests.</h3>
-      <ul class="xpl__gets"><li>Service catalog rebuilt around the top requests</li><li>Service Portal and Employee Center that people can navigate</li><li>Virtual Agent answers for routine requests</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>Service Catalog</span><span>Service Portal</span><span>Virtual Agent</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Request and self-service" data-title="Catalog and portal scope">Rebuild the catalog <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="itx-p3" aria-labelledby="itx-t3" hidden>
-      <p class="xpl__pain"><small>The situation</small>Configuration items are duplicated, stale or missing, so every process that depends on the CMDB inherits the errors.</p>
-      <h3>A reconciled CMDB kept current automatically.</h3>
-      <ul class="xpl__gets"><li>Duplicate and orphaned CIs reconciled</li><li>Discovery schedules and MID Servers that keep data fresh</li><li>Ownership assigned for every CI class</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>Discovery</span><span>CMDB</span><span>MID Server</span><span>Health Scan</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow tech-debt removal" data-kicker="Discovery and CMDB" data-title="CMDB clean-up scope">Fix the CMDB <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="itx-p4" aria-labelledby="itx-t4" hidden>
-      <p class="xpl__pain"><small>The situation</small>Business services, applications and infrastructure are connected in reality, but not in ServiceNow, so impact is guessed.</p>
-      <h3>Service maps and integrations that show what depends on what.</h3>
-      <ul class="xpl__gets"><li>Service Graph connectors for cloud and on-premises sources</li><li>IntegrationHub flows replacing custom scripts</li><li>Integration health monitored, not discovered by outages</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>60%</b><span>Fewer integration failures for a statewide judicial system</span></div>
-        
-        <div class="xpl__stack"><span>Service Graph</span><span>IntegrationHub</span><span>TIBCO</span><span>MuleSoft</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Service mapping" data-title="Service mapping scope">Map the services <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="itx-p5" aria-labelledby="itx-t5" hidden>
-      <p class="xpl__pain"><small>The situation</small>Monitoring tools fire thousands of alerts, and the operations team cannot tell which ones threaten a business service.</p>
-      <h3>Events correlated to services, so operations sees what matters first.</h3>
-      <ul class="xpl__gets"><li>Alerts deduplicated and tied to the affected service</li><li>Incidents raised automatically for real impact</li><li>Real-time visibility across operational systems</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>10+</b><span>Systems unified with real-time alerts for Glendale Water &amp; Power</span></div>
-        
-        <div class="xpl__stack"><span>Event Management</span><span>Service Graph</span><span>AIOps</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Event management" data-title="Event management scope">Tame the alerts <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-  </div>
   </div>
 </section>
 
 <section class="sx" aria-labelledby="cmdb-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="cmdb-h" class="rv">Why the CMDB comes first, <em>every time.</em></h2><p class="rv" data-d="1">Every ITSM and ITOM process reads the CMDB. These four problems are fixed before anything is built on top.</p></div>
+      <div><p class="k3 rv">Why the CMDB comes first</p><h2 id="cmdb-h" class="rv">Measured on three scores, <em>owned by name.</em></h2><p class="rv" data-d="1">ServiceNow's CMDB Health dashboard scores completeness, correctness and compliance. Those scores, and a named owner for each class, are the acceptance criteria for the CMDB work.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="ServiceNow tech-debt removal" data-kicker="Platform health check" data-title="Free ServiceNow platform health check">Start with the CMDB audit <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="ba">
-      <div class="rv"><b>Duplicate CIs</b><p><small>Before</small>The same server appears three times, with different owners.</p><p><small>After</small>One reconciled record per CI, with identification rules.</p></div>
-      <div class="rv" data-d="1"><b>Unknown dependencies</b><p><small>Before</small>Impact of a change is a guess.</p><p><small>After</small>Service maps show what depends on what.</p></div>
-      <div class="rv" data-d="2"><b>Stale data</b><p><small>Before</small>Records describe infrastructure retired last year.</p><p><small>After</small>Discovery keeps the CMDB current on a schedule.</p></div>
-      <div class="rv" data-d="3"><b>No ownership</b><p><small>Before</small>Nobody is responsible for keeping data right.</p><p><small>After</small>An owner for every CI class, with health scores.</p></div>
+    <dl class="mods rv">
+      <div><dt>Completeness</dt><dd>Required and recommended attributes filled for each class, starting with the ones change and incident read.</dd></div>
+      <div><dt>Correctness</dt><dd>Duplicates merged, orphans resolved and stale CIs retired, so one server is one record.</dd></div>
+      <div><dt>Compliance</dt><dd>CIs audited against the expected configuration, with failures raised as tasks to the owner.</dd></div>
+      <div><dt>CSDM alignment</dt><dd>Business services, application services and technical services modelled the way the platform expects.</dd></div>
+      <div><dt>Identification and reconciliation</dt><dd>Every data source writes through identification rules, with clear precedence when two sources disagree.</dd></div>
+      <div><dt>Ownership</dt><dd>A named owner and support group for every CI class, and a health score they are accountable for.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="plan-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">How it runs</p><h2 id="plan-h" class="rv">Data first, process second, <em>cutover last.</em></h2><p class="rv" data-d="1">Rollouts from another ITSM tool follow the same order. Processes are redesigned, not copied, and data is cleaned before it is migrated.</p></div>
     </div>
+    <ol class="gates rv" style="--n:5">
+      <li><span class="gates__w">Weeks 1 to 3</span><b>Health check</b><p>CMDB scores, Discovery coverage, current process design and the old tool's data assessed.</p><em>Target model and scope signed off</em></li>
+      <li><span class="gates__w">Foundation</span><b>CMDB and Discovery</b><p>MID Servers, Discovery schedules, identification rules and CSDM classes in place before any process depends on them.</p><em>CMDB Health scores at the agreed level</em></li>
+      <li><span class="gates__w">Build</span><b>Processes</b><p>Incident, problem, change and request configured and tested against real tickets from the last quarter.</p><em>Process owners accept the design</em></li>
+      <li><span class="gates__w">Cutover</span><b>Train and switch</b><p>The service desk trained on its own scenarios, data migrated, and the old tool set to read-only.</p><em>Go-live checklist signed</em></li>
+      <li><span class="gates__w">After go-live</span><b>Hypercare</b><p>The build team watches queues, SLAs and CMDB health, and fixes what real volume exposes.</p><em>Handover to the run team</em></li>
+    </ol>
+  </div>
+</section>
+
+<section class="proof proof--page" aria-labelledby="proof-h">
+  <div class="wrap">
+    <p class="k3 k3--inv rv">Operations result</p>
+    <h2 id="proof-h" class="rv">Faster root cause, <em>fewer failures.</em></h2>
+    <article class="cs rv">
+      <div>
+        <p class="cs__who">Administrative Office of the Courts &middot; Statewide judicial system</p>
+        <h3>Six enterprise systems, one integration layer that stopped failing.</h3>
+        <p class="cs__p">Integration failures and XML errors were creating DOJ compliance risk across a statewide court system. The middleware was stabilized and governed before submissions were automated, and the operations team gained the visibility to trace failures to their source.</p>
+        <ul class="cs__built">
+          <li>TIBCO middleware stabilized across six enterprise systems</li>
+          <li>XML and XSD governance enforced</li>
+          <li>DOJ submissions automated</li>
+        </ul>
+      </div>
+      <div>
+        <table class="cs__tbl">
+          <thead><tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+          <tbody>
+            <tr><td>Integration failures</td><td>Baseline</td><td>60% fewer</td></tr>
+            <tr><td>Root cause analysis</td><td>Baseline</td><td>40 to 50% faster</td></tr>
+            <tr><td>DOJ submissions</td><td>Manual</td><td>Automated</td></tr>
+          </tbody>
+        </table>
+        <p class="cs__src">For City of Glendale Water &amp; Power, an integration hub across SCADA, OMS, CIS, PI System, AMI and energy trading put 10+ systems on one platform, with feeder alerts and 15-day MW forecasting.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sx" aria-labelledby="mig-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Commitments</p><h2 id="mig-h" class="rv">What the service desk can expect <em>on day one.</em></h2></div>
+    </div>
+    <ul class="terms rv">
+      <li><b>Out of box first.</b><span>Configuration before code, so the next family release does not undo the rollout.</span></li>
+      <li><b>Clean data in.</b><span>Records from the old tool are cleaned and mapped before migration, not after.</span></li>
+      <li><b>Trained before cutover.</b><span>Agents practise on their own scenarios, not a vendor demo.</span></li>
+      <li><b>Same team after go-live.</b><span>When something breaks months later, the team that built it answers.</span></li>
+    </ul>
   </div>
 </section>
 
@@ -680,7 +657,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

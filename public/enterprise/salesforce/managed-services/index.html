@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -303,7 +304,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -342,7 +343,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services" aria-current="page">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -351,175 +352,133 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/enterprise/salesforce">Salesforce</a></li><li aria-current="page">Managed services</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Salesforce Managed Services</p>
-        <h1 id="ph-h" class="ph__h">Go-live is day one. <em>We run every day after.</em></h1>
-        <p class="ph__lede"><b>Procyon runs Salesforce orgs on retainer.</b> Certified admins and developers handle user requests, three Salesforce releases a year, monitoring and a monthly improvement backlog, working across US, Canadian and Indian hours so the queue keeps moving overnight.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services" data-title="Salesforce managed services quote" data-track="ms_hero">Get a managed services quote <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#tiers">Compare the tiers</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Salesforce managed services</p>
+        <h1 id="ph-h" class="hx__h">An org nobody improves <em>starts decaying at go-live.</em></h1>
+        <p class="ph__lede"><b>Procyon runs Salesforce orgs on a monthly retainer, with a named team.</b> Certified admins and developers take user requests, test each of the three Salesforce releases a year in a sandbox before it lands, watch jobs and integrations, and work a monthly improvement backlog. Hubs in Novato, Toronto and Chennai keep the queue moving across time zones.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services" data-title="Salesforce managed services quote" data-track="ms_hero">Get a managed services quote <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#tiers">Compare the tiers <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-      <figure class="art art--feed" aria-label="Sample deliverable: Run team log">
-        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Run team log</b><span class="art__meta"><span class="live">Live view</span></span></figcaption>
-        <div class="art__body">
-        <div class="art__kpis"><div><b>38</b><small>requests closed this month</small></div><div><b>1.6 days</b><small>average turnaround</small></div><div><b>0</b><small>failed releases</small></div></div>
-        <ul class="art__feed"><li style="--i:0"><i aria-hidden="true">SR</i><div><b>Discount approval rule added</b><span>Sales operations request</span></div><span class="chip chip--g">Done</span></li><li style="--i:1"><i aria-hidden="true">RL</i><div><b>Seasonal release tested in full sandbox</b><span>212 regression tests</span></div><span class="chip chip--g">Passed</span></li><li style="--i:2"><i aria-hidden="true">DQ</i><div><b>1,240 duplicate leads merged</b><span>Weekly data hygiene</span></div><span class="chip chip--g">Done</span></li><li style="--i:3"><i aria-hidden="true">EN</i><div><b>Tier 2 service console layout</b><span>Enhancement backlog</span></div><span class="chip chip--b">In review</span></li></ul>
-        </div>
-        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services" data-title="Salesforce managed services quote" data-track="hero_artifact_cta">Get managed services pricing <i aria-hidden="true">&rarr;</i></a></div>
-      </figure>
+      <aside class="brief" aria-labelledby="brief-h">
+        <p class="brief__k">The first engagement</p>
+        <p class="brief__t" id="brief-h">Transition and baseline</p>
+        <p class="brief__d">The org, open tickets and integrations documented, and inherited risks flagged, before the team takes over support.</p>
+        <dl>
+          <div><dt>Length</dt><dd>30 days</dd></div>
+          <div><dt>Steps</dt><dd>Shadow, health check, take over, first backlog</dd></div>
+          <div><dt>You end with</dt><dd>A baseline of open issues, a release calendar and the first monthly improvement backlog</dd></div>
+          <div><dt>Commercials</dt><dd>Monthly retainer, no long lock-in</dd></div>
+        </dl>
+        <a class="brief__go" href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services" data-title="Partner transition plan" data-track="ms_brief">Plan the transition <i aria-hidden="true">&rarr;</i></a>
+      </aside>
     </div>
-    </div>
+    <dl class="hx__facts">
+      <div><dt>Releases covered</dt><dd>3 a year<span>Spring, Summer and Winter, tested in sandbox first</span></dd></div>
+      <div><dt>Delivery hubs</dt><dd>Novato, Toronto, Chennai<span>US, Canadian and Indian hours</span></dd></div>
+      <div><dt>Tiers</dt><dd>Run, Improve, Scale<span>each includes the one before</span></dd></div>
+      <div><dt>Commercials</dt><dd>Monthly retainer<span>quoted on users, clouds and change volume</span></dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Delivery hubs</dt><dd><b>3</b>Novato, Toronto and Chennai, across time zones</dd></div>
-        <div><dt>Releases covered a year</dt><dd><b>3</b>Spring, Summer and Winter, tested in sandbox first</dd></div>
-        <div><dt>Operational efficiency</dt><dd><b>40 to 60%</b>gains from automation and AI</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services" data-title="Salesforce managed services quote" data-track="kf_cta"><small>Written for the org</small><b>Get a managed services quote</b><span>Tier, transition plan and monthly price</span><i aria-hidden="true">&rarr;</i></a>
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">The org is never finished, <em>and Salesforce does not stand still.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">Salesforce upgrades every org three times a year, ready or not. Meanwhile the business keeps asking for fields, reports and approval changes. Without a team that owns both, the backlog grows, changes get made straight in production, and within a couple of years the org needs the audit it was built to avoid.</p>
+      <p class="rv">Managed services is the discipline that prevents that drift: every change through a sandbox, every release previewed before it lands, and a fixed share of each month spent on improvement rather than tickets.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>Changes made in production</h3><p>A quick fix for an urgent request, made directly in the live org, with no record of why. Multiply by a few hundred and nobody can explain the org.<small>First move: <b>a sandbox for every change and a documented deployment path</b></small></p></li>
+        <li class="rv"><h3>Releases nobody reads</h3><p>Each release changes behaviour somewhere, and some features switch on by default. Orgs that never test the preview find out from their users.<small>First move: <b>regression tests in a preview sandbox about a month ahead</b></small></p></li>
+        <li class="rv"><h3>A backlog that only grows</h3><p>Tickets crowd out improvement, so the requests that would save the most time never reach the top.<small>First move: <b>a monthly backlog prioritized with the business owner</b></small></p></li>
+        <li class="rv"><h3>One admin, no cover</h3><p>A single in-house admin holds the org in their head. Holidays stall the queue and a resignation becomes a rescue.<small>First move: <b>a named team, with every change and integration documented</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
-
-<section class="sx tool" aria-labelledby="tool-h">
-  <div class="wrap tool__in">
-    <div class="tool__copy">
-      <span class="sx__k rv">Find your tier</span>
-      <h2 id="tool-h" class="rv">What should a Salesforce team <em>take on?</em></h2>
-      <p class="rv" data-d="1">Pick the scope. The tier and the monthly capacity it needs are recommended on the spot.</p>
-      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
-    </div>
-    <div class="tool__w rv" data-d="1">
-      <div class="wcard" data-picker="ms-tier">
-          <span class="wcard__k">Find your tier</span>
-          <p class="wcard__t">What should a Salesforce team take on?</p>
-          <div class="opt-list" role="radiogroup" aria-label="What should a Salesforce team take on?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Run" data-s="Admin, user support, monitoring and release readiness. The org stays healthy and users get answers." data-cta="Quote the Run tier" data-interest="Managed services" data-kicker="Managed services: Run" data-title="Run tier quote" data-message="Tier of interest: Run.&#10;Number of Salesforce users: &#10;Clouds we run: "><i></i>Keep the lights on and users happy</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Improve" data-s="Everything in Run, plus a monthly backlog of automation, reporting and UX improvements." data-cta="Quote the Improve tier" data-interest="Managed services" data-kicker="Managed services: Improve" data-title="Improve tier quote" data-message="Tier of interest: Improve.&#10;Number of Salesforce users: &#10;Clouds we run: "><i></i>Clear a backlog of change requests</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Scale" data-s="Everything in Improve, plus architecture ownership, new clouds, integrations and AI agents." data-cta="Quote the Scale tier" data-interest="Managed services" data-kicker="Managed services: Scale" data-title="Scale tier quote" data-message="Tier of interest: Scale.&#10;Number of Salesforce users: &#10;Clouds we run: "><i></i>A full Salesforce team without hiring one</button>
-          </div>
-          <div class="rec" aria-live="polite"><b data-rec-b>Run</b><span data-rec-s>Admin, user support, monitoring and release readiness. The org stays healthy and users get answers.</span></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta data-track="ms_picker_cta">Quote the Run tier <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">Quotes depend on users, clouds and change volume. No long lock-in.</p>
-        </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="sx sx--paper" id="tiers" aria-labelledby="tiers-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="tiers-h" class="rv">Run, Improve or Scale. <em>Move up as the backlog grows.</em></h2><p class="rv" data-d="1">Each tier includes the one before it. Pricing depends on your users, clouds and change volume, so every quote is written for the org.</p></div>
+      <div><p class="k3 rv">Tiers</p><h2 id="tiers-h" class="rv">Run, Improve or Scale. <em>Move up as the backlog grows.</em></h2><p class="rv" data-d="1">Each tier includes the one before it. Pricing depends on users, clouds and change volume, so every quote is written for the org. Improve is the recommended start.</p></div>
     </div>
-    <div class="tiers">
-      <div class="tier rv">
-        <small>Keep it healthy</small><b>Run</b><span>A healthy org and answered users.</span>
-        <ul class="ticks">
-          <li>User support and access requests</li>
-          <li>Admin changes: fields, layouts, reports</li>
-          <li>Monitoring of jobs, integrations and limits</li>
-          <li>Release readiness three times a year</li>
-          <li>Monthly health summary</li>
-        </ul>
-        <a class="btn btn--line" href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services: Run" data-title="Run tier quote" data-message="Tier of interest: Run.">Quote Run <i aria-hidden="true">&rarr;</i></a>
-      </div>
-      <div class="tier tier--hi rv" data-d="1">
-        <small>Recommended start</small><b>Improve</b><span>Your backlog finally moves.</span>
-        <ul class="ticks">
-          <li>Everything in Run</li>
-          <li>Monthly improvement backlog with your owner</li>
-          <li>Flow automation and approval work</li>
-          <li>Dashboards and reporting for leadership</li>
-          <li>Quarterly adoption review</li>
-        </ul>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services: Improve" data-title="Improve tier quote" data-message="Tier of interest: Improve.">Quote Improve <i aria-hidden="true">&rarr;</i></a>
-      </div>
-      <div class="tier rv" data-d="2">
-        <small>A full team</small><b>Scale</b><span>A whole Salesforce team, on demand.</span>
-        <ul class="ticks">
-          <li>Everything in Improve</li>
-          <li>A named architect who owns the roadmap</li>
-          <li>New clouds and integrations</li>
-          <li>Agentforce agents and AI scoring</li>
-          <li>Apex and Lightning development</li>
-        </ul>
-        <a class="btn btn--line" href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services: Scale" data-title="Scale tier quote" data-message="Tier of interest: Scale.">Quote Scale <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
+    <table class="offers rv">
+      <thead><tr><th scope="col">Tier</th><th scope="col">Includes</th><th scope="col">What the team does</th><th scope="col">Commercials</th><th scope="col"><span class="sr">Request</span></th></tr></thead>
+      <tbody>
+        <tr><td><b>Run</b><small>Keep it healthy</small></td><td class="len" data-l="Includes">The base tier</td><td>User support and access requests, admin changes to fields, layouts and reports, monitoring of jobs, integrations and limits, release readiness three times a year and a monthly health summary</td><td class="com" data-l="Commercials">Monthly retainer</td><td class="go"><a href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services: Run" data-title="Run tier quote" data-message="Tier of interest: Run.">Quote <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Improve</b><small>Recommended start</small></td><td class="len" data-l="Includes">Everything in Run</td><td>A monthly improvement backlog with the business owner, Flow automation and approval work, dashboards and reporting for leadership, and a quarterly adoption review</td><td class="com" data-l="Commercials">Monthly retainer</td><td class="go"><a href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services: Improve" data-title="Improve tier quote" data-message="Tier of interest: Improve.">Quote <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Scale</b><small>A full Salesforce team</small></td><td class="len" data-l="Includes">Everything in Improve</td><td>A named architect who owns the roadmap, new clouds and integrations, Agentforce agents and AI scoring, and Apex and Lightning development</td><td class="com" data-l="Commercials">Monthly retainer</td><td class="go"><a href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services: Scale" data-title="Scale tier quote" data-message="Tier of interest: Scale.">Quote <i aria-hidden="true">&rarr;</i></a></td></tr>
+      </tbody>
+    </table>
+    <p class="offers__note rv">Many clients keep one internal admin and use the retainer for development, releases, architecture and cover.</p>
   </div>
 </section>
 
-<section class="sx" aria-labelledby="rhythm-h">
+<section class="sx" id="releases" aria-labelledby="rel-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="rhythm-h" class="rv">Three Salesforce releases a year. <em>Zero surprises.</em></h2><p class="rv" data-d="1">Salesforce upgrades every org in Spring, Summer and Winter. Each release is tested in a sandbox first, so new features arrive on purpose and nothing breaks quietly.</p></div>
+      <div><p class="k3 rv">Release management</p><h2 id="rel-h" class="rv">Three Salesforce releases a year, <em>each one tested before it lands.</em></h2><p class="rv" data-d="1">Spring arrives around February, Summer around June and Winter around October. The same cycle runs for each, so new features arrive on purpose and nothing breaks quietly.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services" data-title="Salesforce release readiness check">Get a release readiness check <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="rhythm rv">
-      <div class="is-prep"><small>Jan</small><span>Spring preview tested in sandbox</span></div>
-      <div class="is-rel"><small>Feb</small><span>Spring release</span></div>
-      <div><small>Mar</small><span>Adopt new features</span></div>
-      <div><small>Apr</small><span>Quarterly adoption review</span></div>
-      <div class="is-prep"><small>May</small><span>Summer preview tested in sandbox</span></div>
-      <div class="is-rel"><small>Jun</small><span>Summer release</span></div>
-      <div><small>Jul</small><span>Adopt new features</span></div>
-      <div><small>Aug</small><span>Quarterly adoption review</span></div>
-      <div class="is-prep"><small>Sep</small><span>Winter preview tested in sandbox</span></div>
-      <div class="is-rel"><small>Oct</small><span>Winter release</span></div>
-      <div><small>Nov</small><span>Adopt new features</span></div>
-      <div><small>Dec</small><span>Annual roadmap and licence review</span></div>
-    </div>
-    <p class="rhythm__key"><span><i style="background:var(--night)"></i>Salesforce release month</span><span><i style="border:1.5px dashed var(--blue)"></i>Sandbox preview and regression testing</span><span><i style="border:1px solid var(--line)"></i>Improvement and review</span></p>
+    <ol class="gates rv" style="--n:4">
+      <li><span class="gates__w">About a month before</span><b>Preview</b><p>A sandbox on the preview release, with regression tests on critical flows, Apex and every integration.</p><em>Regression report, fixes deployed</em></li>
+      <li><span class="gates__w">Before the upgrade</span><b>Review</b><p>Release notes read against this org: what changes behaviour, what switches on by default, what is worth adopting.</p><em>Adoption shortlist agreed with the owner</em></li>
+      <li><span class="gates__w">Release month</span><b>Upgrade</b><p>Production upgraded by Salesforce, followed by smoke tests and close monitoring of jobs and integrations.</p><em>Post-release check</em></li>
+      <li><span class="gates__w">The month after</span><b>Adopt</b><p>Chosen features configured and rolled out with short guidance for the users who gain from them.</p><em>New features live</em></li>
+    </ol>
   </div>
 </section>
 
-<section class="sx sx--paper" aria-labelledby="sun-h">
+<section class="sx sx--paper" aria-labelledby="see-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="sun-h" class="rv">Three hubs. <em>The queue keeps moving overnight.</em></h2><p class="rv" data-d="1">Three hubs hand work across time zones. A request logged at the end of a US day can be worked on overnight in Chennai.</p></div>
+      <div><p class="k3 rv">Reporting</p><h2 id="see-h" class="rv">What the client sees, <em>month by month.</em></h2><p class="rv" data-d="1">The retainer is measured in what changed in the org, not in hours logged.</p></div>
     </div>
-    <div class="sun rv" data-sun>
-      <div class="sun__head"><b>Live status of the three hubs</b><span>Local time in Novato, Toronto and Chennai</span></div>
-      <div class="sun__hubs">
-        <div class="hub" data-tz="America/Los_Angeles"><span class="hub__city">Novato, California</span><span class="hub__role">Headquarters</span><span class="hub__time">--:--</span><span class="hub__state">&nbsp;</span></div>
-        <div class="hub" data-tz="America/Toronto"><span class="hub__city">Toronto, Canada</span><span class="hub__role">North America delivery</span><span class="hub__time">--:--</span><span class="hub__state">&nbsp;</span></div>
-        <div class="hub" data-tz="Asia/Kolkata"><span class="hub__city">Chennai, India</span><span class="hub__role">Global delivery center</span><span class="hub__time">--:--</span><span class="hub__state">&nbsp;</span></div>
-      </div>
-      <div class="sun__band" aria-hidden="true">
-        <div class="sun__lane" data-lane="America/Los_Angeles"><em>Novato</em></div>
-        <div class="sun__lane" data-lane="America/Toronto"><em>Toronto</em></div>
-        <div class="sun__lane" data-lane="Asia/Kolkata"><em>Chennai</em></div>
-        <span class="sun__now"><i>Now</i></span>
-        <div class="sun__ticks"><span>00 UTC</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
-      </div>
+    <div class="own rv">
+      <div><b>Monthly health summary</b><span>Requests closed, open issues, failed jobs and integration errors, and limits close to their ceiling.</span></div>
+      <div><b>Improvement backlog</b><span>Prioritized each month with the business owner, with what shipped and what is next.</span></div>
+      <div><b>Release test reports</b><span>Regression results for Spring, Summer and Winter, and the features chosen for adoption.</span></div>
+      <div><b>Quarterly adoption review</b><span>Logins and usage by role, and the layouts or processes that need attention.</span></div>
+      <div><b>Annual roadmap and licence review</b><span>The next year's priorities, and seats or add-ons to change at renewal.</span></div>
+      <div><b>Change log</b><span>Every change, who asked for it and how it reached production.</span></div>
     </div>
   </div>
 </section>
 
-<section class="sx sx--night" aria-labelledby="switch-h">
+<section class="sx" aria-labelledby="sun-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="switch-h" class="rv">Change partners <em>without a gap in support.</em></h2><p class="rv" data-d="1">Already working with a partner? The handover is planned in four steps, so users never notice the switch.</p></div>
+      <div><p class="k3 rv">Where the team works</p><h2 id="sun-h" class="rv">Three hubs. <em>The queue keeps moving overnight.</em></h2><p class="rv" data-d="1">Work is handed across time zones. A request logged at the end of a US day can be worked on overnight in Chennai and ready for review the next morning.</p></div>
+    </div>
+    <div class="hubs rv" style="margin-top:0">
+      <div><b>Novato, California</b><small>Headquarters</small><p>On US Pacific time. Requests from West Coast teams are picked up the same working day.</p></div>
+      <div><b>Toronto, Canada</b><small>North America delivery</small><p>On Eastern time, covering the East Coast and Canadian working day.</p></div>
+      <div><b>Chennai, India</b><small>Global delivery center</small><p>On Indian time. Work logged at the end of the US day is picked up here overnight.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="switch-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Switching partners</p><h2 id="switch-h" class="rv">Change partners <em>without a gap in support.</em></h2><p class="rv" data-d="1">Already working with a partner? The handover runs in four steps, so users never notice the switch.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Managed services" data-kicker="Managed services" data-title="Partner transition plan">Plan a partner switch <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="steps4">
-      <div class="rv"><b>Shadow</b><span>We document your org, open tickets and integrations while the current partner is still in place.</span></div>
-      <div class="rv" data-d="1"><b>Health check</b><span>A quick audit flags risks you inherit, so nothing is a surprise later.</span></div>
-      <div class="rv" data-d="2"><b>Take over</b><span>Access, tickets and release calendar move to us on an agreed date.</span></div>
-      <div class="rv" data-d="3"><b>Improve</b><span>The first monthly backlog targets what frustrated users most.</span></div>
-    </div>
+    <ul class="terms rv">
+      <li><b>Shadow</b><span>The org, open tickets and integrations are documented while the current partner is still in place.</span></li>
+      <li><b>Health check</b><span>A quick audit flags the risks being inherited, so nothing is a surprise later.</span></li>
+      <li><b>Take over</b><span>Access, tickets and the release calendar move across on an agreed date.</span></li>
+      <li><b>Improve</b><span>The first monthly backlog targets whatever frustrated users most.</span></li>
+    </ul>
   </div>
 </section>
 
@@ -528,7 +487,6 @@
   <div class="wrap">
     <p id="clients-h" class="clients__k">Enterprise teams that have run on Procyon delivery</p>
     <div class="clients__band">
-      <div class="clients__stat"><b>200+</b><span>enterprise clients<br>since 2004</span></div>
       <div class="ticker" data-ticker>
         <ul class="ticker__track" aria-label="Clients">
         <li><img src="/assets/img/clients/cisco.webp" alt="Cisco" width="181" height="96" loading="lazy"></li>
@@ -718,7 +676,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

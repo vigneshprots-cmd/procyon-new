@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -305,7 +306,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods" aria-current="page"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -344,7 +345,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods" aria-current="page">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods" aria-current="page">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -353,228 +354,147 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Delivery pods</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Delivery pods</p>
-        <h1 id="ph-h" class="ph__h">A full delivery team, <em>accountable for the roadmap.</em></h1>
-        <p class="ph__lede"><b>A Procyon delivery pod is a cross-functional team that ships a roadmap, not a timesheet.</b> An architect, developers, a business analyst and QA work as one squad with shared accountability, on time and materials, fixed-price or managed-capacity terms, staffed from onshore, nearshore and offshore hubs.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Delivery pod scope" data-message="Roadmap the pod would own: &#10;Platform: &#10;Target start: " data-track="pods_hero">Scope a delivery pod <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#shapes">See the pod shapes</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Delivery pods</p>
+        <h1 id="ph-h" class="hx__h">A team that owns the sprint, <em>not a list of seats.</em></h1>
+        <p class="ph__lede"><b>A Procyon delivery pod is a cross-functional team that ships a roadmap, not a timesheet.</b> An architect, developers, a business analyst and QA work as one squad with shared accountability for sprint outcomes, staffed from onshore, nearshore and offshore hubs, on time and materials, fixed-price, milestone or managed-capacity terms.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Delivery pod scope" data-message="Roadmap the pod would own: &#10;Platform: &#10;Target start: " data-track="pods_hero">Scope a delivery pod <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#shapes">See the pod shapes <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-      <figure class="art art--team" aria-label="Sample deliverable: Pod: Service Cloud roadmap">
-        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Pod: Service Cloud roadmap</b><span class="art__meta">6 people, one owner</span></figcaption>
-        <div class="art__body">
-        <ul class="art__team"><li style="--i:0;--bc:var(--red)"><i aria-hidden="true">DL</i><div><b>Delivery lead</b><span>Owns the roadmap and the burn-down</span></div><span class="chip chip--g">Booked</span></li><li style="--i:1;--bc:var(--blue)"><i aria-hidden="true">SA</i><div><b>Solution architect</b><span>Design authority</span></div><span class="chip chip--g">Booked</span></li><li style="--i:2;--bc:var(--blue)"><i aria-hidden="true">DV</i><div><b>Developers, two</b><span>Apex, LWC, integration</span></div><span class="chip chip--g">Booked</span></li><li style="--i:3;--bc:var(--green)"><i aria-hidden="true">QA</i><div><b>QA and BA</b><span>Stories, tests, UAT</span></div><span class="chip chip--g">Booked</span></li></ul>
-        </div>
-        <div class="art__foot"><small>Sample pod. The real one is sized to the roadmap.</small><a href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Delivery pod scope" data-message="Roadmap the pod would own: &#10;Platform: &#10;Target start: " data-track="hero_artifact_cta">Design the pod <i aria-hidden="true">&rarr;</i></a></div>
-      </figure>
+      <aside class="brief" aria-labelledby="brief-h">
+        <p class="brief__k">The first engagement</p>
+        <p class="brief__t" id="brief-h">Pod scoping</p>
+        <p class="brief__d">A delivery lead, not a recruiter, reads the backlog and sizes a team to it.</p>
+        <dl>
+          <div><dt>Starts with</dt><dd>A free 30-minute call on the backlog, the platform and the target start</dd></div>
+          <div><dt>You end with</dt><dd>A pod shape, a rate blend across US, Canada and India, and a start date</dd></div>
+          <div><dt>Week 0</dt><dd>Backlog, roles, success criteria and the rate blend agreed in writing before sprint one</dd></div>
+          <div><dt>Scaling</dt><dd>The flex layer moves up or down with two weeks' notice</dd></div>
+        </dl>
+        <a class="brief__go" href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Delivery pod scope" data-message="Roadmap the pod would own: &#10;Platform: &#10;Target start: " data-track="pods_brief">Scope the pod <i aria-hidden="true">&rarr;</i></a>
+      </aside>
     </div>
+    <dl class="hx__facts">
+      <div><dt>Scale the pod</dt><dd>2 weeks<span>to add or release capacity</span></dd></div>
+      <div><dt>Commercial terms</dt><dd>4 models<span>time and materials, fixed-price, milestone or managed capacity</span></dd></div>
+      <div><dt>Delivery hubs</dt><dd>US, Canada, India<span>onshore, nearshore and offshore</span></dd></div>
+      <div><dt>Cadence</dt><dd>Demo every sprint<span>business review every quarter</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">Seats add hours. <em>A pod adds an owner.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">When a backlog outgrows the in-house team, the reflex is to add contractors one seat at a time. Each one needs direction, review and context from the same overloaded lead, so throughput rises far less than headcount.</p>
+      <p class="rv">A pod arrives with the roles that usually become the bottleneck already inside it: design authority, someone writing the stories, and someone testing them. The client sets priorities and accepts the work; the pod owns getting it done.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>The lead becomes the bottleneck</h3><p>Every design question and every code review queues behind one in-house architect, who stops doing architecture.<small>First move: <b>an architect inside the pod with design authority</b></small></p></li>
+        <li class="rv"><h3>Stories arrive half-written</h3><p>Developers build what the ticket says, the business meant something else, and the sprint ends in rework.<small>First move: <b>a business analyst who owns story quality</b></small></p></li>
+        <li class="rv"><h3>Testing left to the end</h3><p>QA joins in the last sprint before release, finds the defects that compound, and the date moves.<small>First move: <b>QA in the pod from sprint one</b></small></p></li>
+        <li class="rv"><h3>Accountability nobody signed</h3><p>Seats bill for hours whether or not the sprint lands. Nobody outside the client team is on the hook for the result.<small>First move: <b>sprint outcomes in the contract, on fixed-price or milestone terms</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Scale the pod</dt><dd><b>2 weeks</b>to add or release capacity</dd></div>
-        <div><dt>Commercial terms</dt><dd><b>4</b>time and materials, fixed-price, milestone or managed capacity</dd></div>
-        <div><dt>Delivery hubs</dt><dd><b>3</b>onshore US, nearshore Canada, offshore India</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Delivery pod scope" data-track="pods_kf"><small>Free &middot; 30 minutes</small><b>Scope a delivery pod</b><span>Pod shape, rate blend and start date</span><i aria-hidden="true">&rarr;</i></a>
-    </div>
-  </div>
-</section>
-
-<section class="sx tool" aria-labelledby="tool-h">
-  <div class="wrap tool__in">
-    <div class="tool__copy">
-      <span class="sx__k rv">Pod builder</span>
-      <h2 id="tool-h" class="rv">Which roadmap needs <em>a team?</em></h2>
-      <p class="rv" data-d="1">Pick the roadmap. The pod shape and the monthly run rate are recommended on the spot.</p>
-      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
-    </div>
-    <div class="tool__w rv" data-d="1">
-      <div class="wcard" data-picker="pod">
-          <span class="wcard__k">Pod builder</span>
-          <p class="wcard__t">Which roadmap needs a team?</p>
-          <div class="opt-list" role="radiogroup" aria-label="Which roadmap needs a team?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Salesforce build pod" data-s="Architect, developers, admin, business analyst and QA. Ships features, clouds and Agentforce agents sprint by sprint." data-cta="Scope a Salesforce pod" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Salesforce pod scope" data-message="Pod: Salesforce build pod.&#10;Roadmap it would own: "><i></i>Salesforce features and clouds</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="ServiceNow pod" data-s="Architect, developers, business analyst and QA. Ships ITSM, ITOM, CMDB, SecOps and GRC work." data-cta="Scope a ServiceNow pod" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="ServiceNow pod scope" data-message="Pod: ServiceNow pod.&#10;Roadmap it would own: "><i></i>ServiceNow workflows</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="AI and data pod" data-s="AI, integration and data engineers with an architect. Ships agents, integrations and unified data." data-cta="Scope an AI and data pod" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="AI and data pod scope" data-message="Pod: AI and data pod.&#10;Roadmap it would own: "><i></i>AI agents, data and integration</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Product engineering pod" data-s="Full-stack, mobile, DevOps and QA automation engineers. Ships custom applications and modernization." data-cta="Scope an engineering pod" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Engineering pod scope" data-message="Pod: product engineering pod.&#10;Roadmap it would own: "><i></i>A custom product or app</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Run pod" data-s="Managed capacity for admin, enhancements, releases and support after go-live." data-href="/enterprise/salesforce/managed-services" data-link="Compare managed services tiers" data-cta="Scope a run pod" data-interest="Managed services" data-kicker="Delivery pods" data-title="Run pod scope" data-message="Pod: run pod (managed capacity).&#10;Platform and user count: "><i></i>Running a live platform</button>
-          </div>
-          <div class="rec" aria-live="polite"><b data-rec-b>Salesforce build pod</b><span data-rec-s>Architect, developers, admin, business analyst and QA. Ships features, clouds and Agentforce agents sprint by sprint.</span><a class="arrow-link" data-rec-a href="/enterprise/salesforce/managed-services" hidden>Compare managed services tiers <i aria-hidden="true">&rarr;</i></a></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta data-track="pods_builder_cta">Scope a Salesforce pod <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">A delivery lead replies with a pod shape, rate blend and start date.</p>
-        </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="sx sx--paper" id="shapes" aria-labelledby="shapes-h">
+<section class="sx sx--paper" aria-labelledby="choose-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="shapes-h" class="rv">Five pod shapes, <em>each built for a different roadmap.</em></h2><p class="rv" data-d="1">Every pod is sized to the backlog. These are the starting shapes the delivery leads adjust from.</p></div>
+      <div><p class="k3 rv">Seat, pod or run crew</p><h2 id="choose-h" class="rv">Three ways to add capacity, <em>split by who owns the outcome.</em></h2><p class="rv" data-d="1">A pod is not always the right answer. If the in-house team already has a lead, a working process and one missing skill, a seat is cheaper.</p></div>
     </div>
-    <div class="uc">
-      <article class="agent rv" data-team="sales">
-        <div class="agent__top"><span class="agent__team">Salesforce</span><span class="agent__time">Build pod</span></div>
-        <b>Salesforce build pod</b>
-        <p>New clouds, features, automation and Agentforce agents, shipped sprint by sprint.</p>
-        <div class="agent__sys"><span>Architect</span><span>Developers</span><span>Admin</span><span>BA</span><span>QA</span></div>
-        <p class="agent__guard"><b>Best when</b>the Salesforce backlog is bigger than the in-house team.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Salesforce pod scope" data-message="Pod: Salesforce build pod.&#10;Roadmap it would own: ">Scope this pod <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="1" data-team="service">
-        <div class="agent__top"><span class="agent__team">ServiceNow</span><span class="agent__time">Build pod</span></div>
-        <b>ServiceNow pod</b>
-        <p>ITSM, ITOM, CMDB, Security Operations and GRC roadmaps, plus tech-debt removal.</p>
-        <div class="agent__sys"><span>Architect</span><span>Developers</span><span>BA</span><span>QA</span></div>
-        <p class="agent__guard"><b>Best when</b>the instance needs steady change without a long hiring cycle.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="ServiceNow pod scope" data-message="Pod: ServiceNow pod.&#10;Roadmap it would own: ">Scope this pod <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="2" data-team="ops">
-        <div class="agent__top"><span class="agent__team">AI and data</span><span class="agent__time">Build pod</span></div>
-        <b>AI and data pod</b>
-        <p>AI agents, knowledge assistants, MuleSoft integration and Data Cloud, end to end.</p>
-        <div class="agent__sys"><span>Architect</span><span>AI engineer</span><span>Integration engineer</span><span>Data engineer</span></div>
-        <p class="agent__guard"><b>Best when</b>AI use cases are queued but the data work is not staffed.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="AI and data pod scope" data-message="Pod: AI and data pod.&#10;Roadmap it would own: ">Scope this pod <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-team="sales">
-        <div class="agent__top"><span class="agent__team">Engineering</span><span class="agent__time">Build pod</span></div>
-        <b>Product engineering pod</b>
-        <p>Custom web and mobile applications, modernization and release pipelines.</p>
-        <div class="agent__sys"><span>Full-stack</span><span>Mobile</span><span>DevOps</span><span>QA automation</span></div>
-        <p class="agent__guard"><b>Best when</b>a product around the platform needs a dedicated team.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Engineering pod scope" data-message="Pod: product engineering pod.&#10;Roadmap it would own: ">Scope this pod <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="1" data-team="service">
-        <div class="agent__top"><span class="agent__team">Run</span><span class="agent__time">Managed capacity</span></div>
-        <b>Run pod</b>
-        <p>Admin, enhancements, releases and support for a live platform, with shared accountability.</p>
-        <div class="agent__sys"><span>Admins</span><span>Developers</span><span>QA</span></div>
-        <p class="agent__guard"><b>Best when</b>the platform is live and should keep improving every month.</p>
-        <a class="arrow-link" href="/enterprise/salesforce/managed-services">Compare managed services tiers <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="2" data-team="ops">
-        <div class="agent__top"><span class="agent__team">Custom</span><span class="agent__time">Any mix</span></div>
-        <b>A pod built around the backlog</b>
-        <p>Mix platform specialists, engineers and project leadership into one squad.</p>
-        <div class="agent__sys"><span>Any role</span><span>Any hub</span></div>
-        <p class="agent__guard"><b>Best when</b>the roadmap crosses more than one platform.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Custom pod scope" data-message="Pod: custom mix.&#10;Roles and roadmap: ">Scope a custom pod <i aria-hidden="true">&rarr;</i></a>
-      </article>
+    <div class="sit">
+      <article class="rv"><small>By the seat</small><h3>Staff augmentation</h3><p>People join the client team and the client directs the work. Fills a specific skill gap on time and materials, with a shortlist in 72 hours and a replacement guarantee.</p><p class="sit__do"><b>Right when</b>The team has a lead and a process, and is short of one or two skills</p><a href="/services/staff-augmentation">Staff augmentation <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="1"><small>By the team</small><h3>Delivery pod</h3><p>Architect, developers, BA and QA together, sized to the roadmap, owning sprint outcomes with shared accountability. Time and materials, fixed-price or milestone, scaled within two weeks.</p><p class="sit__do"><b>Right when</b>The backlog is bigger than the team, and the in-house lead is already the constraint</p><a href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Delivery pod scope">Scope a delivery pod <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="2"><small>As the run crew</small><h3>Managed services</h3><p>The platform runs on a retainer with a monthly improvement backlog: admin, releases and support, the three Salesforce releases a year covered, in Run, Improve or Scale tiers.</p><p class="sit__do"><b>Right when</b>The platform is live and should keep improving every month</p><a href="/enterprise/salesforce/managed-services">Managed services <i aria-hidden="true">&rarr;</i></a></article>
     </div>
   </div>
 </section>
 
-<section class="sx" aria-labelledby="choose-h">
+<section class="sx" id="shapes" aria-labelledby="shapes-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="choose-h" class="rv">By the seat, by the team, <em>or as the run crew.</em></h2><p class="rv" data-d="1">Three ways to add capacity. The difference is who owns the outcome.</p></div>
+      <div><p class="k3 rv">Pod shapes</p><h2 id="shapes-h" class="rv">Six starting shapes, <em>each sized to a different roadmap.</em></h2><p class="rv" data-d="1">Every pod is sized to the backlog. These are the shapes delivery leads adjust from.</p></div>
     </div>
-    <div class="tiers">
-      <div class="tier rv">
-        <small>By the seat</small><b>Staff augmentation</b><span>People join the client team and the client directs the work.</span>
-        <ul class="ticks">
-          <li>Fills specific skill gaps</li>
-          <li>Shortlist in 72 hours</li>
-          <li>Time and materials</li>
-          <li>Replacement guarantee</li>
-        </ul>
-        <a class="arrow-link" href="/services/staff-augmentation">See staff augmentation <i aria-hidden="true">&rarr;</i></a>
-      </div>
-      <div class="tier tier--hi rv" data-d="1">
-        <small>By the team</small><b>Delivery pod</b><span>A squad that owns sprint outcomes with shared accountability.</span>
-        <ul class="ticks">
-          <li>Architect, developers, BA and QA together</li>
-          <li>Sized to the roadmap</li>
-          <li>Time and materials, fixed-price or milestone</li>
-          <li>Scale within two weeks</li>
-        </ul>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Delivery pod scope">Scope a delivery pod <i aria-hidden="true">&rarr;</i></a>
-      </div>
-      <div class="tier rv" data-d="2">
-        <small>As the run crew</small><b>Managed services</b><span>The platform runs on a retainer with a monthly improvement backlog.</span>
-        <ul class="ticks">
-          <li>Admin, releases and support</li>
-          <li>Three Salesforce releases a year covered</li>
-          <li>Run, Improve or Scale tiers</li>
-          <li>Managed capacity terms</li>
-        </ul>
-        <a class="arrow-link" href="/enterprise/salesforce/managed-services">See managed services <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
+    <dl class="mods rv">
+      <div><dt>Salesforce build pod</dt><dd>Architect, developers, admin, BA and QA. New clouds, features, automation and Agentforce agents, sprint by sprint. Best when the Salesforce backlog is bigger than the in-house team.</dd></div>
+      <div><dt>ServiceNow pod</dt><dd>Architect, developers, BA and QA for ITSM, ITOM, CMDB, Security Operations and GRC roadmaps, plus tech-debt removal. Best when the instance needs steady change without a long hiring cycle.</dd></div>
+      <div><dt>AI and data pod</dt><dd>Architect with AI, integration and data engineers. Agents, knowledge assistants, MuleSoft integration and Data Cloud. Best when AI use cases are queued but the data work is not staffed.</dd></div>
+      <div><dt>Product engineering pod</dt><dd>Full-stack, mobile, DevOps and QA automation engineers for custom applications, modernization and release pipelines around the platform.</dd></div>
+      <div><dt>Run pod</dt><dd>Admins, developers and QA on managed capacity for enhancements, releases and support after go-live, with shared accountability.</dd></div>
+      <div><dt>Custom pod</dt><dd>Platform specialists, engineers and project leadership mixed into one squad, for a roadmap that crosses more than one platform.</dd></div>
+    </dl>
   </div>
 </section>
 
 <section class="sx sx--paper" aria-labelledby="rhythm-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="rhythm-h" class="rv">A pod's operating rhythm, <em>agreed before sprint one.</em></h2><p class="rv" data-d="1">The same cadence on every pod, so progress is visible without chasing it.</p></div>
+      <div><p class="k3 rv">Operating rhythm</p><h2 id="rhythm-h" class="rv">A pod's cadence, <em>agreed before sprint one.</em></h2><p class="rv" data-d="1">The same rhythm on every pod, so progress is visible without chasing it.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Delivery pods" data-title="Delivery pod scope">Start a pod <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="days">
-      <div class="rv"><small>Week 0</small><b>Roadmap and scorecards</b><span>Backlog, roles, success criteria and the rate blend, in writing.</span></div>
-      <div class="rv" data-d="1"><small>Every sprint</small><b>Demo and backlog review</b><span>Working software shown to the client owner, priorities reset.</span></div>
-      <div class="rv" data-d="2"><small>Every month</small><b>Capacity check</b><span>Scale the flex layer up or down, with two weeks' notice.</span></div>
-      <div class="rv" data-d="3"><small>Every quarter</small><b>Business review</b><span>Outcomes, performance and next-quarter roadmap.</span></div>
+    <ol class="gates rv" style="--n:4">
+      <li><span class="gates__w">Week 0</span><b>Roadmap and scorecards</b><p>Backlog, roles, success criteria and the rate blend, in writing.</p><em>Pod charter signed</em></li>
+      <li><span class="gates__w">Every sprint</span><b>Demo and backlog review</b><p>Working software shown to the client owner, and priorities reset for the next sprint.</p><em>Sprint accepted by the client owner</em></li>
+      <li><span class="gates__w">Every month</span><b>Capacity check</b><p>The flex layer scaled up or down, with two weeks' notice.</p><em>Next month's capacity confirmed</em></li>
+      <li><span class="gates__w">Every quarter</span><b>Business review</b><p>Outcomes, performance and the next quarter's roadmap.</p><em>Next-quarter roadmap agreed</em></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sx" aria-labelledby="terms-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Commercials</p><h2 id="terms-h" class="rv">Four ways to contract a pod, <em>picked to fit the backlog.</em></h2><p class="rv" data-d="1">Onshore, nearshore and offshore blends at predictable rates on every model.</p></div>
+      <a class="sx__go rv" href="/talent/engagement-models">Compare engagement models <i aria-hidden="true">&rarr;</i></a>
     </div>
+    <ul class="terms rv">
+      <li><b>Time and materials</b><span>Agreed role rates, priorities set by the client owner. Fits a backlog that is still being shaped.</span></li>
+      <li><b>Fixed-price pod</b><span>A defined scope for a set price, with change control. Fits a release whose content is already clear.</span></li>
+      <li><b>Milestone-based</b><span>Payment released as each signed deliverable lands. Fits a fixed budget with detail still to settle.</span></li>
+      <li><b>Managed capacity</b><span>A standing pod on recurring terms with shared accountability. Fits a roadmap that keeps growing.</span></li>
+    </ul>
   </div>
 </section>
 
 <section class="proof proof--page" aria-labelledby="proof-h">
   <div class="wrap">
+    <p class="k3 k3--inv rv">Client result</p>
     <h2 id="proof-h" class="rv">What one Procyon team <em>changed.</em></h2>
-    <article class="case rv" data-case>
-      <header class="case__head">
-        <div>
-          <p class="case__who">Regional health system</p>
-          <h3>Patients waited two days for an answer. Now most questions never need a person.</h3>
-        </div>
-        <div class="toggle" role="tablist" aria-label="Before and after">
-          <span class="toggle__thumb" aria-hidden="true"></span>
-          <button role="tab" aria-selected="true" data-state="before">Before</button>
-          <button role="tab" aria-selected="false" data-state="after">After Procyon</button>
-        </div>
-      </header>
-
-      <div class="case__grid">
-        <div class="case__nums-wrap">
-          <dl class="case__nums case__nums--before">
-            <div><dt>48 hrs</dt><dd>average patient response</dd></div>
-            <div><dt>3</dt><dd>disconnected record systems</dd></div>
-            <div><dt>30%+</dt><dd>of staff time lost to admin</dd></div>
-            <div><dt>Manual</dt><dd>intake for every request</dd></div>
-          </dl>
-          <dl class="case__nums case__nums--after">
-            <div><dt><span data-count="50">50</span>%</dt><dd>faster patient response</dd></div>
-            <div><dt><span data-count="60">60</span>%</dt><dd>of requests resolved by AI agents</dd></div>
-            <div><dt>+<span data-count="28">28</span></dt><dd>points in patient satisfaction</dd></div>
-            <div><dt><span data-count="35">35</span>%</dt><dd>less administrative work</dd></div>
-          </dl>
-        </div>
-        <div class="case__built">
-          <p class="case__k">What we built</p>
-          <ul>
-            <li>One patient identity on Health Cloud and Data Cloud</li>
-            <li>Agentforce agents on tier-1 patient queries</li>
-            <li>A knowledge assistant for clinical staff</li>
-            <li>Headless APIs feeding the patient app</li>
-          </ul>
-          <a class="arrow-link arrow-link--inv" href="/case-studies">Read the full story <i aria-hidden="true">&rarr;</i></a>
-        </div>
+    <article class="cs rv">
+      <div>
+        <p class="cs__who">Regional health system &middot; Health Cloud, Data Cloud, Agentforce</p>
+        <h3>Patients waited two days for an answer. Now most questions never need a person.</h3>
+        <p class="cs__p">Patient records sat in three systems, every request was keyed in by hand, and staff spent close to a third of their time on admin. The program joined the records first, then put agents on the questions the data could answer.</p>
+        <ul class="cs__built">
+          <li>One patient identity on Health Cloud and Data Cloud</li>
+          <li>Agentforce agents on tier-1 patient queries</li>
+          <li>A knowledge assistant for clinical staff</li>
+          <li>Headless APIs feeding the patient app</li>
+        </ul>
+      </div>
+      <div>
+        <table class="cs__tbl">
+          <thead><tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+          <tbody>
+            <tr><td>Patient response time</td><td>48 hours</td><td>50% faster</td></tr>
+            <tr><td>Requests resolved without staff</td><td>None</td><td>60%</td></tr>
+            <tr><td>Patient satisfaction</td><td>Baseline</td><td>+28 points</td></tr>
+            <tr><td>Administrative workload</td><td>30%+ of staff time</td><td>35% lower</td></tr>
+          </tbody>
+        </table>
+        <p class="cs__src">Measured by the client against the pre-program baseline.</p>
+        <a class="arrow-link arrow-link--inv cs__go" href="/case-studies">Read more client stories <i aria-hidden="true">&rarr;</i></a>
       </div>
     </article>
   </div>
@@ -746,7 +666,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

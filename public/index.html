@@ -31,7 +31,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -200,7 +202,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -239,7 +241,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -250,53 +252,35 @@
 <main id="main">
 
 <!-- ================= HERO ================= -->
-<section class="hero" aria-labelledby="hero-h" data-hero>
-  <div class="wrap hero__grid">
-    <div class="hero__copy">
-      <p class="pill"><span class="pill__dot"></span>Enterprise solution delivery &middot; Since 2004</p>
-      <h1 id="hero-h" class="hero__h">
-        <span class="ln"><span>Run the business.</span></span>
-        <span class="ln"><span class="grad-text">Not the software.</span></span>
-      </h1>
-      <p class="hero__sub">Procyon is the enterprise solution delivery partner behind 200+ companies. We engineer your customer, service and data platforms, then put AI agents to work inside them.</p>
-
-      <div class="move">
-        <div class="hero__cta">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="AI agents" data-hero-cta data-track="hero_plan_cta"><span data-plan-cta>Get the AI agent plan</span> <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#proof" data-track="hero_results">See client results</a>
+<section class="hx hx--home" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Salesforce and ServiceNow partner &middot; Since 2004</p>
+        <h1 id="hero-h" class="hx__h">Enterprise platforms that pay back <em>what they cost.</em></h1>
+        <p class="hx__lede">Procyon designs, fixes and runs Salesforce and ServiceNow for enterprises in healthcare, financial services, the public sector and high tech. The architect who scopes the work stays through go-live, and AI agents go in only where the data can carry them.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-hero-cta data-track="hero_plan_cta">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#proof" data-track="hero_results">See client results <i aria-hidden="true">&rarr;</i></a>
         </div>
-        <p class="plan__note">A 90-day plan written by a senior architect, free. Takes 30 seconds to request.</p>
-
-        <div class="plat" aria-label="Platforms">
-          <a class="plat__c plat__c--sf" href="/enterprise/salesforce" data-track="hero_platform_sf"><small>Salesforce</small><b>Implement, rescue, run</b><span>Agentforce, Data Cloud, managed services</span><i aria-hidden="true">&rarr;</i></a>
-          <a class="plat__c plat__c--sn" href="/enterprise/servicenow" data-track="hero_platform_sn"><small>ServiceNow</small><b>Audit, build, run</b><span>ITSM, Now Assist, SecOps and GRC</span><i aria-hidden="true">&rarr;</i></a>
-        </div>
-        <p class="creds"><span>Salesforce Consulting Partner</span><span>ServiceNow Partner</span><span>ISO 27001</span><span>SOC 2 Type II</span><span>WBENC &middot; NMSDC</span></p>
       </div>
-    </div>
-
-    <div class="result" data-result>
-      <img class="result__mark" src="/favicon.svg" alt="" width="560" height="560" aria-hidden="true">
-      <figure class="rcard">
-        <figcaption class="rcard__head">
-          <img src="/favicon.svg" alt="" width="36" height="36">
-          <span><b>Client result</b><span data-orb-src>Regional health system &middot; Agentforce + Data Cloud</span></span>
-        </figcaption>
-        <div class="move__opts" role="radiogroup" aria-label="Show the client result for">
-          <button type="button" role="radio" aria-checked="true" data-o="0"><i></i>AI agents</button>
-          <button type="button" role="radio" aria-checked="false" data-o="1"><i></i>Customer service</button>
-          <button type="button" role="radio" aria-checked="false" data-o="2"><i></i>Back office</button>
-          <button type="button" role="radio" aria-checked="false" data-o="3"><i></i>Delivery speed</button>
-        </div>
-        <p class="rcard__num"><b><span data-orb-num>60</span>%</b><span data-orb-cap>of patient requests resolved by AI agents</span></p>
-        <div class="waffle" data-waffle role="img" aria-label="60 of every 100 patient requests resolved by AI agents"></div>
-        <ul class="rcard__legend">
-          <li class="is-on"><i></i><span data-leg-on>Resolved by AI agents</span></li>
-          <li><i></i><span data-leg-off>Still needs a person</span></li>
-          <li class="rcard__unit" data-leg-unit>1 dot = 1 in 100 requests</li>
+      <aside class="calls" aria-labelledby="calls-h">
+        <p class="calls__k" id="calls-h">Where clients usually come in</p>
+        <ul>
+          <li><a href="/enterprise/salesforce/implementation" data-track="hero_call_impl"><b>A first rollout or a new cloud</b><span>Sales, Service and Revenue Cloud on fixed-scope starters</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/salesforce/org-audit" data-track="hero_call_rescue"><b>A Salesforce org that has drifted</b><span>Audit eight areas, stabilize the worst in 30 days</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/servicenow/platform-audit" data-track="hero_call_sn"><b>A ServiceNow instance that fights every upgrade</b><span>Health check in 2 to 3 weeks, tech-debt removal in 8</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/salesforce/agentforce" data-track="hero_call_ai"><b>AI agents that never left the pilot</b><span>Agentforce and Now Assist in production, on governed data</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/salesforce/managed-services" data-track="hero_call_run"><b>A live platform with no one to run it</b><span>Admin, releases and improvements on a monthly retainer</span><i aria-hidden="true">&rarr;</i></a></li>
         </ul>
-      </figure>
+      </aside>
     </div>
+    <dl class="hx__facts">
+      <div><dt>Founded</dt><dd>2004<span>Novato, California</span></dd></div>
+      <div><dt>Clients</dt><dd>200+ enterprises<span>Across the US, Canada and India</span></dd></div>
+      <div><dt>Partnerships</dt><dd>Salesforce &middot; ServiceNow<span>Consulting and implementation partner</span></dd></div>
+      <div><dt>Certified</dt><dd>ISO 27001 &middot; ISO 9001<span>HIPAA-compliant delivery</span></dd></div>
+    </dl>
   </div>
 </section>
 
@@ -305,7 +289,6 @@
   <div class="wrap">
     <p id="clients-h" class="clients__k">Enterprise teams that have run on Procyon delivery</p>
     <div class="clients__band">
-      <div class="clients__stat"><b>200+</b><span>enterprise clients<br>since 2004</span></div>
       <div class="ticker" data-ticker>
         <ul class="ticker__track" aria-label="Clients">
         <li><img src="/assets/img/clients/cisco.webp" alt="Cisco" width="181" height="96" loading="lazy"></li>
@@ -326,282 +309,119 @@
     </div>
   </div>
 </section>
-<!-- ================= THE GAP ================= -->
-<section class="gap" aria-labelledby="gap-h">
-  <div class="wrap">
-    <div class="gap__top">
-      <h2 id="gap-h" class="rv">You paid for all of it.<br><em>Your teams use about a third.</em></h2>
-      <p class="gap__lede rv" data-d="1">The typical enterprise platform we audit, Salesforce or ServiceNow, runs at 30 to 40% of what was licensed. The rest leaks out in three places. Put AI on top without fixing them and the leak only gets faster.</p>
+<!-- ================= POV ================= -->
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">You paid for all of it. <em>Teams use about a third.</em></h2>
     </div>
-
-    <div class="meter rv" data-meter role="img" aria-label="Typical platform utilization: about 35 percent in use. The other 65 percent is lost to bad data, brittle integrations and shadow work.">
-      <div class="meter__labels">
-        <span class="meter__used"><b data-count="35">0</b>% <em>working for you</em></span>
-        <span class="meter__paid">100% <em>paid for</em></span>
-      </div>
-      <div class="meter__track">
-        <div class="meter__fill"></div>
-        <div class="meter__lost"><span>Bad data</span><span>Brittle integrations</span><span>Shadow work</span></div>
-      </div>
-    </div>
-
-    <div class="leaks">
-      <div class="leaks__cta rv">
-        <b>Where does your platform sit?</b>
-        <a class="btn btn--ink" href="#audit" data-open="score" data-track="gap_readiness">Check AI readiness <i aria-hidden="true">&rarr;</i></a>
-        <span>Six questions, two minutes. No email needed to see the result.</span>
-      </div>
-      <article class="leak rv" data-d="1">
-        <h3>Data nobody trusts</h3>
-        <p>Duplicates and stale fields. AI agents trained on them give confident, wrong answers.</p>
-      </article>
-      <article class="leak rv" data-d="2">
-        <h3>Integrations held together with tape</h3>
-        <p>Every upgrade breaks a script someone wrote years ago and nobody documented.</p>
-      </article>
-      <article class="leak rv" data-d="3">
-        <h3>Work that happens around the platform</h3>
-        <p>Teams rebuild in spreadsheets what the system already does, because it is faster than asking.</p>
-      </article>
+    <div class="pov__r">
+      <p class="rv">The typical Salesforce or ServiceNow estate we audit runs at 30 to 40% of what was licensed. The software is rarely the reason. The gap opens in three places, and AI agents on top make it wider, because an agent acts on whatever the data says.</p>
+      <p class="rv">So every engagement starts by measuring those three places, and the plan is written against what the measurement finds, not against a product roadmap.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>Data nobody trusts</h3><p>Duplicate accounts, stale fields and records with no owner. Reps keep a private spreadsheet, managers stop believing the forecast, and agents give confident, wrong answers.<small>What we measure: <b>duplicate rate, field fill rate, record ownership</b></small></p></li>
+        <li class="rv"><h3>Integrations nobody owns</h3><p>Point-to-point scripts written years ago and never documented. They break at every release and every volume spike, and the fix depends on one person.<small>What we measure: <b>interface inventory, failure rate, an owner per interface</b></small></p></li>
+        <li class="rv"><h3>Work done around the platform</h3><p>Approvals in email and trackers in spreadsheets, because the configured process is slower than the workaround. The licence is paid for and the work happens somewhere else.<small>What we measure: <b>adoption by role, shadow trackers, process cycle time</b></small></p></li>
+      </ul>
+      <div class="hx__ctas rv"><a class="hx__link" href="#audit" data-open="score" data-track="gap_readiness">Run the two-minute readiness check <i aria-hidden="true">&rarr;</i></a></div>
     </div>
   </div>
 </section>
 
-<!-- ================= THE ENGINE (WHAT WE DO) ================= -->
-<section class="engine" id="what-we-do" aria-labelledby="engine-h">
+<!-- ================= PRACTICES ================= -->
+<section class="sx sx--paper" id="what-we-do" aria-labelledby="prac-h">
   <div class="wrap">
-    <div class="engine__head">
-      <h2 id="engine-h" class="rv">Six layers. One engine.<br><em>One accountable team.</em></h2>
-      <p class="rv" data-d="1">CRM, IT service management, AI agents, data and custom engineering usually sit with five different vendors. We deliver all of it as one digital transformation program. Pick a layer.</p>
+    <div class="sx__head">
+      <div><p class="k3 rv">Practices</p><h2 id="prac-h" class="rv">Two platforms, <em>one accountable team.</em></h2><p class="rv" data-d="1">Salesforce runs how a company sells and serves. ServiceNow runs how it operates and stays compliant. Most clients run both, and the hardest problems sit where the two meet.</p></div>
     </div>
-
-    <div class="stack" data-stack>
-      <div class="stack__bus" aria-hidden="true"><i></i><i></i><i></i></div>
-
-      <button class="plate is-active" id="pl-1" aria-controls="ly-1" aria-expanded="true">
-        <span class="plate__k">Salesforce</span><span class="plate__t">Customer engine</span><span class="plate__d">Sell, serve and bill from one record</span>
-      </button>
-      <div class="layer is-active" id="ly-1" role="region" aria-labelledby="pl-1">
-        <h3>Sales, service and revenue on one customer record, with agents handling the first touch.</h3>
-        <ul class="caps">
-          <li><a href="/enterprise/salesforce/implementation">Sales Cloud</a></li>
-          <li><a href="/enterprise/salesforce/implementation">Service Cloud &amp; Field Service</a></li>
-          <li><a href="/enterprise/salesforce/implementation">Revenue Cloud &amp; CPQ</a></li>
-          <li><a href="/enterprise/salesforce/data-cloud">Data Cloud</a></li>
-          <li><a href="/enterprise/salesforce/implementation">Experience Cloud</a></li>
-          <li><a href="/enterprise/salesforce/agentforce">Agentforce</a></li>
-          <li><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a></li>
-          <li><a href="/enterprise/salesforce/managed-services">Managed services</a></li>
+    <div class="prac rv">
+      <div class="prac__col">
+        <h3><a href="/enterprise/salesforce">Salesforce</a> <small>Consulting partner</small></h3>
+        <p>Sales, Service, Revenue and Data Cloud, implemented on fixed-scope starters, and rescued when an org has drifted.</p>
+        <ul class="prac__list">
+          <li><a href="/enterprise/salesforce/implementation"><b>Implementation &amp; rollout</b><span>Sales Cloud live in 6 weeks, Service Cloud in 8</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/salesforce/agentforce"><b>Agentforce</b><span>First agents in production in under 4 weeks</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/salesforce/data-cloud"><b>Data Cloud &amp; integration</b><span>One customer record across ERP, web and service</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/salesforce/org-audit"><b>Org audit &amp; rescue</b><span>Eight areas audited, the worst fixed in 30 days</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/salesforce/managed-services"><b>Managed services</b><span>Admin, releases and improvement on retainer</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/products/ranger-fusion"><b>Ranger Fusion ERP</b><span>Finance, inventory, projects and HR on Salesforce</span><i aria-hidden="true">&rarr;</i></a></li>
         </ul>
-        <a class="fast" href="#audit" data-interest="AI agents" data-track="layer_sf">
-          <span class="fast__k">Fastest way in</span>
-          <span class="fast__t">&lt; 4 weeks</span>
-          <b>Agent Launch Kit</b>
-          <span class="fast__d">First Agentforce agents live in production, on your data.</span>
-          <span class="fast__go">Plan the first agent <i aria-hidden="true">&rarr;</i></span>
-        </a>
-        <a class="arrow-link" href="/enterprise/salesforce">Everything we do on Salesforce <i aria-hidden="true">&rarr;</i></a>
       </div>
-
-      <button class="plate" id="pl-2" aria-controls="ly-2" aria-expanded="false">
-        <span class="plate__k">ServiceNow</span><span class="plate__t">Operations engine</span><span class="plate__d">Run IT, security and risk on clean data</span>
-      </button>
-      <div class="layer" id="ly-2" role="region" aria-labelledby="pl-2">
-        <h3>IT, security and risk workflows on a CMDB you can actually trust. We audit before we build.</h3>
-        <ul class="caps">
-          <li><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a></li>
-          <li><a href="/enterprise/servicenow/itsm-itom">ITSM</a></li>
-          <li><a href="/enterprise/servicenow/itsm-itom">ITOM, Discovery &amp; CMDB</a></li>
-          <li><a href="/enterprise/servicenow/security-risk">Security Operations</a></li>
-          <li><a href="/enterprise/servicenow/security-risk">Governance, risk &amp; compliance</a></li>
-          <li><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a></li>
-          <li><a href="/enterprise/servicenow/managed-services">Managed services</a></li>
+      <div class="prac__col">
+        <h3><a href="/enterprise/servicenow">ServiceNow</a> <small>Implementation partner</small></h3>
+        <p>ITSM, ITOM, security and risk on a CMDB the team trusts. The instance is audited before anything new is built on it.</p>
+        <ul class="prac__list">
+          <li><a href="/enterprise/servicenow/platform-audit"><b>Platform audit &amp; tech-debt removal</b><span>Health check in 2 to 3 weeks, clean-up in 8</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/servicenow/itsm-itom"><b>ITSM, ITOM &amp; CMDB</b><span>Incident, change and assets on trusted data</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/servicenow/security-risk"><b>Security &amp; risk</b><span>SecOps and GRC for HIPAA, NIST and FedRAMP</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/servicenow/now-assist"><b>Now Assist &amp; AI agents</b><span>Generative AI, governed from the first use case</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/enterprise/servicenow/managed-services"><b>Managed services</b><span>A run team for the instance, without the hiring</span><i aria-hidden="true">&rarr;</i></a></li>
         </ul>
-        <a class="fast fast--sn" href="#audit" data-interest="ServiceNow" data-track="layer_sn">
-          <span class="fast__k">Fastest way in</span>
-          <span class="fast__t">8 weeks</span>
-          <b>Tech-debt removal</b>
-          <span class="fast__d">Audit first, then a structured clean-up of scripts, CMDB and integrations.</span>
-          <span class="fast__go">Book an instance audit <i aria-hidden="true">&rarr;</i></span>
-        </a>
-        <a class="arrow-link" href="/enterprise/servicenow">Everything we do on ServiceNow <i aria-hidden="true">&rarr;</i></a>
       </div>
-
-      <button class="plate" id="pl-3" aria-controls="ly-3" aria-expanded="false">
-        <span class="plate__k">AI agents</span><span class="plate__t">Intelligence</span><span class="plate__d">Agents that act, not chatbots that guess</span>
-      </button>
-      <div class="layer" id="ly-3" role="region" aria-labelledby="pl-3">
-        <h3>Agents that do real work, grounded in your data and governed before they ship.</h3>
-        <ul class="caps">
-          <li><a href="/enterprise/salesforce/agentforce">Agentforce</a></li>
-          <li><a href="/enterprise/servicenow/now-assist">Now Assist</a></li>
-          <li><a href="/ai-data/knowledge-assistants">Knowledge assistants (RAG)</a></li>
-          <li><a href="/services/ai-ml">Predictive scoring &amp; next best action</a></li>
-          <li><a href="/services/ai-ml">OpenAI, Anthropic Claude, Vertex AI</a></li>
-          <li><a href="/services/ai-ml">Human-in-the-loop controls</a></li>
-        </ul>
-        <a class="fast fast--ai" href="#audit" data-interest="AI agents" data-track="layer_ai">
-          <span class="fast__k">Fastest way in</span>
-          <span class="fast__t">90 min, free</span>
-          <b>AI readiness session</b>
-          <span class="fast__d">A ranked list of AI use cases your data can support today.</span>
-          <span class="fast__go">Book a readiness session <i aria-hidden="true">&rarr;</i></span>
-        </a>
-        <a class="arrow-link" href="/ai-data">AI &amp; data services <i aria-hidden="true">&rarr;</i></a>
-      </div>
-
-      <button class="plate" id="pl-4" aria-controls="ly-4" aria-expanded="false">
-        <span class="plate__k">Data</span><span class="plate__t">Data &amp; integration</span><span class="plate__d">Every system talking, every number trusted</span>
-      </button>
-      <div class="layer" id="ly-4" role="region" aria-labelledby="pl-4">
-        <h3>Real-time data between CRM, ITSM, ERP and your analytics stack, so nobody re-keys anything and every dashboard agrees.</h3>
-        <ul class="caps">
-          <li><a href="/solutions/enterprise-integration">MuleSoft &amp; API-led integration</a></li>
-          <li><a href="/solutions/enterprise-integration">SAP, Oracle, NetSuite, Workday</a></li>
-          <li><a href="/services/data-analytics">Big data &amp; analytics</a></li>
-          <li><a href="/services/data-analytics">Snowflake, Databricks, Tableau</a></li>
-          <li><a href="/services/data-analytics">Master data &amp; governance</a></li>
-          <li><a href="/solutions/enterprise-integration">Event-driven architecture</a></li>
-        </ul>
-        <a class="fast fast--in" href="#audit" data-interest="Data &amp; integration" data-track="layer_int">
-          <span class="fast__k">Fastest way in</span>
-          <span class="fast__t">Fixed scope</span>
-          <b>Integration architecture review</b>
-          <span class="fast__d">Every connection mapped with its owner, failure points and fix order.</span>
-          <span class="fast__go">Map the integrations <i aria-hidden="true">&rarr;</i></span>
-        </a>
-        <a class="arrow-link" href="/solutions/enterprise-integration">Integration services <i aria-hidden="true">&rarr;</i></a>
-      </div>
-
-      <button class="plate" id="pl-5" aria-controls="ly-5" aria-expanded="false">
-        <span class="plate__k">Engineering</span><span class="plate__t">Product engineering</span><span class="plate__d">Build, modernize and support what is unique to you</span>
-      </button>
-      <div class="layer" id="ly-5" role="region" aria-labelledby="pl-5">
-        <h3>Custom web and mobile products, modernized legacy applications, and a support team that keeps them running.</h3>
-        <ul class="caps">
-          <li><a href="/solutions/enterprise-application-modernization">Product engineering</a></li>
-          <li><a href="/solutions/enterprise-application-modernization">Enterprise web &amp; mobility</a></li>
-          <li><a href="/solutions/enterprise-application-modernization">Application maintenance &amp; support</a></li>
-          <li><a href="/solutions/enterprise-application-modernization">Application modernization</a></li>
-          <li><a href="/services/cloud">Cloud transformation</a></li>
-          <li><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a></li>
-        </ul>
-        <a class="fast fast--en" href="#audit" data-interest="Product engineering" data-track="layer_eng">
-          <span class="fast__k">Fastest way in</span>
-          <span class="fast__t">Fixed scope</span>
-          <b>Scope a product build</b>
-          <span class="fast__d">An architect scopes the build, the team and the support model with you.</span>
-          <span class="fast__go">Scope the build <i aria-hidden="true">&rarr;</i></span>
-        </a>
-        <a class="arrow-link" href="/solutions/enterprise-application-modernization">Product engineering services <i aria-hidden="true">&rarr;</i></a>
-      </div>
-
-      <button class="plate" id="pl-6" aria-controls="ly-6" aria-expanded="false">
-        <span class="plate__k">Talent</span><span class="plate__t">People</span><span class="plate__d">Certified hands, by the seat or the team</span>
-      </button>
-      <div class="layer" id="ly-6" role="region" aria-labelledby="pl-6">
-        <h3>Certified Salesforce and ServiceNow people in your time zone. By the seat, by the team, or as your run crew.</h3>
-        <ul class="caps">
-          <li><a href="/services/staff-augmentation">Admins &amp; developers</a></li>
-          <li><a href="/services/staff-augmentation">Consultants &amp; architects</a></li>
-          <li><a href="/talent/delivery-pods">Dedicated delivery pods</a></li>
-          <li><a href="/enterprise/salesforce/managed-services">Managed services</a></li>
-          <li><a href="/talent/engagement-models">Fixed, T&amp;M or outcome-based</a></li>
-        </ul>
-        <a class="fast fast--tl" href="#audit" data-interest="Certified talent" data-track="layer_talent">
-          <span class="fast__k">Fastest way in</span>
-          <span class="fast__t">US &middot; CA &middot; IN</span>
-          <b>Name the role</b>
-          <span class="fast__d">Certified Salesforce or ServiceNow people, vetted by our practice leads.</span>
-          <span class="fast__go">Get vetted profiles <i aria-hidden="true">&rarr;</i></span>
-        </a>
-        <a class="arrow-link" href="/services/staff-augmentation">How talent works <i aria-hidden="true">&rarr;</i></a>
-      </div>
+    </div>
+    <div class="prac__more rv">
+      <a href="/ai-data"><small>AI &amp; data</small><b>Agents and analytics</b><span>Knowledge assistants, Snowflake, Databricks and governed BI</span></a>
+      <a href="/solutions/enterprise-integration"><small>Integration</small><b>Systems in sync</b><span>MuleSoft and APIs between CRM, ITSM and SAP, Oracle, NetSuite or Workday</span></a>
+      <a href="/solutions/enterprise-application-modernization"><small>Engineering</small><b>Custom builds</b><span>Products, modernization and application support around the platforms</span></a>
+      <a href="/services/staff-augmentation"><small>Talent</small><b>Certified people</b><span>Salesforce and ServiceNow specialists, by the seat or as a pod</span></a>
     </div>
   </div>
 </section>
 
-<!-- ================= SPEED ================= -->
-<section class="speed" aria-labelledby="speed-h">
+<!-- ================= WAYS TO START ================= -->
+<section class="sx" aria-labelledby="start-h">
   <div class="wrap">
-    <div class="speed__head">
-      <h2 id="speed-h" class="rv"><em>Value in weeks.</em><br>Not a roadmap that outlives your budget.</h2>
-      <p class="rv" data-d="1">Fixed scope, fixed outcome, built on 40+ pre-built accelerators. Pick a starting line.</p>
+    <div class="sx__head">
+      <div><p class="k3 rv">Ways to start</p><h2 id="start-h" class="rv">Fixed scope, <em>measured in weeks.</em></h2><p class="rv" data-d="1">Each starter has a written scope, a named architect and a deliverable at the end. Over 40 pre-built accelerators cover the foundation work a blank org would otherwise need.</p></div>
+      <a class="sx__go rv" href="#audit" data-open="audit" data-track="start_head">Scope a starter <i aria-hidden="true">&rarr;</i></a>
     </div>
-
-    <div class="gantt" data-gantt>
-      <div class="gantt__axis" aria-hidden="true"><span></span><span class="gantt__scale"><i>Week 0</i><i>2</i><i>4</i><i>6</i><i>8</i><i>10</i><i>12</i></span></div>
-      <a class="gantt__row" href="#audit" data-interest="AI agents" data-track="gantt_readiness">
-        <span class="gantt__name"><b>AI readiness session</b><em>Free</em></span>
-        <span class="gantt__track"><span class="gantt__bar gantt__bar--dot" style="--w:1.6%"></span><span class="gantt__val">90 min</span></span>
-      </a>
-      <a class="gantt__row" href="#audit" data-interest="AI agents" data-track="gantt_agentkit">
-        <span class="gantt__name"><b>Agent Launch Kit</b><em>Agentforce</em></span>
-        <span class="gantt__track"><span class="gantt__bar" style="--w:33.3%"></span><span class="gantt__val">&lt; 4 weeks</span></span>
-      </a>
-      <a class="gantt__row" href="#audit" data-interest="Salesforce" data-track="gantt_sales">
-        <span class="gantt__name"><b>Sales Cloud Quick-Start</b><em>Salesforce</em></span>
-        <span class="gantt__track"><span class="gantt__bar" style="--w:50%"></span><span class="gantt__val">6 weeks</span></span>
-      </a>
-      <a class="gantt__row" href="#audit" data-interest="Salesforce" data-track="gantt_service">
-        <span class="gantt__name"><b>Service Cloud Rapid Deploy</b><em>Salesforce</em></span>
-        <span class="gantt__track"><span class="gantt__bar" style="--w:66.6%"></span><span class="gantt__val">8 weeks</span></span>
-      </a>
-      <a class="gantt__row" href="#audit" data-interest="ServiceNow" data-track="gantt_debt">
-        <span class="gantt__name"><b>Tech-debt removal</b><em>ServiceNow</em></span>
-        <span class="gantt__track"><span class="gantt__bar gantt__bar--sn" style="--w:66.6%"></span><span class="gantt__val">8 weeks</span></span>
-      </a>
-    </div>
+    <table class="offers rv">
+      <thead><tr><th scope="col">Engagement</th><th scope="col">Length</th><th scope="col">What is in place at the end</th><th scope="col">Commercials</th><th scope="col"><span class="sr">Request</span></th></tr></thead>
+      <tbody>
+        <tr><td><b>AI readiness session</b><small>Salesforce or ServiceNow</small></td><td class="len" data-l="Length">90 minutes</td><td>A ranked list of AI use cases the current data can support, and what blocks the rest</td><td class="com" data-l="Commercials">Free</td><td class="go"><a href="#audit" data-open="audit" data-interest="AI agents" data-track="start_readiness">Book <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Agent Launch Kit</b><small>Agentforce</small></td><td class="len" data-l="Length">Under 4 weeks</td><td>First agents for lead qualification, case triage or self-service, live in production with guardrails</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="AI agents" data-track="start_agentkit">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Sales Cloud Quick-Start</b><small>Salesforce</small></td><td class="len" data-l="Length">6 weeks</td><td>Pipeline stages, forecasting, dashboards and sales automation live, with legacy data migrated and reconciled</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Salesforce" data-track="start_sales">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Service Cloud Rapid Deploy</b><small>Salesforce</small></td><td class="len" data-l="Length">8 weeks</td><td>Omnichannel routing, knowledge, entitlements and CSAT automation live, ready for agents to join later</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Salesforce" data-track="start_service">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Platform health check</b><small>ServiceNow</small></td><td class="len" data-l="Length">2 to 3 weeks</td><td>CMDB, workflows, integrations and licences audited, with a remediation plan ranked by impact</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="ServiceNow" data-track="start_snhealth">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Tech-debt removal</b><small>ServiceNow</small></td><td class="len" data-l="Length">8 weeks</td><td>Scripts, CMDB and integrations cleaned up so upgrades and Now Assist stop stalling</td><td class="com" data-l="Commercials">Fixed SOW</td><td class="go"><a href="#audit" data-open="audit" data-interest="ServiceNow" data-track="start_debt">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
 <!-- ================= PROOF ================= -->
 <section class="proof" id="proof" aria-labelledby="proof-h">
   <div class="wrap">
-    <h2 id="proof-h" class="rv">This is what <em>working</em> looks like.</h2>
+    <p class="k3 k3--inv rv">Client results</p>
+    <h2 id="proof-h" class="rv">What the work <em>changed.</em></h2>
 
-    <article class="case rv" data-case>
-      <header class="case__head">
-        <div>
-          <p class="case__who">Regional health system</p>
-          <h3>Patients waited two days for an answer. Now most questions never need a person.</h3>
-        </div>
-        <div class="toggle" role="tablist" aria-label="Before and after">
-          <span class="toggle__thumb" aria-hidden="true"></span>
-          <button role="tab" aria-selected="true" data-state="before">Before</button>
-          <button role="tab" aria-selected="false" data-state="after">After Procyon</button>
-        </div>
-      </header>
-
-      <div class="case__grid">
-        <div class="case__nums-wrap">
-          <dl class="case__nums case__nums--before">
-            <div><dt>48 hrs</dt><dd>average patient response</dd></div>
-            <div><dt>3</dt><dd>disconnected record systems</dd></div>
-            <div><dt>30%+</dt><dd>of staff time lost to admin</dd></div>
-            <div><dt>Manual</dt><dd>intake for every request</dd></div>
-          </dl>
-          <dl class="case__nums case__nums--after">
-            <div><dt><span data-count="50">50</span>%</dt><dd>faster patient response</dd></div>
-            <div><dt><span data-count="60">60</span>%</dt><dd>of requests resolved by AI agents</dd></div>
-            <div><dt>+<span data-count="28">28</span></dt><dd>points in patient satisfaction</dd></div>
-            <div><dt><span data-count="35">35</span>%</dt><dd>less administrative work</dd></div>
-          </dl>
-        </div>
-        <div class="case__built">
-          <p class="case__k">What we built</p>
-          <ul>
-            <li>One patient identity on Health Cloud and Data Cloud</li>
-            <li>Agentforce agents on tier-1 patient queries</li>
-            <li>A knowledge assistant for clinical staff</li>
-            <li>Headless APIs feeding the patient app</li>
-          </ul>
-          <a class="arrow-link arrow-link--inv" href="/case-studies">Read the full story <i aria-hidden="true">&rarr;</i></a>
-        </div>
+    <article class="cs rv">
+      <div>
+        <p class="cs__who">Regional health system &middot; Health Cloud, Data Cloud, Agentforce</p>
+        <h3>Patients waited two days for an answer. Now most questions never need a person.</h3>
+        <p class="cs__p">Patient records sat in three systems, every request was keyed in by hand, and staff spent close to a third of their time on admin. The program joined the records first, then put agents on the questions the data could answer.</p>
+        <ul class="cs__built">
+          <li>One patient identity on Health Cloud and Data Cloud</li>
+          <li>Agentforce agents on tier-1 patient queries</li>
+          <li>A knowledge assistant for clinical staff</li>
+          <li>Headless APIs feeding the patient app</li>
+        </ul>
+      </div>
+      <div>
+        <table class="cs__tbl">
+          <thead><tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+          <tbody>
+            <tr><td>Patient response time</td><td>48 hours</td><td>50% faster</td></tr>
+            <tr><td>Requests resolved without staff</td><td>None</td><td>60%</td></tr>
+            <tr><td>Patient satisfaction</td><td>Baseline</td><td>+28 points</td></tr>
+            <tr><td>Administrative workload</td><td>30%+ of staff time</td><td>35% lower</td></tr>
+          </tbody>
+        </table>
+        <p class="cs__src">Measured by the client against the pre-program baseline.</p>
+        <a class="arrow-link arrow-link--inv cs__go" href="/case-studies">Read more client stories <i aria-hidden="true">&rarr;</i></a>
       </div>
     </article>
-
-    <div class="proof__cta rv"><p>Want numbers like these on your own platform?</p><a class="btn btn--red" href="#audit" data-open="audit" data-track="proof_cta">Talk to an architect <i aria-hidden="true">&rarr;</i></a></div>
 
     <ul class="more">
       <li class="rv" data-d="0"><a href="/case-studies/genesys-salesforce-partner-onboarding"><span>Hi-tech &middot; 30%+ faster</span><b>Genesys: global partner onboarding, modernized on Salesforce</b><i aria-hidden="true">&rarr;</i></a></li>
@@ -612,87 +432,64 @@
 </section>
 
 <!-- ================= RANGER FUSION ================= -->
-<section class="rf" aria-labelledby="rf-h">
-  <div class="wrap rf__in">
-    <div class="rf__copy">
-      <p class="tagline rv">Our own product</p>
-      <h2 id="rf-h" class="rv" data-d="1">ERP, rebuilt <em>inside the platform</em> your teams already live in.</h2>
-      <p class="rv" data-d="2"><b>Ranger Fusion</b> runs sales, finance, inventory, procurement, projects and HR natively on Salesforce. One data model from first quote to final invoice, with AI agents in every module.</p>
-      <ul class="rf__facts rv" data-d="3">
-        <li><b>2 to 4 weeks</b><span>kickoff to go-live</span></li>
-        <li><b>20 to 60%</b><span>typical savings vs. a patchwork stack</span></li>
-      </ul>
-      <div class="rf__ctas rv" data-d="4">
-        <a class="btn btn--red" href="#audit" data-interest="Ranger Fusion ERP" data-track="rf_demo">Book a demo</a>
-        <a class="arrow-link" href="/products/ranger-fusion">Explore Ranger Fusion <i aria-hidden="true">&rarr;</i></a>
+<section class="sx" aria-labelledby="rf-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our own product</p>
+      <h2 id="rf-h" class="rv">ERP, built <em>inside Salesforce.</em></h2>
+      <p class="pov__lede rv" data-d="1"><b>Ranger Fusion</b> runs sales, finance, inventory, procurement, projects and HR on one Salesforce data model. No sync jobs between CRM and ERP, because there is only one system. Most teams go live in 2 to 4 weeks and save 20 to 60% against a patchwork stack.</p>
+      <div class="hx__ctas rv" data-d="2">
+        <a class="btn btn--ink" href="#audit" data-open="audit" data-interest="Ranger Fusion ERP" data-track="rf_demo">Book a demo <i aria-hidden="true">&rarr;</i></a>
+        <a class="hx__link" href="/products/ranger-fusion">Explore Ranger Fusion <i aria-hidden="true">&rarr;</i></a>
       </div>
     </div>
-    <div class="orbit rv" data-d="1" aria-hidden="true">
-      <svg class="orbit__lines" viewBox="0 0 400 400"><circle cx="200" cy="200" r="150"/><circle cx="200" cy="200" r="96"/></svg>
-      <div class="orbit__ring">
-        <span style="--a:0deg"><i>Sales</i></span>
-        <span style="--a:60deg"><i>Finance</i></span>
-        <span style="--a:120deg"><i>Inventory</i></span>
-        <span style="--a:180deg"><i>Procurement</i></span>
-        <span style="--a:240deg"><i>Projects</i></span>
-        <span style="--a:300deg"><i>HR</i></span>
-      </div>
-      <div class="orbit__core"><b>One data model</b><span>native to Salesforce</span></div>
-    </div>
+    <dl class="mods rv" data-d="1">
+      <div><dt>Sales and quote-to-cash</dt><dd>Quotes, orders, invoices and collections on the record reps already use</dd></div>
+      <div><dt>Finance and accounting</dt><dd>General ledger, payables, receivables and reporting, no exports</dd></div>
+      <div><dt>Inventory and warehouse</dt><dd>Stock, locations and movements visible to sales and service</dd></div>
+      <div><dt>Procurement and vendors</dt><dd>Requests, approvals, purchase orders and vendor records in one flow</dd></div>
+      <div><dt>Projects and resources</dt><dd>Plans, time, budgets and margins tied to the deal that started them</dd></div>
+      <div><dt>HR and people</dt><dd>Employee records, onboarding and leave next to the assigned work</dd></div>
+    </dl>
   </div>
 </section>
 
 <!-- ================= WHO WE ARE ================= -->
-<section class="who" id="who-we-are" aria-labelledby="who-h">
+<section class="sx sx--paper" id="who-we-are" aria-labelledby="who-h">
   <div class="wrap">
-    <div class="who__top">
-      <h2 id="who-h" class="rv">Twenty years in.<br><em>Still the engineers in the room.</em></h2>
-      <div class="who__lede rv" data-d="1">
-        <p>Procyon Technostructure is an enterprise solution delivery organization, founded in 2004 to do one thing well: make enterprise software earn its keep with customer-centric, secure solutions.</p>
-        <p>Today more than 200 architects, developers and consultants work from California, Toronto and Chennai. The people who scope your program are the people who build it.</p>
+    <div class="pov__in">
+      <div><p class="k3 rv">Who we are</p><h2 id="who-h" class="rv">Twenty years in. <em>Still the engineers in the room.</em></h2></div>
+      <div class="pov__r">
+        <p class="rv">Procyon Technostructure was founded in 2004 to make enterprise software earn its keep. More than 200 architects, developers and consultants now work from California, Toronto and Chennai.</p>
+        <p class="rv">The people who scope a program are the people who build it. Work moves across three time zones, so a change raised at the end of a California day is often tested by the next morning.</p>
       </div>
     </div>
 
-    <div class="sun rv" data-sun>
-      <div class="sun__head">
-        <b>Somewhere in Procyon, it is a working day.</b>
-        <span>Your program moves while you sleep. Live hub status:</span>
-      </div>
-      <div class="sun__hubs">
-        <div class="hub" data-tz="America/Los_Angeles"><span class="hub__city">Novato, California</span><span class="hub__role">Headquarters</span><span class="hub__time">--:--</span><span class="hub__state">&nbsp;</span></div>
-        <div class="hub" data-tz="America/Toronto"><span class="hub__city">Toronto, Canada</span><span class="hub__role">North America delivery</span><span class="hub__time">--:--</span><span class="hub__state">&nbsp;</span></div>
-        <div class="hub" data-tz="Asia/Kolkata"><span class="hub__city">Chennai, India</span><span class="hub__role">Global delivery center</span><span class="hub__time">--:--</span><span class="hub__state">&nbsp;</span></div>
-      </div>
-      <div class="sun__band" aria-hidden="true">
-        <div class="sun__lane" data-lane="America/Los_Angeles"><em>California</em></div>
-        <div class="sun__lane" data-lane="America/Toronto"><em>Toronto</em></div>
-        <div class="sun__lane" data-lane="Asia/Kolkata"><em>Chennai</em></div>
-        <span class="sun__now"><i>Now</i></span>
-        <div class="sun__ticks"><span>00:00 UTC</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
-      </div>
+    <h3 class="lbl rv">Written into every engagement</h3>
+    <ul class="terms rv">
+      <li><b>Audit before build.</b><span>If the data is broken, more features make it worse. The plan starts from what the audit finds.</span></li>
+      <li><b>No product quota.</b><span>If a simpler, cheaper path works, that is the recommendation, even when it means a smaller project.</span></li>
+      <li><b>Senior people stay.</b><span>The architect who scopes the program stays on it through go-live and hypercare.</span></li>
+      <li><b>The client owns it.</b><span>Documentation and knowledge transfer are deliverables in the contract, with acceptance criteria.</span></li>
+    </ul>
+
+    <div class="hubs rv">
+      <div><b>Novato, California</b><small>Headquarters</small><p>Client leadership, solution architecture and program management for North America.</p></div>
+      <div><b>Toronto, Canada</b><small>North America delivery</small><p>Consultants and engineers working in client time zones across the US and Canada.</p></div>
+      <div><b>Chennai, India</b><small>Global delivery center</small><p>Engineering, testing and managed services that keep work moving overnight.</p></div>
     </div>
 
-    <div class="ledger" role="table" aria-label="How Procyon works compared with the usual way">
-      <div class="ledger__head" role="row"><span role="columnheader">The usual way</span><span role="columnheader">The Procyon way</span></div>
-      <div class="ledger__row rv" role="row"><span class="ledger__them" role="cell">Build first. Find the data problems after go-live.</span><p role="cell"><b>We audit before we build.</b> If the data is broken, more features make it worse.</p></div>
-      <div class="ledger__row rv" role="row"><span class="ledger__them" role="cell">Recommend whatever the quota needs sold.</span><p role="cell"><b>No product quota.</b> If a simpler, cheaper path works, that is the recommendation.</p></div>
-      <div class="ledger__row rv" role="row"><span class="ledger__them" role="cell">Seniors win the deal. Juniors deliver it.</span><p role="cell"><b>Senior people stay.</b> Architects remain on the account after go-live.</p></div>
-      <div class="ledger__row rv" role="row"><span class="ledger__them" role="cell">Keep the knowledge, keep the client dependent.</span><p role="cell"><b>You own it when we leave.</b> Knowledge transfer is written into every contract.</p></div>
-    </div>
-
-    <div class="swatch facts rv">
-      <div class="swatch__bar"><b>Since 2004</b><span>Enterprise solution delivery, from Fortune 500s to high-growth start-ups</span><i>California &middot; Toronto &middot; Chennai</i></div>
-      <div class="swatch__b swatch__b--blue"><b><span data-count="200">200</span>+</b><span>architects, engineers and consultants</span></div>
-      <div class="swatch__b swatch__b--green"><b><span data-count="200">200</span>+</b><span>enterprise clients</span></div>
-      <div class="swatch__b swatch__b--red"><b><span data-count="200">200</span>+</b><span>programs delivered</span></div>
-    </div>
-
-    <div class="creds rv">
-      <ul aria-label="Partnerships and certifications">
-        <li>Salesforce Consulting Partner</li><li>ServiceNow Implementation Partner</li><li>ISO 27001</li><li>ISO 9001:2015</li><li>HIPAA</li><li>WBE</li><li>NMSDC</li><li>SBE</li>
-      </ul>
-      <p>Deepest in healthcare, financial services, public sector, retail and high tech, with two AI healthcare ventures of our own, Hekma and Akra. Our values: customer first, transparency and collaboration, continuous learning and innovation, celebrating diversity.</p>
-    </div>
+    <dl class="cred rv" aria-label="Partnerships and certifications">
+      <div><dt>Salesforce</dt><dd>Consulting Partner</dd></div>
+      <div><dt>ServiceNow</dt><dd>Implementation Partner</dd></div>
+      <div><dt>Security</dt><dd>ISO 27001</dd></div>
+      <div><dt>Quality</dt><dd>ISO 9001:2015</dd></div>
+      <div><dt>Healthcare</dt><dd>HIPAA-compliant delivery</dd></div>
+      <div><dt>Diversity</dt><dd>WBE, NMSDC and SBE certified</dd></div>
+      <div><dt>Industries</dt><dd>Healthcare, financial services, public sector, retail, high tech</dd></div>
+      <div><dt>Ventures</dt><dd>Hekma and Akra, two AI healthcare start-ups</dd></div>
+      <div><dt>Contact</dt><dd><a href="tel:+14153828040">+1 415 382 8040</a></dd></div>
+    </dl>
   </div>
 </section>
 

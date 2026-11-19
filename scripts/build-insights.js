@@ -210,17 +210,16 @@ write('blog/index.html', {
   ogDescription: 'Implementation guides, rescue playbooks and AI frameworks from the Salesforce, ServiceNow and data practices at Procyon.',
   og: 'blog', bodyClass: 'ins-blog', crumbs: [['Blog', '/blog']]
 }, `
-<section class="ph ph--ins" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx hx--ins" aria-labelledby="ph-h">
   <div class="wrap">
     <!--@crumbs-->
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Blog</p>
-        <h1 id="ph-h" class="ph__h">Field notes from the people <em>who do the work.</em></h1>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Blog</p>
+        <h1 id="ph-h" class="hx__h">Field notes from the people <em>who do the work.</em></h1>
         <p class="ph__lede"><b>Frameworks, playbooks and lessons from Procyon's Salesforce, ServiceNow, data and AI practices.</b> Written by the architects who run the audits, rollouts and rescues, for the leaders who have to make the call.</p>
       </div>
-      <div class="ph__w">
+      <div class="hx__side">
         <a class="feat" href="/blog/${featured.slug}">
           ${featured.image ? `<img src="${featured.image.src}"${pic(featured.image.src, '(max-width: 1080px) 92vw, 480px')} alt="" width="1200" height="675" decoding="async" fetchpriority="high">` : ''}
           <span class="feat__k">Latest &middot; ${esc(featured.category.trim())}</span>
@@ -272,12 +271,12 @@ for (const p of blog) {
     crumbs: [['Blog', '/blog'], [clip(p.title, 48).replace(/\.$/, ''), '/blog/' + p.slug]],
     article: { headline: clip(p.title, 110), section: p.category.trim(), keywords: (p.tags || []).join(', '), author: p.author || 'Procyon Technostructure', words: words(html) }
   }, `
-<section class="ph ph--post" aria-labelledby="ph-h">
+<section class="hx hx--post" aria-labelledby="ph-h">
   <div class="wrap">
     <!--@crumbs-->
     <div class="post__head">
-      <p class="pill"><span class="pill__dot"></span>${esc(p.category.trim())}</p>
-      <h1 id="ph-h" class="ph__h">${esc(p.title)}</h1>
+      <p class="k3">${esc(p.category.trim())}</p>
+      <h1 id="ph-h" class="hx__h">${esc(p.title)}</h1>
       <p class="ph__lede">${esc(p.excerpt)}</p>
       <p class="post__by"><b>${esc(p.author || 'Procyon Technostructure')}</b>${p.author_role ? `<span>${esc(p.author_role)}</span>` : ''}<time datetime="${day(p.published_at)}">${fmt(p.published_at)}</time><span>${esc(p.read_time || '')}</span></p>
     </div>
@@ -344,16 +343,15 @@ write('case-studies/index.html', {
   ogDescription: 'Five programs, the problem each one faced, the approach and the measured result: partner onboarding, Service Cloud, CRM consolidation and digital health.',
   og: 'case-studies', bodyClass: 'ins-cases', crumbs: [['Case studies', '/case-studies']]
 }, `
-<section class="ph ph--ins" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <!--@crumbs-->
-    <div class="ph__copy" style="max-width:820px">
-      <p class="pill"><span class="pill__dot"></span>Case studies</p>
-      <h1 id="ph-h" class="ph__h">The problem, the approach, <em>the measured result.</em></h1>
+    <div class="hx__grid hx__grid--solo"><div class="hx__copy">
+      <p class="k3">Case studies</p>
+      <h1 id="ph-h" class="hx__h">The problem, the approach, <em>the measured result.</em></h1>
       <p class="ph__lede"><b>Five programs delivered for global clients</b>, from Genesys partner onboarding on Salesforce to a senior care digital health platform. Each one shows the situation, the stack and the outcome the client measured.</p>
-      <div class="ph__ctas"><a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="" data-kicker="Case studies" data-title="Brief a senior architect" data-track="cases_hero">Discuss a similar program <i aria-hidden="true">&rarr;</i></a></div>
-    </div>
+      <div class="hx__ctas"><a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="" data-kicker="Case studies" data-title="Brief a senior architect" data-track="cases_hero">Discuss a similar program <i aria-hidden="true">&rarr;</i></a></div>
+    </div></div>
   </div>
 </section>
 <section class="sx sx--paper" aria-label="All case studies">
@@ -376,21 +374,19 @@ for (const c of cases) {
     crumbs: [['Case studies', '/case-studies'], [clip(c.client, 48).replace(/\.$/, ''), '/case-studies/' + c.slug]],
     caseStudy: { headline: clip(c.title, 110), client: c.client, stack: c.stack || [] }
   }, `
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx hx--case" aria-labelledby="ph-h">
   <div class="wrap">
     <!--@crumbs-->
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Case study &middot; ${esc(c.industry)}</p>
-        <h1 id="ph-h" class="ph__h">${esc(c.title)}</h1>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Case study &middot; ${esc(c.industry)}</p>
+        <h1 id="ph-h" class="hx__h">${esc(c.title)}</h1>
         <p class="ph__lede">${esc(c.excerpt)}</p>
-        <div class="ph__ctas"><a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="" data-kicker="Case study" data-title="Discuss a similar program" data-message="Case study read: ${esc(c.title)}.&#10;Current situation: " data-track="case_hero">Discuss a similar program <i aria-hidden="true">&rarr;</i></a></div>
+        <div class="hx__ctas"><a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="" data-kicker="Case study" data-title="Discuss a similar program" data-message="Case study read: ${esc(c.title)}.&#10;Current situation: " data-track="case_hero">Discuss a similar program <i aria-hidden="true">&rarr;</i></a></div>
       </div>
-      <div class="ph__w">
-        <div class="wcard">
-          <span class="wcard__k">Program at a glance</span>
-          <dl class="dossier">
+      <aside class="brief" aria-label="Program at a glance">
+          <p class="brief__k">Program at a glance</p>
+          <dl>
             <div><dt>Client</dt><dd>${esc(c.client)}</dd></div>
             <div><dt>Industry</dt><dd>${esc(c.industry)}</dd></div>
             <div><dt>Platform</dt><dd>${esc(c.platform)}</dd></div>
@@ -398,8 +394,7 @@ for (const c of cases) {
             ${c.duration ? `<div><dt>Duration</dt><dd>${esc(c.duration)}</dd></div>` : ''}
             ${(c.stack || []).length ? `<div><dt>Stack</dt><dd>${c.stack.map(esc).join(' &middot; ')}</dd></div>` : ''}
           </dl>
-        </div>
-      </div>
+      </aside>
     </div>
   </div>
 </section>
@@ -452,16 +447,15 @@ write('insights/events/index.html', {
   ogDescription: 'Private 1:1 strategy sessions with Procyon practice leaders at Dreamforce, NMSDC and other enterprise events.',
   og: 'events', bodyClass: 'ins-events', crumbs: [['Events', '/insights/events']]
 }, `
-<section class="ph ph--ins" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <!--@crumbs-->
-    <div class="ph__copy" style="max-width:820px">
-      <p class="pill"><span class="pill__dot"></span>Events</p>
-      <h1 id="ph-h" class="ph__h">Skip the booth. <em>Book the 1:1.</em></h1>
+    <div class="hx__grid hx__grid--solo"><div class="hx__copy">
+      <p class="k3">Events</p>
+      <h1 id="ph-h" class="hx__h">Skip the booth. <em>Book the 1:1.</em></h1>
       <p class="ph__lede"><b>Procyon practice leaders meet enterprise teams privately at the industry's major events.</b> Each session is 1:1, built around the attendee's own platform, and ends with a working plan rather than a pitch.</p>
-      <div class="ph__ctas"><a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Other" data-kicker="Events" data-title="1:1 session request" data-message="Event or city: &#10;Topic for the session: " data-track="events_hero">Request a 1:1 session <i aria-hidden="true">&rarr;</i></a></div>
-    </div>
+      <div class="hx__ctas"><a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Other" data-kicker="Events" data-title="1:1 session request" data-message="Event or city: &#10;Topic for the session: " data-track="events_hero">Request a 1:1 session <i aria-hidden="true">&rarr;</i></a></div>
+    </div></div>
   </div>
 </section>
 <section class="sx sx--paper" aria-label="All events">
@@ -489,33 +483,30 @@ for (const e of events) {
     crumbs: [['Events', '/insights/events'], [e.title, '/insights/events/' + e.slug]],
     event: { name: e.title, start: e.start_date, end: e.end_date || e.start_date, venue: e.venue, location: e.location, organizer: /dreamforce/i.test(e.title) ? 'Salesforce' : /nmsdc/i.test(e.title) ? 'National Minority Supplier Development Council' : e.title, organizerUrl: e.event_url }
   }, `
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx hx--case" aria-labelledby="ph-h">
   <div class="wrap">
     <!--@crumbs-->
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>${esc(e.event_type || 'Event')} &middot; ${past ? 'Took place' : 'Upcoming'}</p>
-        <h1 id="ph-h" class="ph__h">${esc(e.title)}</h1>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">${esc(e.event_type || 'Event')} &middot; ${past ? 'Took place' : 'Upcoming'}</p>
+        <h1 id="ph-h" class="hx__h">${esc(e.title)}</h1>
         <p class="ph__lede"><b>${esc(e.subtitle || '')}</b> ${esc(e.excerpt || '')}</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Other" data-kicker="${esc(e.title)}" data-title="${ctaText}" data-message="${msg}" data-track="event_hero">${ctaText} <i aria-hidden="true">&rarr;</i></a>
-          ${e.event_url ? `<a class="btn btn--line btn--lg" href="${esc(e.event_url)}" target="_blank" rel="noopener">Official event site</a>` : ''}
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Other" data-kicker="${esc(e.title)}" data-title="${ctaText}" data-message="${msg}" data-track="event_hero">${ctaText} <i aria-hidden="true">&rarr;</i></a>
+          ${e.event_url ? `<a class="hx__link" href="${esc(e.event_url)}" target="_blank" rel="noopener">Official event site <i aria-hidden="true">&rarr;</i></a>` : ''}
         </div>
       </div>
-      <div class="ph__w">
-        <div class="wcard">
-          <span class="wcard__k">Event details</span>
-          <dl class="dossier">
+      <aside class="brief" aria-label="Event details">
+          <p class="brief__k">Event details</p>
+          <dl>
             <div><dt>Dates</dt><dd>${esc(e.date_text)}</dd></div>
             <div><dt>Location</dt><dd>${esc(e.location)}</dd></div>
             ${e.venue ? `<div><dt>Venue</dt><dd>${esc(e.venue)}</dd></div>` : ''}
             ${e.audience ? `<div><dt>Who meets</dt><dd>${esc(e.audience)}</dd></div>` : ''}
           </dl>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-interest="Other" data-kicker="${esc(e.title)}" data-title="${ctaText}" data-message="${msg}" data-track="event_card">${ctaText} <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">${past ? 'The event has passed. Sessions continue online.' : 'Private 1:1 sessions, limited slots.'}</p>
-        </div>
-      </div>
+          <a class="brief__go" href="#audit" data-open="audit" data-interest="Other" data-kicker="${esc(e.title)}" data-title="${ctaText}" data-message="${msg}" data-track="event_card">${ctaText} <i aria-hidden="true">&rarr;</i></a>
+          <p class="brief__d">${past ? 'The event has passed. Sessions continue online.' : 'Private 1:1 sessions, limited slots.'}</p>
+      </aside>
     </div>
   </div>
 </section>
@@ -565,17 +556,16 @@ for (const j of jobs) {
     crumbs: [['Careers', '/careers'], [clip(j.title, 48).replace(/\.$/, ''), '/careers/' + j.slug]],
     job: j.is_open ? { title: j.title, html, posted: day(j.created_at), type: /part/i.test(j.employment_type || '') ? 'PART_TIME' : 'FULL_TIME', experience: j.experience_level, department: dept } : undefined
   }, `
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <!--@crumbs-->
-    <div class="ph__copy" style="max-width:860px">
-      <p class="pill"><span class="pill__dot"></span>${esc(dept)} &middot; ${j.is_open ? 'Open role' : 'Role closed'}</p>
-      <h1 id="ph-h" class="ph__h">${esc(j.title)}</h1>
+    <div class="hx__grid hx__grid--solo"><div class="hx__copy">
+      <p class="k3">${esc(dept)} &middot; ${j.is_open ? 'Open role' : 'Role closed'}</p>
+      <h1 id="ph-h" class="hx__h">${esc(j.title)}</h1>
       <p class="ph__lede">${esc(j.short_description || '')}</p>
       <p class="job__facts"><span>${esc(loc)}</span><span>${esc(j.employment_type || 'Full-time')}</span>${j.experience_level ? `<span>${esc(j.experience_level)} experience</span>` : ''}</p>
-      <div class="ph__ctas">${j.is_open ? `<a class="btn btn--red btn--lg magnetic" href="#apply" data-apply-cta data-interest="${esc(j.title)}" data-track="job_hero">Apply for this role <i aria-hidden="true">&rarr;</i></a>` : `<a class="btn btn--red btn--lg magnetic" href="/careers#roles">See the open roles <i aria-hidden="true">&rarr;</i></a>`}</div>
-    </div>
+      <div class="hx__ctas">${j.is_open ? `<a class="btn btn--red btn--lg" href="#apply" data-apply-cta data-interest="${esc(j.title)}" data-track="job_hero">Apply for this role <i aria-hidden="true">&rarr;</i></a>` : `<a class="btn btn--red btn--lg" href="/careers#roles">See the open roles <i aria-hidden="true">&rarr;</i></a>`}</div>
+    </div></div>
   </div>
 </section>
 

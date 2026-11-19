@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -337,7 +338,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -376,7 +377,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -385,87 +386,123 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Salesforce</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Salesforce Consulting Partner</p>
-        <h1 id="ph-h" class="ph__h">Salesforce consulting that <em>ships, fixes and runs</em> the org.</h1>
-        <p class="ph__lede"><b>Procyon is a certified Salesforce consulting partner.</b> We implement Sales, Service, Revenue, Experience and Data Cloud, rescue orgs that have drifted, put Agentforce AI agents into production and run the platform on retainer. 40+ pre-built accelerators cut typical timelines by 30 to 50%.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Salesforce consulting" data-title="Talk to a Salesforce architect" data-track="sf_hub_hero">Talk to a Salesforce architect <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#audit" data-open="score" data-track="sf_hub_readiness">Check AI readiness</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Salesforce practice</p>
+        <h1 id="ph-h" class="hx__h">Salesforce the business runs on, <em>not around.</em></h1>
+        <p class="ph__lede"><b>Procyon implements, rescues and runs Salesforce for mid-market and enterprise teams.</b> Sales, Service, Revenue and Data Cloud go in on fixed-scope starters. Orgs that have drifted are audited and stabilized. Agentforce goes live where the data underneath can carry it, and not before.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Salesforce consulting" data-title="Talk to a Salesforce architect" data-track="sf_hero">Talk to a Salesforce architect <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#start">See ways to start <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-      <figure class="art art--report" aria-label="Sample deliverable: Salesforce org health report">
-        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Salesforce org health report</b><span class="art__meta">Week 1 deliverable</span></figcaption>
-        <div class="art__body">
-        <div class="art__top">
-          <div class="art__ring" style="--v:0.61;--c:var(--blue)"><svg viewBox="0 0 104 104" aria-hidden="true"><circle class="t" cx="52" cy="52" r="46"/><circle class="v" cx="52" cy="52" r="46"/></svg><b><span data-count="61">61</span><small>org health</small></b></div>
-          <div class="art__sum"><b>Fixable in one quarter</b><span>Debt sits in automation, access and data quality. Licences are over-provisioned.</span></div>
-        </div>
-        <p class="art__sec">Where the score is lost</p>
-        <ul class="art__bars"><li style="--i:0;--w:78%;--bc:var(--red)"><span>Automation overlap on Case</span><em>64 flows and triggers</em><i></i></li><li style="--i:1;--w:55%;--bc:var(--blue)"><span>Duplicate accounts</span><em>18%</em><i></i></li><li style="--i:2;--w:42%;--bc:var(--blue)"><span>Unused licences</span><em>22%</em><i></i></li><li style="--i:3;--w:71%;--bc:var(--green)"><span>Apex test coverage</span><em>71%</em><i></i></li></ul>
-        <p class="art__sec">Top findings</p>
-        <ul class="art__finds"><li style="--i:0"><span class="chip chip--r">High</span><span>Three processes write Opportunity Stage in a loop</span></li><li style="--i:1"><span class="chip chip--b">Medium</span><span>41 users hold Modify All Data</span></li><li style="--i:2"><span class="chip chip--g">Quick win</span><span>Retire 9 dormant apps and 120 stale reports</span></li></ul>
-        </div>
-        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Salesforce consulting" data-title="Talk to a Salesforce architect" data-track="hero_artifact_cta">Request the org health report <i aria-hidden="true">&rarr;</i></a></div>
-      </figure>
+      <aside class="res" aria-labelledby="res-h">
+        <p class="res__k">Recent program</p>
+        <p class="res__t" id="res-h">38 legacy CRMs retired into one Service Cloud for a $5B+ security and storage company.</p>
+        <dl>
+          <div><dt>38</dt><dd>home-grown and vendor CRMs retired</dd></div>
+          <div><dt>5,000+</dt><dd>agents and vendors on one console</dd></div>
+          <div><dt>1</dt><dd>view of the customer, with CTI built in</dd></div>
+          <div><dt>Global</dt><dd>service footprint on one platform</dd></div>
+        </dl>
+        <a class="res__go" href="/case-studies/global-security-storage-crm-consolidation">Read the case study <i aria-hidden="true">&rarr;</i></a>
+      </aside>
     </div>
+    <dl class="hx__facts">
+      <div><dt>Partnership</dt><dd>Salesforce Consulting Partner<span>15+ years of Salesforce delivery</span></dd></div>
+      <div><dt>Certified in</dt><dd>Sales, Service, Revenue, Data Cloud<span>Plus Administrator, Platform Developer, Einstein AI</span></dd></div>
+      <div><dt>Accelerators</dt><dd>40+ pre-built<span>30 to 50% shorter than a blank org</span></dd></div>
+      <div><dt>Delivery</dt><dd>Novato, Toronto, Chennai<span>US, Canadian and Indian time zones</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">Most Salesforce problems are design debt, <em>not product gaps.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">When an org disappoints, the usual answer is another cloud or another add-on. In the orgs we audit, the cause is older and cheaper to fix: automation layered on automation, a data model bent around one team's spreadsheet, and integrations that nobody owns.</p>
+      <p class="rv">Agentforce raises the stakes. An agent reads the same records the reps read, so a duplicate account or a stale stage stops being an annoyance and becomes a wrong answer given to a customer.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>Automation that fights itself</h3><p>Workflow rules, Process Builder, flows and Apex triggers all writing the same fields. Support for Workflow Rules and Process Builder ended in 2025, so the overlap is now a risk as well as a slowdown.<small>First move: <b>one automation pattern per object, migrated to Flow</b></small></p></li>
+        <li class="rv"><h3>CPQ on borrowed time</h3><p>Salesforce CPQ is no longer sold to new customers and new investment is going into Revenue Cloud. Quote errors and slow approvals rarely justify a like-for-like rebuild; they justify a cleaner pricing model.<small>First move: <b>a pricing rule audit before any migration plan</b></small></p></li>
+        <li class="rv"><h3>A data model nobody would design today</h3><p>Custom objects that duplicate standard ones, hundreds of fields on Opportunity, sharing rules added one escalation at a time. Reports disagree because the model does.<small>First move: <b>field usage audit and a target data model</b></small></p></li>
+        <li class="rv"><h3>Agents ahead of the data</h3><p>Agentforce pilots stall when the grounding data has duplicates, missing owners or unclear consent. The fix is upstream, in Data Cloud identity rules and data quality, not in the prompt.<small>First move: <b>score the data before choosing the first agent</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="kf" aria-label="Key facts">
+<section class="sx sx--paper" aria-labelledby="svc-h">
   <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Faster delivery</dt><dd><b>30 to 50%</b>shorter timelines from 40+ pre-built accelerators</dd></div>
-        <div><dt>Salesforce delivery</dt><dd><b>15+ years</b>inside a firm running enterprise platforms since 2004</dd></div>
-        <div><dt>Enterprise clients</dt><dd><b>200+</b>across the US, Canada and India</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Salesforce consulting" data-title="Talk to a Salesforce architect" data-track="sf_hub_kf"><small>Free &middot; 30 minutes</small><b>Talk to a Salesforce architect</b><span>Ends in a written plan with scope and cost range</span><i aria-hidden="true">&rarr;</i></a>
+    <div class="sx__head">
+      <div><p class="k3 rv">Services</p><h2 id="svc-h" class="rv">Six jobs, <em>one team that owns them.</em></h2><p class="rv" data-d="1">Each service stands alone, and each one is designed to hand over cleanly to the next. The team that implements is the team that runs it afterwards, if the client wants that.</p></div>
+    </div>
+    <div class="sit">
+      <article class="rv"><small>Implement</small><h3>Implementation &amp; rollout</h3><p>A first rollout, a new cloud, or a move off Siebel, Dynamics or HubSpot. Fixed-scope starters put Sales Cloud live in 6 weeks and Service Cloud in 8.</p><p class="sit__do"><b>Starts with</b>Discovery workshops and a signed-off scope</p><a href="/enterprise/salesforce/implementation">Implementation <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="1"><small>Rescue</small><h3>Org audit &amp; rescue</h3><p>An org another partner built, or one that grew without an architect. Eight areas audited, findings ranked by business impact, the worst stabilized in 30 days.</p><p class="sit__do"><b>Starts with</b>An org health check across data, automation, code and security</p><a href="/enterprise/salesforce/org-audit">Org audit <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="2"><small>Add AI</small><h3>Agentforce</h3><p>Agents for lead qualification, case triage and self-service, grounded in company data and governed with human review. First agents in production in under 4 weeks.</p><p class="sit__do"><b>Starts with</b>A 90-minute readiness session on the data underneath</p><a href="/enterprise/salesforce/agentforce">Agentforce <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv"><small>Unify data</small><h3>Data Cloud &amp; integration</h3><p>One customer record across ERP, web, apps and service, with identity rules the business agrees on. MuleSoft or native APIs, load-tested before go-live.</p><p class="sit__do"><b>Starts with</b>A map of every source, owner and identity key</p><a href="/enterprise/salesforce/data-cloud">Data Cloud <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="1"><small>Run</small><h3>Managed services</h3><p>Admin requests, the three Salesforce releases a year, monitoring and a backlog of improvements, on a monthly retainer with a named team.</p><p class="sit__do"><b>Starts with</b>A 30-day transition and a baseline of open issues</p><a href="/enterprise/salesforce/managed-services">Managed services <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="2"><small>Extend</small><h3>Ranger Fusion ERP</h3><p>Finance, inventory, procurement, projects and HR native to Salesforce, for companies tired of syncing CRM and ERP. Most go live in 2 to 4 weeks.</p><p class="sit__do"><b>Starts with</b>A demo built around the module needed first</p><a href="/products/ranger-fusion">Ranger Fusion <i aria-hidden="true">&rarr;</i></a></article>
     </div>
   </div>
 </section>
 
-<section class="sx tool" aria-labelledby="tool-h">
-  <div class="wrap tool__in">
-    <div class="tool__copy">
-      <span class="sx__k rv">Start here</span>
-      <h2 id="tool-h" class="rv">Where does the Salesforce org stand <em>today?</em></h2>
-      <p class="rv" data-d="1">Pick the situation closest to the org. The recommendation and the brief adjust to it.</p>
-      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
+<section class="sx" aria-labelledby="cl-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Clouds</p><h2 id="cl-h" class="rv">Delivered on every <em>major Salesforce cloud.</em></h2><p class="rv" data-d="1">Industry clouds are where generic partners struggle, because the data model and the regulation come together. Health Cloud and Financial Services Cloud are a large part of the work.</p></div>
     </div>
-    <div class="tool__w rv" data-d="1">
-      <div class="wcard" data-picker="stage">
-          <span class="wcard__k">Start here</span>
-          <p class="wcard__t">Where does the Salesforce org stand today?</p>
-          <div class="opt-list" role="radiogroup" aria-label="Where does the Salesforce org stand today?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Implementation &amp; rollout" data-s="Fixed-scope starters: Sales Cloud live in 6 weeks, Service Cloud in 8." data-href="/enterprise/salesforce/implementation" data-link="See the rollout plan" data-cta="Get a rollout plan" data-interest="Salesforce consulting &amp; implementation" data-kicker="Implementation &amp; rollout" data-title="Salesforce rollout plan"><i></i>New to Salesforce, or adding a cloud</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Org audit &amp; rescue" data-s="Find the technical debt, fix the org and win back user trust." data-href="/enterprise/salesforce/org-audit" data-link="Run the symptom check" data-cta="Book an org health check" data-interest="Salesforce org audit &amp; rescue" data-kicker="Org audit &amp; rescue" data-title="Salesforce org health check"><i></i>Live, but slow and messy</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Agentforce" data-s="First AI agents live in under 4 weeks, grounded in company data." data-href="/enterprise/salesforce/agentforce" data-link="Browse agent use cases" data-cta="Launch the first agent" data-interest="Agentforce &amp; AI agents" data-kicker="Agentforce" data-title="First Agentforce agent plan"><i></i>Ready to put AI agents to work</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Data Cloud &amp; integration" data-s="One real-time customer record across ERP, web, apps and service." data-href="/enterprise/salesforce/data-cloud" data-link="See the integration table" data-cta="Unify customer data" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud &amp; integration" data-title="Customer data unification plan"><i></i>Customer data spread across systems</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Managed services" data-s="Admin, releases and continuous improvement on one retainer." data-href="/enterprise/salesforce/managed-services" data-link="Compare the tiers" data-cta="Get a managed services quote" data-interest="Managed services" data-kicker="Managed services" data-title="Salesforce managed services quote"><i></i>Need a team to run it</button>
-          </div>
-          <div class="rec"><b data-rec-b>Implementation &amp; rollout</b><span data-rec-s>Fixed-scope starters: Sales Cloud live in 6 weeks, Service Cloud in 8.</span><a class="arrow-link" data-rec-a href="/enterprise/salesforce/implementation">See the rollout plan <i aria-hidden="true">&rarr;</i></a></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta data-track="sf_hub_picker_cta">Get a rollout plan <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">A senior Salesforce architect replies within one business day.</p>
-        </div>
-    </div>
+    <dl class="caplist rv">
+      <div><dt><a href="/enterprise/salesforce/implementation">Sales Cloud</a></dt><dd>Pipeline stages with exit criteria, forecasting by team and region, deal desk approvals.</dd></div>
+      <div><dt><a href="/enterprise/salesforce/implementation">Service Cloud &amp; Field Service</a></dt><dd>Omnichannel routing, entitlements and SLAs, knowledge, dispatch and the mobile app.</dd></div>
+      <div><dt><a href="/enterprise/salesforce/implementation">Revenue Cloud &amp; CPQ</a></dt><dd>Catalog, pricing and approval rules, renewals and amendments, orders handed to ERP.</dd></div>
+      <div><dt><a href="/enterprise/salesforce/implementation">Experience Cloud</a></dt><dd>Partner and customer portals with sharing that shows each account only its own data.</dd></div>
+      <div><dt><a href="/enterprise/salesforce/data-cloud">Data Cloud</a></dt><dd>Unified profiles, identity resolution, consent and the grounding data for agents.</dd></div>
+      <div><dt>Marketing Cloud</dt><dd>Journeys triggered by real signals, consent kept clean, next best offer on unified data.</dd></div>
+      <div><dt>Health Cloud</dt><dd>Patient onboarding, care coordination and HIPAA-aligned consent and access.</dd></div>
+      <div><dt>Financial Services Cloud</dt><dd>KYC onboarding, advisor workflows and the audit trail compliance asks for.</dd></div>
+      <div><dt><a href="/enterprise/salesforce/agentforce">Agentforce</a></dt><dd>Agents, topics and actions with guardrails, testing and human review built in.</dd></div>
+    </dl>
+    <p class="offers__note rv">Also delivered: Commerce Cloud, OmniStudio, MuleSoft, Tableau and Slack.</p>
   </div>
 </section>
 
+<section class="sx sx--paper" id="start" aria-labelledby="start-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Ways to start</p><h2 id="start-h" class="rv">Weeks of foundation work, <em>already built.</em></h2><p class="rv" data-d="1">Each starter replaces work a project would otherwise begin from a blank org, and each has a written scope before the first invoice.</p></div>
+      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Salesforce accelerators" data-title="Salesforce accelerator catalogue">Get the full catalogue <i aria-hidden="true">&rarr;</i></a>
+    </div>
+    <table class="offers rv">
+      <thead><tr><th scope="col">Starter</th><th scope="col">Length</th><th scope="col">What is in place at the end</th><th scope="col">Commercials</th><th scope="col"><span class="sr">Request</span></th></tr></thead>
+      <tbody>
+        <tr><td><b>Org health check</b><small>Existing orgs</small></td><td class="len" data-l="Length">About 2 weeks</td><td>Eight areas audited, every finding ranked by business impact, and the worst stabilized within 30 days</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Salesforce org audit" data-kicker="Org audit" data-title="Salesforce org health check">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Sales Cloud Quick-Start</b><small>Sales Cloud</small></td><td class="len" data-l="Length">6 weeks</td><td>Pipeline stages, forecasting, KPI dashboards and sales automation live, legacy data reconciled</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-message="Interested in: Sales Cloud Quick-Start.">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Service Cloud Rapid Deploy</b><small>Service Cloud</small></td><td class="len" data-l="Length">8 weeks</td><td>Omnichannel routing, knowledge base and CSAT automation live, ready for agents to join</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-message="Interested in: Service Cloud Rapid Deploy.">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Agent Launch Kit</b><small>Agentforce</small></td><td class="len" data-l="Length">Under 4 weeks</td><td>Pre-configured agents for qualification, case triage or self-service, in production with guardrails</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-message="Interested in: Agent Launch Kit.">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Data Cloud Onboarding Kit</b><small>Data Cloud</small></td><td class="len" data-l="Length">Fixed scope</td><td>Ingestion templates for CRM, web analytics and marketing data, with identity rules agreed</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Data Cloud &amp; integration" data-message="Interested in: Data Cloud Onboarding Kit.">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>CPQ Revenue Cloud Starter</b><small>Revenue Cloud</small></td><td class="len" data-l="Length">Fixed scope</td><td>Product catalog, pricing rules and approval workflows for B2B subscription businesses</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-message="Interested in: CPQ Revenue Cloud Starter.">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Enterprise RAG Starter</b><small>Knowledge</small></td><td class="len" data-l="Length">Fixed scope</td><td>A knowledge assistant over Salesforce Knowledge, SharePoint and PDFs, every answer cited</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-message="Interested in: Enterprise RAG Starter.">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>AI Scoring Engine</b><small>Einstein and custom models</small></td><td class="len" data-l="Length">Fixed scope</td><td>Lead scoring, opportunity health and churn risk models trained on the org's own history</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-message="Interested in: AI Scoring Engine.">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+      </tbody>
+    </table>
+    <p class="offers__note rv">Industry kits are also available for Health Cloud patient journeys, Financial Services Cloud onboarding, retail personalization and telecom order management.</p>
+  </div>
+</section>
 
 <!-- ================= CLIENTS ================= -->
 <section class="clients" aria-labelledby="clients-h">
   <div class="wrap">
     <p id="clients-h" class="clients__k">Enterprise teams that have run on Procyon delivery</p>
     <div class="clients__band">
-      <div class="clients__stat"><b>200+</b><span>enterprise clients<br>since 2004</span></div>
       <div class="ticker" data-ticker>
         <ul class="ticker__track" aria-label="Clients">
         <li><img src="/assets/img/clients/cisco.webp" alt="Cisco" width="181" height="96" loading="lazy"></li>
@@ -487,127 +524,34 @@
   </div>
 </section>
 
-<section class="sx sx--paper" aria-labelledby="mx-h">
-  <div class="wrap">
-    <div class="sx__head">
-      <div><h2 id="mx-h" class="rv">Find the exact job <em>on this grid.</em></h2><p class="rv" data-d="1">Rows are Salesforce clouds. Columns are where the org stands today. Every cell opens a brief for an architect who has delivered that exact job.</p></div>
-      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Salesforce consulting" data-title="Brief a Salesforce architect">Something else? Brief an architect <i aria-hidden="true">&rarr;</i></a>
-    </div>
-    <div class="mx rv">
-      <div class="mx__scroll">
-        <table>
-          <thead>
-            <tr><th scope="col">Cloud</th><th scope="col">Implement<span>New rollout or new cloud</span></th><th scope="col">Rescue<span>Fix what is already live</span></th><th scope="col">Add AI<span>Agents and predictions</span></th><th scope="col">Run<span>Managed services</span></th></tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">Sales Cloud</th>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Sales Cloud" data-title="Sales Cloud implementation" data-message="Interested in: Sales Cloud implementation."><i></i>Pipeline and forecasting in 6 weeks<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Sales Cloud" data-title="Sales Cloud cleanup" data-message="Interested in: Sales Cloud cleanup and rescue."><i></i>Clean pipeline data and automation<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Sales Cloud" data-title="AI for Sales Cloud" data-message="Interested in: lead scoring and sales agents."><i></i>Lead scoring and SDR agents<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Managed services" data-kicker="Sales Cloud" data-title="Sales Cloud managed services" data-message="Interested in: Sales Cloud managed services."><i></i>Admin and release support<em>&rarr;</em></button></td></tr>
-            <tr><th scope="row">Service Cloud &amp; Field Service</th>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Service Cloud" data-title="Service Cloud implementation" data-message="Interested in: Service Cloud and Field Service implementation."><i></i>Omnichannel routing in 8 weeks<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Service Cloud" data-title="Service Cloud cleanup" data-message="Interested in: Service Cloud cleanup and rescue."><i></i>Fix routing, queues and case sprawl<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Service Cloud" data-title="AI for Service Cloud" data-message="Interested in: case triage and resolution agents."><i></i>Case triage and resolution agents<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Managed services" data-kicker="Service Cloud" data-title="Service Cloud managed services" data-message="Interested in: Service Cloud managed services."><i></i>Console and dispatch support<em>&rarr;</em></button></td></tr>
-            <tr><th scope="row">Revenue Cloud &amp; CPQ</th>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Revenue Cloud &amp; CPQ" data-title="Revenue Cloud and CPQ implementation" data-message="Interested in: Revenue Cloud and CPQ implementation."><i></i>Catalog, pricing and approvals<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Revenue Cloud &amp; CPQ" data-title="CPQ cleanup" data-message="Interested in: fixing CPQ pricing rules and quote errors."><i></i>Untangle pricing rules and quote errors<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Revenue Cloud &amp; CPQ" data-title="AI for Revenue Cloud" data-message="Interested in: deal desk and renewal signals."><i></i>Deal desk and renewal signals<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Managed services" data-kicker="Revenue Cloud &amp; CPQ" data-title="Revenue Cloud managed services" data-message="Interested in: Revenue Cloud and CPQ managed services."><i></i>Price book and release upkeep<em>&rarr;</em></button></td></tr>
-            <tr><th scope="row">Experience Cloud</th>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Experience Cloud" data-title="Experience Cloud portal build" data-message="Interested in: partner or customer portal on Experience Cloud."><i></i>Partner and customer portals<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Experience Cloud" data-title="Portal rebuild" data-message="Interested in: fixing a slow or insecure Experience Cloud portal."><i></i>Rebuild slow or insecure portals<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Experience Cloud" data-title="Self-service portal agents" data-message="Interested in: self-service agents on the portal."><i></i>Self-service agents on the portal<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Managed services" data-kicker="Experience Cloud" data-title="Portal managed services" data-message="Interested in: Experience Cloud managed services."><i></i>Content and access upkeep<em>&rarr;</em></button></td></tr>
-            <tr><th scope="row">Data Cloud</th>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud" data-title="Data Cloud implementation" data-message="Interested in: Data Cloud implementation."><i></i>Unified profiles from every source<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud" data-title="Data Cloud cleanup" data-message="Interested in: fixing identity rules and duplicates in Data Cloud."><i></i>Fix identity rules and duplicates<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Data Cloud" data-title="Agents grounded in Data Cloud" data-message="Interested in: grounding AI agents in Data Cloud."><i></i>Ground agents in trusted data<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Managed services" data-kicker="Data Cloud" data-title="Data Cloud managed services" data-message="Interested in: Data Cloud monitoring and managed services."><i></i>Data streams and quality monitoring<em>&rarr;</em></button></td></tr>
-            <tr><th scope="row">Marketing Cloud</th>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Marketing Cloud" data-title="Marketing Cloud implementation" data-message="Interested in: Marketing Cloud journeys."><i></i>Journeys triggered by real signals<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Marketing Cloud" data-title="Marketing Cloud cleanup" data-message="Interested in: cleaning up journeys and consent."><i></i>Clean up journeys and consent<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Marketing Cloud" data-title="AI personalization" data-message="Interested in: next best offer and AI personalization."><i></i>Next best offer and personalization<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Managed services" data-kicker="Marketing Cloud" data-title="Marketing Cloud operations" data-message="Interested in: Marketing Cloud campaign operations."><i></i>Campaign operations<em>&rarr;</em></button></td></tr>
-            <tr><th scope="row">Health Cloud</th>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Health Cloud" data-title="Health Cloud implementation" data-message="Interested in: Health Cloud patient onboarding and care coordination."><i></i>Patient onboarding and care coordination<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Health Cloud" data-title="Health Cloud compliance fix" data-message="Interested in: closing consent and HIPAA gaps in Health Cloud."><i></i>Close consent and HIPAA gaps<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Health Cloud" data-title="Patient query agents" data-message="Interested in: AI agents for tier-1 patient queries."><i></i>Tier-1 patient query agents<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Managed services" data-kicker="Health Cloud" data-title="Health Cloud managed services" data-message="Interested in: Health Cloud managed services."><i></i>Care team support<em>&rarr;</em></button></td></tr>
-            <tr><th scope="row">Financial Services Cloud</th>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Financial Services Cloud" data-title="Financial Services Cloud implementation" data-message="Interested in: KYC onboarding and advisor workflows on Financial Services Cloud."><i></i>KYC onboarding and advisor workflows<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Salesforce org audit &amp; rescue" data-kicker="Financial Services Cloud" data-title="Compliance tracking fix" data-message="Interested in: fixing compliance tracking in Financial Services Cloud."><i></i>Fix compliance tracking<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Financial Services Cloud" data-title="Advisor AI" data-message="Interested in: advisor assist and AI risk signals."><i></i>Advisor assist and risk signals<em>&rarr;</em></button></td>
-              <td><button class="mx__cell" type="button" data-open="audit" data-interest="Managed services" data-kicker="Financial Services Cloud" data-title="Regulated release management" data-message="Interested in: regulated release management for Financial Services Cloud."><i></i>Regulated release management<em>&rarr;</em></button></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <p class="mx__note rv">Also on Commerce Cloud, OmniStudio, MuleSoft, Tableau and Slack.</p>
-  </div>
-</section>
-
-<section class="sx" id="accelerators" aria-labelledby="kit-h">
-  <div class="wrap">
-    <div class="sx__head">
-      <div><h2 id="kit-h" class="rv">Weeks of foundation work, <em>already built.</em></h2><p class="rv" data-d="1">40+ accelerators, templates and frameworks. Each one replaces work a project would otherwise start from a blank org.</p></div>
-      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Accelerators" data-title="Salesforce accelerator catalogue" data-track="kit_catalogue">Get the full catalogue <i aria-hidden="true">&rarr;</i></a>
-    </div>
-    <div class="shelf">
-      <a class="kit rv" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Accelerator" data-title="Sales Cloud Quick-Start" data-track="kit_sales"><span class="kit__t kit__t--b">6 weeks</span><b>Sales Cloud Quick-Start</b><span>Pipeline stages, KPI dashboards and sales automation, deployed.</span><em>Request this kit &rarr;</em></a>
-      <a class="kit rv" data-d="1" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Accelerator" data-title="Service Cloud Rapid Deploy" data-track="kit_service"><span class="kit__t kit__t--g">8 weeks</span><b>Service Cloud Rapid Deploy</b><span>Omnichannel routing, knowledge base and CSAT automation.</span><em>Request this kit &rarr;</em></a>
-      <a class="kit rv" data-d="2" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Accelerator" data-title="Agent Launch Kit" data-track="kit_agent"><span class="kit__t kit__t--r">&lt; 4 weeks</span><b>Agent Launch Kit</b><span>Pre-configured Agentforce agents for qualification, case triage and self-service.</span><em>Request this kit &rarr;</em></a>
-      <a class="kit rv" data-d="3" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Accelerator" data-title="Data Cloud Onboarding Kit" data-track="kit_data"><span class="kit__t">Fixed scope</span><b>Data Cloud Onboarding Kit</b><span>Ingestion templates for CRM, web analytics and marketing data.</span><em>Request this kit &rarr;</em></a>
-      <a class="kit rv" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Accelerator" data-title="CPQ Revenue Cloud Starter" data-track="kit_cpq"><span class="kit__t">Fixed scope</span><b>CPQ Revenue Cloud Starter</b><span>Product catalog, pricing rules and approval workflows for B2B subscriptions.</span><em>Request this kit &rarr;</em></a>
-      <a class="kit rv" data-d="1" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Accelerator" data-title="Enterprise RAG Starter" data-track="kit_rag"><span class="kit__t">Fixed scope</span><b>Enterprise RAG Starter</b><span>A knowledge assistant with connectors for Salesforce Knowledge, SharePoint and PDFs.</span><em>Request this kit &rarr;</em></a>
-      <a class="kit rv" data-d="2" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Accelerator" data-title="AI Scoring Engine" data-track="kit_scoring"><span class="kit__t">Fixed scope</span><b>AI Scoring Engine</b><span>Lead scoring, opportunity health and churn risk models trained on CRM history.</span><em>Request this kit &rarr;</em></a>
-      <a class="kit rv" data-d="3" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Industry accelerators" data-title="Industry accelerator" data-track="kit_industry"><span class="kit__t">Industry</span><b>Industry kits</b><span>Health Cloud patient journeys, FSC onboarding, retail personalization and telecom order management.</span><em>Request this kit &rarr;</em></a>
-    </div>
-  </div>
-</section>
-
 <section class="proof proof--page" aria-labelledby="proof-h">
   <div class="wrap">
+    <p class="k3 k3--inv rv">Client result</p>
     <h2 id="proof-h" class="rv">What one Salesforce program <em>changed.</em></h2>
-    <article class="case rv" data-case>
-      <header class="case__head">
-        <div>
-          <p class="case__who">Regional health system</p>
-          <h3>Patients waited two days for an answer. Now most questions never need a person.</h3>
-        </div>
-        <div class="toggle" role="tablist" aria-label="Before and after">
-          <span class="toggle__thumb" aria-hidden="true"></span>
-          <button role="tab" aria-selected="true" data-state="before">Before</button>
-          <button role="tab" aria-selected="false" data-state="after">After Procyon</button>
-        </div>
-      </header>
-
-      <div class="case__grid">
-        <div class="case__nums-wrap">
-          <dl class="case__nums case__nums--before">
-            <div><dt>48 hrs</dt><dd>average patient response</dd></div>
-            <div><dt>3</dt><dd>disconnected record systems</dd></div>
-            <div><dt>30%+</dt><dd>of staff time lost to admin</dd></div>
-            <div><dt>Manual</dt><dd>intake for every request</dd></div>
-          </dl>
-          <dl class="case__nums case__nums--after">
-            <div><dt><span data-count="50">50</span>%</dt><dd>faster patient response</dd></div>
-            <div><dt><span data-count="60">60</span>%</dt><dd>of requests resolved by AI agents</dd></div>
-            <div><dt>+<span data-count="28">28</span></dt><dd>points in patient satisfaction</dd></div>
-            <div><dt><span data-count="35">35</span>%</dt><dd>less administrative work</dd></div>
-          </dl>
-        </div>
-        <div class="case__built">
-          <p class="case__k">What we built</p>
-          <ul>
-            <li>One patient identity on Health Cloud and Data Cloud</li>
-            <li>Agentforce agents on tier-1 patient queries</li>
-            <li>A knowledge assistant for clinical staff</li>
-            <li>Headless APIs feeding the patient app</li>
-          </ul>
-          <a class="arrow-link arrow-link--inv" href="/case-studies">Read the full story <i aria-hidden="true">&rarr;</i></a>
-        </div>
+    <article class="cs rv">
+      <div>
+        <p class="cs__who">Regional health system &middot; Health Cloud, Data Cloud, Agentforce</p>
+        <h3>Patients waited two days for an answer. Now most questions never need a person.</h3>
+        <p class="cs__p">Patient records sat in three systems, every request was keyed in by hand, and staff spent close to a third of their time on admin. The program joined the records first, then put agents on the questions the data could answer.</p>
+        <ul class="cs__built">
+          <li>One patient identity on Health Cloud and Data Cloud</li>
+          <li>Agentforce agents on tier-1 patient queries</li>
+          <li>A knowledge assistant for clinical staff</li>
+          <li>Headless APIs feeding the patient app</li>
+        </ul>
+      </div>
+      <div>
+        <table class="cs__tbl">
+          <thead><tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+          <tbody>
+            <tr><td>Patient response time</td><td>48 hours</td><td>50% faster</td></tr>
+            <tr><td>Requests resolved without staff</td><td>None</td><td>60%</td></tr>
+            <tr><td>Patient satisfaction</td><td>Baseline</td><td>+28 points</td></tr>
+            <tr><td>Administrative workload</td><td>30%+ of staff time</td><td>35% lower</td></tr>
+          </tbody>
+        </table>
+        <p class="cs__src">Measured by the client against the pre-program baseline.</p>
+        <a class="arrow-link arrow-link--inv cs__go" href="/case-studies">Read more client stories <i aria-hidden="true">&rarr;</i></a>
       </div>
     </article>
   </div>
@@ -616,17 +560,14 @@
 <section class="sx" aria-labelledby="model-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="model-h" class="rv">Fixed price, time and materials, <em>or paid on outcomes.</em></h2><p class="rv" data-d="1">Four ways to contract. The first call ends with a written recommendation on which one fits the scope and the procurement process.</p></div>
+      <div><p class="k3 rv">Commercials</p><h2 id="model-h" class="rv">Four ways to contract, <em>picked to fit the scope.</em></h2><p class="rv" data-d="1">The first call ends with a written recommendation on which model fits the work and the procurement process. Most programs mix two.</p></div>
     </div>
-    <div class="models rv">
-      <div class="model"><b>Fixed scope</b><span>Defined deliverables, timeline and cost.</span><small>Best when</small><p>The outcome is clear, such as a cloud rollout or an accelerator.</p><a class="arrow-link" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-title="Fixed-price Salesforce project">Scope a fixed price <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="model"><b>Time and materials</b><span>Flexible capacity for evolving scope.</span><small>Best when</small><p>The roadmap will change, or AI use cases are still being explored.</p><a class="arrow-link" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-title="Time and materials engagement">Plan capacity <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="model"><b>Outcome-based</b><span>Part of the fee tied to business KPIs.</span><small>Best when</small><p>One metric matters most, such as response time or win rate.</p><a class="arrow-link" href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-title="Outcome-based contract">Tie fees to a KPI <i aria-hidden="true">&rarr;</i></a></div>
-      <div class="model"><b>Managed services</b><span>Platform management and continuous improvement.</span><small>Best when</small><p>The org is live and should keep getting better every month.</p><a class="arrow-link" href="/enterprise/salesforce/managed-services">Compare tiers <i aria-hidden="true">&rarr;</i></a></div>
-    </div>
-    <div class="certs rv">
-      <b>Certified in</b><span>Salesforce Consulting Partner</span><span>Administrator</span><span>Platform Developer</span><span>Sales Cloud Consultant</span><span>Service Cloud Consultant</span><span>Revenue Cloud</span><span>Data Cloud</span><span>Einstein AI</span>
-    </div>
+    <ul class="terms rv">
+      <li><b>Fixed scope</b><span>Defined deliverables, timeline and cost. Best when the outcome is clear, such as a cloud rollout or a starter.</span></li>
+      <li><b>Time and materials</b><span>Flexible capacity for a roadmap that will change, or for AI use cases still being explored.</span></li>
+      <li><b>Outcome-based</b><span>Part of the fee tied to a business KPI, such as response time or win rate, agreed in writing up front.</span></li>
+      <li><b>Managed services</b><span>A monthly retainer for admin, releases and improvement once the org is live.</span></li>
+    </ul>
   </div>
 </section>
 
@@ -799,7 +740,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

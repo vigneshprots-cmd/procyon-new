@@ -3,8 +3,6 @@
    Loaded after styles.css and pages.css on Insights and job pages only.
    ========================================================= */
 
-/* ---------- Index hero: latest article card ---------- */
-.ph--ins { padding-bottom: 80px; }
 .feat { display: flex; flex-direction: column; gap: 10px; padding: 0 0 24px; border-radius: 20px; overflow: hidden; background: #fff; color: var(--ink); text-decoration: none; box-shadow: 0 60px 120px -40px rgba(0,0,0,.9); transition: transform .4s var(--ease); }
 .feat:hover { transform: translateY(-4px); }
 .feat img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; margin-bottom: 8px; }
@@ -133,8 +131,6 @@
 .story__ticks { grid-template-columns: 1fr; gap: 14px; font-size: 16.5px; }
 .story__q { margin: 28px 0 0; padding-left: 20px; border-left: 4px solid var(--green); font-size: 18px; color: var(--ink); }
 .days--3 { grid-template-columns: repeat(3, 1fr); }
-.days--2 { grid-template-columns: repeat(2, 1fr); }
-.days--1 { grid-template-columns: 1fr; }
 .two-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
 .two-lists h2 { font-size: clamp(26px, 2.6vw, 36px); margin-bottom: 22px; }
 .two-lists .ticks { grid-template-columns: 1fr; }
@@ -196,7 +192,7 @@
   .outc__list li + li { border-left: 0; }
   .outc__list li:nth-child(even) { border-left: 1px solid var(--line); }
   .outc__list li:nth-child(n+3) { border-top: 1px solid var(--line); }
-  .days--3, .days--2 { grid-template-columns: 1fr; }
+  .days--3{ grid-template-columns: 1fr; }
   .ev-row { grid-template-columns: 1fr; gap: 14px; padding: 22px 20px; }
   .ev-row > i { display: none; }
   .feat > *:not(img) { padding: 0 18px; }
@@ -262,3 +258,21 @@
 @media (max-width: 720px) {
   .ins__bar { -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
 }
+
+/* ---------- v6: light editorial heroes on insights pages ---------- */
+.hx .feat { box-shadow: none; border: 1px solid var(--line); border-radius: 0; padding-bottom: 22px; }
+.hx .feat:hover { border-color: var(--ink); }
+.hx--post .post__head { max-width: 920px; padding: 44px 0 52px; }
+.hx--post .hx__h { font-size: clamp(32px, 3.8vw, 52px); line-height: 1.1; max-width: 24ch; }
+.hx--post .ph__lede { max-width: 46em; }
+.hx .post__by { color: var(--muted); }
+.hx .post__by b { color: var(--ink); }
+.hx .post__by > * + *::before { background: #C3C8CE; }
+.hx--post + .post__cover { margin-top: 40px; }
+.post__cover img { box-shadow: none; border-radius: 4px; }
+.hx .job__facts span { border-color: var(--line); color: var(--ink-2); }
+.hx:has(+ .outc) { border-bottom: 0; }
+.outc { padding-top: 0; margin-top: 0; background: #fff; }
+.outc__list { border-radius: 0; box-shadow: none; border: 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); }
+.outc__list b, .outc__list li:nth-child(n) b { color: var(--ink); }
+@media (max-width: 720px) { .outc { margin-top: 0; } .hx--post + .post__cover { margin-top: 24px; } .hx--post .post__head { padding: 28px 0 36px; } }

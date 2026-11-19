@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -303,7 +304,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -342,7 +343,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud" aria-current="page">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -351,48 +352,56 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/enterprise/salesforce">Salesforce</a></li><li aria-current="page">Data Cloud &amp; integration</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Data Cloud &amp; Integration</p>
-        <h1 id="ph-h" class="ph__h">One customer. One record. <em>Every system agrees.</em></h1>
-        <p class="ph__lede"><b>Procyon connects Salesforce to the rest of the business.</b> We implement Data Cloud and build MuleSoft and API integrations with SAP, Oracle, NetSuite, Workday and the data warehouse, so sales, service, marketing and AI agents all act on the same real-time customer profile.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud &amp; integration" data-title="Customer data unification plan" data-track="data_hero">Unify customer data <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#flows">See what connects</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Data Cloud &amp; integration</p>
+        <h1 id="ph-h" class="hx__h">Agree who the customer is <em>before unifying anything.</em></h1>
+        <p class="ph__lede"><b>Procyon implements Data Cloud and builds the MuleSoft and API integrations that feed it.</b> ERP, billing, HR, web and warehouse data land on one customer profile, with identity rules the business has signed and consent applied before anything is activated. Sales, service, marketing and Agentforce then work from the same record.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud &amp; integration" data-title="Customer data unification plan" data-track="data_hero">Unify customer data <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#flows">See what connects <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-        <div class="wcard">
-          <span class="wcard__k">One account, five systems</span>
-          <div class="prof__who"><span class="prof__av" aria-hidden="true">NA</span><div><b>Northwind Analytics</b><span>Sample profile, as an account owner sees it</span></div></div>
-          <ul class="prof__rows">
-            <li><i>ERP</i><span>3 open orders, credit limit 82% used</span></li>
-            <li><i>Service</i><span>1 priority case, response due in 2 hours</span></li>
-            <li><i>Web</i><span>Pricing page visited 4 times this week</span></li>
-            <li><i>Billing</i><span>Renewal in 41 days, usage up 18%</span></li>
-            <li><i>Next step</i><span>Agent drafts an expansion offer for the owner</span></li>
-          </ul>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud" data-title="Unified customer profile build" data-message="Systems that should feed one customer profile: " data-track="data_profile_cta" style="margin-top:18px">Build this view on live data <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">Illustrative account. The real profile uses the client's own systems and rules.</p>
-        </div>
-      </div>
+      <aside class="brief" aria-labelledby="brief-h">
+        <p class="brief__k">The first engagement</p>
+        <p class="brief__t" id="brief-h">Data Cloud Onboarding Kit</p>
+        <p class="brief__d">The first unified profile built for one use case, from ingestion templates instead of a blank data model.</p>
+        <dl>
+          <div><dt>Starts with</dt><dd>A map of every source, owner and identity key</dd></div>
+          <div><dt>Ingests</dt><dd>CRM, web analytics and marketing data, from tested templates</dd></div>
+          <div><dt>You end with</dt><dd>Unified profiles with match rates reported, identity rules agreed and consent applied</dd></div>
+          <div><dt>Commercials</dt><dd>Fixed scope</dd></div>
+        </dl>
+        <a class="brief__go" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Accelerator" data-title="Data Cloud Onboarding Kit" data-track="data_kit">Scope the onboarding kit <i aria-hidden="true">&rarr;</i></a>
+      </aside>
     </div>
+    <dl class="hx__facts">
+      <div><dt>Systems integrated</dt><dd>12+<span>SAP, Oracle, NetSuite, Workday, Snowflake and more</span></dd></div>
+      <div><dt>Connection</dt><dd>MuleSoft or native APIs<span>chosen per flow in design</span></dd></div>
+      <div><dt>Governance</dt><dd>GDPR, CCPA, HIPAA<span>consent applied before activation</span></dd></div>
+      <div><dt>Engagement</dt><dd>35%+ higher<span>after personalization on unified data</span></dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Systems integrated</dt><dd><b>12+</b>SAP, Oracle, NetSuite, Workday, Snowflake and more</dd></div>
-        <div><dt>Customer engagement</dt><dd><b>35%+</b>higher after personalization on unified data</dd></div>
-        <div><dt>Operational efficiency</dt><dd><b>40 to 60%</b>gains from automation on connected data</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud &amp; integration" data-title="Customer data unification plan" data-track="data_kf"><small>Free &middot; 30 minutes</small><b>Unify customer data</b><span>Target data map and a phased plan</span><i aria-hidden="true">&rarr;</i></a>
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">Data Cloud programs fail on identity rules, <em>not ingestion.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">Getting data into Data Cloud is the easier half. Data streams and templates bring CRM, web and ERP data in quickly. The hard half is deciding when two records are the same person or the same account, which system wins when they disagree, and what each profile may be used for.</p>
+      <p class="rv">Those are business decisions dressed as technical ones. Left to the build team, match rules end up too loose, merging two customers into one profile that an agent will then describe to the wrong person, or too strict, so the duplicates survive and nothing changes.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>Unifying everything at once</h3><p>Every source connected on day one, before anyone has said what the profile is for. Months pass before a single team uses it.<small>First move: <b>one use case, and only the sources it needs</b></small></p></li>
+        <li class="rv"><h3>Match rules nobody signed</h3><p>Exact email match misses anyone with two addresses. Loose name and address matching merges people who are not the same.<small>First move: <b>match and reconciliation rules approved by data owners, with match rates reported</b></small></p></li>
+        <li class="rv"><h3>Consent as an afterthought</h3><p>Someone opts out in one system and keeps receiving email from another, because consent was never carried with the record.<small>First move: <b>consent and purpose captured per source before activation</b></small></p></li>
+        <li class="rv"><h3>Copying the warehouse</h3><p>Finance figures copied into CRM become a second version that drifts within weeks, and AI scores disagree with the board pack.<small>First move: <b>zero-copy where the warehouse is the system of record</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -400,105 +409,96 @@
 <section class="sx sx--paper" id="flows" aria-labelledby="flows-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="flows-h" class="rv">What changes for each team <em>once the systems connect.</em></h2><p class="rv" data-d="1">The six integrations built most often. Pick a system to see the problem it causes today, what the team sees once it is connected, and how the connection works.</p></div>
+      <div><p class="k3 rv">What connects</p><h2 id="flows-h" class="rv">Six integrations built most often, <em>and what each team sees after.</em></h2><p class="rv" data-d="1">The connection pattern is chosen per flow: real-time API where a person is waiting on the answer, events or batch where they are not.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Integration" data-title="Salesforce integration scope" data-track="flows_head">Scope an integration <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="xpl rv" data-tabs>
-    <div class="xpl__tabs" role="tablist" aria-label="Systems to connect">
-      <button type="button" role="tab" id="dcx-t0" aria-controls="dcx-p0" aria-selected="true"><b>SAP or Oracle ERP</b><small>Reps email finance before every quote</small></button>
-      <button type="button" role="tab" id="dcx-t1" aria-controls="dcx-p1" aria-selected="false" tabindex="-1"><b>NetSuite</b><small>Renewals discovered too late</small></button>
-      <button type="button" role="tab" id="dcx-t2" aria-controls="dcx-p2" aria-selected="false" tabindex="-1"><b>Workday</b><small>Routing breaks whenever people move</small></button>
-      <button type="button" role="tab" id="dcx-t3" aria-controls="dcx-p3" aria-selected="false" tabindex="-1"><b>Website, app and commerce</b><small>Sales calls the wrong accounts</small></button>
-      <button type="button" role="tab" id="dcx-t4" aria-controls="dcx-p4" aria-selected="false" tabindex="-1"><b>Snowflake or Databricks</b><small>AI and finance work from different numbers</small></button>
-      <button type="button" role="tab" id="dcx-t5" aria-controls="dcx-p5" aria-selected="false" tabindex="-1"><b>Slack and WhatsApp</b><small>Approvals wait for someone to log in</small></button>
+    <div class="sit">
+      <article class="rv"><small>SAP or Oracle ERP</small><h3>Credit, orders and invoices on the account before the quote goes out</h3><p>Today reps email finance before every quote. Once connected, open orders and invoice status sit on the account, credit headroom is checked at quote time, and service sees what shipped without a ticket.</p><p class="sit__do"><b>How it connects</b>Real-time API through MuleSoft</p></article>
+      <article class="rv" data-d="1"><small>NetSuite</small><h3>Renewal dates and payment status beside every opportunity</h3><p>Account owners learn about an overdue invoice or a renewal after the customer does. Once connected, renewals are worked months early and overdue invoices are visible before the next sales call.</p><p class="sit__do"><b>How it connects</b>Event-driven sync with nightly reconciliation</p></article>
+      <article class="rv" data-d="2"><small>Workday</small><h3>Territories, skills and reporting lines that update themselves</h3><p>Queues and territories kept by hand send leads and cases to the wrong person for weeks after every move. Once connected, people changes flow in and routing survives reorganizations.</p><p class="sit__do"><b>How it connects</b>Scheduled batch with change detection</p></article>
+      <article class="rv"><small>Website, app and commerce</small><h3>Buying intent on the contact, in real time</h3><p>Intent shows up on the website and in the product long before a form is filled. Once streamed, page views, usage and cart activity sit on the profile and journeys fire on behaviour, not on a batch.</p><p class="sit__do"><b>How it connects</b>Data Cloud web and mobile SDKs, streaming</p></article>
+      <article class="rv" data-d="1"><small>Snowflake or Databricks</small><h3>Warehouse figures inside Salesforce, without copying them</h3><p>The warehouse holds the numbers finance trusts. Read in place, they give CRM, analytics and AI scoring one source of truth and no duplicate pipelines to maintain.</p><p class="sit__do"><b>How it connects</b>Zero-copy federation</p></article>
+      <article class="rv" data-d="2"><small>Slack and WhatsApp</small><h3>Approvals and customer messages where people already work</h3><p>Approvals wait in Salesforce queues until someone logs in. Once connected, approvals complete from Slack, WhatsApp conversations log to the case, and alerts reach the owner rather than a queue.</p><p class="sit__do"><b>How it connects</b>Event-driven messaging</p></article>
     </div>
-    <div class="xpl__panel" role="tabpanel" id="dcx-p0" aria-labelledby="dcx-t0">
-      <p class="xpl__pain"><small>The situation</small>Orders, invoices and credit limits live in the ERP. Sales cannot see them, so every quote waits on a reply from finance.</p>
-      <h3>Credit, orders and invoices on the account before the quote goes out.</h3>
-      <ul class="xpl__gets"><li>Open orders and invoice status on every account page</li><li>Credit headroom checked automatically at quote time</li><li>Service sees what shipped without raising a ticket</li></ul>
-      <div class="xpl__side">
-        
-        <div class="xpl__how"><small>How it connects</small><p>Real-time API through MuleSoft.</p></div>
-        <div class="xpl__stack"><span>SAP</span><span>Oracle</span><span>MuleSoft</span><span>Sales Cloud</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="ERP integration" data-title="SAP or Oracle to Salesforce" data-message="Integration: SAP or Oracle ERP to Salesforce.">Connect the ERP <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="dcx-p1" aria-labelledby="dcx-t1" hidden>
-      <p class="xpl__pain"><small>The situation</small>Billing and payment data sits in NetSuite, so account owners learn about an overdue invoice or a renewal date after the customer does.</p>
-      <h3>Renewal dates and payment status beside every opportunity.</h3>
-      <ul class="xpl__gets"><li>Billing, payments and renewal dates on the account</li><li>Renewals worked months early, not days</li><li>Overdue invoices visible before the next sales call</li></ul>
-      <div class="xpl__side">
-        
-        <div class="xpl__how"><small>How it connects</small><p>Event-driven sync with nightly reconciliation.</p></div>
-        <div class="xpl__stack"><span>NetSuite</span><span>Revenue Cloud</span><span>Sales Cloud</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Billing integration" data-title="NetSuite to Salesforce" data-message="Integration: NetSuite to Salesforce.">Connect NetSuite <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="dcx-p2" aria-labelledby="dcx-t2" hidden>
-      <p class="xpl__pain"><small>The situation</small>Territories and queues are maintained by hand. When someone joins, moves or leaves, leads and cases go to the wrong person for weeks.</p>
-      <h3>Territories, skills and reporting lines that update themselves.</h3>
-      <ul class="xpl__gets"><li>People changes flow into Salesforce automatically</li><li>Lead and case routing stays right through reorganizations</li><li>Managers see the right team in every report</li></ul>
-      <div class="xpl__side">
-        
-        <div class="xpl__how"><small>How it connects</small><p>Scheduled batch with change detection.</p></div>
-        <div class="xpl__stack"><span>Workday</span><span>Sales Cloud</span><span>Service Cloud</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="HR integration" data-title="Workday to Salesforce" data-message="Integration: Workday to Salesforce.">Connect Workday <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="dcx-p3" aria-labelledby="dcx-t3" hidden>
-      <p class="xpl__pain"><small>The situation</small>Buying intent shows up on the website and inside the product long before anyone fills in a form, and sales never sees it.</p>
-      <h3>Product usage and buying intent on the contact, in real time.</h3>
-      <ul class="xpl__gets"><li>Page views, product usage and cart activity on the profile</li><li>Accounts researching right now surfaced to the owner</li><li>Journeys triggered by behaviour, not by batch</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>35%+</b><span>Higher engagement after personalization on unified data</span></div>
-        <div class="xpl__how"><small>How it connects</small><p>Data Cloud web and mobile SDKs, streaming.</p></div>
-        <div class="xpl__stack"><span>Data Cloud</span><span>Marketing Cloud</span><span>Commerce</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Behaviour data" data-title="Web and app data into Data Cloud" data-message="Integration: website, app and commerce data into Data Cloud.">Stream behaviour data <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="dcx-p4" aria-labelledby="dcx-t4" hidden>
-      <p class="xpl__pain"><small>The situation</small>The warehouse holds the figures finance trusts. Copying them into CRM creates a second version that drifts within weeks.</p>
-      <h3>Warehouse figures inside Salesforce, without copying the data.</h3>
-      <ul class="xpl__gets"><li>One source of truth for finance, analytics and CRM</li><li>AI scoring that uses the same numbers as finance</li><li>No duplicate pipelines to build or maintain</li></ul>
-      <div class="xpl__side">
-        
-        <div class="xpl__how"><small>How it connects</small><p>Zero-copy federation.</p></div>
-        <div class="xpl__stack"><span>Snowflake</span><span>Databricks</span><span>Data Cloud</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Warehouse integration" data-title="Snowflake or Databricks with Data Cloud" data-message="Integration: Snowflake or Databricks with Data Cloud.">Federate the warehouse <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="dcx-p5" aria-labelledby="dcx-t5" hidden>
-      <p class="xpl__pain"><small>The situation</small>Approvals and alerts sit in Salesforce queues until someone opens the app, while customers wait on the other end.</p>
-      <h3>Approvals, alerts and customer messages where people already work.</h3>
-      <ul class="xpl__gets"><li>Approvals completed from Slack in one click</li><li>Customer conversations on WhatsApp logged to the case</li><li>Alerts that reach the owner, not a queue</li></ul>
-      <div class="xpl__side">
-        
-        <div class="xpl__how"><small>How it connects</small><p>Event-driven messaging.</p></div>
-        <div class="xpl__stack"><span>Slack</span><span>WhatsApp</span><span>Service Cloud</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Messaging integration" data-title="Slack and WhatsApp with Salesforce" data-message="Integration: Slack and WhatsApp with Salesforce.">Connect messaging <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-  </div>
-    <p class="flows__note rv">Also connected: Tableau dashboards, Okta single sign-on, CyberArk privileged access and Salesforce Shield encryption.</p>
+    <p class="offers__note rv">Also connected: Tableau dashboards, Okta single sign-on, CyberArk privileged access and Salesforce Shield encryption.</p>
   </div>
 </section>
 
-<section class="sx" aria-labelledby="trust-h">
+<section class="sx" id="order" aria-labelledby="order-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="trust-h" class="rv">AI acts on the record, <em>so the record gets fixed first.</em></h2><p class="rv" data-d="1">Four problems every Data Cloud program clears before agents or journeys are allowed to act on the data.</p></div>
+      <div><p class="k3 rv">How it runs</p><h2 id="order-h" class="rv">Nothing is activated <em>until identity and consent are signed.</em></h2><p class="rv" data-d="1">The order matters more than the speed. Each step ends with a decision the data owners sign, so the first activated profile is one the business already agrees with.</p></div>
+    </div>
+    <ol class="gates rv" style="--n:5">
+      <li><span class="gates__w">Before build</span><b>Map</b><p>Every source of customer data, its owner, the keys that identify a person or account, and the first use case.</p><em>Source and identity map</em></li>
+      <li><span class="gates__w">Build</span><b>Ingest and model</b><p>Data streams set up from templates and mapped to the Data Cloud data model, field by field.</p><em>Row counts reconciled to source</em></li>
+      <li><span class="gates__w">Build</span><b>Resolve</b><p>Match rules and reconciliation rules that decide which system wins for each field. Match rates reviewed on real records.</p><em>Identity rules signed by data owners</em></li>
+      <li><span class="gates__w">Before activation</span><b>Govern</b><p>Consent, retention and access rules applied per source, with HIPAA controls and Shield encryption where required.</p><em>Consent and access approved</em></li>
+      <li><span class="gates__w">Go-live</span><b>Activate</b><p>Profiles put to work in Sales, Service, Marketing Cloud or as grounding for Agentforce, starting with the one use case.</p><em>First use case live</em></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="trust-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Data quality</p><h2 id="trust-h" class="rv">AI acts on the record, <em>so the record gets fixed first.</em></h2><p class="rv" data-d="1">Four problems every Data Cloud program clears before agents or journeys are allowed to act on the data.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data quality" data-title="Customer data quality check" data-track="trust_head">Check data quality <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="ba">
-      <div class="rv"><b>Duplicate customers</b><p><small>Before</small>Three accounts for one customer, each with a different owner.</p><p><small>After</small>One resolved profile, with match rates reported.</p></div>
-      <div class="rv" data-d="1"><b>Conflicting fields</b><p><small>Before</small>ERP and CRM disagree on the billing address.</p><p><small>After</small>A golden-record rule decides which system wins, field by field.</p></div>
-      <div class="rv" data-d="2"><b>Untraceable values</b><p><small>Before</small>Nobody can say where a number came from.</p><p><small>After</small>Lineage on every field: source system and last change.</p></div>
-      <div class="rv" data-d="3"><b>Consent gaps</b><p><small>Before</small>Marketing emails people who opted out in another system.</p><p><small>After</small>GDPR, CCPA and HIPAA consent applied before activation.</p></div>
+    <ul class="terms rv">
+      <li><b>Duplicate customers</b><span>Three accounts for one customer, each with a different owner. Resolved into one profile, with match rates reported to the data owner.</span></li>
+      <li><b>Conflicting fields</b><span>ERP and CRM disagree on the billing address. A golden-record rule decides which system wins, field by field.</span></li>
+      <li><b>Untraceable values</b><span>Nobody can say where a number came from. Every field carries its source system and last change.</span></li>
+      <li><b>Consent gaps</b><span>Marketing emails people who opted out elsewhere. GDPR, CCPA and HIPAA consent is applied before any activation.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="proof proof--page" aria-labelledby="proof-h">
+  <div class="wrap">
+    <p class="k3 k3--inv rv">Client result</p>
+    <h2 id="proof-h" class="rv">One patient identity first, <em>then the agents.</em></h2>
+    <article class="cs rv">
+      <div>
+        <p class="cs__who">Regional health system &middot; Health Cloud, Data Cloud, Agentforce</p>
+        <h3>Patients waited two days for an answer. Now most questions never need a person.</h3>
+        <p class="cs__p">Patient records sat in three systems, every request was keyed in by hand, and staff spent close to a third of their time on admin. The program joined the records first, then put agents on the questions the data could answer.</p>
+        <ul class="cs__built">
+          <li>One patient identity on Health Cloud and Data Cloud</li>
+          <li>Agentforce agents on tier-1 patient queries</li>
+          <li>A knowledge assistant for clinical staff</li>
+          <li>Headless APIs feeding the patient app</li>
+        </ul>
+      </div>
+      <div>
+        <table class="cs__tbl">
+          <thead><tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+          <tbody>
+            <tr><td>Patient response time</td><td>48 hours</td><td>50% faster</td></tr>
+            <tr><td>Requests resolved without staff</td><td>None</td><td>60%</td></tr>
+            <tr><td>Patient satisfaction</td><td>Baseline</td><td>+28 points</td></tr>
+            <tr><td>Administrative workload</td><td>30%+ of staff time</td><td>35% lower</td></tr>
+          </tbody>
+        </table>
+        <p class="cs__src">Measured by the client against the pre-program baseline.</p>
+        <a class="arrow-link arrow-link--inv cs__go" href="/case-studies">Read more client stories <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sx" id="start" aria-labelledby="start-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Ways to start</p><h2 id="start-h" class="rv">Start with one flow <em>or one profile.</em></h2><p class="rv" data-d="1">Each of these stands alone, and each is designed so the next one does not undo it.</p></div>
+      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data Cloud &amp; integration" data-title="Customer data unification plan">Get the data map <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="band rv" style="margin-top:44px">
-      <div><b>Data Cloud Onboarding Kit</b><span>Ingestion templates for CRM, web analytics and marketing data, with identity rules ready to tune.</span></div>
-      <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Accelerator" data-title="Data Cloud Onboarding Kit" data-track="data_kit">Request the kit <i aria-hidden="true">&rarr;</i></a>
-    </div>
+    <dl class="caplist caplist--2 rv">
+      <div><dt>Data Cloud Onboarding Kit</dt><dd>Ingestion templates for CRM, web analytics and marketing data, with identity resolution rules ready to tune against real records.</dd></div>
+      <div><dt>ERP integration</dt><dd>Real-time and batch integration between Salesforce and SAP, Oracle, NetSuite or Workday, load-tested before go-live.</dd></div>
+      <div><dt>Data governance</dt><dd>Consent, retention and access controls aligned with GDPR, CCPA and HIPAA, designed into the data model rather than added later.</dd></div>
+      <div><dt>Analytics integration</dt><dd>Zero-copy and batch connections with Snowflake, Databricks and Tableau, so CRM and finance read the same numbers.</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -507,7 +507,6 @@
   <div class="wrap">
     <p id="clients-h" class="clients__k">Enterprise teams that have run on Procyon delivery</p>
     <div class="clients__band">
-      <div class="clients__stat"><b>200+</b><span>enterprise clients<br>since 2004</span></div>
       <div class="ticker" data-ticker>
         <ul class="ticker__track" aria-label="Clients">
         <li><img src="/assets/img/clients/cisco.webp" alt="Cisco" width="181" height="96" loading="lazy"></li>
@@ -696,7 +695,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

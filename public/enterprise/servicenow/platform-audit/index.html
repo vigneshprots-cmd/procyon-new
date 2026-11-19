@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -287,7 +288,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -326,7 +327,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit" aria-current="page">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -335,149 +336,135 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/enterprise/servicenow">ServiceNow</a></li><li aria-current="page">Platform audit &amp; tech-debt removal</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Platform audit &amp; tech-debt removal</p>
-        <h1 id="ph-h" class="ph__h">Three years of ServiceNow debt. <em>Cleared in eight weeks.</em></h1>
-        <p class="ph__lede"><b>The typical ServiceNow instance runs at 30 to 40% of what was licensed.</b> A 2 to 3 week health check audits CMDB integrity, workflows, integrations and licensed utilization. Every broken flow, orphaned record and workaround is documented, then fixed on a fixed SOW before any new module goes live.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="ServiceNow tech-debt removal" data-kicker="Platform health check" data-title="Free ServiceNow platform health check">Book a free platform health check <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#areas">See what gets audited</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Platform audit &amp; tech-debt removal</p>
+        <h1 id="ph-h" class="hx__h">ServiceNow debt compounds <em>twice a year.</em></h1>
+        <p class="ph__lede"><b>Procyon audits a ServiceNow instance in 2 to 3 weeks, then removes the debt on a fixed SOW in about eight.</b> Every family release re-tests the customizations a previous team left behind, which is why upgrades slow down and licensed modules sit idle. The typical instance we audit runs at 30 to 40% of what was licensed.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="ServiceNow tech-debt removal" data-kicker="Platform health check" data-title="Free ServiceNow platform health check" data-track="sn_audit_hero">Book a platform health check <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#areas">See what gets audited <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-      <figure class="art art--report" aria-label="Sample deliverable: Tech-debt audit">
-        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Tech-debt audit</b><span class="art__meta">Sample findings</span></figcaption>
-        <div class="art__body">
-        <div class="art__top">
-          <div class="art__ring" style="--v:0.49;--c:var(--red)"><svg viewBox="0 0 104 104" aria-hidden="true"><circle class="t" cx="52" cy="52" r="46"/><circle class="v" cx="52" cy="52" r="46"/></svg><b><span data-count="49">49</span><small>health</small></b></div>
-          <div class="art__sum"><b>Clearable in eight weeks</b><span>Three years of customizations, mostly safe to revert to out of the box.</span></div>
-        </div>
-        <p class="art__sec">Where the score is lost</p>
-        <ul class="art__bars"><li style="--i:0;--w:84%;--bc:var(--red)"><span>Custom scripts to revert</span><em>312</em><i></i></li><li style="--i:1;--w:66%;--bc:var(--red)"><span>Skipped upgrade records</span><em>1,180</em><i></i></li><li style="--i:2;--w:48%;--bc:var(--blue)"><span>Unused tables and fields</span><em>96</em><i></i></li><li style="--i:3;--w:22%;--bc:var(--green)"><span>ATF test coverage</span><em>22%</em><i></i></li></ul>
-        <p class="art__sec">Top findings</p>
-        <ul class="art__finds"><li style="--i:0"><span class="chip chip--r">Critical</span><span>Global business rules fire on every table query</span></li><li style="--i:1"><span class="chip chip--r">High</span><span>Hard-coded sys_ids in 58 scripts</span></li><li style="--i:2"><span class="chip chip--g">Quick win</span><span>Deactivate 40 orphaned scheduled jobs</span></li></ul>
-        </div>
-        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="ServiceNow tech-debt removal" data-kicker="Platform health check" data-title="Free ServiceNow platform health check" data-track="hero_artifact_cta">Request the platform audit <i aria-hidden="true">&rarr;</i></a></div>
-      </figure>
+      <aside class="brief" aria-labelledby="brief-h">
+        <p class="brief__k">The first engagement</p>
+        <p class="brief__t" id="brief-h">Platform health check</p>
+        <p class="brief__d">Evidence pulled from the instance itself: CMDB integrity, workflow configuration, integration health and licensed utilization.</p>
+        <dl>
+          <div><dt>Length</dt><dd>2 to 3 weeks</dd></div>
+          <div><dt>Led by</dt><dd>A senior ServiceNow architect, not a sales lead</dd></div>
+          <div><dt>Needs</dt><dd>Admin read access to production and a recent sub-production clone</dd></div>
+          <div><dt>You end with</dt><dd>Every finding ranked by business impact and effort, and a fixed-SOW scope for the fixes</dd></div>
+          <div><dt>Commercials</dt><dd>Fixed scope, no commitment to further work</dd></div>
+        </dl>
+        <a class="brief__go" href="#audit" data-open="audit" data-interest="ServiceNow tech-debt removal" data-kicker="Platform health check" data-title="Free ServiceNow platform health check">Scope the health check <i aria-hidden="true">&rarr;</i></a>
+      </aside>
     </div>
-    </div>
+    <dl class="hx__facts">
+      <div><dt>Health check</dt><dd>2 to 3 weeks<span>To a prioritized remediation plan</span></dd></div>
+      <div><dt>Tech-debt removal</dt><dd>About 8 weeks<span>Including the health check, on a fixed SOW</span></dd></div>
+      <div><dt>Typical instance</dt><dd>30 to 40% in use<span>Of licensed capacity, before the audit</span></dd></div>
+      <div><dt>Pricing</dt><dd>Zero markup<span>Technology costs passed through at cost</span></dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Health check</dt><dd><b>2 to 3 weeks</b>to a prioritized remediation plan</dd></div>
-        <div><dt>Tech-debt removal</dt><dd><b>8 weeks</b>for a structured clean-up on a fixed SOW</dd></div>
-        <div><dt>Typical instance</dt><dd><b>30 to 40%</b>of licensed capacity in use before the audit</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="ServiceNow tech-debt removal" data-kicker="Platform health check" data-title="Free ServiceNow platform health check"><small>Free &middot; no commitment</small><b>Book a platform health check</b><span>The audit before anything is built</span><i aria-hidden="true">&rarr;</i></a>
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">Upgrades are where customization <em>sends the bill.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">An instance does not decay all at once. Each request handled with a script instead of configuration, each base record edited in place, adds a little to what the next upgrade has to work around.</p>
+      <p class="rv">With two family releases a year, that cost arrives on a schedule. Teams start deferring upgrades, new capabilities never reach users, and the platform owner ends up defending the licence renewal instead of the roadmap.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>Base records edited in place</h3><p>Out-of-box business rules, script includes, UI policies and forms changed directly. The upgrade skips them, so they keep old behaviour and miss fixes, and the skipped list is rarely reviewed.<small>First move: <b>a decision on every skipped record: revert, merge or keep</b></small></p></li>
+        <li class="rv"><h3>Scripts that redo the platform</h3><p>Client scripts and business rules re-implementing assignment rules, data policies, SLAs or approvals that ServiceNow already provides. They run on every form load and every save.<small>First move: <b>an inventory of custom scripts against out-of-box features</b></small></p></li>
+        <li class="rv"><h3>A CMDB that fails its own health score</h3><p>Duplicate and stale CIs from imports that bypass identification and reconciliation, classes with no owner, and services modelled outside CSDM. Every process that reads the CMDB inherits the errors.<small>First move: <b>CMDB Health completeness, correctness and compliance as a baseline</b></small></p></li>
+        <li class="rv"><h3>Integrations nobody owns</h3><p>Scripted REST calls, transform maps and MID Server jobs written by people who have left. They fail quietly and users find out first.<small>First move: <b>an integration register with an owner and an alert for each</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
-
-<section class="sx tool" aria-labelledby="tool-h">
-  <div class="wrap tool__in">
-    <div class="tool__copy">
-      <span class="sx__k rv">Symptom check</span>
-      <h2 id="tool-h" class="rv">What the team says <em>is the symptom.</em></h2>
-      <p class="rv" data-d="1">Tick what sounds familiar. The risk level and the matching fixes go straight into the audit brief.</p>
-      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
-    </div>
-    <div class="tool__w rv" data-d="1">
-      <div class="wcard symp" data-symp data-interest="ServiceNow tech-debt removal" data-kicker="Platform health check" data-title="ServiceNow symptoms to an architect" data-l1="Watch|Low risk|Early debt. A health check now keeps it from compounding." data-l2="Fix soon|Medium risk|Debt is slowing the service desk. Clean up before adding modules or Now Assist." data-l3="Rescue|High risk|The instance is working against the teams. Stabilize the CMDB and workflows first.">
-          <span class="wcard__k">Symptom check</span>
-          <p class="wcard__t">Which of these does the team say?</p>
-          <div class="symp__list">
-            <button class="opt opt--check" type="button" aria-pressed="false" data-w="3" data-name="The CMDB cannot be trusted"><i></i>&ldquo;The CMDB is wrong half the time.&rdquo;</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-w="2" data-name="Licensed modules sit unused"><i></i>&ldquo;Half of what was licensed is not used.&rdquo;</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-w="3" data-name="Upgrades break custom scripts"><i></i>&ldquo;Every upgrade breaks something custom.&rdquo;</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-w="2" data-name="Integrations fail silently"><i></i>&ldquo;Integrations fail and nobody notices.&rdquo;</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-w="2" data-name="Agents work around the platform"><i></i>&ldquo;The desk keeps its own spreadsheet.&rdquo;</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-w="1" data-name="Now Assist stalled on data quality"><i></i>&ldquo;Now Assist pilot stalled on bad data.&rdquo;</button>
-          </div>
-          <div class="sev" data-level="0" aria-live="polite">
-            <div class="sev__bar" aria-hidden="true"><span></span><span></span><span></span></div>
-            <div class="sev__label"><b>Tick the symptoms</b><small></small></div>
-            <p>Tick every symptom the team would recognise.</p>
-          </div>
-          <button class="btn btn--red btn--block" type="button" data-symp-cta disabled>Send these to an architect <i aria-hidden="true">&rarr;</i></button>
-          <p class="wcard__foot">The ticked symptoms go straight into the brief.</p>
-        </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="sx sx--paper" id="areas" aria-labelledby="areas-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="areas-h" class="rv">Four things the audit proves, <em>before a dollar is spent on fixes.</em></h2><p class="rv" data-d="1">The health check tells exactly where to start, and what can wait.</p></div>
+      <div><p class="k3 rv">What gets audited</p><h2 id="areas-h" class="rv">Six areas, measured in the instance, <em>not in interviews.</em></h2><p class="rv" data-d="1">Interviews explain why things were built. The instance shows what was built. The health check uses both, and every finding carries the record it came from.</p></div>
     </div>
-    <div class="score8 score8--plain rv">
-      <div><b>CMDB integrity</b><span>Duplicate, stale and orphaned configuration items, and the services that depend on them.</span></div>
-      <div><b>Workflow configuration</b><span>Every broken flow and the workarounds the team built around the original gaps.</span></div>
-      <div><b>Integration health</b><span>Failing syncs, MID Server issues and undocumented connections through IntegrationHub.</span></div>
-      <div><b>Licensed utilization</b><span>What was bought, what is used, and what is costing money for nothing.</span></div>
+    <dl class="caplist rv">
+      <div><dt>CMDB integrity</dt><dd>Duplicate, stale and orphaned CIs, identification rules, class ownership, and the business services that depend on bad records.</dd></div>
+      <div><dt>Workflow configuration</dt><dd>Broken flows, legacy workflows still running, and the workarounds the service desk built around the original gaps.</dd></div>
+      <div><dt>Integration health</dt><dd>Failing syncs, MID Server issues, credentials held in scripts and undocumented connections through IntegrationHub.</dd></div>
+      <div><dt>Licensed utilization</dt><dd>What was bought, what is used, and which modules are costing money without users.</dd></div>
+      <div><dt>Upgrade readiness</dt><dd>Skipped records from recent upgrades, customized base records, and how far the instance sits from current.</dd></div>
+      <div><dt>Code quality and testing</dt><dd>Instance Scan findings, global business rules, hard-coded sys_ids and how much is covered by the Automated Test Framework.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sx" aria-labelledby="dec-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Revert, rebuild or keep</p><h2 id="dec-h" class="rv">Not every customization is debt. <em>Each one gets a decision.</em></h2><p class="rv" data-d="1">Some customizations encode a real business rule and should stay, properly built. Most of the ones found in an audit fall into a few patterns, and each pattern has a usual answer.</p></div>
+    </div>
+    <div class="risk">
+      <div class="risk__head"><span>The pattern</span><span>What it costs</span><span>The usual decision</span></div>
+      <div class="risk__row rv"><h3><small>Base system</small>Edited out-of-box records</h3><p>Skipped on every upgrade, so fixes and new features in that record never arrive.</p><div><b>Revert to base</b>Reapply any genuine requirement as configuration or a separate, documented extension.</div></div>
+      <div class="risk__row rv"><h3><small>Client side</small>Client scripts querying the server</h3><p>Synchronous lookups on form load that slow every agent, every ticket, all day.</p><div><b>Rebuild</b>UI policies or data policies where possible, asynchronous calls where code is still needed.</div></div>
+      <div class="risk__row rv"><h3><small>Server side</small>Business rules duplicating platform features</h3><p>Two mechanisms setting the same field, in an order nobody can predict after an upgrade.</p><div><b>Retire</b>Use the assignment rule, SLA definition or approval the platform already provides.</div></div>
+      <div class="risk__row rv"><h3><small>Data model</small>Custom tables beside CMDB classes</h3><p>Assets and services held outside the CMDB, invisible to change impact and to Discovery.</p><div><b>Migrate</b>Move the data into the matching CSDM class with identification rules in place.</div></div>
+      <div class="risk__row rv"><h3><small>Workflow</small>Legacy workflows and hard-coded IDs</h3><p>Logic that breaks when a group, user or record is renamed, and is hard to test.</p><div><b>Rebuild in Flow Designer</b>Store references in system properties and cover the flow with automated tests.</div></div>
     </div>
   </div>
 </section>
 
-<section class="sx" aria-labelledby="plan-h">
+<section class="sx sx--paper" aria-labelledby="plan-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="plan-h" class="rv">A typical eight-week clean-up, <em>after the audit.</em></h2><p class="rv" data-d="1">Fixed scope, fixed SOW, and a clean platform at the end, ready for new modules and Now Assist.</p></div>
+      <div><p class="k3 rv">How it runs</p><h2 id="plan-h" class="rv">A typical eight weeks, <em>each phase signed off.</em></h2><p class="rv" data-d="1">Fixed scope and a fixed SOW. The instance is ready for the next family release and for new modules or Now Assist at the end.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="ServiceNow tech-debt removal" data-kicker="Platform health check" data-title="Free ServiceNow platform health check">Start with the audit <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="days">
-      <div class="rv"><small>Weeks 1 to 3</small><b>Health check</b><span>CMDB, workflows, integrations and licences audited. Prioritized plan delivered.</span></div>
-      <div class="rv" data-d="1"><small>Weeks 4 to 5</small><b>Fix the foundation</b><span>CMDB reconciled, orphaned records removed, ownership assigned.</span></div>
-      <div class="rv" data-d="2"><small>Weeks 6 to 7</small><b>Rebuild what is broken</b><span>Broken flows and failing integrations rebuilt and tested.</span></div>
-      <div class="rv" data-d="3"><small>Week 8</small><b>Handover and roadmap</b><span>Documentation, a clean upgrade path and the next modules ranked.</span></div>
-    </div>
+    <ol class="gates rv" style="--n:4">
+      <li><span class="gates__w">Weeks 1 to 3</span><b>Health check</b><p>CMDB, workflows, integrations, licences and upgrade history audited. Findings ranked by business impact and effort.</p><em>Remediation plan and scope signed off</em></li>
+      <li><span class="gates__w">Weeks 4 to 5</span><b>Fix the foundation</b><p>CMDB reconciled, identification rules corrected, orphaned records removed and an owner named for each CI class.</p><em>CMDB Health baseline improved and agreed</em></li>
+      <li><span class="gates__w">Weeks 6 to 7</span><b>Rebuild what is broken</b><p>Customizations reverted or rebuilt, broken flows and failing integrations fixed and covered by automated tests.</p><em>Regression tests passing in sub-production</em></li>
+      <li><span class="gates__w">Week 8</span><b>Handover and roadmap</b><p>Documentation, a clean upgrade path and the next modules ranked by value.</p><em>Handover accepted by the platform owner</em></li>
+    </ol>
   </div>
 </section>
 
-<section class="sx sx--paper" aria-labelledby="rep-h">
-  <div class="wrap report">
-    <div>
-      <span class="sx__k rv">The deliverable</span>
-      <h2 id="rep-h" class="rv">A remediation plan the CIO <em>and the platform team</em> can both use.</h2>
-      <p class="rv" data-d="1" style="font-size:17px;color:var(--ink-2)">Built from evidence in the instance, not from interviews alone. It stays with the client whether or not Procyon does the fixing.</p>
-      <a class="btn btn--red rv" data-d="2" href="#audit" data-open="audit" data-interest="ServiceNow tech-debt removal" data-kicker="Platform health check" data-title="Free ServiceNow platform health check">Book a platform health check <i aria-hidden="true">&rarr;</i></a>
-    </div>
-    <div class="report__doc rv" data-d="1">
-      <small>Platform health check</small>
-      <b>What the plan contains</b>
-      <ol>
-        <li>CMDB integrity findings and the services at risk</li>
-        <li>Every broken flow, orphaned record and workaround</li>
-        <li>Integration health and failure points</li>
-        <li>Licensed utilization and unused spend</li>
-        <li>Fixes ranked by business impact and effort</li>
-        <li>A fixed-SOW remediation scope and timeline</li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section class="sx" aria-labelledby="proof-h">
+<section class="sx" aria-labelledby="rep-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="proof-h" class="rv">Rescues delivered <em>to federal standards.</em></h2></div>
+      <div><p class="k3 rv">What is handed over</p><h2 id="rep-h" class="rv">A plan the CIO and the platform team <em>can both use.</em></h2><p class="rv" data-d="1">It is built from evidence in the instance and it stays with the client, whether or not Procyon does the fixing.</p></div>
     </div>
-    <div class="ba ba--3">
-      <div class="rv"><b>Administrative Office of the Courts</b><small>Statewide judicial system</small><p><small>Problem</small>Statewide judicial systems breaking under XML errors, integration failures and DOJ compliance risk.</p><p><small>Result</small><em class="ba__fig">60% fewer failures</em>TIBCO middleware stabilized across six enterprise systems, XML and XSD governance enforced, DOJ submissions automated.</p></div>
-      <div class="rv" data-d="1"><b>NIH, NIAAA</b><small>Federal clinical research</small><p><small>Problem</small>Manual, paper-based clinical data capture across multi-protocol federal studies, with no audit trail.</p><p><small>Result</small><em class="ba__fig">Audit-ready from go-live</em>OpenClinica EDC deployed with full audit trails, subject lifecycle tracking and federal compliance alignment.</p></div>
-      <div class="rv" data-d="2"><b>City of Glendale Water &amp; Power</b><small>Utilities</small><p><small>Problem</small>Fragmented utility systems, manual data exchanges and no real-time view across power and water operations.</p><p><small>Result</small><em class="ba__fig">10+ systems, one platform</em>An integration hub across SCADA, OMS, CIS, PI System, AMI and energy trading, with feeder alerts and 15-day MW forecasting.</p></div>
+    <div class="own rv">
+      <div><b>CMDB findings</b><span>Integrity scores by class, and the business services at risk from bad records.</span></div>
+      <div><b>Workflow register</b><span>Every broken flow, orphaned record and workaround, with where it lives.</span></div>
+      <div><b>Integration map</b><span>Each connection, its owner, its failure points and how failures are noticed today.</span></div>
+      <div><b>Licence position</b><span>Licensed against used, module by module, and the spend with no users behind it.</span></div>
+      <div><b>Ranked fixes</b><span>Every fix scored by business impact and effort, with quick wins marked.</span></div>
+      <div><b>Remediation scope</b><span>A fixed-SOW scope and timeline for the clean-up, ready to approve or tender.</span></div>
     </div>
-    <p class="refs rv">Also delivered for <b>the U.S. Department of Veterans Affairs, the U.S. Department of Transportation, Lumen, IBM, Genesys, Liberty Mutual and MUFG Bank</b>, across federal, utilities and commercial sectors.</p>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="model-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Commercials</p><h2 id="model-h" class="rv">Priced like an audit, <em>not like a rescue.</em></h2></div>
+    </div>
+    <ul class="terms rv">
+      <li><b>Fixed scope.</b><span>The health check has a fixed scope and length, and no commitment to further work.</span></li>
+      <li><b>Fixed SOW.</b><span>The clean-up is quoted from the health check findings, with transparent deliverables.</span></li>
+      <li><b>Zero markup.</b><span>Any technology costs are passed through at cost.</span></li>
+      <li><b>Federal-grade records.</b><span>Findings, decisions and test evidence documented to the standard used for federal and statewide judicial clients.</span></li>
+    </ul>
   </div>
 </section>
 
@@ -649,7 +636,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

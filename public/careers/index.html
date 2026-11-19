@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -238,7 +239,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -277,7 +278,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers" aria-current="page">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -286,171 +287,191 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Careers</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Careers</p>
-        <h1 id="ph-h" class="ph__h">Build what enterprises <em>run on every day.</em></h1>
-        <p class="ph__lede"><b>Procyon is an enterprise information solution delivery organization with 200+ professionals</b> shipping AI, Salesforce and ServiceNow outcomes for 200+ enterprise clients, from Fortune 500s to high-growth start-ups. Five roles are open in Chennai now, and every track takes open applications.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#apply" data-apply-cta data-track="careers_hero">Apply now <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#roles">See the 5 open roles</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Careers</p>
+        <h1 id="ph-h" class="hx__h">Production work on client platforms, <em>beside senior practitioners.</em></h1>
+        <p class="ph__lede"><b>Procyon's 200+ professionals deliver Salesforce, ServiceNow, AI and data programs for 200+ enterprise clients,</b> from Fortune 500s to high-growth start-ups. Teams work from Novato, Toronto and Chennai. The roles open today are in Chennai, and every track takes open applications.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#apply" data-apply-cta data-track="careers_hero">Apply now <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#roles">See the open roles <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-      <figure class="art art--team" aria-label="Sample deliverable: Teams hiring now">
-        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Teams hiring now</b><span class="art__meta">Novato, Toronto, Chennai</span></figcaption>
-        <div class="art__body">
-        <ul class="art__team"><li style="--i:0;--bc:var(--blue)"><i aria-hidden="true">SF</i><div><b>Salesforce</b><span>Architects, developers, admins</span></div><span class="chip chip--g">Hiring</span></li><li style="--i:1;--bc:var(--green)"><i aria-hidden="true">SN</i><div><b>ServiceNow</b><span>Developers and consultants</span></div><span class="chip chip--g">Hiring</span></li><li style="--i:2;--bc:var(--red)"><i aria-hidden="true">AI</i><div><b>AI and data</b><span>Engineers and analysts</span></div><span class="chip chip--g">Hiring</span></li><li style="--i:3;--bc:#5A6068"><i aria-hidden="true">PE</i><div><b>Product engineering</b><span>Full stack and QA</span></div><span class="chip chip--g">Hiring</span></li></ul>
-        </div>
-        <div class="art__foot"><small>Open roles are listed below.</small><a href="#audit" data-open="audit" data-track="hero_artifact_cta">Apply in two minutes <i aria-hidden="true">&rarr;</i></a></div>
-      </figure>
+      <aside class="calls" aria-labelledby="calls-h">
+        <p class="calls__k" id="calls-h">Open applications, by track</p>
+        <ul>
+          <li><a href="#apply" data-apply-cta data-interest="Salesforce"><b>Salesforce admins, developers and architects</b><span>Implementations, org rescues, Data Cloud and Agentforce</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="#apply" data-apply-cta data-interest="ServiceNow"><b>ServiceNow developers and consultants</b><span>ITSM, ITOM, CMDB, SecOps and GRC, and platform clean-up</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="#apply" data-apply-cta data-interest="AI and data"><b>AI, integration and data engineers</b><span>Agents, knowledge assistants, MuleSoft and analytics</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="#apply" data-apply-cta data-interest="Product engineering"><b>Web, mobile and cloud engineers</b><span>Custom applications, modernization and application support</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="#apply" data-apply-cta data-interest="Delivery and project management"><b>Program managers, analysts and QA</b><span>Programs from discovery to go-live and hypercare</span><i aria-hidden="true">&rarr;</i></a></li>
+        </ul>
+      </aside>
     </div>
+    <dl class="hx__facts">
+      <div><dt>Open roles</dt><dd>Chennai<span>Full-time, listed below</span></dd></div>
+      <div><dt>Hubs</dt><dd>Novato, Toronto, Chennai<span>Three time zones, one team</span></dd></div>
+      <div><dt>People</dt><dd>200+ professionals<span>On programs for 200+ enterprise clients</span></dd></div>
+      <div><dt>Application</dt><dd>About 2 minutes<span>A LinkedIn link replaces a CV</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">The work</p>
+      <h2 id="pov-h" class="rv">Client platforms <em>that run in production.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">Every track works on client platforms in production, next to senior practitioners. The people who scope a program are the people who build it, so the architect who wrote the plan is the one reviewing the work.</p>
+      <p class="rv">That has a cost. Salesforce ships three releases a year and ServiceNow two, and the clients depend on every change going in cleanly. The upside is that what is learned here is learned on real systems.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>Orgs other people built</h3><p>A large share of Salesforce work is rescue: reading an org another partner built, finding the automation that fights itself, and fixing it without stopping the business.<small>Where it leads: <b>knowing a platform well enough to fix it, not only configure it</b></small></p></li>
+        <li class="rv"><h3>Handover across time zones</h3><p>Work moves between Novato, Toronto and Chennai, so a change raised at the end of a California day is often tested by the next morning.<small>Where it leads: <b>writing things down so someone else can pick them up</b></small></p></li>
+        <li class="rv"><h3>Senior people who stay</h3><p>The architect who scopes a program stays through go-live and hypercare, so questions are answered by the person who made the design decision.<small>Where it leads: <b>learning design from the people doing it</b></small></p></li>
+        <li class="rv"><h3>Certifications that get used</h3><p>Administrator, Platform Developer, Sales and Service Cloud Consultant, Revenue Cloud, Data Cloud and Einstein AI certifications are held across the practice and used on live programs.<small>Where it leads: <b>certifications earned next to the work, not instead of it</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Open roles</dt><dd><b>5</b>engineering, sales, marketing and talent</dd></div>
-        <div><dt>Professionals</dt><dd><b>200+</b>senior practitioners on every engagement</dd></div>
-        <div><dt>AI ventures incubated</dt><dd><b>2</b>Hekma and Akra, healthcare start-ups</dd></div>
-      </dl>
-      <a class="kf__cta" href="#apply" data-apply-cta data-track="careers_kf"><small>About 2 minutes</small><b>Apply now</b><span>Personal email and a LinkedIn link</span><i aria-hidden="true">&rarr;</i></a>
-    </div>
-  </div>
-</section>
-
-<section class="sx tool" aria-labelledby="tool-h">
-  <div class="wrap tool__in">
-    <div class="tool__copy">
-      <span class="sx__k rv">Find a track</span>
-      <h2 id="tool-h" class="rv">Which work <em>fits best?</em></h2>
-      <p class="rv" data-d="1">Pick the work. The matching track and open roles are shown on the spot.</p>
-      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
-    </div>
-    <div class="tool__w rv" data-d="1">
-      <div class="wcard" data-picker="track">
-          <span class="wcard__k">Find a track</span>
-          <p class="wcard__t">Which work fits best?</p>
-          <div class="opt-list" role="radiogroup" aria-label="Which work fits best?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Salesforce track" data-s="Admins, developers, consultants and architects on Sales, Service, Revenue, Data Cloud and Agentforce." data-cta="Apply to the Salesforce track" data-interest="Salesforce"><i></i>Salesforce</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="ServiceNow track" data-s="ITSM, ITOM, CMDB, Security Operations and GRC implementations and platform clean-up." data-cta="Apply to the ServiceNow track" data-interest="ServiceNow"><i></i>ServiceNow</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="AI and data track" data-s="AI agents, knowledge assistants, MuleSoft integration and analytics." data-cta="Apply to the AI and data track" data-interest="AI and data"><i></i>AI and data</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Product engineering track" data-s="Custom web and mobile applications, modernization and application support." data-cta="Apply to the engineering track" data-interest="Product engineering"><i></i>Product engineering</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Delivery track" data-s="Program managers, business analysts and QA who keep enterprise programs on plan." data-cta="Apply to the delivery track" data-interest="Delivery and project management"><i></i>Delivery and project management</button>
-          </div>
-          <div class="rec"><b data-rec-b>Salesforce track</b><span data-rec-s>Admins, developers, consultants and architects on Sales, Service, Revenue, Data Cloud and Agentforce.</span></div>
-          <a class="btn btn--red btn--block" href="#apply" data-apply-cta data-rec-cta data-interest="Salesforce" data-track="careers_picker_cta">Apply to the Salesforce track <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">Personal email is fine. A LinkedIn link replaces a CV.</p>
-        </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="sx" id="roles" aria-labelledby="roles-h">
+<section class="sx sx--paper" id="roles" aria-labelledby="roles-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="roles-h" class="rv">Hiring now in Chennai, <em>across delivery and growth.</em></h2><p class="rv" data-d="1">Full-time roles open today. Each role page has the full brief and an application that takes about two minutes.</p></div>
+      <div><p class="k3 rv">Open roles</p><h2 id="roles-h" class="rv">Hiring now in Chennai, <em>across delivery and growth.</em></h2><p class="rv" data-d="1">Full-time roles open today. Each role page has the full brief, and the application on this page takes about two minutes.</p></div>
       <a class="sx__go rv" href="#apply" data-apply-cta data-interest="Other">Send an open application <i aria-hidden="true">&rarr;</i></a>
     </div>
     <div class="roles">
-<!--@include pages/_partials/open-roles.html-->
+      <a class="role rv" href="/careers/digital-marketing-lead">
+        <span class="role__dept">Sales &amp; Marketing</span>
+        <b>Digital Marketing Lead</b>
+        <span class="role__d"></span>
+        <span class="role__facts"><span>Chennai</span><span>Full-time</span><span>7-12 Years</span></span>
+        <em>See the role &rarr;</em>
+      </a>
+      <a class="role rv" href="/careers/talent-acquisition-specialist">
+        <span class="role__dept">HR</span>
+        <b>Talent Acquisition Specialist</b>
+        <span class="role__d"></span>
+        <span class="role__facts"><span>Chennai</span><span>Full-time</span><span>1-3 years</span></span>
+        <em>See the role &rarr;</em>
+      </a>
+      <a class="role rv" href="/careers/business-development-manager-it-staffing-staff-augmentation-domestic">
+        <span class="role__dept">Sales &amp; Business Development</span>
+        <b>Business Development Manager, IT Staffing</b>
+        <span class="role__d"></span>
+        <span class="role__facts"><span>Chennai(Onsite)</span><span>Full-time</span><span>10-15 Years</span></span>
+        <em>See the role &rarr;</em>
+      </a>
+      <a class="role rv" href="/careers/business-development-associate">
+        <span class="role__dept">Business</span>
+        <b>Business Development Associate</b>
+        <span class="role__d">Graduate sales role across IT staffing and engineering services. Strong communication matters more than experience.</span>
+        <span class="role__facts"><span>Chennai</span><span>Full-time</span><span>0-2</span></span>
+        <em>See the role &rarr;</em>
+      </a>
+      <a class="role rv" href="/careers/full-stack-developer-backend-focused">
+        <span class="role__dept">Engineering</span>
+        <b>Full Stack Developer (Backend-Focused)</b>
+        <span class="role__d">Build scalable, secure, high-performance enterprise applications with Java, Spring Boot and React/Angular/Next.js.</span>
+        <span class="role__facts"><span>Chennai (Onsite)</span><span>Full-time</span><span>4+ Years</span></span>
+        <em>See the role &rarr;</em>
+      </a>
+
     </div>
   </div>
 </section>
 
-<section class="sx sx--paper" id="tracks" aria-labelledby="tracks-h">
+<section class="sx" id="hubs" aria-labelledby="hubs-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="tracks-h" class="rv">No exact match? <em>Apply to a track.</em></h2><p class="rv" data-d="1">Every track works on client platforms in production, next to senior practitioners. Applications are matched to new roles as they open.</p></div>
+      <div><p class="k3 rv">Three hubs</p><h2 id="hubs-h" class="rv">Where the teams sit, <em>and what each one does.</em></h2><p class="rv" data-d="1">The preferred hub is a field on the application. Programs are staffed across all three, and work hands over between them.</p></div>
     </div>
-    <div class="uc">
-      <article class="agent rv" data-team="sales">
-        <div class="agent__top"><span class="agent__team">Salesforce</span><span class="agent__time">All hubs</span></div>
-        <b>Admins, developers, consultants and architects</b>
-        <p>Implementations, org rescues, Data Cloud and Agentforce agents for enterprise clients.</p>
-        <div class="agent__sys"><span>Sales Cloud</span><span>Service Cloud</span><span>Data Cloud</span><span>Agentforce</span></div>
-        <p class="agent__guard"><b>Grow toward</b>the Salesforce certifications held across the practice.</p>
-        <a class="arrow-link" href="#apply" data-apply-cta data-interest="Salesforce">Apply to this track <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="1" data-team="service">
-        <div class="agent__top"><span class="agent__team">ServiceNow</span><span class="agent__time">All hubs</span></div>
-        <b>Developers, consultants and platform owners</b>
-        <p>Implementations and tech-debt removal on enterprise ServiceNow instances.</p>
-        <div class="agent__sys"><span>ITSM</span><span>ITOM</span><span>CMDB</span><span>SecOps</span><span>GRC</span></div>
-        <p class="agent__guard"><b>Work on</b>instances that run IT, security and risk for large enterprises.</p>
-        <a class="arrow-link" href="#apply" data-apply-cta data-interest="ServiceNow">Apply to this track <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="2" data-team="ops">
-        <div class="agent__top"><span class="agent__team">AI and data</span><span class="agent__time">All hubs</span></div>
-        <b>AI, integration and data engineers</b>
-        <p>AI agents, knowledge assistants and integrations connecting CRM, ERP and data warehouses.</p>
-        <div class="agent__sys"><span>Agentforce</span><span>RAG</span><span>MuleSoft</span><span>Snowflake</span></div>
-        <p class="agent__guard"><b>Work on</b>agents that go to production in weeks, with guardrails.</p>
-        <a class="arrow-link" href="#apply" data-apply-cta data-interest="AI and data">Apply to this track <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-team="sales">
-        <div class="agent__top"><span class="agent__team">Engineering</span><span class="agent__time">All hubs</span></div>
-        <b>Web, mobile and cloud engineers</b>
-        <p>Custom applications, modernization of legacy systems and application maintenance.</p>
-        <div class="agent__sys"><span>Web</span><span>Mobile</span><span>Cloud</span><span>Support</span></div>
-        <p class="agent__guard"><b>Work on</b>the products that sit around the core platforms.</p>
-        <a class="arrow-link" href="#apply" data-apply-cta data-interest="Product engineering">Apply to this track <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="1" data-team="service">
-        <div class="agent__top"><span class="agent__team">Delivery</span><span class="agent__time">All hubs</span></div>
-        <b>Program managers, business analysts and QA</b>
-        <p>Run programs from discovery to go-live and hypercare, across three time zones.</p>
-        <div class="agent__sys"><span>Program management</span><span>Business analysis</span><span>QA</span></div>
-        <p class="agent__guard"><b>Work on</b>six-phase programs with a signed deliverable at every gate.</p>
-        <a class="arrow-link" href="#apply" data-apply-cta data-interest="Delivery and project management">Apply to this track <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="2" data-team="ops">
-        <div class="agent__top"><span class="agent__team">Open application</span><span class="agent__time">Any hub</span></div>
-        <b>Something else in mind</b>
-        <p>No matching track? Send a profile anyway with the work wanted next.</p>
-        <div class="agent__sys"><span>Novato</span><span>Toronto</span><span>Chennai</span></div>
-        <p class="agent__guard"><b>Matched</b>to programs as they start.</p>
-        <a class="arrow-link" href="#apply" data-apply-cta data-interest="Other">Send an open application <i aria-hidden="true">&rarr;</i></a>
-      </article>
+    <div class="hubs rv" style="margin-top:0">
+      <div><b>Novato, California</b><small>Headquarters</small><p>Client leadership, solution architecture and program management for North America.</p></div>
+      <div><b>Toronto, Canada</b><small>North America delivery</small><p>Consultants and engineers working in client time zones across the US and Canada.</p></div>
+      <div><b>Chennai, India</b><small>Global delivery center</small><p>Engineering, testing and managed services that keep work moving overnight. Today's open roles are here.</p></div>
     </div>
+    <p class="offers__note rv">Procyon has also incubated two healthcare AI ventures, Hekma and Akra. <a href="/about">More about Procyon</a></p>
   </div>
 </section>
 
-<section class="sx sx--night" aria-labelledby="vals-h">
+<section class="sx sx--paper" aria-labelledby="vals-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="vals-h" class="rv">Four values <em>the work is measured against.</em></h2><p class="rv" data-d="1">Customer and people centric by design. The same four values clients see on every program.</p></div>
+      <div><p class="k3 rv">Values</p><h2 id="vals-h" class="rv">Four values <em>the work is measured against.</em></h2><p class="rv" data-d="1">The same four values clients see on every program.</p></div>
     </div>
-    <div class="guard">
-      <div class="rv"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg><b>Customer first</b><span>The client's outcome decides the recommendation, not a product quota.</span></div>
-      <div class="rv" data-d="1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M12 4v16"/><circle cx="12" cy="12" r="9"/></svg><b>Transparency and collaboration</b><span>Plans, backlogs and documentation are shared openly, with clients and across hubs.</span></div>
-      <div class="rv" data-d="2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M7 9v5c0 1.7 2.2 3 5 3s5-1.3 5-3V9"/></svg><b>Continuous learning and innovation</b><span>Certifications, 40+ accelerators and three platform releases a year to stay ahead of.</span></div>
-      <div class="rv" data-d="3"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M2 20c0-3.3 2.7-6 6-6M22 20c0-3.3-2.7-6-6-6M9 20c0-2.8 1.3-5 3-5s3 2.2 3 5"/></svg><b>Celebrating diversity</b><span>Teams across three countries in a WBENC, NMSDC and SBE certified company.</span></div>
-    </div>
+    <ul class="terms rv">
+      <li><b>Customer first.</b><span>The client's outcome decides the recommendation, not a product quota.</span></li>
+      <li><b>Transparency and collaboration.</b><span>Plans, backlogs and documentation are shared openly, with clients and across hubs.</span></li>
+      <li><b>Continuous learning.</b><span>Certifications, 40+ accelerators and three Salesforce releases a year to stay ahead of.</span></li>
+      <li><b>Celebrating diversity.</b><span>Teams across three countries in a WBENC, NMSDC and SBE certified company.</span></li>
+    </ul>
   </div>
 </section>
 
 <section class="sx" id="apply" aria-labelledby="apply-h">
   <div class="wrap apply">
     <div>
+      <p class="k3 rv">How hiring works</p>
       <h2 id="apply-h" class="rv">Apply in <em>about two minutes.</em></h2>
-      <p class="rv" data-d="1">No role listed for the right skills? Applications are matched to programs as they start, across all three hubs.</p>
+      <p class="rv" data-d="1">Choose an open role, or the closest track for an open application. Applications are matched to programs as they start, across all three hubs.</p>
       <ul class="ticks rv" data-d="2">
         <li>Personal email is fine</li>
         <li>A LinkedIn or portfolio link replaces a CV</li>
         <li>Every application is read by the talent team</li>
+        <li>The talent team asks for more detail when there is a match</li>
       </ul>
     </div>
     <div class="apply__card rv" data-d="1">
-<!--@include pages/_partials/apply-form.html-->
+      <form class="lf" data-apply novalidate>
+        <div class="lf__grid">
+          <label><span>Full name <em>*</em></span><input name="name" type="text" autocomplete="name" required maxlength="120"></label>
+          <label><span>Email <em>*</em></span><input name="email" type="email" autocomplete="email" required maxlength="160"></label>
+          <label><span>Phone</span><input name="phone" type="tel" autocomplete="tel" maxlength="40"></label>
+          <label><span>Role or track <em>*</em></span>
+            <select name="track" required>
+              <option value="">Select a role or track</option>
+              <optgroup label="Open roles">
+                <option>Digital Marketing Lead</option>
+                <option>Talent Acquisition Specialist</option>
+                <option>Business Development Manager, IT Staffing</option>
+                <option>Business Development Associate</option>
+                <option>Full Stack Developer (Backend-Focused)</option>
+              </optgroup>
+              <optgroup label="Open application by track">
+                <option>Salesforce</option>
+                <option>ServiceNow</option>
+                <option>AI and data</option>
+                <option>Product engineering</option>
+                <option>Delivery and project management</option>
+                <option>Other</option>
+              </optgroup>
+            </select>
+          </label>
+          <label><span>Preferred hub</span>
+            <select name="hub">
+              <option value="">Select a hub</option>
+              <option>Novato, California</option>
+              <option>Toronto, Canada</option>
+              <option>Chennai, India</option>
+              <option>Open to any hub</option>
+            </select>
+          </label>
+          <label><span>LinkedIn or portfolio link</span><input name="profile" type="url" inputmode="url" placeholder="https://" maxlength="200"></label>
+          <label class="lf__full"><span>Experience and next move</span><textarea name="message" rows="4" maxlength="3000" placeholder="Years of experience, certifications, and the work wanted next."></textarea></label>
+          <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <div class="cf-slot"></div>
+        <button class="btn btn--red btn--block btn--lg" type="submit" data-track="application_submit_click">Send application <i aria-hidden="true">&rarr;</i></button>
+        <p class="qf__status" role="status" aria-live="polite"></p>
+        <p class="apply__note">Used only for recruiting at Procyon. <a href="/privacy">Privacy Policy</a></p>
+      </form>
+
     </div>
   </div>
 </section>
@@ -601,7 +622,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

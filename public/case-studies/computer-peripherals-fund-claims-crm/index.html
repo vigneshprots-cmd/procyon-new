@@ -32,9 +32,10 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
-<link rel="stylesheet" href="/assets/css/insights.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
+<link rel="stylesheet" href="/assets/css/insights.css?v=22">
 
 <script type="application/ld+json">
 {
@@ -228,7 +229,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -267,7 +268,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -276,21 +277,19 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx hx--case" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/case-studies">Case studies</a></li><li aria-current="page">Leading Computer Peripherals Manufacturer</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Case study &middot; Hi-Tech Manufacturing</p>
-        <h1 id="ph-h" class="ph__h">Fund and claims management on Salesforce for a $4.5B peripherals manufacturer</h1>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Case study &middot; Hi-Tech Manufacturing</p>
+        <h1 id="ph-h" class="hx__h">Fund and claims management on Salesforce for a $4.5B peripherals manufacturer</h1>
         <p class="ph__lede">A leading computer peripherals manufacturer with ~$4.5B in annual revenue had no fund-tracking system for promotions and campaigns. Procyon built a custom Salesforce-based platform to create projects and activities, allocate funds through multi-step approvals, and automate claim processing.</p>
-        <div class="ph__ctas"><a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="" data-kicker="Case study" data-title="Discuss a similar program" data-message="Case study read: Fund and claims management on Salesforce for a $4.5B peripherals manufacturer.&#10;Current situation: " data-track="case_hero">Discuss a similar program <i aria-hidden="true">&rarr;</i></a></div>
+        <div class="hx__ctas"><a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="" data-kicker="Case study" data-title="Discuss a similar program" data-message="Case study read: Fund and claims management on Salesforce for a $4.5B peripherals manufacturer.&#10;Current situation: " data-track="case_hero">Discuss a similar program <i aria-hidden="true">&rarr;</i></a></div>
       </div>
-      <div class="ph__w">
-        <div class="wcard">
-          <span class="wcard__k">Program at a glance</span>
-          <dl class="dossier">
+      <aside class="brief" aria-label="Program at a glance">
+          <p class="brief__k">Program at a glance</p>
+          <dl>
             <div><dt>Client</dt><dd>Leading Computer Peripherals Manufacturer</dd></div>
             <div><dt>Industry</dt><dd>Hi-Tech Manufacturing</dd></div>
             <div><dt>Platform</dt><dd>Salesforce (custom apps) + Oracle integration</dd></div>
@@ -298,8 +297,7 @@
             <div><dt>Duration</dt><dd>Enterprise program</dd></div>
             <div><dt>Stack</dt><dd>Salesforce &middot; Custom Apps &middot; Oracle Integration</dd></div>
           </dl>
-        </div>
-      </div>
+      </aside>
     </div>
   </div>
 </section>
@@ -498,7 +496,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -319,7 +320,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -358,7 +359,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government" aria-current="page">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -367,202 +368,126 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/ai-data">AI &amp; Data</a></li><li aria-current="page">Government solutions</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Government solutions</p>
-        <h1 id="ph-h" class="ph__h">Public-sector modernization <em>built to pass the ATO.</em></h1>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Government solutions</p>
+        <h1 id="ph-h" class="hx__h">Built for the ATO <em>from the first sprint.</em></h1>
         <p class="ph__lede"><b>Procyon modernizes services for federal, state and local agencies</b> with Salesforce and ServiceNow citizen platforms, GovCloud migrations, Zero Trust security and cleared talent. Delivery is FedRAMP-aligned, documented to the standard used for the AOC, NIH and the VA, and run in 90-day increments tied to mission outcomes.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Government" data-title="Government capability statement" data-message="Please send the government capability statement.&#10;Agency or prime: &#10;Program or solicitation: ">Request the capability statement <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#vehicles">See the contract paths</a>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Government" data-title="Government capability statement" data-message="Please send the government capability statement.&#10;Agency or prime: &#10;Program or solicitation: " data-track="gov_hero">Request the capability statement <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#vehicles">See the contract paths <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-      <figure class="art art--dossier" aria-label="Sample deliverable: Government capability statement">
-        <figcaption class="art__bar"><span class="art__tag">Preview</span><b>Government capability statement</b><span class="art__meta">3 pages, PDF</span></figcaption>
-        <div class="art__body">
-        <ul class="art__doc"><li style="--i:0"><span>Core competencies: Salesforce, ServiceNow, cloud, security</span><em>Page 1</em></li><li style="--i:1"><span>Past performance: AOC, NIH NIAAA, City of Glendale</span><em>Page 2</em></li><li style="--i:2"><span>Contract vehicles and teaming</span><em>Page 2</em></li><li style="--i:3"><span>Certifications and clearances</span><em>Page 3</em></li><li style="--i:4"><span>Differentiators and points of contact</span><em>Page 3</em></li></ul>
-        <div class="art__stamps"><span style="--i:0">FedRAMP-aligned</span><span style="--i:1">ISO 27001</span><span style="--i:2">ISO 9001</span><span style="--i:3">WBENC</span><span style="--i:4">NMSDC</span><span style="--i:5">SBE</span><span style="--i:6">CMAS</span></div>
-        </div>
-        <div class="art__foot"><small>Sent by a public-sector lead within one business day.</small><a href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Government" data-title="Government capability statement" data-message="Please send the government capability statement.&#10;Agency or prime: &#10;Program or solicitation: " data-track="hero_artifact_cta">Request the capability statement <i aria-hidden="true">&rarr;</i></a></div>
-      </figure>
+      <aside class="brief" aria-labelledby="brief-h">
+        <p class="brief__k">The first engagement</p>
+        <p class="brief__t" id="brief-h">Mission discovery</p>
+        <p class="brief__d">Sponsors, end users and the security team agree the outcome and the compliance boundary before anything is designed.</p>
+        <dl>
+          <div><dt>Who joins</dt><dd>The program sponsor, the people who use the service, and the agency's security and authorization staff</dd></div>
+          <div><dt>Settles</dt><dd>Mission outcomes, systems in scope, the security baseline and the accessibility standard</dd></div>
+          <div><dt>You end with</dt><dd>A compliant target architecture and a roadmap in 90-day increments</dd></div>
+          <div><dt>Buying path</dt><dd>Direct with the agency, or teamed with a prime</dd></div>
+        </dl>
+        <a class="brief__go" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Government" data-title="Mission discovery session" data-message="Agency or prime: &#10;Program or service to modernize: " data-track="gov_brief">Scope mission discovery <i aria-hidden="true">&rarr;</i></a>
+      </aside>
     </div>
-    </div>
+    <dl class="hx__facts">
+      <div><dt>Public sector</dt><dd>20+ clients<span>federal, state, local and judicial</span></dd></div>
+      <div><dt>Cloud baselines</dt><dd>FedRAMP Moderate and High<span>on AWS GovCloud and Azure Government</span></dd></div>
+      <div><dt>Delivery</dt><dd>90-day increments<span>value milestones tied to mission outcomes</span></dd></div>
+      <div><dt>Certified</dt><dd>WBENC, NMSDC, SBE<span>and CMAS for California buyers</span></dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Public-sector clients</dt><dd><b>20+</b>federal, state, local and judicial</dd></div>
-        <div><dt>Cloud baselines</dt><dd><b>FedRAMP</b>Moderate and High on GovCloud and Azure Government</dd></div>
-        <div><dt>Cleared talent</dt><dd><b>Up to TS</b>Public Trust, Secret and Top Secret resources</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Government" data-title="Government capability statement" data-message="Please send the government capability statement.&#10;Agency or prime: "><small>For contracting officers and primes</small><b>Request the capability statement</b><span>Past performance, credentials and vehicles</span><i aria-hidden="true">&rarr;</i></a>
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">Programs stall on authorization, <em>rarely on technology.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">The platform is seldom the problem. Programs slip because the authorization package is written after the build, because accessibility is tested at the end, and because sponsors cannot see progress until a milestone is missed.</p>
+      <p class="rv">Each of those is a sequencing decision, and each is cheaper to make in the first month than to recover from in the eighteenth. Compliance designed in from discovery is the difference between an ATO that arrives with the release and one that becomes the critical path.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>The ATO as the last milestone</h3><p>Security documentation is written after the system is built, controls are retrofitted, and authorization becomes the blocker everyone saw coming.<small>First move: <b>agree the system boundary and control baseline in discovery</b></small></p></li>
+        <li class="rv"><h3>Accessibility retrofitted</h3><p>Section 508 and WCAG are checked before launch, when fixing one shared component means retesting every screen built on it.<small>First move: <b>accessibility criteria written into every story</b></small></p></li>
+        <li class="rv"><h3>Progress nobody can see</h3><p>Multi-year programs lose sponsor confidence when progress is invisible and milestones slip without warning.<small>First move: <b>90-day increments with burndowns the sponsor reads</b></small></p></li>
+        <li class="rv"><h3>Interfaces nobody owns</h3><p>Case, finance and reporting systems pass data through middleware that fails quietly, and the failure surfaces as a compliance finding months later.<small>First move: <b>an inventory of every interface, its owner and its failure mode</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
-
-<section class="sx tool" aria-labelledby="tool-h">
-  <div class="wrap tool__in">
-    <div class="tool__copy">
-      <span class="sx__k rv">Start here</span>
-      <h2 id="tool-h" class="rv">Who is the program <em>for?</em></h2>
-      <p class="rv" data-d="1">Pick the buyer type. The relevant vehicles, credentials and contact route adjust to it.</p>
-      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
-    </div>
-    <div class="tool__w rv" data-d="1">
-      <div class="wcard" data-picker="gov">
-          <span class="wcard__k">Start here</span>
-          <p class="wcard__t">Who is the program for?</p>
-          <div class="opt-list" role="radiogroup" aria-label="Who is the program for?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Federal agencies" data-s="FedRAMP Moderate and High on GovCloud and Azure Government, FISMA and RMF governance, cleared teams." data-cta="Brief a federal lead" data-interest="Government solutions" data-kicker="Federal" data-title="Federal program brief" data-message="Agency: &#10;Program or solicitation: &#10;Clearance level needed: "><i></i>A federal agency</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="State and local government" data-s="Citizen services, case management and integration, with CMAS available for California agencies." data-cta="Brief a state and local lead" data-interest="Government solutions" data-kicker="State and local" data-title="State and local program brief" data-message="Agency and state: &#10;Service to modernize: "><i></i>A state or local agency</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Courts and judicial systems" data-s="Statewide judicial integration, DOJ submissions and compliance reporting, proven at the AOC." data-cta="Brief a judicial systems lead" data-interest="Government solutions" data-kicker="Judicial" data-title="Judicial systems brief" data-message="Court system: &#10;Systems and submissions involved: "><i></i>A court or judicial system</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Prime integrators" data-s="Subcontracting with cleared Salesforce, ServiceNow, cloud and data teams, plus WBENC, NMSDC and SBE credit toward subcontracting goals." data-cta="Discuss teaming" data-interest="Government solutions" data-kicker="Teaming" data-title="Teaming and subcontracting" data-message="Prime and contract: &#10;Roles or scope to subcontract: "><i></i>A prime looking for a teaming partner</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Contracting and procurement" data-s="Capability statement, certifications and the right vehicle: GSA Schedule, major IDIQs or subcontract." data-href="/about/certifications" data-link="See the certifications" data-cta="Request the capability statement" data-interest="Government solutions" data-kicker="Procurement" data-title="Government capability statement" data-message="Please send the capability statement.&#10;Vehicle or solicitation: "><i></i>Contracting or procurement</button>
-          </div>
-          <div class="rec" aria-live="polite"><b data-rec-b>Federal agencies</b><span data-rec-s>FedRAMP Moderate and High on GovCloud and Azure Government, FISMA and RMF governance, cleared teams.</span><a class="arrow-link" data-rec-a href="/about/certifications" hidden>See the certifications <i aria-hidden="true">&rarr;</i></a></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta>Brief a federal lead <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">A public-sector lead replies within one business day.</p>
-        </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="sx sx--paper" aria-labelledby="mis-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="mis-h" class="rv">Six mission problems, <em>one accountable partner.</em></h2><p class="rv" data-d="1">The situations agency CIOs, program managers and primes bring to the first call. Pick the closest.</p></div>
+      <div><p class="k3 rv">What is in scope</p><h2 id="mis-h" class="rv">Six mission problems, <em>one accountable partner.</em></h2><p class="rv" data-d="1">The situations agency CIOs, program managers and primes bring to the first call.</p></div>
     </div>
-    <div class="xpl rv" data-tabs>
-    <div class="xpl__tabs" role="tablist" aria-label="Government capabilities">
-      <button type="button" role="tab" id="gvx-t0" aria-controls="gvx-p0" aria-selected="true"><b>Citizen experience</b><small>Residents stuck in phone queues and paper forms</small></button>
-      <button type="button" role="tab" id="gvx-t1" aria-controls="gvx-p1" aria-selected="false" tabindex="-1"><b>Cloud modernization</b><small>Decades-old platforms blocking every change</small></button>
-      <button type="button" role="tab" id="gvx-t2" aria-controls="gvx-p2" aria-selected="false" tabindex="-1"><b>Data and AI for government</b><small>Fraud and backlogs outpacing caseworkers</small></button>
-      <button type="button" role="tab" id="gvx-t3" aria-controls="gvx-p3" aria-selected="false" tabindex="-1"><b>Cybersecurity</b><small>Compliance rigor with thin security teams</small></button>
-      <button type="button" role="tab" id="gvx-t4" aria-controls="gvx-p4" aria-selected="false" tabindex="-1"><b>Cleared workforce</b><small>Cleared, niche talent impossible to hire</small></button>
-      <button type="button" role="tab" id="gvx-t5" aria-controls="gvx-p5" aria-selected="false" tabindex="-1"><b>Program delivery</b><small>Long programs that drift from the mission</small></button>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="gvx-p0" aria-labelledby="gvx-t0">
-      <p class="xpl__pain"><small>The situation</small>Citizens wait on hold or fill in paper forms for services that should take minutes online, and caseworkers re-key everything.</p>
-      <h3>Citizen services on Salesforce and ServiceNow, accessible from day one.</h3>
-      <ul class="xpl__gets"><li>Salesforce Public Sector Solutions and ServiceNow Citizen Experience</li><li>Omnichannel service, case management and identity verification</li><li>Section 508 and WCAG accessibility built in, not retrofitted</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>Salesforce Public Sector</span><span>ServiceNow</span><span>Experience Cloud</span><span>508 / WCAG</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Citizen experience" data-title="Citizen experience scope">Modernize a citizen service <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="gvx-p1" aria-labelledby="gvx-t1" hidden>
-      <p class="xpl__pain"><small>The situation</small>Mission systems run on platforms nobody wants to touch, and every change request becomes a multi-year project.</p>
-      <h3>Secure migration to AWS GovCloud and Azure Government.</h3>
-      <ul class="xpl__gets"><li>FedRAMP Moderate and High baselines</li><li>Workloads classified with the 6Rs and moved in waves</li><li>ATO-aware engineering, so authorization is not the last-minute blocker</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>AWS GovCloud</span><span>Azure Government</span><span>FedRAMP</span><span>FISMA</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Cloud modernization" data-title="GovCloud migration plan">Plan the GovCloud move <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="gvx-p2" aria-labelledby="gvx-t2" hidden>
-      <p class="xpl__pain"><small>The situation</small>Case backlogs grow, fraud is caught late, and leaders cannot see program performance until the quarterly report.</p>
-      <h3>Analytics, fraud detection, case management and AI assistants for agencies.</h3>
-      <ul class="xpl__gets"><li>Fraud signals surfaced before payments go out</li><li>Case management that routes work by priority</li><li>AI assistants grounded in approved policy documents</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>Audit-ready</b><span>Clinical data governance from go-live for NIH NIAAA</span></div>
-        
-        <div class="xpl__stack"><span>Analytics</span><span>Case management</span><span>AI assistants</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Data and AI" data-title="Government data and AI scope">Scope data and AI <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="gvx-p3" aria-labelledby="gvx-t3" hidden>
-      <p class="xpl__pain"><small>The situation</small>FedRAMP, FISMA, CJIS and HIPAA obligations keep growing while security teams stay the same size.</p>
-      <h3>Zero Trust, continuous monitoring and RMF, delivered by practitioners.</h3>
-      <ul class="xpl__gets"><li>Zero Trust architecture and identity-first access</li><li>Continuous monitoring instead of point-in-time audits</li><li>RMF-aligned documentation for authorization</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>Zero Trust</span><span>RMF</span><span>CJIS</span><span>Continuous monitoring</span></div>
-        <a class="btn btn--red" href="/services/cybersecurity">See cybersecurity <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="gvx-p4" aria-labelledby="gvx-t4" hidden>
-      <p class="xpl__pain"><small>The situation</small>The program is funded, but cleared Salesforce, ServiceNow and cloud engineers take months to find.</p>
-      <h3>Public Trust, Secret and Top Secret resources across every practice.</h3>
-      <ul class="xpl__gets"><li>Cleared people across Salesforce, ServiceNow, SAP, cloud, data and AI</li><li>Staff augmentation or managed capacity</li><li>Timelines agreed upfront for niche clearances</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>Public Trust</span><span>Secret</span><span>Top Secret</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Cleared talent" data-title="Cleared talent request" data-message="Roles needed: &#10;Clearance level: ">Request cleared profiles <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="gvx-p5" aria-labelledby="gvx-t5" hidden>
-      <p class="xpl__pain"><small>The situation</small>Multi-year programs lose sponsor confidence when progress is invisible and milestones slip without warning.</p>
-      <h3>Agile delivery in 90-day increments, aligned to public-sector governance.</h3>
-      <ul class="xpl__gets"><li>Value milestones tied to mission outcomes</li><li>Transparent burndowns for sponsors and oversight</li><li>Continuous alignment with program sponsors and end users</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>60%</b><span>Fewer integration failures for a statewide judicial system</span></div>
-        
-        <div class="xpl__stack"><span>Agile</span><span>ATO-aware</span><span>Program governance</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Program delivery" data-title="Program delivery review">De-risk the program <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-
-<section class="sx" aria-labelledby="proof-h">
-  <div class="wrap">
-    <div class="sx__head">
-      <div><h2 id="proof-h" class="rv">Past performance <em>in federal, judicial and municipal programs.</em></h2><p class="rv" data-d="1">Three programs and the results each agency measured.</p></div>
-      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Past performance" data-title="Government past performance" data-message="Please send past performance references.&#10;Agency or prime: ">Request past performance <i aria-hidden="true">&rarr;</i></a>
-    </div>
-    <div class="ba ba--3">
-      <div class="rv"><b>Administrative Office of the Courts</b><small>Statewide judicial system</small><p><small>Problem</small>Statewide judicial systems breaking under XML errors, integration failures and DOJ compliance risk.</p><p><small>Result</small><em class="ba__fig">60% fewer failures</em>Middleware stabilized across six enterprise systems, DOJ submissions automated and root cause analysis 40 to 50% faster.</p></div>
-      <div class="rv" data-d="1"><b>NIH, NIAAA</b><small>Federal clinical research</small><p><small>Problem</small>Manual, paper-based clinical data capture across multi-protocol federal studies, with no audit trail.</p><p><small>Result</small><em class="ba__fig">Audit-ready from go-live</em>Electronic data capture with full audit trails, subject lifecycle tracking and federal compliance alignment.</p></div>
-      <div class="rv" data-d="2"><b>City of Glendale Water &amp; Power</b><small>Municipal utility</small><p><small>Problem</small>Fragmented utility systems, manual data exchanges and no real-time view across power and water operations.</p><p><small>Result</small><em class="ba__fig">10+ systems, one platform</em>An integration hub across SCADA, OMS, CIS, AMI and energy trading, with real-time feeder alerts.</p></div>
-    </div>
-    <p class="refs rv">Also delivered for <b>the U.S. Department of Veterans Affairs and the U.S. Department of Transportation</b>, alongside commercial clients held to the same documentation standards.</p>
-  </div>
-</section>
-
-<section class="sx sx--night" id="vehicles" aria-labelledby="veh-h">
-  <div class="wrap">
-    <div class="sx__head">
-      <div><h2 id="veh-h" class="rv">Three ways to buy, <em>without a long procurement cycle.</em></h2><p class="rv" data-d="1">Procurement complexity stalls more public-sector programs than technology does. Pick the path that fits the agency.</p></div>
-    </div>
-    <div class="steps4 steps4--3">
-      <div class="rv"><b>Federal vehicles</b><span>Work under GSA Schedule and major IDIQ vehicles, with deals structured quickly for the agency.</span></div>
-      <div class="rv" data-d="1"><b>Teaming with primes</b><span>Subcontracting under prime integrators, with WBENC, NMSDC and SBE certifications that count toward small business and diversity goals.</span></div>
-      <div class="rv" data-d="2"><b>State and local</b><span>Direct engagements with state, local and judicial agencies, including CMAS for California public-sector buyers.</span></div>
-    </div>
-    <div class="certs certs--in">
-      <b>Built to</b><span>FedRAMP Moderate and High</span><span>FISMA</span><span>RMF</span><span>CJIS</span><span>HIPAA</span><span>Section 508 / WCAG</span><span>ISO 27001</span><span>ISO 9001</span><span>WBENC</span><span>NMSDC</span><span>SBE</span><span>CMAS</span>
+    <div class="sit">
+      <article class="rv"><small>Citizen experience</small><h3>Residents stuck in phone queues and paper forms</h3><p>Citizen services on Salesforce Public Sector Solutions and ServiceNow Citizen Experience, with omnichannel service, case management and identity verification. Section 508 and WCAG accessibility built in, not retrofitted.</p><a href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Citizen experience" data-title="Citizen experience scope">Modernize a citizen service <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="1"><small>Cloud modernization</small><h3>Decades-old platforms blocking every change</h3><p>Secure migration to AWS GovCloud and Azure Government at FedRAMP Moderate and High baselines. Workloads classified with the 6Rs and moved in waves, with ATO-aware engineering so authorization is not the last-minute blocker.</p><a href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Cloud modernization" data-title="GovCloud migration plan">Plan the GovCloud move <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="2"><small>Data and AI</small><h3>Fraud and backlogs outpacing caseworkers</h3><p>Fraud signals surfaced before payments go out, case management that routes work by priority, and AI assistants grounded in approved policy documents.</p><a href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Data and AI" data-title="Government data and AI scope">Scope data and AI <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv"><small>Cybersecurity</small><h3>Compliance rigor with thin security teams</h3><p>FedRAMP, FISMA, CJIS and HIPAA obligations keep growing. Zero Trust architecture, identity-first access, continuous monitoring instead of point-in-time audits, and RMF-aligned documentation for authorization.</p><a href="/services/cybersecurity">Cybersecurity services <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="1"><small>Cleared workforce</small><h3>Cleared, niche talent impossible to hire</h3><p>Public Trust, Secret and Top Secret resources across every practice, as staff augmentation or managed capacity, with timelines agreed upfront for niche clearances.</p><a href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Cleared talent" data-title="Cleared talent request" data-message="Roles needed: &#10;Clearance level: ">Request cleared profiles <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="2"><small>Program delivery</small><h3>Long programs that drift from the mission</h3><p>Agile delivery in 90-day increments, aligned to public-sector governance: value milestones tied to mission outcomes, transparent burndowns for sponsors and oversight, and continuous alignment with end users.</p><a href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Program delivery" data-title="Program delivery review">Review the program <i aria-hidden="true">&rarr;</i></a></article>
     </div>
   </div>
 </section>
 
-<section class="sx sx--paper" aria-labelledby="path-h">
+<section class="sx" aria-labelledby="path-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="path-h" class="rv">Engage, architect, deliver, <em>then sustain through the ATO.</em></h2><p class="rv" data-d="1">Four stages, with compliance designed in from the first one.</p></div>
+      <div><p class="k3 rv">How a program runs</p><h2 id="path-h" class="rv">Engage, architect, deliver, <em>then sustain through the ATO.</em></h2><p class="rv" data-d="1">Four stages, with compliance designed in from the first one. Each closes with a deliverable the sponsor signs.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Government" data-title="Mission discovery session">Start with mission discovery <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="days">
-      <div class="rv"><small>Engage</small><b>Mission discovery</b><span>Mission discovery and stakeholder alignment with sponsors and end users.</span></div>
-      <div class="rv" data-d="1"><small>Architect</small><b>Compliant roadmap</b><span>A compliant target architecture and roadmap before anything is built.</span></div>
-      <div class="rv" data-d="2"><small>Deliver</small><b>90-day increments</b><span>Agile delivery with public-sector controls and transparent burndowns.</span></div>
-      <div class="rv" data-d="3"><small>Sustain</small><b>ATO and operations</b><span>Authorization support, operations, training and continuous improvement.</span></div>
+    <ol class="gates rv" style="--n:4">
+      <li><span class="gates__w">Start</span><b>Engage</b><p>Mission discovery and stakeholder alignment with sponsors and end users, including the security baseline the system will be authorized against.</p><em>Mission outcomes and scope agreed</em></li>
+      <li><span class="gates__w">Before anything is built</span><b>Architect</b><p>A compliant target architecture and roadmap, with the authorization documentation planned alongside the design.</p><em>Target architecture and roadmap approved</em></li>
+      <li><span class="gates__w">Every 90 days</span><b>Deliver</b><p>Agile delivery with public-sector controls, transparent burndowns and a working increment shown to sponsors and end users.</p><em>Increment accepted against its value milestone</em></li>
+      <li><span class="gates__w">Through authorization</span><b>Sustain</b><p>ATO support, operations, training and continuous improvement after the system is live.</p><em>Authorization support and operations handover</em></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="proof-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Track record</p><h2 id="proof-h" class="rv">Past performance <em>in federal, judicial and municipal programs.</em></h2><p class="rv" data-d="1">Three programs and the results each agency measured.</p></div>
+      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Government solutions" data-kicker="Past performance" data-title="Government past performance" data-message="Please send past performance references.&#10;Agency or prime: ">Request past performance <i aria-hidden="true">&rarr;</i></a>
     </div>
+    <div class="sit">
+      <article class="rv"><small>Statewide judicial system</small><h3>Administrative Office of the Courts</h3><p>Statewide judicial systems breaking under XML errors, integration failures and DOJ compliance risk.</p><p class="sit__do"><b>60% fewer failures</b>Middleware stabilized across six enterprise systems, DOJ submissions automated and root cause analysis 40 to 50% faster.</p></article>
+      <article class="rv" data-d="1"><small>Federal clinical research</small><h3>NIH, NIAAA</h3><p>Manual, paper-based clinical data capture across multi-protocol federal studies, with no audit trail.</p><p class="sit__do"><b>Audit-ready from go-live</b>Electronic data capture with full audit trails, subject lifecycle tracking and federal compliance alignment.</p></article>
+      <article class="rv" data-d="2"><small>Municipal utility</small><h3>City of Glendale Water &amp; Power</h3><p>Fragmented utility systems, manual data exchanges and no real-time view across power and water operations.</p><p class="sit__do"><b>10+ systems, one platform</b>An integration hub across SCADA, OMS, CIS, AMI and energy trading, with real-time feeder alerts.</p></article>
+    </div>
+    <p class="offers__note rv">Also delivered for <b>the U.S. Department of Veterans Affairs and the U.S. Department of Transportation</b>, alongside commercial clients held to the same documentation standards.</p>
+  </div>
+</section>
+
+<section class="sx" id="vehicles" aria-labelledby="veh-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Buying paths</p><h2 id="veh-h" class="rv">Three ways to buy, <em>without a long procurement cycle.</em></h2><p class="rv" data-d="1">Procurement complexity stalls more public-sector programs than technology does. The capability statement sets out which path fits the agency.</p></div>
+    </div>
+    <ul class="terms rv">
+      <li><b>Federal vehicles</b><span>Work under GSA Schedule and major IDIQ vehicles, with deals structured quickly for the agency.</span></li>
+      <li><b>Teaming with primes</b><span>Subcontracting under prime integrators, with WBENC, NMSDC and SBE certifications that count toward small business and diversity goals.</span></li>
+      <li><b>State and local</b><span>Direct engagements with state, local and judicial agencies, including CMAS for California public-sector buyers.</span></li>
+      <li><b>One document</b><span>Past performance, certifications, clearances and contract vehicles, sent by a public-sector lead within one business day.</span></li>
+    </ul>
+    <p class="lbl rv">Built to</p>
+    <dl class="cred rv" style="margin-top:0">
+      <div><dt>Cloud</dt><dd>FedRAMP Moderate and High</dd></div>
+      <div><dt>Federal</dt><dd>FISMA and RMF</dd></div>
+      <div><dt>Justice data</dt><dd>CJIS</dd></div>
+      <div><dt>Health data</dt><dd>HIPAA</dd></div>
+      <div><dt>Accessibility</dt><dd>Section 508 and WCAG</dd></div>
+      <div><dt>Quality</dt><dd>ISO 27001 and ISO 9001</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -738,7 +663,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

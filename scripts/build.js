@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 38, pages: 20, js: 30 };
+const VERSION = { css: 40, pages: 22, js: 31, ed: 2 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -30,8 +30,8 @@ const CHROME = {
   header: cut('<!-- ================= HEADER', '</header>', true),
   modal: cut('<!-- ================= MODAL', '</dialog>', true),
   footer: cut('<!-- ================= FOOTER', '<script src="/assets/js/main.js'),
-  logos: cut('<!-- ================= CLIENTS', '<!-- ================= THE GAP'),
-  caseBlock: cut('<article class="case rv" data-case>', '</article>', true)
+  logos: cut('<!-- ================= CLIENTS', '<!-- ================= POV'),
+  caseBlock: cut('<article class="cs rv">', '</article>', true)
 };
 
 
@@ -262,7 +262,7 @@ function crumbsHtml(meta) {
 
 function render(meta, body) {
   body = body
-    .replace(/<!--@include ([w/.-]+)-->/g, (_, f) => fs.readFileSync(path.join(ROOT, 'src', f), 'utf8'))
+    .replace(/<!--@include ([\w/.-]+)-->/g, (_, f) => fs.readFileSync(path.join(ROOT, 'src', f), 'utf8'))
     .replace(/<!--@crumbs-->/g, crumbsHtml(meta))
     .replace(/\s*<!--@updated-->/g, '')
     .replace(/<!--@logos-->/g, CHROME.logos.trim())
@@ -308,7 +308,8 @@ function render(meta, body) {
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/styles.css?v=${VERSION.css}">
-<link rel="stylesheet" href="/assets/css/pages.css?v=${VERSION.pages}">${meta.insights ? `
+<link rel="stylesheet" href="/assets/css/pages.css?v=${VERSION.pages}">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=${VERSION.ed}">${meta.insights ? `
 <link rel="stylesheet" href="/assets/css/insights.css?v=${VERSION.pages}">` : ''}
 
 <script type="application/ld+json">

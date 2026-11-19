@@ -45,165 +45,136 @@
  }
 }
 -->
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <!--@crumbs-->
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Security &amp; risk</p>
-        <h1 id="ph-h" class="ph__h">Security alerts with context. <em>Audits ready on demand.</em></h1>
-        <p class="ph__lede"><b>Procyon implements ServiceNow Security Operations and GRC</b> for organizations that answer to HIPAA, NIST, FedRAMP and SOC 2. Vulnerabilities are prioritized against the CMDB, incidents route to the right analysts with context attached, and compliance evidence is collected continuously instead of in quarterly scrambles.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Security &amp; risk" data-title="SecOps and GRC scope">Scope SecOps and GRC <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#modules">See the modules</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Security &amp; risk</p>
+        <h1 id="ph-h" class="hx__h">A vulnerability with no owner <em>never gets patched.</em></h1>
+        <p class="ph__lede"><b>Procyon implements ServiceNow Security Operations and GRC</b> for organizations that answer to HIPAA, NIST, FedRAMP and SOC 2. Scanner findings are matched to CIs and their owners, security incidents run on playbooks instead of email, and controls are tested continuously so audit evidence exists before the auditor asks.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Security &amp; risk" data-title="SecOps and GRC scope" data-track="sn_sec_hero">Scope SecOps and GRC <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#modules">See the modules <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-      <figure class="art art--feed" aria-label="Sample deliverable: Security operations queue">
-        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Security operations queue</b><span class="art__meta"><span class="live">Live view</span></span></figcaption>
-        <div class="art__body">
-        <div class="art__kpis"><div><b>14</b><small>CIs matched to a critical CVE</small></div><div><b>9 min</b><small>to triage a phishing report</small></div><div><b>92%</b><small>controls tested on schedule</small></div></div>
-        <ul class="art__feed"><li style="--i:0"><i aria-hidden="true">VR</i><div><b>Critical CVE matched to 14 servers</b><span>Owners notified with patch window</span></div><span class="chip chip--b">Routed</span></li><li style="--i:1"><i aria-hidden="true">PH</i><div><b>Phishing report triaged automatically</b><span>Sender blocked, users notified</span></div><span class="chip chip--g">Resolved</span></li><li style="--i:2"><i aria-hidden="true">GRC</i><div><b>Access review control failed</b><span>Issue opened with owner</span></div><span class="chip chip--r">Urgent</span></li><li style="--i:3"><i aria-hidden="true">TP</i><div><b>Vendor risk assessment due</b><span>Questionnaire sent</span></div><span class="chip chip--n">Queued</span></li></ul>
-        </div>
-        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Security &amp; risk" data-title="SecOps and GRC scope" data-track="hero_artifact_cta">Brief a SecOps lead <i aria-hidden="true">&rarr;</i></a></div>
-      </figure>
+      <aside class="brief" aria-labelledby="brief-h">
+        <p class="brief__k">The first engagement</p>
+        <p class="brief__t" id="brief-h">Security and compliance baseline</p>
+        <p class="brief__d">The platform health check with a security lens: can the CMDB carry vulnerability response, and where do controls and evidence live today.</p>
+        <dl>
+          <div><dt>Length</dt><dd>2 to 3 weeks</dd></div>
+          <div><dt>Looks at</dt><dd>CI coverage and ownership, scanner and SIEM integrations, the current control inventory and how evidence is collected</dd></div>
+          <div><dt>You end with</dt><dd>A scoped Vulnerability Response and GRC plan, integrations named and controls mapped to the frameworks in force</dd></div>
+          <div><dt>Commercials</dt><dd>Fixed scope, then a fixed SOW at zero markup</dd></div>
+        </dl>
+        <a class="brief__go" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Security &amp; risk" data-title="SecOps and GRC scope">Scope the baseline <i aria-hidden="true">&rarr;</i></a>
+      </aside>
     </div>
-    </div>
+    <dl class="hx__facts">
+      <div><dt>Frameworks</dt><dd>HIPAA, NIST, FedRAMP, SOC 2<span>And Judicial Council standards</span></dd></div>
+      <div><dt>Integrations</dt><dd>Scanners, SIEM, EDR<span>Qualys, Tenable, Rapid7, Splunk, Sentinel, CrowdStrike</span></dd></div>
+      <div><dt>Procyon certified</dt><dd>ISO 27001, SOC 2 Type II<span>And HIPAA-compliant delivery</span></dd></div>
+      <div><dt>Public sector</dt><dd>AOC, NIH, the VA<span>Documentation to federal standard</span></dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Exploit window</dt><dd><b>9 days</b>for critical CVEs, against 60+ days to patch (Qualys)</dd></div>
-        <div><dt>Response time</dt><dd><b>60%</b>MTTR reduction achievable with automated SecOps (ServiceNow)</dd></div>
-        <div><dt>Tools in use</dt><dd><b>30%</b>of security tool capability actually used (Gartner)</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Security &amp; risk" data-title="SecOps and GRC scope"><small>Free &middot; 30 minutes</small><b>Scope SecOps and GRC</b><span>Modules, integrations and a cost range</span><i aria-hidden="true">&rarr;</i></a>
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">Security operations on ServiceNow <em>succeed or fail in the CMDB.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">Vulnerability Response is only as good as its match rate. A finding that lands on a CI with an owner and a support group becomes a remediation task. A finding that matches nothing goes to a default queue and waits.</p>
+      <p class="rv">GRC has the same dependency. Continuous control monitoring needs systems to read evidence from and owners to attest. When the CMDB and the control library are weak, the security team is back to spreadsheets, just inside ServiceNow.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>Patching ranked by CVSS alone</h3><p>Every critical looks equally urgent, so the team patches what is easy. Nobody can say which vulnerable servers support a business service.<small>First move: <b>risk scoring that weighs the business service and exposure of each CI</b></small></p></li>
+        <li class="rv"><h3>Findings with nowhere to go</h3><p>Scanner imports create vulnerable items that match no CI, or match a CI with no owner. The backlog grows on paper, not on anyone's queue.<small>First move: <b>measure the CI match rate, then close the gaps with Discovery</b></small></p></li>
+        <li class="rv"><h3>Incidents run in email</h3><p>Alerts reach the SOC from several tools, analysts enrich them by hand and escalations travel as forwarded threads with no record of who did what.<small>First move: <b>Security Incident Response playbooks for the top three incident types</b></small></p></li>
+        <li class="rv"><h3>Controls tested once a year</h3><p>Policies live in documents, risks in spreadsheets and evidence in inboxes. Controls drift between audits and nobody notices until fieldwork starts.<small>First move: <b>one control library mapped to every framework in force</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
-
-<section class="sx tool" aria-labelledby="tool-h">
-  <div class="wrap tool__in">
-    <div class="tool__copy">
-      <span class="sx__k rv">Start here</span>
-      <h2 id="tool-h" class="rv">What keeps the security team <em>up at night?</em></h2>
-      <p class="rv" data-d="1">Pick the closest worry. The recommended starting point and the brief adjust to it.</p>
-      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
-    </div>
-    <div class="tool__w rv" data-d="1">
-      <div class="wcard" data-picker="sec">
-          <span class="wcard__k">Start here</span>
-          <p class="wcard__t">What keeps the security team up at night?</p>
-          <div class="opt-list" role="radiogroup" aria-label="What keeps the security team up at night?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Vulnerability Response" data-s="Patch backlogs prioritized by real asset risk, correlated with the CMDB." data-cta="Scope Vulnerability Response" data-interest="ServiceNow implementation" data-kicker="Vulnerability Response" data-title="Vulnerability Response scope"><i></i>A patch backlog that never shrinks</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Security Incident Response" data-s="Alerts triaged and escalated automatically, so mean time to respond falls." data-cta="Scope incident orchestration" data-interest="ServiceNow implementation" data-kicker="Security Incident Response" data-title="SOC incident orchestration scope"><i></i>Alerts triaged by hand, slowly</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Continuous compliance" data-s="Controls tested continuously and evidence collected in the background." data-cta="Scope continuous compliance" data-interest="ServiceNow implementation" data-kicker="Continuous compliance" data-title="Continuous compliance scope"><i></i>Quarterly evidence scrambles</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Integrated risk" data-s="Enterprise, policy and vendor risk in one posture view." data-cta="Scope integrated risk" data-interest="ServiceNow implementation" data-kicker="Integrated risk" data-title="Integrated risk scope"><i></i>Risk spread across spreadsheets</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="AI Control Tower" data-s="AI spend, shadow AI and security controls governed in one place." data-href="/enterprise/servicenow/now-assist" data-link="See Now Assist and AI" data-cta="Govern AI on ServiceNow" data-interest="ServiceNow implementation" data-kicker="AI Control Tower" data-title="AI Control Tower scope"><i></i>AI spreading with no oversight</button>
-          </div>
-          <div class="rec" aria-live="polite"><b data-rec-b>Vulnerability Response</b><span data-rec-s>Patch backlogs prioritized by real asset risk, correlated with the CMDB.</span><a class="arrow-link" data-rec-a href="/enterprise/servicenow/now-assist" hidden>See Now Assist and AI <i aria-hidden="true">&rarr;</i></a></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta>Scope Vulnerability Response <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">Integrates with CrowdStrike, Splunk, Sentinel, Qualys, Rapid7, Tenable, Okta and XSOAR.</p>
-        </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="sx sx--paper" id="modules" aria-labelledby="mod-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="mod-h" class="rv">Five security problems, <em>one operations posture.</em></h2><p class="rv" data-d="1">Pick the problem that costs the security team the most hours today.</p></div>
+      <div><p class="k3 rv">What is in scope</p><h2 id="mod-h" class="rv">Six modules, <em>on the same CMDB as IT.</em></h2><p class="rv" data-d="1">Security and IT operations working from one record of the estate is the reason to run SecOps and GRC on ServiceNow at all.</p></div>
     </div>
-    <div class="xpl rv" data-tabs>
-    <div class="xpl__tabs" role="tablist" aria-label="Security and risk modules">
-      <button type="button" role="tab" id="scx-t0" aria-controls="scx-p0" aria-selected="true"><b>Vulnerability Response</b><small>Patch chaos with no priorities</small></button>
-      <button type="button" role="tab" id="scx-t1" aria-controls="scx-p1" aria-selected="false" tabindex="-1"><b>SOC incident orchestration</b><small>Siloed triage, manual escalation</small></button>
-      <button type="button" role="tab" id="scx-t2" aria-controls="scx-p2" aria-selected="false" tabindex="-1"><b>Continuous compliance</b><small>Audit fatigue every quarter</small></button>
-      <button type="button" role="tab" id="scx-t3" aria-controls="scx-p3" aria-selected="false" tabindex="-1"><b>Integrated and vendor risk</b><small>No single view of risk</small></button>
-      <button type="button" role="tab" id="scx-t4" aria-controls="scx-p4" aria-selected="false" tabindex="-1"><b>AI Control Tower</b><small>Shadow AI and unknown AI spend</small></button>
+    <div class="sit">
+      <article class="rv"><small>Patch what matters</small><h3>Vulnerability Response</h3><p>Findings from Qualys, Tenable or Rapid7 matched to CIs, grouped for remediation, ranked by a risk model and assigned to the owning support group with a due date.</p><p class="sit__do"><b>Starts with</b>The CI match rate on one scanner's import</p></article>
+      <article class="rv" data-d="1"><small>Respond faster</small><h3>Security Incident Response</h3><p>Alerts from CrowdStrike, Splunk and Sentinel in one queue, enriched automatically, run on playbooks and tracked through containment to closure.</p><p class="sit__do"><b>Starts with</b>Phishing, malware and access misuse playbooks</p></article>
+      <article class="rv" data-d="2"><small>Stay compliant</small><h3>Policy &amp; compliance</h3><p>Policies, control objectives and controls held once, mapped to the frameworks in force, with attestations from owners and indicators that test controls continuously.</p><p class="sit__do"><b>Starts with</b>The control set behind the next audit</p></article>
+      <article class="rv"><small>See the posture</small><h3>Integrated risk</h3><p>One risk register with owners, scores and treatment plans, linked to the controls and issues behind each risk, reported in a form leadership can read.</p><p class="sit__do"><b>Starts with</b>The current risk spreadsheet, moved as-is and then cleaned</p></article>
+      <article class="rv" data-d="1"><small>Govern suppliers</small><h3>Vendor &amp; audit management</h3><p>Third-party assessments that run on a schedule, and audit engagements planned, tested and evidenced on the platform instead of in binders.</p><p class="sit__do"><b>Starts with</b>The vendors with access to regulated data</p></article>
+      <article class="rv" data-d="2"><small>Govern AI</small><h3>AI Control Tower</h3><p>Every AI agent inventoried with its access and cost, and security controls applied before it goes live. Implemented in production, not as a pilot.</p><p class="sit__do"><b>Starts with</b>An inventory of AI already running</p><a href="/enterprise/servicenow/now-assist">Now Assist and AI <i aria-hidden="true">&rarr;</i></a></article>
     </div>
-    <div class="xpl__panel" role="tabpanel" id="scx-p0" aria-labelledby="scx-t0">
-      <p class="xpl__pain"><small>The situation</small>Scanners report thousands of vulnerabilities, nobody knows which assets matter, and critical CVEs stay open for months.</p>
-      <h3>Vulnerabilities ranked by real asset risk and routed to the owner.</h3>
-      <ul class="xpl__gets"><li>Scanner findings correlated with the CMDB</li><li>A risk priority model that ranks what to patch first</li><li>Remediation tasks assigned to the asset owner automatically</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>9 days</b><span>Exploit window for critical CVEs, against 60+ days to patch (Qualys)</span></div>
-        
-        <div class="xpl__stack"><span>VR module</span><span>Risk Priority Model</span><span>Qualys</span><span>Rapid7</span><span>Tenable</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Vulnerability Response" data-title="Vulnerability Response scope">Fix the patch backlog <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="scx-p1" aria-labelledby="scx-t1" hidden>
-      <p class="xpl__pain"><small>The situation</small>Alerts arrive from many tools, analysts triage them by hand, and escalations travel by email while mean time to respond climbs.</p>
-      <h3>Security incidents triaged, enriched and escalated automatically.</h3>
-      <ul class="xpl__gets"><li>Alerts from CrowdStrike, Splunk and Sentinel in one queue</li><li>Playbooks that enrich and route incidents</li><li>Escalation and containment steps tracked to closure</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>60%</b><span>MTTR reduction achievable with automated SecOps (ServiceNow)</span></div>
-        
-        <div class="xpl__stack"><span>Security Incident Response</span><span>CrowdStrike</span><span>Splunk</span><span>Sentinel</span><span>Palo Alto XSOAR</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Security Incident Response" data-title="SOC incident orchestration scope">Orchestrate the SOC <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="scx-p2" aria-labelledby="scx-t2" hidden>
-      <p class="xpl__pain"><small>The situation</small>Every quarter the team stops to collect evidence, and controls drift between audits without anyone noticing.</p>
-      <h3>Controls tested continuously and evidence collected in the background.</h3>
-      <ul class="xpl__gets"><li>Controls mapped to HIPAA, NIST, FedRAMP, SOC 2 and Judicial Council standards</li><li>Evidence collected automatically from connected systems</li><li>Control failures assigned and tracked to remediation</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>100%</b><span>Audit-ready from day one for NIH NIAAA</span></div>
-        
-        <div class="xpl__stack"><span>Policy &amp; Compliance</span><span>Audit Management</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Continuous compliance" data-title="Continuous compliance scope">End the evidence scramble <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="scx-p3" aria-labelledby="scx-t3" hidden>
-      <p class="xpl__pain"><small>The situation</small>Enterprise risk, policy exceptions and vendor risk live in separate spreadsheets, so leadership never sees one posture.</p>
-      <h3>Enterprise, policy and third-party risk in one register.</h3>
-      <ul class="xpl__gets"><li>A single risk register with owners and scores</li><li>Vendor risk assessments that run on a schedule</li><li>Board-ready reporting on posture and trend</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>Integrated Risk</span><span>Vendor Risk</span><span>Policy</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="Integrated risk" data-title="Integrated risk scope">Unify risk <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="scx-p4" aria-labelledby="scx-t4" hidden>
-      <p class="xpl__pain"><small>The situation</small>AI agents and tools are appearing faster than security can review them, with no view of spend, access or return.</p>
-      <h3>AI spend, security controls and governance in one place.</h3>
-      <ul class="xpl__gets"><li>Every AI agent inventoried with its access and cost</li><li>Security controls applied before agents go live</li><li>Return on AI spend visible to leadership</li></ul>
-      <div class="xpl__side">
-        
-        <div class="xpl__how"><small>Delivered in production</small><p>AI Control Tower implemented live, not as a pilot.</p></div>
-        <div class="xpl__stack"><span>AI Control Tower</span><span>FinOps</span><span>AI governance</span></div>
-        <a class="btn btn--red" href="/enterprise/servicenow/now-assist">Govern AI on ServiceNow <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-  </div>
   </div>
 </section>
 
-<section class="sx" aria-labelledby="vs-h">
+<section class="sx" aria-labelledby="fw-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="vs-h" class="rv">The quarterly scramble, <em>or a posture that is always current.</em></h2></div>
+      <div><p class="k3 rv">Frameworks into controls</p><h2 id="fw-h" class="rv">Map each control once, <em>answer every framework from it.</em></h2><p class="rv" data-d="1">Most regulated organizations answer to two or three frameworks that ask for overlapping evidence. Holding one control library with citations to each removes most of the duplicate testing.</p></div>
+    </div>
+    <div class="risk">
+      <div class="risk__head"><span>The framework</span><span>What auditors ask for</span><span>How it is held in ServiceNow</span></div>
+      <div class="risk__row rv"><h3><small>Healthcare</small>HIPAA</h3><p>Evidence that administrative, physical and technical safeguards exist and are reviewed, including access to patient data.</p><div><b>Controls and attestations</b>Safeguards held as controls with owners, access reviews scheduled, and exceptions raised as issues.</div></div>
+      <div class="risk__row rv"><h3><small>Federal baseline</small>NIST</h3><p>A control catalog applied consistently, with gaps tracked and remediated.</p><div><b>One control library</b>NIST controls as the common base, with other frameworks cited against the same controls.</div></div>
+      <div class="risk__row rv"><h3><small>Cloud authorization</small>FedRAMP</h3><p>Continuous monitoring: regular vulnerability scanning and a plan of action for every open finding.</p><div><b>Vulnerability Response feeding GRC</b>Open findings tracked to remediation dates, with overdue items surfaced as compliance issues.</div></div>
+      <div class="risk__row rv"><h3><small>Service organizations</small>SOC 2</h3><p>Proof that controls operated across the whole audit period, not only on the day of testing.</p><div><b>Continuous indicators</b>Evidence collected from connected systems on a schedule, so the period is covered by default.</div></div>
+      <div class="risk__row rv"><h3><small>Courts</small>Judicial Council standards</h3><p>Court-specific requirements for data handling, reporting and submissions.</p><div><b>Their own authority document</b>Held alongside the federal frameworks, informed by the statewide judicial work.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="int-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Integrations</p><h2 id="int-h" class="rv">The security stack stays. <em>ServiceNow becomes the workflow.</em></h2><p class="rv" data-d="1">Scanners keep scanning and the SIEM keeps detecting. ServiceNow takes what they find, ties it to the estate and drives it to closure.</p></div>
+    </div>
+    <dl class="mods rv">
+      <div><dt>Qualys, Tenable, Rapid7</dt><dd>Scanner findings imported into Vulnerability Response and matched to CIs.</dd></div>
+      <div><dt>CrowdStrike</dt><dd>Endpoint detections raised as security incidents with host context attached.</dd></div>
+      <div><dt>Splunk, Microsoft Sentinel</dt><dd>SIEM alerts routed into Security Incident Response queues.</dd></div>
+      <div><dt>Okta</dt><dd>Identity context for incidents and evidence for access controls.</dd></div>
+      <div><dt>Palo Alto XSOAR</dt><dd>Automation handed between orchestration and the incident record.</dd></div>
+      <div><dt>Discovery and the CMDB</dt><dd>The shared record of assets, owners and services both teams work from.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sx" aria-labelledby="cred-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Credentials</p><h2 id="cred-h" class="rv">Held to the standard <em>it implements.</em></h2><p class="rv" data-d="1">A partner configuring compliance workflows should be able to pass the same scrutiny. Procyon's own certifications and public-sector record are below.</p></div>
       <a class="sx__go rv" href="/services/cybersecurity">Broader cybersecurity services <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="vs">
-      <div class="vs__them rv">
-        <small>Today</small>
-        <div class="vs__stack"><span>Scanners</span><span>SIEM</span><span>Tickets</span><span>Spreadsheets</span><span>Email</span><span>Audit binders</span></div>
-        <ul><li>Vulnerabilities ranked by severity, not by asset risk</li><li>Incidents escalated by email</li><li>Evidence gathered by hand every quarter</li><li>Risk spread across spreadsheets</li></ul>
-      </div>
-      <div class="vs__us rv" data-d="1">
-        <small>With ServiceNow SecOps and GRC</small>
-        <div class="vs__one">One security operations posture on the same CMDB as IT</div>
-        <ul><li>Patching ordered by real business risk</li><li>Incidents orchestrated with playbooks</li><li>Evidence collected continuously</li><li>One risk register leadership can read</li></ul>
-      </div>
+    <dl class="cred rv">
+      <div><dt>Certified</dt><dd>ISO 27001, ISO 9001:2015, SOC 2 Type II</dd></div>
+      <div><dt>Healthcare</dt><dd>HIPAA-compliant delivery</dd></div>
+      <div><dt>Past performance</dt><dd>AOC, NIH NIAAA, the VA, U.S. DOT</dd></div>
+      <div><dt>Contracting</dt><dd>CMAS for California public-sector buyers</dd></div>
+      <div><dt>Diversity</dt><dd>WBENC, NMSDC and SBE certified</dd></div>
+      <div><dt>Beyond ServiceNow</dt><dd><a href="/services/cybersecurity">SOC in a Box for 24x7 detection and response</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="model-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Commitments</p><h2 id="model-h" class="rv">Four terms <em>in every security SOW.</em></h2></div>
     </div>
+    <ul class="terms rv">
+      <li><b>Controls mapped once.</b><span>One library cited to each framework, not a copy per audit.</span></li>
+      <li><b>Evidence from source.</b><span>Collected from connected systems, not screenshots gathered the week before fieldwork.</span></li>
+      <li><b>Zero markup.</b><span>Security tool and technology costs passed through at cost.</span></li>
+      <li><b>One CMDB.</b><span>Security works from the same record of the estate as IT, never a parallel asset list.</span></li>
+    </ul>
   </div>
 </section>
 

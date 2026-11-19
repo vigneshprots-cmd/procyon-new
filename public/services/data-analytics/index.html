@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -319,7 +320,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -358,7 +359,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics" aria-current="page">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -367,226 +368,149 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/ai-data">AI &amp; Data</a></li><li aria-current="page">Data platforms &amp; analytics</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Data platforms &amp; analytics</p>
-        <h1 id="ph-h" class="ph__h">One set of numbers, <em>every team trusts.</em></h1>
-        <p class="ph__lede"><b>Procyon builds modern data platforms and governed analytics</b> on Snowflake, Databricks, BigQuery and Synapse, with Tableau, Power BI or Looker on a shared semantic layer. Every team reads the same KPIs in near real time, and the same trusted data products feed AI and automation.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment" data-message="Current data platform and BI tools: &#10;Decision the data should support: " data-track="data_hero">Get a data platform assessment <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#build">See the capabilities</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Data platforms &amp; analytics</p>
+        <h1 id="ph-h" class="hx__h">One set of numbers, <em>defined once, used everywhere.</em></h1>
+        <p class="ph__lede"><b>Procyon builds data platforms and governed analytics on Snowflake, Databricks, BigQuery and Synapse.</b> A shared semantic layer sits under Tableau, Power BI or Looker, so finance, sales and operations read the same KPI from the same definition. The same governed data products then feed Salesforce Data Cloud, AI agents and knowledge assistants.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment" data-message="Current data platform and BI tools: &#10;Decision the data should support: " data-track="data_hero">Get a data platform assessment <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#build">See what is in scope <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-      <figure class="art art--report" aria-label="Sample deliverable: Data trust scorecard">
-        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Data trust scorecard</b><span class="art__meta">Sample review</span></figcaption>
-        <div class="art__body">
-        <div class="art__top">
-          <div class="art__ring" style="--v:0.62;--c:var(--blue)"><svg viewBox="0 0 104 104" aria-hidden="true"><circle class="t" cx="52" cy="52" r="46"/><circle class="v" cx="52" cy="52" r="46"/></svg><b><span data-count="62">62</span><small>trust</small></b></div>
-          <div class="art__sum"><b>One revenue number, 4 definitions</b><span>Sales, Finance and the board each read a different figure.</span></div>
-        </div>
-        <p class="art__sec">Where the score is lost</p>
-        <ul class="art__bars"><li style="--i:0;--w:50%;--bc:var(--red)"><span>Metric definitions that agree</span><em>2 of 4</em><i></i></li><li style="--i:1;--w:40%;--bc:var(--red)"><span>Pipeline data freshness</span><em>26 hours</em><i></i></li><li style="--i:2;--w:66%;--bc:var(--blue)"><span>Duplicate customers</span><em>11%</em><i></i></li><li style="--i:3;--w:58%;--bc:var(--green)"><span>Dashboards in active use</span><em>58%</em><i></i></li></ul>
-        <p class="art__sec">Top findings</p>
-        <ul class="art__finds"><li style="--i:0"><span class="chip chip--r">High</span><span>Bookings counted twice across two pipelines</span></li><li style="--i:1"><span class="chip chip--b">Medium</span><span>No owner for the customer master</span></li><li style="--i:2"><span class="chip chip--g">Quick win</span><span>Retire 46 dashboards nobody opened in 90 days</span></li></ul>
-        </div>
-        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment" data-message="Current data platform and BI tools: &#10;Decision the data should support: " data-track="hero_artifact_cta">Request the data trust review <i aria-hidden="true">&rarr;</i></a></div>
-      </figure>
+      <aside class="brief" aria-labelledby="brief-h">
+        <p class="brief__k">The first engagement</p>
+        <p class="brief__t" id="brief-h">Data platform assessment</p>
+        <p class="brief__d">A senior data architect reviews the current platform, BI tools and the decisions the data should support.</p>
+        <dl>
+          <div><dt>Length</dt><dd>30 minutes, then a written reply</dd></div>
+          <div><dt>Led by</dt><dd>A senior data architect, not a sales rep</dd></div>
+          <div><dt>You end with</dt><dd>Platform options scored on cost, performance, governance and team fit, and a phased plan</dd></div>
+          <div><dt>Commercials</dt><dd>Free</dd></div>
+        </dl>
+        <a class="brief__go" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment" data-message="Current data platform and BI tools: &#10;Decision the data should support: " data-track="data_brief">Book the assessment <i aria-hidden="true">&rarr;</i></a>
+      </aside>
     </div>
-    </div>
+    <dl class="hx__facts">
+      <div><dt>Delivered</dt><dd>100+ data platforms<span>Cloud warehouses and lakehouses</span></dd></div>
+      <div><dt>Reporting</dt><dd>Up to 80% faster<span>After modernization</span></dd></div>
+      <div><dt>Self-service</dt><dd>Up to 10x more users<span>On governed analytics</span></dd></div>
+      <div><dt>Platforms</dt><dd>Snowflake, Databricks<span>Plus BigQuery and Synapse</span></dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Data platforms delivered</dt><dd><b>100+</b>across cloud data warehouses and lakehouses</dd></div>
-        <div><dt>Reporting speed</dt><dd><b>80%</b>faster reporting after modernization</dd></div>
-        <div><dt>Self-service adoption</dt><dd><b>10x</b>more people using governed analytics</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment" data-track="data_kf"><small>Free &middot; 30 minutes</small><b>Get a data platform assessment</b><span>Options scored on cost, speed and governance</span><i aria-hidden="true">&rarr;</i></a>
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">Numbers disagree because definitions do, <em>not because the warehouse is wrong.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">When finance, sales and the board each bring a different revenue figure, the instinct is to buy a new platform. Usually the platform is fine. Bookings are counted from the Salesforce opportunity in one place and from the ERP invoice in another, and nobody ever wrote down which one is revenue.</p>
+      <p class="rv">That matters more now, because AI reads the same data. An agent or assistant grounded on two definitions of an active customer will give both answers, with confidence. Fix the definitions and the ownership first; the platform choice follows from the workloads.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>Metrics defined in every dashboard</h3><p>Each Tableau or Power BI workbook carries its own calculation of revenue, churn or backlog. Twenty dashboards, five versions of the truth.<small>First move: <b>a governed semantic layer with one owner per metric</b></small></p></li>
+        <li class="rv"><h3>Platform chosen on brand</h3><p>Snowflake or Databricks picked because a peer did, before anyone listed the workloads. Costs climb and half the team works around it.<small>First move: <b>score the options on the actual workloads and skills</b></small></p></li>
+        <li class="rv"><h3>Pipelines that fail silently</h3><p>A source system changes a field overnight and the dashboard shows yesterday's numbers without saying so.<small>First move: <b>tested transformations and alerts when a source changes shape</b></small></p></li>
+        <li class="rv"><h3>AI on ungoverned data</h3><p>The AI team pulls straight from source systems because the platform has no product they can trust, and builds a second, private version of the customer.<small>First move: <b>publish governed data products that analytics and AI both use</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
-
-<section class="sx tool" aria-labelledby="tool-h">
-  <div class="wrap tool__in">
-    <div class="tool__copy">
-      <span class="sx__k rv">Data symptom check</span>
-      <h2 id="tool-h" class="rv">Which of these <em>sounds familiar?</em></h2>
-      <p class="rv" data-d="1">Tick the symptoms. The likely cause and the first fix go straight into the brief.</p>
-      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
-    </div>
-    <div class="tool__w rv" data-d="1">
-      <div class="wcard" data-checklist>
-          <span class="wcard__k">Data symptom check</span>
-          <p class="wcard__t">Which of these sounds familiar?</p>
-          <div class="symp__list">
-            <button class="opt opt--check" type="button" aria-pressed="true" data-name="Every team reports different KPIs"><i></i>Every team reports different KPIs</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="New dashboards or metrics take weeks"><i></i>A new dashboard takes weeks</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Operational, analytical and SaaS data are disconnected"><i></i>CRM, ERP and SaaS data live apart</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Privacy, lineage and access are not under control"><i></i>Lineage and access are unclear</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="The AI team cannot get clean data"><i></i>AI projects stall on data quality</button>
-            <button class="opt opt--check" type="button" aria-pressed="false" data-name="Warehouse or BI costs keep rising"><i></i>Warehouse and BI costs keep rising</button>
-          </div>
-          <span class="chk__count" data-check-count aria-live="polite">1 of 6 selected</span>
-          <button class="btn btn--red btn--block" type="button" data-check-cta data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment" data-prefix="Data symptoms we see:" data-suffix="&#10;&#10;Current platform and BI tools: &#10;Decision the data should support: " data-track="data_symp_cta">Send these to a data architect <i aria-hidden="true">&rarr;</i></button>
-          <p class="wcard__foot">The ticked symptoms go straight into the brief.</p>
-        </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="sx sx--paper" id="build" aria-labelledby="build-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="build-h" class="rv">Start with the data problem <em>costing the most.</em></h2><p class="rv" data-d="1">Six problems data leaders bring to the first call, what gets built for each, and the result it delivered. Each one can start on its own.</p></div>
+      <div><p class="k3 rv">What is in scope</p><h2 id="build-h" class="rv">Six pieces of work, <em>each able to start alone.</em></h2><p class="rv" data-d="1">Most programs begin with the problem costing the most, then add the rest in the order the business case supports.</p></div>
     </div>
-    <div class="xpl rv" data-tabs>
-    <div class="xpl__tabs" role="tablist" aria-label="Data and analytics capabilities">
-      <button type="button" role="tab" id="dax-t0" aria-controls="dax-p0" aria-selected="true"><b>Data strategy</b><small>Data spend with no clear return</small></button>
-      <button type="button" role="tab" id="dax-t1" aria-controls="dax-p1" aria-selected="false" tabindex="-1"><b>Modern data platform</b><small>Warehouse costs up, performance down</small></button>
-      <button type="button" role="tab" id="dax-t2" aria-controls="dax-p2" aria-selected="false" tabindex="-1"><b>Data engineering</b><small>Reports run on yesterday's data</small></button>
-      <button type="button" role="tab" id="dax-t3" aria-controls="dax-p3" aria-selected="false" tabindex="-1"><b>BI and self-service</b><small>Every team reports a different number</small></button>
-      <button type="button" role="tab" id="dax-t4" aria-controls="dax-p4" aria-selected="false" tabindex="-1"><b>Advanced analytics</b><small>Forecasts built in spreadsheets</small></button>
-      <button type="button" role="tab" id="dax-t5" aria-controls="dax-p5" aria-selected="false" tabindex="-1"><b>Data governance</b><small>No one can say where a number came from</small></button>
+    <div class="sit">
+      <article class="rv"><small>Data spend with no clear return</small><h3>Data strategy</h3><p>Use cases scored by value and readiness so the first build pays back, an operating model that says who owns which data, and a business case finance can test.</p><p class="sit__do"><b>Ends with</b>A roadmap ranked by value, signed off before build</p></article>
+      <article class="rv" data-d="1"><small>Costs up, performance down</small><h3>Modern data platform</h3><p>Snowflake, Databricks, BigQuery or Synapse chosen on cost, speed, governance and team fit. Workloads move in waves without a reporting blackout, and spend is visible per team.</p><p class="sit__do"><b>Ends with</b>The platform live, sized to the workloads</p></article>
+      <article class="rv" data-d="2"><small>Reports on yesterday's data</small><h3>Data engineering</h3><p>Ingestion and change data capture from CRM, ERP and SaaS, transformations tested before they reach a dashboard, and orchestration that fails loudly. A new source to first insight in a day.</p><p class="sit__do"><b>Ends with</b>Same-day pipelines with alerts</p></article>
+      <article class="rv"><small>Every team, a different number</small><h3>BI and self-service</h3><p>A semantic layer shared by Tableau, Power BI and Looker. Certified dashboards for leadership, self-service for teams, new metrics in days instead of weeks.</p><p class="sit__do"><b>Ends with</b>One governed definition per metric</p></article>
+      <article class="rv" data-d="1"><small>Forecasts in a spreadsheet</small><h3>Advanced analytics</h3><p>Demand, churn and capacity forecasts that run on schedule rather than on one analyst's laptop, segments sales and marketing can act on, and optimization where it pays back.</p><p class="sit__do"><b>Ends with</b>Models in production on trusted data</p></article>
+      <article class="rv" data-d="2"><small>Nobody knows where a number came from</small><h3>Data governance</h3><p>Catalog, lineage, quality rules and access control, so every critical field traces to its source and access is aligned with GDPR, CCPA and HIPAA before data reaches a dashboard or a model.</p><p class="sit__do"><b>Ends with</b>Data that is safe to use for analytics and AI</p></article>
     </div>
-    <div class="xpl__panel" role="tabpanel" id="dax-p0" aria-labelledby="dax-t0">
-      <p class="xpl__pain"><small>The situation</small>The data budget keeps growing, but leadership cannot point to the decisions it improved. Every team asks for different things first.</p>
-      <h3>A data roadmap ranked by business value, signed off before anything is built.</h3>
-      <ul class="xpl__gets"><li>Use cases scored by value and readiness, so the first build pays back</li><li>An operating model that says who owns which data</li><li>A business case finance can test</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>Value model</span><span>Capability map</span><span>Roadmap</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data strategy" data-title="Data strategy scope">Build the data roadmap <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="dax-p1" aria-labelledby="dax-t1" hidden>
-      <p class="xpl__pain"><small>The situation</small>Queries are slow, costs climb every quarter, and nobody is sure the current platform is the right one to standardize on.</p>
-      <h3>The right lakehouse or warehouse, chosen on evidence and sized to the workloads.</h3>
-      <ul class="xpl__gets"><li>Snowflake, Databricks, BigQuery and Synapse scored on cost, speed, governance and team fit</li><li>Workloads migrated in waves without a reporting blackout</li><li>Costs monitored per team so spend stays visible</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>100+</b><span>Data platforms delivered</span></div>
-        
-        <div class="xpl__stack"><span>Snowflake</span><span>Databricks</span><span>BigQuery</span><span>Synapse</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platform" data-title="Data platform selection">Get the platform recommendation <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="dax-p2" aria-labelledby="dax-t2" hidden>
-      <p class="xpl__pain"><small>The situation</small>Pipelines break overnight, source changes go unnoticed, and the business decides on data that is a day or a week old.</p>
-      <h3>Pipelines that land source data the same day and fail loudly, not silently.</h3>
-      <ul class="xpl__gets"><li>Ingestion and change data capture from CRM, ERP and SaaS</li><li>Transformations tested before they reach a dashboard</li><li>Orchestration with alerts when a source changes shape</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>1 day</b><span>From new source to first insight</span></div>
-        
-        <div class="xpl__stack"><span>ELT</span><span>CDC</span><span>Orchestration</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data engineering" data-title="Data engineering scope">Fix the data pipelines <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="dax-p3" aria-labelledby="dax-t3" hidden>
-      <p class="xpl__pain"><small>The situation</small>Finance, sales and operations each bring their own revenue figure to the same meeting, and the first twenty minutes go on reconciling them.</p>
-      <h3>One governed definition per metric, in every dashboard and every tool.</h3>
-      <ul class="xpl__gets"><li>A semantic layer shared by Tableau, Power BI and Looker</li><li>Certified dashboards for leadership, self-service for teams</li><li>New metrics delivered in days instead of weeks</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>80%</b><span>Faster reporting after modernization</span></div>
-        
-        <div class="xpl__stack"><span>Tableau</span><span>Power BI</span><span>Looker</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="BI and self-service" data-title="BI and self-service scope">Unify the KPIs <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="dax-p4" aria-labelledby="dax-t4" hidden>
-      <p class="xpl__pain"><small>The situation</small>Demand, churn and capacity forecasts live in one analyst's spreadsheet. When that person is out, planning stops.</p>
-      <h3>Forecasting, segmentation and optimization on the same trusted data.</h3>
-      <ul class="xpl__gets"><li>Forecast models that run on schedule, not on request</li><li>Segments that sales and marketing can act on directly</li><li>Optimization for pricing, capacity or inventory where it pays back</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>15-day</b><span>Megawatt forecasting pipeline live for Glendale Water &amp; Power</span></div>
-        
-        <div class="xpl__stack"><span>Forecasting</span><span>Segmentation</span><span>ML models</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Advanced analytics" data-title="Advanced analytics scope">Scope the forecasting model <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="dax-p5" aria-labelledby="dax-t5" hidden>
-      <p class="xpl__pain"><small>The situation</small>Privacy rules, lineage and access are managed by memory. An audit or an AI project exposes how little is under control.</p>
-      <h3>Catalog, lineage, quality and access control that make data safe to use.</h3>
-      <ul class="xpl__gets"><li>Every critical field traced to its source</li><li>Quality rules that stop bad data before it spreads</li><li>Access aligned with GDPR, CCPA and HIPAA</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>Catalog</span><span>Lineage</span><span>Quality rules</span><span>Access policy</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data governance" data-title="Data governance scope">Review data governance <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-  </div>
   </div>
 </section>
 
-<section class="sx" aria-labelledby="case-h">
-  <div class="wrap report">
-    <div>
-      <span class="sx__k rv">In production</span>
-      <h2 id="case-h" class="rv">Ten utility systems, <em>one real-time view.</em></h2>
-      <p class="rv" data-d="1" style="font-size:17px;color:var(--ink-2)">City of Glendale Water &amp; Power had no real-time visibility across 10+ utility systems, and manual data exchanges were creating operational risk.</p>
-      <a class="btn btn--red rv" data-d="2" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Real-time data platform scope" data-track="data_case_cta">Scope a real-time data platform <i aria-hidden="true">&rarr;</i></a>
+<section class="sx" aria-labelledby="fit-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Platform fit</p><h2 id="fit-h" class="rv">Snowflake or Databricks <em>is a fit question.</em></h2><p class="rv" data-d="1">Both are capable, and many enterprises end up running both. The recommendation follows the workloads, the cloud already in place and the skills of the team that will run it.</p></div>
     </div>
-    <div class="report__doc rv" data-d="1">
-      <small>Glendale Water &amp; Power</small>
-      <b>What went live</b>
-      <ol>
-        <li>10+ utility systems unified into one data platform</li>
-        <li>A 15-day megawatt forecasting pipeline in production</li>
-        <li>Real-time feeder alerts for operations teams</li>
-        <li>Predictive asset synchronization across systems</li>
-        <li>Manual data exchanges retired</li>
-      </ol>
-    </div>
+    <dl class="caplist caplist--2 rv">
+      <div><dt>Snowflake</dt><dd>Fits when the center of gravity is SQL analytics and governed reporting, with many business users, data shared across teams or partners, and a preference for a managed service with little platform engineering.</dd></div>
+      <div><dt>Databricks</dt><dd>Fits when data engineering and machine learning dominate: large pipelines, semi-structured and unstructured data, notebooks, and a team comfortable with Spark and Python.</dd></div>
+      <div><dt>BigQuery</dt><dd>Fits estates already on Google Cloud and Google Workspace, where analytics and Vertex AI sit side by side.</dd></div>
+      <div><dt>Synapse</dt><dd>Fits estates standardized on Azure and Microsoft identity, with Power BI as the main reporting tool.</dd></div>
+    </dl>
+    <p class="offers__note rv">Whichever platform is chosen, the semantic layer and the data products are designed to outlive it, and to feed <a href="/enterprise/salesforce/data-cloud">Salesforce Data Cloud</a> and ServiceNow reporting from the same governed source.</p>
+  </div>
+</section>
+
+<section class="proof proof--page" aria-labelledby="proof-h">
+  <div class="wrap">
+    <p class="k3 k3--inv rv">Client result</p>
+    <h2 id="proof-h" class="rv">Ten utility systems, <em>one real-time view.</em></h2>
+    <article class="cs rv">
+      <div>
+        <p class="cs__who">City of Glendale Water &amp; Power &middot; Utilities</p>
+        <h3>Operators saw problems after they happened. Now feeder alerts arrive in real time.</h3>
+        <p class="cs__p">More than ten utility systems held grid, asset and outage data, and moved it between each other by manual exchange. The program put them on one data platform, then built forecasting and alerting on top of it.</p>
+        <ul class="cs__built">
+          <li>10+ utility systems unified on one data platform</li>
+          <li>A 15-day megawatt forecasting pipeline in production</li>
+          <li>Real-time feeder alerts for operations teams</li>
+          <li>Predictive asset synchronization across systems</li>
+        </ul>
+      </div>
+      <div>
+        <table class="cs__tbl">
+          <thead><tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+          <tbody>
+            <tr><td>Systems in one view</td><td>None in real time</td><td>10+</td></tr>
+            <tr><td>Data exchange between systems</td><td>Manual</td><td>Automated</td></tr>
+            <tr><td>Feeder alerts</td><td>Not real time</td><td>Real time</td></tr>
+          </tbody>
+        </table>
+        <a class="arrow-link arrow-link--inv cs__go" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Real-time data platform scope" data-track="data_case_cta">Scope a real-time data platform <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </article>
   </div>
 </section>
 
 <section class="sx sx--paper" aria-labelledby="path-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="path-h" class="rv">Strategy, platform, products, <em>then adoption.</em></h2><p class="rv" data-d="1">Each stage ends with something the business can use, not a slide.</p></div>
+      <div><p class="k3 rv">How it runs</p><h2 id="path-h" class="rv">Strategy, platform, products, <em>then adoption.</em></h2><p class="rv" data-d="1">Each stage ends with something the business can use, not a slide. Adoption is a stage of its own, because a platform nobody uses is the most expensive kind.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment">Start with the assessment <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="days">
-      <div class="rv"><small>Stage 1</small><b>Strategy</b><span>Use cases, capability gaps and a value model.</span></div>
-      <div class="rv" data-d="1"><small>Stage 2</small><b>Platform</b><span>Lakehouse, pipelines, semantic layer and governance.</span></div>
-      <div class="rv" data-d="2"><small>Stage 3</small><b>Data products</b><span>Trusted datasets and the first analytics use cases.</span></div>
-      <div class="rv" data-d="3"><small>Stage 4</small><b>Adoption</b><span>Enablement, data literacy and embedded analytics.</span></div>
-    </div>
+    <ol class="gates rv" style="--n:4">
+      <li><span class="gates__w">Strategy</span><b>Decide what matters</b><p>Use cases, capability gaps and a value model. The metrics that disagree today are listed, with an owner for each.</p><em>Roadmap and metric owners signed off</em></li>
+      <li><span class="gates__w">Platform</span><b>Build the foundation</b><p>Warehouse or lakehouse, pipelines, the semantic layer and governance, in the client's cloud account.</p><em>Platform live, costs visible per team</em></li>
+      <li><span class="gates__w">Data products</span><b>Prove it on real use</b><p>Trusted datasets and the first analytics use cases, built for dashboards and AI alike.</p><em>First certified dashboards in use</em></li>
+      <li><span class="gates__w">Adoption</span><b>Spread it</b><p>Enablement, data literacy and analytics embedded in Salesforce, ServiceNow and the tools people already open.</p><em>Self-service usage measured</em></li>
+    </ol>
   </div>
 </section>
 
-<!-- ================= CLIENTS ================= -->
-<section class="clients" aria-labelledby="clients-h">
+<section class="sx" aria-labelledby="own-h">
   <div class="wrap">
-    <p id="clients-h" class="clients__k">Enterprise teams that have run on Procyon delivery</p>
-    <div class="clients__band">
-      <div class="clients__stat"><b>200+</b><span>enterprise clients<br>since 2004</span></div>
-      <div class="ticker" data-ticker>
-        <ul class="ticker__track" aria-label="Clients">
-        <li><img src="/assets/img/clients/cisco.webp" alt="Cisco" width="181" height="96" loading="lazy"></li>
-        <li><img src="/assets/img/clients/pfizer.webp" alt="Pfizer" width="166" height="96" loading="lazy"></li>
-        <li><img src="/assets/img/clients/att.webp" alt="AT&amp;T" width="253" height="96" loading="lazy"></li>
-        <li><img src="/assets/img/clients/basf.webp" alt="BASF" width="97" height="96" loading="lazy"></li>
-        <li><img src="/assets/img/clients/capgemini.webp" alt="Capgemini" width="360" height="79" loading="lazy"></li>
-        <li><img src="/assets/img/clients/deltadental.webp" alt="Delta Dental" width="360" height="41" loading="lazy"></li>
-        <li><img src="/assets/img/clients/talkdesk.webp" alt="Talkdesk" width="360" height="60" loading="lazy"></li>
-        <li><img src="/assets/img/clients/randstad.webp" alt="Randstad Digital" width="360" height="80" loading="lazy"></li>
-        <li><img src="/assets/img/clients/arris.webp" alt="ARRIS" width="321" height="96" loading="lazy"></li>
-        <li><img src="/assets/img/clients/htc.webp" alt="HTC Global Services" width="360" height="75" loading="lazy"></li>
-        <li><img src="/assets/img/clients/bounteous.webp" alt="Bounteous x Accolite" width="360" height="29" loading="lazy"></li>
-        <li><img src="/assets/img/clients/fisker.webp" alt="Fisker" width="95" height="96" loading="lazy"></li>
-        <li><img src="/assets/img/clients/arteria.webp" alt="Arteria" width="360" height="74" loading="lazy"></li>
-        </ul>
-      </div>
+    <div class="sx__head">
+      <div><p class="k3 rv">What is handed over</p><h2 id="own-h" class="rv">The client owns the platform, <em>and the knowledge to run it.</em></h2><p class="rv" data-d="1">Nothing sits in a Procyon account or a consultant's head when the engagement ends.</p></div>
+    </div>
+    <div class="own rv">
+      <div><b>Metric definitions</b><span>Every governed KPI, its formula and its business owner, in the semantic layer.</span></div>
+      <div><b>Pipeline code</b><span>Ingestion and transformation code in the client's repository, with tests.</span></div>
+      <div><b>Data catalog and lineage</b><span>Critical fields traced from dashboard back to source system.</span></div>
+      <div><b>Quality rules</b><span>Checks that stop bad data before it spreads, with alert routing.</span></div>
+      <div><b>Cost view</b><span>Platform spend broken down by team and workload.</span></div>
+      <div><b>Runbooks</b><span>How to add a source, change a metric and recover a failed load.</span></div>
     </div>
   </div>
 </section>
@@ -762,7 +686,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

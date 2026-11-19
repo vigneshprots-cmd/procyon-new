@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -316,7 +317,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -355,7 +356,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact" aria-current="page">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -364,59 +365,58 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Contact</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Contact</p>
-        <h1 id="ph-h" class="ph__h">One brief. <em>A senior architect replies within one business day.</em></h1>
-        <p class="ph__lede"><b>A short brief goes straight to a senior practice lead, not a sales rep.</b> The reply comes within one business day, an NDA is available before discovery, and the first 30-minute working session ends with a written plan: scope, timeline and a cost range. Prefer the phone? Call +1 415 382 8040.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="" data-kicker="Contact" data-title="Brief a senior architect" data-track="contact_hero">Send a brief <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="tel:+14153828040" data-track="phone_click">Call +1 415 382 8040</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Contact</p>
+        <h1 id="ph-h" class="hx__h">One brief. <em>A senior architect replies within one business day.</em></h1>
+        <p class="ph__lede"><b>A short brief goes straight to a senior practice lead, not a sales rep.</b> An NDA is available before discovery, and the first 30-minute working session ends with a written plan: scope, timeline and a cost range. Prefer the phone? Call +1 415 382 8040.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="" data-kicker="Contact" data-title="Brief a senior architect" data-track="contact_hero">Send a brief <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="tel:+14153828040" data-track="phone_click">Call +1 415 382 8040 <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-        <div class="wcard" data-picker="route">
-          <span class="wcard__k">Route the brief</span>
-          <p class="wcard__t">What is the conversation about?</p>
-          <div class="opt-list" role="radiogroup" aria-label="What is the conversation about?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Salesforce architect" data-s="Implementation, Data Cloud or managed services. Reply within one business day." data-cta="Brief a Salesforce architect" data-interest="Salesforce consulting &amp; implementation" data-kicker="Salesforce" data-title="Salesforce project brief"><i></i>A Salesforce project</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="ServiceNow architect" data-s="ITSM, ITOM, CMDB, Security Operations or GRC. Reply within one business day." data-cta="Brief a ServiceNow architect" data-interest="ServiceNow implementation" data-kicker="ServiceNow" data-title="ServiceNow project brief"><i></i>A ServiceNow project</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Platform health check" data-s="For a Salesforce or ServiceNow platform that is slow, messy or not adopted." data-cta="Book a platform health check" data-interest="" data-kicker="Platform rescue" data-title="Platform health check" data-message="Platform (Salesforce or ServiceNow): &#10;What is going wrong: "><i></i>Fixing a platform that underperforms</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="AI agents" data-s="First Agentforce or Now Assist agents in production in weeks." data-cta="Plan the first AI agent" data-interest="Agentforce &amp; AI agents" data-kicker="AI agents" data-title="First AI agent plan"><i></i>AI agents</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Certified talent" data-s="Salesforce or ServiceNow people by the seat or as a delivery pod." data-cta="Request certified profiles" data-interest="Staff augmentation" data-kicker="Certified talent" data-title="Certified profiles request"><i></i>Certified people for a team</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Ranger Fusion demo" data-s="A 30-minute demo built around the module needed first." data-cta="Book a Ranger Fusion demo" data-interest="Ranger Fusion ERP" data-kicker="Ranger Fusion ERP" data-title="Ranger Fusion demo"><i></i>A Ranger Fusion demo</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Vendor onboarding or partnership" data-s="Certificates, partner verification and security questionnaires." data-href="/about/certifications" data-link="See the credential register" data-cta="Send the request" data-interest="Other" data-kicker="Vendor onboarding" data-title="Vendor onboarding or partnership"><i></i>Vendor onboarding or partnership</button>
-          </div>
-          <div class="rec" aria-live="polite"><b data-rec-b>Salesforce architect</b><span data-rec-s>Implementation, Data Cloud or managed services. Reply within one business day.</span><a class="arrow-link" data-rec-a href="/about/certifications" hidden>See the credential register <i aria-hidden="true">&rarr;</i></a></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta data-track="contact_route_cta">Brief a Salesforce architect <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__alt">Looking for a job? <a href="/careers">Apply on the careers page</a></p>
-        </div>
-      </div>
+      <aside class="calls" aria-labelledby="calls-h">
+        <p class="calls__k" id="calls-h">Route the brief to the right practice</p>
+        <ul>
+          <li><a href="#audit" data-open="audit" data-interest="Salesforce consulting &amp; implementation" data-kicker="Salesforce" data-title="Salesforce project brief" data-track="contact_route_cta"><b>A Salesforce project</b><span>Implementation, Data Cloud or managed services, with a Salesforce architect</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="#audit" data-open="audit" data-interest="ServiceNow implementation" data-kicker="ServiceNow" data-title="ServiceNow project brief" data-track="contact_route_cta"><b>A ServiceNow project</b><span>ITSM, ITOM, CMDB, Security Operations or GRC, with a ServiceNow architect</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="#audit" data-open="audit" data-interest="" data-kicker="Platform rescue" data-title="Platform health check" data-message="Platform (Salesforce or ServiceNow): &#10;What is going wrong: " data-track="contact_route_cta"><b>A platform that underperforms</b><span>A health check for a Salesforce or ServiceNow platform that is slow, messy or not adopted</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI agents" data-title="First AI agent plan" data-track="contact_route_cta"><b>AI agents</b><span>First Agentforce or Now Assist agents in production, on data that can carry them</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="#audit" data-open="audit" data-interest="Staff augmentation" data-kicker="Certified talent" data-title="Certified profiles request" data-track="contact_route_cta"><b>Certified people for a team</b><span>Salesforce or ServiceNow people by the seat or as a delivery pod</span><i aria-hidden="true">&rarr;</i></a></li>
+        </ul>
+      </aside>
     </div>
+    <dl class="hx__facts">
+      <div><dt>Reply</dt><dd>1 business day<span>From a senior architect, not a sales rep</span></dd></div>
+      <div><dt>First call</dt><dd>30 minutes<span>Ends in a written plan with a cost range</span></dd></div>
+      <div><dt>Sales</dt><dd><a href="tel:+14153828040" data-track="phone_click">+1 415 382 8040</a><span><a href="mailto:sales@procyonts.com" data-track="email_click">sales@procyonts.com</a></span></dd></div>
+      <div><dt>Delivery support</dt><dd>24/7<span>Across Novato, Toronto and Chennai</span></dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
+<section class="sx" aria-labelledby="steps-h">
   <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Reply time</dt><dd><b>1 business day</b>from a senior architect, not a sales rep</dd></div>
-        <div><dt>First call</dt><dd><b>30 minutes</b>ends in a written plan with a cost range</dd></div>
-        <div><dt>Delivery support</dt><dd><b>24/7</b>across Novato, Toronto and Chennai</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="" data-kicker="Contact" data-title="Brief a senior architect" data-track="contact_kf"><small>Free &middot; no obligation</small><b>Send a brief</b><span>Scope, timeline and cost range in writing</span><i aria-hidden="true">&rarr;</i></a>
+    <div class="sx__head">
+      <div><p class="k3 rv">After the brief</p><h2 id="steps-h" class="rv">From brief to written plan <em>in under a week.</em></h2><p class="rv" data-d="1">The same four steps for every enquiry, whatever the platform. The plan is free and stays with the client, whether or not the work goes ahead.</p></div>
+      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="" data-kicker="Contact" data-title="Brief a senior architect">Start with the brief <i aria-hidden="true">&rarr;</i></a>
     </div>
+    <ol class="gates rv" style="--n:4">
+      <li><span class="gates__w">Today</span><b>Brief sent</b><p>Name, company, the platform and the goal. About two minutes.</p><em>Brief with a practice lead</em></li>
+      <li><span class="gates__w">Within 1 business day</span><b>Architect replies</b><p>A senior practice lead, not a sales rep, reads the brief and books the call.</p><em>Call booked</em></li>
+      <li><span class="gates__w">The call</span><b>30-minute working session</b><p>With a solution architect, on the real platform and goals. NDA available on request before discovery.</p><em>Goals and constraints agreed</em></li>
+      <li><span class="gates__w">Within a week</span><b>Written plan</b><p>Scope, timeline and a cost range, sent in writing.</p><em>Plan the client keeps</em></li>
+    </ol>
   </div>
 </section>
 
 <section class="sx sx--paper" id="offices" aria-labelledby="off-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="off-h" class="rv">Three offices, <em>one team.</em></h2><p class="rv" data-d="1">Headquarters in California, delivery in Canada and India. Every office is reached through one number and one inbox, with 24/7 global delivery support.</p></div>
+      <div><p class="k3 rv">Offices</p><h2 id="off-h" class="rv">Three offices, <em>one number and one inbox.</em></h2><p class="rv" data-d="1">Headquarters in California, delivery in Canada and India. Pacific, Eastern and Indian working hours are all covered, with 24/7 global delivery support.</p></div>
       <a class="sx__go rv" href="mailto:sales@procyonts.com" data-track="email_click">sales@procyonts.com <i aria-hidden="true">&rarr;</i></a>
     </div>
     <div class="offices">
@@ -424,36 +424,22 @@
       <div class="office rv" data-d="1"><small>North America delivery</small><b>Toronto, Canada</b><address>202-1825 Markham Road<br>Scarborough, ON M1B 4Z9, Canada</address><a class="arrow-link" href="https://www.google.com/maps/search/?api=1&amp;query=1825+Markham+Road+Scarborough+ON+M1B+4Z9" target="_blank" rel="noopener">Get directions <i aria-hidden="true">&rarr;</i></a></div>
       <div class="office rv" data-d="2"><small>Global delivery center</small><b>Chennai, India</b><address>RNG Tower, 824/1, Anna Salai<br>CIT Nagar West, Chennai 600035, India</address><a class="arrow-link" href="https://www.google.com/maps/search/?api=1&amp;query=RNG+Tower+824+Anna+Salai+Chennai+600035" target="_blank" rel="noopener">Get directions <i aria-hidden="true">&rarr;</i></a></div>
     </div>
-    <div class="sun rv" data-sun>
-      <div class="sun__head"><b>Live status of the three offices</b><span>Local time in Novato, Toronto and Chennai</span></div>
-      <div class="sun__hubs">
-        <div class="hub" data-tz="America/Los_Angeles"><span class="hub__city">Novato, California</span><span class="hub__role">Headquarters</span><span class="hub__time">--:--</span><span class="hub__state">&nbsp;</span></div>
-        <div class="hub" data-tz="America/Toronto"><span class="hub__city">Toronto, Canada</span><span class="hub__role">North America delivery</span><span class="hub__time">--:--</span><span class="hub__state">&nbsp;</span></div>
-        <div class="hub" data-tz="Asia/Kolkata"><span class="hub__city">Chennai, India</span><span class="hub__role">Global delivery center</span><span class="hub__time">--:--</span><span class="hub__state">&nbsp;</span></div>
-      </div>
-      <div class="sun__band" aria-hidden="true">
-        <div class="sun__lane" data-lane="America/Los_Angeles"><em>Novato</em></div>
-        <div class="sun__lane" data-lane="America/Toronto"><em>Toronto</em></div>
-        <div class="sun__lane" data-lane="Asia/Kolkata"><em>Chennai</em></div>
-        <span class="sun__now"><i>Now</i></span>
-        <div class="sun__ticks"><span>00 UTC</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
-      </div>
-    </div>
   </div>
 </section>
 
-<section class="sx" aria-labelledby="steps-h">
+<section class="sx" aria-labelledby="other-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="steps-h" class="rv">From brief to written plan <em>in under a week.</em></h2><p class="rv" data-d="1">The same four steps for every enquiry, whatever the platform.</p></div>
-      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="" data-kicker="Contact" data-title="Brief a senior architect">Start with the brief <i aria-hidden="true">&rarr;</i></a>
+      <div><p class="k3 rv">Other enquiries</p><h2 id="other-h" class="rv">Not a project brief? <em>The right place for the rest.</em></h2></div>
     </div>
-    <div class="days">
-      <div class="rv"><small>Today</small><b>Brief sent</b><span>Name, company, the platform and the goal. Two minutes.</span></div>
-      <div class="rv" data-d="1"><small>Within 1 business day</small><b>Architect replies</b><span>A senior practice lead, not a sales rep, books the call.</span></div>
-      <div class="rv" data-d="2"><small>The call</small><b>30-minute working session</b><span>With a solution architect. NDA available on request before discovery.</span></div>
-      <div class="rv" data-d="3"><small>Within a week</small><b>Written plan</b><span>Scope, timeline and a cost range, free and kept by the client.</span></div>
-    </div>
+    <dl class="caplist rv">
+      <div><dt><a href="#audit" data-open="audit" data-interest="Ranger Fusion ERP" data-kicker="Ranger Fusion ERP" data-title="Ranger Fusion demo">Ranger Fusion demo</a></dt><dd>A 30-minute demo of the Salesforce-native ERP, built around the module needed first.</dd></div>
+      <div><dt><a href="/about/certifications">Vendor onboarding</a></dt><dd>Certificates, partner verification and security questionnaires, sent to the procurement contact.</dd></div>
+      <div><dt><a href="#audit" data-open="audit" data-interest="Other" data-kicker="Vendor onboarding" data-title="Vendor onboarding or partnership">Partnerships</a></dt><dd>Technology and delivery partnership enquiries, sent through the same short brief.</dd></div>
+      <div><dt><a href="/careers">Jobs</a></dt><dd>Apply on the careers page. Personal email is accepted, and a LinkedIn link replaces a CV.</dd></div>
+      <div><dt>NDA first</dt><dd>An NDA is available on request before discovery, so the first session can cover the real platform and data.</dd></div>
+      <div><dt><a href="/about">Company profile</a></dt><dd>Founded in 2004, 200+ professionals, Salesforce Consulting Partner and ServiceNow Implementation Partner.</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -594,7 +580,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

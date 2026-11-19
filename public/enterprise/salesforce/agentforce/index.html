@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -311,7 +312,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -350,7 +351,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce" aria-current="page">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -359,208 +360,159 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/enterprise/salesforce">Salesforce</a></li><li aria-current="page">Agentforce</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Agentforce Partner</p>
-        <h1 id="ph-h" class="ph__h">AI agents that close cases and qualify leads. <em>Live in 4 weeks.</em></h1>
-        <p class="ph__lede"><b>Procyon puts Agentforce agents into production in under four weeks.</b> Our Agent Launch Kit starts from pre-configured agents for lead qualification, case triage and self-service, grounds them in company data and keeps a human in the loop for every decision that carries risk.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Agentforce" data-title="First Agentforce agent plan" data-track="agent_hero">Launch the first agent <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#audit" data-open="score" data-track="agent_readiness">Check AI readiness</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Agentforce practice</p>
+        <h1 id="ph-h" class="hx__h">One narrow agent in production <em>beats a broad one in pilot.</em></h1>
+        <p class="ph__lede"><b>Procyon puts Agentforce agents into production in under four weeks with the Agent Launch Kit.</b> Each agent starts with one high-volume job, such as case triage, tier-1 self-service or lead qualification. It is grounded in data that has been checked first, tested against real conversations before release, and handed to a person whenever the answer carries risk.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Agentforce" data-title="First Agentforce agent plan" data-track="agent_hero">Plan the first agent <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#uc">See where to start <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-        <div class="wcard">
-          <span class="wcard__k">Agent Launch Kit</span>
-          <p class="wcard__t">From use case to production in four sprints.</p>
-          <ol class="wk">
-            <li><div><b>Pick and ground</b><span>One high-volume use case, its data sources and success metric.</span></div></li>
-            <li><div><b>Build and instruct</b><span>Topics, actions and prompts configured from the kit.</span></div></li>
-            <li><div><b>Test and guard</b><span>Red-team prompts, accuracy checks and escalation rules.</span></div></li>
-            <li><div><b>Launch and measure</b><span>Live with real users, watched daily against the metric.</span></div></li>
-          </ol>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Agent Launch Kit" data-title="4-week Agentforce launch sprint" data-message="Interested in: Agent Launch Kit.&#10;First use case we have in mind: " data-track="agent_sprint_cta">Start the 4-week sprint <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">An AI architect replies within one business day.</p>
-        </div>
-      </div>
+      <aside class="brief" aria-labelledby="brief-h">
+        <p class="brief__k">The first engagement</p>
+        <p class="brief__t" id="brief-h">Agent Launch Kit</p>
+        <p class="brief__d">One agent, one use case and one success metric, taken from a pre-configured starting point to real users.</p>
+        <dl>
+          <div><dt>Length</dt><dd>Under 4 weeks, in four one-week sprints</dd></div>
+          <div><dt>Starts with</dt><dd>A free 90-minute readiness session on the data, process and governance underneath</dd></div>
+          <div><dt>You end with</dt><dd>An agent live with real users, its test set, its guardrails and a metric watched daily</dd></div>
+          <div><dt>Commercials</dt><dd>Fixed scope</dd></div>
+        </dl>
+        <a class="brief__go" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Agent Launch Kit" data-title="4-week Agentforce launch sprint" data-message="Interested in: Agent Launch Kit.&#10;First use case we have in mind: " data-track="agent_sprint_cta">Start the 4-week sprint <i aria-hidden="true">&rarr;</i></a>
+      </aside>
+    </div>
+    <dl class="hx__facts">
+      <div><dt>Time to production</dt><dd>Under 4 weeks<span>with the Agent Launch Kit</span></dd></div>
+      <div><dt>Tier-1 queries</dt><dd>60% resolved by agents<span>in a regional health system rollout</span></dd></div>
+      <div><dt>Repetitive work</dt><dd>70% automated<span>with AI agents and Flow</span></dd></div>
+      <div><dt>Readiness</dt><dd>90-minute assessment<span>data, process and governance, free</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">Agent pilots stall on scope and data, <em>not on the model.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">The agent pilots that stall usually share a shape: a broad agent asked to help customers with anything, pointed at a knowledge base nobody has reviewed in years, and tested with a handful of friendly questions. It demos well and fails on the first awkward conversation.</p>
+      <p class="rv">An Agentforce agent is a set of topics, the actions each topic is allowed to take, and the instructions and guardrails around them. Getting those right for one narrow job is most of the work, and it is the part that carries over to the second and third agent.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>Topics drawn too wide</h3><p>One topic that covers billing, orders and complaints classifies requests badly, and the agent picks the wrong action with full confidence.<small>First move: <b>one topic per job, with a written out-of-scope list</b></small></p></li>
+        <li class="rv"><h3>Grounding data nobody owns</h3><p>Duplicate accounts, stale knowledge articles and records with no owner. The agent repeats whatever it reads, to the customer.<small>First move: <b>score the records and articles the agent will read</b></small></p></li>
+        <li class="rv"><h3>Actions without limits</h3><p>An agent that can update a record, issue a credit or book a visit needs the same limits a new employee would have.<small>First move: <b>read-only actions first, write actions behind confirmation</b></small></p></li>
+        <li class="rv"><h3>No test set</h3><p>Without a fixed set of real past conversations, every prompt change is a guess and nobody can say whether the agent got better.<small>First move: <b>a test set built from real cases, run before every release</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Time to production</dt><dd><b>&lt; 4 weeks</b>with the Agent Launch Kit</dd></div>
-        <div><dt>Tier-1 queries resolved</dt><dd><b>60%</b>by AI agents in a healthcare rollout</dd></div>
-        <div><dt>Repetitive work automated</dt><dd><b>70%</b>with AI agents and Flow</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI readiness" data-title="AI readiness assessment (90 minutes)" data-track="kf_cta"><small>Free &middot; 90 minutes</small><b>Book an AI readiness assessment</b><span>Data, process and governance, scored</span><i aria-hidden="true">&rarr;</i></a>
-    </div>
-  </div>
-</section>
-
-<section class="sx sx--paper" aria-labelledby="uc-h">
-  <div class="wrap">
-    <div class="sx__head">
-      <div><h2 id="uc-h" class="rv">Nine agents with <em>the job description already written.</em></h2><p class="rv" data-d="1">Each one is a starting configuration in the Agent Launch Kit. Filter by team, then send the right one to an architect.</p></div>
-    </div>
-    <div class="uc__bar rv" data-filter="uc-list">
-      <span>Team</span>
-      <button class="chipf" type="button" data-f="all" aria-pressed="true">All agents</button>
-      <button class="chipf" type="button" data-f="sales" aria-pressed="false">Sales</button>
-      <button class="chipf" type="button" data-f="service" aria-pressed="false">Service</button>
-      <button class="chipf" type="button" data-f="ops" aria-pressed="false">Operations</button>
-    </div>
-    <div class="uc" id="uc-list">
-      <article class="agent rv" data-team="sales">
-        <div class="agent__top"><span class="agent__team">Sales</span><span class="agent__time">&lt; 4 wks</span></div>
-        <b>Inbound lead qualifier</b>
-        <p>Answers web and email enquiries, asks qualifying questions and books meetings for the right rep.</p>
-        <div class="agent__sys"><span>Sales Cloud</span><span>Web forms</span><span>Calendar</span></div>
-        <p class="agent__guard"><b>Guardrail</b>Hands over to a human on pricing or contract questions.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Sales agent" data-title="Agentforce: lead qualifier agent" data-message="Agent use case: inbound lead qualifier.">Build this agent <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="1" data-team="sales">
-        <div class="agent__top"><span class="agent__team">Sales</span><span class="agent__time">&lt; 4 wks</span></div>
-        <b>Deal health coach</b>
-        <p>Flags stalled opportunities, missing stakeholders and slipping close dates before the forecast call.</p>
-        <div class="agent__sys"><span>Sales Cloud</span><span>AI Scoring Engine</span><span>Slack</span></div>
-        <p class="agent__guard"><b>Guardrail</b>Suggests actions only. Reps decide what changes.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Sales agent" data-title="Agentforce: deal health agent" data-message="Agent use case: deal health coach.">Build this agent <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="2" data-team="sales">
-        <div class="agent__top"><span class="agent__team">Sales</span><span class="agent__time">Phase 2</span></div>
-        <b>Renewal and churn watcher</b>
-        <p>Spots usage drops and support spikes, then drafts a save plan for the account owner.</p>
-        <div class="agent__sys"><span>Data Cloud</span><span>Service Cloud</span><span>Revenue Cloud</span></div>
-        <p class="agent__guard"><b>Guardrail</b>Never contacts customers directly. Drafts for review.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Sales agent" data-title="Agentforce: churn watcher agent" data-message="Agent use case: renewal and churn watcher.">Build this agent <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-team="service">
-        <div class="agent__top"><span class="agent__team">Service</span><span class="agent__time">&lt; 4 wks</span></div>
-        <b>Case triage agent</b>
-        <p>Reads every new case, sets category and priority, and routes it to the right queue with a summary.</p>
-        <div class="agent__sys"><span>Service Cloud</span><span>Email</span><span>Omnichannel</span></div>
-        <p class="agent__guard"><b>Guardrail</b>Low-confidence cases go to a human queue untouched.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Service agent" data-title="Agentforce: case triage agent" data-message="Agent use case: case triage.">Build this agent <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="1" data-team="service">
-        <div class="agent__top"><span class="agent__team">Service</span><span class="agent__time">&lt; 4 wks</span></div>
-        <b>Tier-1 self-service agent</b>
-        <p>Resolves order status, account and how-to questions on web, WhatsApp or the customer portal.</p>
-        <div class="agent__sys"><span>Experience Cloud</span><span>Knowledge</span><span>WhatsApp</span></div>
-        <p class="agent__guard"><b>Guardrail</b>Answers only from approved knowledge, with a one-click handover to an agent.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Service agent" data-title="Agentforce: self-service agent" data-message="Agent use case: tier-1 self-service.">Build this agent <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="2" data-team="service">
-        <div class="agent__top"><span class="agent__team">Service</span><span class="agent__time">&lt; 4 wks</span></div>
-        <b>Agent assist and reply drafter</b>
-        <p>Drafts replies from knowledge and past cases so human agents resolve in fewer touches.</p>
-        <div class="agent__sys"><span>Service Cloud</span><span>Enterprise RAG Starter</span><span>SharePoint</span></div>
-        <p class="agent__guard"><b>Guardrail</b>Every draft cites its source and is sent by a person.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Service agent" data-title="Agentforce: agent assist" data-message="Agent use case: agent assist and reply drafting.">Build this agent <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-team="ops">
-        <div class="agent__top"><span class="agent__team">Operations</span><span class="agent__time">Phase 2</span></div>
-        <b>Order and quote desk agent</b>
-        <p>Checks quotes against pricing rules, chases missing approvals and flags errors before they reach the customer.</p>
-        <div class="agent__sys"><span>Revenue Cloud</span><span>CPQ</span><span>ERP</span></div>
-        <p class="agent__guard"><b>Guardrail</b>Approvals stay with your deal desk.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Operations agent" data-title="Agentforce: quote desk agent" data-message="Agent use case: order and quote desk.">Build this agent <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="1" data-team="ops">
-        <div class="agent__top"><span class="agent__team">Operations</span><span class="agent__time">&lt; 4 wks</span></div>
-        <b>Internal knowledge assistant</b>
-        <p>Answers policy, product and process questions for employees in Slack, from your own documents.</p>
-        <div class="agent__sys"><span>Slack</span><span>SharePoint</span><span>PDF libraries</span></div>
-        <p class="agent__guard"><b>Guardrail</b>Respects document permissions, so people only see what they already can.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Operations agent" data-title="Agentforce: knowledge assistant" data-message="Agent use case: internal knowledge assistant.">Build this agent <i aria-hidden="true">&rarr;</i></a>
-      </article>
-      <article class="agent rv" data-d="2" data-team="ops">
-        <div class="agent__top"><span class="agent__team">Operations</span><span class="agent__time">Phase 2</span></div>
-        <b>Field dispatch agent</b>
-        <p>Matches jobs to technicians by skill, location and parts, and reschedules when plans change.</p>
-        <div class="agent__sys"><span>Field Service</span><span>Inventory</span><span>Mobile</span></div>
-        <p class="agent__guard"><b>Guardrail</b>Dispatchers confirm any change on the day of service.</p>
-        <a class="arrow-link" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Operations agent" data-title="Agentforce: dispatch agent" data-message="Agent use case: field dispatch.">Build this agent <i aria-hidden="true">&rarr;</i></a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="sx sx--night" aria-labelledby="guard-h">
+<section class="sx sx--paper" id="uc" aria-labelledby="uc-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="guard-h" class="rv">Built to pass <em>security, legal and compliance review.</em></h2><p class="rv" data-d="1">Every agent ships with the same four controls, documented for the risk team before launch.</p></div>
+      <div><p class="k3 rv">Where to start</p><h2 id="uc-h" class="rv">Nine agents with the job written down, <em>six of them first-agent material.</em></h2><p class="rv" data-d="1">Each is a starting configuration in the Agent Launch Kit, with its guardrail already defined. The first six can be in production in under four weeks. The last row reads data across several clouds or acts on money and schedules, so it comes second.</p></div>
+      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Agentforce" data-title="First Agentforce agent plan" data-message="Agent use case we are considering: ">Pick the first agent <i aria-hidden="true">&rarr;</i></a>
+    </div>
+    <dl class="caplist rv">
+      <div><dt>Case triage agent</dt><dd>Reads each new case, sets category and priority, and routes it to the right queue with a summary. Low-confidence cases go to a human queue untouched.</dd></div>
+      <div><dt>Tier-1 self-service agent</dt><dd>Order status, account and how-to questions on web, WhatsApp or the customer portal. Answers only from approved knowledge, with one-click handover.</dd></div>
+      <div><dt>Agent assist and reply drafter</dt><dd>Drafts replies from knowledge and past cases so service agents resolve in fewer touches. Every draft cites its source and is sent by a person.</dd></div>
+      <div><dt>Inbound lead qualifier</dt><dd>Answers web and email enquiries, asks qualifying questions and books meetings for the right rep. Hands over on pricing or contract questions.</dd></div>
+      <div><dt>Internal knowledge assistant</dt><dd>Policy, product and process answers for employees in Slack, from SharePoint and PDF libraries. Respects document permissions.</dd></div>
+      <div><dt>Deal health coach</dt><dd>Flags stalled opportunities, missing stakeholders and slipping close dates before the forecast call. Suggests only; reps decide what changes.</dd></div>
+      <div><dt>Renewal and churn watcher</dt><dd>Phase 2. Spots usage drops and support spikes across Data Cloud, Service and Revenue Cloud, then drafts a save plan. Never contacts customers directly.</dd></div>
+      <div><dt>Order and quote desk agent</dt><dd>Phase 2. Checks quotes against pricing rules, chases missing approvals and flags errors before the customer sees them. Approvals stay with the deal desk.</dd></div>
+      <div><dt>Field dispatch agent</dt><dd>Phase 2. Matches jobs to technicians by skill, location and parts, and reschedules when plans change. Dispatchers confirm any same-day change.</dd></div>
+    </dl>
+    <p class="offers__note rv">Not recommended as a first agent: anything that commits money, changes contract terms or contacts customers unprompted. Those wait until the first agent has a track record.</p>
+  </div>
+</section>
+
+<section class="sx" id="sprint" aria-labelledby="sprint-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">How it runs</p><h2 id="sprint-h" class="rv">Four sprints, <em>one agent in production.</em></h2><p class="rv" data-d="1">The Agent Launch Kit runs one week per sprint. The success metric is fixed in week one, so launch is judged against a number rather than a demo.</p></div>
+    </div>
+    <ol class="gates rv" style="--n:4">
+      <li><span class="gates__w">Week 1</span><b>Pick and ground</b><p>One high-volume use case, the records and knowledge it may read, and how success is measured. Stale articles are retired before the agent sees them.</p><em>Use case, sources and metric signed</em></li>
+      <li><span class="gates__w">Week 2</span><b>Build and instruct</b><p>Topics, actions and instructions configured from the kit in a sandbox. Actions scoped to what the job needs and nothing more.</p><em>Agent working in sandbox</em></li>
+      <li><span class="gates__w">Week 3</span><b>Test and guard</b><p>The test set of real past conversations, red-team prompts, accuracy checks and the handover rules, reviewed with the risk owner.</p><em>Test results and guardrails approved</em></li>
+      <li><span class="gates__w">Week 4</span><b>Launch and measure</b><p>Live with real users, conversations reviewed daily against the metric, and failures fed back into the test set.</p><em>Agent in production</em></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sx sx--paper" id="guard" aria-labelledby="guard-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Testing and guardrails</p><h2 id="guard-h" class="rv">Five ways agents fail in production, <em>tested before release.</em></h2><p class="rv" data-d="1">Every agent ships on the Einstein Trust Layer, answers from approved sources, hands over below a confidence threshold and logs every conversation. These are the checks behind those controls, documented for security, legal and compliance review.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Agentforce" data-title="Agentforce governance pack">Get the governance pack <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="guard">
-      <div class="rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg><b>Einstein Trust Layer</b><span>Data masking, zero data retention and toxicity checks on every prompt and response.</span></div>
-      <div class="rv" data-d="1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/><circle cx="18" cy="16" r="3"/></svg><b>Grounded in your data</b><span>Answers come from Data Cloud and your knowledge through retrieval, not from the model's memory.</span></div>
-      <div class="rv" data-d="2"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 11l2 2 4-4"/></svg><b>Human in the loop</b><span>Confidence thresholds and handover rules decide when a person takes over.</span></div>
-      <div class="rv" data-d="3"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><b>Full audit trail</b><span>Every conversation, action and handover is logged for review and compliance.</span></div>
+    <div class="risk">
+      <div class="risk__head"><span>The failure</span><span>What it looks like</span><span>The control</span></div>
+      <div class="risk__row rv"><h3><small>Routing</small>The wrong topic picks it up</h3><p>A refund question lands in order status, and the agent answers a question nobody asked.</p><div><b>Labelled topic test set</b>Every test utterance carries the topic it should reach. Classification is re-run after each instruction change, before release.</div></div>
+      <div class="risk__row rv"><h3><small>Grounding</small>A confident answer from an old article</h3><p>The agent quotes a policy that changed last year, because the article was never retired.</p><div><b>Approved, retrieved sources only</b>Answers come from Salesforce records and reviewed knowledge through retrieval, not from the model's memory, and stale articles are removed before launch.</div></div>
+      <div class="risk__row rv"><h3><small>Actions</small>The wrong record is changed</h3><p>An update lands on a duplicate account, or an action runs twice in one conversation.</p><div><b>Scoped and confirmed actions</b>Actions see only the records the running user may see. Anything that writes data asks for confirmation or goes to a person.</div></div>
+      <div class="risk__row rv"><h3><small>Adversarial</small>Talked out of its instructions</h3><p>A user coaxes the agent off topic, or asks for another customer's details.</p><div><b>Red-team prompts and the Trust Layer</b>Injection, off-topic and abusive prompts are run before launch. Data masking and toxicity checks apply on every prompt and response.</div></div>
+      <div class="risk__row rv"><h3><small>Handover</small>The customer is stuck in a loop</h3><p>The agent keeps rephrasing an answer that does not help, and the customer gives up.</p><div><b>Confidence threshold and warm handover</b>Below the threshold, or on request, the conversation passes to a person with a summary. Every handover is logged for review.</div></div>
     </div>
   </div>
 </section>
 
 <section class="proof proof--page" aria-labelledby="proof-h">
   <div class="wrap">
+    <p class="k3 k3--inv rv">Client result</p>
     <h2 id="proof-h" class="rv">60% of tier-1 queries, <em>resolved by agents.</em></h2>
-    <article class="case rv" data-case>
-      <header class="case__head">
-        <div>
-          <p class="case__who">Regional health system</p>
-          <h3>Patients waited two days for an answer. Now most questions never need a person.</h3>
-        </div>
-        <div class="toggle" role="tablist" aria-label="Before and after">
-          <span class="toggle__thumb" aria-hidden="true"></span>
-          <button role="tab" aria-selected="true" data-state="before">Before</button>
-          <button role="tab" aria-selected="false" data-state="after">After Procyon</button>
-        </div>
-      </header>
-
-      <div class="case__grid">
-        <div class="case__nums-wrap">
-          <dl class="case__nums case__nums--before">
-            <div><dt>48 hrs</dt><dd>average patient response</dd></div>
-            <div><dt>3</dt><dd>disconnected record systems</dd></div>
-            <div><dt>30%+</dt><dd>of staff time lost to admin</dd></div>
-            <div><dt>Manual</dt><dd>intake for every request</dd></div>
-          </dl>
-          <dl class="case__nums case__nums--after">
-            <div><dt><span data-count="50">50</span>%</dt><dd>faster patient response</dd></div>
-            <div><dt><span data-count="60">60</span>%</dt><dd>of requests resolved by AI agents</dd></div>
-            <div><dt>+<span data-count="28">28</span></dt><dd>points in patient satisfaction</dd></div>
-            <div><dt><span data-count="35">35</span>%</dt><dd>less administrative work</dd></div>
-          </dl>
-        </div>
-        <div class="case__built">
-          <p class="case__k">What we built</p>
-          <ul>
-            <li>One patient identity on Health Cloud and Data Cloud</li>
-            <li>Agentforce agents on tier-1 patient queries</li>
-            <li>A knowledge assistant for clinical staff</li>
-            <li>Headless APIs feeding the patient app</li>
-          </ul>
-          <a class="arrow-link arrow-link--inv" href="/case-studies">Read the full story <i aria-hidden="true">&rarr;</i></a>
-        </div>
+    <article class="cs rv">
+      <div>
+        <p class="cs__who">Regional health system &middot; Health Cloud, Data Cloud, Agentforce</p>
+        <h3>Patients waited two days for an answer. Now most questions never need a person.</h3>
+        <p class="cs__p">Patient records sat in three systems, every request was keyed in by hand, and staff spent close to a third of their time on admin. The program joined the records first, then put agents on the questions the data could answer.</p>
+        <ul class="cs__built">
+          <li>One patient identity on Health Cloud and Data Cloud</li>
+          <li>Agentforce agents on tier-1 patient queries</li>
+          <li>A knowledge assistant for clinical staff</li>
+          <li>Headless APIs feeding the patient app</li>
+        </ul>
+      </div>
+      <div>
+        <table class="cs__tbl">
+          <thead><tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+          <tbody>
+            <tr><td>Patient response time</td><td>48 hours</td><td>50% faster</td></tr>
+            <tr><td>Requests resolved without staff</td><td>None</td><td>60%</td></tr>
+            <tr><td>Patient satisfaction</td><td>Baseline</td><td>+28 points</td></tr>
+            <tr><td>Administrative workload</td><td>30%+ of staff time</td><td>35% lower</td></tr>
+          </tbody>
+        </table>
+        <p class="cs__src">Measured by the client against the pre-program baseline.</p>
+        <a class="arrow-link arrow-link--inv cs__go" href="/case-studies">Read more client stories <i aria-hidden="true">&rarr;</i></a>
       </div>
     </article>
   </div>
 </section>
 
-<section class="sx sx--paper" aria-labelledby="band-h">
+<section class="sx" id="start" aria-labelledby="start-h">
   <div class="wrap">
-    <h2 id="band-h" class="visually-hidden">AI readiness check</h2>
-    <div class="band rv">
-      <div><b>Not sure your data is ready for agents?</b><span>Six questions, two minutes. You get a readiness level and the three fixes that unlock Agentforce.</span></div>
-      <a class="btn btn--red" href="#audit" data-open="score" data-track="agent_band_readiness">Run the readiness check <i aria-hidden="true">&rarr;</i></a>
+    <div class="sx__head">
+      <div><p class="k3 rv">Ways to start</p><h2 id="start-h" class="rv">Four starting points, <em>each with a written scope.</em></h2><p class="rv" data-d="1">Most teams begin with the readiness session. It decides whether the first agent can start now or whether the data needs work first.</p></div>
     </div>
+    <table class="offers rv">
+      <thead><tr><th scope="col">Starter</th><th scope="col">Length</th><th scope="col">What is in place at the end</th><th scope="col">Commercials</th><th scope="col"><span class="sr">Request</span></th></tr></thead>
+      <tbody>
+        <tr><td><b>AI readiness assessment</b><small>Before the first agent</small></td><td class="len" data-l="Length">90 minutes</td><td>Data, process and governance scored, and the fixes that must come before an agent goes live</td><td class="com" data-l="Commercials">Free</td><td class="go"><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI readiness" data-title="AI readiness assessment (90 minutes)">Book <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Agent Launch Kit</b><small>Agentforce</small></td><td class="len" data-l="Length">Under 4 weeks</td><td>A pre-configured agent for qualification, case triage or self-service, in production with guardrails</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Agent Launch Kit" data-title="4-week Agentforce launch sprint" data-message="Interested in: Agent Launch Kit.">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Enterprise RAG Starter</b><small>Knowledge</small></td><td class="len" data-l="Length">Fixed scope</td><td>A knowledge assistant over Salesforce Knowledge, SharePoint and PDF libraries, every answer cited</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-message="Interested in: Enterprise RAG Starter.">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>AI Scoring Engine</b><small>Sales and service</small></td><td class="len" data-l="Length">Fixed scope</td><td>Lead scoring, opportunity health and churn risk models trained on the org's own CRM history</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-message="Interested in: AI Scoring Engine.">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
@@ -569,7 +521,6 @@
   <div class="wrap">
     <p id="clients-h" class="clients__k">Enterprise teams that have run on Procyon delivery</p>
     <div class="clients__band">
-      <div class="clients__stat"><b>200+</b><span>enterprise clients<br>since 2004</span></div>
       <div class="ticker" data-ticker>
         <ul class="ticker__track" aria-label="Clients">
         <li><img src="/assets/img/clients/cisco.webp" alt="Cisco" width="181" height="96" loading="lazy"></li>
@@ -759,7 +710,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

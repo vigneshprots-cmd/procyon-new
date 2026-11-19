@@ -32,9 +32,10 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
-<link rel="stylesheet" href="/assets/css/insights.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
+<link rel="stylesheet" href="/assets/css/insights.css?v=22">
 
 <script type="application/ld+json">
 {
@@ -191,7 +192,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -230,7 +231,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -239,17 +240,16 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/careers">Careers</a></li><li aria-current="page">QA Engineer (Manual + API Testing)</li></ol></nav>
-    <div class="ph__copy" style="max-width:860px">
-      <p class="pill"><span class="pill__dot"></span>Engineering &middot; Role closed</p>
-      <h1 id="ph-h" class="ph__h">QA Engineer (Manual + API Testing)</h1>
+    <div class="hx__grid hx__grid--solo"><div class="hx__copy">
+      <p class="k3">Engineering &middot; Role closed</p>
+      <h1 id="ph-h" class="hx__h">QA Engineer (Manual + API Testing)</h1>
       <p class="ph__lede">Ensure software quality through functional testing, API testing, and backend validation in an Agile team.</p>
       <p class="job__facts"><span>Chennai (Onsite Preferred)</span><span>Full-time</span><span>3+ Years experience</span></p>
-      <div class="ph__ctas"><a class="btn btn--red btn--lg magnetic" href="/careers#roles">See the open roles <i aria-hidden="true">&rarr;</i></a></div>
-    </div>
+      <div class="hx__ctas"><a class="btn btn--red btn--lg" href="/careers#roles">See the open roles <i aria-hidden="true">&rarr;</i></a></div>
+    </div></div>
   </div>
 </section>
 
@@ -284,7 +284,50 @@
       <p class="rv" data-d="1">Personal email is fine, and a LinkedIn or portfolio link replaces a CV. Every application is read by the talent team.</p>
     </div>
     <div class="apply__card rv" data-d="1">
-<!--@include pages/_partials/apply-form.html-->
+      <form class="lf" data-apply novalidate>
+        <div class="lf__grid">
+          <label><span>Full name <em>*</em></span><input name="name" type="text" autocomplete="name" required maxlength="120"></label>
+          <label><span>Email <em>*</em></span><input name="email" type="email" autocomplete="email" required maxlength="160"></label>
+          <label><span>Phone</span><input name="phone" type="tel" autocomplete="tel" maxlength="40"></label>
+          <label><span>Role or track <em>*</em></span>
+            <select name="track" required>
+              <option value="">Select a role or track</option>
+              <optgroup label="Open roles">
+                <option>Digital Marketing Lead</option>
+                <option>Talent Acquisition Specialist</option>
+                <option>Business Development Manager, IT Staffing</option>
+                <option>Business Development Associate</option>
+                <option>Full Stack Developer (Backend-Focused)</option>
+              </optgroup>
+              <optgroup label="Open application by track">
+                <option>Salesforce</option>
+                <option>ServiceNow</option>
+                <option>AI and data</option>
+                <option>Product engineering</option>
+                <option>Delivery and project management</option>
+                <option>Other</option>
+              </optgroup>
+            </select>
+          </label>
+          <label><span>Preferred hub</span>
+            <select name="hub">
+              <option value="">Select a hub</option>
+              <option>Novato, California</option>
+              <option>Toronto, Canada</option>
+              <option>Chennai, India</option>
+              <option>Open to any hub</option>
+            </select>
+          </label>
+          <label><span>LinkedIn or portfolio link</span><input name="profile" type="url" inputmode="url" placeholder="https://" maxlength="200"></label>
+          <label class="lf__full"><span>Experience and next move</span><textarea name="message" rows="4" maxlength="3000" placeholder="Years of experience, certifications, and the work wanted next."></textarea></label>
+          <label class="hp" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <div class="cf-slot"></div>
+        <button class="btn btn--red btn--block btn--lg" type="submit" data-track="application_submit_click">Send application <i aria-hidden="true">&rarr;</i></button>
+        <p class="qf__status" role="status" aria-live="polite"></p>
+        <p class="apply__note">Used only for recruiting at Procyon. <a href="/privacy">Privacy Policy</a></p>
+      </form>
+
     </div>
   </div>
 </section>
@@ -412,7 +455,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

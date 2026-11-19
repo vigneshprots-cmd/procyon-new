@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -311,7 +312,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -350,7 +351,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud" aria-current="page">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -359,180 +360,134 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/ai-data">AI &amp; Data</a></li><li aria-current="page">Cloud transformation</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>Cloud transformation</p>
-        <h1 id="ph-h" class="ph__h">Cloud that pays back, <em>not just bills.</em></h1>
-        <p class="ph__lede"><b>Procyon migrates, modernizes and runs workloads on AWS, Azure and Google Cloud.</b> Every workload is assessed before it moves, landing zones are secure by default, and FinOps is built in from day one, so the cloud bill falls instead of climbing.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Cloud transformation" data-title="Cloud transformation plan" data-message="Workloads to move or optimize: &#10;Target cloud (AWS, Azure, GCP): ">Plan the cloud move <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#caps">See the capabilities</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Cloud transformation</p>
+        <h1 id="ph-h" class="hx__h">Migrate by workload, <em>with an owner for every dollar.</em></h1>
+        <p class="ph__lede"><b>Procyon migrates, modernizes and runs workloads on AWS, Azure and Google Cloud.</b> Each workload gets its own decision before anything moves, the landing zone is in place before the first wave, and tagging and budgets go in with the foundation instead of after the first surprise invoice. Clients average a 40% reduction in cloud cost after optimization.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Cloud transformation" data-title="Cloud transformation plan" data-message="Workloads to move or optimize: &#10;Target cloud (AWS, Azure, GCP): " data-track="cloud_hero">Plan the cloud move <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#run">See how a migration runs <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-      <figure class="art art--report" aria-label="Sample deliverable: Cloud cost and posture review">
-        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>Cloud cost and posture review</b><span class="art__meta">Sample findings</span></figcaption>
-        <div class="art__body">
-        <div class="art__top">
-          <div class="art__ring" style="--v:0.64;--c:var(--blue)"><svg viewBox="0 0 104 104" aria-hidden="true"><circle class="t" cx="52" cy="52" r="46"/><circle class="v" cx="52" cy="52" r="46"/></svg><b><span data-count="64">64</span><small>posture</small></b></div>
-          <div class="art__sum"><b>31% of spend recoverable</b><span>Idle and oversized resources dominate, with tagging gaps hiding owners.</span></div>
-        </div>
-        <p class="art__sec">Where the score is lost</p>
-        <ul class="art__bars"><li style="--i:0;--w:74%;--bc:var(--red)"><span>Idle or oversized compute</span><em>27% of spend</em><i></i></li><li style="--i:1;--w:38%;--bc:var(--blue)"><span>Commitment coverage</span><em>38%</em><i></i></li><li style="--i:2;--w:61%;--bc:var(--blue)"><span>Resources with an owner tag</span><em>61%</em><i></i></li><li style="--i:3;--w:72%;--bc:var(--green)"><span>Workloads in landing zone</span><em>72%</em><i></i></li></ul>
-        <p class="art__sec">Top findings</p>
-        <ul class="art__finds"><li style="--i:0"><span class="chip chip--r">High</span><span>Public storage buckets with customer exports</span></li><li style="--i:1"><span class="chip chip--b">Medium</span><span>Non-production runs 24x7</span></li><li style="--i:2"><span class="chip chip--g">Quick win</span><span>Rightsize 140 instances, no code change</span></li></ul>
-        </div>
-        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Cloud transformation" data-title="Cloud transformation plan" data-message="Workloads to move or optimize: &#10;Target cloud (AWS, Azure, GCP): " data-track="hero_artifact_cta">Request the cloud review <i aria-hidden="true">&rarr;</i></a></div>
-      </figure>
+      <aside class="brief" aria-labelledby="brief-h">
+        <p class="brief__k">The first engagement</p>
+        <p class="brief__t" id="brief-h">Workload assessment and business case</p>
+        <p class="brief__d">Every workload in scope classified, sequenced into waves and costed against what it costs to run today.</p>
+        <dl>
+          <div><dt>Starts with</dt><dd>A free 30-minute call with a cloud architect</dd></div>
+          <div><dt>In scope</dt><dd>Applications, databases and data estates proposed for the move, with their dependencies</dd></div>
+          <div><dt>You end with</dt><dd>A 6Rs decision per workload, the wave plan, the landing zone design and the business case</dd></div>
+          <div><dt>Commercials</dt><dd>Fixed scope, quoted in writing</dd></div>
+        </dl>
+        <a class="brief__go" href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Cloud transformation" data-title="Cloud workload assessment" data-message="Workloads to move or optimize: &#10;Target cloud (AWS, Azure, GCP): " data-track="cloud_brief">Scope the assessment <i aria-hidden="true">&rarr;</i></a>
+      </aside>
     </div>
+    <dl class="hx__facts">
+      <div><dt>Cloud cost</dt><dd>40% average reduction<span>after optimization</span></dd></div>
+      <div><dt>Workloads moved</dt><dd>300+<span>including SAP, Oracle DB and large data estates</span></dd></div>
+      <div><dt>Release speed</dt><dd>5x faster<span>with platform engineering and golden paths</span></dd></div>
+      <div><dt>Clouds</dt><dd>AWS, Azure, Google Cloud<span>certified across all three</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">Cloud bills climb when the plan <em>starts with the vendor.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">Most cloud programs that disappoint were planned as one decision: pick a provider, lift everything across, optimize later. Later rarely arrives. The bill rises, the project team leaves, and nobody can say which team owns which cost.</p>
+      <p class="rv">The work that pays back is less exciting and more specific: a decision for each workload, a landing zone every account inherits, and cost ownership set before the first wave moves, not reconstructed from invoices afterwards.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>Lift and shift as the default</h3><p>Rehosting everything carries the old inefficiency with it: servers sized for a peak that comes twice a year, licenses that do not travel well, and test environments that run around the clock.<small>First move: <b>a 6Rs decision per workload, including retire and retain</b></small></p></li>
+        <li class="rv"><h3>Accounts before guardrails</h3><p>Teams opened accounts and subscriptions as they needed them, so identity, networking and logging differ everywhere, and security reviews never catch up with the drift.<small>First move: <b>a landing zone with SSO, MFA and policy guardrails that every account inherits</b></small></p></li>
+        <li class="rv"><h3>Spend with no owner</h3><p>Untagged resources, no budget per team, and savings plans never bought because nobody could forecast the base load with confidence.<small>First move: <b>tagging and team budgets in place before the first wave</b></small></p></li>
+        <li class="rv"><h3>Day 2 with nobody on call</h3><p>The migration finishes, the project team leaves, and incidents, capacity and cost at 2 a.m. belong to no one in particular.<small>First move: <b>agree the run model before cutover, not after it</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="kf kf--paper" aria-label="Key facts">
-  <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Cloud cost</dt><dd><b>40%</b>average reduction after optimization</dd></div>
-        <div><dt>Release speed</dt><dd><b>5x</b>faster releases with platform engineering</dd></div>
-        <div><dt>Workloads moved</dt><dd><b>300+</b>including SAP, Oracle DB and large data estates</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Cloud transformation" data-title="Cloud transformation plan"><small>Free &middot; 30 minutes</small><b>Plan the cloud move</b><span>Workload assessment and business case</span><i aria-hidden="true">&rarr;</i></a>
-    </div>
-  </div>
-</section>
-
-<section class="sx tool" aria-labelledby="tool-h">
-  <div class="wrap tool__in">
-    <div class="tool__copy">
-      <span class="sx__k rv">Start here</span>
-      <h2 id="tool-h" class="rv">Where is the cloud program <em>today?</em></h2>
-      <p class="rv" data-d="1">Pick the closest situation. The recommended next step and the brief adjust to it.</p>
-      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
-    </div>
-    <div class="tool__w rv" data-d="1">
-      <div class="wcard" data-picker="cloud">
-          <span class="wcard__k">Start here</span>
-          <p class="wcard__t">Where is the cloud program today?</p>
-          <div class="opt-list" role="radiogroup" aria-label="Where is the cloud program today?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="Migration and modernization" data-s="Every workload classified with the 6Rs, then moved in waves with measurable KPIs." data-cta="Plan the migration" data-interest="Product engineering &amp; app support" data-kicker="Cloud migration" data-title="Cloud migration plan"><i></i>Planning a migration</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="FinOps" data-s="Tagging, budgets, anomaly alerts and rightsizing. Most clients see 30 to 40% savings within two quarters." data-cta="Cut the cloud bill" data-interest="Product engineering &amp; app support" data-kicker="FinOps" data-title="Cloud cost review"><i></i>The bill keeps rising</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Cloud security" data-s="Identity-first access, posture management and centralized logging across clouds." data-cta="Review cloud security" data-interest="Product engineering &amp; app support" data-kicker="Cloud security" data-title="Cloud security review"><i></i>Misconfigurations and shadow workloads</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Platform engineering" data-s="An internal developer platform with golden paths and infrastructure as code." data-cta="Speed up releases" data-interest="Product engineering &amp; app support" data-kicker="Platform engineering" data-title="Platform engineering scope"><i></i>Releases are still slow</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Managed cloud operations" data-s="24x7 SRE-led operations covering incidents, FinOps, posture and capacity." data-cta="Get a cloud operations quote" data-interest="Product engineering &amp; app support" data-kicker="Managed cloud" data-title="Managed cloud operations quote"><i></i>Need a team to run it 24x7</button>
-          </div>
-          <div class="rec" aria-live="polite"><b data-rec-b>Migration and modernization</b><span data-rec-s>Every workload classified with the 6Rs, then moved in waves with measurable KPIs.</span></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta>Plan the migration <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">Certified across AWS, Azure and Google Cloud.</p>
-        </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="sx sx--paper" id="caps" aria-labelledby="caps-h">
+<section class="sx sx--paper" id="scope" aria-labelledby="scope-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="caps-h" class="rv">Six cloud problems, <em>and what fixes each.</em></h2><p class="rv" data-d="1">Pick the one costing the most today. Each can start on its own.</p></div>
+      <div><p class="k3 rv">What is in scope</p><h2 id="scope-h" class="rv">Six cloud problems, <em>and what fixes each.</em></h2><p class="rv" data-d="1">Each one can start on its own. Most programs begin with the one costing the most today and pick up the rest as the estate moves.</p></div>
     </div>
-    <div class="xpl rv" data-tabs>
-    <div class="xpl__tabs" role="tablist" aria-label="Cloud capabilities">
-      <button type="button" role="tab" id="clx-t0" aria-controls="clx-p0" aria-selected="true"><b>Strategy and landing zone</b><small>Accounts sprawled with no guardrails</small></button>
-      <button type="button" role="tab" id="clx-t1" aria-controls="clx-p1" aria-selected="false" tabindex="-1"><b>Migration and modernization</b><small>A migration that keeps slipping</small></button>
-      <button type="button" role="tab" id="clx-t2" aria-controls="clx-p2" aria-selected="false" tabindex="-1"><b>Platform engineering</b><small>Developers waiting on infrastructure tickets</small></button>
-      <button type="button" role="tab" id="clx-t3" aria-controls="clx-p3" aria-selected="false" tabindex="-1"><b>FinOps</b><small>Cloud spend with no owner</small></button>
-      <button type="button" role="tab" id="clx-t4" aria-controls="clx-p4" aria-selected="false" tabindex="-1"><b>Cloud security</b><small>Misconfigurations found by attackers first</small></button>
-      <button type="button" role="tab" id="clx-t5" aria-controls="clx-p5" aria-selected="false" tabindex="-1"><b>Managed cloud operations</b><small>Day 2 with no one on call</small></button>
+    <div class="sit">
+      <article class="rv"><small>Foundation</small><h3>Strategy and landing zone</h3><p>A multi-account foundation that is secure by default: identity-first access with SSO, MFA and service control policies, and network, logging and security baselines applied to every account. Multi-cloud-ready, with the cloud chosen workload by workload.</p><p class="sit__do"><b>Starts with</b>An inventory of every account, subscription and project in use</p><a href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Landing zone" data-title="Landing zone design">Design the landing zone <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="1"><small>Move</small><h3>Migration and modernization</h3><p>Every workload classified with the 6Rs, then moved in waves with automated cutover and blue-green strategies where downtime is not acceptable. More than 300 workloads moved, including SAP and Oracle DB.</p><p class="sit__do"><b>Starts with</b>A dependency map, so waves do not split systems that talk to each other</p><a href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Cloud migration" data-title="Cloud migration plan">Plan the migration waves <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="2"><small>Build faster</small><h3>Platform engineering</h3><p>An internal developer platform with golden paths, infrastructure as code for every environment and CI/CD pipelines with security checks built in. Developers stop raising tickets to three teams for a new service, and releases run 5x faster.</p><p class="sit__do"><b>Starts with</b>The path one team takes from commit to production today</p><a href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Platform engineering" data-title="Platform engineering scope">Scope the developer platform <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv"><small>Cost</small><h3>FinOps</h3><p>Tagging, budgets and anomaly alerts, rightsizing and savings plans, and unit economics per business capability. Most clients see a 30 to 40% reduction within two quarters.</p><p class="sit__do"><b>Starts with</b>A tagging audit: the share of spend with a named owner</p><a href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="FinOps" data-title="Cloud cost review">Review the cloud bill <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="1"><small>Protect</small><h3>Cloud security</h3><p>One posture across AWS, Azure and Google Cloud: CSPM and CWPP on every cloud, secrets management, identity-first access and centralized logging into the SIEM, so compliance is continuous instead of annual.</p><p class="sit__do"><b>Starts with</b>A posture scan across every account, ranked by exposure</p><a href="/services/cybersecurity">Cybersecurity services <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="2"><small>Run</small><h3>Managed cloud operations</h3><p>24x7 SRE-led operations for everything that was moved: incident response and on-call, FinOps, security posture, capacity planning and continuous modernization, with a 99.99% production SLA.</p><p class="sit__do"><b>Starts with</b>Runbooks and alerts agreed before the final cutover</p><a href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Managed cloud" data-title="Managed cloud operations quote">Quote managed operations <i aria-hidden="true">&rarr;</i></a></article>
     </div>
-    <div class="xpl__panel" role="tabpanel" id="clx-p0" aria-labelledby="clx-t0">
-      <p class="xpl__pain"><small>The situation</small>Teams opened cloud accounts as they needed them, so identity, networking and security differ everywhere.</p>
-      <h3>A multi-account foundation that is secure by default.</h3>
-      <ul class="xpl__gets"><li>Identity-first access with SSO, MFA and service control policies</li><li>Network, logging and security baselines applied to every account</li><li>Multi-cloud-ready design, decided workload by workload</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>AWS</span><span>Azure</span><span>Google Cloud</span><span>IaC</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Landing zone" data-title="Landing zone design">Design the landing zone <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="clx-p1" aria-labelledby="clx-t1" hidden>
-      <p class="xpl__pain"><small>The situation</small>The migration plan was vendor-first, not workload-first, so complex systems keep getting pushed to the next quarter.</p>
-      <h3>Every workload classified, then moved in waves with minimal downtime.</h3>
-      <ul class="xpl__gets"><li>A 6Rs assessment for every workload</li><li>Wave-based execution with automated cutover</li><li>Blue-green strategies for zero-downtime moves</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>300+</b><span>Workloads moved, including SAP and Oracle DB</span></div>
-        
-        <div class="xpl__stack"><span>6Rs</span><span>Wave planning</span><span>Automated cutover</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Cloud migration" data-title="Cloud migration plan">Plan the migration waves <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="clx-p2" aria-labelledby="clx-t2" hidden>
-      <p class="xpl__pain"><small>The situation</small>Every new service needs tickets to three teams, so releases are no faster than they were before the cloud move.</p>
-      <h3>An internal developer platform with golden paths and infrastructure as code.</h3>
-      <ul class="xpl__gets"><li>Self-service environments through golden paths</li><li>Infrastructure as code for every environment</li><li>CI/CD pipelines with security checks built in</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>5x</b><span>Faster releases</span></div>
-        
-        <div class="xpl__stack"><span>IDP</span><span>Golden paths</span><span>IaC</span><span>CI/CD</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Platform engineering" data-title="Platform engineering scope">Build the developer platform <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="clx-p3" aria-labelledby="clx-t3" hidden>
-      <p class="xpl__pain"><small>The situation</small>Lift and shift doubled the bill, nobody can say which team owns which cost, and savings plans were never bought.</p>
-      <h3>Every dollar of cloud spend tagged, owned and optimized.</h3>
-      <ul class="xpl__gets"><li>Tagging, budgets and anomaly alerts</li><li>Rightsizing and savings plans</li><li>Unit economics per business capability</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>30 to 40%</b><span>Typical cost reduction within two quarters of FinOps</span></div>
-        
-        <div class="xpl__stack"><span>FinOps</span><span>Tagging</span><span>Savings plans</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="FinOps" data-title="Cloud cost review">Cut the cloud bill <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="clx-p4" aria-labelledby="clx-t4" hidden>
-      <p class="xpl__pain"><small>The situation</small>Security drift and shadow workloads appear faster than reviews can catch them, across more than one cloud.</p>
-      <h3>One security posture across AWS, Azure and Google Cloud.</h3>
-      <ul class="xpl__gets"><li>CSPM and CWPP across every cloud</li><li>Secrets management and identity-first access</li><li>Centralized logging into the SIEM, compliance continuous</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>CSPM</span><span>CWPP</span><span>SIEM</span><span>Secrets management</span></div>
-        <a class="btn btn--red" href="/services/cybersecurity">Review cloud security <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="clx-p5" aria-labelledby="clx-t5" hidden>
-      <p class="xpl__pain"><small>The situation</small>The migration finished, the project team left, and nobody owns incidents, capacity or cost at 2 a.m.</p>
-      <h3>24x7 SRE-led operations for everything that was moved.</h3>
-      <ul class="xpl__gets"><li>Incident response and on-call coverage</li><li>FinOps, security posture and capacity planning</li><li>Continuous modernization after go-live</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>99.99%</b><span>Production SLA</span></div>
-        
-        <div class="xpl__stack"><span>SRE</span><span>24x7</span><span>Observability</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Managed cloud" data-title="Managed cloud operations quote">Get a cloud operations quote <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-  </div>
   </div>
 </section>
 
-<section class="sx" aria-labelledby="path-h">
+<section class="sx" aria-labelledby="rs-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="path-h" class="rv">Assess, build the foundation, migrate, <em>then optimize.</em></h2><p class="rv" data-d="1">Four stages, each with measurable KPIs before the next one starts.</p></div>
+      <div><p class="k3 rv">Migration strategy</p><h2 id="rs-h" class="rv">Six decisions, <em>made one workload at a time.</em></h2><p class="rv" data-d="1">The 6Rs are not a framework slide. They are the line items of the business case, and the mix between them decides most of the cost and most of the risk.</p></div>
+    </div>
+    <dl class="caplist rv">
+      <div><dt>Rehost</dt><dd>Move as is. Right for a workload with a near-term exit date or a datacenter contract ending. Wrong as the default, because it carries every oversized server across.</dd></div>
+      <div><dt>Replatform</dt><dd>Small changes to use a managed service, such as a managed database in place of a self-run one. Often the best ratio of effort to saving.</dd></div>
+      <div><dt><a href="/solutions/enterprise-application-modernization">Refactor</a></dt><dd>Re-architect for cloud-native services. Worth it for systems that change often and matter to revenue; expensive vanity for the rest.</dd></div>
+      <div><dt>Repurchase</dt><dd>Replace with SaaS. Common for CRM, HR and IT service management, where Salesforce or ServiceNow already does the job better than custom code.</dd></div>
+      <div><dt>Retire</dt><dd>Switch it off. Every portfolio carries applications nobody uses, and retiring them is the cheapest migration there is.</dd></div>
+      <div><dt>Retain</dt><dd>Leave it where it is for now, because of latency, licensing or a replacement already planned. A deliberate decision, written down, not a gap in the plan.</dd></div>
+    </dl>
+    <p class="offers__note rv">Modernizing the applications as well? Legacy applications are scored against six modernization paths before they move. <a href="/solutions/enterprise-application-modernization">Application modernization</a></p>
+  </div>
+</section>
+
+<section class="sx sx--paper" id="run" aria-labelledby="run-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">How a migration runs</p><h2 id="run-h" class="rv">Assess, lay the foundation, migrate, <em>then optimize.</em></h2><p class="rv" data-d="1">Four stages, each closed by a measurable gate before the next one starts. The waves repeat until the estate is across.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Product engineering &amp; app support" data-kicker="Cloud transformation" data-title="Cloud workload assessment">Start with the assessment <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="days">
-      <div class="rv"><small>Assess</small><b>Business case</b><span>Workload assessment, business case and target state.</span></div>
-      <div class="rv" data-d="1"><small>Foundation</small><b>Landing zone</b><span>Landing zone, security, platform and FinOps set up.</span></div>
-      <div class="rv" data-d="2"><small>Migrate</small><b>Waves</b><span>Wave-based execution with measurable KPIs.</span></div>
-      <div class="rv" data-d="3"><small>Operate</small><b>Optimize</b><span>SRE, FinOps and continuous modernization.</span></div>
+    <ol class="gates rv" style="--n:4">
+      <li><span class="gates__w">Before anything moves</span><b>Assess</b><p>Workload inventory, dependencies mapped, a 6Rs decision per workload, the target state and the business case.</p><em>Signed business case and wave plan</em></li>
+      <li><span class="gates__w">Before wave one</span><b>Foundation</b><p>Landing zone, identity, network and logging baselines as code, with tagging policy and team budgets live.</p><em>Landing zone accepted by security</em></li>
+      <li><span class="gates__w">In waves</span><b>Migrate</b><p>Wave-based execution with automated cutover and rollback plans. Each wave is measured on downtime, performance and cost against its target.</p><em>Wave KPIs met before the next wave</em></li>
+      <li><span class="gates__w">After cutover</span><b>Operate and optimize</b><p>SRE, FinOps and continuous modernization. Most clients move to managed run within 90 days of go-live.</p><em>Run handover and the first cost review</em></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sx" aria-labelledby="fin-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">FinOps</p><h2 id="fin-h" class="rv">Savings stick <em>when a named team owns the number.</em></h2><p class="rv" data-d="1">A one-off cleanup saves money for a quarter. The 30 to 40% reductions that hold come from four habits, built into the foundation rather than bolted on later.</p></div>
     </div>
-    <div class="band rv" style="margin-top:44px">
-      <div><b>Modernizing the applications too?</b><span>Legacy applications scored against six modernization paths before they move.</span></div>
-      <a class="btn btn--red" href="/solutions/enterprise-application-modernization">See application modernization <i aria-hidden="true">&rarr;</i></a>
+    <ul class="terms rv">
+      <li><b>Tagged at creation</b><span>Owner, cost center and environment tags enforced by policy when a resource is created, so untagged spend is flagged the same day instead of found at month end.</span></li>
+      <li><b>Budgets per team</b><span>Each team sees its own spend against its own budget, with anomaly alerts that reach the person who can act on them.</span></li>
+      <li><b>Rightsize, then commit</b><span>Instances are rightsized first and savings plans bought on the measured base load afterwards. In the other order, the commitment locks in the waste.</span></li>
+      <li><b>Unit economics</b><span>Cost per business capability, such as per order or per customer, so a rising bill can be read as growth or as waste.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="own-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">What is handed over</p><h2 id="own-h" class="rv">The client owns the estate, <em>and the knowledge to run it.</em></h2><p class="rv" data-d="1">Whether Procyon runs the cloud afterwards or the internal team does, these are delivered in writing and stay with the client.</p></div>
+    </div>
+    <div class="own rv">
+      <div><b>Landing zone as code</b><span>Accounts, identity, network and logging baselines in infrastructure as code, versioned in the client's repository.</span></div>
+      <div><b>The 6Rs register</b><span>Every workload, the decision made for it and the reason, so the next review starts from facts.</span></div>
+      <div><b>Wave runbooks</b><span>Cutover, rollback and validation steps for each wave, as executed.</span></div>
+      <div><b>Tagging policy and cost views</b><span>Tag standards, team budgets, anomaly alerts and the cost dashboards that read them.</span></div>
+      <div><b>Security baseline</b><span>CSPM findings, secrets management and SIEM log routing for every account.</span></div>
+      <div><b>Operating model</b><span>On-call, escalation, capacity reviews and the SLA, agreed before the final cutover.</span></div>
     </div>
   </div>
 </section>
@@ -708,7 +663,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>

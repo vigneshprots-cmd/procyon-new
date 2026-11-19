@@ -32,8 +32,9 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/styles.css?v=38">
-<link rel="stylesheet" href="/assets/css/pages.css?v=20">
+<link rel="stylesheet" href="/assets/css/styles.css?v=40">
+<link rel="stylesheet" href="/assets/css/pages.css?v=22">
+<link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -313,7 +314,7 @@
             <ul class="dd__links">
               <li><a href="/services/staff-augmentation"><b>Staff augmentation</b><span>Certified Salesforce and ServiceNow people, by the seat.</span></a></li>
               <li><a href="/talent/delivery-pods"><b>Delivery pods</b><span>A cross-functional team that ships your roadmap.</span></a></li>
-              <li><a href="/talent/engagement-models"><b>How we engage</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
+              <li><a href="/talent/engagement-models"><b>Engagement models</b><span>Fixed scope, time and materials, or outcome-based.</span></a></li>
             </ul>
           </div>
         </li>
@@ -352,7 +353,7 @@
       <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
-      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">How we engage</a></details>
+      <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
       <details><summary>Insights</summary><a href="/blog">Blog</a><a href="/case-studies">Case Studies</a><a href="/insights/events">Events</a></details>
       <details><summary>Company</summary><a href="/about">About Procyon</a><a href="/about/certifications">Partners &amp; certifications</a><a href="/careers">Careers</a><a href="/contact">Contact</a></details>
       <a class="btn btn--red btn--block" href="#audit" data-track="cta_mobile_menu">Talk to an architect</a>
@@ -361,81 +362,79 @@
 </header>
 
 <main id="main">
-<section class="ph" aria-labelledby="ph-h">
-  <img class="ph__mark" src="/favicon.svg" alt="" width="720" height="720" aria-hidden="true">
+<section class="hx" aria-labelledby="ph-h">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">AI &amp; Data</li></ol></nav>
-    <div class="ph__grid">
-      <div class="ph__copy">
-        <p class="pill"><span class="pill__dot"></span>AI &amp; Data</p>
-        <h1 id="ph-h" class="ph__h">AI that runs in production, <em>on data that agrees.</em></h1>
-        <p class="ph__lede"><b>Procyon builds agentic AI, knowledge assistants, data platforms and integrations for regulated enterprises.</b> Every system runs in the client's own environment on AWS, Azure, GCP, Salesforce, ServiceNow or SAP, with governance in the first architecture, not a later phase.</p>
-        <div class="ph__ctas">
-          <a class="btn btn--red btn--lg magnetic" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI readiness" data-title="AI readiness session (90 minutes)" data-message="Workflow or data problem to start with: " data-track="ai_hub_hero">Book an AI readiness session <i aria-hidden="true">&rarr;</i></a>
-          <a class="btn btn--line btn--lg" href="#audit" data-open="score" data-track="ai_hub_score">Check AI readiness</a>
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">AI, data &amp; integration</p>
+        <h1 id="ph-h" class="hx__h">AI is a data problem first, <em>and an integration problem second.</em></h1>
+        <p class="ph__lede"><b>Procyon builds AI agents, knowledge assistants, data platforms and integrations around the Salesforce, ServiceNow and ERP systems a business already runs.</b> The work runs in the client's own environment on AWS, Azure or Google Cloud, with access controls and audit trails in the first architecture. Production generative AI use cases typically reach first value in about 8 weeks.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI readiness" data-title="AI readiness session (90 minutes)" data-message="Workflow or data problem to start with: " data-track="ai_hub_hero">Book an AI readiness session <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#start">See ways to start <i aria-hidden="true">&rarr;</i></a>
         </div>
       </div>
-      <div class="ph__w">
-      <figure class="art art--feed" aria-label="Sample deliverable: AI agents at work, one hour">
-        <figcaption class="art__bar"><span class="art__tag">Sample</span><b>AI agents at work, one hour</b><span class="art__meta"><span class="live">Live view</span></span></figcaption>
-        <div class="art__body">
-        <div class="art__kpis"><div><b>318</b><small>tasks completed</small></div><div><b>82%</b><small>with no human touch</small></div><div><b>100%</b><small>actions logged and auditable</small></div></div>
-        <ul class="art__feed"><li style="--i:0"><i aria-hidden="true">CRM</i><div><b>Inbound lead qualified and routed</b><span>Salesforce, 40 seconds</span></div><span class="chip chip--g">Qualified</span></li><li style="--i:1"><i aria-hidden="true">ITSM</i><div><b>Password case resolved end to end</b><span>ServiceNow</span></div><span class="chip chip--g">Resolved</span></li><li style="--i:2"><i aria-hidden="true">ERP</i><div><b>Invoice matched to purchase order</b><span>Back office</span></div><span class="chip chip--g">Matched</span></li><li style="--i:3"><i aria-hidden="true">!</i><div><b>Refund above policy limit</b><span>Sent to a person</span></div><span class="chip chip--r">Escalated</span></li></ul>
-        </div>
-        <div class="art__foot"><small>Illustrative sample. The real one is built from the client environment.</small><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI readiness" data-title="AI readiness session (90 minutes)" data-message="Workflow or data problem to start with: " data-track="hero_artifact_cta">Get the AI roadmap <i aria-hidden="true">&rarr;</i></a></div>
-      </figure>
+      <aside class="calls" aria-labelledby="calls-h">
+        <p class="calls__k" id="calls-h">Where clients usually come in</p>
+        <ul>
+          <li><a href="/services/ai-ml"><b>Manual work that slows every team</b><span>Intake, triage and approvals run by governed agents</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/ai-data/knowledge-assistants"><b>Answers buried in documents</b><span>Cited answers that respect existing permissions</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/services/data-analytics"><b>Numbers nobody trusts</b><span>One governed definition per metric, in every tool</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/solutions/enterprise-integration"><b>Systems that do not talk</b><span>API-led and event-driven links between CRM, ERP and ITSM</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="/solutions/enterprise-application-modernization"><b>An application to build or modernize</b><span>Custom web and mobile, modernization and support</span><i aria-hidden="true">&rarr;</i></a></li>
+        </ul>
+      </aside>
     </div>
+    <dl class="hx__facts">
+      <div><dt>In production</dt><dd>5 regulated industries<span>Healthcare, government, life sciences, financial services, utilities</span></dd></div>
+      <div><dt>First value</dt><dd>About 8 weeks<span>For production generative AI use cases</span></dd></div>
+      <div><dt>Runs on</dt><dd>AWS, Azure, Google Cloud<span>Plus Salesforce, ServiceNow and SAP</span></dd></div>
+      <div><dt>Delivery standard</dt><dd>ISO 27001 certified<span>HIPAA-compliant, FedRAMP-aligned delivery</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">Our view</p>
+      <h2 id="pov-h" class="rv">Pilots stall on data and ownership, <em>rarely on the model.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">Most enterprises already have working models within reach: Agentforce in Salesforce, Now Assist in ServiceNow, and Bedrock, Azure OpenAI or Vertex AI in the cloud they run. What they lack is a use case the data can carry, a way to prove the answers are right, and a team that owns the result after launch.</p>
+      <p class="rv">So the order of work is fixed. Pick the use case by data readiness and the cost of a wrong answer. Fix the records and interfaces it depends on. Then build, evaluate against real cases, and release with a person in the loop until the numbers say otherwise.</p>
+      <ul class="pov__pts">
+        <li class="rv"><h3>The use case chosen for the demo</h3><p>The first project is the one that looked best in a vendor session, not the one with clean data and a tolerable failure mode. It works on sample records and breaks on production ones.<small>First move: <b>score candidate use cases on data readiness and risk</b></small></p></li>
+        <li class="rv"><h3>No evaluation before release</h3><p>Nobody wrote down what a correct answer looks like, so nobody can say whether the agent is ready. Release becomes a matter of opinion.<small>First move: <b>an evaluation set built from real cases, with a pass mark agreed</b></small></p></li>
+        <li class="rv"><h3>Numbers that disagree</h3><p>CRM bookings, ERP revenue and the board pack each tell a different story. An assistant grounded on that data repeats the disagreement with more confidence.<small>First move: <b>one governed definition per metric before AI reads it</b></small></p></li>
+        <li class="rv"><h3>Interfaces nobody owns</h3><p>The agent depends on an order status from SAP or a case history from ServiceNow, through an integration with no owner and no monitoring. It fails quietly and the agent answers anyway.<small>First move: <b>an owner and a monitor on every interface the use case touches</b></small></p></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="kf" aria-label="Key facts">
+<section class="sx sx--paper" aria-labelledby="svc-h">
   <div class="wrap">
-    <div class="kf__card">
-      <dl class="kf__in">
-        <div><dt>Regulated industries</dt><dd><b>5</b>with AI running in production</dd></div>
-        <div><dt>Idea to first value</dt><dd><b>8 weeks</b>for production generative AI use cases</dd></div>
-        <div><dt>Productivity lift</dt><dd><b>35%</b>average across production AI use cases</dd></div>
-      </dl>
-      <a class="kf__cta" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI readiness" data-title="AI readiness session (90 minutes)" data-track="ai_hub_kf"><small>Free &middot; 90 minutes</small><b>Book an AI readiness session</b><span>A ranked list of AI use cases</span><i aria-hidden="true">&rarr;</i></a>
+    <div class="sx__head">
+      <div><p class="k3 rv">Practices</p><h2 id="svc-h" class="rv">Five practices, <em>built to hand over to each other.</em></h2><p class="rv" data-d="1">Each one starts on its own. The value compounds when the data platform feeds the assistant, the integration feeds the agent, and one team knows how they connect.</p></div>
+    </div>
+    <div class="sit">
+      <article class="rv"><small>Automate</small><h3>AI agents &amp; automation</h3><p>Agents for intake, triage, approval, routing and resolution across CRM, ITSM, ERP and back office, each with human review where the process requires it and a log an auditor can replay.</p><p class="sit__do"><b>Starts with</b>One workflow scored on data readiness and risk</p><a href="/services/ai-ml">AI agents <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="1"><small>Answer</small><h3>Knowledge assistants</h3><p>Retrieval-augmented assistants that answer employees, service agents and customers from approved documents in SharePoint, Salesforce Knowledge, ServiceNow and PDF libraries, with the source cited.</p><p class="sit__do"><b>Starts with</b>One audience and the questions it asks most</p><a href="/ai-data/knowledge-assistants">Knowledge assistants <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="2"><small>Measure</small><h3>Data platforms &amp; analytics</h3><p>Snowflake, Databricks, BigQuery or Synapse chosen on fit, a governed semantic layer under Tableau, Power BI or Looker, and data products that feed AI from the same source.</p><p class="sit__do"><b>Starts with</b>The metrics that disagree today, and who owns them</p><a href="/services/data-analytics">Data platforms <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv"><small>Connect</small><h3>Integration &amp; APIs</h3><p>API-led integration on MuleSoft, Boomi or Workato, events on Kafka or EventBridge, and SAP, Oracle, NetSuite and Workday connected to Salesforce and ServiceNow with named owners.</p><p class="sit__do"><b>Starts with</b>A map of every interface, its owner and its failure points</p><a href="/solutions/enterprise-integration">Integration <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="1"><small>Build</small><h3>Product engineering</h3><p>Custom web and mobile products around the platforms, legacy applications modernized onto AWS, Azure or Google Cloud, and support for live applications across three time zones.</p><p class="sit__do"><b>Starts with</b>Each application scored against six modernization paths</p><a href="/solutions/enterprise-application-modernization">Product engineering <i aria-hidden="true">&rarr;</i></a></article>
+      <article class="rv" data-d="2"><small>On the platform</small><h3>Agentforce &amp; Now Assist</h3><p>Where the work lives in Salesforce or ServiceNow, the platform's own AI is usually the shorter path. Agentforce agents go live with the Agent Launch Kit; Now Assist is governed with AI Control Tower.</p><p class="sit__do"><b>Starts with</b>A readiness check on the records the agent will read</p><a href="/enterprise/salesforce/agentforce">Agentforce <i aria-hidden="true">&rarr;</i></a></article>
     </div>
   </div>
 </section>
-
-<section class="sx tool" aria-labelledby="tool-h">
-  <div class="wrap tool__in">
-    <div class="tool__copy">
-      <span class="sx__k rv">Start here</span>
-      <h2 id="tool-h" class="rv">Which problem <em>comes first?</em></h2>
-      <p class="rv" data-d="1">Pick the problem. The first use case and the data it needs are recommended on the spot.</p>
-      <ul class="tool__pts rv" data-d="2"><li><i aria-hidden="true">1</i>Under a minute, no sign-up</li><li><i aria-hidden="true">2</i>The answers go straight into the brief</li><li><i aria-hidden="true">3</i>A senior lead replies within one business day</li></ul>
-    </div>
-    <div class="tool__w rv" data-d="1">
-      <div class="wcard" data-picker="ai-start">
-          <span class="wcard__k">Start here</span>
-          <p class="wcard__t">Which problem comes first?</p>
-          <div class="opt-list" role="radiogroup" aria-label="Which problem comes first?">
-            <button class="opt" type="button" role="radio" aria-checked="true" data-b="AI agents &amp; automation" data-s="Intake, triage, approvals and routing handled by governed agents, in production." data-href="/services/ai-ml" data-link="See agents and automation" data-cta="Scope the first agent" data-interest="Agentforce &amp; AI agents" data-kicker="AI agents" data-title="First AI agent scope"><i></i>Manual work that slows every team</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Knowledge assistants" data-s="Answers from company documents, with citations and existing permissions." data-href="/ai-data/knowledge-assistants" data-link="See knowledge assistants" data-cta="Build a knowledge assistant" data-interest="Agentforce &amp; AI agents" data-kicker="Knowledge assistants" data-title="Knowledge assistant scope"><i></i>Answers buried in documents</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Data platforms &amp; analytics" data-s="One governed source of truth for KPIs, and data products that feed AI." data-href="/services/data-analytics" data-link="See data platforms" data-cta="Get a data platform assessment" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment"><i></i>Numbers nobody trusts</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Integration &amp; APIs" data-s="API-led and event-driven connections between CRM, ERP, ITSM and data." data-href="/solutions/enterprise-integration" data-link="See integration" data-cta="Map the integrations" data-interest="Data, integration &amp; MuleSoft" data-kicker="Integration" data-title="Integration architecture review"><i></i>Systems that do not talk</button>
-            <button class="opt" type="button" role="radio" aria-checked="false" data-b="Product engineering" data-s="New web and mobile products, modernized legacy apps, cloud and support." data-href="/solutions/enterprise-application-modernization" data-link="See product engineering" data-cta="Scope the build" data-interest="Product engineering &amp; app support" data-kicker="Product engineering" data-title="Product build scope"><i></i>An application to build or modernize</button>
-          </div>
-          <div class="rec"><b data-rec-b>AI agents &amp; automation</b><span data-rec-s>Intake, triage, approvals and routing handled by governed agents, in production.</span><a class="arrow-link" data-rec-a href="/services/ai-ml">See agents and automation <i aria-hidden="true">&rarr;</i></a></div>
-          <a class="btn btn--red btn--block" href="#audit" data-open="audit" data-rec-cta data-track="ai_hub_picker_cta">Scope the first agent <i aria-hidden="true">&rarr;</i></a>
-          <p class="wcard__foot">A senior AI architect replies within one business day.</p>
-        </div>
-    </div>
-  </div>
-</section>
-
 
 <!-- ================= CLIENTS ================= -->
 <section class="clients" aria-labelledby="clients-h">
   <div class="wrap">
     <p id="clients-h" class="clients__k">Enterprise teams that have run on Procyon delivery</p>
     <div class="clients__band">
-      <div class="clients__stat"><b>200+</b><span>enterprise clients<br>since 2004</span></div>
       <div class="ticker" data-ticker>
         <ul class="ticker__track" aria-label="Clients">
         <li><img src="/assets/img/clients/cisco.webp" alt="Cisco" width="181" height="96" loading="lazy"></li>
@@ -457,134 +456,84 @@
   </div>
 </section>
 
-<section class="sx sx--paper" aria-labelledby="prac-h">
+<section class="sx" id="start" aria-labelledby="start-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="prac-h" class="rv">Five practices, <em>one production standard.</em></h2><p class="rv" data-d="1">Each practice ships into a live environment with audit trails, access controls and monitoring from day one.</p></div>
-    </div>
-    <div class="shelf">
-      <a class="kit rv" href="/services/ai-ml"><span class="kit__t kit__t--r">Practice</span><b>AI agents &amp; automation</b><span>Multi-agent orchestration across CRM, ITSM, ERP and back office.</span><em>See agents and automation &rarr;</em></a>
-      <a class="kit rv" data-d="1" href="/ai-data/knowledge-assistants"><span class="kit__t kit__t--b">Practice</span><b>Knowledge assistants</b><span>Retrieval-augmented answers from approved documents, cited.</span><em>See knowledge assistants &rarr;</em></a>
-      <a class="kit rv" data-d="2" href="/services/data-analytics"><span class="kit__t kit__t--g">Practice</span><b>Data platforms &amp; analytics</b><span>Snowflake, Databricks and governed BI for one set of numbers.</span><em>See data platforms &rarr;</em></a>
-      <a class="kit rv" data-d="3" href="/solutions/enterprise-integration"><span class="kit__t">Practice</span><b>Integration &amp; APIs</b><span>MuleSoft, events and APIs between every core system.</span><em>See integration &rarr;</em></a>
-      <a class="kit rv" href="/solutions/enterprise-application-modernization"><span class="kit__t">Practice</span><b>Product engineering</b><span>Custom products, modernization, cloud and application support.</span><em>See product engineering &rarr;</em></a>
-      <a class="kit rv" data-d="1" href="/enterprise/salesforce/agentforce"><span class="kit__t kit__t--r">&lt; 4 weeks</span><b>Agentforce</b><span>First Salesforce AI agents in production with the Agent Launch Kit.</span><em>See Agentforce &rarr;</em></a>
-      <a class="kit rv" data-d="2" href="/enterprise/salesforce/data-cloud"><span class="kit__t kit__t--g">Salesforce</span><b>Data Cloud</b><span>One real-time customer profile across ERP, web and service.</span><em>See Data Cloud &rarr;</em></a>
-      <a class="kit rv" data-d="3" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI readiness" data-title="AI readiness session (90 minutes)"><span class="kit__t">Free &middot; 90 min</span><b>AI readiness session</b><span>A ranked list of the AI use cases the data supports today.</span><em>Book the session &rarr;</em></a>
-    </div>
-  </div>
-</section>
-
-<section class="sx" aria-labelledby="proof-h">
-  <div class="wrap">
-    <div class="sx__head">
-      <div><h2 id="proof-h" class="rv">Live in production, <em>in regulated environments.</em></h2><p class="rv" data-d="1">Three programs where AI, data and integration replaced manual work under audit.</p></div>
+      <div><p class="k3 rv">Ways to start</p><h2 id="start-h" class="rv">Small first engagements, <em>each with a written result.</em></h2><p class="rv" data-d="1">None of these commits the client to a program. Each ends with something written that stays with the client, whether or not the next phase goes ahead.</p></div>
       <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI and data" data-title="Highest-friction workflow review">Show the highest-friction workflow <i aria-hidden="true">&rarr;</i></a>
     </div>
-    <div class="ba ba--3">
-      <div class="rv"><b>AOC, statewide judicial system</b><small>Government</small><p><small>Problem</small>Manual DOJ submission workflows and fragmented statewide reporting across six enterprise systems.</p><p><small>Result</small><em class="ba__fig">60% fewer failures</em>Automated submission pipelines, error detection and real-time compliance reporting.</p></div>
-      <div class="rv" data-d="1"><b>NIH, NIAAA clinical research</b><small>Healthcare research</small><p><small>Problem</small>Manual clinical data capture with no real-time visibility or automated audit trail.</p><p><small>Result</small><em class="ba__fig">Federal audit-ready</em>AI-assisted subject tracking, automated evidence collection and protocol monitoring.</p></div>
-      <div class="rv" data-d="2"><b>City of Glendale Water &amp; Power</b><small>Utilities</small><p><small>Problem</small>No real-time visibility across 10+ utility systems, with manual data exchanges creating risk.</p><p><small>Result</small><em class="ba__fig">10+ systems unified</em>A 15-day MW forecasting pipeline, real-time feeder alerts and predictive asset sync.</p></div>
-    </div>
-    <p class="refs rv">Also delivered for <b>Genentech, Abbott, Intuitive Surgical, Morgan Stanley, MUFG Bank, Liberty Mutual, the VA, the U.S. DOT, IBM and Genesys</b>, across healthcare, financial services and government.</p>
+    <table class="offers rv">
+      <thead><tr><th scope="col">Engagement</th><th scope="col">Length</th><th scope="col">What the client has at the end</th><th scope="col">Commercials</th><th scope="col"><span class="sr">Request</span></th></tr></thead>
+      <tbody>
+        <tr><td><b>AI readiness session</b><small>Any platform</small></td><td class="len" data-l="Length">90 minutes</td><td>A ranked list of the AI use cases the data supports today, and the first one to build</td><td class="com" data-l="Commercials">Free</td><td class="go"><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="AI readiness" data-title="AI readiness session (90 minutes)">Book <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Agent Launch Kit</b><small>Salesforce Agentforce</small></td><td class="len" data-l="Length">Under 4 weeks</td><td>Pre-configured agents for qualification, case triage or self-service, in production with guardrails</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-message="Interested in: Agent Launch Kit.">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Now Assist discovery</b><small>ServiceNow</small></td><td class="len" data-l="Length">4 weeks</td><td>Now Assist and agent use cases scored by value and data readiness, with the first agent chosen</td><td class="com" data-l="Commercials">Written scope</td><td class="go"><a href="/enterprise/servicenow/now-assist">Details <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Enterprise RAG Starter</b><small>Knowledge assistants</small></td><td class="len" data-l="Length">Fixed scope</td><td>A working assistant over Salesforce Knowledge, SharePoint and PDFs, every answer cited</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Enterprise RAG Starter" data-title="Enterprise RAG Starter">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Data platform assessment</b><small>Snowflake, Databricks, BigQuery</small></td><td class="len" data-l="Length">30 minutes</td><td>Platform options scored on cost, performance, governance and team fit</td><td class="com" data-l="Commercials">Free</td><td class="go"><a href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment">Book <i aria-hidden="true">&rarr;</i></a></td></tr>
+        <tr><td><b>Integration architecture review</b><small>MuleSoft, ERP, ITSM</small></td><td class="len" data-l="Length">Fixed scope</td><td>Every connection mapped with its owner, its failure points and the order to fix them</td><td class="com" data-l="Commercials">Fixed scope</td><td class="go"><a href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Integration" data-title="Integration architecture review">Scope <i aria-hidden="true">&rarr;</i></a></td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
-<section class="sx sx--night" aria-labelledby="pill-h">
+<section class="proof proof--page" aria-labelledby="proof-h">
   <div class="wrap">
-    <div class="sx__head">
-      <div><h2 id="pill-h" class="rv">Four rules behind <em>every AI engagement.</em></h2><p class="rv" data-d="1">The difference between an AI demo and a system an auditor signs off.</p></div>
-    </div>
-    <div class="guard">
-      <div class="rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><b>Production first</b><span>Every engagement targets a live system in the client's environment, on its stack, with its team. Not a sandbox demo.</span></div>
-      <div class="rv" data-d="1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/></svg><b>Governance built in</b><span>Policy, audit trails, access controls and model monitoring in the first architecture, not a phase-two retrofit.</span></div>
-      <div class="rv" data-d="2"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/></svg><b>Stack-native</b><span>Built on AWS, Azure, GCP, Salesforce, ServiceNow and SAP, the platforms operations already run on.</span></div>
-      <div class="rv" data-d="3"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><b>Regulated-industry fluent</b><span>HIPAA, FedRAMP, SOC 2, ISO 27001 and FDA-aligned delivery, the standards auditors expect.</span></div>
-    </div>
+    <p class="k3 k3--inv rv">Client result</p>
+    <h2 id="proof-h" class="rv">Records joined first, <em>then agents on the questions.</em></h2>
+    <article class="cs rv">
+      <div>
+        <p class="cs__who">Regional health system &middot; Health Cloud, Data Cloud, Agentforce</p>
+        <h3>Patients waited two days for an answer. Now most questions never need a person.</h3>
+        <p class="cs__p">Patient records sat in three systems, every request was keyed in by hand, and staff spent close to a third of their time on admin. The program joined the records first, then put agents on the questions the data could answer.</p>
+        <ul class="cs__built">
+          <li>One patient identity on Health Cloud and Data Cloud</li>
+          <li>Agentforce agents on tier-1 patient queries</li>
+          <li>A knowledge assistant for clinical staff</li>
+          <li>Headless APIs feeding the patient app</li>
+        </ul>
+      </div>
+      <div>
+        <table class="cs__tbl">
+          <thead><tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+          <tbody>
+            <tr><td>Patient response time</td><td>48 hours</td><td>50% faster</td></tr>
+            <tr><td>Requests resolved without staff</td><td>None</td><td>60%</td></tr>
+            <tr><td>Patient satisfaction</td><td>Baseline</td><td>+28 points</td></tr>
+            <tr><td>Administrative workload</td><td>30%+ of staff time</td><td>35% lower</td></tr>
+          </tbody>
+        </table>
+        <p class="cs__src">Measured by the client against the pre-program baseline.</p>
+        <a class="arrow-link arrow-link--inv cs__go" href="/case-studies">Read more client stories <i aria-hidden="true">&rarr;</i></a>
+      </div>
+    </article>
   </div>
 </section>
 
-<section class="sx sx--paper" aria-labelledby="ind-h">
+<section class="sx sx--paper" aria-labelledby="reg-h">
   <div class="wrap">
     <div class="sx__head">
-      <div><h2 id="ind-h" class="rv">Pick the industry. <em>See what is already in production.</em></h2><p class="rv" data-d="1">Six regulated industries, the workflow that hurts most in each, and the result AI has already delivered there.</p></div>
+      <div><p class="k3 rv">Regulated programs</p><h2 id="reg-h" class="rv">Data, integration and AI <em>under audit.</em></h2><p class="rv" data-d="1">Three public sector and research programs where the hard part was not the model. It was six or ten systems that had never shared data, and an auditor who needed to see every step.</p></div>
     </div>
-    <div class="xpl rv" data-tabs>
-    <div class="xpl__tabs" role="tablist" aria-label="Industries">
-      <button type="button" role="tab" id="ind-t0" aria-controls="ind-p0" aria-selected="true"><b>Healthcare</b><small>Clinical staff buried in intake and paperwork</small></button>
-      <button type="button" role="tab" id="ind-t1" aria-controls="ind-p1" aria-selected="false" tabindex="-1"><b>Government and public sector</b><small>Statewide reporting assembled by hand</small></button>
-      <button type="button" role="tab" id="ind-t2" aria-controls="ind-p2" aria-selected="false" tabindex="-1"><b>Pharma and life sciences</b><small>Regulatory evidence gathered under deadline</small></button>
-      <button type="button" role="tab" id="ind-t3" aria-controls="ind-p3" aria-selected="false" tabindex="-1"><b>Financial services</b><small>Fraud and risk reviews never catch up</small></button>
-      <button type="button" role="tab" id="ind-t4" aria-controls="ind-p4" aria-selected="false" tabindex="-1"><b>Utilities and energy</b><small>Operations blind across dozens of systems</small></button>
-      <button type="button" role="tab" id="ind-t5" aria-controls="ind-p5" aria-selected="false" tabindex="-1"><b>Nonprofit and education</b><small>Lean teams drowning in grant admin</small></button>
+    <div class="hubs rv">
+      <div><b>AOC, statewide judicial system</b><small>Government</small><p>DOJ submissions were assembled by hand across six enterprise systems. Automated submission pipelines with error detection before filing, and real-time compliance reporting, cut submission failures by 60%.</p></div>
+      <div><b>NIH, NIAAA clinical research</b><small>Healthcare research</small><p>Clinical data was captured manually with no automated audit trail. AI-assisted subject tracking, automated evidence collection and protocol monitoring left the program federal audit-ready, with no compliance gaps found at audit.</p></div>
+      <div><b>City of Glendale Water &amp; Power</b><small>Utilities</small><p>More than ten utility systems exchanged data manually, with no real-time view. They now share one platform, with a 15-day megawatt forecasting pipeline, real-time feeder alerts and predictive asset sync.</p></div>
     </div>
-    <div class="xpl__panel" role="tabpanel" id="ind-p0" aria-labelledby="ind-t0">
-      <p class="xpl__pain"><small>Where it hurts</small>Referrals, prior authorizations and intake forms consume hours of clinical time that should go to patients.</p>
-      <h3>Clinical intake, triage routing and prior authorization, automated on HIPAA-compliant architecture.</h3>
-      <ul class="xpl__gets"><li>Intake and triage handled by agents, with clinicians reviewing exceptions</li><li>Trial and research data captured with a full audit trail</li><li>Patient queries answered from approved clinical knowledge</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>90%</b><span>Less clinical intake processing time</span></div>
-        
-        <div class="xpl__stack"><span>HIPAA</span><span>Health Cloud</span><span>Bedrock</span><span>Azure OpenAI</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Healthcare AI" data-title="Healthcare AI scope" data-message="Industry: healthcare.&#10;Workflow: ">Discuss a healthcare program <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="ind-p1" aria-labelledby="ind-t1" hidden>
-      <p class="xpl__pain"><small>Where it hurts</small>Submissions and compliance reports are compiled manually across many systems, and one missed field means a rejected filing.</p>
-      <h3>Compliance workflows, document processing and reporting that agencies can audit.</h3>
-      <ul class="xpl__gets"><li>Automated submission pipelines with error detection before filing</li><li>Real-time compliance reporting across agency systems</li><li>US-cleared delivery teams and FedRAMP-aligned practices</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>60%</b><span>Fewer submission failures for a statewide judicial system</span></div>
-        
-        <div class="xpl__stack"><span>FedRAMP-aligned</span><span>ServiceNow</span><span>MuleSoft</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Public sector AI" data-title="Public sector AI scope" data-message="Industry: government.&#10;Workflow: ">Discuss a public sector program <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="ind-p2" aria-labelledby="ind-t2" hidden>
-      <p class="xpl__pain"><small>Where it hurts</small>Submissions, protocol deviations and audit evidence are pulled together by hand, close to every regulatory deadline.</p>
-      <h3>Regulatory submissions, deviation detection and audit evidence for FDA and EMA programs.</h3>
-      <ul class="xpl__gets"><li>Protocol deviations flagged as they happen</li><li>Audit evidence collected automatically and kept traceable</li><li>SOPs and submission history searchable in seconds</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>Federal audit-ready</b><span>Clinical data governance for NIH NIAAA</span></div>
-        
-        <div class="xpl__stack"><span>FDA-aligned</span><span>EMA</span><span>RAG</span><span>Azure OpenAI</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Life sciences AI" data-title="Life sciences AI scope" data-message="Industry: pharma and life sciences.&#10;Workflow: ">Discuss a life sciences program <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="ind-p3" aria-labelledby="ind-t3" hidden>
-      <p class="xpl__pain"><small>Where it hurts</small>Fraud alerts, risk reviews and regulatory reports pile up faster than analysts can clear them.</p>
-      <h3>Fraud orchestration, risk automation and reporting agents with full case management.</h3>
-      <ul class="xpl__gets"><li>Alerts triaged and enriched before an analyst opens them</li><li>Regulatory reports assembled from source systems automatically</li><li>Every decision logged for model risk and audit teams</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>SOC 2</span><span>ISO 27001</span><span>Financial Services Cloud</span><span>Snowflake</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Financial services AI" data-title="Financial services AI scope" data-message="Industry: financial services.&#10;Workflow: ">Discuss a financial services program <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="ind-p4" aria-labelledby="ind-t4" hidden>
-      <p class="xpl__pain"><small>Where it hurts</small>Grid, asset and outage data sits in separate systems, so operators react to problems instead of seeing them coming.</p>
-      <h3>Operational intelligence, predictive asset management and faster outage response.</h3>
-      <ul class="xpl__gets"><li>Real-time feeder alerts across operational systems</li><li>Load forecasting pipelines running in production</li><li>Asset data synchronized so maintenance is planned, not reactive</li></ul>
-      <div class="xpl__side">
-        <div class="xpl__fig"><b>10+</b><span>Utility systems unified for Glendale Water &amp; Power</span></div>
-        
-        <div class="xpl__stack"><span>Forecasting</span><span>Event streaming</span><span>Data platform</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Utilities AI" data-title="Utilities AI scope" data-message="Industry: utilities and energy.&#10;Workflow: ">Discuss a utilities program <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
-    <div class="xpl__panel" role="tabpanel" id="ind-p5" aria-labelledby="ind-t5" hidden>
-      <p class="xpl__pain"><small>Where it hurts</small>Small back-office teams spend their week on grant tracking, program intake and funder reports instead of the mission.</p>
-      <h3>Grant management, program intake and reporting agents sized for lean back offices.</h3>
-      <ul class="xpl__gets"><li>Program intake that routes itself</li><li>Funder reports drafted from live program data</li><li>Budgets sized for nonprofit and education organizations</li></ul>
-      <div class="xpl__side">
-        
-        
-        <div class="xpl__stack"><span>Salesforce Nonprofit</span><span>Experience Cloud</span><span>Agents</span></div>
-        <a class="btn btn--red" href="#audit" data-open="audit" data-interest="Agentforce &amp; AI agents" data-kicker="Nonprofit AI" data-title="Nonprofit and education AI scope" data-message="Industry: nonprofit or education.&#10;Workflow: ">Discuss a nonprofit program <i aria-hidden="true">&rarr;</i></a>
-      </div>
-    </div>
+    <p class="offers__note rv">Also delivered for Genentech, Abbott, Intuitive Surgical, Morgan Stanley, MUFG Bank, Liberty Mutual, the VA, the U.S. DOT, IBM and Genesys.</p>
   </div>
+</section>
+
+<section class="sx" aria-labelledby="rules-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Commitments</p><h2 id="rules-h" class="rv">Four rules on every AI engagement, <em>written into the scope.</em></h2><p class="rv" data-d="1">They are what an information security review and an auditor ask for, so they are settled before build rather than argued after.</p></div>
+    </div>
+    <ul class="terms rv">
+      <li><b>The client's environment.</b><span>The solution runs in the client's AWS, Azure, Google Cloud, Salesforce or ServiceNow environment, on its identity provider, and the data stays there.</span></li>
+      <li><b>The user's permissions.</b><span>An agent or assistant sees only what the person asking is allowed to see. No shared super-user account.</span></li>
+      <li><b>Evaluated before release.</b><span>An agreed test set from real cases, a pass mark, and a person in the loop until the results hold in production.</span></li>
+      <li><b>Every action logged.</b><span>Prompts, retrieved sources, tool calls and handovers recorded, to the HIPAA, FedRAMP, SOC 2 and ISO 27001 standards in scope.</span></li>
+    </ul>
   </div>
 </section>
 
@@ -759,7 +708,7 @@
 
 <a class="sticky-cta" href="#audit" data-track="cta_sticky_mobile">Talk to an architect <i aria-hidden="true">&rarr;</i></a>
 
-<script src="/assets/js/main.js?v=30" defer></script>
-<script src="/assets/js/pages.js?v=20" defer></script>
+<script src="/assets/js/main.js?v=31" defer></script>
+<script src="/assets/js/pages.js?v=22" defer></script>
 </body>
 </html>
