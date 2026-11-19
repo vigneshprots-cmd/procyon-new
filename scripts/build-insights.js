@@ -53,6 +53,13 @@ const seriesNext = (p) => {
   return `<div class="series-nav">${prev ? `<a class="series-nav__prev" href="/blog/${prev.slug}"><small>&larr; Part ${i}</small><b>${esc(prev.title)}</b></a>` : '<span></span>'}${next ? `<a class="series-nav__next" href="/blog/${next.slug}"><small>Part ${i + 2} &rarr;</small><b>${esc(next.title)}</b></a>` : ''}</div>`;
 };
 
+
+// Responsive covers: a 480px copy (made by sync-insights or scripts/thumbs) serves phones and list thumbnails.
+const PUBLIC_DIR = path.join(ROOT, 'public');
+const pic = (src, sizes) => {
+  const small = String(src).replace(/\.webp$/, '-480.webp');
+  return small !== src && fs.existsSync(path.join(PUBLIC_DIR, small)) ? ` srcset="${small} 480w, ${src} 1200w" sizes="${sizes}"` : '';
+};
 const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const slugify = (s) => String(s).toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const fmt = (d) => new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
@@ -187,7 +194,7 @@ const ctaBlog = cta({ h: 'Turn the idea into <em>a written plan.</em>', p: 'A se
 const cats = [...new Set(blog.map(p => p.category.trim()))];
 const catCount = (c) => blog.filter(p => p.category.trim() === c).length;
 const postRow = (p, i) => `      <a class="ins-row rv" data-team="${slugify(p.category)}" href="/blog/${p.slug}">
-        ${p.image ? `<img class="ins-row__img" src="${p.image.src}" alt="" width="1200" height="675" loading="${i < 4 ? 'eager' : 'lazy'}" decoding="async">` : '<span class="ins-row__img"></span>'}
+        ${p.image ? `<img class="ins-row__img" src="${p.image.src}"${pic(p.image.src, '(max-width: 380px) 100vw, (max-width: 720px) 96px, 220px')} alt="" width="1200" height="675" loading="${i < 4 ? 'eager' : 'lazy'}" decoding="async">` : '<span class="ins-row__img"></span>'}
         <span class="ins-row__meta"><b>${esc(p.category.trim())}</b><time datetime="${day(p.published_at)}">${fmt(p.published_at)}</time><span>${esc(p.read_time || (p.reading_minutes ? p.reading_minutes + ' min read' : ''))}</span></span>
         <span class="ins-row__t">${esc(p.title)}</span>
         <span class="ins-row__d">${esc(clip(p.excerpt, 170))}</span>
@@ -215,7 +222,7 @@ write('blog/index.html', {
       </div>
       <div class="ph__w">
         <a class="feat" href="/blog/${featured.slug}">
-          ${featured.image ? `<img src="${featured.image.src}" alt="" width="1200" height="675" decoding="async">` : ''}
+          ${featured.image ? `<img src="${featured.image.src}"${pic(featured.image.src, '(max-width: 1080px) 92vw, 480px')} alt="" width="1200" height="675" decoding="async" fetchpriority="high">` : ''}
           <span class="feat__k">Latest &middot; ${esc(featured.category.trim())}</span>
           <b>${esc(featured.title)}</b>
           <span>${esc(clip(featured.excerpt, 140))}</span>
@@ -276,7 +283,7 @@ for (const p of blog) {
     </div>
   </div>
 </section>
-${p.image ? `<div class="post__cover"><div class="wrap"><img src="${p.image.src}" alt="${esc(p.title)}" width="1200" height="675" decoding="async" fetchpriority="high"></div></div>` : ''}
+${p.image ? `<div class="post__cover"><div class="wrap"><img src="${p.image.src}"${pic(p.image.src, '(max-width: 520px) 100vw, 1200px')} alt="${esc(p.title)}" width="1200" height="675" decoding="async" fetchpriority="high"></div></div>` : ''}
 <div class="readbar" aria-hidden="true"><i></i></div>
 <section class="post" aria-label="Article">
   <div class="wrap post__grid">
@@ -309,7 +316,7 @@ ${faqHtml(p.faqs, 'Questions this article <em>answers.</em>')}
   <div class="wrap">
     <div class="sx__head"><div><h2 id="more-h" class="rv">Read next.</h2></div><a class="sx__go rv" href="/blog">All articles <i aria-hidden="true">&rarr;</i></a></div>
     <div class="ins-cards">
-${related.map(r => `      <a class="ins-card rv" href="/blog/${r.slug}">${r.image ? `<img src="${r.image.src}" alt="" width="1200" height="675" loading="lazy" decoding="async">` : ''}<span>${esc(r.category.trim())} &middot; ${esc(r.read_time || '')}</span><b>${esc(r.title)}</b></a>`).join('\n')}
+${related.map(r => `      <a class="ins-card rv" href="/blog/${r.slug}">${r.image ? `<img src="${r.image.src}"${pic(r.image.src, '(max-width: 720px) 92vw, 360px')} alt="" width="1200" height="675" loading="lazy" decoding="async">` : ''}<span>${esc(r.category.trim())} &middot; ${esc(r.read_time || '')}</span><b>${esc(r.title)}</b></a>`).join('\n')}
     </div>
   </div>
 </section>
@@ -323,7 +330,7 @@ ${hasGallery ? GALLERY_ASSETS.js : ''}
 const caseRow = (c) => {
   const o = (c.outcomes || [])[0] || {};
   return `      <a class="case-row rv" href="/case-studies/${c.slug}">
-        ${c.image ? `<img src="${c.image.src}" alt="" width="1200" height="675" loading="lazy" decoding="async">` : ''}
+        ${c.image ? `<img src="${c.image.src}"${pic(c.image.src, '(max-width: 720px) 92vw, 420px')} alt="" width="1200" height="675" loading="lazy" decoding="async">` : ''}
         <span class="case-row__fig"><b>${esc(o.value || '')}</b><span>${esc(o.label || '')}</span></span>
         <span class="case-row__body"><small>${esc(c.industry)} &middot; ${esc(c.platform)}</small><b>${esc(c.title)}</b><span>${esc(clip(c.excerpt, 190))}</span></span>
         <i aria-hidden="true">&rarr;</i>

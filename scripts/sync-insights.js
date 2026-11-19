@@ -89,6 +89,7 @@ async function convert(url, type, slug) {
   const buf = Buffer.from(await r.arrayBuffer());
   fs.mkdirSync(path.dirname(web), { recursive: true });
   await sharp(buf).resize(1200, 675, { fit: 'cover' }).webp({ quality: 74 }).toFile(web);
+  await sharp(buf).resize(480, 270, { fit: 'cover' }).webp({ quality: 70 }).toFile(web.replace(/\.webp$/, '-480.webp')); // phones and list thumbnails
   return { src: `/assets/img/insights/${type}/${slug}.webp` };
 }
 

@@ -219,7 +219,7 @@
 
 /* ---------- Agent use-case library ---------- */
 .uc__bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 22px; }
-.uc__bar > span { margin-right: 6px; font: 600 12px/1 var(--f-display); letter-spacing: .14em; text-transform: uppercase; color: var(--grey); }
+.uc__bar > span { margin-right: 6px; font: 600 12px/1 var(--f-display); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 .chipf { padding: 10px 16px; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; font: 600 13.5px/1 var(--f-body); color: var(--ink-2); cursor: pointer; transition: all .2s; }
 .chipf[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
 .uc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
