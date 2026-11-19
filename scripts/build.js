@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 40, pages: 22, js: 31, ed: 2 };
+const VERSION = { css: 40, pages: 22, js: 31, ed: 2, au: 3 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -96,7 +96,28 @@ const RAIL = {
   ai: { h: 'More from AI, data and engineering', pick: p => p.section === 'ai' || ['/enterprise/salesforce/agentforce', '/enterprise/salesforce/data-cloud'].includes(p.slug) },
   talent: { h: 'More ways to add capacity', pick: p => p.section === 'talent' || ['/enterprise/salesforce/managed-services', '/about/certifications', '/contact'].includes(p.slug) }
 };
-const NAV = { servicenow: ['dd-sn', 'ServiceNow'], ai: ['dd-ai', 'AI &amp; Data'], salesforce: ['dd-sf', 'Salesforce'], company: ['dd-co', 'Company'], insights: ['dd-in', 'Insights'], talent: ['dd-tl', 'Talent'] };
+const NAV = { servicenow: ['dd-sn', 'ServiceNow'], ai: ['dd-ai', 'AI &amp; Data'], salesforce: ['dd-sf', 'Salesforce'], company: ['dd-co', 'Company'], insights: ['dd-in', 'Insights'], talent: ['dd-tl', 'Talent'], products: ['dd-pr', 'Products'] };
+
+// ---------- Hero light effects: aurora orbs and a brand-colour light ribbon, shaped per page ----------
+function fx(seed) {
+  let h = 2166136261; for (const ch of String(seed)) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); }
+  const rnd = () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 10000) / 10000; };
+  const f = (n) => n.toFixed(1);
+  const x0 = 380 + rnd() * 320, y0 = 860, x3 = 1520, y3 = -60 + rnd() * 120;
+  const c1 = [x0 + 120 + rnd() * 200, 520 + rnd() * 140], c2 = [1020 + rnd() * 220, 300 + rnd() * 260];
+  const lines = [];
+  for (let i = 0; i < 26; i++) {
+    const t = i / 25, o = (t - .5) * 150, tw = Math.sin(t * Math.PI) * 70;
+    const d = `M${f(x0 + o * .6)} ${y0}C${f(c1[0] + o + tw)} ${f(c1[1] - o * .4)} ${f(c2[0] - o * .5)} ${f(c2[1] + o + tw * .6)} ${x3} ${f(y3 + o * .8)}`;
+    const op = (.1 + .55 * Math.pow(Math.sin(t * Math.PI), 2)).toFixed(2);
+    lines.push(`<path d="${d}" stroke-width="${i % 6 === 0 ? 1.4 : .8}" opacity="${op}"/>`);
+  }
+  const mid = `M${f(x0)} ${y0}C${f(c1[0])} ${f(c1[1])} ${f(c2[0])} ${f(c2[1])} ${x3} ${f(y3)}`;
+  return `<div class="fx" aria-hidden="true"><i class="fx__orb fx__orb--b"></i><i class="fx__orb fx__orb--g"></i><i class="fx__orb fx__orb--r"></i><i class="fx__grid"></i>`
+    + `<svg class="fx__ribbon" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="fxg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#BC1E2D"/><stop offset=".45" stop-color="#39B34A"/><stop offset="1" stop-color="#28A8DE"/></linearGradient>`
+    + `<filter id="fxb" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="18"/></filter></defs>`
+    + `<g fill="none" stroke="url(#fxg)"><path d="${mid}" stroke-width="90" opacity=".22" filter="url(#fxb)"/>${lines.join('')}<path class="fx__shine" d="${mid}" stroke="#fff" stroke-width="2" opacity=".85"/></g></svg></div>`;
+}
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const strip = (s) => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&middot;/g, '·').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
@@ -268,7 +289,8 @@ function render(meta, body) {
     .replace(/<!--@logos-->/g, CHROME.logos.trim())
     .replace(/<!--@case-->/g, CHROME.caseBlock)
     .replace(/<!--@related-->/g, related(meta.slug, meta.section))
-    .replace(/<!--@cta (\{[\s\S]*?\})-->/g, (_, j) => cta(JSON.parse(j)));
+    .replace(/<!--@cta (\{[\s\S]*?\})-->/g, (_, j) => cta(JSON.parse(j)))
+    .replace(/(<section class="hx[^"]*"[^>]*>)(?!\s*<div class="fx")/, (m) => m + '\n  ' + fx(meta.slug));
   const url = SITE + meta.slug;
   const ogImg = ogUrl(meta);
   return `<!doctype html>
@@ -280,7 +302,7 @@ function render(meta, body) {
 <meta name="description" content="${esc(meta.description)}">
 <link rel="canonical" href="${url}">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="theme-color" content="#0B0D10">
+<meta name="theme-color" content="#05060A">
 
 <meta property="og:type" content="${meta.article ? 'article' : 'website'}">${meta.article ? `
 <meta property="article:published_time" content="${meta.published}">
@@ -311,6 +333,7 @@ function render(meta, body) {
 <link rel="stylesheet" href="/assets/css/pages.css?v=${VERSION.pages}">
 <link rel="stylesheet" href="/assets/css/editorial.css?v=${VERSION.ed}">${meta.insights ? `
 <link rel="stylesheet" href="/assets/css/insights.css?v=${VERSION.pages}">` : ''}
+<link rel="stylesheet" href="/assets/css/aurora.css?v=${VERSION.au}">
 
 <script type="application/ld+json">
 ${schema(meta, body)}
@@ -372,6 +395,7 @@ for (const file of walk(SRC).filter(f => f.endsWith('.html') && !f.includes(path
   const block = '<!--promo-->' + (PROMO ? '\n' + PROMO + '\n' : '') + '<!--/promo-->';
   h = /<!--promo-->[\s\S]*?<!--\/promo-->/.test(h) ? h.replace(/<!--promo-->[\s\S]*?<!--\/promo-->/, block)
     : h.replace('<a class="skip" href="#main">Skip to content</a>', '<a class="skip" href="#main">Skip to content</a>\n' + block);
+  h = h.replace(/<!--@fx-->|<!--fx-->[\s\S]*?<!--\/fx-->/, () => '<!--fx-->' + fx('home') + '<!--/fx-->');
   writeRetry(hp, h);
 }
 urls.sort((a, b) => a.loc.localeCompare(b.loc));

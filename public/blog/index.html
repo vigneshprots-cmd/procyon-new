@@ -7,7 +7,7 @@
 <meta name="description" content="Field notes and frameworks from Procyon practice leaders on Agentforce, Salesforce, ServiceNow, cloud, data, supplier diversity and enterprise AI.">
 <link rel="canonical" href="https://procyonts.com/blog">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="theme-color" content="#0B0D10">
+<meta name="theme-color" content="#05060A">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Procyon Technostructure">
@@ -36,6 +36,7 @@
 <link rel="stylesheet" href="/assets/css/pages.css?v=22">
 <link rel="stylesheet" href="/assets/css/editorial.css?v=2">
 <link rel="stylesheet" href="/assets/css/insights.css?v=22">
+<link rel="stylesheet" href="/assets/css/aurora.css?v=3">
 
 <script type="application/ld+json">
 {
@@ -110,6 +111,23 @@
     <nav class="nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-pr">Products</button>
+          <div class="dd__panel dd__panel--wide dd__panel--pr" id="dd-pr">
+            <a class="dd__feature dd__feature--pr" href="/products/ranger-fusion">
+              <small>Ranger Fusion &middot; AI-powered ERP</small>
+              <b>ERP, reimagined on Salesforce</b>
+              <span>Sales, accounting, inventory, procurement, projects, HR and portals on one data model, with AI agents in every module. Live in 2 to 4 weeks.</span>
+              <em>Explore Ranger Fusion &rarr;</em>
+            </a>
+            <ul class="dd__links">
+              <li><a href="/products/ranger-fusion#modules"><b>Seven modules, one platform</b><span>Quote-to-cash, procure-to-pay and hire-to-retire on Force.com.</span></a></li>
+              <li><a href="/products/ranger-fusion#compare"><b>Ranger Fusion vs a patchwork stack</b><span>No sync jobs between CRM and ERP, because there is one system.</span></a></li>
+              <li><a href="/products/ranger-fusion#plan"><b>Live in 2 to 4 weeks</b><span>Configured, migrated, trained and cut over in a month.</span></a></li>
+              <li><a href="#audit" data-open="audit" data-interest="Ranger Fusion ERP" data-kicker="Ranger Fusion" data-title="Ranger Fusion demo"><b>Book a 30-minute demo</b><span>Built around the module needed first.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dd">
           <button class="nav__btn" aria-expanded="false" aria-controls="dd-sf">Salesforce</button>
           <div class="dd__panel dd__panel--wide" id="dd-sf">
             <ul class="dd__links">
@@ -119,11 +137,11 @@
               <li><a href="/enterprise/salesforce/org-audit"><b>Org audit &amp; rescue</b><span>Find the debt, fix the org, win back user trust.</span></a></li>
               <li><a href="/enterprise/salesforce/managed-services"><b>Managed services</b><span>Admin, releases and continuous improvement on retainer.</span></a></li>
             </ul>
-            <a class="dd__feature" href="/products/ranger-fusion">
-              <small>Our product</small>
-              <b>Ranger Fusion ERP</b>
-              <span>Finance, inventory, projects and HR, native to Salesforce. Live in 2 to 4 weeks.</span>
-              <em>See the product &rarr;</em>
+            <a class="dd__feature" href="/enterprise/salesforce/agentforce">
+              <small>Agent Launch Kit</small>
+              <b>Agentforce in production</b>
+              <span>First agents live in under 4 weeks, grounded in governed data, with human review built in.</span>
+              <em>Plan the first agent &rarr;</em>
             </a>
           </div>
         </li>
@@ -222,7 +240,8 @@
 
   <div class="mnav" id="mnav" hidden>
     <div class="wrap mnav__in">
-      <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
+      <details><summary>Products</summary><a href="/products/ranger-fusion">Ranger Fusion ERP</a><a href="/products/ranger-fusion#modules">Modules</a><a href="/products/ranger-fusion#compare">Ranger Fusion vs a patchwork stack</a><a href="/products/ranger-fusion#plan">Live in 2 to 4 weeks</a></details>
+      <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
       <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
@@ -235,6 +254,7 @@
 
 <main id="main">
 <section class="hx hx--ins" aria-labelledby="ph-h">
+  <div class="fx" aria-hidden="true"><i class="fx__orb fx__orb--b"></i><i class="fx__orb fx__orb--g"></i><i class="fx__orb fx__orb--r"></i><i class="fx__grid"></i><svg class="fx__ribbon" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="fxg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#BC1E2D"/><stop offset=".45" stop-color="#39B34A"/><stop offset="1" stop-color="#28A8DE"/></linearGradient><filter id="fxb" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="18"/></filter></defs><g fill="none" stroke="url(#fxg)"><path d="M528.9 860C658.8 538.4 1159.2 557.6 1520 -22.2" stroke-width="90" opacity=".22" filter="url(#fxb)"/><path d="M483.9 860C583.8 568.4 1196.7 482.6 1520 -82.2" stroke-width="1.4" opacity="0.10"/><path d="M487.5 860C598.6 566.0 1193.7 493.9 1520 -77.4" stroke-width="0.8" opacity="0.11"/><path d="M491.1 860C613.2 563.6 1190.7 505.1 1520 -72.6" stroke-width="0.8" opacity="0.13"/><path d="M494.7 860C627.6 561.2 1187.7 516.1 1520 -67.8" stroke-width="0.8" opacity="0.17"/><path d="M498.3 860C641.6 558.8 1184.7 526.9 1520 -63.0" stroke-width="0.8" opacity="0.23"/><path d="M501.9 860C655.0 556.4 1181.7 537.3 1520 -58.2" stroke-width="0.8" opacity="0.29"/><path d="M505.5 860C667.8 554.0 1178.7 547.4 1520 -53.4" stroke-width="1.4" opacity="0.36"/><path d="M509.1 860C679.8 551.6 1175.7 557.0 1520 -48.6" stroke-width="0.8" opacity="0.43"/><path d="M512.7 860C690.9 549.2 1172.7 566.1 1520 -43.8" stroke-width="0.8" opacity="0.49"/><path d="M516.3 860C701.2 546.8 1169.7 574.6 1520 -39.0" stroke-width="0.8" opacity="0.55"/><path d="M519.9 860C710.4 544.4 1166.7 582.6 1520 -34.2" stroke-width="0.8" opacity="0.60"/><path d="M523.5 860C718.6 542.0 1163.7 589.9 1520 -29.4" stroke-width="0.8" opacity="0.63"/><path d="M527.1 860C725.7 539.6 1160.7 596.6 1520 -24.6" stroke-width="1.4" opacity="0.65"/><path d="M530.7 860C731.7 537.2 1157.7 602.6 1520 -19.8" stroke-width="0.8" opacity="0.65"/><path d="M534.3 860C736.6 534.8 1154.7 607.9 1520 -15.0" stroke-width="0.8" opacity="0.63"/><path d="M537.9 860C740.4 532.4 1151.7 612.6 1520 -10.2" stroke-width="0.8" opacity="0.60"/><path d="M541.5 860C743.2 530.0 1148.7 616.6 1520 -5.4" stroke-width="0.8" opacity="0.55"/><path d="M545.1 860C744.9 527.6 1145.7 620.1 1520 -0.6" stroke-width="0.8" opacity="0.49"/><path d="M548.7 860C745.8 525.2 1142.7 623.0 1520 4.2" stroke-width="1.4" opacity="0.43"/><path d="M552.3 860C745.8 522.8 1139.7 625.4 1520 9.0" stroke-width="0.8" opacity="0.36"/><path d="M555.9 860C745.0 520.4 1136.7 627.3 1520 13.8" stroke-width="0.8" opacity="0.29"/><path d="M559.5 860C743.6 518.0 1133.7 628.9 1520 18.6" stroke-width="0.8" opacity="0.23"/><path d="M563.1 860C741.6 515.6 1130.7 630.1 1520 23.4" stroke-width="0.8" opacity="0.17"/><path d="M566.7 860C739.2 513.2 1127.7 631.1 1520 28.2" stroke-width="0.8" opacity="0.13"/><path d="M570.3 860C736.6 510.8 1124.7 631.9 1520 33.0" stroke-width="1.4" opacity="0.11"/><path d="M573.9 860C733.8 508.4 1121.7 632.6 1520 37.8" stroke-width="0.8" opacity="0.10"/><path class="fx__shine" d="M528.9 860C658.8 538.4 1159.2 557.6 1520 -22.2" stroke="#fff" stroke-width="2" opacity=".85"/></g></svg></div>
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Blog</li></ol></nav>
     <div class="hx__grid">
@@ -620,8 +640,8 @@
     <div class="ftr__top">
       <div class="ftr__brand">
         <img src="/assets/img/procyon-logo.svg" alt="Procyon Technostructure" width="200" height="55" loading="lazy">
-        <p>Run the business. Not the software.</p>
-        <span>Enterprise solution delivery for digital transformation, AI and data. Since 2004.</span>
+        <p>AI that works inside the enterprise.</p>
+        <span>An AI technology company engineering agents, data and automation into Salesforce, ServiceNow and the systems around them. Since 2004.</span>
       </div>
       <nav class="ftr__cols" aria-label="Footer">
         <div><p>Salesforce</p><a href="/enterprise/salesforce/implementation">Implementation</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a></div>

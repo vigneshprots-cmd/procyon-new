@@ -7,7 +7,7 @@
 <meta name="description" content="Snowflake, Databricks, BigQuery and Synapse platforms, governed BI in Tableau, Power BI and Looker, and data products that feed AI. One set of trusted KPIs.">
 <link rel="canonical" href="https://procyonts.com/services/data-analytics">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="theme-color" content="#0B0D10">
+<meta name="theme-color" content="#05060A">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Procyon Technostructure">
@@ -35,6 +35,7 @@
 <link rel="stylesheet" href="/assets/css/styles.css?v=40">
 <link rel="stylesheet" href="/assets/css/pages.css?v=22">
 <link rel="stylesheet" href="/assets/css/editorial.css?v=2">
+<link rel="stylesheet" href="/assets/css/aurora.css?v=3">
 
 <script type="application/ld+json">
 {
@@ -244,6 +245,23 @@
     <nav class="nav" aria-label="Primary">
       <ul class="nav__list">
         <li class="dd">
+          <button class="nav__btn" aria-expanded="false" aria-controls="dd-pr">Products</button>
+          <div class="dd__panel dd__panel--wide dd__panel--pr" id="dd-pr">
+            <a class="dd__feature dd__feature--pr" href="/products/ranger-fusion">
+              <small>Ranger Fusion &middot; AI-powered ERP</small>
+              <b>ERP, reimagined on Salesforce</b>
+              <span>Sales, accounting, inventory, procurement, projects, HR and portals on one data model, with AI agents in every module. Live in 2 to 4 weeks.</span>
+              <em>Explore Ranger Fusion &rarr;</em>
+            </a>
+            <ul class="dd__links">
+              <li><a href="/products/ranger-fusion#modules"><b>Seven modules, one platform</b><span>Quote-to-cash, procure-to-pay and hire-to-retire on Force.com.</span></a></li>
+              <li><a href="/products/ranger-fusion#compare"><b>Ranger Fusion vs a patchwork stack</b><span>No sync jobs between CRM and ERP, because there is one system.</span></a></li>
+              <li><a href="/products/ranger-fusion#plan"><b>Live in 2 to 4 weeks</b><span>Configured, migrated, trained and cut over in a month.</span></a></li>
+              <li><a href="#audit" data-open="audit" data-interest="Ranger Fusion ERP" data-kicker="Ranger Fusion" data-title="Ranger Fusion demo"><b>Book a 30-minute demo</b><span>Built around the module needed first.</span></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dd">
           <button class="nav__btn" aria-expanded="false" aria-controls="dd-sf">Salesforce</button>
           <div class="dd__panel dd__panel--wide" id="dd-sf">
             <ul class="dd__links">
@@ -253,11 +271,11 @@
               <li><a href="/enterprise/salesforce/org-audit"><b>Org audit &amp; rescue</b><span>Find the debt, fix the org, win back user trust.</span></a></li>
               <li><a href="/enterprise/salesforce/managed-services"><b>Managed services</b><span>Admin, releases and continuous improvement on retainer.</span></a></li>
             </ul>
-            <a class="dd__feature" href="/products/ranger-fusion">
-              <small>Our product</small>
-              <b>Ranger Fusion ERP</b>
-              <span>Finance, inventory, projects and HR, native to Salesforce. Live in 2 to 4 weeks.</span>
-              <em>See the product &rarr;</em>
+            <a class="dd__feature" href="/enterprise/salesforce/agentforce">
+              <small>Agent Launch Kit</small>
+              <b>Agentforce in production</b>
+              <span>First agents live in under 4 weeks, grounded in governed data, with human review built in.</span>
+              <em>Plan the first agent &rarr;</em>
             </a>
           </div>
         </li>
@@ -356,7 +374,8 @@
 
   <div class="mnav" id="mnav" hidden>
     <div class="wrap mnav__in">
-      <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a><a href="/products/ranger-fusion">Ranger Fusion ERP</a></details>
+      <details><summary>Products</summary><a href="/products/ranger-fusion">Ranger Fusion ERP</a><a href="/products/ranger-fusion#modules">Modules</a><a href="/products/ranger-fusion#compare">Ranger Fusion vs a patchwork stack</a><a href="/products/ranger-fusion#plan">Live in 2 to 4 weeks</a></details>
+      <details><summary>Salesforce</summary><a href="/enterprise/salesforce/implementation">Implementation &amp; rollout</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud &amp; integration</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a></details>
       <details><summary>ServiceNow</summary><a href="/enterprise/servicenow/platform-audit">Platform audit &amp; tech-debt removal</a><a href="/enterprise/servicenow/itsm-itom">ITSM, ITOM &amp; CMDB</a><a href="/enterprise/servicenow/security-risk">Security &amp; risk</a><a href="/enterprise/servicenow/now-assist">Now Assist &amp; AI agents</a><a href="/enterprise/servicenow/managed-services">Managed services</a></details>
       <details><summary>AI &amp; Data</summary><a href="/services/ai-ml">AI agents &amp; automation</a><a href="/ai-data/knowledge-assistants">Knowledge assistants</a><a href="/services/data-analytics" aria-current="page">Data platforms &amp; analytics</a><a href="/solutions/enterprise-integration">Integration &amp; APIs</a><a href="/solutions/enterprise-application-modernization">Product engineering</a><a href="/services/cloud">Cloud transformation</a><a href="/services/cybersecurity">Cybersecurity &amp; compliance</a><a href="/services/government">Government solutions</a></details>
       <details><summary>Talent</summary><a href="/services/staff-augmentation">Staff augmentation</a><a href="/talent/delivery-pods">Delivery pods</a><a href="/talent/engagement-models">Engagement models</a></details>
@@ -369,13 +388,14 @@
 
 <main id="main">
 <section class="hx" aria-labelledby="ph-h">
+  <div class="fx" aria-hidden="true"><i class="fx__orb fx__orb--b"></i><i class="fx__orb fx__orb--g"></i><i class="fx__orb fx__orb--r"></i><i class="fx__grid"></i><svg class="fx__ribbon" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="fxg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#BC1E2D"/><stop offset=".45" stop-color="#39B34A"/><stop offset="1" stop-color="#28A8DE"/></linearGradient><filter id="fxb" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="18"/></filter></defs><g fill="none" stroke="url(#fxg)"><path d="M414.6 860C602.3 576.0 1210.5 449.7 1520 34.6" stroke-width="90" opacity=".22" filter="url(#fxb)"/><path d="M369.6 860C527.3 606.0 1248.0 374.7 1520 -25.4" stroke-width="1.4" opacity="0.10"/><path d="M373.2 860C542.0 603.6 1245.0 385.9 1520 -20.6" stroke-width="0.8" opacity="0.11"/><path d="M376.8 860C556.7 601.2 1242.0 397.1 1520 -15.8" stroke-width="0.8" opacity="0.13"/><path d="M380.4 860C571.0 598.8 1239.0 408.1 1520 -11.0" stroke-width="0.8" opacity="0.17"/><path d="M384.0 860C585.0 596.4 1236.0 418.9 1520 -6.2" stroke-width="0.8" opacity="0.23"/><path d="M387.6 860C598.4 594.0 1233.0 429.4 1520 -1.4" stroke-width="0.8" opacity="0.29"/><path d="M391.2 860C611.2 591.6 1230.0 439.4 1520 3.4" stroke-width="1.4" opacity="0.36"/><path d="M394.8 860C623.2 589.2 1227.0 449.0 1520 8.2" stroke-width="0.8" opacity="0.43"/><path d="M398.4 860C634.4 586.8 1224.0 458.1 1520 13.0" stroke-width="0.8" opacity="0.49"/><path d="M402.0 860C644.6 584.4 1221.0 466.7 1520 17.8" stroke-width="0.8" opacity="0.55"/><path d="M405.6 860C653.8 582.0 1218.0 474.6 1520 22.6" stroke-width="0.8" opacity="0.60"/><path d="M409.2 860C662.0 579.6 1215.0 481.9 1520 27.4" stroke-width="0.8" opacity="0.63"/><path d="M412.8 860C669.1 577.2 1212.0 488.6 1520 32.2" stroke-width="1.4" opacity="0.65"/><path d="M416.4 860C675.1 574.8 1209.0 494.6 1520 37.0" stroke-width="0.8" opacity="0.65"/><path d="M420.0 860C680.0 572.4 1206.0 499.9 1520 41.8" stroke-width="0.8" opacity="0.63"/><path d="M423.6 860C683.8 570.0 1203.0 504.6 1520 46.6" stroke-width="0.8" opacity="0.60"/><path d="M427.2 860C686.6 567.6 1200.0 508.7 1520 51.4" stroke-width="0.8" opacity="0.55"/><path d="M430.8 860C688.4 565.2 1197.0 512.1 1520 56.2" stroke-width="0.8" opacity="0.49"/><path d="M434.4 860C689.2 562.8 1194.0 515.0 1520 61.0" stroke-width="1.4" opacity="0.43"/><path d="M438.0 860C689.2 560.4 1191.0 517.4 1520 65.8" stroke-width="0.8" opacity="0.36"/><path d="M441.6 860C688.4 558.0 1188.0 519.4 1520 70.6" stroke-width="0.8" opacity="0.29"/><path d="M445.2 860C687.0 555.6 1185.0 520.9 1520 75.4" stroke-width="0.8" opacity="0.23"/><path d="M448.8 860C685.0 553.2 1182.0 522.1 1520 80.2" stroke-width="0.8" opacity="0.17"/><path d="M452.4 860C682.7 550.8 1179.0 523.1 1520 85.0" stroke-width="0.8" opacity="0.13"/><path d="M456.0 860C680.0 548.4 1176.0 523.9 1520 89.8" stroke-width="1.4" opacity="0.11"/><path d="M459.6 860C677.3 546.0 1173.0 524.7 1520 94.6" stroke-width="0.8" opacity="0.10"/><path class="fx__shine" d="M414.6 860C602.3 576.0 1210.5 449.7 1520 34.6" stroke="#fff" stroke-width="2" opacity=".85"/></g></svg></div>
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/ai-data">AI &amp; Data</a></li><li aria-current="page">Data platforms &amp; analytics</li></ol></nav>
     <div class="hx__grid">
       <div class="hx__copy">
         <p class="k3">Data platforms &amp; analytics</p>
-        <h1 id="ph-h" class="hx__h">One set of numbers, <em>defined once, used everywhere.</em></h1>
-        <p class="ph__lede"><b>Procyon builds data platforms and governed analytics on Snowflake, Databricks, BigQuery and Synapse.</b> A shared semantic layer sits under Tableau, Power BI or Looker, so finance, sales and operations read the same KPI from the same definition. The same governed data products then feed Salesforce Data Cloud, AI agents and knowledge assistants.</p>
+        <h1 id="ph-h" class="hx__h">The data layer <em>every AI agent depends on.</em></h1>
+        <p class="ph__lede"><b>Procyon builds AI-ready data platforms and governed analytics on Snowflake, Databricks, BigQuery and Synapse.</b> A shared semantic layer sits under Tableau, Power BI or Looker, so finance, sales and operations read the same KPI from the same definition, and the same governed data products feed Salesforce Data Cloud, AI agents and knowledge assistants.</p>
         <div class="hx__ctas">
           <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Data, integration &amp; MuleSoft" data-kicker="Data platforms" data-title="Data platform assessment" data-message="Current data platform and BI tools: &#10;Decision the data should support: " data-track="data_hero">Get a data platform assessment <i aria-hidden="true">&rarr;</i></a>
           <a class="hx__link" href="#build">See what is in scope <i aria-hidden="true">&rarr;</i></a>
@@ -654,8 +674,8 @@
     <div class="ftr__top">
       <div class="ftr__brand">
         <img src="/assets/img/procyon-logo.svg" alt="Procyon Technostructure" width="200" height="55" loading="lazy">
-        <p>Run the business. Not the software.</p>
-        <span>Enterprise solution delivery for digital transformation, AI and data. Since 2004.</span>
+        <p>AI that works inside the enterprise.</p>
+        <span>An AI technology company engineering agents, data and automation into Salesforce, ServiceNow and the systems around them. Since 2004.</span>
       </div>
       <nav class="ftr__cols" aria-label="Footer">
         <div><p>Salesforce</p><a href="/enterprise/salesforce/implementation">Implementation</a><a href="/enterprise/salesforce/agentforce">Agentforce</a><a href="/enterprise/salesforce/data-cloud">Data Cloud</a><a href="/enterprise/salesforce/org-audit">Org audit &amp; rescue</a><a href="/enterprise/salesforce/managed-services">Managed services</a></div>
