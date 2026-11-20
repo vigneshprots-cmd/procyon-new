@@ -1,0 +1,240 @@
+<!--meta
+{
+  "slug": "/products/procyon-wfm",
+  "section": "products",
+  "title": "Workforce Scheduling Software That Enforces Shift Rules",
+  "description": "Workforce scheduling software for shift operations: rest, hours and certification rules enforced, plus attendance, replacements, overtime and payroll export.",
+  "ogTitle": "The rota is not a spreadsheet. It is a set of rules.",
+  "ogDescription": "Weekly schedules built against rest, hours, break and certification rules, then run on the floor: check-in, absences, ranked replacements, overtime and a payroll export that reconciles.",
+  "twitterTitle": "Shift scheduling that cannot break the rules",
+  "ogImage": "/assets/img/products/procyon-wfm-og.jpg",
+  "og": "products",
+  "bodyClass": "wfm-page",
+  "crumbs": [["Products", "/products"], ["Procyon WFM", "/products/procyon-wfm"]],
+  "service": {
+    "software": true,
+    "name": "Procyon WFM",
+    "subCategory": "Workforce Management",
+    "os": "Web browser on desktop, phone and shared kiosk",
+    "languages": ["en", "ar"],
+    "audience": "Manufacturing and shift-based operations: planners, supervisors, shift leads and operators",
+    "description": "Workforce management software that builds the weekly rota against rest periods, maximum hours, break entitlements and verified certifications, publishes one version per week, and runs the shift: check-in, absences, ranked replacements, overtime and payroll export, with an immutable audit trail.",
+    "features": [
+      "Constraint-based weekly planning with scenario simulation",
+      "Hard rules for rest, daily and weekly hours, consecutive days, breaks and certifications",
+      "Explained shortages for demand that cannot be covered",
+      "One published schedule version per week, with acknowledgements",
+      "Live shift attendance board",
+      "Phone self check-in and shared kiosk with offline queue",
+      "Ranked, eligible replacements for absences",
+      "Overtime captured with reason codes and approval",
+      "Payroll export and plan versus actual reporting",
+      "Separation of duties between preparer and approver",
+      "Immutable audit trail of every change",
+      "English and Arabic with right-to-left layout",
+      "Per-site time zone, currency, week start and branding"
+    ]
+  },
+  "howto": {
+    "name": "How a week runs in Procyon WFM",
+    "description": "The weekly cycle from plan to payroll: plan against the constraints, agree it, publish it once, run the shift and close out into payroll and reporting.",
+    "steps": [
+      ["Inputs", "Load the production plan, approved leave, skills and certifications."],
+      ["Simulate", "Score scenarios with hard rules enforced and uncovered demand explained."],
+      ["Approve", "A supervisor approves or returns the schedule; shortages must be justified."],
+      ["Publish", "One version per week is published; crews are notified and acknowledge."],
+      ["Run the shift", "Record check-ins, breaks, absences, replacements and overtime."],
+      ["Close and export", "Close the shift, export to payroll and feed actuals into next week's plan."]
+    ]
+  }
+}
+-->
+<section class="hx hx--prod" aria-labelledby="ph-h">
+  <div class="wrap">
+    <!--@crumbs-->
+    <div class="hx__grid">
+      <div class="hx__copy">
+        <p class="k3">Product &middot; Procyon WFM</p>
+        <h1 id="ph-h" class="hx__h">The rota is not a spreadsheet. <em>It is a set of rules.</em></h1>
+        <p class="ph__lede"><b>Procyon WFM is workforce management software for shift-based operations.</b> It builds the week against the constraints that actually bind (rest periods, maximum hours, break entitlements and verified certifications), publishes one schedule the floor can rely on, then runs the shift: check-in, absences, replacements, overtime and the export that reaches payroll.</p>
+        <div class="hx__ctas">
+          <a class="btn btn--red btn--lg" href="#audit" data-open="audit" data-interest="Procyon WFM" data-kicker="Procyon WFM" data-title="Procyon WFM demo" data-message="Sites, lines and shifts to load: " data-track="wfm_hero">Request a demo <i aria-hidden="true">&rarr;</i></a>
+          <a class="hx__link" href="#cycle">See the weekly cycle <i aria-hidden="true">&rarr;</i></a>
+        </div>
+      </div>
+
+      <figure class="rota" aria-label="Illustration of a published weekly rota with rules enforced and an absence being replaced">
+        <div class="rota__bar"><i></i><i></i><i></i><span>Week 47 &middot; Line 2</span><em>Published &middot; v1</em></div>
+        <div class="rota__grid" role="presentation">
+          <span class="rota__h"></span><span class="rota__h">Mon</span><span class="rota__h">Tue</span><span class="rota__h">Wed</span><span class="rota__h">Thu</span><span class="rota__h">Fri</span><span class="rota__h">Sat</span>
+          <span class="rota__s">Morning<small>06:00</small></span><span class="c c--ok">8/8</span><span class="c c--ok">8/8</span><span class="c c--ok">8/8</span><span class="c c--ok">8/8</span><span class="c c--ok">8/8</span><span class="c c--ok">6/6</span>
+          <span class="rota__s">Afternoon<small>14:00</small></span><span class="c c--ok">8/8</span><span class="c c--ok">8/8</span><span class="c c--gap" title="Uncovered, explained">7/8</span><span class="c c--ok">8/8</span><span class="c c--ok">8/8</span><span class="c c--ok">6/6</span>
+          <span class="rota__s">Night<small>22:00</small></span><span class="c c--ok">6/6</span><span class="c c--ok">6/6</span><span class="c c--ok">6/6</span><span class="c c--rep">6/6</span><span class="c c--ok">6/6</span><span class="c c--off">Off</span>
+        </div>
+        <ul class="rota__rules" aria-label="Rules enforced">
+          <li>11h rest</li><li>48h week</li><li>6 days max</li><li>Certifications valid</li>
+        </ul>
+        <div class="rota__events">
+          <p class="ev ev--gap"><b>Wed afternoon: 1 slot uncovered</b><span>No certified operator is rested in time. Shortage accepted with a comment by the supervisor.</span></p>
+          <p class="ev ev--rep"><b>Thu night: absence replaced</b><span>4 eligible people ranked on rest, skill and fairness. Filled, dated and attributed.</span></p>
+        </div>
+        <figcaption>Illustrative week. Every value is configurable per site.</figcaption>
+      </figure>
+    </div>
+    <dl class="hx__facts">
+      <div><dt>Working areas</dt><dd>6, one system<span>Planning, attendance, replacements, overtime, reports, audit</span></dd></div>
+      <div><dt>Rules</dt><dd>Enforced, not remembered<span>Rest, hours, breaks, certifications</span></dd></div>
+      <div><dt>Schedule</dt><dd>One published version<span>Per week, versioned and acknowledged</span></dd></div>
+      <div><dt>Languages</dt><dd>English and Arabic<span>Including right-to-left layout</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sx pov" aria-labelledby="pov-h">
+  <div class="wrap pov__in">
+    <div class="pov__l">
+      <p class="k3 rv">The problem it solves</p>
+      <h2 id="pov-h" class="rv">The schedule is built in a spreadsheet, <em>and broken by Monday.</em></h2>
+    </div>
+    <div class="pov__r">
+      <p class="rv">A planner spends a day on next week's rota. Approved leave arrives late and blocks a published duty. A certification expired on Tuesday and nobody noticed. Someone does not turn up, so a shift lead rings round until a name is found. The overtime that follows is reconstructed from memory at the end of the month, and the reason it happened is already lost.</p>
+      <p class="rv">Procyon WFM treats the rules as part of the system rather than as knowledge in a planner's head. Hard constraints are enforced when the schedule is generated, so an unpublishable rota cannot be published. Where demand genuinely cannot be covered, the uncovered slots come back explained rather than silently dropped.</p>
+      <div class="gets rv">
+        <p class="gets__k">What the operation gets</p>
+        <ul>
+          <li>A validated schedule, with one published version per week</li>
+          <li>Rest, hours, break and certification rules enforced, not remembered</li>
+          <li>Absences replaced from a ranked, eligible list in minutes</li>
+          <li>Overtime captured with its reason at the moment it happens</li>
+          <li>A payroll export that reconciles, and an audit trail behind every change</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sx sx--paper" id="cycle" aria-labelledby="cycle-h">
+  <div class="wrap">
+    <div class="sx__head sx__head--c">
+      <div><p class="k3 rv">How it works</p><h2 id="cycle-h" class="rv">One week, <em>start to close.</em></h2><p class="rv" data-d="1">The same cycle every week: plan against the constraints, agree it, publish it once, run the shift, and close out into payroll and reporting.</p></div>
+    </div>
+    <ol class="cycle rv">
+      <li><span class="cycle__n">Plan</span><b>Inputs</b><p>Production plan, approved leave, skills and certifications.</p></li>
+      <li><span class="cycle__n">Plan</span><b>Simulate</b><p>Scenarios scored, hard rules enforced, gaps explained.</p></li>
+      <li><span class="cycle__n">Agree</span><b>Approve</b><p>A supervisor approves or returns it; shortages are justified.</p></li>
+      <li><span class="cycle__n">Agree</span><b>Publish</b><p>One version per week; crews are notified and acknowledge.</p></li>
+      <li><span class="cycle__n">Run</span><b>Run the shift</b><p>Check-in, breaks, absences, replacements and overtime.</p></li>
+      <li><span class="cycle__n">Close</span><b>Close and export</b><p>Shift close, payroll export, reports and insight.</p></li>
+    </ol>
+    <div class="cycle__loop rv"><i aria-hidden="true"></i><p><b>The improvement loop.</b> What the week actually cost feeds the next week's plan. Every step is permissioned separately, and the person who prepares a schedule is never the person who approves it.</p></div>
+  </div>
+</section>
+
+<section class="sx" id="areas" aria-labelledby="areas-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">What is in it</p><h2 id="areas-h" class="rv">Six working areas, <em>one system.</em></h2><p class="rv" data-d="1">Planning, the shift itself and the close all work from the same people, rules and records, so nothing is re-keyed between them.</p></div>
+      <a class="sx__go rv" href="#audit" data-open="audit" data-interest="Procyon WFM" data-kicker="Procyon WFM" data-title="Procyon WFM demo">See it on real data <i aria-hidden="true">&rarr;</i></a>
+    </div>
+    <div class="areas">
+      <article class="area rv"><i class="area__ic area__ic--plan" aria-hidden="true"></i><h3>Weekly planning</h3><p>Simulate a week, compare scenarios, pin what must not move, draft, submit and publish.</p></article>
+      <article class="area rv" data-d="1"><i class="area__ic area__ic--att" aria-hidden="true"></i><h3>Shift attendance</h3><p>A live board per shift: check-ins, late arrivals, breaks, early leavers and missing punches.</p></article>
+      <article class="area rv" data-d="2"><i class="area__ic area__ic--rep" aria-hidden="true"></i><h3>Replacements</h3><p>An open vacancy ranked against eligible, rested, qualified people, with the ranking shown.</p></article>
+      <article class="area rv"><i class="area__ic area__ic--ot" aria-hidden="true"></i><h3>Overtime</h3><p>Captured against a reason code, approved by someone who can approve it, exported to payroll.</p></article>
+      <article class="area rv" data-d="1"><i class="area__ic area__ic--rep2" aria-hidden="true"></i><h3>Reports and insight</h3><p>Attendance, overtime, utilisation, plan versus actual, and where the exceptions concentrate.</p></article>
+      <article class="area rv" data-d="2"><i class="area__ic area__ic--aud" aria-hidden="true"></i><h3>Audit trail</h3><p>Every write recorded with before and after, immutable, with the domain events behind it.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sx sx--paper" id="rules" aria-labelledby="rules-h">
+  <div class="wrap pov__in">
+    <div>
+      <p class="k3 rv">The rules are the product</p>
+      <h2 id="rules-h" class="rv">A schedule that cannot <em>break the rules.</em></h2>
+      <p class="pov__lede rv">Rest periods, daily and weekly maximums, consecutive-day limits, break entitlement and certification validity are held as a versioned rule set, not as conventions. The planning engine enforces them while it builds, so a rota that would breach them is never offered.</p>
+      <p class="pov__lede rv">Where demand cannot be covered inside the rules, the system says which slots are uncovered and why. A shortage can only be accepted deliberately, with a comment, by someone with the authority to accept it. Change the rules and a new version is created; published schedules keep the rules they were built under.</p>
+    </div>
+    <div class="defaults rv" data-d="1">
+      <table>
+        <caption>Defaults out of the box <span>Every value is configurable per site</span></caption>
+        <tbody>
+          <tr><th scope="row">Shift pattern</th><td>Three shifts</td><th scope="row">Minimum rest</th><td>11 hours</td></tr>
+          <tr><th scope="row">Max per day</th><td>12 hours</td><th scope="row">Max per week</th><td>48 hours</td></tr>
+          <tr><th scope="row">Consecutive days</th><td>6</td><th scope="row">Break after</th><td>6 hours</td></tr>
+          <tr><th scope="row">Check-in grace</th><td>5 minutes</td><th scope="row">Marked missing</th><td>15 minutes</td></tr>
+          <tr><th scope="row">OT rounding</th><td>15 minutes</td><th scope="row">Certifications</th><td>Verified</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sx" aria-labelledby="floor-h">
+  <div class="wrap">
+    <div class="sx__head sx__head--c">
+      <div><p class="k3 rv">On the floor</p><h2 id="floor-h" class="rv">Built for the people <em>who are not at a desk.</em></h2><p class="rv" data-d="1">Operators check in from a phone or a shared kiosk, shift leads fill gaps from a ranked list, and supervisors see only what their role allows.</p></div>
+    </div>
+    <div class="floor">
+      <article class="rv"><h3>Getting time in</h3><ul class="ticks">
+        <li>Self check-in from a phone, against the published duty</li>
+        <li>Shared kiosk with large buttons and a privacy timeout</li>
+        <li>Offline queue on the kiosk, replayed when the link returns</li>
+        <li>Duplicate punches detected rather than double counted</li>
+        <li>Supervisor entry where a punch was genuinely missed</li>
+        <li>Correction requests that go through an approver</li>
+      </ul></article>
+      <article class="rv" data-d="1"><h3>When someone is absent</h3><ul class="ticks">
+        <li>The vacancy opens the moment the absence is confirmed</li>
+        <li>Candidates ranked on eligibility, rest, skill and fairness</li>
+        <li>Anyone whose leave is pending is kept out of the list</li>
+        <li>The ranking weights are visible, not a black box</li>
+        <li>Escalation when a vacancy stays open too long</li>
+        <li>The filled duty is dated, attributed and auditable</li>
+      </ul></article>
+      <article class="rv" data-d="2"><h3>Running the operation</h3><ul class="ticks">
+        <li>Roles from planner and supervisor to shift lead and operator</li>
+        <li>Each role sees only its own screens, checked again on the server</li>
+        <li>Notices crews must acknowledge, with who has and has not</li>
+        <li>English and Arabic, including right-to-left layout</li>
+        <li>Site time zone, currency and week start configured per site</li>
+        <li>Own name, logo and colours across the application</li>
+      </ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="sx sx--paper" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="sx__head">
+      <div><p class="k3 rv">Why it holds up</p><h2 id="why-h" class="rv">The parts most rota tools <em>leave out.</em></h2></div>
+    </div>
+    <ul class="terms rv">
+      <li><b>Separation of duties.</b><span>The person who prepares a schedule cannot approve it, and an approver cannot approve their own work.</span></li>
+      <li><b>One published version.</b><span>Exactly one schedule is live per week. Late changes are versioned and notified, never quietly overwritten.</span></li>
+      <li><b>Explained shortages.</b><span>Uncovered demand is reported with the reason, so a gap is a decision somebody took rather than an accident.</span></li>
+      <li><b>Evidence, not inference.</b><span>Exception patterns are presented as something to investigate. The system does not claim to know why.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq__in">
+    <h2 id="faq-h" class="rv">Questions about <em>Procyon WFM.</em></h2>
+    <div class="faq__list">
+      <details class="rv" open><summary>What is Procyon WFM?</summary><p class="faq-a">Procyon WFM is workforce management software for shift-based operations, built by Procyon Technostructure. It plans the weekly rota against rest periods, maximum hours, break entitlements and verified certifications, publishes one schedule version per week, and then runs the shift: check-in, attendance, absences, ranked replacements, overtime and the payroll export.</p></details>
+      <details class="rv"><summary>How does Procyon WFM enforce rest periods and working-hour limits?</summary><p class="faq-a">The rules are held as a versioned rule set and enforced by the planning engine while it builds the schedule, so a rota that would breach them is never offered. Out of the box the defaults are an 11-hour minimum rest, 12 hours per day, 48 hours per week, 6 consecutive days and a break after 6 hours. Every value is configurable per site.</p></details>
+      <details class="rv"><summary>What happens when demand cannot be covered within the rules?</summary><p class="faq-a">The uncovered slots are reported with the reason, for example no rested, certified person is available. A shortage can only be accepted deliberately, with a comment, by someone with the authority to accept it, so every gap is a recorded decision rather than an accident.</p></details>
+      <details class="rv"><summary>How does Procyon WFM choose a replacement when someone is absent?</summary><p class="faq-a">A vacancy opens as soon as the absence is confirmed. Candidates are ranked on eligibility, rest, skill and fairness, anyone with pending leave is excluded, and the ranking weights are visible. Vacancies that stay open too long escalate, and the filled duty is dated, attributed and auditable.</p></details>
+      <details class="rv"><summary>Can operators check in without a reliable network connection?</summary><p class="faq-a">Yes. Operators can self check-in from a phone against the published duty, or use a shared kiosk with large buttons and a privacy timeout. The kiosk keeps an offline queue and replays it when the connection returns, and duplicate punches are detected rather than double counted.</p></details>
+      <details class="rv"><summary>How does overtime reach payroll?</summary><p class="faq-a">Overtime is captured at the moment it happens against a reason code, approved by someone with the authority to approve it, rounded to the configured interval (15 minutes by default) and included in the payroll export at shift close, with an audit trail behind every change.</p></details>
+      <details class="rv"><summary>Does Procyon WFM support Arabic and multiple sites?</summary><p class="faq-a">Yes. The application runs in English and Arabic, including right-to-left layout. Time zone, currency and week start are configured per site, rules can differ by site, and the application can carry the organization's own name, logo and colours.</p></details>
+      <details class="rv"><summary>Who is Procyon WFM for?</summary><p class="faq-a">Operations that run shifts against a production or service plan, such as manufacturing plants, and the people who run them: planners, supervisors, shift leads and operators. Each role sees only its own screens, and the person who prepares a schedule is never the person who approves it.</p></details>
+      <details class="rv"><summary>How does a Procyon WFM demo work?</summary><p class="faq-a">Procyon loads a sample of the operation's own lines, shifts and rules and runs a live week against them, showing where the current rota would have broken and how the uncovered demand would be explained.</p></details>
+    </div>
+  </div>
+</section>
+
+<!--@related-->
+
+<!--@cta {"h": "See a week built on <em>the operation's own rules.</em>", "p": "Procyon loads a sample of the operation's lines, shifts and rules and runs a live week against them, to show where the current rota would have broken.", "interest": "Procyon WFM", "kicker": "Procyon WFM", "title": "Procyon WFM demo", "pathTitle": "Request a demo", "pathText": "A product specialist runs a live week on the operation's own lines, shifts and rules, then sends a written summary.", "pathCta": "Request the demo", "platform": "Salesforce or ServiceNow"}-->

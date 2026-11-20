@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 40, pages: 22, js: 31, ed: 2, au: 3 };
+const VERSION = { css: 40, pages: 22, js: 32, ed: 2, au: 6 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -62,6 +62,8 @@ const PAGES = [
   { slug: '/enterprise/salesforce/org-audit', name: 'Org audit & rescue', d: 'Find the debt, fix the org and win back user trust.' },
   { slug: '/enterprise/salesforce/managed-services', name: 'Managed services', d: 'Admin, releases and continuous improvement on retainer.' },
   { slug: '/products/ranger-fusion', name: 'Ranger Fusion ERP', d: 'Finance, inventory, projects and HR native to Salesforce.' },
+  { slug: '/products', section: 'products', name: 'All products', d: 'Ranger Fusion and Procyon WFM, built, deployed and supported by Procyon.' },
+  { slug: '/products/procyon-wfm', section: 'products', name: 'Procyon WFM', d: 'Shift scheduling that enforces rest, hours and certification rules.' },
   { slug: '/about', section: 'company', name: 'About Procyon', d: 'Enterprise platform delivery since 2004, from Novato, Toronto and Chennai.' },
   { slug: '/about/certifications', section: 'company', name: 'Partners & certifications', d: 'Salesforce and ServiceNow partner, ISO 27001, ISO 9001, WBE, NMSDC, SBE.' },
   { slug: '/careers', section: 'company', name: 'Careers', d: 'Salesforce, ServiceNow, AI and data roles across three hubs.' },
@@ -94,6 +96,7 @@ const RAIL = {
   servicenow: { h: 'More from the ServiceNow practice', pick: p => p.section === 'servicenow' || ['/services/cybersecurity', '/about/certifications'].includes(p.slug) },
   insights: { h: 'More from Procyon', pick: p => p.section === 'insights' || ['/enterprise/salesforce', '/services/ai-ml', '/contact'].includes(p.slug) },
   ai: { h: 'More from AI, data and engineering', pick: p => p.section === 'ai' || ['/enterprise/salesforce/agentforce', '/enterprise/salesforce/data-cloud'].includes(p.slug) },
+  products: { h: 'More from Procyon', pick: p => p.section === 'products' || ['/products/ranger-fusion', '/case-studies', '/contact'].includes(p.slug) },
   talent: { h: 'More ways to add capacity', pick: p => p.section === 'talent' || ['/enterprise/salesforce/managed-services', '/about/certifications', '/contact'].includes(p.slug) }
 };
 const NAV = { servicenow: ['dd-sn', 'ServiceNow'], ai: ['dd-ai', 'AI &amp; Data'], salesforce: ['dd-sf', 'Salesforce'], company: ['dd-co', 'Company'], insights: ['dd-in', 'Insights'], talent: ['dd-tl', 'Talent'], products: ['dd-pr', 'Products'] };
@@ -218,8 +221,11 @@ function schema(meta, body) {
   if (s && s.software) {
     graph.push({
       '@type': 'SoftwareApplication', '@id': url + '#service', name: s.name, description: s.description,
-      applicationCategory: 'BusinessApplication', applicationSubCategory: 'Enterprise Resource Planning',
-      operatingSystem: 'Salesforce Platform', url, featureList: s.features,
+      applicationCategory: 'BusinessApplication', applicationSubCategory: s.subCategory || 'Enterprise Resource Planning',
+      operatingSystem: s.os || 'Salesforce Platform', url, featureList: s.features, image: ogUrl(meta),
+      ...(s.languages ? { inLanguage: s.languages } : {}),
+      ...(s.audience ? { audience: { '@type': 'BusinessAudience', audienceType: s.audience } } : {}),
+      brand: { '@type': 'Brand', name: s.name },
       publisher: { '@id': SITE + '/#organization' }, provider: { '@id': SITE + '/#organization' }
     });
   } else if (s) {
@@ -263,6 +269,16 @@ function schema(meta, body) {
       hiringOrganization: { '@type': 'Organization', name: 'Procyon Technostructure', sameAs: SITE + '/', logo: SITE + '/assets/img/procyon-logo.svg' },
       jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', streetAddress: 'RNG Tower, 824/1, Anna Salai, CIT Nagar West', addressLocality: 'Chennai', addressRegion: 'Tamil Nadu', postalCode: '600035', addressCountry: 'IN' } },
       experienceRequirements: j.experience, occupationalCategory: j.department, directApply: true, url });
+  }
+  if (meta.howto) {
+    const h = meta.howto;
+    graph.push({ '@type': 'HowTo', '@id': url + '#howto', name: h.name, description: h.description, inLanguage: 'en',
+      step: h.steps.map((st, i) => ({ '@type': 'HowToStep', position: i + 1, name: st[0], text: st[1], url: url + '#cycle' })) });
+  }
+  if (meta.itemList) {
+    graph.push({ '@type': 'ItemList', '@id': url + '#products', name: meta.title, numberOfItems: meta.itemList.length,
+      itemListElement: meta.itemList.map((it, i) => ({ '@type': 'ListItem', position: i + 1, url: SITE + it[1],
+        item: { '@type': 'SoftwareApplication', '@id': SITE + it[1] + '#service', name: it[0], description: it[2], url: SITE + it[1], applicationCategory: 'BusinessApplication' } })) });
   }
   graph.push(Object.assign({ '@type': 'Organization', '@id': SITE + '/#organization', name: 'Procyon Technostructure', url: SITE + '/', logo: SITE + '/assets/img/procyon-logo.svg' }, meta.org || {}));
   const faq = faqFrom(body);

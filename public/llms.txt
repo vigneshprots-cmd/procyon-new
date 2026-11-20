@@ -1,6 +1,6 @@
 # Procyon Technostructure
 
-> Procyon Technostructure is an enterprise solution delivery organization providing customer-centric, secure solutions. Founded in 2004 and headquartered in Novato, California, with delivery centers in Toronto, Canada and Chennai, India. 200+ architects, engineers and consultants; 200+ enterprise clients. Salesforce Consulting Partner and ServiceNow Implementation Partner. ISO 27001 and ISO 9001:2015 certified, HIPAA-compliant delivery, WBE, NMSDC and SBE certified. Tagline: "Run the business. Not the software."
+> Procyon Technostructure is an AI technology company and enterprise solution delivery organization that engineers AI agents, data and automation into Salesforce, ServiceNow and the systems around them, and builds its own products (Ranger Fusion and Procyon WFM). Founded in 2004 and headquartered in Novato, California, with delivery centers in Toronto, Canada and Chennai, India. 200+ architects, engineers and consultants; 200+ enterprise clients. Salesforce Consulting Partner and ServiceNow Implementation Partner. ISO 27001 and ISO 9001:2015 certified, HIPAA-compliant delivery, WBE, NMSDC and SBE certified. Tagline: "AI that works inside the enterprise, not beside it."
 
 ## What Procyon does
 - Digital transformation: one accountable team across CRM, IT service management, AI, data and custom engineering.
@@ -11,7 +11,12 @@
 - Integration: MuleSoft, SAP, Oracle, NetSuite and Workday integration, API-first and event-driven architecture.
 - Product engineering: custom web and mobile applications (enterprise web and mobility), application modernization, application maintenance and support, cloud transformation, cybersecurity and compliance.
 - Talent: certified Salesforce and ServiceNow staff augmentation, dedicated delivery pods, managed services.
-- Ranger Fusion: an ERP built natively on Salesforce (sales, finance, inventory, procurement, projects, HR).
+- Products: Ranger Fusion, an AI-powered ERP built natively on Salesforce (sales, accounting, inventory, procurement, projects, HR, portals), and Procyon WFM, workforce management software for shift scheduling, attendance, replacements, overtime and payroll export.
+
+## Products
+- [Products](https://procyonts.com/products): software built and supported by Procyon: Ranger Fusion and Procyon WFM.
+- [Procyon WFM](https://procyonts.com/products/procyon-wfm): workforce management software for shift-based operations such as manufacturing. Builds the weekly rota against rest periods, maximum daily and weekly hours, consecutive-day limits, break entitlement and certification validity, held as a versioned rule set and enforced by the planning engine; uncovered demand is reported with the reason and a shortage can only be accepted deliberately with a comment. Weekly cycle: inputs, simulate, approve, publish (one version per week, acknowledged by crews), run the shift, close and export to payroll. Six working areas: weekly planning, shift attendance, replacements (candidates ranked on eligibility, rest, skill and fairness with visible weights), overtime (reason codes and approval), reports and insight, immutable audit trail. Phone self check-in, shared kiosk with offline queue, duplicate punch detection. Separation of duties between preparer and approver. English and Arabic with right-to-left layout; time zone, currency, week start and branding per site. Defaults: three shifts, 11-hour minimum rest, 12 hours per day, 48 hours per week, 6 consecutive days, break after 6 hours, 5-minute check-in grace, marked missing after 15 minutes, 15-minute overtime rounding, verified certifications; all configurable per site.
+- [Ranger Fusion](https://procyonts.com/products/ranger-fusion): AI-powered ERP built natively on the Salesforce Platform; sales, accounting, inventory, procurement, project management, HR and portals on one data model with AI agents across every module; live in 2 to 4 weeks; typical savings of 20 to 60% against a patchwork stack.
 
 ## Salesforce pages
 - [Salesforce consulting](https://procyonts.com/enterprise/salesforce): implementation, Agentforce, Data Cloud, org rescue and managed services from one certified Salesforce team; 40+ accelerators cut timelines by 30 to 50%.

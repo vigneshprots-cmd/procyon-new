@@ -329,6 +329,7 @@
     audit: ['Talk to a senior architect', ['30 minutes, no sales script', 'A written plan within a week', 'Scope, timeline and a cost range', 'Yours to keep, zero obligation']],
     score: ['AI readiness check', ['Six questions about your platform', 'Instant result, no email needed', 'The three fixes that unlock AI agents', 'Benchmarked against real audits']],
     'Ranger Fusion ERP': ['Ranger Fusion demo', ['A walkthrough on your own use case', 'Sales to finance on one data model', 'A go-live plan in 2 to 4 weeks', 'Zero obligation']],
+    'Procyon WFM': ['Procyon WFM demo', ['A live week on the operation\'s own lines and shifts', 'Rest, hours and certification rules enforced', 'Uncovered demand explained, not hidden', 'Zero obligation']],
     'Certified talent': ['Vetted profiles, fast', ['Tell us the role and seniority', 'Certified Salesforce or ServiceNow people', 'US, Canada or India time zones', 'By the seat or as a pod']]
   };
   function setSide(key) {
@@ -397,6 +398,7 @@
     'Automation': ['Free 90-day plan', 'Request the 90-day automation plan'],
     'Faster delivery': ['Free 90-day plan', 'Request the 90-day delivery plan'],
     'Ranger Fusion ERP': ['Ranger Fusion ERP', 'Book a Ranger Fusion demo'],
+    'Procyon WFM': ['Procyon WFM', 'Book a Procyon WFM demo'],
     'Certified talent': ['Certified talent', 'Name the role and seniority'],
     'Product engineering': ['Product engineering', 'Scope the product build']
   };
@@ -407,7 +409,7 @@
     if (auditF.classList.contains('is-done')) { auditF.reset(); auditF.classList.remove('is-done'); $('button[type=submit]', auditF).disabled = false; }
     $$('.is-invalid', auditF).forEach(function (f) { f.classList.remove('is-invalid'); });
     $('.qf__status', auditF).textContent = '';
-    var head = (fromHero || interest === 'Ranger Fusion ERP' || interest === 'Certified talent' || interest === 'Product engineering') && HEAD_FOR[interest];
+    var head = (fromHero || interest === 'Ranger Fusion ERP' || interest === 'Procyon WFM' || interest === 'Certified talent' || interest === 'Product engineering') && HEAD_FOR[interest];
     lfK.textContent = opts.kicker || (head ? head[0] : 'Talk to a senior architect');
     lfT.textContent = opts.title || (head ? head[1] : 'Brief a senior architect');
     var sel = $('select[name="interest"]', auditF);

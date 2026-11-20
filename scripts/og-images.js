@@ -66,6 +66,8 @@ const PAGE = {
   '/cookies': { t: 'company', k: 'Legal', h: ['Cookie policy.', 'What runs, and how to switch it off.'] },
   '/privacy': { t: 'company', k: 'Legal', h: ['Privacy policy.', 'How personal information is handled.'] },
   '/terms': { t: 'company', k: 'Legal', h: ['Terms of service.', 'The rules for using procyonts.com.'] },
+  '/products': { t: 'home', k: 'Products', h: ['Software built by the people', 'who implement it.'], p: ['2 products', 'Ranger Fusion and Procyon WFM'] },
+  '/products/procyon-wfm': { t: 'servicenow', k: 'Procyon WFM', h: ['The rota is not a spreadsheet.', 'It is a set of rules.'], p: ['11h rest', 'and every shift rule enforced'] },
   '/products/ranger-fusion': { t: 'salesforce', k: 'Ranger Fusion ERP', h: ['The whole business on Salesforce.', 'Live in 2 to 4 weeks.'], p: ['7 modules', 'on one Salesforce data model'] },
   '/enterprise/salesforce': { t: 'salesforce', k: 'Salesforce', h: ['Salesforce consulting that ships,', 'fixes and runs the org.'], p: ['40+', 'accelerators, 30 to 50% shorter timelines'] },
   '/enterprise/salesforce/implementation': { t: 'salesforce', k: 'Salesforce · Implementation', h: ['Salesforce live in 6 to 8 weeks,', 'not 6 to 8 months.'], p: ['6 weeks', 'Sales Cloud, kickoff to live pipeline'] },
