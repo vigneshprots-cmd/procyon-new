@@ -1,0 +1,189 @@
+<!-- Procyon WFM, procyonts.com (live) theme. Same Tailwind classes as the live product page.
+     {{icon:name}} is replaced by a Lucide SVG at build time; {{faq}} by the FAQ list; {{demo}} by the demo link. -->
+<header class="relative bg-navy overflow-hidden">
+  <img src="/live-theme/wfm-hero.jpg" alt="Abstract visualization of a weekly shift schedule with rules enforced and an uncovered slot highlighted" class="absolute inset-0 w-full h-full object-cover opacity-90" width="1920" height="1088" fetchpriority="high">
+  <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/30"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy/60"></div>
+  <div class="relative container mx-auto px-6 pt-32 pb-20 md:pt-40 md:pb-28">
+    <div class="max-w-2xl">
+      <span class="inline-flex items-center gap-2 text-[11px] md:text-xs font-bold uppercase tracking-[0.22em] text-teal-glow px-3.5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur">{{icon:sparkles:13:text-teal-glow}} A Procyon Technostructure Product</span>
+      <p class="mt-8 font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-glow via-teal to-brand-green-glow text-xl md:text-2xl tracking-tight">Procyon WFM</p>
+      <h1 class="mt-2 font-display font-extrabold text-hero-foreground text-4xl md:text-5xl lg:text-[3.6rem] leading-[1.08] tracking-tight">The rota is not a spreadsheet. It is a set of rules.</h1>
+      <p class="mt-5 text-hero-muted text-base md:text-lg leading-relaxed max-w-xl">Procyon WFM is workforce management software for shift-based operations. It builds the week against the constraints that actually bind (rest periods, maximum hours, break entitlements and verified certifications), publishes one schedule the floor can rely on, then runs the shift through to payroll.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3.5">
+        <a href="{{demo}}" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm md:text-base hover:bg-crimson-glow transition-colors shadow-glow-crimson">Request a Demo</a>
+        <a href="#wfm-cycle" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg border border-white/20 text-hero-foreground font-semibold text-sm md:text-base hover:bg-white/10 transition-colors backdrop-blur">See the Weekly Cycle</a>
+      </div>
+      <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs md:text-sm text-hero-muted">
+        <span class="inline-flex items-center gap-2">{{icon:badge-check:15:text-brand-green-glow}} Rules enforced, not remembered</span>
+        <span class="inline-flex items-center gap-2">{{icon:badge-check:15:text-brand-green-glow}} Phone, kiosk and desktop</span>
+        <span class="inline-flex items-center gap-2">{{icon:badge-check:15:text-brand-green-glow}} English and Arabic</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="bg-card border-b border-border" aria-label="Procyon WFM key numbers">
+  <div class="container mx-auto px-6 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="text-center lg:text-left"><div class="font-display font-extrabold text-3xl md:text-4xl text-gradient-teal">6</div><div class="mt-1.5 text-xs md:text-sm text-muted-foreground leading-snug">Working areas in one system</div></div>
+    <div class="text-center lg:text-left"><div class="font-display font-extrabold text-3xl md:text-4xl text-gradient-teal">11 h</div><div class="mt-1.5 text-xs md:text-sm text-muted-foreground leading-snug">Minimum rest, enforced by default</div></div>
+    <div class="text-center lg:text-left"><div class="font-display font-extrabold text-3xl md:text-4xl text-gradient-teal">1</div><div class="mt-1.5 text-xs md:text-sm text-muted-foreground leading-snug">Published schedule version per week</div></div>
+    <div class="text-center lg:text-left"><div class="font-display font-extrabold text-3xl md:text-4xl text-gradient-teal">EN · AR</div><div class="mt-1.5 text-xs md:text-sm text-muted-foreground leading-snug">Including right-to-left layout</div></div>
+  </div>
+</section>
+
+<section class="py-20 md:py-28 bg-background" aria-labelledby="wfm-problem">
+  <div class="container mx-auto px-6">
+    <div class="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4 text-primary">The problem</span>
+      <h2 id="wfm-problem" class="font-display font-bold text-3xl md:text-4xl lg:text-[2.75rem] leading-[1.15] text-foreground">The schedule is built in a spreadsheet, and broken by Monday.</h2>
+      <p class="mt-4 text-base md:text-lg leading-relaxed text-muted-foreground">A planner spends a day on next week's rota. By the time it reaches the floor, the rules it was meant to respect live only in that planner's head.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+      <div class="group p-6 rounded-2xl bg-card border border-border hover:border-primary/40 hover:shadow-elevated transition-all"><div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">{{icon:calendar-x:21:text-primary}}</div><h3 class="font-display font-semibold text-foreground leading-snug">Leave that arrives late</h3><p class="mt-2.5 text-sm text-muted-foreground leading-relaxed">Approved leave lands after the rota is out and blocks a duty that was already published.</p></div>
+      <div class="group p-6 rounded-2xl bg-card border border-border hover:border-primary/40 hover:shadow-elevated transition-all"><div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">{{icon:award:21:text-primary}}</div><h3 class="font-display font-semibold text-foreground leading-snug">Certifications that lapse unseen</h3><p class="mt-2.5 text-sm text-muted-foreground leading-relaxed">A certification expired on Tuesday, and nobody noticed until someone was already on the line.</p></div>
+      <div class="group p-6 rounded-2xl bg-card border border-border hover:border-primary/40 hover:shadow-elevated transition-all"><div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">{{icon:user-x:21:text-primary}}</div><h3 class="font-display font-semibold text-foreground leading-snug">No-shows filled by phone</h3><p class="mt-2.5 text-sm text-muted-foreground leading-relaxed">Someone does not turn up, so a shift lead rings round until a name is found.</p></div>
+      <div class="group p-6 rounded-2xl bg-card border border-border hover:border-primary/40 hover:shadow-elevated transition-all"><div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">{{icon:history:21:text-primary}}</div><h3 class="font-display font-semibold text-foreground leading-snug">Overtime rebuilt from memory</h3><p class="mt-2.5 text-sm text-muted-foreground leading-relaxed">The overtime is reconstructed at month end, and the reason it happened is already lost.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 md:py-28 bg-muted/40" aria-labelledby="wfm-what">
+  <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div>
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">What is Procyon WFM?</span>
+      <h2 id="wfm-what" class="font-display font-bold text-3xl md:text-4xl lg:text-[2.75rem] leading-[1.15] text-foreground">Rules held by the system, not in a planner's head.</h2>
+      <p class="mt-5 text-muted-foreground text-base md:text-lg leading-relaxed">Procyon WFM is workforce management software developed by Procyon Technostructure for operations that run shifts against a production or service plan. Hard constraints are enforced while the schedule is generated, so an unpublishable rota cannot be published.</p>
+      <p class="mt-4 text-muted-foreground text-base md:text-lg leading-relaxed">Where demand genuinely cannot be covered, the uncovered slots come back explained rather than silently dropped, and a shortage can only be accepted deliberately, with a comment, by someone with the authority to accept it.</p>
+      <ul class="mt-7 space-y-3">
+        <li class="flex items-start gap-3 text-sm md:text-base text-foreground">{{icon:circle-check:18:text-brand-green mt-0.5 flex-shrink-0}} A validated schedule, with one published version per week</li>
+        <li class="flex items-start gap-3 text-sm md:text-base text-foreground">{{icon:circle-check:18:text-brand-green mt-0.5 flex-shrink-0}} Rest, hours, break and certification rules enforced</li>
+        <li class="flex items-start gap-3 text-sm md:text-base text-foreground">{{icon:circle-check:18:text-brand-green mt-0.5 flex-shrink-0}} Absences replaced from a ranked, eligible list in minutes</li>
+        <li class="flex items-start gap-3 text-sm md:text-base text-foreground">{{icon:circle-check:18:text-brand-green mt-0.5 flex-shrink-0}} Overtime captured with its reason at the moment it happens</li>
+        <li class="flex items-start gap-3 text-sm md:text-base text-foreground">{{icon:circle-check:18:text-brand-green mt-0.5 flex-shrink-0}} A payroll export that reconciles, with an audit trail behind every change</li>
+      </ul>
+      <a href="{{demo}}" class="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:bg-crimson-glow transition-colors shadow-glow-crimson">See It in Action</a>
+    </div>
+    <div>
+      {{orbit}}
+      <p class="text-center text-xs text-muted-foreground mt-4">Six working areas. One set of people, rules and records.</p>
+    </div>
+  </div>
+</section>
+
+<section id="wfm-capabilities" class="py-20 md:py-28 bg-background scroll-mt-20" aria-labelledby="wfm-capabilities-heading">
+  <div class="container mx-auto px-6">
+    <div class="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4 text-primary">What is in it</span>
+      <h2 id="wfm-capabilities-heading" class="font-display font-bold text-3xl md:text-4xl lg:text-[2.75rem] leading-[1.15] text-foreground">Six working areas, one system.</h2>
+      <p class="mt-4 text-base md:text-lg leading-relaxed text-muted-foreground">Planning, the shift itself and the close all work from the same people, rules and records, so nothing is re-keyed between them.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+      {{cap:calendar-days:Weekly planning:Build the week against the rules:Simulate a week and compare scenarios|Pin what must not move|Draft, submit and publish}}
+      {{cap:clock:Shift attendance:A live board per shift:Check-ins and late arrivals|Breaks and early leavers|Missing punches flagged}}
+      {{cap:user-check:Replacements:Eligible, rested, qualified:Vacancy opens on a confirmed absence|Ranked list with visible weights|Pending leave kept out of the list}}
+      {{cap:timer:Overtime:Captured with its reason:Reason code at the moment it happens|Approved by someone who can approve it|Exported to payroll}}
+      {{cap:bar-chart:Reports and insight:Plan versus actual:Attendance and overtime|Utilisation by line and shift|Where the exceptions concentrate}}
+      {{cap:shield-check:Audit trail:Every change on record:Before and after on every write|Immutable history|The domain events behind it}}
+    </div>
+  </div>
+</section>
+
+<section id="wfm-cycle" class="py-20 md:py-28 bg-muted/40 scroll-mt-20" aria-labelledby="wfm-how">
+  <div class="container mx-auto px-6">
+    <div class="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4 text-primary">How Procyon WFM works</span>
+      <h2 id="wfm-how" class="font-display font-bold text-3xl md:text-4xl lg:text-[2.75rem] leading-[1.15] text-foreground">One week, start to close.</h2>
+      <p class="mt-4 text-base md:text-lg leading-relaxed text-muted-foreground">The same cycle every week: plan against the constraints, agree it, publish it once, run the shift, and close out into payroll and reporting.</p>
+    </div>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+      {{step:Plan:Inputs:The production plan, approved leave, skills and certifications come in.}}
+      {{step:Plan:Simulate:Scenarios are scored with hard rules enforced and uncovered demand explained.}}
+      {{step:Agree:Approve:A supervisor approves or returns the schedule; shortages must be justified.}}
+      {{step:Agree:Publish:One version per week goes live; crews are notified and acknowledge it.}}
+      {{step:Run:Run the shift:Check-ins, breaks, absences, replacements and overtime are recorded.}}
+      {{step:Close:Close and export:Shift close, payroll export, reports, and actuals that feed next week.}}
+    </div>
+    <div class="max-w-6xl mx-auto mt-5 p-6 rounded-2xl bg-card border border-border flex items-start gap-4">
+      <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">{{icon:refresh-cw:21:text-primary}}</div>
+      <p class="text-sm md:text-base text-muted-foreground leading-relaxed"><span class="font-display font-semibold text-foreground">The improvement loop.</span> What the week actually cost feeds the next week's plan. Every step is permissioned separately, and the person who prepares a schedule is never the person who approves it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 md:py-28 bg-navy relative overflow-hidden" aria-labelledby="wfm-rules">
+  <div class="absolute inset-0 opacity-[0.15] bg-[radial-gradient(circle_at_75%_25%,hsl(199_75%_52%)_0%,transparent_50%)]"></div>
+  <div class="absolute inset-0 opacity-[0.1] bg-[radial-gradient(circle_at_15%_85%,hsl(124_51%_46%)_0%,transparent_45%)]"></div>
+  <div class="relative container mx-auto px-6">
+    <div class="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4 text-teal-glow">The rules are the product</span>
+      <h2 id="wfm-rules" class="font-display font-bold text-3xl md:text-4xl lg:text-[2.75rem] leading-[1.15] text-hero-foreground">A schedule that cannot break the rules.</h2>
+      <p class="mt-4 text-base md:text-lg leading-relaxed text-hero-muted">Rest periods, daily and weekly maximums, consecutive-day limits, break entitlement and certification validity are held as a versioned rule set. Change the rules and a new version is created; published schedules keep the rules they were built under.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
+      <div class="p-6 rounded-2xl bg-card-glass"><div class="w-11 h-11 rounded-xl bg-teal/20 flex items-center justify-center mb-4">{{icon:layers:21:text-teal-glow}}</div><h3 class="font-display font-bold text-hero-foreground">Enforced while it builds</h3><p class="mt-2.5 text-sm text-hero-muted leading-relaxed">The planning engine applies the rule set as it generates the week, so a rota that would breach a rest period, an hours limit or a certification is never offered.</p></div>
+      <div class="p-6 rounded-2xl bg-card-glass"><div class="w-11 h-11 rounded-xl bg-teal/20 flex items-center justify-center mb-4">{{icon:alert-triangle:21:text-teal-glow}}</div><h3 class="font-display font-bold text-hero-foreground">Shortages explained, never hidden</h3><p class="mt-2.5 text-sm text-hero-muted leading-relaxed">Where demand cannot be covered inside the rules, the system says which slots are uncovered and why, and a shortage is accepted only on purpose, with a comment.</p></div>
+    </div>
+    <div class="max-w-5xl mx-auto mt-10">
+      <p class="text-center text-xs font-bold uppercase tracking-[0.2em] text-teal-glow mb-5">Defaults out of the box</p>
+      <dl class="grid grid-cols-2 md:grid-cols-5 gap-3">
+        {{def:Shift pattern:Three shifts}}{{def:Minimum rest:11 hours}}{{def:Max per day:12 hours}}{{def:Max per week:48 hours}}{{def:Consecutive days:6}}
+        {{def:Break after:6 hours}}{{def:Check-in grace:5 minutes}}{{def:Marked missing:15 minutes}}{{def:OT rounding:15 minutes}}{{def:Certifications:Verified}}
+      </dl>
+      <p class="mt-5 text-center text-xs text-hero-muted">Every value is configurable per site; these are the defaults a deployment starts from.</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 md:py-28 bg-background" aria-labelledby="wfm-floor">
+  <div class="container mx-auto px-6">
+    <div class="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4 text-primary">On the floor</span>
+      <h2 id="wfm-floor" class="font-display font-bold text-3xl md:text-4xl lg:text-[2.75rem] leading-[1.15] text-foreground">Built for the people who are not at a desk.</h2>
+      <p class="mt-4 text-base md:text-lg leading-relaxed text-muted-foreground">Operators check in from a phone or a shared kiosk, shift leads fill gaps from a ranked list, and supervisors see only what their role allows.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+      {{floor:smartphone:Getting time in:Self check-in from a phone, against the published duty|Shared kiosk with large buttons and a privacy timeout|Offline queue on the kiosk, replayed when the link returns|Duplicate punches detected rather than double counted|Supervisor entry where a punch was genuinely missed|Correction requests that go through an approver}}
+      {{floor:user-x:When someone is absent:The vacancy opens the moment the absence is confirmed|Candidates ranked on eligibility, rest, skill and fairness|Anyone whose leave is pending is kept out of the list|The ranking weights are visible, not a black box|Escalation when a vacancy stays open too long|The filled duty is dated, attributed and auditable}}
+      {{floor:languages:Running the operation:Roles from planner and supervisor to shift lead and operator|Each role sees only its own screens, checked again on the server|Notices crews must acknowledge, with who has and has not|English and Arabic, including right-to-left layout|Site time zone, currency and week start configured per site|Own name, logo and colours across the application}}
+    </div>
+  </div>
+</section>
+
+<section class="py-20 md:py-28 bg-muted/40" aria-labelledby="wfm-why">
+  <div class="container mx-auto px-6">
+    <div class="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4 text-primary">Why it holds up</span>
+      <h2 id="wfm-why" class="font-display font-bold text-3xl md:text-4xl lg:text-[2.75rem] leading-[1.15] text-foreground">The parts most rota tools leave out.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-5 max-w-7xl mx-auto">
+      {{why:scale:Separation of duties:The person who prepares a schedule cannot approve it, and an approver cannot approve their own work.}}
+      {{why:file-check:One published version:Exactly one schedule is live per week. Late changes are versioned and notified, never quietly overwritten.}}
+      {{why:alert-triangle:Explained shortages:Uncovered demand is reported with the reason, so a gap is a decision somebody took rather than an accident.}}
+      {{why:search:Evidence, not inference:Exception patterns are presented as something to investigate. The system does not claim to know why.}}
+    </div>
+  </div>
+</section>
+
+<section class="py-20 md:py-28 bg-background" aria-labelledby="wfm-faq">
+  <div class="container mx-auto px-6 max-w-3xl">
+    <div class="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4 text-primary">Questions, answered</span>
+      <h2 id="wfm-faq" class="font-display font-bold text-3xl md:text-4xl lg:text-[2.75rem] leading-[1.15] text-foreground">Frequently asked questions</h2>
+    </div>
+    {{faq}}
+  </div>
+</section>
+
+<section class="relative py-20 md:py-28 bg-navy overflow-hidden" aria-labelledby="wfm-final-cta">
+  <img src="/live-theme/wfm-hero.jpg" alt="" aria-hidden="true" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-40" width="1920" height="1088">
+  <div class="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/60 to-navy/90"></div>
+  <div class="relative container mx-auto px-6 text-center max-w-3xl">
+    <h2 id="wfm-final-cta" class="font-display font-extrabold text-hero-foreground text-3xl md:text-4xl lg:text-5xl leading-[1.12]">See a week built on the operation's own rules.</h2>
+    <p class="mt-5 text-hero-muted text-base md:text-lg leading-relaxed max-w-2xl mx-auto">Procyon loads a sample of the operation's lines, shifts and rules and runs a live week against them, to show where the current rota would have broken and how the uncovered demand would be explained.</p>
+    <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+      <a href="{{demo}}" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-base hover:bg-crimson-glow transition-colors shadow-glow-crimson">Request a Demo</a>
+      <a href="/procyon-fusion" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-white/20 text-hero-foreground font-semibold text-base hover:bg-white/10 transition-colors backdrop-blur">Explore Procyon Fusion</a>
+    </div>
+  </div>
+</section>

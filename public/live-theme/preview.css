@@ -1,0 +1,12 @@
+/* Live-theme previews: small additions to the procyonts.com stylesheet for the static (non-React) pages */
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+[data-dd][aria-expanded="true"] svg, [data-msub][aria-expanded="true"] svg { transform: rotate(180deg); }
+[data-dd] svg, [data-msub] svg { transition: transform .2s ease; }
+[data-dd-panel] > div { animation: ltDrop .18s ease-out; }
+@keyframes ltDrop { from { transform: translate(-50%, 6px); } }
+#lt-dd-company > div, #lt-dd-insights > div { animation-name: ltDropR; }
+@keyframes ltDropR { from { transform: translateY(6px); } }
+@media (prefers-reduced-motion: reduce) { [data-dd-panel] > div { animation: none; } html { scroll-behavior: auto; } }
+@media (min-width: 2400px) { html { zoom: 1.35; } }
+@media (min-width: 3200px) { html { zoom: 1.8; } }

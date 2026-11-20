@@ -578,7 +578,7 @@ h1 em, h2 em, .hx__h em { font-style: normal; background: var(--grad-text); -web
 }
 @media (prefers-reduced-motion: reduce) { .ob, .orb7__ring--2, .steps li, .console__bar em b { animation: none; } }
 
-/* Ranger Fusion: 8-up module grid with a highlighted AI tile */
+/* Procyon Fusion: 8-up module grid with a highlighted AI tile */
 .mods--8 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .mods .mods__ai { background: radial-gradient(120% 100% at 100% 0%, rgba(40,168,222,.35), transparent 60%), radial-gradient(100% 90% at 0% 100%, rgba(188,30,45,.28), transparent 60%), #0A0C12 !important; border-color: rgba(111,208,245,.45) !important; }
 @media (max-width: 1080px) { .mods--8 { grid-template-columns: 1fr 1fr; } }

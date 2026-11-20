@@ -1,7 +1,7 @@
 # procyonts.com: Information Architecture (v2, lean)
 
 All menus are built (82 pages plus home). URLs follow the live procyonts.com slugs without trailing slashes; old paths 301 via redirects.json. Insights pages are generated from content/insights (npm run sync-insights, then npm run build). Salesforce pages are generated with `npm run build` from `src/pages/`. Every other page below is planned; until it exists, its link shows a "page in progress" screen with a contact button.
-The menu is cut to what Procyon actually sells: Salesforce, ServiceNow, AI & data, certified talent, and the Ranger Fusion product.
+The menu is cut to what Procyon actually sells: Salesforce, ServiceNow, AI & data, certified talent, and the Procyon Fusion product.
 Priority: P1 = build next (highest buying intent), P2 = second wave.
 
 ## Primary navigation (6 menus + 1 CTA)
@@ -14,7 +14,7 @@ Priority: P1 = build next (highest buying intent), P2 = second wave.
 | | Data Cloud & integration | /salesforce/data-cloud/ | Live |
 | | Org audit & rescue | /salesforce/org-audit/ | Live |
 | | Managed services | /salesforce/managed-services/ | Live |
-| | Feature card: Ranger Fusion ERP | /ranger-fusion/ | Live |
+| | Feature card: Procyon Fusion ERP | /products/procyon-fusion | Live |
 | **ServiceNow** | ServiceNow hub | /servicenow/ | Live |
 | | Platform audit & tech-debt removal | /servicenow/platform-audit/ | Live |
 | | ITSM, ITOM & CMDB | /servicenow/itsm-itom/ | Live |
@@ -54,7 +54,7 @@ Total: about 32 pages, down from about 80 in v1.
 1. Brand: original logo + "Run the business. Not the software."
 2. Salesforce: Implementation, Agentforce, Data Cloud, Org audit & rescue, Managed services.
 3. ServiceNow: Platform audit, ITSM & ITOM, Security & risk, Now Assist, Managed services.
-4. AI, Data & Talent: AI agents, Integration, Data & analytics, Staff augmentation, Ranger Fusion ERP.
+4. AI, Data & Talent: AI agents, Integration, Data & analytics, Staff augmentation, Procyon Fusion ERP.
 5. Company: About, Case studies, Insights, Careers, Contact.
 6. Offices: Novato CA, Toronto ON, Chennai TN, plus phone and email.
 7. Legal: Privacy, Terms, Cookies, Accessibility. Social icons.

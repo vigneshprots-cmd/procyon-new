@@ -228,7 +228,7 @@ h2 em, .proof h2 em, .cta h2 em { color: var(--grey); }
 .cs__src { margin: 16px 0 0; font-size: 13px; color: #7D858E; }
 .cs__go { margin-top: 26px; }
 
-/* ---------- Product modules (Ranger Fusion) ---------- */
+/* ---------- Product modules (Procyon Fusion) ---------- */
 .mods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; border-top: 2px solid var(--ink); }
 .mods > div { padding: 20px 22px 22px 0; border-bottom: 1px solid var(--line); }
 .mods > div:not(:nth-child(3n+1)) { padding-left: 22px; border-left: 1px solid var(--line); }

@@ -17,7 +17,7 @@ const ROOT = path.join(__dirname, '..');
 const PUB = path.join(ROOT, 'public');
 const SRC = path.join(ROOT, 'src', 'pages');
 const SITE = 'https://procyonts.com';
-const VERSION = { css: 40, pages: 22, js: 32, ed: 2, au: 6 };
+const VERSION = { css: 40, pages: 22, js: 33, ed: 2, au: 6 };
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const home = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
@@ -61,8 +61,8 @@ const PAGES = [
   { slug: '/enterprise/salesforce/data-cloud', name: 'Data Cloud & integration', d: 'One real-time customer record across ERP, web, apps and service.' },
   { slug: '/enterprise/salesforce/org-audit', name: 'Org audit & rescue', d: 'Find the debt, fix the org and win back user trust.' },
   { slug: '/enterprise/salesforce/managed-services', name: 'Managed services', d: 'Admin, releases and continuous improvement on retainer.' },
-  { slug: '/products/ranger-fusion', name: 'Ranger Fusion ERP', d: 'Finance, inventory, projects and HR native to Salesforce.' },
-  { slug: '/products', section: 'products', name: 'All products', d: 'Ranger Fusion and Procyon WFM, built, deployed and supported by Procyon.' },
+  { slug: '/products/procyon-fusion', name: 'Procyon Fusion ERP', d: 'Finance, inventory, projects and HR native to Salesforce.' },
+  { slug: '/products', section: 'products', name: 'All products', d: 'Procyon Fusion and Procyon WFM, built, deployed and supported by Procyon.' },
   { slug: '/products/procyon-wfm', section: 'products', name: 'Procyon WFM', d: 'Shift scheduling that enforces rest, hours and certification rules.' },
   { slug: '/about', section: 'company', name: 'About Procyon', d: 'Enterprise platform delivery since 2004, from Novato, Toronto and Chennai.' },
   { slug: '/about/certifications', section: 'company', name: 'Partners & certifications', d: 'Salesforce and ServiceNow partner, ISO 27001, ISO 9001, WBE, NMSDC, SBE.' },
@@ -92,11 +92,11 @@ const PAGES = [
 ];
 const RAIL = {
   salesforce: { h: 'More from the Salesforce practice', pick: p => !p.section },
-  company: { h: 'More about Procyon', pick: p => p.section === 'company' || p.slug === '/enterprise/salesforce' || p.slug === '/products/ranger-fusion' },
+  company: { h: 'More about Procyon', pick: p => p.section === 'company' || p.slug === '/enterprise/salesforce' || p.slug === '/products/procyon-fusion' },
   servicenow: { h: 'More from the ServiceNow practice', pick: p => p.section === 'servicenow' || ['/services/cybersecurity', '/about/certifications'].includes(p.slug) },
   insights: { h: 'More from Procyon', pick: p => p.section === 'insights' || ['/enterprise/salesforce', '/services/ai-ml', '/contact'].includes(p.slug) },
   ai: { h: 'More from AI, data and engineering', pick: p => p.section === 'ai' || ['/enterprise/salesforce/agentforce', '/enterprise/salesforce/data-cloud'].includes(p.slug) },
-  products: { h: 'More from Procyon', pick: p => p.section === 'products' || ['/products/ranger-fusion', '/case-studies', '/contact'].includes(p.slug) },
+  products: { h: 'More from Procyon', pick: p => p.section === 'products' || ['/products/procyon-fusion', '/case-studies', '/contact'].includes(p.slug) },
   talent: { h: 'More ways to add capacity', pick: p => p.section === 'talent' || ['/enterprise/salesforce/managed-services', '/about/certifications', '/contact'].includes(p.slug) }
 };
 const NAV = { servicenow: ['dd-sn', 'ServiceNow'], ai: ['dd-ai', 'AI &amp; Data'], salesforce: ['dd-sf', 'Salesforce'], company: ['dd-co', 'Company'], insights: ['dd-in', 'Insights'], talent: ['dd-tl', 'Talent'], products: ['dd-pr', 'Products'] };
@@ -307,6 +307,8 @@ function render(meta, body) {
     .replace(/<!--@related-->/g, related(meta.slug, meta.section))
     .replace(/<!--@cta (\{[\s\S]*?\})-->/g, (_, j) => cta(JSON.parse(j)))
     .replace(/(<section class="hx[^"]*"[^>]*>)(?!\s*<div class="fx")/, (m) => m + '\n  ' + fx(meta.slug));
+  // PRODUCT_RENAME: Ranger Fusion is now Procyon Fusion, including CMS-synced text and old links
+  body = body.replace(/Ranger ?Fusion/g, 'Procyon Fusion').replace(/\/products\/ranger-fusion/g, '/products/procyon-fusion');
   const url = SITE + meta.slug;
   const ogImg = ogUrl(meta);
   return `<!doctype html>
